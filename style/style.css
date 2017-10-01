@@ -100,12 +100,9 @@ ul.topnav li.right {float: right;}
 	font-size: 2.5rem;
 }
 
-.header-subcontent{
-	margin-top: 35px;
-}
-
 .header-list{
 	line-height: 1.4em;
+	margin-top: 2em;
 }
 
 .header-btns{
