@@ -16,7 +16,6 @@ a{
 }
 
 body{
-	background-color: #f6f6f6;
 	font-size: 1.8rem;
 }
 
@@ -53,18 +52,15 @@ ul.topnav {
 	margin: 0;
 	padding: 10px;
 	overflow: hidden;
-	background-color: #c5e0a1;
 }
 
 ul.topnav li {float: left;}
 
 ul.topnav li a {
 	display: block;
-	color: white;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	color: #21251b;
 }
 
 ul.topnav li [name="search"] {
@@ -76,16 +72,6 @@ ul.topnav li [name="search"] {
 ul.topnav li img {
 	display: block;
 	padding: 0px 16px;
-}
-
-ul.topnav li a:hover:not(.active) {
-	background-color: #933232;
-	color: #e3edea;
-}
-
-ul.topnav li a.active {
-	background-color: #933232;
-	color: #e3edea;
 }
 
 ul.topnav li.right {float: right;}
@@ -100,8 +86,6 @@ ul.topnav li.right {float: right;}
 
 .header{
 	padding: 5% 10%;
-	background-color: #f6f6f6;
-	color: #21251b;
 }
 
 .top-header{
@@ -145,30 +129,21 @@ ul.topnav li.right {float: right;}
 	padding: 0 25px;
 	border-radius: 3px;
 	line-height: 50px;
-	background-color: #933232;
-	color: #e3edea;
-}
-.action-btn{
-	background-color: #933232;
-	color: #e3edea;
 }
 
 .action-btn-small p{
 	font-size: 3rem;
 	line-height: 1.4em;
-	color: #933232;
 }
 
 .action-btn-small {
 	line-height: 1.4em;
-	color: #933232;
 }
 
 /* About Section */
 
 .about {
 	padding: 4% 0;
-	color: #21251b;
 }
 
 .about-heading {
@@ -183,8 +158,6 @@ ul.topnav li.right {float: right;}
 	padding: 2% 0;
 	min-height: 10vh;
 	margin-bottom: 4%;
-	background-color: #c5e0a1;
-	color: #21251b;
 }
 
 .info {
@@ -236,8 +209,6 @@ ul.topnav li.right {float: right;}
 
 .screenshots{
 	padding: 4% 0;
-	background-color: #161616;
-	color: #f6f6f6;
 }
 
 .screenshot {
@@ -250,8 +221,6 @@ ul.topnav li.right {float: right;}
 .screenshot-heading {
 	text-align: center;
 	padding: 2% 0;
-	background-color: #c5e0a1;
-	color: #21251b;
 }
 
 .screenshot-title{
@@ -268,7 +237,6 @@ ul.topnav li.right {float: right;}
 	width: 100%;
 	line-height: 50px;
 	text-align: center;
-	color: #f6f6f6;
 }
 
 .arrow-right {
@@ -279,15 +247,12 @@ ul.topnav li.right {float: right;}
 	width: 100%;
 	line-height: 50px;
 	text-align: center;
-	color: #f6f6f6;
 }
 
 /* Footer Section */
 
 .footer{
 	padding: 2% 5%;
-	color: #21251b;
-	background-color: #c5e0a1;
 }
 
 .footer-logo{
@@ -304,13 +269,11 @@ ul.topnav li.right {float: right;}
 
 .footer-copyright a{
 	text-decoration: underline;
-	color: #933232;
 }
 
 .footer-sociallinks{
 	list-style-type: none;
 	text-align: right;
-	color: #933232;
 }
 
 .footer-sociallinks li{
@@ -321,5 +284,4 @@ ul.topnav li.right {float: right;}
 
 .footer-sociallinks a{
 	font-size: 3.5rem;
-	color: #212121;
 }
