@@ -1,0 +1,61 @@
+body{
+	background-color: #dbc9b3;
+}
+
+/* Navigation Section */
+
+ul.topnav {
+    background-color: #402c1b;
+}
+
+ul.topnav li a {
+    color: #dbc9b3;
+}
+
+/* Header Section */
+
+.header{
+	background-color: #dbc9b3;
+	color: #402c1b;
+}
+
+/* Btns */
+
+.action-btn{
+	background-color: #4fa308;
+	color: #402c1b;
+	font-weight: bold;
+}
+
+.action-btn-small {
+	color: #70492e;
+}
+
+/* About Section */
+
+.about {
+	color: #402c1b;
+}
+
+
+.about-intro {
+	background-color: #70492e;
+	color: #dbc9b3;
+}
+
+/* Screenshots Section */
+
+.screenshots{
+	color: #402c1b;
+}
+
+/* Footer Section */
+
+.footer{
+	color: #dbc9b3;
+	background-color: #402c1b;
+}
+
+.footer a{
+	color: #dbc9b3;
+}
