@@ -1,0 +1,90 @@
+body{
+	background-color: #b8c1bf;
+}
+
+/* Navigation Section */
+
+ul.topnav {
+    background-color: #253d23;
+}
+
+ul.topnav li a {
+    color: #e1e4e1;
+}
+
+ul.topnav li a:hover:not(.active) {
+	background-color: #191e18;
+	color: #e1e4e1;
+}
+
+ul.topnav li a.active {
+	background-color: #191e18;
+	color: #e1e4e1;
+}
+
+/* Header Section */
+
+.header{
+	background-color: #191e18;
+	color: #e1e4e1;
+}
+
+/* Btns */
+
+.action-btn{
+	background-color: #253d23;
+	color: #e1e4e1;
+}
+
+.action-btn-small p{
+	color: #191e18;
+}
+
+.action-btn-small {
+	color: #191e18;
+}
+
+/* About Section */
+
+.about {
+	color: #1a1c1a;
+}
+
+.about-heading {
+	background-color: #253d23;
+	color: #e1e4e1;
+}
+
+/* Screenshots Section */
+
+.screenshots{
+	background-color: #191e18;
+	color: #e1e4e1;
+}
+
+.screenshot-heading {
+	background-color: #253d23;
+	color: #e1e4e1;
+}
+
+.arrow-left {
+	color: #e1e4e1;
+}
+
+.arrow-right {
+	color: #e1e4e1;
+}
+
+/* Footer Section */
+
+.footer{
+	color: #303030;
+}
+
+.footer-copyright a{
+	color: #191e18;
+}
+
+.footer-sociallinks a{
+	color: #191e18;
+}
