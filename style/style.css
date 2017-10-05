@@ -50,32 +50,32 @@ i {
 /* Navigation Section */
 ul.topnav {
 	list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    overflow: hidden;
-    background-color: #c5e0a1;
+	margin: 0;
+	padding: 10px;
+	overflow: hidden;
+	background-color: #c5e0a1;
 }
 
 ul.topnav li {float: left;}
 
 ul.topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #21251b;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	color: #21251b;
 }
 
 ul.topnav li [name="search"] {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
+	display: block;
+	padding: 12px;
+	text-decoration: none;
 }
 
 ul.topnav li img {
-    display: block;
-    padding: 0px 16px;
+	display: block;
+	padding: 0px 16px;
 }
 
 ul.topnav li a:hover:not(.active) {
@@ -91,8 +91,8 @@ ul.topnav li a.active {
 ul.topnav li.right {float: right;}
 
 @media screen and (max-width: 600px){
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
+	ul.topnav li.right,
+	ul.topnav li {float: none;}
 }
 
 
@@ -208,28 +208,28 @@ ul.topnav li.right {float: right;}
 
 	/* table into div */
 .rTable {
-  	display: block;
-  	width: 100%;
+	display: block;
+	width: 100%;
 }
 .rTableHeading, .rTableBody, .rTableFoot, .rTableRow{
-  	clear: both;
+	clear: both;
 }
 .rTableHead, .rTableFoot{
-  	font-weight: bold;
+	font-weight: bold;
 }
 .rTableCell, .rTableHead {
-  	float: left;
-  	overflow: hidden;
-  	padding: 3px 1.8%;
-  	width: 21%;
+	float: left;
+	overflow: hidden;
+	padding: 3px 1.8%;
+	width: 21%;
 }
 .rTable:after {
-  	visibility: hidden;
-  	display: block;
-  	font-size: 0;
-  	content: " ";
-  	clear: both;
-  	height: 0;
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
 
 /* Screenshots Section */
@@ -267,7 +267,7 @@ ul.topnav li.right {float: right;}
 	top: 250px;
 	width: 100%;
 	line-height: 50px;
-	text-align: center;	
+	text-align: center;
 	color: #f6f6f6;
 }
 
