@@ -255,13 +255,10 @@ ul.topnav li.right {float: right;}
 	padding: 2% 5%;
 }
 
-.footer-logo{
-	border-radius: 3px;
+.footer .mrsenko {
+	float: left;
 }
-
 .footer-copyright{
-	display: inline-block;
-	padding-left: 15px;
 	line-height: 1.4em;
 	vertical-align: top;
 	overflow-wrap: break-word;
@@ -278,8 +275,7 @@ ul.topnav li.right {float: right;}
 
 .footer-sociallinks li{
 	display: inline-block;
-	margin-top: 32.5px;
-	margin-left: 15px;
+	margin-left: 1.0rem;
 }
 
 .footer-sociallinks a{
