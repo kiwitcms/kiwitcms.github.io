@@ -140,6 +140,7 @@ ul.topnav li.right {float: right;}
 
 .about-intro {
 	font-size: 3rem;
+        font-style: italic;
 	line-height: 1.2em;
 	text-align: center;
 	padding: 2% 0;
