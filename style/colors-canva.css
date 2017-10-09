@@ -1,61 +1,55 @@
 body{
-	background-color: #dbc9b3;
+	background-color: #f4e8d9;
+        color: #402c1b;
 }
+
+
+a{
+	color: #e3edea;
+}
+
 
 /* Navigation Section */
 
 ul.topnav {
-    background-color: #402c1b;
-}
-
-ul.topnav li a {
-    color: #dbc9b3;
-}
-
-/* Header Section */
-
-.header{
-	background-color: #dbc9b3;
-	color: #402c1b;
+    background-color: #4fa308;
 }
 
 /* Btns */
 
-.action-btn{
+.primary-btn{
 	background-color: #4fa308;
-	color: #402c1b;
-	font-weight: bold;
+	color: #e3edea;
 }
 
-.action-btn-small {
-	color: #70492e;
+.secondary-btn{
+	background-color: #70492e;
+	color: #e3edea;
 }
 
 /* About Section */
 
-.about {
+.about{
 	color: #402c1b;
 }
 
+.about a{
+	color: #70492e;
+}
 
 .about-intro {
-	background-color: #70492e;
-	color: #dbc9b3;
+	background-color: #4fa308;
+	color: #402c1b;
 }
 
 /* Screenshots Section */
 
 .screenshots{
-	color: #402c1b;
+        border-top: solid #947634 7px;
 }
 
 /* Footer Section */
 
 .footer{
-	color: #dbc9b3;
-	background-color: #402c1b;
-}
-
-.footer a{
-	color: #dbc9b3;
+	background-color: #4fa308;
 }
