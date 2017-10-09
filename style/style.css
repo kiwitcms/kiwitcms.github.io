@@ -61,6 +61,7 @@ ul.topnav li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+    font-weight: bold;
 }
 
 ul.topnav li [name="search"] {
@@ -105,7 +106,7 @@ ul.topnav li.right {float: right;}
 }
 
 .header-btns{
-	margin-top: 100px;
+	margin-top: 20px;
 }
 
 .header-img{
@@ -113,12 +114,6 @@ ul.topnav li.right {float: right;}
 	height: 350px;
 	background-image: url('../images/pc_with_test_run_small.png');
 	background-repeat: no-repeat;
-}
-
-/* Random Section */
-
-.random{
-	height: 500px;
 }
 
 /* Btns */
@@ -129,6 +124,7 @@ ul.topnav li.right {float: right;}
 	padding: 0 25px;
 	border-radius: 3px;
 	line-height: 50px;
+        font-weight: bold;
 }
 
 .action-btn-small p{
@@ -142,18 +138,9 @@ ul.topnav li.right {float: right;}
 
 /* About Section */
 
-.about {
-	padding: 4% 0;
-}
-
-.about-heading {
-	text-align: center;
-	padding: 2% 0;
-}
-
 .about-intro {
 	font-size: 3rem;
-	line-height: 1em;
+	line-height: 1.2em;
 	text-align: center;
 	padding: 2% 0;
 	min-height: 10vh;
@@ -208,7 +195,7 @@ ul.topnav li.right {float: right;}
 /* Screenshots Section */
 
 .screenshots{
-	padding: 4% 0;
+	padding: 1% 0 4% 0;
 }
 
 .screenshot {
@@ -252,14 +239,15 @@ ul.topnav li.right {float: right;}
 /* Footer Section */
 
 .footer{
-	padding: 2% 5%;
+	padding: 0.5% 3%;
+    font-size: 0.8em;
 }
 
 .footer .mrsenko {
 	float: left;
+        margin-right: 1em;
 }
 .footer-copyright{
-	line-height: 1.4em;
 	vertical-align: top;
 	overflow-wrap: break-word;
 }
