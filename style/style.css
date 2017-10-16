@@ -77,7 +77,7 @@ ul.topnav li a {
     border-radius: 0.3rem;
 }
 
-ul.topnav li [name="search"] {
+ul.topnav li [name="q"] {
     display: block;
     height: 5rem;
     margin-left: 1.5rem;

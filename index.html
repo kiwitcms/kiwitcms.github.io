@@ -20,7 +20,13 @@
             <ul class="topnav">
                 <li><img src="images/kiwi_logo_h50.png" name="logo"></li>
 
-                <li class="right"><input type="text" name="search" placeholder="Search"></li>
+                <li class="right">
+                    <form action="http://google.com/search" method="get">
+                        <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                        <input class="search" name="q" placeholder="Search" type="text">
+                    </form>
+                </li>
+
                 <li class="right"><a href="/blog/">Blog</a></li>
                 <li class="right"><a href="http://mrsenko.com">Support</a></li>
                 <li class="right"><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
