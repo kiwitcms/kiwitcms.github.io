@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="UTF-8"/>
+		<meta charset="UTF-8">
 		<title>Kiwi TCMS - the leading open source test case management system</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<link href="style/colors-canva.css" rel="stylesheet" type="text/css"/>
-		<link href="style/style.css" rel="stylesheet" type="text/css"/>
+		<link href="style/style.css" rel="stylesheet" type="text/css">
+		<link href="style/color-palette-light.css" rel="stylesheet" type="text/css">
 		<!-- Jquery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- Other Fonts -->
@@ -16,20 +16,20 @@
 	</head>
 	<body>
 		<!-- Nav -->
-		<nav class="col-12">
+		<nav class="col-12 primary">
 			<ul class="topnav">
 				<li><img src="images/kiwi_logo_h50.png" name="logo"></li>
 
 				<li class="right"><input type="text" name="search" placeholder="Search"></li>
-			  	<li class="right"><a href="/blog/">Blog</a></li>
-			  	<li class="right"><a href="http://mrsenko.dom">Support</a></li>
-			  	<li class="right"><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
-			  	<li class="right"><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-			  	<li class="right"><a class="active" href="https://demo.kiwitcms.org">Checkout Demo</a></li>
+				<li class="right"><a href="/blog/">Blog</a></li>
+				<li class="right"><a href="http://mrsenko.com">Support</a></li>
+				<li class="right"><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
+				<li class="right"><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+				<li class="right"><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
 			</ul>
 		</nav>
 		<!-- Header -->
-		<header class="col-12 header">
+		<header class="col-12 header secondary">
 			<div class="col-12">
 				<div class="col-5">
 					<h1 class="top-header">Kiwi TCMS</h1>
@@ -43,10 +43,10 @@
 						<li>External API interface</li>
 						<li>GPL 2 licensed</li>
 					</ul>
-					<p class="header-btns">
-						<a href="https://demo.kiwitcms.org" class="action-btn primary-btn">Checkout Demo</a>
-						<a href="#" class="action-btn secondary-btn">See Features</a>
-					</p>
+					<div class="header-btns">
+						<a href="https://demo.kiwitcms.org" class="action-btn accent-important">Checkout Demo</a>
+						<a href="#" class="action-btn accent-unimportant">See Features</a>
+					</div>
 				</div>
 				<div class="col-7">
 					<div class="header-img"></div>
@@ -54,17 +54,17 @@
 			</div>
 		</header>
 		<!-- About Section -->
-		<section class="col-12 about">
-			<div class="about-intro">
-				<p class="col-12">
+		<section class="col-12 about secondary">
+			<div class="about-intro primary">
+				<p>
 					Open source test case management system, with a lot of great features, such as
 				</p>
-				<p class="col-12">
+				<p>
 					bug tracker integration, fast search, powerful access control and external API.
 				</p>
 			</div>
 
-			<div class="rTable">
+			<div class="rTable secondary">
 				<div class="rTableBody">
 					<div class="rTableRow">
 						<div class="rTableHead">Everyday testing</div>
@@ -76,7 +76,7 @@
 						<div class="rTableCell">Use the dashboard to see pending work. Execute tests, mark results and report bugs. Collect automation results!</div>
 						<div class="rTableCell">Define test plans and cases, track progress and assign work across multiple teams. Perform peer reviews.</div>
 						<div class="rTableCell">See who's doing what and provide status report to stakeholders. Centralize your acceptance books!</div>
-						<div class="rTableCell">Integrated with Bugzilla, JIRA and GitHub. The API interface provides full acces so you can get creative!</div>
+						<div class="rTableCell">Integrated with Bugzilla, JIRA and GitHub. The API interface provides full access so you can get creative!</div>
 					</div>
 					<div class="rTableRow">
 						<div class="rTableHead">Django &amp; Python 3</div>
@@ -93,25 +93,25 @@
 					<!-- Call to action btns -->
 					<div class="rTableRow">
 						<div class="rTableCell">
-							<a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html" class="action-btn-small">
+							<a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html" class="action-btn-small accent-medium">
 								<p><i class="fa fa-cloud-download fa-5x"></i></p>
 								<h3>Get Started</h3>
 							</a>
 						</div>
 						<div class="rTableCell">
-							<a href="http://kiwitcms.readthedocs.io" class="action-btn-small">
+							<a href="http://kiwitcms.readthedocs.io" class="action-btn-small accent-medium">
 								<p><i class="fa fa-book fa-5x"></i></p>
 								<h3>Documentation</h3>
 							</a>
 						</div>
 						<div class="rTableCell">
-							<a href="https://github.com/kiwitcms/Kiwi" class="action-btn-small">
+							<a href="https://github.com/kiwitcms/Kiwi" class="action-btn-small accent-medium">
 								<p><i class="fa fa-users fa-5x"></i></p>
 								<h3>Community</h3>
 							</a>
 						</div>
 						<div class="rTableCell">
-							<a href="http://mrsenko.com" class="action-btn-small">
+							<a href="http://mrsenko.com" class="action-btn-small accent-medium">
 								<p><i class="fa fa-headphones fa-5x"></i></p>
 								<h3>Support</h3>
 							</a>
@@ -121,33 +121,37 @@
 			</div>
 		</section>
 		<!-- Screenshots Section -->
-		<section class="col-12 screenshots">
-			<div class="col-12 screenshot-title">
-				<h3>Test Run for Firefox RHEL6.5 (Desktop)</h3>
-				<p>The Test Case Managment System in action.</p>
+		<section class="col-12 screenshots secondary">
+			<div class="col-12 screenshot-title primary">
+				<h3 id="heading">Test Run for Firefox RHEL6.5 (Desktop)</h3>
+				<p>The Test Case Management System in action.</p>
 			</div>
-			<div class="col-2 screenshot_switch_arrow" id="left-arrow">
+			<div class="col-2 screenshot_switch_arrow accent-important-icon" id="prev">
 				<div class="arrow-left"><i class="fa fa-arrow-left fa-5x"></i></div>
 			</div>
 			<div class="col-8">
-				<img id="screenshot_img_id" src="images/screenshot_1.png" class="screenshot">
+				<div class="img-wrapper">
+					<div class="img shown" style="background-size: cover;"></div>
+					<div class="img hidden-right" style="background-size: cover;"></div>
+				</div>
+				<p id="imgIndex" class="img-index"></p>
 			</div>
-			<div class="col-2 screenshot_switch_arrow" id="right-arrow">
+			<div class="col-2 screenshot_switch_arrow accent-important-icon" id="next">
 				<div class="arrow-right"><i class="fa fa-arrow-right fa-5x"></i></div>
 			</div>
 		</section>
 		<!-- Footer -->
-		<footer class="col-12 footer">
-			<div class="col-10">
-				<a href="http://MrSenko.com" class="mrsenko">
-					<i class="fa fa-user-secret fa-3x"></i>
+		<footer class="col-12 footer primary">
+			<div class="col-1">
+				<a href="http://MrSenko.com">
+					<i class="fa fa-user-secret fa-3x footer-logo"></i>
 				</a>
-				<div class="footer-copyright">
-					<p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
-					<p>
-						Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
-					</p>
-				</div>
+			</div>
+			<div class="col-9 footer-copyright">
+				<p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
+				<p>Except where otherwise noted, content on this site is licensed under a
+					<a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+				</p>
 			</div>
 			<div class="col-2">
 				<ul class="footer-sociallinks">
@@ -156,32 +160,69 @@
 				</ul>
 			</div>
 		</footer>
-
-		<script type="text/javascript">
-			
-			//Screenshot image change
-			$('.screenshot_switch_arrow').click(function() {
-				var firstScreenshotNumber = 1;
-				var lastScreenshotNumber = 3;
-				var screenshotBaseName = "images/screenshot_";
-				var screenshotFormat = ".png";
-				var currentScreenshotNumberAndFormat = $('#screenshot_img_id').attr('src').split('_')[1];
-				var currentScreenshotNumber = currentScreenshotNumberAndFormat.split('.')[0];
+		<script>
+			//IMAGE ROTATIONS
+			var imgs = [{title: '1', img: 'https://goo.gl/C5g61q'}, {title: '2', img: 'https://goo.gl/yhohXw'}, {title: '3', img: 'https://goo.gl/1ZtpfC'}, {title: '4', img: 'https://goo.gl/bU49v5'}],
+				imgIndex = 0,
+				imgsLength = imgs.length;
 				
-				var changedScreenshotNumber = currentScreenshotNumber;
-				if ($(this).attr('id') == "right-arrow") {
-					if (currentScreenshotNumber < lastScreenshotNumber) {
-						changedScreenshotNumber++;
+			var heading = document.getElementById('heading'),
+				nextBtn = document.getElementById('next'),
+				prevBtn = document.getElementById('prev'),
+				shown = document.getElementsByClassName('shown')[0],
+				hidden =  document.getElementsByClassName('hidden-right')[0],
+				index = document.getElementById('imgIndex');
+				
+				index.textContent = (imgIndex + 1) + '/' + imgsLength;
+				
+				shown.style.backgroundImage = 'url(' + imgs[0].img + ')';
+				heading.textContent = imgs[0].title;
+				
+				nextBtn.addEventListener('mouseover', function(){
+					hidden.className = 'img hidden-right';
+				});
+				
+				prevBtn.addEventListener('mouseover', function(){
+					hidden.className = 'img hidden-left';
+				});
+				
+				nextBtn.addEventListener('click', function(){
+					imgIndex++;
+					
+					if(imgIndex > imgsLength - 1){
+						imgIndex = 0;
 					}
-				}
-				if ($(this).attr('id') == "left-arrow") {
-					if (currentScreenshotNumber > firstScreenshotNumber) {
-						changedScreenshotNumber--;
+					
+					index.textContent = (imgIndex + 1) + '/' + imgsLength;
+					
+					shown.className = 'img hidden-right';
+					hidden.className = 'img shown';
+					
+					hidden.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
+					heading.textContent = imgs[imgIndex].title;
+					
+					shown = document.getElementsByClassName('shown')[0];
+					hidden =  document.getElementsByClassName('hidden-right')[0];
+				});
+				
+				prevBtn.addEventListener('click', function(){
+					imgIndex--;
+					
+					if(imgIndex < 0){
+						imgIndex = imgsLength - 1;
 					}
-				}
-
-				$('#screenshot_img_id').attr('src',screenshotBaseName + changedScreenshotNumber + screenshotFormat); 
-			});
+					
+					index.textContent = (imgIndex + 1) + '/' + imgsLength;
+					
+					shown.className = 'img hidden-left';
+					hidden.className = 'img shown';
+					
+					hidden.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
+					heading.textContent = imgs[imgIndex].title;
+					
+					shown = document.getElementsByClassName('shown')[0];
+					hidden =  document.getElementsByClassName('hidden-left')[0];
+				});
 		</script>
 	</body>
 </html>
