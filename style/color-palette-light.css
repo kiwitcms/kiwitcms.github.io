@@ -1,50 +1,50 @@
 /*COLOR PALETTE*/
 .primary {
-	background-color: #9ab451;
-	color: #1c3d32;
+    background-color: #9ab451;
+    color: #1c3d32;
 }
 
 .primary a {
-	color: #1c3d32;
+    color: #1c3d32;
 }
 
 nav.primary a:hover {
-	background-color: #1c3d32;
-	color: #fff;
+    background-color: #1c3d32;
+    color: #f6f6f6;
 }
 
 nav.primary a.active {
-	background-color: #1c3d32;
-	color: #e3edea;
+    background-color: #1c3d32;
+    color: #e3edea;
 }
 
 .primary input {
-	background-color: #f6f6f6;
+    background-color: #f6f6f6;
 }
 
 .secondary {
-	background-color: #f6f6f6;
-	color: #1c3d32;
+    background-color: #f6f6f6;
+    color: #1c3d32;
 }
 
 .secondary img {
-	background-color: #9e9e9e;
+    background-color: #9e9e9e;
 }
 
 .accent-important {
-	background-color: #9ab451;
-	color: #212516;
+    background-color: #9ab451;
+    color: #212516;
 }
 
 .accent-important-icon {
-	color: #9ab451;
+    color: #9ab451;
 }
 
 .accent-medium {
-	color: #1c3d32;
+    color: #1c3d32;
 }
 
 .accent-unimportant {
-	background-color: #6e827b;
-	color: #e3edea;
+    background-color: #6e827b;
+    color: #e3edea;
 }
