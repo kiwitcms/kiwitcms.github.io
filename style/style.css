@@ -203,7 +203,7 @@ ul.topnav li [name="q"] {
 }
 
 .screenshot-title p{
-    font-size: 2.8rem;
+    margin-top: 1.5rem;
 }
 
 .img{
@@ -252,7 +252,9 @@ ul.topnav li [name="q"] {
     width: 100%;
     line-height: 5rem;
     text-align: center;
+    cursor: pointer;
 }
+
 
 .arrow-right {
     display: block;
@@ -262,6 +264,7 @@ ul.topnav li [name="q"] {
     width: 100%;
     line-height: 5rem;
     text-align: center;
+    cursor: pointer;
 }
 
 /* Footer Section */
