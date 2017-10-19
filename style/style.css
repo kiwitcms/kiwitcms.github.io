@@ -165,23 +165,31 @@ ul.topnav li [name="q"] {
 
 
 /* table into div */
-.rTable {
+.div-table {
     display: block;
     width: 100%;
 }
-.rTableHeading, .rTableBody, .rTableFoot, .rTableRow{
+.div-table, .div-table-row{
     clear: both;
 }
-.rTableHead, .rTableFoot{
+.div-table-col-head {
     font-weight: bold;
+    padding: 0.3rem/*3px*/ 1.8%;
+    float: left;
+    overflow: hidden;
 }
-.rTableCell, .rTableHead {
+.div-table-col-subhead {
+    padding: 0.3rem/*3px*/ 1.8%;
+    float: left;
+    overflow: hidden;
+}
+.div-table-col-cell {
     float: left;
     overflow: hidden;
     padding: 0.3rem/*3px*/ 1.8%;
     width: 21%;
 }
-.rTable:after {
+.div-table:after {
     visibility: hidden;
     display: block;
     font-size: 0;
