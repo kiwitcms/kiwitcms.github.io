@@ -103,7 +103,7 @@
         <section class="col-12 screenshots secondary">
             <div class="col-12 screenshot-title primary">
                 <h3 id="heading">Test Run for Firefox RHEL6.5 (Desktop)</h3>
-                <p id="subtitle">The Test Case Management System in action.</p>
+                <p id="subheading">The Test Case Management System in action.</p>
             </div>
             <div class="col-2 screenshot_switch_arrow accent-important-icon" id="prev">
                 <div class="arrow-left"><i class="fa fa-arrow-left fa-5x"></i></div>
@@ -120,7 +120,7 @@
             </div>
         </section>
         <script>
-            //IMAGE ROTATIONS
+            //Imgs array and other variables needed for the slider logic :)
             var imgs = [
                 {
                     title: 'Create IEEE 829 or free text Test Plan',
@@ -149,68 +149,107 @@
                 }],
                 imgIndex = 0,
                 imgsLength = imgs.length;
-
+           
+            //Slider control elements
             var heading = document.getElementById('heading'),
-                subtitle = document.getElementById('subtitle'),
+                subheading = document.getElementById('subheading'),
                 nextBtn = document.getElementById('next'),
                 prevBtn = document.getElementById('prev'),
                 shown = document.getElementsByClassName('shown')[0],
                 hidden =  document.getElementsByClassName('hidden-right')[0],
                 index = document.getElementById('imgIndex');
-
-                index.textContent = (imgIndex + 1) + '/' + imgsLength;
-
-                shown.style.backgroundImage = 'url(' + imgs[0].img + ')';
-                heading.textContent = imgs[0].title;
-                subtitle.textContent = imgs[0].subtitle;
-
-                nextBtn.addEventListener('mouseover', function(){
-                    hidden.className = 'img hidden-right';
-                });
-
-                prevBtn.addEventListener('mouseover', function(){
-                    hidden.className = 'img hidden-left';
-                });
-
-                nextBtn.addEventListener('click', function(){
+        
+            //Reset slider function
+            (function(){
+                atImg();
+                setBg(shown);
+                setTitle();
+            })();
+        
+            nextBtn.addEventListener('mouseover', function(){
+                return arrangeRight(hidden);
+            });
+        
+            prevBtn.addEventListener('mouseover', function(){
+                return arrangeLeft(hidden);
+            });
+        
+            nextBtn.addEventListener('click', function(){
+                return Slide(true);
+            });
+        
+            prevBtn.addEventListener('click', function(){
+                return Slide(false);
+            });
+        
+            function Slide(direction){
+                if(direction){
                     imgIndex++;
-
+                
                     if(imgIndex > imgsLength - 1){
-                        imgIndex = 0;
+                    imgIndex = 0;
                     }
-
-                    index.textContent = (imgIndex + 1) + '/' + imgsLength;
-
-                    shown.className = 'img hidden-right';
-                    hidden.className = 'img shown';
-
-                    hidden.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
-                    heading.textContent = imgs[imgIndex].title;
-                    subtitle.textContent = imgs[imgIndex].subtitle;
-
+                
+                    shown.classList.add('hidden-right');
+                    shown.classList.remove('shown');
+                    hidden.classList.remove('hidden-right');
+                    hidden.classList.add('shown');
+                
+                    //Set background img
+                    setBg(hidden);
+                    //Set titles
+                    setTitle();
+                    //Img index
+                    atImg();
+                
                     shown = document.getElementsByClassName('shown')[0];
                     hidden =  document.getElementsByClassName('hidden-right')[0];
-                });
-
-                prevBtn.addEventListener('click', function(){
+                }else{
                     imgIndex--;
-
+                
                     if(imgIndex < 0){
                         imgIndex = imgsLength - 1;
                     }
-
-                    index.textContent = (imgIndex + 1) + '/' + imgsLength;
-
-                    shown.className = 'img hidden-left';
-                    hidden.className = 'img shown';
-
-                    hidden.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
-                    heading.textContent = imgs[imgIndex].title;
-                    subtitle.textContent = imgs[imgIndex].subtitle;
-
+                
+                    shown.classList.add('hidden-left');
+                    shown.classList.remove('shown');
+                    hidden.classList.remove('hidden-left');
+                    hidden.classList.add('shown');
+                
+                    //Set background img
+                    setBg(hidden);
+                    //Set titles
+                    setTitle();
+                    //Img index
+                    atImg();
+                
                     shown = document.getElementsByClassName('shown')[0];
                     hidden =  document.getElementsByClassName('hidden-left')[0];
-                });
+                }
+            }
+        
+            function atImg(){
+                index.textContent = (imgIndex + 1) + '/' + imgsLength;
+            }
+        
+            function setTitle(){
+                heading.textContent = imgs[imgIndex].title;
+                subheading.textContent = imgs[imgIndex].subtitle;
+            }
+        
+            function setBg(el){
+                el.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
+            }
+        
+            function arrangeLeft(el){
+                el.classList.remove('hidden-right');
+                el.classList.add('hidden-left');
+            }
+        
+            function arrangeRight(el){
+                el.classList.remove('hidden-left');
+                el.classList.add('hidden-right');
+            }
         </script>
     </body>
 </html>
