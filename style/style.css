@@ -1,4 +1,5 @@
 /*Font sizing*/
+
 h1 {
     font-size: 3.5rem;
 }
@@ -50,6 +51,7 @@ a{
 }
 
 /* Navigation Section */
+
 nav{
     padding: 1rem 0;
     box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0, .3);
@@ -153,49 +155,16 @@ ul.topnav li [name="q"] {
     margin-bottom: 5rem;
 }
 
-.about-table{
-    table-layout: fixed;
-    width: 98%;
-    border-spacing: 8rem 0px;
-}
-
-.about-info-panel {
-    text-align: left;
-}
-
-
-/* table into div */
-.div-table {
-    display: block;
-    width: 100%;
-}
-.div-table, .div-table-row{
-    clear: both;
-}
-.div-table-col-head {
+.about-panel-title {
     font-weight: bold;
-    padding: 0.3rem/*3px*/ 1.8%;
-    float: left;
-    overflow: hidden;
+    padding-bottom: 0.3rem;
+    padding-left: 1.8rem;  
 }
-.div-table-col-subhead {
-    padding: 0.3rem/*3px*/ 1.8%;
-    float: left;
-    overflow: hidden;
-}
-.div-table-col-cell {
-    float: left;
-    overflow: hidden;
-    padding: 0.3rem/*3px*/ 1.8%;
-    width: 21%;
-}
-.div-table:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
+
+.about-panel-details {
+    padding-top: 0.3rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;      
 }
 
 /* Screenshots Section */
