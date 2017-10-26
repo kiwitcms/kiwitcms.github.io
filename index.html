@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- Nav -->
@@ -68,59 +70,59 @@
                 </p>
             </div>
             <div class="secondary">
-                <div class="col-3">
+                <div class="col-3" name="about-info-panel">
                     <div class="about-panel-title">Everyday testing</div>
                     <div class="about-panel-details">Use the dashboard to see pending work. Execute tests, mark results and report bugs. Collect automation results!</div>
                 </div>
-                <div class="col-3">    
+                <div class="col-3" name="about-info-panel">    
                     <div class="about-panel-title">Test management</div>
                     <div class="about-panel-details">Define test plans and cases, track progress and assign work across multiple teams. Perform peer reviews.</div>
                 </div>
-                <div class="col-3">
+                <div class="col-3" name="about-info-panel">
                     <div class="about-panel-title">Reporting</div>
                     <div class="about-panel-details">See who's doing what and provide status report to stakeholders. Centralize your acceptance books!</div>
                 </div>
-                <div class="col-3">
+                <div class="col-3" name="about-info-panel">
                     <div class="about-panel-title">Integration</div>
                     <div class="about-panel-details">Integrated with Bugzilla, JIRA and GitHub. The API interface provides full access so you can get creative!</div>
                 </div>
-                <div class="col-3">
+                <div class="col-3" name="about-info-panel">
                     <div class="about-panel-title">Django &amp; Python 3</div>
                     <div class="about-panel-details">We're running the latest Django 1.11.x version on Python 3.5!</div>
                 </div>
-                <div class="col-3">
+                <div class="col-3" name="about-info-panel">
                     <div class="about-panel-title">Patternfly &amp; jQuery</div>
                     <div class="about-panel-details">The UI is created using Patternfly and uses a bit of jQuery!</div>
                 </div>
-                <div class="col-3">
+                <div class="col-3" name="about-info-panel">
                     <div class="about-panel-title">Docker</div>
                     <div class="about-panel-details">Based on a CentOS 7 Docker image and easy to start with docker compose.</div>
                 </div>
-                <div class="col-3">
+                <div class="col-3" name="about-info-panel">
                     <div class="about-panel-title">Tested</div>
                     <div class="about-panel-details">We've got Django and Selenium based tests running in Travis CI!</div>
                 </div>
             </div>
             <!-- Call to action btns -->
-            <div class="col-3">
+            <div class="col-3" name="about-info-icon">
                 <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html" class="action-btn-small accent-medium">
                     <p><i class="fa fa-cloud-download fa-5x"></i></p>
                     <h3>Get Started</h3>
                 </a>
             </div>
-            <div class="col-3">
+            <div class="col-3" name="about-info-icon">
                 <a href="http://kiwitcms.readthedocs.io" class="action-btn-small accent-medium">
                     <p><i class="fa fa-book fa-5x"></i></p>
                     <h3>Documentation</h3>
                 </a>
             </div>
-            <div class="col-3">
+            <div class="col-3" name="about-info-icon">
                 <a href="https://github.com/kiwitcms/Kiwi" class="action-btn-small accent-medium">
                     <p><i class="fa fa-users fa-5x"></i></p>
                     <h3>Community</h3>
                 </a>
             </div>
-            <div class="col-3">
+            <div class="col-3" name="about-info-icon">
                 <a href="http://mrsenko.com" class="action-btn-small accent-medium">
                     <p><i class="fa fa-headphones fa-5x"></i></p>
                     <h3>Support</h3>
@@ -149,18 +151,18 @@
         </section>
         <!-- Footer -->
         <footer class="col-12 footer primary">
-            <div class="col-1">
+            <div name="footer-user-logo" class="col-1">
                 <a href="http://MrSenko.com">
                     <i class="fa fa-user-secret fa-3x footer-logo"></i>
                 </a>
             </div>
-            <div class="col-9 footer-copyright">
+            <div name="footer-info" class="col-9 footer-copyright">
                 <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
             </div>
-            <div class="col-2">
+            <div name="footer-social-links" class="col-2">
                 <ul class="footer-sociallinks">
                     <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
@@ -168,6 +170,53 @@
             </div>
         </footer>
         <script>
+            //RESPONSIVE ABOUT AND NAVIGATION SECTIONS
+            $(document).ready(function() {
+                
+                var $window = $(window);
+                var widthMedium = 880;
+                var widthSmall = 530;
+
+                function checkWidth() {
+                    var windowsize = $window.width();
+                    if (windowsize > widthMedium) {                
+                        //return elements to their default sizes
+                        
+                        //about section
+                        $('[name="about-info-panel"]').attr("class", "col-3");
+                        $('[name="about-info-icon"]').attr("class", "col-3");
+                        //footer
+                        $('[name="footer-user-logo"]').attr("class", "col-1");
+                        $('[name="footer-info"]').attr("class", "col-9");
+                        $('[name="footer-social-links"]').attr("class", "col-2");
+                    } else if (windowsize < widthMedium && windowsize > widthSmall) {
+                        //shrink elements so that they can be read on a tablet
+
+                        //about section
+                        $('[name="about-info-panel"]').attr("class", "col-6");
+                        $('[name="about-info-icon"]').attr("class", "col-6");
+                        //footer
+                        $('[name="footer-user-logo"]').attr("class", "col-12");
+                        $('[name="footer-info"]').attr("class", "col-12");
+                        $('[name="footer-social-links"]').attr("class", "col-12");
+                    } else if (windowsize < widthSmall) {
+                        //shrink elements so that they can be read on a phone
+
+                        //about section
+                        $('[name="about-info-panel"]').attr("class", "col-12");
+                        $('[name="about-info-icon"]').attr("class", "col-12");
+                        //footer
+                        $('[name="footer-user-logo"]').attr("class", "col-12");
+                        $('[name="footer-info"]').attr("class", "col-12");
+                        $('[name="footer-social-links"]').attr("class", "col-12");
+                    }
+                }
+                // Execute on load
+                checkWidth();
+                // Bind event listener
+                $(window).resize(checkWidth);
+            });
+
             //IMAGE ROTATIONS
             var imgs = [
                 {
