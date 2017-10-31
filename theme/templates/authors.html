@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block title %}{{ SITENAME }} - Authors{% endblock title %}
+
+{% block content %}
+    {% for author, articles in authors|sort %}
+        <div class="post-preview">
+            <a href="{{ SITEURL }}/{{ author.url }}" rel="bookmark">
+                <h2 class="post-title">
+                    {{ author }} ({{ articles|count }})
+                </h2>
+            </a>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock content %}

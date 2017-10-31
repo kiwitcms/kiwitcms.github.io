@@ -1,0 +1,22 @@
+{% if DEFAULT_PAGINATION %}
+<section class="col-12 secondary">
+    <div class="container">
+        <ul class="actions">
+            {% if articles_page.has_previous() %}
+            <li>
+                <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="action-btn accent-unimportant">&larr;Newest Posts </a>
+            </li>
+            {% endif %}
+            <li>
+                Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+            </li>
+            {% if articles_page.has_next() %}
+            <li>
+                <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="action-btn accent-unimportant">Older Posts &rarr;</a>
+            </li>
+            {% endif %}
+            </li>
+        </ul>
+    </div>
+</section>
+{% endif %}

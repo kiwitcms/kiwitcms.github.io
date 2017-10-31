@@ -8,16 +8,30 @@ SITEURL = ''
 
 PATH = 'content'
 
-ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+INDEX_SAVE_AS = 'blog/index.html'
+
+ARTICLE_URL = 'blog/{author}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = ARTICLE_URL + 'index.html'
 
 TAG_URL = 'blog/tags/{slug}/'
 TAG_SAVE_AS = TAG_URL + 'index.html'
+TAGS_SAVE_AS = 'blog/tags/index.html'
 
-AUTHOR_URL = 'blog/author/{slug}/'
-AUTHOR_SAVE_AS = AUTHOR_URL + 'index.html'
+ARCHIVES_SAVE_AS = 'blog/archives/index.html'
 
-STATIC_PATHS = ['google8b349b847d57319a.html', 'CNAME']
+AUTHORS_SAVE_AS = 'blog/authors/index.html'
+AUTHOR_URL = 'blog/{slug}/'
+AUTHOR_SAVE_AS  = AUTHOR_URL + 'index.html'
+AUTHOR_SUBSTITUTIONS = [
+    ('Alexander Todorov', 'atodorov'),
+]
+
+CATEGORIES_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+
+STATIC_PATHS = ['google8b349b847d57319a.html', 'CNAME', 'images/']
+
+THEME = 'theme/'
 
 TIMEZONE = 'Europe/Sofia'
 
