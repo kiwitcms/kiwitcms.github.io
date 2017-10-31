@@ -4,16 +4,16 @@
     color: #1c3d32;
 }
 
-.primary a {
+.primary a, #pagination a {
     color: #1c3d32;
 }
 
-nav.primary a:hover {
+nav.primary a:hover, #pagination a:hover {
     background-color: #1c3d32;
     color: #f6f6f6;
 }
 
-nav.primary a.active {
+nav.primary a.active, #pagination a.active {
     background-color: #1c3d32;
     color: #e3edea;
 }

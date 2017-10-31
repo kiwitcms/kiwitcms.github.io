@@ -2,20 +2,24 @@
 
 {% block content %}
     {% for article in articles_page.object_list %}
-    <div>
-        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
-            <h2>{{ article.title }}</h2>
-        </a>
+    <section>
+        <div class="col-12 header">
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+                <h1 class="top-header">{{ article.title }}</h1>
+            </a>
 
-        {{ article.content }}
+            <p class="post-meta">Posted by
+                {% for author in article.authors %}
+                    <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                {% endfor %}
+                on {{ article.locale_date }}
+            </p>
+        </div>
 
-        <p class="post-meta">Posted by
-            {% for author in article.authors %}
-                <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-            {% endfor %}
-            on {{ article.locale_date }}
-        </p>
-    </div>
+        <div class="col-12 article">
+            {{ article.content }}
+        </div>
+    </section>
     {% endfor %}
 
     {% include "pagination.html" %}
