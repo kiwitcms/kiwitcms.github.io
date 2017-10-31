@@ -2,10 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - the leading open source test case management system</title>
+        <title>Kiwi TCMS - Kiwi TCMS - the leading open source test case management system</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link href="style/style.css" rel="stylesheet" type="text/css">
-        <link href="style/color-palette-light.css" rel="stylesheet" type="text/css">
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
         <!-- Other Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
@@ -15,9 +16,11 @@
     <body>
         <!-- Nav -->
         <nav class="col-12 primary">
-            <ul class="topnav">
-                <li><img src="images/kiwi_logo_h50.png" name="logo"></li>
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
 
+            <ul class="topnav">
                 <li class="right">
                     <form action="http://google.com/search" method="get">
                         <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
@@ -25,13 +28,15 @@
                     </form>
                 </li>
 
-                <li class="right"><a href="/blog/">Blog</a></li>
+                <li class="right"><a href="http://kiwitcms.org/blog/">Blog</a></li>
                 <li class="right"><a href="http://mrsenko.com">Support</a></li>
                 <li class="right"><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
                 <li class="right"><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
                 <li class="right"><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
             </ul>
         </nav>
+        <!-- content -->
+    
         <!-- Header -->
         <header class="col-12 header secondary">
             <div class="col-12">
@@ -147,26 +152,6 @@
                 <div class="arrow-right"><i class="fa fa-arrow-right fa-5x"></i></div>
             </div>
         </section>
-        <!-- Footer -->
-        <footer class="col-12 footer primary">
-            <div class="col-1">
-                <a href="http://MrSenko.com">
-                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
-                </a>
-            </div>
-            <div class="col-9 footer-copyright">
-                <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
-                <p>Except where otherwise noted, content on this site is licensed under a
-                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
-                </p>
-            </div>
-            <div class="col-2">
-                <ul class="footer-sociallinks">
-                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
-                </ul>
-            </div>
-        </footer>
         <script>
             //IMAGE ROTATIONS
             var imgs = [
@@ -260,5 +245,26 @@
                     hidden =  document.getElementsByClassName('hidden-left')[0];
                 });
         </script>
+    
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
