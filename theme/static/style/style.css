@@ -77,8 +77,9 @@ ul.topnav li a, #pagination ul li, #pagination ul li a {
     border-radius: 0.3rem;
 }
 
-ul.topnav img {
+img {
     margin-left: 1.5rem;
+    float: left;
 }
 
 ul.topnav li [name="q"] {
