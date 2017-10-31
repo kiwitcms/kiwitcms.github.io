@@ -78,25 +78,29 @@
 {% endblock %}
 
 {% block content %}
-<article id="#article" class="col-10">
-    <div class="content">
-    {{ article.content }}
-    </div>
+    <header class="col-12 header secondary">
+        <h1 class="top-header">{{ article.title }}</h1>
+        {% if article.headline %}
+        <h2 class="top-subheader">{{ article.headline }}</h2>
+        {% endif %}
 
-    <div class="post-meta">
-        <p>
-        Posted by
-        {% for author in article.authors %}
-            <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-        {% endfor %}
-        on {{ article.locale_date }}
+        <p class="post-meta">
+            Posted by
+            {% for author in article.authors %}
+                <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+            {% endfor %}
+            on {{ article.locale_date }}
+            {% if article.tags %}
+                under
+                {% for tag in article.tags %}
+                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>
+                    {% if not loop.last %},{% endif %}
+                {% endfor %}
+            {% endif %}
         </p>
-    </div>
+    </header>
 
-    {% if article.tags %}
-        <div class="tags">
-            <p>tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>, {% endfor %}</p>
-        </div>
-    {% endif %}
-</article>
+    <article class="col-12 article secondary">
+        {{ article.content }}
+    </article>
 {% endblock content %}

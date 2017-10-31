@@ -7,8 +7,9 @@
         {% block meta %}{% endblock %}
         {% block twitter_card %}{% endblock %}
         {% block opengraph %}{% endblock %}
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/style.css" rel="stylesheet" type="text/css">
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/color-palette-light.css" rel="stylesheet" type="text/css">
+        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/style.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/color-palette-light.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/github.css" rel="stylesheet">
         <!-- Other Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
@@ -36,10 +37,7 @@
             </ul>
         </nav>
         <!-- content -->
-        <section class="col-12 content secondary">
-            {% block content %}
-            {% endblock %}
-        </section>
+        {% block content %}{% endblock %}
         <!-- Footer -->
         <footer class="col-12 footer primary">
             <div class="col-1">
