@@ -2,8 +2,8 @@
 
 {% block content %}
     {% for article in articles_page.object_list %}
-    <section>
-        <div class="col-12 header">
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                 <h1 class="top-header">{{ article.title }}</h1>
             </a>
@@ -16,7 +16,7 @@
             </p>
         </div>
 
-        <div class="col-12 article">
+        <div class="article">
             {{ article.content }}
         </div>
     </section>

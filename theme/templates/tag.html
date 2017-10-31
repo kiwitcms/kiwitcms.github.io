@@ -1,13 +1,3 @@
 {% extends "index.html" %}
 
-{% block title %}{{ SITENAME }} - Tag {{ tag }}{% endblock %}
-{% block content %}
-    <header class="col-12 header secondary">
-    </header>
-
-    <div class="col-12 about-intro primary">
-        <p>Articles with tag: {{ tag }}</p>
-    </div>
-
-    {{ super () }}
-{% endblock %}
+{% block title %}{{ SITENAME }} - Articles with tag {{ tag }}{% endblock %}

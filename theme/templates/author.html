@@ -10,14 +10,3 @@
     <meta property="profile:last_name" content="{{ author.name.split(' ')[1:]|join(' ') }}">
     <meta property="profile:username" content="{{ author.slug }}">
 {% endblock opengraph %}
-
-{% block content %}
-    <header class="col-12 header secondary">
-    </header>
-
-    <div class="col-12 about-intro primary">
-        <p>Articles by {{ author }}</p>
-    </div>
-
-    {{ super () }}
-{% endblock %}

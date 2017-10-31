@@ -3,14 +3,15 @@
 {% block title %}{{ SITENAME }} - Authors{% endblock title %}
 
 {% block content %}
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Blog authors</h1>
+    </header>
+
+    <section class="col-12 article secondary">
     {% for author, articles in authors|sort %}
-        <div class="post-preview">
-            <a href="{{ SITEURL }}/{{ author.url }}" rel="bookmark">
-                <h2 class="post-title">
-                    {{ author }} ({{ articles|count }})
-                </h2>
-            </a>
-        </div>
-        <hr>
+        <a href="{{ SITEURL }}/{{ author.url }}" rel="bookmark">
+            <h2 class="top-subheader">{{ author }} ({{ articles|count }})</h2>
+        </a>
     {% endfor %}
+    </section>
 {% endblock content %}

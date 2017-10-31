@@ -3,11 +3,16 @@
 {% block title %}{{ SITENAME }} - Archives{% endblock %}
 
 {% block content %}
-    <dl>
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Archives</h1>
+    </header>
+
+    <section class="col-12 article secondary">
         {% for article in dates %}
-            <dt>{{ article.locale_date }}</dt>
-            <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+            <h2 class="top-subheader">{{ article.locale_date }}</h2>
+            <p>
+                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+            </p>
         {% endfor %}
-        <hr>
-    </dl>
+    </section>
 {% endblock content %}
