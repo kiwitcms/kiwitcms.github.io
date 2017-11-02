@@ -37,10 +37,10 @@ a{
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
+.col-3, .w25 {width: 25%;}
+.col-4, .w33 {width: 33.33%;}
+.col-5, .w41 {width: 41.66%;}
+.col-6, .w50 {width: 50%;}
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
@@ -82,6 +82,13 @@ img {
     float: left;
 }
 
+.margin0 { margin: 0; }
+.shadow { box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0, .3); }
+.bottom-border {
+    margin-bottom: 1.5rem;
+    border-bottom: dotted 0.1rem;
+}
+
 ul.topnav li [name="q"] {
     display: block;
     height: 5rem;
@@ -115,10 +122,19 @@ ul.topnav li [name="q"] {
     line-height: 1.4em;
 }
 
-.header-list{
+.header-list, .check-list {
     line-height: 2rem;
     margin-top: 2em;
     padding-left: 1.5rem;
+}
+
+.check-list {
+    margin-top: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.check-list li {
+    margin-bottom: 2rem;
 }
 
 .header-btns{

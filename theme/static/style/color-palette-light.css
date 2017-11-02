@@ -4,6 +4,10 @@
     color: #1c3d32;
 }
 
+.bottom-border {
+    border-color: #9ab451;
+}
+
 .primary a, #pagination a {
     color: #1c3d32;
 }
@@ -24,6 +28,11 @@ nav.primary a.active, #pagination a.active {
 
 .secondary {
     background-color: #f6f6f6;
+    color: #1c3d32;
+}
+
+.stripe-gray {
+    background-color: #e6e6e6;
     color: #1c3d32;
 }
 
