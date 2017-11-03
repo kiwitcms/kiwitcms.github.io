@@ -120,6 +120,7 @@ a{
     background-color: #c5e0a1;
     z-index: 2;
     transition: .5s top ease;
+    overflow-y: scroll;
 }
 
 .mobilenav  .close-menu{
