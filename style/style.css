@@ -257,16 +257,6 @@ a{
     padding-left: 1.8rem;      
 }
 
-@media only screen and (max-width:620px) {
-    /* For mobile phones: */
-    [name="about-info-panel"] {
-        min-height: 20vh;
-    }
-    [name="about-info-icon"] {
-        min-height: 15vh;
-    }
-}
-
 /* Screenshots Section */
 
 .screenshot-title{
@@ -384,6 +374,9 @@ a{
 }
 
 @media screen and (max-width: 600px){
+    /* For mobile phones: */
+    
+    /*navigation section*/
     .topnav .col-4 img{
         margin-top: 12.5px;
         max-width: 200px;
@@ -400,7 +393,8 @@ a{
     .topnav .open-menu{
         display: inline-block;
     }
-    
+
+    /*header section*/
     .header .col-7{
         display: none;
     }
@@ -411,6 +405,24 @@ a{
     
     .header .header-btns{
         margin-top: 50px;
+        text-align: center;
+    }
+
+    /*about section*/
+    .about .col-3 {
+        min-width: 100%;
+    }
+
+    /*footer section*/
+    .footer .col-1 {
+        min-width: 100%;
+        float: middle;
+    }
+    .footer .col-9 {
+        min-width: 100%;
+    }
+    .footer .col-2 {
+        min-width: 100%;
         text-align: center;
     }
 }
