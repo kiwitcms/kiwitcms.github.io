@@ -15,24 +15,46 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <!-- Nav -->
-        <nav class="col-12 primary">
-            <ul class="topnav">
-                <li><img src="images/kiwi_logo_h50.png" name="logo"></li>
-
-                <li class="right">
+        <!-- Mobile Nav -->
+        <aside class="mobilenav">
+            <button class="close-menu"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <ul>
+                <li><a class="active accent" href="#get-started">Get Started</a></li>
+                <li><a class="accent" href="#support">Blog</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
+                <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                <li>
                     <form action="http://google.com/search" method="get">
                         <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
-                        <input class="search" name="q" placeholder="Search" type="text">
+                        <input type="text" name="search" placeholder="Search box" class="searchbox">
                     </form>
                 </li>
-
-                <li class="right"><a href="/blog/">Blog</a></li>
-                <li class="right"><a href="http://mrsenko.com">Support</a></li>
-                <li class="right"><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
-                <li class="right"><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                <li class="right"><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
             </ul>
+        </aside>
+        <!-- Nav -->
+        <nav class="col-12 topnav primary">
+            <div class="col-4">
+                <a href="index.html">
+                    <img src="images/kiwi_logo_h50.png" name="logo">
+                </a>
+            </div>
+            <div class="col-8">
+                <ul>
+                    <li><a class="active accent" href="#get-started">Get Started</a></li>
+                    <li><a class="accent" href="#support">Blog</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input type="text" name="search" placeholder="Search box" class="searchbox">
+                        </form>
+                    </li>
+                    <li><button class="open-menu"><i class="fa fa-align-justify" aria-hidden="true"></i></button></li>
+                </ul>
+            </div>
         </nav>
         <!-- Header -->
         <header class="col-12 header secondary">
@@ -171,6 +193,7 @@
         </footer>
         <script>
             //RESPONSIVE ABOUT AND NAVIGATION SECTIONS
+            /*
             $(document).ready(function() {
                 
                 var $window = $(window);
@@ -216,7 +239,7 @@
                 // Bind event listener
                 $(window).resize(checkWidth);
             });
-
+            */
             //IMAGE ROTATIONS
             var imgs = [
                 {
