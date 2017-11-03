@@ -156,7 +156,7 @@ ul.topnav li [name="q"] {
     font-style: italic;
 }
 
-.article {
+.article, .comments {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
