@@ -331,6 +331,34 @@
                     shown = document.getElementsByClassName('shown')[0];
                     hidden =  document.getElementsByClassName('hidden-left')[0];
                 });
+            
+                /* Navigation */
+                var mobileBtnOpen = document.getElementsByClassName('open-menu')[0],
+                    mobileBtnClose = document.getElementsByClassName('close-menu')[0],
+                    mobileNav = document.getElementsByClassName('mobilenav')[0];
+                    mobileLinks = document.querySelectorAll('.mobilenav a[href^="#"]');
+
+                for(let i = 0; i < mobileLinks.length; i++){
+                    mobileLinks[i].addEventListener('click', function(){
+                        closeMenu();
+                    });
+                }
+
+                mobileBtnOpen.addEventListener('click', function(){
+                    openMenu();
+                });
+
+                 mobileBtnClose.addEventListener('click', function(){
+                    closeMenu();
+                });
+
+                function closeMenu(){
+                    mobileNav.style.top = '-100%';
+                }
+
+                function openMenu(){
+                    mobileNav.style.top = 0;
+                }
         </script>
     </body>
 </html>
