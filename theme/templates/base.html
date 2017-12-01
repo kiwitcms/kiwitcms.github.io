@@ -15,6 +15,11 @@
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% if page and page.extra_javascript %}
+            {% for script in page.extra_javascript.split(' ') %}
+            <script src="{{ script }}"></script>
+            {% endfor %}
+        {% endif %}
     </head>
     <body>
         <!-- Nav -->
