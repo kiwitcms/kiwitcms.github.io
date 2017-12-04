@@ -361,3 +361,31 @@ pre code {
 .footer-sociallinks a{
     font-size: 3.5rem;
 }
+
+@media screen and (max-width: 991px){
+    /* For tablets: */
+    /*about section*/
+    .about .col-3 {
+        min-width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    /* For mobile phones: */
+    /*about section*/
+    .about .col-3 {
+        min-width: 100%;
+    }
+    /*footer section*/
+    .footer .col-1 {
+        min-width: 100%;
+        float: middle;
+    }
+    .footer .col-9 {
+        min-width: 100%;
+    }
+    .footer .col-2 {
+        min-width: 100%;
+        text-align: center;
+    }
+}
