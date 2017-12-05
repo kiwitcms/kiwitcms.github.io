@@ -226,7 +226,7 @@ pre code {
     font-size: 3rem;
     line-height: 3.5rem;
     text-align: center;
-    padding: 2% 0;
+    padding: 2% 10%;
     margin-bottom: 4%;
 }
 
@@ -365,6 +365,12 @@ pre code {
 @media screen and (max-width: 991px){
     /* For tablets: */
     /*about section*/
+
+    .about-intro {
+        padding-left:  1.8rem;
+        padding-right: 1.8rem;
+        text-align: left;
+    }
     .about .col-3 {
         width: 49%;
     }
@@ -405,6 +411,11 @@ pre code {
 @media screen and (max-width: 767px){
     /* For mobile phones: */
     /*about section*/
+    .about-intro {
+        padding-left:  1.8rem;
+        padding-right: 1.8rem;
+        text-align: left;
+    }
     .about .col-3 {
         min-width: 100%;
     }
