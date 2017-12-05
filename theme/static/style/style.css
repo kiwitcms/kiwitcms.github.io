@@ -380,6 +380,26 @@ pre code {
         line-height: 4rem;
     }
 
+    /*footer section*/
+    #mrsenko_logo {
+        display: none;
+        width: 0;
+    }
+    .footer .col-9 {
+        min-width: 95%;
+        clear: both;
+        font-size: 1.5rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+    }
+    .footer .col-2 {
+        min-width: 95%;
+    }
+    .footer-sociallinks {
+        padding-left: .8rem;
+        text-align: left;
+    }
+
 }
 
 @media screen and (max-width: 767px){
@@ -404,15 +424,22 @@ pre code {
     }
 
     /*footer section*/
-    .footer .col-1 {
-        min-width: 100%;
-        float: middle;
+    #mrsenko_logo {
+        display: none;
+        width: 0;
     }
     .footer .col-9 {
-        min-width: 100%;
+        min-width: 95%;
+        clear: both;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        font-size: 1.5rem;
     }
     .footer .col-2 {
-        min-width: 100%;
-        text-align: center;
+        min-width: 95%;
+    }
+    .footer-sociallinks {
+        padding-left: .8rem;
+        text-align: left;
     }
 }
