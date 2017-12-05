@@ -237,13 +237,13 @@ pre code {
 .about-panel-title {
     font-weight: bold;
     padding-bottom: 0.3rem;
-    padding-left: 1.8rem;  
+    padding-left: 1.8rem;
 }
 
 .about-panel-details {
     padding-top: 0.3rem;
     padding-bottom: 1.8rem;
-    padding-left: 1.8rem;      
+    padding-left: 1.8rem;
 }
 
 /* Screenshots Section */
@@ -366,8 +366,20 @@ pre code {
     /* For tablets: */
     /*about section*/
     .about .col-3 {
-        min-width: 50%;
+        width: 49%;
     }
+    .about-panel-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .col-3 .fa-5x {
+        font-size: 15rem;
+    }
+    .col-3 h3 {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
 }
 
 @media screen and (max-width: 767px){
@@ -376,6 +388,21 @@ pre code {
     .about .col-3 {
         min-width: 100%;
     }
+    .about-panel-title {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
+    .about-panel-details {
+        padding-right: 1.8rem;
+    }
+    .col-3 .fa-5x {
+        font-size: 20rem;
+    }
+    .col-3 h3 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
     /*footer section*/
     .footer .col-1 {
         min-width: 100%;
