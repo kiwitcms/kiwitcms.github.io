@@ -269,6 +269,7 @@ pre code {
     width: 922px;
     height: 450px;
     box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0, .3);
+    background-size: cover;
 }
 
 .shown{
@@ -276,11 +277,7 @@ pre code {
     transition: left .6s ease, transform .6s ease;
 }
 
-.hidden-left{
-    left: -105%;
-}
-
-.hidden-right{
+.hidden{
     left: 105%;
 }
 

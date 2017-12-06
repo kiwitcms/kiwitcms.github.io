@@ -108,8 +108,8 @@
             </div>
             <div class="col-8">
                 <div class="img-wrapper">
-                    <div class="img shown" style="background-size: cover;"></div>
-                    <div class="img hidden-right" style="background-size: cover;"></div>
+                    <div class="img shown"></div>
+                    <div class="img hidden"></div>
                 </div>
                 <p id="imgIndex" class="img-index"></p>
             </div>
@@ -153,62 +153,54 @@
                 nextBtn = document.getElementById('next'),
                 prevBtn = document.getElementById('prev'),
                 shown = document.getElementsByClassName('shown')[0],
-                hidden =  document.getElementsByClassName('hidden-right')[0],
+                hidden =  document.getElementsByClassName('hidden')[0],
                 index = document.getElementById('imgIndex');
+
+            index.textContent = (imgIndex + 1) + '/' + imgsLength;
+
+            shown.style.backgroundImage = 'url(' + imgs[0].img + ')';
+            heading.textContent = imgs[0].title;
+            subtitle.textContent = imgs[0].subtitle;
+
+            function changeImg(direction) {
+                imgIndex += direction;
+
+                if (imgIndex < 0) {
+                    imgIndex = imgsLength - 1;
+                }
+
+                if (imgIndex >= imgsLength) {
+                    imgIndex = 0;
+                }
 
                 index.textContent = (imgIndex + 1) + '/' + imgsLength;
 
-                shown.style.backgroundImage = 'url(' + imgs[0].img + ')';
-                heading.textContent = imgs[0].title;
-                subtitle.textContent = imgs[0].subtitle;
+                hidden.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
+                heading.textContent = imgs[imgIndex].title;
+                subtitle.textContent = imgs[imgIndex].subtitle;
 
-                nextBtn.addEventListener('mouseover', function(){
-                    hidden.className = 'img hidden-right';
-                });
+                shown.classList.remove("shown");
+                shown.classList.add("hidden");
 
-                prevBtn.addEventListener('mouseover', function(){
-                    hidden.className = 'img hidden-left';
-                });
+                hidden.classList.remove("hidden");
+                hidden.classList.add("shown");
 
-                nextBtn.addEventListener('click', function(){
-                    imgIndex++;
+                shown = document.getElementsByClassName('shown')[0];
+                hidden =  document.getElementsByClassName('hidden')[0];
 
-                    if(imgIndex > imgsLength - 1){
-                        imgIndex = 0;
-                    }
+                changeDirection(direction);
+            }
 
-                    index.textContent = (imgIndex + 1) + '/' + imgsLength;
+            function changeDirection(direction) {
+                hidden.style.left = (105 * direction) + "%";
+                shown.style.left = 0;
+            }
 
-                    shown.className = 'img hidden-right';
-                    hidden.className = 'img shown';
+            nextBtn.addEventListener('mouseover', function(){ changeDirection(1) });
+            prevBtn.addEventListener('mouseover', function(){ changeDirection(-1) });
 
-                    hidden.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
-                    heading.textContent = imgs[imgIndex].title;
-                    subtitle.textContent = imgs[imgIndex].subtitle;
-
-                    shown = document.getElementsByClassName('shown')[0];
-                    hidden =  document.getElementsByClassName('hidden-right')[0];
-                });
-
-                prevBtn.addEventListener('click', function(){
-                    imgIndex--;
-
-                    if(imgIndex < 0){
-                        imgIndex = imgsLength - 1;
-                    }
-
-                    index.textContent = (imgIndex + 1) + '/' + imgsLength;
-
-                    shown.className = 'img hidden-left';
-                    hidden.className = 'img shown';
-
-                    hidden.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
-                    heading.textContent = imgs[imgIndex].title;
-                    subtitle.textContent = imgs[imgIndex].subtitle;
-
-                    shown = document.getElementsByClassName('shown')[0];
-                    hidden =  document.getElementsByClassName('hidden-left')[0];
-                });
+            nextBtn.addEventListener('click', function(){ changeImg(1); });
+            prevBtn.addEventListener('click', function(){ changeImg(-1); });
         </script>
     </body>
 </html>
