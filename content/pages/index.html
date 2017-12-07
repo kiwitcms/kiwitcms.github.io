@@ -100,25 +100,27 @@
         <!-- Screenshots Section -->
         <section class="col-12 screenshots secondary">
             <div class="col-12 screenshot-title primary">
-                <h3 id="heading">Test Run for Firefox RHEL6.5 (Desktop)</h3>
-                <p id="subtitle">The Test Case Management System in action.</p>
+                <!-- note: init values are imgs[0] -->
+                <h3 id="heading">Create IEEE 829 or free text Test Plan</h3>
+                <p id="subtitle">This document describes what and how are you going to test</p>
             </div>
             <div class="col-2 screenshot_switch_arrow accent-important-icon" id="prev">
                 <div class="arrow-left"><i class="fa fa-arrow-left fa-5x"></i></div>
             </div>
             <div class="col-8">
                 <div class="img-wrapper">
-                    <div class="img shown"></div>
+                    <!-- note: init values are imgs[0] -->
+                    <div class="img shown" style="background-image: url('images/screenshots/001_create_test_plan.png')"></div>
                     <div class="img hidden"></div>
                 </div>
-                <p id="imgIndex" class="img-index"></p>
+                <!-- note: init values             vvvv -->
+                <p id="imgIndex" class="img-index">1 / 6</p>
             </div>
             <div class="col-2 screenshot_switch_arrow accent-important-icon" id="next">
                 <div class="arrow-right"><i class="fa fa-arrow-right fa-5x"></i></div>
             </div>
         </section>
         <script>
-            //IMAGE ROTATIONS
             var imgs = [
                 {
                     title: 'Create IEEE 829 or free text Test Plan',
@@ -145,62 +147,68 @@
                     subtitle: 'shows detailed statuses per build and test run',
                     img: 'images/screenshots/006_report_per_plan_and_build.png'
                 }],
-                imgIndex = 0,
-                imgsLength = imgs.length;
+                imgIndex = 0;
 
-            var heading = document.getElementById('heading'),
-                subtitle = document.getElementById('subtitle'),
-                nextBtn = document.getElementById('next'),
+            var nextBtn = document.getElementById('next'),
                 prevBtn = document.getElementById('prev'),
                 shown = document.getElementsByClassName('shown')[0],
-                hidden =  document.getElementsByClassName('hidden')[0],
-                index = document.getElementById('imgIndex');
+                hidden =  document.getElementsByClassName('hidden')[0];
 
-            index.textContent = (imgIndex + 1) + '/' + imgsLength;
 
-            shown.style.backgroundImage = 'url(' + imgs[0].img + ')';
-            heading.textContent = imgs[0].title;
-            subtitle.textContent = imgs[0].subtitle;
+            // updates/ what is shown in the containers
+            function updateDisplay(idx) {
+                var heading = document.getElementById('heading'),
+                    subtitle = document.getElementById('subtitle'),
+                    progress = document.getElementById('imgIndex');
 
-            function changeImg(direction) {
+                shown.style.backgroundImage = 'url(' + imgs[idx].img + ')';
+                heading.textContent = imgs[idx].title;
+                subtitle.textContent = imgs[idx].subtitle;
+                progress.textContent = (idx + 1) + '/' + imgs.length;
+            }
+
+            // roll images left and right by swapping the hidden/shown containers
+            function rollImage(direction) {
                 imgIndex += direction;
 
                 if (imgIndex < 0) {
-                    imgIndex = imgsLength - 1;
+                    imgIndex = imgs.length - 1;
                 }
 
-                if (imgIndex >= imgsLength) {
+                if (imgIndex >= imgs.length) {
                     imgIndex = 0;
                 }
 
-                index.textContent = (imgIndex + 1) + '/' + imgsLength;
-
-                hidden.style.backgroundImage = 'url(' + imgs[imgIndex].img + ')';
-                heading.textContent = imgs[imgIndex].title;
-                subtitle.textContent = imgs[imgIndex].subtitle;
-
+                // swap the shown/hidden containers
                 shown.classList.remove("shown");
                 shown.classList.add("hidden");
 
                 hidden.classList.remove("hidden");
                 hidden.classList.add("shown");
 
+                // also update the references held in the variables
                 shown = document.getElementsByClassName('shown')[0];
-                hidden =  document.getElementsByClassName('hidden')[0];
+                hidden = document.getElementsByClassName('hidden')[0];
 
+                // show current image and texts
+                updateDisplay(imgIndex);
                 changeDirection(direction);
             }
 
+            // helps change the direction from which the containers
+            // transition depending on which direction we want to go
             function changeDirection(direction) {
                 hidden.style.left = (105 * direction) + "%";
                 shown.style.left = 0;
             }
 
+            // initialization and callbacks
+            updateDisplay(0);
             nextBtn.addEventListener('mouseover', function(){ changeDirection(1) });
             prevBtn.addEventListener('mouseover', function(){ changeDirection(-1) });
 
-            nextBtn.addEventListener('click', function(){ changeImg(1); });
-            prevBtn.addEventListener('click', function(){ changeImg(-1); });
+            nextBtn.addEventListener('click', function(){ rollImage(1); });
+            prevBtn.addEventListener('click', function(){ rollImage(-1); });
         </script>
     </body>
 </html>
