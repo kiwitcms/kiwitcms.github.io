@@ -12,8 +12,6 @@
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-            <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
     <body>
         <!-- Nav -->
@@ -187,8 +185,7 @@
             var nextBtn = document.getElementById('next'),
                 prevBtn = document.getElementById('prev'),
                 shown = document.getElementsByClassName('shown')[0],
-                hidden = document.getElementsByClassName('hidden')[0],
-                img_wrapper = document.getElementsByClassName('img-wrapper')[0];
+                hidden =  document.getElementsByClassName('hidden')[0];
 
 
             // updates/ what is shown in the containers
@@ -245,10 +242,6 @@
 
             nextBtn.addEventListener('click', function(){ rollImage(1); });
             prevBtn.addEventListener('click', function(){ rollImage(-1); });
-
-            // swipe support
-            img_wrapper.addEventListener('swiperight', function(){ rollImage(1); });
-            img_wrapper.addEventListener('swipeleft', function(){ rollImage(-1); });
         </script>
     
         <!-- Footer -->
