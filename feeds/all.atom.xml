@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2017-11-28T22:00:00+02:00</updated><entry><title>Kiwi TCMS version 3.48</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/" rel="alternate"></link><published>2017-11-28T22:00:00+02:00</published><updated>2017-11-28T22:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-11-28:/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/</id><summary type="html">&lt;p&gt;We're proud to announce Kiwi TCMS version 3.48!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2017-12-08T15:20:00+02:00</updated><entry><title>Kiwi TCMS Python API client</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/" rel="alternate"></link><published>2017-12-08T15:20:00+02:00</published><updated>2017-12-08T15:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-12-08:/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/</id><summary type="html">&lt;p&gt;We are happy to announce the first official release of the
+&lt;a href="https://pypi.org/project/tcms-api/"&gt;tcms-api&lt;/a&gt; package!
+This is a Python client for Kiwi TCMS.&lt;/p&gt;
+&lt;p&gt;There are couple of main distinctions in this module:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mutable vs. immutable types of objects&lt;/li&gt;
+&lt;li&gt;high-level class interface vs. low-level XML-RPC interface&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information you should check-out the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce the first official release of the
+&lt;a href="https://pypi.org/project/tcms-api/"&gt;tcms-api&lt;/a&gt; package!
+This is a Python client for Kiwi TCMS.&lt;/p&gt;
+&lt;p&gt;There are couple of main distinctions in this module:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mutable vs. immutable types of objects&lt;/li&gt;
+&lt;li&gt;high-level class interface vs. low-level XML-RPC interface&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information you should check-out the documentation
+and the &lt;code&gt;script_examples/&lt;/code&gt; directory.&lt;/p&gt;
+&lt;p&gt;At the moment the API client is both Python2 and Python3 compatible,
+however it is tested only under Python3!&lt;/p&gt;
+&lt;h2&gt;A bit of history&lt;/h2&gt;
+&lt;p&gt;The original API client, like Kiwi TCMS itself began its origin under a
+different name and was created primarily by Petr Splichal. Since then
+Kiwi TCMS has evolved and we've decided that the API module needs to evolve
+as well. At the moment the tcms-api module is a bit rough around the edges,
+its documentation is not really the best one and it's currently advisable
+to spend some time reading the code to figure out how everything works.&lt;/p&gt;
+&lt;p&gt;We're going to improve on all of these areas and we need help from the community
+to do so! Please download the &lt;code&gt;tcms-api&lt;/code&gt; module, check it out, write and contribute
+example scripts (you can use the demo site for this), send us bug reports, suggestions
+and pull requests!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS version 3.48</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/" rel="alternate"></link><published>2017-11-28T22:00:00+02:00</published><updated>2017-11-28T22:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-11-28:/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/</id><summary type="html">&lt;p&gt;We're proud to announce Kiwi TCMS version 3.48!
 This is the first release to be announced on our blog and it is also an
 important one!&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS 3.48 introduces new versions of Django and Patternfly,
