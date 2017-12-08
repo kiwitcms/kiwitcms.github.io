@@ -15,6 +15,11 @@
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% if page and page.extra_javascript %}
+            {% for script in page.extra_javascript.split(' ') %}
+            <script src="{{ script }}"></script>
+            {% endfor %}
+        {% endif %}
     </head>
     <body>
         <!-- Nav -->
@@ -42,7 +47,7 @@
         {% block content %}{% endblock %}
         <!-- Footer -->
         <footer class="col-12 footer primary">
-            <div class="col-1">
+            <div id="mrsenko_logo" class="col-1">
                 <a href="http://MrSenko.com">
                     <i class="fa fa-user-secret fa-3x footer-logo"></i>
                 </a>

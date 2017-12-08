@@ -1,0 +1,36 @@
+Title: Kiwi TCMS Python API client
+headline: version 1.4.0
+date: 2017-12-08 15:20
+comments: true
+
+We are happy to announce the first official release of the
+[tcms-api](https://pypi.org/project/tcms-api/) package!
+This is a Python client for Kiwi TCMS.
+
+There are couple of main distinctions in this module:
+
+* mutable vs. immutable types of objects
+* high-level class interface vs. low-level XML-RPC interface
+
+For more information you should check-out the documentation
+and the `script_examples/` directory.
+
+At the moment the API client is both Python2 and Python3 compatible,
+however it is tested only under Python3!
+
+A bit of history
+----------------
+
+The original API client, like Kiwi TCMS itself began its origin under a
+different name and was created primarily by Petr Splichal. Since then
+Kiwi TCMS has evolved and we've decided that the API module needs to evolve
+as well. At the moment the tcms-api module is a bit rough around the edges,
+its documentation is not really the best one and it's currently advisable
+to spend some time reading the code to figure out how everything works.
+
+We're going to improve on all of these areas and we need help from the community
+to do so! Please download the `tcms-api` module, check it out, write and contribute
+example scripts (you can use the demo site for this), send us bug reports, suggestions
+and pull requests!
+
+Happy testing!

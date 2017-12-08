@@ -226,7 +226,7 @@ pre code {
     font-size: 3rem;
     line-height: 3.5rem;
     text-align: center;
-    padding: 2% 0;
+    padding: 2% 10%;
     margin-bottom: 4%;
 }
 
@@ -237,13 +237,13 @@ pre code {
 .about-panel-title {
     font-weight: bold;
     padding-bottom: 0.3rem;
-    padding-left: 1.8rem;  
+    padding-left: 1.8rem;
 }
 
 .about-panel-details {
     padding-top: 0.3rem;
     padding-bottom: 1.8rem;
-    padding-left: 1.8rem;      
+    padding-left: 1.8rem;
 }
 
 /* Screenshots Section */
@@ -269,6 +269,7 @@ pre code {
     width: 922px;
     height: 450px;
     box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0, .3);
+    background-size: cover;
 }
 
 .shown{
@@ -276,11 +277,7 @@ pre code {
     transition: left .6s ease, transform .6s ease;
 }
 
-.hidden-left{
-    left: -105%;
-}
-
-.hidden-right{
+.hidden{
     left: 105%;
 }
 
@@ -360,4 +357,97 @@ pre code {
 
 .footer-sociallinks a{
     font-size: 3.5rem;
+}
+
+@media screen and (max-width: 991px){
+    /* For tablets: */
+    /*about section*/
+
+    .about-intro {
+        padding-left:  1.8rem;
+        padding-right: 1.8rem;
+        text-align: left;
+    }
+    .about .col-3 {
+        width: 49%;
+    }
+    .about-panel-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .col-3 .fa-5x {
+        font-size: 15rem;
+    }
+    .col-3 h3 {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    /*footer section*/
+    #mrsenko_logo {
+        display: none;
+        width: 0;
+    }
+    .footer .col-9 {
+        min-width: 95%;
+        clear: both;
+        font-size: 1.5rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+    }
+    .footer .col-2 {
+        min-width: 95%;
+    }
+    .footer-sociallinks {
+        padding-left: .8rem;
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    /* For mobile phones: */
+    /*about section*/
+    .about-intro {
+        padding-left:  1.8rem;
+        padding-right: 1.8rem;
+        text-align: left;
+    }
+    .about .col-3 {
+        min-width: 100%;
+    }
+    .about-panel-title {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
+    .about-panel-details {
+        padding-right: 1.8rem;
+    }
+    .col-3 .fa-5x {
+        font-size: 20rem;
+    }
+    .col-3 h3 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    /*footer section*/
+    #mrsenko_logo {
+        display: none;
+        width: 0;
+    }
+    .footer .col-9 {
+        min-width: 95%;
+        clear: both;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        font-size: 1.5rem;
+    }
+    .footer .col-2 {
+        min-width: 95%;
+    }
+    .footer-sociallinks {
+        padding-left: .8rem;
+        text-align: left;
+    }
 }
