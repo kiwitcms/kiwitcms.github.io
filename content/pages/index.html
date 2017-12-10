@@ -2,6 +2,7 @@
     <head>
         <title>the leading open source test case management system</title>
         <meta name="save_as" content="index.html">
+        <meta name="extra_javascript" content="http://code.jquery.com/jquery-1.11.1.min.js http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
     </head>
     <body>
         <!-- Header -->
@@ -195,6 +196,13 @@
                 changeDirection(direction);
             }
 
+            // changes the image when a mobile user swipes
+            // either left or right
+            function rollImgOnSwipe(direction) {
+                changeDirection(direction);
+                setTimeout(function() { rollImage(direction); }, 50);
+            }
+
             // helps change the direction from which the containers
             // transition depending on which direction we want to go
             function changeDirection(direction) {
@@ -209,6 +217,17 @@
 
             nextBtn.addEventListener('click', function(){ rollImage(1); });
             prevBtn.addEventListener('click', function(){ rollImage(-1); });
+
+            // sets up a touch-gesture event listener
+            $(document).ready(function() {
+                $("div.img-wrapper").swiperight(function() {
+                    rollImgOnSwipe(-1);
+                });
+
+                $("div.img-wrapper").swipeleft(function() {
+                    rollImgOnSwipe(1);
+                });
+            });
         </script>
     </body>
 </html>
