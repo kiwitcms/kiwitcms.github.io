@@ -451,3 +451,14 @@ pre code {
         text-align: left;
     }
 }
+
+
+/*
+    Hiding the "Loading" text that appears
+    on the bottom of the screen, caused by
+    the jQuery Mobile scripts.
+*/
+
+.ui-loader {
+    display: none;
+}
