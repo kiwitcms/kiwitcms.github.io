@@ -255,41 +255,52 @@ pre code {
     line-height: 1.4em;
 }
 
-.screenshot-title h3{
+.screenshot-title h3 {
     font-size: 3rem;
 }
 
-.screenshot-title p{
+.screenshot-title p {
     margin-top: 1.5rem;
 }
 
-.img {
-    position: absolute;
-    top: 5rem;
-    display: block;
-    width: 922px;
-    height: 450px;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0, .3);
-    background-size: cover;
+.img-wrapper, .img {
+    width: 100%;
+    height: 30vw;
 }
 
-.shown{
-    left: 0;
-    transition: left .6s ease, transform .6s ease;
-}
-
-.hidden{
-    left: 105%;
-}
-
-.img-wrapper{
+.img-wrapper {
     position: relative;
-    width: 922px;
-    height: 450px;
     padding: 3rem 2rem;
     margin: auto;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.img {
+    position: absolute;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.shown {
+    left: 0;
+    transition: left .6s ease, transform .6s ease;
+}
+
+.hidden {
+    left: 105%;
+}
+
+.arrow-left, .arrow-right {
+    text-align: center;
+    cursor: pointer;
+    margin-top: 14vw;
+}
+
+.arrow-left {
+    margin-left: 3vw;
 }
 
 /* Image Count */
@@ -299,27 +310,29 @@ pre code {
     padding: 2rem 0;
 }
 
-.arrow-left {
-    display: block;
-    position: relative;
-    left: 0;
-    top: 25rem;
-    width: 100%;
-    line-height: 5rem;
-    text-align: center;
-    cursor: pointer;
-}
+@media screen and (max-width: 700px) {
+    .arrow-left, .arrow-right, .img-index {
+        display: none;
+    }
 
+    .img-wrapper {
+        width: 100%;
+    }
 
-.arrow-right {
-    display: block;
-    position: relative;
-    left: 0;
-    top: 25rem;
-    width: 100%;
-    line-height: 5rem;
-    text-align: center;
-    cursor: pointer;
+    .screenshot-title {
+        padding: 1% 0;
+        text-align: left;
+        line-height: 1em;
+    }
+
+    .screenshot-title h3, .screenshot-title p {
+        font-size: 2vw;
+        line-height: 2.5vw;
+    }
+
+    .screenshot-title p {
+        margin-top: 0;
+    }
 }
 
 /* Footer Section */
@@ -453,7 +466,6 @@ pre code {
         text-align: left;
     }
 }
-
 
 /*
     Hiding the "Loading" text that appears
