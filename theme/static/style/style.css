@@ -248,7 +248,8 @@ pre code {
 
 /* Screenshots Section */
 
-.screenshot-title{
+/* Title */
+.screenshot-title {
     padding: 2% 0;
     text-align: center;
     line-height: 1.4em;
@@ -262,7 +263,7 @@ pre code {
     margin-top: 1.5rem;
 }
 
-.img{
+.img {
     position: absolute;
     top: 5rem;
     display: block;
@@ -291,7 +292,8 @@ pre code {
     overflow: hidden;
 }
 
-.img-index{
+/* Image Count */
+.img-index {
     text-align: center;
     font-size: 2.5rem;
     padding: 2rem 0;
