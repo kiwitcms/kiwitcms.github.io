@@ -361,6 +361,16 @@ pre code {
     font-size: 3.5rem;
 }
 
+/*
+    Hides the "Loading" text at
+    the left bottom corner of
+    the screen, caused by jQuery
+    Mobile.
+*/
+.ui-loader {
+    display: none;
+}
+
 @media screen and (max-width: 991px){
     /* For tablets: */
     /*about section*/
