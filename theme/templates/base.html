@@ -21,7 +21,7 @@
             {% endfor %}
         {% endif %}
     </head>
-    <body>
+    <body class="{% if page and page.body_class %}{{ page.body_class }}{% endif %}">
         <!-- Nav -->
         <nav class="col-12 primary">
             <a href="/">
