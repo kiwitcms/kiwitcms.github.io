@@ -248,8 +248,7 @@ pre code {
 
 /* Screenshots Section */
 
-/* Title */
-.screenshot-title {
+.screenshot-title{
     padding: 2% 0;
     text-align: center;
     line-height: 1.4em;
@@ -263,7 +262,7 @@ pre code {
     margin-top: 1.5rem;
 }
 
-.img {
+.img{
     position: absolute;
     top: 5rem;
     display: block;
@@ -292,8 +291,7 @@ pre code {
     overflow: hidden;
 }
 
-/* Image Count */
-.img-index {
+.img-index{
     text-align: center;
     font-size: 2.5rem;
     padding: 2rem 0;
@@ -361,9 +359,7 @@ pre code {
     font-size: 3.5rem;
 }
 
-/* Features Page */
-
-.features .horizontally-stacked-list {
+.horizontally-stacked-list {
     display: flex;
 }
 
@@ -411,7 +407,7 @@ pre code {
     }
 
     /*features section*/
-    .features .w50 {
+    .w50 {
         padding-top: 2rem;
     }
     .features .col-8 {
@@ -430,8 +426,8 @@ pre code {
         display: block;
     }
     .features li {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
     }
     .features .space-filler {
         display: none; 
@@ -485,54 +481,18 @@ pre code {
         text-align: left;
     }
 
-    /*features section*/
+    /*features page*/
     .features .w50 {
-        padding-top: 2rem;
         min-width: 95%;
         max-width: 95%;
     }
-    .features .col-8 {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .features .col-8 .horizontally-stacked-list {
+    .col-8 .horizontally-stacked-list {
         display: inline;
     }
     .features .col-8 li {
-        min-width: 100%;
         max-width: 100%;
-    }
-    .features .col-3 {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .features img {
-        min-width: 95%;
-        max-width: 95%;
-        float: none;
-        margin: auto;
-        display: block;
-    }
-    .features li {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
     }
     .features .demo-btn {
-        margin-bottom: 2.5%;
+        margin-bottom: 1.8rem;
     }
-    .features .space-filler {
-        display: none; 
-        width: 0;
-    }
-}
-
-
-/*
-    Hiding the "Loading" text that appears
-    on the bottom of the screen, caused by
-    the jQuery Mobile scripts.
-*/
-
-.ui-loader {
-    display: none;
 }
