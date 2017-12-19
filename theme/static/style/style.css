@@ -405,6 +405,30 @@ pre code {
         text-align: left;
     }
 
+    /*Screenshots section.*/
+    .screenshots .col-2, .img-index {
+        display: none;
+        width: 0;
+    }
+
+    .screenshots .col-8 {
+        width: 100%;
+    }
+
+    .screenshots .img {
+        max-width: 100%;
+        /*
+            Keeps the image's proportions,
+            because its width is 100%.
+        */
+        height: 49vw;
+    }
+
+    .img-wrapper {
+        padding: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 @media screen and (max-width: 767px){
