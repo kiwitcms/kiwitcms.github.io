@@ -1,6 +1,6 @@
 /* Reset */
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Zilla Slab', serif;
@@ -29,7 +29,7 @@ h3 {
 }
 
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ a{
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-[class|='col']{
+[class|='col'] {
     position: relative;
     float: left;
     min-height: 1rem;
@@ -56,7 +56,7 @@ a{
 
 /* Navigation Section */
 
-nav{
+nav {
     padding: 1rem 0;
     box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0, .3);
     z-index: 1;
@@ -107,18 +107,18 @@ ul.topnav li [name="q"] {
     box-sizing: border-box;
 }
 
-.header{
+.header {
     padding: 5% 0;
     padding-left: 5%;
     box-sizing: border-box;
 }
 
-.top-header{
+.top-header {
     line-height: 1.4em;
     font-family: 'Audiowide', serif;
 }
 
-.top-subheader{
+.top-subheader {
     line-height: 1.4em;
 }
 
@@ -137,13 +137,13 @@ ul.topnav li [name="q"] {
     margin-bottom: 2rem;
 }
 
-.header-btns{
+.header-btns {
     margin-top: 5rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.header-img{
+.header-img {
     width: 100%;
     height: 350px;
     background-image: url('../images/pc_with_test_run_small.png');
@@ -204,7 +204,7 @@ pre code {
 
 /* Btns */
 
-.action-btn{
+.action-btn {
     display: inline-block;
     margin-right: 0.5rem;
     padding: 0 2.5rem;
@@ -248,18 +248,17 @@ pre code {
 
 /* Screenshots Section */
 
-/* Title */
 .screenshot-title {
     padding: 2% 0;
     text-align: center;
     line-height: 1.4em;
 }
 
-.screenshot-title h3{
+.screenshot-title h3 {
     font-size: 3rem;
 }
 
-.screenshot-title p{
+.screenshot-title p {
     margin-top: 1.5rem;
 }
 
@@ -273,16 +272,16 @@ pre code {
     background-size: cover;
 }
 
-.shown{
+.shown {
     left: 0;
     transition: left .6s ease, transform .6s ease;
 }
 
-.hidden{
+.hidden {
     left: 105%;
 }
 
-.img-wrapper{
+.img-wrapper {
     position: relative;
     width: 922px;
     height: 450px;
@@ -292,7 +291,6 @@ pre code {
     overflow: hidden;
 }
 
-/* Image Count */
 .img-index {
     text-align: center;
     font-size: 2.5rem;
@@ -324,46 +322,44 @@ pre code {
 
 /* Footer Section */
 
-.footer{
+.footer {
     padding: 2% 0;
     display: inline-block;
     font-size: 1.2rem;
 }
 
-.footer-logo{
+.footer-logo {
     float: right;
     margin-right: 1rem;
     vertical-align: middle;
     overflow-wrap: break-word;
 }
 
-.footer-copyright{
+.footer-copyright {
     line-height: 1.8em;
     vertical-align: middle;
     overflow-wrap: break-word;
 }
 
-.footer-copyright a{
+.footer-copyright a {
     text-decoration: underline;
 }
 
-.footer-sociallinks{
+.footer-sociallinks {
     list-style-type: none;
     text-align: right;
 }
 
-.footer-sociallinks li{
+.footer-sociallinks li {
     display: inline-block;
     margin-right: 1.5rem;
 }
 
-.footer-sociallinks a{
+.footer-sociallinks a {
     font-size: 3.5rem;
 }
 
-/* Features Page */
-
-.features .horizontally-stacked-list {
+.horizontally-stacked-list {
     display: flex;
 }
 
@@ -410,7 +406,7 @@ pre code {
         text-align: left;
     }
 
-    /*features section*/
+    /*features page*/
     .features .w50 {
         padding-top: 2rem;
     }
@@ -430,10 +426,10 @@ pre code {
         display: block;
     }
     .features li {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
     }
-    .features .space-filler {
+    .features .col-2 {
         display: none; 
         width: 0;
     }
@@ -485,47 +481,21 @@ pre code {
         text-align: left;
     }
 
-    /*features section*/
+    /*features page*/
     .features .w50 {
-        padding-top: 2rem;
         min-width: 95%;
         max-width: 95%;
     }
-    .features .col-8 {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .features .col-8 .horizontally-stacked-list {
+    .col-8 .horizontally-stacked-list {
         display: inline;
     }
     .features .col-8 li {
-        min-width: 100%;
         max-width: 100%;
-    }
-    .features .col-3 {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .features img {
-        min-width: 95%;
-        max-width: 95%;
-        float: none;
-        margin: auto;
-        display: block;
-    }
-    .features li {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
     }
     .features .demo-btn {
-        margin-bottom: 2.5%;
-    }
-    .features .space-filler {
-        display: none; 
-        width: 0;
+        margin-bottom: 1.8rem;
     }
 }
-
 
 /*
     Hiding the "Loading" text that appears
