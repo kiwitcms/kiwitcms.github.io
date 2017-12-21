@@ -362,6 +362,18 @@ pre code {
     font-size: 3.5rem;
 }
 
+@media screen and (max-width: 1360px){
+    /* Screenshots section */
+    .screenshots .col-2 {
+        display: none;
+        width: 0;
+    }
+
+    .screenshots .col-8 {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 991px){
     /* For tablets: */
 
@@ -388,13 +400,9 @@ pre code {
 
 
     /* Screenshots section */
-    .screenshots .col-2, .img-index {
+    .screenshots .img-index {
         display: none;
         width: 0;
-    }
-
-    .screenshots .col-8 {
-        width: 100%;
     }
 
     .screenshots .img {
