@@ -265,10 +265,10 @@ pre code {
 
 .img {
     position: absolute;
-    top: 5rem;
     display: block;
     width: 922px;
     height: 450px;
+    max-height: 450px;
     box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0, .3);
     background-size: cover;
 }
@@ -286,6 +286,7 @@ pre code {
     position: relative;
     width: 922px;
     height: 450px;
+    max-height: 450px;
     padding: 3rem 2rem;
     margin: auto;
     white-space: nowrap;
@@ -361,10 +362,22 @@ pre code {
     font-size: 3.5rem;
 }
 
+@media screen and (max-width: 1360px){
+    /* Screenshots section */
+    .screenshots .col-2 {
+        display: none;
+        width: 0;
+    }
+
+    .screenshots .col-8 {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 991px){
     /* For tablets: */
-    /*about section*/
 
+    /* about section */
     .about-intro {
         padding-left:  1.8rem;
         padding-right: 1.8rem;
@@ -385,7 +398,30 @@ pre code {
         line-height: 4rem;
     }
 
-    /*footer section*/
+
+    /* Screenshots section */
+    .screenshots .img-index {
+        display: none;
+        width: 0;
+    }
+
+    .screenshots .img {
+        max-width: 100%;
+        /*
+            Keeps the image's proportions,
+            because its width is 100%.
+        */
+        height: 49vw;
+    }
+
+    .screenshots .img-wrapper {
+        padding: 0;
+        max-width: 100%;
+        height: 49vw;
+        box-sizing: border-box;
+    }
+
+    /* footer section */
     #mrsenko_logo {
         display: none;
         width: 0;
@@ -394,63 +430,38 @@ pre code {
         min-width: 95%;
         clear: both;
         font-size: 1.5rem;
-        padding-left: .8rem;
-        padding-right: .8rem;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
     }
     .footer .col-2 {
         min-width: 95%;
     }
     .footer-sociallinks {
-        padding-left: .8rem;
+        padding-left: 1.8rem;
         text-align: left;
     }
-
 }
 
 @media screen and (max-width: 767px){
-    /* For mobile phones: */
+    /*
+        For mobile phones - only override styles which
+        are different than the tablet section! No duplication!
+    */
+
     /*about section*/
-    .about-intro {
-        padding-left:  1.8rem;
-        padding-right: 1.8rem;
-        text-align: left;
-    }
     .about .col-3 {
         min-width: 100%;
     }
-    .about-panel-title {
-        font-size: 2.5rem;
-        line-height: 2.75rem;
-    }
+
     .about-panel-details {
         padding-right: 1.8rem;
     }
-    .col-3 .fa-5x {
-        font-size: 20rem;
-    }
-    .col-3 h3 {
-        font-size: 4rem;
-        line-height: 5rem;
-    }
 
-    /*footer section*/
-    #mrsenko_logo {
-        display: none;
-        width: 0;
-    }
-    .footer .col-9 {
-        min-width: 95%;
-        clear: both;
-        padding-left: .8rem;
-        padding-right: .8rem;
-        font-size: 1.5rem;
-    }
-    .footer .col-2 {
-        min-width: 95%;
-    }
-    .footer-sociallinks {
-        padding-left: .8rem;
+    /* screenshot section */
+    .screenshots .screenshot-title {
         text-align: left;
+        padding-left: 1.8rem;
+        box-sizing: border-box;
     }
 }
 
