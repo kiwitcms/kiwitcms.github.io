@@ -98,6 +98,17 @@ ul.topnav li [name="q"] {
     border: 0;
 }
 
+nav {
+    overflow: hidden;
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0, .3);
+    z-index: 1;
+}
+
+nav button {
+    display: none;
+}
+
+
 /* Header Section */
 
 
@@ -456,6 +467,73 @@ pre code {
 
 @media screen and (max-width: 991px){
     /* For tablets: */
+
+    /*navigation section*/
+    nav img {
+        max-width: 70%;
+    }
+
+    ul.topnav li {
+        width: 100%;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    ul.topnav li [name="q"] {
+        width: 80%;
+        margin: auto;
+        margin-top: 7rem;
+    }
+
+    nav .open-menu {
+        display: inline-block;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 0.3rem;
+        border: 0;
+        cursor: pointer;
+        margin-right: 1.5rem;
+        float: right;
+    }
+
+    #mobile-mask {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transition: .5s top ease;
+        overflow-y: scroll;
+    }
+
+    nav .close-menu {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 0.3rem;
+        border: 0;
+        cursor: pointer;
+    }
+
+    ul.topnav ul {
+        margin-top: 7rem;
+    }
+
+    ul.topnav li {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    ul.topnav ul a {
+        display: block;
+        text-align: center;
+        line-height: 5rem;
+        border-radius: 0.3rem;
+    }
 
     /* Header section */
     /* these two together will cause the laptop image to be displayed

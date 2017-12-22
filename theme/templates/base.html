@@ -20,28 +20,32 @@
             <script src="{{ script }}"></script>
             {% endfor %}
         {% endif %}
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/scripts/mobile-nav.js"></script>
     </head>
-    <body class="{% if page and page.body_class %}{{ page.body_class }}{% endif %}">
+    <body class="{% if page and page.body_class %}{{ page.body_class }}{% endif %}" onload="setMobileNavBehaviour()">
         <!-- Nav -->
         <nav class="col-12 primary">
             <a href="/">
                 <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/kiwi_logo_h50.png" name="logo">
             </a>
-
-            <ul class="topnav">
-                <li class="right">
-                    <form action="http://google.com/search" method="get">
-                        <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
-                        <input class="search" name="q" placeholder="Search" type="text">
-                    </form>
-                </li>
-
-                <li class="right"><a href="{{ SITEURL }}/blog/">Blog</a></li>
-                <li class="right"><a href="http://mrsenko.com">Support</a></li>
-                <li class="right"><a href="/community/">Community</a></li>
-                <li class="right"><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                <li class="right"><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
-            </ul>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li class="right">
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                    <li class="right"><a href="{{ SITEURL }}/blog/">Blog</a></li>
+                    <li class="right"><a href="http://mrsenko.com">Support</a></li>
+                    <li class="right"><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
+                    <li class="right"><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li class="right"><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
+                </ul>
+            </div>
         </nav>
         <!-- content -->
         {% block content %}{% endblock %}
