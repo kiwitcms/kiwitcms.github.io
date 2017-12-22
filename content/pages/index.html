@@ -5,6 +5,48 @@
         <meta name="extra_javascript" content="http://code.jquery.com/jquery-1.11.1.min.js http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
     </head>
     <body>
+        <!-- Mobile Nav -->
+        <aside class="mobilenav primary">
+            <button class="close-menu"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <ul>
+                <li><a class="active accent" href="#get-started">Get Started</a></li>
+                <li><a class="accent" href="#support">Blog</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
+                <ali><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                <li>
+                    <form action="http://google.com/search" method="get">
+                        <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                        <input type="text" name="search" placeholder="Search box" class="searchbox">
+                    </form>
+                </li>
+            </ul>
+        </aside>
+        <!-- Nav -->
+        <nav class="col-12 topnav primary">
+            <div class="col-4">
+                <a href="/">
+                    <img src="/images/kiwi_logo_h50.png" name="logo">
+                </a>
+            </div>
+            <div class="col-8">
+                <ul>
+                    <li><a class="active accent" href="#get-started">Get Started</a></li>
+                    <li><a class="accent" href="#support">Blog</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input type="text" name="search" placeholder="Search box" class="searchbox">
+                        </form>
+                    </li>
+                    <li><button class="open-menu"><i class="fa fa-align-justify" aria-hidden="true"></i></button></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
         <!-- Header -->
         <header class="col-12 header secondary">
             <div class="col-12">
@@ -228,6 +270,28 @@
                     rollImgOnSwipe(1);
                 });
             });
+            /* Navigation */
+            var mobileBtnOpen = document.getElementsByClassName('open-menu')[0],
+                mobileBtnClose = document.getElementsByClassName('close-menu')[0],
+                mobileNav = document.getElementsByClassName('mobilenav')[0];
+                mobileLinks = document.querySelectorAll('.mobilenav a[href^="#"]');
+            for(let i = 0; i < mobileLinks.length; i++){
+                mobileLinks[i].addEventListener('click', function(){
+                    closeMenu();
+                });
+            }
+            mobileBtnOpen.addEventListener('click', function(){
+                openMenu();
+            });
+            mobileBtnClose.addEventListener('click', function(){
+                closeMenu();
+            });
+            function closeMenu(){
+                mobileNav.style.top = '-100%';
+            }
+            function openMenu(){
+                mobileNav.style.top = 0;
+            }
         </script>
     </body>
 </html>
