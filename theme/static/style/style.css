@@ -383,6 +383,14 @@ pre code {
     /* For tablets: */
 
     /* Header section */
+    /* these two together will cause the laptop image to be displayed
+       centered vertically on smaller screens which looks a bit better
+       compared to the default top alignment
+    */
+    .header .col-12 {
+        display: flex;
+        align-items: flex-end;
+    }
     .header .header-img {
         background-position: center;
     }
