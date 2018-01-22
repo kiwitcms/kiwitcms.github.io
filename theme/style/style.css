@@ -363,6 +363,11 @@ pre code {
 }
 
 @media screen and (max-width: 1360px){
+    /* Header section */
+    .header-img {
+        background-size: contain;
+    }
+
     /* Screenshots section */
     .screenshots .col-2 {
         display: none;
@@ -376,6 +381,19 @@ pre code {
 
 @media screen and (max-width: 991px){
     /* For tablets: */
+
+    /* Header section */
+    /* these two together will cause the laptop image to be displayed
+       centered vertically on smaller screens which looks a bit better
+       compared to the default top alignment
+    */
+    .header .col-12 {
+        display: flex;
+        align-items: flex-end;
+    }
+    .header .header-img {
+        background-position: center;
+    }
 
     /* about section */
     .about-intro {
@@ -447,6 +465,15 @@ pre code {
         For mobile phones - only override styles which
         are different than the tablet section! No duplication!
     */
+
+    /*header section*/
+    .header .col-7 {
+        display: none;
+    }
+
+    .header .col-5 {
+        width: 100%;
+    }
 
     /*about section*/
     .about .col-3 {
