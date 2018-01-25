@@ -1,0 +1,70 @@
+Title: Kiwi TCMS version 3.50
+headline: and tcms-api version 1.5.1
+date: 2018-01-25 11:30
+comments: true
+
+We're happy to announce Kiwi TCMS version 3.50
+and the corresponding tcms-api version 1.5.1! This is a bug-fix and
+enhancement release and we advise you to upgrade as soon as possible!
+
+
+Changes since Kiwi TCMS 3.49
+----------------------------
+
+### Enhancements and bug fixes
+
+
+- Update documentation for XML-RPC and positional arguments, translations,
+  environment groups
+- Enable translations. Fixes
+  [Issue #129](https://github.com/kiwitcms/Kiwi/issues/129)
+- Register models for DB translations. Fixes
+  [Issue #182](https://github.com/kiwitcms/Kiwi/issues/182)
+- New German translations (@xbln)
+- Require django-attachments>=1.3 and restore attachments count in tabs
+- Fix missing tag names in TestPlan page
+- Hide admin forms for some models not supposed to be edited by users. Fixes
+  [Issue #174](https://github.com/kiwitcms/Kiwi/issues/174)
+- Use django-grappelli for the admin templates: modern look and feel and
+  less template files overridden by Kiwi TCMS
+- Load values for default property in TestRun 'Add Property' dialog. Fixes
+  [Issue #142](https://github.com/kiwitcms/Kiwi/issues/142)
+- Correctly find property ID when renaming environment properties. Fixes
+  [Issue #167](https://github.com/kiwitcms/Kiwi/issues/167)
+- Convert request body to string. Fixes
+  [Issue #177](https://github.com/kiwitcms/Kiwi/issues/177)
+
+### Refactoring
+
+- Remove batch tag Add/Remove sub-menu in TestPlan view (Anton Sankov)
+- Remove Edit tag button in Tag tab (Anton Sankov)
+- Remove template functions. Fixes
+  [Issue #107](https://github.com/kiwitcms/Kiwi/issues/107)
+- Remove custom HttpJSONResponse classes
+- Remove unused and duplicate code
+
+
+tcms-api changes since 1.5.0
+----------------------------
+
+
+- Fix order of TestCaseRun statuses. Fixes
+  [Issue #184](https://github.com/kiwitcms/Kiwi/issues/184)
+
+
+
+**IMPORTANT:** this release introduces new database migrations!
+
+
+How to upgrade
+---------------
+
+If you are using Kiwi TCMS as a Docker container then
+
+    cd Kiwi/
+    docker-compose down
+    make docker-image
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+Happy testing!
