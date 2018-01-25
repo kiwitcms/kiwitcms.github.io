@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-01-22T12:10:00+02:00</updated><entry><title>Kiwi TCMS roadmap for 2018</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="alternate"></link><published>2018-01-22T12:10:00+02:00</published><updated>2018-01-22T12:10:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-22:/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone. As you know Kiwi TCMS has been around for a while and it has
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-01-25T11:30:00+02:00</updated><entry><title>Kiwi TCMS version 3.50</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="alternate"></link><published>2018-01-25T11:30:00+02:00</published><updated>2018-01-25T11:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-25:/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 3.50
+and the corresponding tcms-api version 1.5.1! This is a bug-fix and
+enhancement release and we advise you to upgrade as soon as possible!&lt;/p&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 3.49&lt;/h2&gt;
+&lt;h3&gt;Enhancements and bug fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update documentation for XML-RPC and positional …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 3.50
+and the corresponding tcms-api version 1.5.1! This is a bug-fix and
+enhancement release and we advise you to upgrade as soon as possible!&lt;/p&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 3.49&lt;/h2&gt;
+&lt;h3&gt;Enhancements and bug fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update documentation for XML-RPC and positional arguments, translations,
+  environment groups&lt;/li&gt;
+&lt;li&gt;Enable translations. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/129"&gt;Issue #129&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Register models for DB translations. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/182"&gt;Issue #182&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;New German translations (@xbln)&lt;/li&gt;
+&lt;li&gt;Require django-attachments&amp;gt;=1.3 and restore attachments count in tabs&lt;/li&gt;
+&lt;li&gt;Fix missing tag names in TestPlan page&lt;/li&gt;
+&lt;li&gt;Hide admin forms for some models not supposed to be edited by users. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/174"&gt;Issue #174&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use django-grappelli for the admin templates: modern look and feel and
+  less template files overridden by Kiwi TCMS&lt;/li&gt;
+&lt;li&gt;Load values for default property in TestRun 'Add Property' dialog. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/142"&gt;Issue #142&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Correctly find property ID when renaming environment properties. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/167"&gt;Issue #167&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Convert request body to string. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/177"&gt;Issue #177&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove batch tag Add/Remove sub-menu in TestPlan view (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Remove Edit tag button in Tag tab (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Remove template functions. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/107"&gt;Issue #107&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove custom HttpJSONResponse classes&lt;/li&gt;
+&lt;li&gt;Remove unused and duplicate code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;tcms-api changes since 1.5.0&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix order of TestCaseRun statuses. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/184"&gt;Issue #184&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release introduces new database migrations!&lt;/p&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd Kiwi/
+docker-compose down
+make docker-image
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS roadmap for 2018</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="alternate"></link><published>2018-01-22T12:10:00+02:00</published><updated>2018-01-22T12:10:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-22:/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone. As you know Kiwi TCMS has been around for a while and it has
 gone through some big changes in the last year! It started as an abandoned
 Django 1.6 project with broken test suite and is now currently running on the
 latest Django 2.0.1 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone. As you know Kiwi TCMS has been around for a while and it has

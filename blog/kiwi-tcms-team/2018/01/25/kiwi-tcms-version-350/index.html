@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS version 3.50</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="and tcms-api version 1.5.1" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS version 3.50">
+            <meta name="twitter:description" content="and tcms-api version 1.5.1">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="http://kiwitcms.org/theme/images/twitter_card.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" />
+        <meta property="og:title" content="Kiwi TCMS version 3.50" />
+        <meta property="article:published_time" content="2018-01-25 11:30:00+02:00">
+            <meta property="og:description" content="and tcms-api version 1.5.1">
+
+            <meta property="og:image" content="http://kiwitcms.org/theme/images/og_image.jpg">
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body class="">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+
+            <ul class="topnav">
+                <li class="right">
+                    <form action="http://google.com/search" method="get">
+                        <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                        <input class="search" name="q" placeholder="Search" type="text">
+                    </form>
+                </li>
+
+                <li class="right"><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                <li class="right"><a href="http://mrsenko.com">Support</a></li>
+                <li class="right"><a href="https://github.com/kiwitcms/Kiwi">Community</a></li>
+                <li class="right"><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                <li class="right"><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
+            </ul>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Kiwi TCMS version 3.50</h1>
+        <h2 class="top-subheader">and tcms-api version 1.5.1</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Thu 25 January 2018
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>We're happy to announce Kiwi TCMS version 3.50
+and the corresponding tcms-api version 1.5.1! This is a bug-fix and
+enhancement release and we advise you to upgrade as soon as possible!</p>
+<h2>Changes since Kiwi TCMS 3.49</h2>
+<h3>Enhancements and bug fixes</h3>
+<ul>
+<li>Update documentation for XML-RPC and positional arguments, translations,
+  environment groups</li>
+<li>Enable translations. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/129">Issue #129</a></li>
+<li>Register models for DB translations. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/182">Issue #182</a></li>
+<li>New German translations (@xbln)</li>
+<li>Require django-attachments&gt;=1.3 and restore attachments count in tabs</li>
+<li>Fix missing tag names in TestPlan page</li>
+<li>Hide admin forms for some models not supposed to be edited by users. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/174">Issue #174</a></li>
+<li>Use django-grappelli for the admin templates: modern look and feel and
+  less template files overridden by Kiwi TCMS</li>
+<li>Load values for default property in TestRun 'Add Property' dialog. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/142">Issue #142</a></li>
+<li>Correctly find property ID when renaming environment properties. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/167">Issue #167</a></li>
+<li>Convert request body to string. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/177">Issue #177</a></li>
+</ul>
+<h3>Refactoring</h3>
+<ul>
+<li>Remove batch tag Add/Remove sub-menu in TestPlan view (Anton Sankov)</li>
+<li>Remove Edit tag button in Tag tab (Anton Sankov)</li>
+<li>Remove template functions. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/107">Issue #107</a></li>
+<li>Remove custom HttpJSONResponse classes</li>
+<li>Remove unused and duplicate code</li>
+</ul>
+<h2>tcms-api changes since 1.5.0</h2>
+<ul>
+<li>Fix order of TestCaseRun statuses. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/184">Issue #184</a></li>
+</ul>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+docker-compose down
+make docker-image
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<p>Happy testing!</p>
+    </article>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
