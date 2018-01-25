@@ -404,20 +404,8 @@ pre code {
         width: 0;
     }
 
-    /* Features Page */
-    .features .col-2 {
-        display: none;
-        width: 0;
-    }
-    .features .col-8 {
-        width: 97%;
-    }
-    .features .margin0 {
-        min-width: 95%;
-        max-width: 95%;
-        margin-left: 1.8rem;
-        margin-right: 1.8rem;
-        box-sizing: border-box;
+    .screenshots .col-8 {
+        width: 100%;
     }
 }
 
@@ -465,10 +453,6 @@ pre code {
         width: 0;
     }
 
-    .screenshots .col-8 {
-        width: 100%;
-    }
-
     .screenshots .img {
         max-width: 100%;
         /*
@@ -506,39 +490,6 @@ pre code {
         padding-left: 1.8rem;
         text-align: left;
     }
-
-    /*features page*/
-    .features .w50 {
-        padding-top: 2rem;
-    }
-    .features .col-8 {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .features .col-3 {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .features img {
-        min-width: 95%;
-        max-width: 95%;
-        margin-left: 1.8rem;
-        margin-right: 1.8rem;
-        box-sizing: border-box;
-    }
-    .features li {
-        padding-left: 1.8rem;
-        padding-right: 1.8rem;
-    }
-    .features .w25 {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .features .testplan {
-        min-width: 100%;
-        max-width: 100%;
-        margin-bottom: 5rem;
-    }
 }
 
 @media screen and (max-width: 767px){
@@ -570,23 +521,6 @@ pre code {
         text-align: left;
         padding-left: 1.8rem;
         box-sizing: border-box;
-    }
-
-    /*features page*/
-    .features .w50 {
-        width: 100%;
-        padding-left: 1.8rem;
-        padding-right: 1.8rem;
-        box-sizing: border-box;
-    }
-    .features .col-8 .horizontally-stacked-list {
-        display: inline;
-    }
-    .features .col-8 li {
-        max-width: 100%;
-    }
-    .features .demo-btn {
-        margin-bottom: 1.8rem;
     }
 }
 
