@@ -392,6 +392,11 @@ pre code {
     padding-top: 2rem;
 }
 
+/* overrides for features page */
+.features .about-panel-title, .features .about-panel-details {
+    padding-left: 0;
+}
+
 @media screen and (max-width: 1360px){
     /* Header section */
     .header-img {
