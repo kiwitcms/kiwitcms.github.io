@@ -31,7 +31,7 @@ Use pylint and pylint-django
 ----------------------------
 
 pylint is the standard static analyzer for Python and currently it reports over
-4000 errors and warning when executed against Kiwi TCMS. This is a huge number and
+4000 errors and warnings when executed against Kiwi TCMS. This is a huge number and
 it needs to become zero! We've also identified interesting patterns that will
 make it into pylint and pylint-django plugins!
 
@@ -85,8 +85,8 @@ All RPC methods should be documented first and then the rest of Kiwi's
 internals to make development easier!
 
 
-No vendored in JavaScript libraries
------------------------------------
+No vendored JavaScript libraries
+--------------------------------
 
 There are 11 vendored-in JavaScript files that we carry around in Kiwi TCMS.
 Most notable are jQuery plus a few addons and Handlebars.js. To the extent possible
