@@ -69,13 +69,19 @@ ul.topnav, #pagination ul {
 }
 
 ul.topnav li, #pagination ul li {float: left;}
-
 ul.topnav li a, #pagination ul li, #pagination ul li a {
     display: block;
     text-align: center;
     padding: 0 1.6rem;
     line-height: 5rem;
     border-radius: 0.3rem;
+}
+
+/* override some of the style inherited above */
+#pagination ul li a { padding: 0; }
+#pagination ul li {
+    padding: 0;
+    margin-right: 1.6rem;
 }
 
 img {
@@ -111,13 +117,6 @@ nav button {
 
 
 /* Header Section */
-
-
-#pagination {
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
-}
 
 .header {
     padding: 5% 0;
@@ -168,7 +167,7 @@ nav button {
     font-style: italic;
 }
 
-.article, .comments {
+.article, .comments, #pagination {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
