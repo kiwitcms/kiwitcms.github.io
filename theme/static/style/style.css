@@ -423,6 +423,12 @@ pre code {
  }
 
 @media screen and (max-width: 1360px){
+    /* navigation section */
+    ul.topnav li [name="q"] {
+        width: 0;
+        display: none;
+    }
+
     /* Header section */
     .header-img {
         background-size: contain;
