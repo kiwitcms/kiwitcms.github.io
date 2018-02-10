@@ -474,17 +474,14 @@ pre code {
         max-width: 70%;
     }
 
+    ul.topnav { margin-top: 7rem; }
+
     ul.topnav li {
         width: 100%;
         display: block;
-        margin-bottom: 1.5rem;
     }
 
-    ul.topnav li [name="q"] {
-        width: 80%;
-        margin: auto;
-        margin-top: 7rem;
-    }
+    ul.topnav li a { text-align: left; }
 
     nav .open-menu {
         display: inline-block;
