@@ -22,6 +22,12 @@ nav.primary a.active, #pagination a.active {
     color: #e3edea;
 }
 
+@media screen and (max-width: 991px) {
+    #mobile-mask {
+        background-color: #9ab451;
+    }
+}
+
 .primary input {
     background-color: #f6f6f6;
 }

@@ -12,28 +12,32 @@
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
     </head>
-    <body class="">
+    <body class="" onload="setMobileNavBehaviour()">
         <!-- Nav -->
         <nav class="col-12 primary">
             <a href="/">
                 <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
             </a>
-
-            <ul class="topnav">
-                <li class="right">
-                    <form action="http://google.com/search" method="get">
-                        <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
-                        <input class="search" name="q" placeholder="Search" type="text">
-                    </form>
-                </li>
-
-                <li class="right"><a href="http://kiwitcms.org/blog/">Blog</a></li>
-                <li class="right"><a href="http://mrsenko.com">Support</a></li>
-                <li class="right"><a href="/community/">Community</a></li>
-                <li class="right"><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                <li class="right"><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
-            </ul>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <!-- content -->
     <h1>Tags for Kiwi TCMS</h1>        <!-- Footer -->
