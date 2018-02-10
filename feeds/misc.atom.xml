@@ -1,5 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-01-25T11:30:00+02:00</updated><entry><title>Kiwi TCMS version 3.50</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="alternate"></link><published>2018-01-25T11:30:00+02:00</published><updated>2018-01-25T11:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-25:/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 3.50
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-02-10T15:30:00+02:00</updated><entry><title>Kiwi TCMS &amp; tcms-api version 4.0.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/" rel="alternate"></link><published>2018-02-10T15:30:00+02:00</published><updated>2018-02-10T15:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-02-10:/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.0.0
+and the corresponding tcms-api version 4.0.0! This is a very big release
+which introduces tons of backwards incompatible changes to the RPC layer
+as well as several bug-fixes and enhancements!&lt;/p&gt;
+&lt;p&gt;With this release Kiwi TCMS meets one of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.0.0
+and the corresponding tcms-api version 4.0.0! This is a very big release
+which introduces tons of backwards incompatible changes to the RPC layer
+as well as several bug-fixes and enhancements!&lt;/p&gt;
+&lt;p&gt;With this release Kiwi TCMS meets one of our
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;milestones for 2018&lt;/a&gt;! All XML-RPC
+namespaces now match DB model names and the API client class names. Lots of
+similar and duplicate methods were removed and existing ones were simplified.
+We've also reduced code duplication and technical debth by 1 month
+according to stats by &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is also the first release to officially publish the
+&lt;code&gt;kiwitcms/kiwi&lt;/code&gt; image on Docker Hub!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; upgrading to Kiwi TCMS 4.0.0 means you will have to upgrade
+the tcms-api client as well. None of the 4.x releases is compatible with
+older releases due to the massive ammount of changes in the RPC layer.&lt;/p&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 3.50&lt;/h2&gt;
+&lt;h3&gt;Enhancements and bug fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Upgrade to Django 2.0.2 which patches a security issue&lt;/li&gt;
+&lt;li&gt;Pin JIRA client version to 1.0.10. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/195"&gt;Issue #195&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Generate api-docs for model classes&lt;/li&gt;
+&lt;li&gt;Updated documentation for all RPC methods&lt;/li&gt;
+&lt;li&gt;Use Grappelli jQuery initialization, fixes popup windows&lt;/li&gt;
+&lt;li&gt;Unify RPC namespaces, API client class names and server-side model names.
+  Fixes &lt;a href="https://github.com/kiwitcms/Kiwi/issues/153"&gt;Issue #153&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove &lt;code&gt;ADMIN_PREFIX&lt;/code&gt; setting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;RPC methods refactoring&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove &lt;code&gt;Build.check_build&lt;/code&gt;, use &lt;code&gt;Build.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Build.get&lt;/code&gt;, use &lt;code&gt;Build.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Build.get_caseruns&lt;/code&gt;, use &lt;code&gt;TestCaseRun.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;Build.get_runs&lt;/code&gt;, use &lt;code&gt;TestRun.filter&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename &lt;code&gt;Env.filter_groups&lt;/code&gt;, use &lt;code&gt;Env.Group.filter&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;Env.filter_properties&lt;/code&gt;, use &lt;code&gt;Env.Property.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename &lt;code&gt;Env.filter_values&lt;/code&gt;, use &lt;code&gt;Env.Value.filter&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;Product.add_component&lt;/code&gt;, use &lt;code&gt;Component.create&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.add_version&lt;/code&gt;, use &lt;code&gt;Version.create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.check_category&lt;/code&gt;, use &lt;code&gt;Category.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.check_component&lt;/code&gt;, use &lt;code&gt;Component.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.check_product&lt;/code&gt;, use &lt;code&gt;Product.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.filter_categories&lt;/code&gt;, use &lt;code&gt;Category.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.filter_components&lt;/code&gt;, use &lt;code&gt;Component.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.filter_versions&lt;/code&gt;, use &lt;code&gt;Version.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.get&lt;/code&gt;, use &lt;code&gt;Product.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.get_builds&lt;/code&gt;, use &lt;code&gt;Build.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.get_cases&lt;/code&gt;, use &lt;code&gt;TestCase.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.get_categories&lt;/code&gt;, use &lt;code&gt;Category.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.get_category&lt;/code&gt;, use &lt;code&gt;Category.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;Product.get_component&lt;/code&gt;, use &lt;code&gt;Component.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;Product.update_component&lt;/code&gt;, use &lt;code&gt;Component.update&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename &lt;code&gt;Tag.get_tags&lt;/code&gt; to &lt;code&gt;Tag.filter&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;TestCase.add_comment&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestCase.add_component&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestCase.add_tag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.add_to_run&lt;/code&gt;, use &lt;code&gt;TestRun.add_case&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.attach_bug&lt;/code&gt;, use &lt;code&gt;Bug.create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.calculate_average_estimated_time&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.calculate_total_estimated_time&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.check_case_status&lt;/code&gt;, use &lt;code&gt;TestCaseStatus.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.check_priority&lt;/code&gt;, use &lt;code&gt;Priority.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestCase.create&lt;/code&gt;, no longer accepts &lt;code&gt;plan&lt;/code&gt;,
+  &lt;code&gt;component&lt;/code&gt; and &lt;code&gt;bug&lt;/code&gt; dict attributes. Instead use 
+  &lt;code&gt;TestPlan.add_case&lt;/code&gt;, &lt;code&gt;TestCase.add_component&lt;/code&gt; and &lt;code&gt;Bug.create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.detach_bug&lt;/code&gt;, use &lt;code&gt;Bug.remove&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.filter_count&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.get&lt;/code&gt;, use &lt;code&gt;TestCase.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.get_bugs&lt;/code&gt;, use &lt;code&gt;Bug.filter({'case': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.get_bug_systems&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.get_case_status&lt;/code&gt;, use &lt;code&gt;TestCaseStatus.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestCase.get_components&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.get_plans&lt;/code&gt;, use &lt;code&gt;TestPlan.filter({'case': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.get_priority&lt;/code&gt;, use &lt;code&gt;Priority.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.get_tags&lt;/code&gt;, use &lt;code&gt;Tag.filter({'case': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.get_text&lt;/code&gt;, use &lt;code&gt;TestCase.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.link_plan&lt;/code&gt;, use &lt;code&gt;TestPlan.add_case&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;TestCase.notification_add_cc&lt;/code&gt; to &lt;code&gt;TestCase.add_notification_cc&lt;/code&gt;
+  and update signature&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;TestCase.notification_get_cc_list&lt;/code&gt; to &lt;code&gt;TestCase.get_notification_cc&lt;/code&gt;
+  and update signature&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;TestCase.notification_remove_cc&lt;/code&gt; to &lt;code&gt;TestCase.remove_notification_cc&lt;/code&gt;
+  and update signature&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestCase.remove_component&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestCase.remove_tag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCase.store_text&lt;/code&gt;, use &lt;code&gt;TestCase.update&lt;/code&gt; with
+  &lt;code&gt;setup&lt;/code&gt;, &lt;code&gt;breakdown&lt;/code&gt;, &lt;code&gt;action&lt;/code&gt; and &lt;code&gt;effect&lt;/code&gt; attributes in the parameter dict&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;TestCase.unlink_plan&lt;/code&gt;, use &lt;code&gt;TestPlan.remove_case&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;TestCasePlan.get&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;TestCasePlan.update&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update &lt;code&gt;TestCaseRun.add_comment&lt;/code&gt; to accept a single ID as first parameter&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCaseRun.attach_bug&lt;/code&gt;, use &lt;code&gt;Bug.create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;TestCaseRun.attach_log&lt;/code&gt; to &lt;code&gt;TestCaseRun.add_log&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCaseRun.detach_bug&lt;/code&gt;, use &lt;code&gt;Bug.remove&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;TestCaseRun.detach_log&lt;/code&gt; to &lt;code&gt;TestCaseRun.remove_log&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCaseRun.get&lt;/code&gt;, use &lt;code&gt;TestCaseRun.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCaseRun.get_bugs&lt;/code&gt;, use &lt;code&gt;Bug.filter({'case_run': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestCaseRun.get_case_run_status_by_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update signature for &lt;code&gt;TestCaseRun.update&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;TestPlan.add_component&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestPlan.add_tag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.check_plan_type&lt;/code&gt;, use &lt;code&gt;PlanType.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.filter_count&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get&lt;/code&gt;, use &lt;code&gt;TestPlan.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_all_cases_tags&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_components&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_env_groups&lt;/code&gt;, use &lt;code&gt;Env.Group.filter({'testplan': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_plan_type&lt;/code&gt;, use &lt;code&gt;PlanType.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_product&lt;/code&gt;, use &lt;code&gt;Product.filter({'plan': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_tags&lt;/code&gt;, use &lt;code&gt;Tag.filter({'plan': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_test_cases&lt;/code&gt;, use &lt;code&gt;TestCase.filter({'plan': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_test_runs&lt;/code&gt;, use &lt;code&gt;TestRun.filter({'plan': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_text&lt;/code&gt;, use &lt;code&gt;TestPlan.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;TestPlan.link_env_value&lt;/code&gt; to &lt;code&gt;TestPlan.add_env_value&lt;/code&gt;
+  and update signature&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.remove_component&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestPlan.remove_tag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.store_text&lt;/code&gt;, use &lt;code&gt;TestPlan.update&lt;/code&gt; with
+  a &lt;code&gt;text&lt;/code&gt; attribute in the parameter values&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename &lt;code&gt;TestPlan.unlink_env_value&lt;/code&gt; to &lt;code&gt;TestPlan.remove_env_value&lt;/code&gt;
+  and update signature&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename &lt;code&gt;TestRun.add_cases&lt;/code&gt; to &lt;code&gt;TestRun.add_case&lt;/code&gt; and update signature&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestRun.add_tag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestRun.create&lt;/code&gt;, no longer accepts &lt;code&gt;case&lt;/code&gt;
+  dict attribute. Instead use &lt;code&gt;TestRun.add_case&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestRun.filter_count&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestRun.get&lt;/code&gt;, use &lt;code&gt;TestRun.filter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestRun.get_bugs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestRun.get_env_values&lt;/code&gt;, use &lt;code&gt;Env.Value.filter({'testrun': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestRun.get_tags&lt;/code&gt;, use &lt;code&gt;Tag.filter({'run': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;TestRun.get_test_cases&lt;/code&gt; to &lt;code&gt;TestRun.get_cases&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestRun.get_test_case_runs&lt;/code&gt;, use &lt;code&gt;TestCaseRun.filter({'run': ?})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestRun.get_test_plan&lt;/code&gt;, use &lt;code&gt;TestPlan.filter({'run': ?})[0]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;TestRun.remove_cases&lt;/code&gt; to &lt;code&gt;TestRun.remove_case&lt;/code&gt; and update signature&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestRun.remove_tag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update signature for &lt;code&gt;TestRun.update&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename &lt;code&gt;User.get&lt;/code&gt; to &lt;code&gt;User.filter&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;User.join&lt;/code&gt; to &lt;code&gt;User.join_group&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;User.update&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Models and database migrations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove model &lt;code&gt;TestEnvironment&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove model &lt;code&gt;TestEnvironmentCategory&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove model &lt;code&gt;TestEnvironmentElement&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove model &lt;code&gt;TestEnvironmentMap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove model &lt;code&gt;TestEnvironmentProperty&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove model &lt;code&gt;TestPlanComponent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.get_text_with_version()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestRun.get_previous_or_next()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release introduces new database migrations!&lt;/p&gt;
+&lt;h2&gt;tcms-api changes since 1.5.1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Make the code compatible with Kiwi TCMS XML-RPC v4.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;Status&lt;/code&gt; to &lt;code&gt;TestCaseRunStatus&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;CaseRun&lt;/code&gt; to &lt;code&gt;TestCaseRun&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;PlanStatus&lt;/code&gt;, use &lt;code&gt;TestPlan.is_active&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;RunStatus&lt;/code&gt;, use &lt;code&gt;TestRun.finished&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;TestPlan.components&lt;/code&gt; container&lt;/li&gt;
+&lt;li&gt;Update signature for &lt;code&gt;TestPlan&lt;/code&gt;. Now accept &lt;code&gt;text&lt;/code&gt; kwarg in constructor
+  instead of &lt;code&gt;document&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd Kiwi/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS version 3.50</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="alternate"></link><published>2018-01-25T11:30:00+02:00</published><updated>2018-01-25T11:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-25:/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 3.50
 and the corresponding tcms-api version 1.5.1! This is a bug-fix and
 enhancement release and we advise you to upgrade as soon as possible!&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 3.49&lt;/h2&gt;
