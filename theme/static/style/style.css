@@ -62,12 +62,13 @@ nav {
     z-index: 1;
 }
 
+ul.topnav { float: right;}
+
 ul.topnav, #pagination ul {
     list-style-type: none;
 }
 
 ul.topnav li, #pagination ul li {float: left;}
-ul.topnav li.right, #pagination ul li.right {float: right;}
 
 ul.topnav li a, #pagination ul li, #pagination ul li a {
     display: block;
