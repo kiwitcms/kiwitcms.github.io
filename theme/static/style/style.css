@@ -332,6 +332,10 @@ pre code {
     cursor: pointer;
 }
 
+.screenshots .col-8 {
+    margin-bottom: 6rem;
+}
+
 /* Footer Section */
 
 .footer {
@@ -369,6 +373,44 @@ pre code {
 
 .footer-sociallinks a {
     font-size: 3.5rem;
+}
+
+/* Newsletter Form Section */
+
+.newsletter {
+    padding-bottom: 6rem;
+}
+
+#mc_embed_signup label {
+    display: block;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#mc_embed_signup input.email {
+    border-radius: 0;
+    height: 5.2rem;
+    font-size: 2rem;
+}
+
+#mc_embed_signup .button {
+    height: 5.2rem;
+    border-radius: 0;
+    margin-left: -1rem;
+    font-size: 2rem;
+}
+
+#mc_embed_signup {
+    clear: left;
+    margin: auto;
+    width: 70%;
+    padding: 5rem 0;
+}
+
+.bot-test-input {
+    position: absolute;
+    left: -5000px;
 }
 
 /* Features Page */
@@ -652,6 +694,27 @@ pre code {
         text-align: left;
         padding-left: 1.8rem;
         box-sizing: border-box;
+    }
+
+    /* Newsletter Form Section */
+    #mc_embed_signup {
+        padding: 4rem;
+    }
+
+    #mc_embed_signup input.email {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    #mc_embed_signup .clear {
+        display: block;
+        width: 100%
+    }
+
+    #mc_embed_signup .button {
+        width: 100%;
+        margin: 0;
+        margin-top: -0.5rem;
     }
 
     /* features page */

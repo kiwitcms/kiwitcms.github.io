@@ -12,7 +12,7 @@
     color: #1c3d32;
 }
 
-nav.primary a:hover, #pagination a:hover {
+nav.primary a:hover, #pagination a:hover, #mc_embed_signup .button:hover {
     background-color: #1c3d32;
     color: #f6f6f6;
 }
@@ -32,12 +32,12 @@ nav.primary a.active, #pagination a.active {
     background-color: #f6f6f6;
 }
 
-.secondary {
+.secondary, #mc_embed_signup input.email {
     background-color: #f6f6f6;
     color: #1c3d32;
 }
 
-.stripe-gray {
+.stripe-gray, #mc_embed_signup {
     background-color: #e6e6e6;
     color: #1c3d32;
 }
@@ -46,7 +46,7 @@ nav.primary a.active, #pagination a.active {
     background-color: #9e9e9e;
 }
 
-.accent-important {
+.accent-important, #mc_embed_signup .button {
     background-color: #9ab451;
     color: #212516;
 }
