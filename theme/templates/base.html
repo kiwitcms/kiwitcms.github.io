@@ -69,5 +69,20 @@
                 </ul>
             </div>
         </footer>
+        {% if GOOGLE_ANALYTICS %}
+            <!-- Google analytics script -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS }}"></script>
+            <!-- Google Analytics Reporter Script -->
+            <script>
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+
+                gtag('js', new Date());
+                gtag('config', '{{ GOOGLE_ANALYTICS }}');
+            </script>
+        {% endif %}
     </body>
 </html>
