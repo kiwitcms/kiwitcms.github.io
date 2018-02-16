@@ -332,10 +332,6 @@ pre code {
     cursor: pointer;
 }
 
-.screenshots .col-8 {
-    margin-bottom: 6rem;
-}
-
 /* Footer Section */
 
 .footer {
@@ -379,6 +375,9 @@ pre code {
 
 .newsletter {
     padding-bottom: 6rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
 }
 
 #mc_embed_signup label {
@@ -399,18 +398,19 @@ pre code {
     border-radius: 0;
     margin-left: -1rem;
     font-size: 2rem;
+    transition: none;
 }
 
 #mc_embed_signup {
     clear: left;
     margin: auto;
-    width: 70%;
+    width: 100%;
     padding: 5rem 0;
+    box-sizing: border-box;
 }
 
 .bot-test-input {
-    position: absolute;
-    left: -5000px;
+    display: none;
 }
 
 /* Features Page */
@@ -580,6 +580,11 @@ pre code {
         border-radius: 0.3rem;
     }
 
+    .article, .comments, #pagination, .community, .header {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+    }
+
     /* Header section */
     /* these two together will cause the laptop image to be displayed
        centered vertically on smaller screens which looks a bit better
@@ -663,6 +668,36 @@ pre code {
     .features img {
         width: 100%;
     }
+
+    /* Newsletter Form Section */
+    .newsletter {
+        padding: 0;
+    }
+
+    #mc_embed_signup {
+        padding: 1.8rem;
+    }
+
+    .artcile #mc_embed_signup {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #mc_embed_signup input.email {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    #mc_embed_signup .clear {
+        display: block;
+        width: 100%
+    }
+
+    #mc_embed_signup .button {
+        width: 100%;
+        margin: 0;
+        margin-top: -0.5rem;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -694,27 +729,6 @@ pre code {
         text-align: left;
         padding-left: 1.8rem;
         box-sizing: border-box;
-    }
-
-    /* Newsletter Form Section */
-    #mc_embed_signup {
-        padding: 4rem;
-    }
-
-    #mc_embed_signup input.email {
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-
-    #mc_embed_signup .clear {
-        display: block;
-        width: 100%
-    }
-
-    #mc_embed_signup .button {
-        width: 100%;
-        margin: 0;
-        margin-top: -0.5rem;
     }
 
     /* features page */
