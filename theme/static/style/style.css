@@ -46,7 +46,7 @@ a {
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-12, .w100 {width: 100%;}
 
 [class|='col'] {
     position: relative;
@@ -121,6 +121,7 @@ nav button {
 .header {
     padding: 5% 0;
     padding-left: 5%;
+    margin-bottom: 25%;
     box-sizing: border-box;
 }
 
@@ -174,12 +175,12 @@ nav button {
 }
 
 /* Article styles */
-.article h1, .community h1 { margin-bottom: 3rem; }
+.article h1, .community section h1 { margin-bottom: 3rem; }
 .article h2 { margin-bottom: 2.75rem; }
 .article h3 { margin-bottom: 2.5rem; }
 .article h4 { margin-bottom: 2.25rem; }
-.article p, .community p { margin-bottom: 2rem; }
-.article ul, .community ul {
+.article p, .community section p { margin-bottom: 2rem; }
+.article ul, .community section ul {
     padding-left: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -452,13 +453,13 @@ pre code {
 
 /* Community Page */
 
-.community {
+.community section {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
 }
 
-.community div.col-12 {
+.community section div.col-12 {
     padding-top: 6%;
     line-height: 1.4em;
  }
@@ -580,7 +581,7 @@ pre code {
         border-radius: 0.3rem;
     }
 
-    .article, .comments, #pagination, .community, .header {
+    .article, .comments, #pagination, .community section, .header {
         padding-left: 1.8rem;
         padding-right: 1.8rem;
     }
