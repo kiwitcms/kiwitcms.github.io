@@ -1,0 +1,80 @@
+Title: Kiwi TCMS 4.1.0
+headline: bug-fix and enhancement update
+date: 2018-02-21 22:45
+comments: true
+
+
+We're happy to announce Kiwi TCMS version 4.1.0!
+This is a bug-fix and enhancement update centered around providing more
+flexibility for administrators to configure the user approval process.
+Refer to the documentation for more information about
+[signals handling](http://kiwitcms.readthedocs.io/en/latest/modules/tcms.signals.html)
+in Kiwi TCMS.
+
+
+Changes since Kiwi TCMS 4.0.0
+------------------------------
+
+### Enhancements and bug fixes
+
+- Add tests for `tcms.core.ajax.tag` (Anton Sankov)
+- Remove unused code from `tcms.core.ajax.tag` (Anton Sankov)
+- Refactor `tcms.core.ajax.tag` to work with only one object. Fixes
+  [Issue #135](https://github.com/kiwitcms/Kiwi/issues/135) (Anton Sankov)
+- Add test for tcms_api.TestRun. Closes
+  [Issue #194](https://github.com/kiwitcms/Kiwi/issues/194)
+- Send the `user_registered` signal when new users are registered
+- Add signal handler to notify admins on new users. Fixes
+  [Issue #205](https://github.com/kiwitcms/Kiwi/issues/205)
+- Add `is_superuser` column to User admin. Fixes
+  [Issue #206](https://github.com/kiwitcms/Kiwi/issues/206)
+- Properly pass variables to blocktrans tag. Fixes
+  [Issue #225](https://github.com/kiwitcms/Kiwi/issues/225)
+- Minor documentation updates
+
+### Refactoring
+
+- Remove double thread when sending email on `post_save` signal
+- Remove unused `EmailBackend` authentication backend
+- Remove unused `tcms.core.models.signals` module
+- Consolidate all signals and handlers in `tcms.signals`
+- Make use of `django_messages` during account registration
+
+### Settings
+
+- Remove `LISTENING_MODEL_SIGNAL` (internal setting)
+- New setting `AUTO_APPROVE_NEW_USERS`. Fixes
+  [Issue #203](https://github.com/kiwitcms/Kiwi/issues/203)
+
+
+### Models and database migrations
+
+- Remove unused fields from `Product` model:
+  `disallow_new`, `max_vote_super_bug`, `vote_super_user`,
+  `field votes_to_confirm`, `default_milestone`, `milestone_url`
+- Remove unused `Milestone` model
+
+
+**IMPORTANT:** this release introduces new database migrations!
+
+### Translations
+
+There are new translatable strings introduced with this release,
+including translations of a few email templates! At this moment
+translating Kiwi TCMS in languages other than English is purely a
+community effort. If you'd like to help consult our
+[translations contribution page](http://kiwitcms.readthedocs.io/en/latest/contribution.html#translation).
+
+
+How to upgrade
+---------------
+
+If you are using Kiwi TCMS as a Docker container then
+
+    cd Kiwi/
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+Happy testing!
