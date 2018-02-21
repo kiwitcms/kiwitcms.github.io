@@ -104,6 +104,12 @@
         {{ article.content }}
     </article>
 
+    {% if ADDTHIS_PUBID %}
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADDTHIS_PUBID }}"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+    {% endif %}
+
     {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
     <section class="col-12 comments secondary">
         <div id="disqus_thread"></div>

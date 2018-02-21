@@ -167,7 +167,7 @@ nav button {
     font-style: italic;
 }
 
-.article, .comments, #pagination {
+.article, .comments, #pagination, .addthis_inline_share_toolbox {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
