@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-02-10T15:30:00+02:00</updated><entry><title>Kiwi TCMS &amp; tcms-api version 4.0.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/" rel="alternate"></link><published>2018-02-10T15:30:00+02:00</published><updated>2018-02-10T15:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-02-10:/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.0.0
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-02-21T22:45:00+02:00</updated><entry><title>Kiwi TCMS 4.1.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/02/21/kiwi-tcms-410/" rel="alternate"></link><published>2018-02-21T22:45:00+02:00</published><updated>2018-02-21T22:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-02-21:/blog/kiwi-tcms-team/2018/02/21/kiwi-tcms-410/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.1.0!
+This is a bug-fix and enhancement update centered around providing more
+flexibility for administrators to configure the user approval process.
+Refer to the documentation for more information about
+&lt;a href="http://kiwitcms.readthedocs.io/en/latest/modules/tcms.signals.html"&gt;signals handling&lt;/a&gt;
+in Kiwi TCMS.&lt;/p&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 4.0.0 …&lt;/h2&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.1.0!
+This is a bug-fix and enhancement update centered around providing more
+flexibility for administrators to configure the user approval process.
+Refer to the documentation for more information about
+&lt;a href="http://kiwitcms.readthedocs.io/en/latest/modules/tcms.signals.html"&gt;signals handling&lt;/a&gt;
+in Kiwi TCMS.&lt;/p&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 4.0.0&lt;/h2&gt;
+&lt;h3&gt;Enhancements and bug fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add tests for &lt;code&gt;tcms.core.ajax.tag&lt;/code&gt; (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Remove unused code from &lt;code&gt;tcms.core.ajax.tag&lt;/code&gt; (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Refactor &lt;code&gt;tcms.core.ajax.tag&lt;/code&gt; to work with only one object. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/135"&gt;Issue #135&lt;/a&gt; (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Add test for tcms_api.TestRun. Closes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/194"&gt;Issue #194&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Send the &lt;code&gt;user_registered&lt;/code&gt; signal when new users are registered&lt;/li&gt;
+&lt;li&gt;Add signal handler to notify admins on new users. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/205"&gt;Issue #205&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;is_superuser&lt;/code&gt; column to User admin. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/206"&gt;Issue #206&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Properly pass variables to blocktrans tag. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/225"&gt;Issue #225&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Minor documentation updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove double thread when sending email on &lt;code&gt;post_save&lt;/code&gt; signal&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;code&gt;EmailBackend&lt;/code&gt; authentication backend&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;code&gt;tcms.core.models.signals&lt;/code&gt; module&lt;/li&gt;
+&lt;li&gt;Consolidate all signals and handlers in &lt;code&gt;tcms.signals&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make use of &lt;code&gt;django_messages&lt;/code&gt; during account registration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove &lt;code&gt;LISTENING_MODEL_SIGNAL&lt;/code&gt; (internal setting)&lt;/li&gt;
+&lt;li&gt;New setting &lt;code&gt;AUTO_APPROVE_NEW_USERS&lt;/code&gt;. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/203"&gt;Issue #203&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Models and database migrations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove unused fields from &lt;code&gt;Product&lt;/code&gt; model:
+  &lt;code&gt;disallow_new&lt;/code&gt;, &lt;code&gt;max_vote_super_bug&lt;/code&gt;, &lt;code&gt;vote_super_user&lt;/code&gt;,
+  &lt;code&gt;field votes_to_confirm&lt;/code&gt;, &lt;code&gt;default_milestone&lt;/code&gt;, &lt;code&gt;milestone_url&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;code&gt;Milestone&lt;/code&gt; model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release introduces new database migrations!&lt;/p&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;p&gt;There are new translatable strings introduced with this release,
+including translations of a few email templates! At this moment
+translating Kiwi TCMS in languages other than English is purely a
+community effort. If you'd like to help consult our
+&lt;a href="http://kiwitcms.readthedocs.io/en/latest/contribution.html#translation"&gt;translations contribution page&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd Kiwi/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS &amp; tcms-api version 4.0.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/" rel="alternate"></link><published>2018-02-10T15:30:00+02:00</published><updated>2018-02-10T15:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-02-10:/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.0.0
 and the corresponding tcms-api version 4.0.0! This is a very big release
 which introduces tons of backwards incompatible changes to the RPC layer
 as well as several bug-fixes and enhancements!&lt;/p&gt;
