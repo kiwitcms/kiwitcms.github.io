@@ -118,8 +118,10 @@ nav button {
 
 /* Header Section */
 
-.header {
-    padding: 5% 0 3% 5%;
+.index-page-header {
+    padding: 5% 0;
+    padding-left: 5%;
+    margin-bottom: 35rem;
     box-sizing: border-box;
 }
 
@@ -173,12 +175,14 @@ nav button {
 }
 
 /* Article styles */
-.article h1, .community section h1 { margin-bottom: 3rem; }
+.article h1, .page h1 { margin-bottom: 3rem; }
+/* override for index page */
+.index-page-header h1 { margin-bottom: 0rem; }
 .article h2 { margin-bottom: 2.75rem; }
 .article h3 { margin-bottom: 2.5rem; }
 .article h4 { margin-bottom: 2.25rem; }
-.article p, .community section p { margin-bottom: 2rem; }
-.article ul, .community section ul {
+.article p, .page p { margin-bottom: 2rem; }
+.article ul, .page ul {
     padding-left: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -449,19 +453,35 @@ pre code {
 .features .about-panel-title, .features .about-panel-details {
     padding-left: 0;
 }
+.features .page {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+.features .page div.col-12 {
+    padding-top: 0%;
+}
 
 /* Community Page */
 
-.community section {
+.page {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
 }
 
-.community section div.col-12 {
+.page div.col-12 {
     padding-top: 6%;
     line-height: 1.4em;
  }
+
+/* override for index page */
+.index-page-header {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+div.col-12 .index-page-header {
+    padding-top: 0%;
+}
 
 @media screen and (max-width: 1360px){
     /* navigation section */
@@ -580,7 +600,7 @@ pre code {
         border-radius: 0.3rem;
     }
 
-    .article, .comments, #pagination, .community section, .header {
+    .article, .comments, #pagination, .page, .index-page-header {
         padding-left: 1.8rem;
         padding-right: 1.8rem;
     }
@@ -590,11 +610,11 @@ pre code {
        centered vertically on smaller screens which looks a bit better
        compared to the default top alignment
     */
-    .header .col-12 {
+    .index-page-header .col-12 {
         display: flex;
         align-items: flex-end;
     }
-    .header .header-img {
+    .index-page-header .header-img {
         background-position: center;
     }
 
@@ -707,11 +727,11 @@ pre code {
     */
 
     /*header section*/
-    .header .col-7 {
+    .index-page-header .col-7 {
         display: none;
     }
 
-    .header .col-5 {
+    .index-page-header .col-5 {
         width: 100%;
     }
 

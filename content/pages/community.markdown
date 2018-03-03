@@ -1,7 +1,6 @@
 Title: Community
 url: community/
 save_as: community/index.html
-body_class: community
 
 # Community
 
