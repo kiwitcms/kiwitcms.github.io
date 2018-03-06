@@ -119,9 +119,7 @@ nav button {
 /* Header Section */
 
 .header {
-    padding: 5% 0;
-    padding-left: 5%;
-    margin-bottom: 25%;
+    padding: 5% 0 3% 5%;
     box-sizing: border-box;
 }
 
@@ -239,6 +237,7 @@ pre code {
     line-height: 3.5rem;
     text-align: center;
     padding: 2% 10%;
+    margin-top: 4%;
     margin-bottom: 4%;
 }
 
