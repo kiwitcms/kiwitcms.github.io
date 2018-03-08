@@ -115,50 +115,20 @@ nav button {
     display: none;
 }
 
+/* General Page styles */
 
-/* Header Section */
-
-.header {
-    padding: 5% 0 3% 5%;
+.page section {
+    padding-left: 5%;
+    padding-right: 5%;
     box-sizing: border-box;
 }
 
-.top-header {
-    line-height: 1.4em;
-    font-family: 'Audiowide', serif;
-}
-
-.top-subheader {
+.page section div.col-12 {
+    padding-top: 6%;
     line-height: 1.4em;
 }
 
-.header-list, .check-list {
-    line-height: 2rem;
-    margin-top: 2em;
-    padding-left: 1.5rem;
-}
 
-.check-list {
-    margin-top: 0;
-    padding: 0;
-    list-style-type: none;
-}
-.check-list li {
-    margin-bottom: 2rem;
-}
-
-.header-btns {
-    margin-top: 5rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.header-img {
-    width: 100%;
-    height: 350px;
-    background-image: url('../images/pc_with_test_run_small.png');
-    background-repeat: no-repeat;
-}
 
 .post-meta {
     font-size: 1.3rem;
@@ -173,12 +143,14 @@ nav button {
 }
 
 /* Article styles */
-.article h1, .community section h1 { margin-bottom: 3rem; }
+.article h1, .page section h1 { margin-bottom: 3rem; }
+/* override for index page */
+.page section .index-page-header h1 { margin-bottom: 0; }
 .article h2 { margin-bottom: 2.75rem; }
 .article h3 { margin-bottom: 2.5rem; }
 .article h4 { margin-bottom: 2.25rem; }
-.article p, .community section p { margin-bottom: 2rem; }
-.article ul, .community section ul {
+.article p, .page section p { margin-bottom: 2rem; }
+.article ul, .page section ul {
     padding-left: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -211,6 +183,49 @@ pre code {
     overflow-x: auto;
 }
 
+/* Header Section */
+
+.header {
+    padding: 5% 0 3% 5%;
+    box-sizing: border-box;
+}
+
+.top-header {
+    line-height: 1.4em;
+    font-family: 'Audiowide', serif;
+}
+
+.top-subheader {
+    line-height: 1.4em;
+}
+
+.header-list, .check-list {
+    line-height: 2rem;
+    margin-top: 2em;
+}
+
+.page section ul.check-list {
+    margin-top: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.check-list li {
+    margin-bottom: 2rem;
+}
+
+.header-btns {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-img {
+    width: 100%;
+    height: 350px;
+    background-image: url('../images/pc_with_test_run_small.png');
+    background-repeat: no-repeat;
+}
+
 
 /* Btns */
 
@@ -230,13 +245,13 @@ pre code {
 }
 
 /* About Section */
-
+.page section.about { padding: 0; }
 .about-intro {
     font-style: italic;
     font-size: 3rem;
     line-height: 3.5rem;
     text-align: center;
-    padding: 2% 10%;
+    padding: 2% 10% 0.5% 10%;
     margin-top: 4%;
     margin-bottom: 4%;
 }
@@ -259,7 +274,8 @@ pre code {
 
 /* Screenshots Section */
 
-.screenshot-title {
+.page section.screenshots { padding: 0; }
+.page section .screenshot-title {
     padding: 2% 0;
     text-align: center;
     line-height: 1.4em;
@@ -414,7 +430,8 @@ pre code {
 }
 
 /* Features Page */
-
+.features section { padding:0; }
+.features section div.col-12 { padding-top: 0; }
 .horizontally-stacked-list {
     display: flex;
     float: left;
@@ -450,18 +467,6 @@ pre code {
     padding-left: 0;
 }
 
-/* Community Page */
-
-.community section {
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
-}
-
-.community section div.col-12 {
-    padding-top: 6%;
-    line-height: 1.4em;
- }
 
 @media screen and (max-width: 1360px){
     /* navigation section */
@@ -580,21 +585,23 @@ pre code {
         border-radius: 0.3rem;
     }
 
-    .article, .comments, #pagination, .community section, .header {
+    .article, .comments, #pagination, .page section, .header {
         padding-left: 1.8rem;
         padding-right: 1.8rem;
     }
+    /* override for features page */
+    .features section { padding: 0; }
 
     /* Header section */
     /* these two together will cause the laptop image to be displayed
        centered vertically on smaller screens which looks a bit better
        compared to the default top alignment
     */
-    .header .col-12 {
+    .index-page-header .col-12 {
         display: flex;
         align-items: flex-end;
     }
-    .header .header-img {
+    .index-page-header .header-img {
         background-position: center;
     }
 
@@ -707,11 +714,11 @@ pre code {
     */
 
     /*header section*/
-    .header .col-7 {
+    .index-page-header .col-7 {
         display: none;
     }
 
-    .header .col-5 {
+    .index-page-header .col-5 {
         width: 100%;
     }
 
@@ -725,7 +732,7 @@ pre code {
     }
 
     /* screenshot section and features page */
-    .screenshots .screenshot-title, .features .screenshot-title {
+    .page section .screenshot-title {
         text-align: left;
         padding-left: 1.8rem;
         box-sizing: border-box;
