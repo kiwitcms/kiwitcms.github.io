@@ -1,6 +1,3 @@
-window.onload = setTimeout(imageGalleryHandler, 0);
-
-function imageGalleryHandler() {
     var imgs = [
         {
             title: 'Create IEEE 829 or free text Test Plan',
@@ -128,4 +125,3 @@ function imageGalleryHandler() {
         changeDirection(direction);
         setTimeout(function() { rollImage(direction); }, 50);
     });
-}

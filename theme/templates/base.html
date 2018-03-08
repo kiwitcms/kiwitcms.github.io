@@ -18,11 +18,6 @@
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        {% if page and page.extra_javascript %}
-            {% for script in page.extra_javascript.split(' ') %}
-            <script src="{{ script }}"></script>
-            {% endfor %}
-        {% endif %}
         <!-- Mobile nav script -->
         <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/scripts/mobile-nav.js"></script>
     </head>
@@ -97,6 +92,12 @@
                 </ul>
             </div>
         </footer>
+        {% if page and page.extra_javascript %}
+            {% for script in page.extra_javascript.split(' ') %}
+            <script src="{{ script }}"></script>
+            {% endfor %}
+        {% endif %}
+
         {% if GOOGLE_ANALYTICS %}
             <!-- Google analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS }}"></script>
