@@ -27,10 +27,10 @@ To make Kiwi TCMS a welcoming and harassment-free experience for everyone, we fo
 
 This is a list of third-party companies and individuals who provide products or services related to Kiwi TCMS. Kiwi TCMS is an independent open source project which does not endorse any company.
 
-- [Mr. Senko, Ltd.](http://mrsenko.com/)
+- [Mr. Senko](http://mrsenko.com/)
 
 # Acknowledgements
 
-Kiwi TCMS was initially started by [Red Hat, Inc.](https://www.redhat.com/en) under the name Nitrate. It was intended as a replacement for Mozilla's Testopia and has grown on its own since then. The latest development is being done by the Kiwi TCMS team with sponsorship by [Mr. Senko, Ltd.](http://mrsenko.com/).
+Kiwi TCMS was initially started by [Red Hat, Inc.](https://www.redhat.com/en) under the name Nitrate. It was intended as a replacement for Mozilla's Testopia and has grown on its own since then. The latest development is being done by the Kiwi TCMS team with sponsorship by [Mr. Senko](http://mrsenko.com/).
 
 The Kiwi TCMS logo is based on the [Kiwix icon](https://commons.wikimedia.org/wiki/File:Kiwix_icon.svg) by Kelson.
