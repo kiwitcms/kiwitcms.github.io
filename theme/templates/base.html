@@ -26,7 +26,7 @@
         <!-- Mobile nav script -->
         <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/scripts/mobile-nav.js"></script>
     </head>
-    <body class="{% if page and page.body_class %}{{ page.body_class }}{% endif %}" onload="setMobileNavBehaviour()">
+    <body class="{% block page_body_class %}{% endblock %}" onload="setMobileNavBehaviour()">
         <!-- Nav -->
         <nav class="col-12 primary">
             <a href="/">
