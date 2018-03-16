@@ -8,6 +8,8 @@ Kiwi TCMS is developed in the open. Here are some of the channels we use to comm
 
 **IRC:** [`#kiwitcms`](https://kiwiirc.com/client/irc.freenode.net/kiwitcms) on [irc.freenode.net](http://freenode.net/) (for the easiest start, [join via Kiwi IRC](https://kiwiirc.com/client/irc.freenode.net/kiwitcms))
 
+**Email:** `info-at-kiwitcms.org`
+
 **Twitter:** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
 
 **Issue tracker:** Use the GitHub [issue tracker](https://github.com/kiwitcms/Kiwi/issues) to file bugs and features request.
