@@ -81,6 +81,7 @@ community effort. If you'd like to help consult our
 &lt;h2&gt;How to upgrade&lt;/h2&gt;
 &lt;p&gt;If you are using Kiwi TCMS as a Docker container then&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd Kiwi/
+git pull
 docker-compose down
 docker pull kiwitcms/kiwi
 docker pull centos/mariadb
