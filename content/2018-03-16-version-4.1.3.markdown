@@ -100,6 +100,7 @@ How to upgrade
 If you are using Kiwi TCMS as a Docker container then
 
     cd Kiwi/
+    git pull
     docker-compose down
     docker pull kiwitcms/kiwi
     docker pull centos/mariadb
