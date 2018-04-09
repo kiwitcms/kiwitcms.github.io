@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS 4.1.4</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="Django 2.0.4, bug-fix and enhancement update" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS 4.1.4">
+            <meta name="twitter:description" content="Django 2.0.4, bug-fix and enhancement update">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="http://kiwitcms.org/theme/images/twitter_card.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/kiwi-tcms-team/2018/04/10/kiwi-tcms-414/" />
+        <meta property="og:title" content="Kiwi TCMS 4.1.4" />
+        <meta property="article:published_time" content="2018-04-10 21:45:00+03:00">
+            <meta property="og:description" content="Django 2.0.4, bug-fix and enhancement update">
+
+            <meta property="og:image" content="http://kiwitcms.org/theme/images/og_image.jpg">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Kiwi TCMS 4.1.4</h1>
+        <h2 class="top-subheader">Django 2.0.4, bug-fix and enhancement update</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Tue 10 April 2018
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>We're happy to announce Kiwi TCMS version 4.1.4!
+This is a bug-fix and enhancement update which upgrades to the latest Django
+version, resolves several issues and includes lots of internal code updates.</p>
+<p>We've pushed new <code>kiwitcms/kiwi</code> docker image to Docker Hub and updated the
+demo instance at <a href="https://demo.kiwitcms.org">https://demo.kiwitcms.org</a>!</p>
+<h2>Changes since Kiwi TCMS 4.1.3</h2>
+<h3>Enhancements</h3>
+<ul>
+<li>Upgrade to <a href="https://docs.djangoproject.com/en/2.0/releases/2.0.4/">Django 2.0.4</a></li>
+<li>Enable pylint and fix around 700 issues (Anton Sankov)</li>
+<li>Add pylint plugin to check docstrings for triple double quotes. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/296">Issue #296</a></li>
+<li>Add pylint plugin to check for list comprehensions. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/270">Issue #270</a></li>
+<li>Add pylint plugin to check for class attributes enclosed with double underscores.
+  These are dunders and are reserved for Python!</li>
+</ul>
+<h3>Signals</h3>
+<p><strong>BREAKING CHANGES</strong>:</p>
+<ul>
+<li>Renamed <code>user_registered</code> to <code>USER_REGISTERED_SIGNAL</code> and
+  <code>post_update</code> to <code>POST_UPDATE_SIGNAL</code>!</li>
+</ul>
+<h3>Bug fixes</h3>
+<ul>
+<li>Change util function to default to https. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/220">Issue #220</a></li>
+<li>Fix
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/495015101/">Sentry KIWI-TCMS-17</a></li>
+<li>Cast iterator to list. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/501200394/">Sentry KIWI-TCMS-19</a></li>
+<li>Don't crash in Custom Report. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/499389305/">Sentry KIWI-TCMS-18</a></li>
+<li>Better handling of TestPlan documents. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/501695244/">Sentry KIWI-TCMS-1A</a></li>
+<li>Fix sorting of entries in TestPlan -&gt; Runs tab. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/472757670/">Sentry KIWI-TCMS-E</a></li>
+</ul>
+<h3>Refactoring</h3>
+<ul>
+<li>Move Bugzilla and Kerberos backends code into their own repositories. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/239">Issue #239</a></li>
+<li>Remove cache from TestCaseRunStatus. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/279">Issue #279</a></li>
+<li>Rewrite <code>UrlMixin</code>. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/157">Issue #157</a> (Chenxiong Qi)</li>
+<li>Remove unused <code>split_as_option</code> template tag</li>
+<li>Internal refactoring and more tests in <code>tcms/core/ajax.py</code></li>
+<li>Delete unused file <code>tcms/core/forms/widgets.py</code></li>
+<li>Merge <code>case/form/filter.html</code> into <code>plan/get_cases.html</code></li>
+<li>Remove unused <code>TestCaseStatus.id_to_string()</code></li>
+</ul>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50fb0d604eb24fd0"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/kiwi-tcms-team/2018/04/10/kiwi-tcms-414/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2018/04/10/kiwi-tcms-414/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <form
+                    action="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    class="validate"
+                    target="_blank"
+                    novalidate
+                >
+                    <div id="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL"> Subscribe to our newsletter </label>
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <div aria-hidden="true" class="bot-test-input">
+                            <input type="text" name="b_9b57a21155a3b7c655ae8f922_c970a37581" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
+                <p>Additional advertising is kindly provided by <a href="https://uk.jooble.org/">Jooble</a>!</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
