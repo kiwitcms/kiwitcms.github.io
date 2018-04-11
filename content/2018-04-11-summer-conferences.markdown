@@ -3,7 +3,7 @@ headline: Bulgaria Web Summit, OSCAL, DjangoCon Europe
 date: 2018-04-11 15:35
 comments: true
 og_image: images/roadtrip.png
-twitter_card: images/roadtrip.png
+twitter_image: images/roadtrip.png
 
 Kiwi TCMS is going on a small conference tour. This is where you can find us
 in the next couple of months:
