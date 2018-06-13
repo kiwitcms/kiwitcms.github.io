@@ -390,31 +390,11 @@ pre code {
 /* Newsletter Form Section */
 
 .newsletter {
+    text-align: center;
     padding-bottom: 6rem;
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
-}
-
-#mc_embed_signup label {
-    display: block;
-    font-weight: bold;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-#mc_embed_signup input.email {
-    border-radius: 0;
-    height: 5.2rem;
-    font-size: 2rem;
-}
-
-#mc_embed_signup .button {
-    height: 5.2rem;
-    border-radius: 0;
-    margin-left: -1rem;
-    font-size: 2rem;
-    transition: none;
 }
 
 #mc_embed_signup {
@@ -423,6 +403,13 @@ pre code {
     width: 100%;
     padding: 5rem 0;
     box-sizing: border-box;
+}
+
+#mc_embed_signup a {
+    display: block;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 .bot-test-input {
@@ -685,25 +672,9 @@ pre code {
         padding: 1.8rem;
     }
 
-    .artcile #mc_embed_signup {
+    .article #mc_embed_signup {
         padding-left: 5%;
         padding-right: 5%;
-    }
-
-    #mc_embed_signup input.email {
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-
-    #mc_embed_signup .clear {
-        display: block;
-        width: 100%
-    }
-
-    #mc_embed_signup .button {
-        width: 100%;
-        margin: 0;
-        margin-top: -0.5rem;
     }
 }
 
