@@ -1,5 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-04-11T15:35:00+03:00</updated><entry><title>Kiwi TCMS conference presence</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/" rel="alternate"></link><published>2018-04-11T15:35:00+03:00</published><updated>2018-04-11T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-04-11:/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/</id><summary type="html">&lt;p&gt;Kiwi TCMS is going on a small conference tour. This is where you can find us
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-06-24T17:05:00+03:00</updated><entry><title>Kiwi TCMS 4.2</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/" rel="alternate"></link><published>2018-06-24T17:05:00+03:00</published><updated>2018-06-24T17:05:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-06-24:/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 4.2!
+This is a security, bug-fix and enhancement update which upgrades to the latest
+Django version under Python 3.6.
+We've pushed new &lt;code&gt;kiwitcms/kiwi:latest&lt;/code&gt; docker image to Docker Hub and updated the
+demo instance at &lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 4.2!
+This is a security, bug-fix and enhancement update which upgrades to the latest
+Django version under Python 3.6.
+We've pushed new &lt;code&gt;kiwitcms/kiwi:latest&lt;/code&gt; docker image to Docker Hub and updated the
+demo instance at &lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;This version also includes GDPR related changes which affect our project. Read below
+for the details.&lt;/p&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 4.1.4&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release introduces new database migrations&lt;/p&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable testing with Badit. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/237"&gt;Issue #237&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enable testing with
+  &lt;a href="https://scan.coverity.com/projects/kiwitcms-kiwi"&gt;Coverity Scan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enable testing with
+  &lt;a href="https://pyup.io/repos/github/kiwitcms/Kiwi/"&gt;pyup.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enable testing with
+  &lt;a href="https://snyk.io/test/github/kiwitcms/Kiwi"&gt;Snyk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use SHA256 instead of MD5 and SHA1&lt;/li&gt;
+&lt;li&gt;Use the &lt;code&gt;secrets&lt;/code&gt; module for activation keys&lt;/li&gt;
+&lt;li&gt;Remove unnecessary AJAX view that had remote code execution vulnerability&lt;/li&gt;
+&lt;li&gt;Don't use hard-coded temporary directories&lt;/li&gt;
+&lt;li&gt;Upgrade to
+  &lt;a href="https://github.com/patternfly/patternfly/releases/tag/v3.36.0"&gt;Patternfly 3.36.0&lt;/a&gt;
+  which fixes the following vulnerabilities:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://snyk.io/vuln/npm:moment:20161019"&gt;https://snyk.io/vuln/npm:moment:20161019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://snyk.io/vuln/npm:moment:20170905"&gt;https://snyk.io/vuln/npm:moment:20170905&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BUGZILLA_AUTH_CACHE_DIR&lt;/code&gt; is a new setting that may be specified to control
+  where Bugzilla auth cookies are saved! It is not specified by default and
+  Kiwi TCMS uses a temporary directory each time we try to login into Bugzilla!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Enhancements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Upgrade to Python 3.6. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/91"&gt;Issue #91&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Upgrade to &lt;a href="https://docs.djangoproject.com/en/2.0/releases/2.0.6/"&gt;Django 2.0.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix around 100 pylint issues (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Update email confirmation template for newly registered users and make the
+  text translatable&lt;/li&gt;
+&lt;li&gt;Display &lt;code&gt;Last login&lt;/code&gt; column in User admin page&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;code&gt;tcms.management.views&lt;/code&gt; (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Remove unused CSS selectors&lt;/li&gt;
+&lt;li&gt;Remove unnecessary &lt;code&gt;templates/comments/comments.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove unused deferred field &lt;code&gt;product_version&lt;/code&gt;. Fixes
+  &lt;a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523948048/"&gt;Sentry KIWI-TCMS-1C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rename left-over &lt;code&gt;get_url()&lt;/code&gt; to &lt;code&gt;get_full_url()&lt;/code&gt;. Fixes
+  &lt;a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523855781/"&gt;Sentry KIWI-TCMS-1B&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix empty TestPlan url and Product fields in TestRun email notification. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/353"&gt;Issue #353&lt;/a&gt; (Matt Porter, Konsulko Group)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated translations for Chinese Simplified&lt;/li&gt;
+&lt;li&gt;Updated translations for Chinese Traditional&lt;/li&gt;
+&lt;li&gt;New language and translations for Slovenian&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Documentation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Added &lt;code&gt;git clone&lt;/code&gt; command to documentation. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/344"&gt;Issue #344&lt;/a&gt; (Anton Sankov)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Models and database migrations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Increase checksum fields size to hold the new checksum values&lt;/li&gt;
+&lt;li&gt;Increase &lt;code&gt;activation_key&lt;/code&gt; field size to 64 chars&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;GDPR related&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow users to delete their accounts. Link is present on &lt;code&gt;My profile&lt;/code&gt; page.
+  This will also delete any related objects using cascade delete&lt;/li&gt;
+&lt;li&gt;Try not to be so obvious when it comes to displaying email addresses across
+  the web interface. Instead show username and link to profile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition the following changes were deployed to our infrastructure:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On our website the &lt;code&gt;Subscribe to our newsletter&lt;/code&gt; is now a link, instead of
+  embedded form because embedded forms can't display GDPR compliance fields.
+  If you wish to receive email from Kiwi TCMS you need to select the &lt;code&gt;Email&lt;/code&gt;
+  checkbox when signing up for the newsletter.&lt;/li&gt;
+&lt;li&gt;Double opt-in is now enabled when subscribing to our newsletter&lt;/li&gt;
+&lt;li&gt;All newsletter addresses that have been unsubscribed have been deleted&lt;/li&gt;
+&lt;li&gt;Upon registration for &lt;a href="http://demo.kiwitcms.org"&gt;http://demo.kiwitcms.org&lt;/a&gt; you are no longer subscribed
+  to the newsletter. Now we send a welcome email with a link to the newsletter
+  so you can subscribe if you want&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://demo.kiwitcms.org"&gt;http://demo.kiwitcms.org&lt;/a&gt; now runs a cron job which deletes inactive accounts
+  and all of their related data. The cron job runs weekly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We're trying to be respectful to your private data and not expose that to any
+3rd parties or use it for means other than making Kiwi TCMS better open source
+software. If you spot areas for improvement please
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/new"&gt;report an issue&lt;/a&gt; so we can take
+a look at it!&lt;/p&gt;
+&lt;h2&gt;tcms-api changes since 4.0.0&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove coloring. Fixes
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/185"&gt;Issue #185&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix using the API client against &lt;code&gt;https://&lt;/code&gt; URLs (Adam Łoszyn, Samsung)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
+&lt;p&gt;According to &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.&lt;/p&gt;
+&lt;p&gt;We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS conference presence</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/" rel="alternate"></link><published>2018-04-11T15:35:00+03:00</published><updated>2018-04-11T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-04-11:/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/</id><summary type="html">&lt;p&gt;Kiwi TCMS is going on a small conference tour. This is where you can find us
 in the next couple of months:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://bulgariawebsummit.com/"&gt;Bulgaria Web Summit&lt;/a&gt; - 14 April, Sofia&lt;/li&gt;
