@@ -1,0 +1,153 @@
+Title: Kiwi TCMS 4.2
+headline: Python 3.6, Django 2.0.6 and security updates
+date: 2018-06-24 17:05
+comments: true
+
+
+We're happy to announce Kiwi TCMS and tcms-api version 4.2!
+This is a security, bug-fix and enhancement update which upgrades to the latest
+Django version under Python 3.6.
+We've pushed new `kiwitcms/kiwi:latest` docker image to Docker Hub and updated the
+demo instance at <https://demo.kiwitcms.org>!
+
+This version also includes GDPR related changes which affect our project. Read below
+for the details.
+
+
+Changes since Kiwi TCMS 4.1.4
+------------------------------
+
+**IMPORTANT:** this release introduces new database migrations
+
+### Security
+
+- Enable testing with Badit. Fixes
+  [Issue #237](https://github.com/kiwitcms/Kiwi/issues/237)
+- Enable testing with
+  [Coverity Scan](https://scan.coverity.com/projects/kiwitcms-kiwi)
+- Enable testing with
+  [pyup.io](https://pyup.io/repos/github/kiwitcms/Kiwi/)
+- Enable testing with
+  [Snyk](https://snyk.io/test/github/kiwitcms/Kiwi)
+- Use SHA256 instead of MD5 and SHA1
+- Use the `secrets` module for activation keys
+- Remove unnecessary AJAX view that had remote code execution vulnerability
+- Don't use hard-coded temporary directories
+- Upgrade to
+  [Patternfly 3.36.0](https://github.com/patternfly/patternfly/releases/tag/v3.36.0)
+  which fixes the following vulnerabilities:
+    - <https://snyk.io/vuln/npm:moment:20161019>
+    - <https://snyk.io/vuln/npm:moment:20170905>
+
+### Settings
+
+- `BUGZILLA_AUTH_CACHE_DIR` is a new setting that may be specified to control
+  where Bugzilla auth cookies are saved! It is not specified by default and
+  Kiwi TCMS uses a temporary directory each time we try to login into Bugzilla!
+
+### Enhancements
+
+- Upgrade to Python 3.6. Fixes
+  [Issue #91](https://github.com/kiwitcms/Kiwi/issues/91)
+- Upgrade to [Django 2.0.6](https://docs.djangoproject.com/en/2.0/releases/2.0.6/)
+- Fix around 100 pylint issues (Anton Sankov)
+- Update email confirmation template for newly registered users and make the
+  text translatable
+- Display `Last login` column in User admin page
+- Add tests for `tcms.management.views` (Anton Sankov)
+- Remove unused CSS selectors
+- Remove unnecessary `templates/comments/comments.html`
+
+### Bug fixes
+
+- Remove unused deferred field `product_version`. Fixes
+  [Sentry KIWI-TCMS-1C](https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523948048/)
+- Rename left-over `get_url()` to `get_full_url()`. Fixes
+  [Sentry KIWI-TCMS-1B](https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523855781/)
+- Fix empty TestPlan url and Product fields in TestRun email notification. Fixes
+  [Issue #353](https://github.com/kiwitcms/Kiwi/issues/353) (Matt Porter, Konsulko Group)
+
+
+### Translations
+
+- Updated translations for Chinese Simplified
+- Updated translations for Chinese Traditional
+- New language and translations for Slovenian
+
+### Documentation
+
+- Added `git clone` command to documentation. Fixes
+  [Issue #344](https://github.com/kiwitcms/Kiwi/issues/344) (Anton Sankov)
+
+### Models and database migrations
+
+- Increase checksum fields size to hold the new checksum values
+- Increase `activation_key` field size to 64 chars
+
+### GDPR related
+
+- Allow users to delete their accounts. Link is present on `My profile` page.
+  This will also delete any related objects using cascade delete
+- Try not to be so obvious when it comes to displaying email addresses across
+  the web interface. Instead show username and link to profile
+
+In addition the following changes were deployed to our infrastructure:
+
+- On our website the `Subscribe to our newsletter` is now a link, instead of
+  embedded form because embedded forms can't display GDPR compliance fields.
+  If you wish to receive email from Kiwi TCMS you need to select the `Email`
+  checkbox when signing up for the newsletter.
+- Double opt-in is now enabled when subscribing to our newsletter
+- All newsletter addresses that have been unsubscribed have been deleted
+- Upon registration for <http://demo.kiwitcms.org> you are no longer subscribed
+  to the newsletter. Now we send a welcome email with a link to the newsletter
+  so you can subscribe if you want
+- <http://demo.kiwitcms.org> now runs a cron job which deletes inactive accounts
+  and all of their related data. The cron job runs weekly
+
+
+We're trying to be respectful to your private data and not expose that to any
+3rd parties or use it for means other than making Kiwi TCMS better open source
+software. If you spot areas for improvement please
+[report an issue](https://github.com/kiwitcms/Kiwi/issues/new) so we can take
+a look at it!
+
+
+
+tcms-api changes since 4.0.0
+----------------------------
+
+- Remove coloring. Fixes
+  [Issue #185](https://github.com/kiwitcms/Kiwi/issues/185)
+- Fix using the API client against `https://` URLs (Adam Łoszyn, Samsung)
+
+
+
+How to upgrade
+---------------
+
+If you are using Kiwi TCMS as a Docker container then
+
+    cd Kiwi/
+    git pull
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker pull centos/mariadb
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+
+Help us make Kiwi TCMS better
+-----------------------------
+
+According to [our 2018 roadmap]({filename}2018-01-22-milestones.markdown) the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.
+
+We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.
+
+
+Happy testing!
