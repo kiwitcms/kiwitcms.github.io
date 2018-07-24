@@ -45,6 +45,204 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/" rel="bookmark" title="Permalink to Kiwi TCMS 5.0">
+                <h1 class="top-header">Kiwi TCMS 5.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 24 July 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
+introduces object history tracking, removal of old functionality and unused code,
+lots of internal updates and bug fixes.</p>
+<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">468de0abe8a8</tt>.
+<a class="reference external" href="https://demo.kiwitcms.org">https://demo.kiwitcms.org</a> has also been updated!</p>
+<div class="section" id="changes-since-kiwi-tcms-4-2">
+<h2>Changes since Kiwi TCMS 4.2</h2>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">CACHE</tt> because not used</li>
+<li>Remove <tt class="docutils literal">PLAN_EMAIL_TEMPLATE</tt>, <tt class="docutils literal">CASE_EMAIL_TEMPLATE</tt> and
+<tt class="docutils literal">CASE_DELETE_EMAIL_TEMPLATE</tt>. Templates can still be overridden if desired</li>
+</ul>
+</div>
+<div class="section" id="enhancements">
+<h3>Enhancements</h3>
+<ul class="simple">
+<li>Upgrade to <a class="reference external" href="https://docs.djangoproject.com/en/2.0/releases/2.0.7/">Django 2.0.7</a></li>
+<li>Allow to delete TestPlan. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/273">Issue #273</a></li>
+<li>Don't include username in dashboard URL</li>
+<li>Copy latest TestPlan text when cloning</li>
+<li>Always require users to be logged in. Anonymous users will not be allowed
+access by default. Read-only access to some views (e.g. get TestPlan or TestRun)
+can be enabled by disabling <tt class="docutils literal">GlobalLoginRequiredMiddleware</tt>! Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/230">Issue #230</a></li>
+<li>Start tracking change history for TestPlan, TestCase, TestRun and TestCaseRun.
+Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/294">Issue #294</a></li>
+<li>History changes are recorded as unified diff which is a universally recognized format</li>
+<li>Show the actual changes in email notifications. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/199">Issue #199</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix <tt class="docutils literal">UnboundLocalError local variable 'message' referenced before assignment</tt>. Fixes
+<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/589209883/">Sentry KIWI-TCMS-1S</a></li>
+<li>Make email address unique when adding users via admin panel. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/352">Issue #352</a> and
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/68">Issue #68</a></li>
+<li>Fix <tt class="docutils literal">unsupported operand type(s) for +=: 'int' and 'datetime.timedelta'</tt> by
+initializing timedelta variable properly. Fixes
+<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/593838484/">Sentry KIWI-TCMS-1Y</a></li>
+<li>Remove <tt class="docutils literal">core.models.fields</tt> with MySQL time conversions. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/390">Issue #390</a></li>
+<li>Fix bad JavaScript comparison. Fixes Coverity #289956</li>
+<li>Remove expression with no effect. Fixes Coverity #289974</li>
+<li>Rewrite <tt class="docutils literal">request_host_link()</tt> to fix Coverity #289987</li>
+<li>Fix Coverity #289923 - Typo in identifier</li>
+<li>Don't send emails for changes performed by myself. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/216">Issue #216</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Fix pylint issues in several modules (Anton Sankov &amp; Ivaylo Ivanov)</li>
+<li>Fix wrong Plan Type template variable in advanced search form</li>
+<li>Do not use <tt class="docutils literal">Model.objects.update()</tt> because it doesn't respect history</li>
+<li>Use the standard <tt class="docutils literal">ModelChoiceField</tt> instead of custom one</li>
+<li>Use <tt class="docutils literal">updateRunStatus()</tt> instead of deprecated <tt class="docutils literal">updateObject()</tt></li>
+<li>Simplify JavaScript function <tt class="docutils literal">getInfo()</tt> and use it multiple times</li>
+<li>Simplify <tt class="docutils literal">previewPlan()</tt> by removing unused parameters</li>
+<li>Unify <tt class="docutils literal">addChildPlan()</tt> and <tt class="docutils literal">removeChildPlan()</tt></li>
+<li>Unify <tt class="docutils literal">getInfoAndUpdateObject()</tt> with <tt class="docutils literal">changeCaseRunAssignee()</tt></li>
+<li>Unify <tt class="docutils literal">onTestCaseStatusChange()</tt> with <tt class="docutils literal">changeTestCaseStatus()</tt></li>
+<li>Convert <tt class="docutils literal">TestCaseEmailSettings.cc_list</tt> to string field</li>
+<li>Merge <tt class="docutils literal">report/caseruns_table.html</tt> with <tt class="docutils literal">reports/caseruns.html</tt></li>
+<li>Rename model <tt class="docutils literal">UserActivateKey</tt> to <tt class="docutils literal">UserActivationKey</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/276">Issue #276</a></li>
+<li>Remove <tt class="docutils literal">cached_entities()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/307">Issue #307</a></li>
+<li>Remove <tt class="docutils literal">TestPlanText.checksum</tt> field</li>
+<li>Remove checksum fields for <tt class="docutils literal">TestCaseText</tt> model</li>
+<li>Remove unused and home-grown template tags</li>
+<li>Remove unused fields <tt class="docutils literal">auto_blinddown</tt>, <tt class="docutils literal">description</tt>, <tt class="docutils literal">sortkey</tt> from
+<tt class="docutils literal">TestCaseRunStatus</tt> model. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/186">Issue #186</a></li>
+<li>Remove <tt class="docutils literal">Meta.db_name</tt> effectively renaming all tables. New names will use
+Django's default naming scheme</li>
+<li>Remove RawSQL queries. We are now 100% ORM based. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/36">Issue #36</a></li>
+<li>Remove duplicate <tt class="docutils literal">MultipleEmailField</tt> definition</li>
+<li>Remove <tt class="docutils literal">TCMSLog</tt> view, <tt class="docutils literal">TCMSLogManager</tt>, <tt class="docutils literal">TCMSLogModel</tt></li>
+<li>Remove <tt class="docutils literal">TestPlanText</tt> model, use <tt class="docutils literal">TestPlan.text</tt> instead</li>
+<li>Remove unused JavaScript files
+- <tt class="docutils literal">lib/detetmine_type.js</tt>
+- <tt class="docutils literal">lib/hole.js</tt>
+- <tt class="docutils literal"><span class="pre">lib/scriptaculous-controls.js.patch</span></tt>
+- <tt class="docutils literal">lib/validations.js</tt>
+- <tt class="docutils literal">static/js/index.js</tt></li>
+<li>Remove <tt class="docutils literal">constructPlanParentPreviewDialog()</tt></li>
+<li>Remove <tt class="docutils literal">changeCasePriority()</tt></li>
+<li>Remove <tt class="docutils literal">changeCaseRunOrder()</tt></li>
+<li>Remove <tt class="docutils literal">debug_output()</tt> from JavaScript files</li>
+<li>Remove deprecated <tt class="docutils literal">/ajax/update/</tt> end-point</li>
+<li>Remove <tt class="docutils literal">taggleSortCaseRun()</tt></li>
+<li>Remove <tt class="docutils literal">strip_parameters()</tt></li>
+<li>Remove <tt class="docutils literal">_InfoObjects.users()</tt></li>
+<li>Remove <tt class="docutils literal">get_value_by_type()</tt></li>
+<li>Remove <tt class="docutils literal">testcases.views.get_log()</tt></li>
+<li>Remove <tt class="docutils literal">mail_scene()</tt> methods and related templates</li>
+</ul>
+</div>
+<div class="section" id="removed-functionality">
+<h3>Removed functionality</h3>
+<ul class="simple">
+<li>TestRun completion status is no longer updated automatically. You can still
+update the status manually via the 'Set Finished' or 'Set Running' links!
+Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/367">Issue #367</a></li>
+<li>Remove bookmarks functionality. There are many great bookmark manager apps
+and if the user is keen on bookmarks they should use one of them. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/67">Issue #67</a> and
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/210">Issue #210</a></li>
+<li>Don't track &amp; display history of changes for <tt class="docutils literal">EnvGroup</tt> model</li>
+<li>Remove Disable/Enable buttons from TestPlan page. Enabling and disabling
+can still be done via the edit page</li>
+<li>Remove <tt class="docutils literal">changeParentPlan()</tt> and the ability to change TestPlan parents
+from the 'Tree View' tab. This can be done via the edit page</li>
+<li>When viewing a TestPlan the user is no longer able to specify a sorkey for a
+particular TestCase. Instead they can use the <tt class="docutils literal"><span class="pre">Re-order</span> cases</tt> button and
+move around the entire row of cases to adjust the sort order</li>
+<li>When working with test case results, inside a TestRun you will not be allowed
+to change the order of execution. Order should be defined inside the TestPlan
+instead</li>
+<li>Remove <tt class="docutils literal">XmlRpcLog()</tt> model. Kiwi TCMS will no longer log RPC calls to the
+database. This leads to a small performance boost and can be overridden on
+individual basis if you need to do so.</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>More source strings marked as translatable</li>
+<li>New translations for Chinese Simplified, Chinese Traditional, German and Slovenian</li>
+<li>Stop keeping compiled translations under git. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/387">Issue #387</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="tcms-api-changes-since-4-2">
+<h2>tcms-api changes since 4.2</h2>
+<ul class="simple">
+<li>Requires Python 3.6 or newer because it fixes bugs related to Django's
+disabling of keep-alive connections. See <a class="reference external" href="https://bugs.python.org/issue26402">https://bugs.python.org/issue26402</a></li>
+<li>The rpc client is now accessed via <tt class="docutils literal"><span class="pre">TCMS().exec.&lt;Server-Method&gt;</span></tt></li>
+<li>Leave only XML-RPC transport classes! This removes the top-level interface
+behind the API client and the consuming side is left to work with Python
+dictionaries instead of objects.</li>
+<li>Remove the interactive <tt class="docutils literal">tcms</tt> script</li>
+<li>Remove <tt class="docutils literal">tcms_api.config</tt> module</li>
+<li>Remove logging class</li>
+<li>Remove <tt class="docutils literal">script_examples/</tt> directory. These were never tested and maintained</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+docker exec -it kiwi_web /Kiwi/manage.py populate_history --auto
+</pre>
+</div>
+<div class="section" id="help-us-make-kiwi-tcms-better">
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a class="reference external" href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/" rel="bookmark" title="Permalink to Kiwi TCMS 4.2">
                 <h1 class="top-header">Kiwi TCMS 4.2</h1>
             </a>
