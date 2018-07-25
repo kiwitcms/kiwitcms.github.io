@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-07-24T16:30:00+03:00</updated><entry><title>Kiwi TCMS 5.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/" rel="alternate"></link><published>2018-07-24T16:30:00+03:00</published><updated>2018-07-24T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-24:/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-07-25T16:30:00+03:00</updated><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="alternate"></link><published>2018-07-25T16:30:00+03:00</published><updated>2018-07-25T16:30:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-25:/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals on our
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Initially &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; reported
+a "D" rating with a 1 year estimated effort. Now it is still on "D …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals on our
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Initially &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; reported
+a "D" rating with a 1 year estimated effort. Now it is still on "D" rating with
+a 7 months estimated effort to bring the project back in shape.
+Code smells have dropped from 600+ to 418, duplications have been reduced from 600+ to 359!
+At the same time technical debt ratio has been decreased from 32,5% to 21,6% and
+little over 10000 lines of code have been removed from the source code.
+Checkout
+&lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt"&gt;the stats&lt;/a&gt;
+for more info!&lt;/p&gt;
+&lt;h2&gt;Use pylint and pylint-django&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: good progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Both pylint and pylint-django have been integrated into our CI workflow. There are even
+a few custom built plugins that we use. The number of issues reported is down to around 900
+from 4000+ initially. The cleanup has been lead by &lt;a href="https://github.com/asankov"&gt;Anton Sankov&lt;/a&gt;
+with help from &lt;a href="https://github.com/ivo0126"&gt;Ivaylo Ivanov&lt;/a&gt; and myself.&lt;/p&gt;
+&lt;h2&gt;Render HTML, return JSON&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: no progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Several views were probably modified to return pure JSON in the meantime but we've not
+done any targeted work to resolve this issue.&lt;/p&gt;
+&lt;h2&gt;Submit forms, post JSON, GET clean URLs&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: no progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Same as above, not much has been done in this area.&lt;/p&gt;
+&lt;h2&gt;API layer&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: complete&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;After Kiwi TCMS v4.0 the server side API has been reorganized and updated
+to follow the model/method names used internally.&lt;/p&gt;
+&lt;p&gt;After the recent version 5.0 the client side API library has been stripped
+to its most basic form so that you can work directly with the responses from
+the server.&lt;/p&gt;
+&lt;p&gt;There is no more duplication and ambiguity in names because there isn't
+a lot of code left!&lt;/p&gt;
+&lt;h2&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress, dropped&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;All RPC methods have been documented! The rest of the internals will be documented
+as we go along.&lt;/p&gt;
+&lt;h2&gt;No vendored JavaScript libraries&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Several JavaScript libraries have been removed but we still carry around jQuery
+and Handlebars.js. No work has been done to convert Kiwi TCMS to use the jQuery
+version provided with Django.&lt;/p&gt;
+&lt;h2&gt;Less HTML templates with better organization&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: minimal progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There are still over 100 HTML templates in Kiwi TCMS. Some of the HTML templates
+have been merged together, some email templates have been refactored and marked
+as translatable but the majority of them have not been updated for a long time.&lt;/p&gt;
+&lt;h2&gt;Modern interface with Patternfly&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: no progress&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;JavaScript updates and front-end testing&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: small progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A number of JavaScript functions have been refactored and removed during the
+past few releases but there are still thousands of lines of code left to deal with.&lt;/p&gt;
+&lt;h2&gt;Community efforts&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We are seeing a steady stream of new users registered on &lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; and
+there are several active contributors (issues, translations).&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg and PyCon Prague!
+We're planning to attend HackConf and OpenFest in Sofia by the end of the year.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS 5.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/" rel="alternate"></link><published>2018-07-24T16:30:00+03:00</published><updated>2018-07-24T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-24:/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
 introduces object history tracking, removal of old functionality and unused code,
 lots of internal updates and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;468de0abe8a8&lt;/tt&gt;.
