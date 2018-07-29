@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-07-25T16:30:00+03:00</updated><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="alternate"></link><published>2018-07-25T16:30:00+03:00</published><updated>2018-07-25T16:30:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-25:/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-07-30T00:25:00+03:00</updated><entry><title>How to backup Docker volumes for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" rel="alternate"></link><published>2018-07-30T00:25:00+03:00</published><updated>2018-07-30T00:25:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-30:/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;When you start Kiwi TCMS by running &lt;code&gt;docker-compose up&lt;/code&gt;
+(see &lt;a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose"&gt;here&lt;/a&gt;)
+it will automatically create 2 volumes: &lt;code&gt;kiwi_db_data&lt;/code&gt; and &lt;code&gt;kiwi_uploads&lt;/code&gt;.
+This blog post will outline how to backup these docker volumes.&lt;/p&gt;
+&lt;h2&gt;Backing up the database&lt;/h2&gt;
+&lt;p&gt;Kiwi TCMS is a Django application and the &lt;code&gt;manage.py&lt;/code&gt; command provides an easy way …&lt;/p&gt;</summary><content type="html">&lt;p&gt;When you start Kiwi TCMS by running &lt;code&gt;docker-compose up&lt;/code&gt;
+(see &lt;a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose"&gt;here&lt;/a&gt;)
+it will automatically create 2 volumes: &lt;code&gt;kiwi_db_data&lt;/code&gt; and &lt;code&gt;kiwi_uploads&lt;/code&gt;.
+This blog post will outline how to backup these docker volumes.&lt;/p&gt;
+&lt;h2&gt;Backing up the database&lt;/h2&gt;
+&lt;p&gt;Kiwi TCMS is a Django application and the &lt;code&gt;manage.py&lt;/code&gt; command provides an easy way
+to dump and load the database contents. To export all contents on your docker host
+execute:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker exec -it kiwi_web /Kiwi/manage.py dumpdata --all --indent 2 &amp;gt; database.json
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will create a file named &lt;code&gt;database.json&lt;/code&gt; in the current directory, outside of the
+running container!&lt;/p&gt;
+&lt;p&gt;You can restore the database contents by using the following commands:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# delete data from all tables
+docker exec -it kiwi_web /bin/bash -c &amp;#39;/Kiwi/manage.py sqlflush | /Kiwi/manage.py dbshell&amp;#39;
+# then reload the existing data
+cat database.json | docker exec -i kiwi_web /Kiwi/manage.py loaddata --format json -
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; depending on your scenario you may want to remove the existing volume
+(&lt;code&gt;docker-compose down &amp;amp;&amp;amp; docker volume rm kiwi_db_data&lt;/code&gt;) and re-create the
+DB schema (&lt;code&gt;/Kiwi/manage.py migrate&lt;/code&gt;) before restoring the contents!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;: the above steps are applicable to Kiwi TCMS 5.1 or above. On earlier
+versions &lt;code&gt;manage.py&lt;/code&gt; will fail due to various issues.&lt;/p&gt;
+&lt;h2&gt;Backing up file uploads&lt;/h2&gt;
+&lt;p&gt;Uploaded files can easily be backed up with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker exec -it kiwi_web /bin/tar -cP /var/kiwi/uploads &amp;gt; uploads.tar
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and then restored:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat uploads.tar | docker exec -i kiwi_web /bin/tar -x
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You may also try the &lt;code&gt;rsync&lt;/code&gt; command but be aware that it is not installed
+by default!&lt;/p&gt;
+&lt;p&gt;The same approach may be used to backup &lt;code&gt;/var/lib/mysql/&lt;/code&gt; from the &lt;code&gt;kiwi_db&lt;/code&gt;
+container.&lt;/p&gt;
+&lt;h2&gt;Alternatives&lt;/h2&gt;
+&lt;p&gt;By default both docker volumes created for Kiwi TCMS use the &lt;code&gt;local&lt;/code&gt; driver
+and are available under &lt;code&gt;/var/lib/docker/volumes/&amp;lt;volume_name&amp;gt;&lt;/code&gt; on the host
+running your containers. You can try backing them up from there as well.&lt;/p&gt;
+&lt;p&gt;Another alternative is to use the
+&lt;a href="https://www.projectatomic.io/blog/2016/05/docker-lvm-plugin/"&gt;docker-lvm-plugin&lt;/a&gt;
+and create these volumes as LVM2 block devices. Then use
+&lt;code&gt;lvcreate -s&lt;/code&gt; command to create a snapshot volume. For more information see
+&lt;a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/logical_volume_manager_administration/index#snapshot_volumes"&gt;chapter 2.3.5. Snapshot Volumes&lt;/a&gt;
+from the LVM Administrator Guide for Red Hat Enterprise Linux 7.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="alternate"></link><published>2018-07-25T16:30:00+03:00</published><updated>2018-07-25T16:30:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-25:/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
 &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
