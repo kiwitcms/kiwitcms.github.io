@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS 5.1</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="tech-preview: Django Report Builder" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS 5.1">
+            <meta name="twitter:description" content="tech-preview: Django Report Builder">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="http://kiwitcms.org/theme/images/twitter_card.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" />
+        <meta property="og:title" content="Kiwi TCMS 5.1" />
+        <meta property="article:published_time" content="2018-07-31 12:00:00+03:00">
+            <meta property="og:description" content="tech-preview: Django Report Builder">
+
+            <meta property="og:image" content="http://kiwitcms.org/theme/images/og_image.jpg">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org">Checkout Demo</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Kiwi TCMS 5.1</h1>
+        <h2 class="top-subheader">tech-preview: Django Report Builder</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Tue 31 July 2018
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>We're happy to announce Kiwi TCMS version 5.1! This release
+introduces new database migrations, an experimental reporting feature,
+deprecated functionality and bug fixes.</p>
+<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">cc9b55aa664d</tt>.
+<a class="reference external" href="https://demo.kiwitcms.org">https://demo.kiwitcms.org</a> has also been updated!</p>
+<div class="section" id="changes-since-kiwi-tcms-5-1">
+<h2>Changes since Kiwi TCMS 5.1</h2>
+<div class="section" id="enhancements">
+<h3>Enhancements</h3>
+<ul class="simple">
+<li>Integrate with Django Report Builder as tech-preview. This makes it possible
+for power users and administrators to generate
+<a class="reference external" href="http://django-report-builder.readthedocs.io/en/latest/howto/">tabular reports</a>.
+You will have to know the existing DB schema if you want to create your own reports.
+See <a class="reference external" href="http://kiwitcms.readthedocs.io/en/latest/db.html">http://kiwitcms.readthedocs.io/en/latest/db.html</a>. This feature is in
+tech-preview and it may be removed if it doesn't work out. Please comment at:
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/452">Issue #452</a>.</li>
+<li>Allow using <tt class="docutils literal">manage.py dumpdata|loaddata|sqlflush|dbshell</tt> for backups, see
+<a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">blog post</a></li>
+<li>In TestCase view page add a link to delete the current test case</li>
+<li>In TestCase Admin page the <tt class="docutils literal">+ Add TestCase</tt> button now allows to create new
+test case</li>
+<li>The version menu item in the helper menu now links to
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#change-log">Changelog</a></li>
+</ul>
+</div>
+<div class="section" id="deprecated-functionality">
+<h3>Deprecated functionality</h3>
+<ul class="simple">
+<li>Start showing deprecation warning for Advanced search, see
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/448">Issue #448</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Allows Product/Version/Build to be shown in Testing Report. Fixes
+<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/618688608/">Sentry KIWI-TCMS-2C</a></li>
+<li>Default to <tt class="docutils literal"><span class="pre">https://</span></tt> links if not running locally. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/450">Issue #450</a></li>
+<li>Apply missing CSS class for object history table so it can be displayed nicely</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Squash some database migrations</li>
+<li>Fix a number of pylint issues</li>
+<li>Remove unused <tt class="docutils literal"><span class="pre">testruns.views::view_caseruns()</span></tt>. References
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/316">Issue #316</a></li>
+<li>Remove unused template <tt class="docutils literal">report/caserun.html</tt></li>
+<li>Handle TestRun deletion via admin not home grown code</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+<div class="section" id="help-us-make-kiwi-tcms-better">
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">our 2018 roadmap update</a>
+the Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+</div>
+
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50fb0d604eb24fd0"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>

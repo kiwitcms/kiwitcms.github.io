@@ -1,5 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-07-30T00:25:00+03:00</updated><entry><title>How to backup Docker volumes for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" rel="alternate"></link><published>2018-07-30T00:25:00+03:00</published><updated>2018-07-30T00:25:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-30:/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;When you start Kiwi TCMS by running &lt;code&gt;docker-compose up&lt;/code&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-07-31T12:00:00+03:00</updated><entry><title>Kiwi TCMS 5.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" rel="alternate"></link><published>2018-07-31T12:00:00+03:00</published><updated>2018-07-31T12:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-31:/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.1! This release
+introduces new database migrations, an experimental reporting feature,
+deprecated functionality and bug fixes.&lt;/p&gt;
+&lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
+&lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-5-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 5.1&lt;/h2&gt;
+&lt;div class="section" id="enhancements"&gt;
+&lt;h3&gt;Enhancements …&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.1! This release
+introduces new database migrations, an experimental reporting feature,
+deprecated functionality and bug fixes.&lt;/p&gt;
+&lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
+&lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-5-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 5.1&lt;/h2&gt;
+&lt;div class="section" id="enhancements"&gt;
+&lt;h3&gt;Enhancements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Integrate with Django Report Builder as tech-preview. This makes it possible
+for power users and administrators to generate
+&lt;a class="reference external" href="http://django-report-builder.readthedocs.io/en/latest/howto/"&gt;tabular reports&lt;/a&gt;.
+You will have to know the existing DB schema if you want to create your own reports.
+See &lt;a class="reference external" href="http://kiwitcms.readthedocs.io/en/latest/db.html"&gt;http://kiwitcms.readthedocs.io/en/latest/db.html&lt;/a&gt;. This feature is in
+tech-preview and it may be removed if it doesn't work out. Please comment at:
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/452"&gt;Issue #452&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Allow using &lt;tt class="docutils literal"&gt;manage.py dumpdata|loaddata|sqlflush|dbshell&lt;/tt&gt; for backups, see
+&lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;blog post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;In TestCase view page add a link to delete the current test case&lt;/li&gt;
+&lt;li&gt;In TestCase Admin page the &lt;tt class="docutils literal"&gt;+ Add TestCase&lt;/tt&gt; button now allows to create new
+test case&lt;/li&gt;
+&lt;li&gt;The version menu item in the helper menu now links to
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#change-log"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="deprecated-functionality"&gt;
+&lt;h3&gt;Deprecated functionality&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Start showing deprecation warning for Advanced search, see
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/448"&gt;Issue #448&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Allows Product/Version/Build to be shown in Testing Report. Fixes
+&lt;a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/618688608/"&gt;Sentry KIWI-TCMS-2C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Default to &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;https://&lt;/span&gt;&lt;/tt&gt; links if not running locally. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/450"&gt;Issue #450&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Apply missing CSS class for object history table so it can be displayed nicely&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Squash some database migrations&lt;/li&gt;
+&lt;li&gt;Fix a number of pylint issues&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;testruns.views::view_caseruns()&lt;/span&gt;&lt;/tt&gt;. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/316"&gt;Issue #316&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove unused template &lt;tt class="docutils literal"&gt;report/caserun.html&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Handle TestRun deletion via admin not home grown code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="help-us-make-kiwi-tcms-better"&gt;
+&lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
+&lt;p&gt;According to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;our 2018 roadmap update&lt;/a&gt;
+the Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and enhancements and we have lots of ideas down the line.&lt;/p&gt;
+&lt;p&gt;We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>How to backup Docker volumes for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" rel="alternate"></link><published>2018-07-30T00:25:00+03:00</published><updated>2018-07-30T00:25:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-30:/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;When you start Kiwi TCMS by running &lt;code&gt;docker-compose up&lt;/code&gt;
 (see &lt;a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose"&gt;here&lt;/a&gt;)
 it will automatically create 2 volumes: &lt;code&gt;kiwi_db_data&lt;/code&gt; and &lt;code&gt;kiwi_uploads&lt;/code&gt;.
 This blog post will outline how to backup these docker volumes.&lt;/p&gt;
