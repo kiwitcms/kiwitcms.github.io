@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-07-31T12:00:00+03:00</updated><entry><title>Kiwi TCMS 5.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" rel="alternate"></link><published>2018-07-31T12:00:00+03:00</published><updated>2018-07-31T12:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-31:/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.1! This release
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-08-06T11:40:00+03:00</updated><entry><title>How to override templates for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="alternate"></link><published>2018-08-06T11:40:00+03:00</published><updated>2018-08-06T11:40:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-08-06:/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;This is the first publication in our customization series. It will show you
+how to override any template used by Kiwi TCMS. As an example we will override
+the email template that is used when registering new account. By default the
+email text looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;    Welcome &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;,&lt;/span&gt;
+&lt;span class="x"&gt;    thank you …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;This is the first publication in our customization series. It will show you
+how to override any template used by Kiwi TCMS. As an example we will override
+the email template that is used when registering new account. By default the
+email text looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;    Welcome &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;,&lt;/span&gt;
+&lt;span class="x"&gt;    thank you for signing up for an &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;site_domain&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt; account!&lt;/span&gt;
+
+&lt;span class="x"&gt;    To activate your account, click this link:&lt;/span&gt;
+&lt;span class="x"&gt;    &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;confirm_url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; runs a custom Docker image based on
+&lt;code&gt;kiwitcms/kiwi&lt;/code&gt;. For this image the confirmation email looks like this&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;    Welcome &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;,&lt;/span&gt;
+&lt;span class="x"&gt;    thank you for signing up for our Kiwi TCMS demo!&lt;/span&gt;
+
+&lt;span class="x"&gt;    To activate your account, click this link:&lt;/span&gt;
+&lt;span class="x"&gt;    &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;confirm_url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+
+&lt;span class="x"&gt;    GDPR no longer allows us to automatically subscribe you to&lt;/span&gt;
+&lt;span class="x"&gt;    our newsletter. If you wish to keep in touch and receive emails&lt;/span&gt;
+&lt;span class="x"&gt;    with news and updates around Kiwi TCMS please subscribe at:&lt;/span&gt;
+&lt;span class="x"&gt;    https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581&lt;/span&gt;
+
+&lt;span class="x"&gt;    --&lt;/span&gt;
+&lt;span class="x"&gt;    Happy testing!&lt;/span&gt;
+&lt;span class="x"&gt;    The Kiwi TCMS team&lt;/span&gt;
+&lt;span class="x"&gt;    http://kiwitcms.org&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The file that we want to override is &lt;code&gt;tcms/templates/email/confirm_registration.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Create a local directory (git repository) which will hold customization configuration
+and create a file named &lt;code&gt;templates.d/email/confirm_registration.txt&lt;/code&gt; with your text!&lt;/p&gt;
+&lt;p&gt;Next you want to make this file available inside your docker image so your &lt;code&gt;Dockerfile&lt;/code&gt;
+should look like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    FROM kiwitcms/kiwi
+
+    COPY ./templates.d/ /venv/lib64/python3.6/site-packages/tcms/overridden_templates/
+    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;where &lt;code&gt;local_settings.py&lt;/code&gt; contains&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.conf&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;settings&lt;/span&gt;
+
+    &lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TEMPLATES&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;DIRS&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;insert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TCMS_ROOT_PATH&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;overridden_templates&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The following code states &lt;em&gt;instruct Django to look into &lt;code&gt;overridden_templates&lt;/code&gt; first and
+use any templates it finds there; also make my files available in that specific location
+inside the docker image&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This approach can be used for all templates that you wish to override. Take into
+account that file names must match (Django searches templates by directory path).
+Now build your customized Docker image and use that for deployment!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="customization"></category></entry><entry><title>Kiwi TCMS 5.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" rel="alternate"></link><published>2018-07-31T12:00:00+03:00</published><updated>2018-07-31T12:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-31:/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.1! This release
 introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
