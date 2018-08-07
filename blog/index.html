@@ -45,6 +45,107 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/" rel="bookmark" title="Permalink to Kiwi TCMS 5.2">
+                <h1 class="top-header">Kiwi TCMS 5.2</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 07 August 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 5.2! This release
+introduces new database migrations and converts
+the Docker image to a non-root user with uid 1001. You may have to adjust
+ownership/permissions on the <tt class="docutils literal">kiwi_uploads</tt> Docker volume!</p>
+<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">6bc4e3124fd4</tt>.
+<a class="reference external" href="https://demo.kiwitcms.org">https://demo.kiwitcms.org</a> has also been updated!</p>
+<div class="section" id="changes-since-kiwi-tcms-5-1">
+<h2>Changes since Kiwi TCMS 5.1</h2>
+<div class="section" id="enhancements">
+<h3>Enhancements</h3>
+<ul class="simple">
+<li>Upgrade to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1/">Django 2.1</a></li>
+<li>Upgrade to <tt class="docutils literal"><span class="pre">django-report-builder</span> 6.2.2</tt>, compatible with Django 2.1</li>
+<li>Docker image now executes with uid 1001 instead of root<ul>
+<li>image based on <tt class="docutils literal">centos7</tt> image instead of <tt class="docutils literal">centos/httpd</tt></li>
+<li>image now exposes ports 8080 and 8443</li>
+<li>Apache logs now printed on Docker console</li>
+<li>SSL certificates copied to <tt class="docutils literal">/Kiwi/ssl</tt> inside Docker image instead of being bind-mounted</li>
+<li>uploads dir changed to <tt class="docutils literal">/Kiwi/uploads</tt></li>
+<li>static dir changed to <tt class="docutils literal">/Kiwi/static</tt></li>
+<li><tt class="docutils literal">/Kiwi</tt> is now owned by uid 1001</li>
+<li><tt class="docutils literal">/venv</tt> is now owned by uid 1001</li>
+<li><tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> is updated to match</li>
+</ul>
+</li>
+<li>Fix pylint errors (Ivaylo Ivanov)</li>
+<li>Allow users to see other profiles via Admin</li>
+<li>Use password change form from Admin instead of custom one</li>
+<li><tt class="docutils literal">product.py</tt> will try to import <tt class="docutils literal">local_settings.py</tt> if available in the
+same directory. This can be used to customize settings in downstream
+distributions</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Make password reset views public</li>
+<li>Don't crash when adding new users via Admin</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">UserProfile</tt> model. Kiwi TCMS doesn't needs extra information
+about users so we remove this part of the application. Custom installations
+may choose to define their own profiles if they wish</li>
+<li>Remove custom <tt class="docutils literal">DBModelBackend</tt> authentication backend</li>
+<li>Remove unused <tt class="docutils literal">tcms.core.context_processors.auth_backend_processor</tt></li>
+<li>Remove unused <tt class="docutils literal">get_using_backend()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/261">Issue #261</a></li>
+<li>Remove <tt class="docutils literal">dj_pagination</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/110">Issue #110</a></li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li><tt class="docutils literal">AUTHENTICATION_BACKENDS</tt> is removed</li>
+<li><tt class="docutils literal">PAGINATION_DEFAULT_PAGINATION</tt> is removed</li>
+<li>Navigation menu links are now defined in <tt class="docutils literal">MENU_ITEMS</tt> and can be redefined</li>
+</ul>
+</div>
+<div class="section" id="signals">
+<h3>Signals</h3>
+<ul class="simple">
+<li><tt class="docutils literal">USER_REGISTERED_SIGNAL</tt> now doesn't receive the <tt class="docutils literal">backend</tt> parameter</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="http://kiwitcms.org/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to override templates for Kiwi TCMS">
                 <h1 class="top-header">How to override templates for Kiwi TCMS</h1>
             </a>
@@ -135,8 +236,8 @@ introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.</p>
 <p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">cc9b55aa664d</tt>.
 <a class="reference external" href="https://demo.kiwitcms.org">https://demo.kiwitcms.org</a> has also been updated!</p>
-<div class="section" id="changes-since-kiwi-tcms-5-1">
-<h2>Changes since Kiwi TCMS 5.1</h2>
+<div class="section" id="changes-since-kiwi-tcms-5-0">
+<h2>Changes since Kiwi TCMS 5.0</h2>
 <div class="section" id="enhancements">
 <h3>Enhancements</h3>
 <ul class="simple">

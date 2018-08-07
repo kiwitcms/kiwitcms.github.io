@@ -1,5 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-08-06T11:40:00+03:00</updated><entry><title>How to override templates for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="alternate"></link><published>2018-08-06T11:40:00+03:00</published><updated>2018-08-06T11:40:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-08-06:/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;This is the first publication in our customization series. It will show you
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-08-07T22:45:00+03:00</updated><entry><title>Kiwi TCMS 5.2</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/" rel="alternate"></link><published>2018-08-07T22:45:00+03:00</published><updated>2018-08-07T22:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-08-07:/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.2! This release
+introduces new database migrations and converts
+the Docker image to a non-root user with uid 1001. You may have to adjust
+ownership/permissions on the &lt;tt class="docutils literal"&gt;kiwi_uploads&lt;/tt&gt; Docker volume!&lt;/p&gt;
+&lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;6bc4e3124fd4 …&lt;/tt&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.2! This release
+introduces new database migrations and converts
+the Docker image to a non-root user with uid 1001. You may have to adjust
+ownership/permissions on the &lt;tt class="docutils literal"&gt;kiwi_uploads&lt;/tt&gt; Docker volume!&lt;/p&gt;
+&lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;6bc4e3124fd4&lt;/tt&gt;.
+&lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-5-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 5.1&lt;/h2&gt;
+&lt;div class="section" id="enhancements"&gt;
+&lt;h3&gt;Enhancements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Upgrade to &lt;a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1/"&gt;Django 2.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Upgrade to &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-report-builder&lt;/span&gt; 6.2.2&lt;/tt&gt;, compatible with Django 2.1&lt;/li&gt;
+&lt;li&gt;Docker image now executes with uid 1001 instead of root&lt;ul&gt;
+&lt;li&gt;image based on &lt;tt class="docutils literal"&gt;centos7&lt;/tt&gt; image instead of &lt;tt class="docutils literal"&gt;centos/httpd&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;image now exposes ports 8080 and 8443&lt;/li&gt;
+&lt;li&gt;Apache logs now printed on Docker console&lt;/li&gt;
+&lt;li&gt;SSL certificates copied to &lt;tt class="docutils literal"&gt;/Kiwi/ssl&lt;/tt&gt; inside Docker image instead of being bind-mounted&lt;/li&gt;
+&lt;li&gt;uploads dir changed to &lt;tt class="docutils literal"&gt;/Kiwi/uploads&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;static dir changed to &lt;tt class="docutils literal"&gt;/Kiwi/static&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;/Kiwi&lt;/tt&gt; is now owned by uid 1001&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;/venv&lt;/tt&gt; is now owned by uid 1001&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; is updated to match&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fix pylint errors (Ivaylo Ivanov)&lt;/li&gt;
+&lt;li&gt;Allow users to see other profiles via Admin&lt;/li&gt;
+&lt;li&gt;Use password change form from Admin instead of custom one&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;product.py&lt;/tt&gt; will try to import &lt;tt class="docutils literal"&gt;local_settings.py&lt;/tt&gt; if available in the
+same directory. This can be used to customize settings in downstream
+distributions&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Make password reset views public&lt;/li&gt;
+&lt;li&gt;Don't crash when adding new users via Admin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;UserProfile&lt;/tt&gt; model. Kiwi TCMS doesn't needs extra information
+about users so we remove this part of the application. Custom installations
+may choose to define their own profiles if they wish&lt;/li&gt;
+&lt;li&gt;Remove custom &lt;tt class="docutils literal"&gt;DBModelBackend&lt;/tt&gt; authentication backend&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;tcms.core.context_processors.auth_backend_processor&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;get_using_backend()&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/261"&gt;Issue #261&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;dj_pagination&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/110"&gt;Issue #110&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;AUTHENTICATION_BACKENDS&lt;/tt&gt; is removed&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;PAGINATION_DEFAULT_PAGINATION&lt;/tt&gt; is removed&lt;/li&gt;
+&lt;li&gt;Navigation menu links are now defined in &lt;tt class="docutils literal"&gt;MENU_ITEMS&lt;/tt&gt; and can be redefined&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="signals"&gt;
+&lt;h3&gt;Signals&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;USER_REGISTERED_SIGNAL&lt;/tt&gt; now doesn't receive the &lt;tt class="docutils literal"&gt;backend&lt;/tt&gt; parameter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>How to override templates for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="alternate"></link><published>2018-08-06T11:40:00+03:00</published><updated>2018-08-06T11:40:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-08-06:/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;This is the first publication in our customization series. It will show you
 how to override any template used by Kiwi TCMS. As an example we will override
 the email template that is used when registering new account. By default the
 email text looks like this:&lt;/p&gt;
@@ -67,16 +156,16 @@ introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
 &lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
-&lt;div class="section" id="changes-since-kiwi-tcms-5-1"&gt;
-&lt;h2&gt;Changes since Kiwi TCMS 5.1&lt;/h2&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-5-0"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 5.0&lt;/h2&gt;
 &lt;div class="section" id="enhancements"&gt;
 &lt;h3&gt;Enhancements …&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.1! This release
 introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
 &lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
-&lt;div class="section" id="changes-since-kiwi-tcms-5-1"&gt;
-&lt;h2&gt;Changes since Kiwi TCMS 5.1&lt;/h2&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-5-0"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 5.0&lt;/h2&gt;
 &lt;div class="section" id="enhancements"&gt;
 &lt;h3&gt;Enhancements&lt;/h3&gt;
 &lt;ul class="simple"&gt;

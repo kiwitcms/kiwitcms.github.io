@@ -2,28 +2,28 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Kiwi TCMS 5.1</title>
+        <title>Kiwi TCMS - Kiwi TCMS 5.2</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
     
 
 
-        <meta name="description" content="tech-preview: Django Report Builder" >
+        <meta name="description" content="non-root Docker image" >
 
         <meta name="author" content="Kiwi TCMS Team">
 
         <meta name="twitter:site" content="@KiwiTCMS">
-        <meta name="twitter:title" content="Kiwi TCMS 5.1">
-            <meta name="twitter:description" content="tech-preview: Django Report Builder">
+        <meta name="twitter:title" content="Kiwi TCMS 5.2">
+            <meta name="twitter:description" content="non-root Docker image">
         <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:image" content="http://kiwitcms.org/theme/images/twitter_card.jpg">
 
         <meta property="og:site_name" content="Kiwi TCMS">
         <meta property="og:type" content="article" />
             <meta property="article:author" content="http://kiwitcms.org/blog/kiwi-tcms-team/" />
-        <meta property="og:url" content="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" />
-        <meta property="og:title" content="Kiwi TCMS 5.1" />
-        <meta property="article:published_time" content="2018-07-31 12:00:00+03:00">
-            <meta property="og:description" content="tech-preview: Django Report Builder">
+        <meta property="og:url" content="http://kiwitcms.org/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/" />
+        <meta property="og:title" content="Kiwi TCMS 5.2" />
+        <meta property="article:published_time" content="2018-08-07 22:45:00+03:00">
+            <meta property="og:description" content="non-root Docker image">
 
             <meta property="og:image" content="http://kiwitcms.org/theme/images/og_image.jpg">
         <!-- MailChimp Newsletter Form Styles -->
@@ -66,69 +66,84 @@
         </nav>
         <!-- content -->
     <header class="col-12 header secondary">
-        <h1 class="top-header">Kiwi TCMS 5.1</h1>
-        <h2 class="top-subheader">tech-preview: Django Report Builder</h2>
+        <h1 class="top-header">Kiwi TCMS 5.2</h1>
+        <h2 class="top-subheader">non-root Docker image</h2>
 
         <p class="post-meta">
             Posted by
                 <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-            on Tue 31 July 2018
+            on Tue 07 August 2018
         </p>
     </header>
 
     <article class="col-12 article secondary">
-        <p>We're happy to announce Kiwi TCMS version 5.1! This release
-introduces new database migrations, an experimental reporting feature,
-deprecated functionality and bug fixes.</p>
-<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">cc9b55aa664d</tt>.
+        <p>We're happy to announce Kiwi TCMS version 5.2! This release
+introduces new database migrations and converts
+the Docker image to a non-root user with uid 1001. You may have to adjust
+ownership/permissions on the <tt class="docutils literal">kiwi_uploads</tt> Docker volume!</p>
+<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">6bc4e3124fd4</tt>.
 <a class="reference external" href="https://demo.kiwitcms.org">https://demo.kiwitcms.org</a> has also been updated!</p>
-<div class="section" id="changes-since-kiwi-tcms-5-0">
-<h2>Changes since Kiwi TCMS 5.0</h2>
+<div class="section" id="changes-since-kiwi-tcms-5-1">
+<h2>Changes since Kiwi TCMS 5.1</h2>
 <div class="section" id="enhancements">
 <h3>Enhancements</h3>
 <ul class="simple">
-<li>Integrate with Django Report Builder as tech-preview. This makes it possible
-for power users and administrators to generate
-<a class="reference external" href="http://django-report-builder.readthedocs.io/en/latest/howto/">tabular reports</a>.
-You will have to know the existing DB schema if you want to create your own reports.
-See <a class="reference external" href="http://kiwitcms.readthedocs.io/en/latest/db.html">http://kiwitcms.readthedocs.io/en/latest/db.html</a>. This feature is in
-tech-preview and it may be removed if it doesn't work out. Please comment at:
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/452">Issue #452</a>.</li>
-<li>Allow using <tt class="docutils literal">manage.py dumpdata|loaddata|sqlflush|dbshell</tt> for backups, see
-<a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">blog post</a></li>
-<li>In TestCase view page add a link to delete the current test case</li>
-<li>In TestCase Admin page the <tt class="docutils literal">+ Add TestCase</tt> button now allows to create new
-test case</li>
-<li>The version menu item in the helper menu now links to
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#change-log">Changelog</a></li>
+<li>Upgrade to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1/">Django 2.1</a></li>
+<li>Upgrade to <tt class="docutils literal"><span class="pre">django-report-builder</span> 6.2.2</tt>, compatible with Django 2.1</li>
+<li>Docker image now executes with uid 1001 instead of root<ul>
+<li>image based on <tt class="docutils literal">centos7</tt> image instead of <tt class="docutils literal">centos/httpd</tt></li>
+<li>image now exposes ports 8080 and 8443</li>
+<li>Apache logs now printed on Docker console</li>
+<li>SSL certificates copied to <tt class="docutils literal">/Kiwi/ssl</tt> inside Docker image instead of being bind-mounted</li>
+<li>uploads dir changed to <tt class="docutils literal">/Kiwi/uploads</tt></li>
+<li>static dir changed to <tt class="docutils literal">/Kiwi/static</tt></li>
+<li><tt class="docutils literal">/Kiwi</tt> is now owned by uid 1001</li>
+<li><tt class="docutils literal">/venv</tt> is now owned by uid 1001</li>
+<li><tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> is updated to match</li>
 </ul>
-</div>
-<div class="section" id="deprecated-functionality">
-<h3>Deprecated functionality</h3>
-<ul class="simple">
-<li>Start showing deprecation warning for Advanced search, see
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/448">Issue #448</a></li>
+</li>
+<li>Fix pylint errors (Ivaylo Ivanov)</li>
+<li>Allow users to see other profiles via Admin</li>
+<li>Use password change form from Admin instead of custom one</li>
+<li><tt class="docutils literal">product.py</tt> will try to import <tt class="docutils literal">local_settings.py</tt> if available in the
+same directory. This can be used to customize settings in downstream
+distributions</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
 </ul>
 </div>
 <div class="section" id="bug-fixes">
 <h3>Bug fixes</h3>
 <ul class="simple">
-<li>Allows Product/Version/Build to be shown in Testing Report. Fixes
-<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/618688608/">Sentry KIWI-TCMS-2C</a></li>
-<li>Default to <tt class="docutils literal"><span class="pre">https://</span></tt> links if not running locally. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/450">Issue #450</a></li>
-<li>Apply missing CSS class for object history table so it can be displayed nicely</li>
+<li>Make password reset views public</li>
+<li>Don't crash when adding new users via Admin</li>
 </ul>
 </div>
 <div class="section" id="refactoring">
 <h3>Refactoring</h3>
 <ul class="simple">
-<li>Squash some database migrations</li>
-<li>Fix a number of pylint issues</li>
-<li>Remove unused <tt class="docutils literal"><span class="pre">testruns.views::view_caseruns()</span></tt>. References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/316">Issue #316</a></li>
-<li>Remove unused template <tt class="docutils literal">report/caserun.html</tt></li>
-<li>Handle TestRun deletion via admin not home grown code</li>
+<li>Remove <tt class="docutils literal">UserProfile</tt> model. Kiwi TCMS doesn't needs extra information
+about users so we remove this part of the application. Custom installations
+may choose to define their own profiles if they wish</li>
+<li>Remove custom <tt class="docutils literal">DBModelBackend</tt> authentication backend</li>
+<li>Remove unused <tt class="docutils literal">tcms.core.context_processors.auth_backend_processor</tt></li>
+<li>Remove unused <tt class="docutils literal">get_using_backend()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/261">Issue #261</a></li>
+<li>Remove <tt class="docutils literal">dj_pagination</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/110">Issue #110</a></li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li><tt class="docutils literal">AUTHENTICATION_BACKENDS</tt> is removed</li>
+<li><tt class="docutils literal">PAGINATION_DEFAULT_PAGINATION</tt> is removed</li>
+<li>Navigation menu links are now defined in <tt class="docutils literal">MENU_ITEMS</tt> and can be redefined</li>
+</ul>
+</div>
+<div class="section" id="signals">
+<h3>Signals</h3>
+<ul class="simple">
+<li><tt class="docutils literal">USER_REGISTERED_SIGNAL</tt> now doesn't receive the <tt class="docutils literal">backend</tt> parameter</li>
 </ul>
 </div>
 </div>
@@ -147,17 +162,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 <p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
 </div>
-<div class="section" id="help-us-make-kiwi-tcms-better">
-<h2>Help us make Kiwi TCMS better</h2>
-<p>According to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">our 2018 roadmap update</a>
-the Kiwi TCMS team is investing a great deal of our time to make the code base more
-maintainable! For the past few releases we've been balancing code refactoring
-with bug-fixing and enhancements and we have lots of ideas down the line.</p>
-<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
-We want to know what works for you and what doesn't so we can make it better. Feel
-free to comment below, file GitHub issues or send us an email.</p>
-<p>Happy testing!</p>
-</div>
 
     </article>
 
@@ -169,8 +173,8 @@ free to comment below, file GitHub issues or send us an email.</p>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-                this.page.url = 'http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/';
-                this.page.identifier = 'blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/';
+                this.page.url = 'http://kiwitcms.org/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/';
             };
             (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
