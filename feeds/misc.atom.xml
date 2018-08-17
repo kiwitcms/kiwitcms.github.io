@@ -8,7 +8,8 @@ introduces new database migrations and converts
 the Docker image to a non-root user with uid 1001. You may have to adjust
 ownership/permissions on the &lt;tt class="docutils literal"&gt;kiwi_uploads&lt;/tt&gt; Docker volume!&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;6bc4e3124fd4&lt;/tt&gt;.
-&lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;
+has also been updated!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-5-1"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 5.1&lt;/h2&gt;
 &lt;div class="section" id="enhancements"&gt;
@@ -105,7 +106,8 @@ email text looks like this:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; runs a custom Docker image based on
+&lt;p&gt;&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;
+runs a custom Docker image based on
 &lt;code&gt;kiwitcms/kiwi&lt;/code&gt;. For this image the confirmation email looks like this&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;    Welcome &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;,&lt;/span&gt;
 &lt;span class="x"&gt;    thank you for signing up for our Kiwi TCMS demo!&lt;/span&gt;
@@ -155,7 +157,8 @@ Now build your customized Docker image and use that for deployment!&lt;/p&gt;
 introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
-&lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;
+has also been updated!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-5-0"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 5.0&lt;/h2&gt;
 &lt;div class="section" id="enhancements"&gt;
@@ -163,7 +166,8 @@ deprecated functionality and bug fixes.&lt;/p&gt;
 introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
-&lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;
+has also been updated!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-5-0"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 5.0&lt;/h2&gt;
 &lt;div class="section" id="enhancements"&gt;
@@ -361,7 +365,8 @@ as translatable but the majority of them have not been updated for a long time.&
 past few releases but there are still thousands of lines of code left to deal with.&lt;/p&gt;
 &lt;h2&gt;Community efforts&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;We are seeing a steady stream of new users registered on &lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; and
+&lt;p&gt;We are seeing a steady stream of new users registered on
+&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; and
 there are several active contributors (issues, translations).&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg and PyCon Prague!
 We're planning to attend HackConf and OpenFest in Sofia by the end of the year.&lt;/p&gt;
@@ -369,11 +374,11 @@ We're planning to attend HackConf and OpenFest in Sofia by the end of the year.&
 introduces object history tracking, removal of old functionality and unused code,
 lots of internal updates and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;468de0abe8a8&lt;/tt&gt;.
-&lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
 introduces object history tracking, removal of old functionality and unused code,
 lots of internal updates and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;468de0abe8a8&lt;/tt&gt;.
-&lt;a class="reference external" href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-4-2"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 4.2&lt;/h2&gt;
 &lt;div class="section" id="settings"&gt;
@@ -555,11 +560,11 @@ free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
 This is a security, bug-fix and enhancement update which upgrades to the latest
 Django version under Python 3.6.
 We've pushed new &lt;code&gt;kiwitcms/kiwi:latest&lt;/code&gt; docker image to Docker Hub and updated the
-demo instance at &lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 4.2!
+demo instance at &lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 4.2!
 This is a security, bug-fix and enhancement update which upgrades to the latest
 Django version under Python 3.6.
 We've pushed new &lt;code&gt;kiwitcms/kiwi:latest&lt;/code&gt; docker image to Docker Hub and updated the
-demo instance at &lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+demo instance at &lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;This version also includes GDPR related changes which affect our project. Read below
 for the details.&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 4.1.4&lt;/h2&gt;
@@ -645,10 +650,12 @@ for the details.&lt;/p&gt;
   checkbox when signing up for the newsletter.&lt;/li&gt;
 &lt;li&gt;Double opt-in is now enabled when subscribing to our newsletter&lt;/li&gt;
 &lt;li&gt;All newsletter addresses that have been unsubscribed have been deleted&lt;/li&gt;
-&lt;li&gt;Upon registration for &lt;a href="http://demo.kiwitcms.org"&gt;http://demo.kiwitcms.org&lt;/a&gt; you are no longer subscribed
+&lt;li&gt;Upon registration for &lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;
+  you are no longer subscribed
   to the newsletter. Now we send a welcome email with a link to the newsletter
   so you can subscribe if you want&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://demo.kiwitcms.org"&gt;http://demo.kiwitcms.org&lt;/a&gt; now runs a cron job which deletes inactive accounts
+&lt;li&gt;&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;
+  now runs a cron job which deletes inactive accounts
   and all of their related data. The cron job runs weekly&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We're trying to be respectful to your private data and not expose that to any
@@ -711,7 +718,8 @@ demo instance at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happ
 This is a bug-fix and enhancement update which upgrades to the latest Django
 version, resolves several issues and includes lots of internal code updates.&lt;/p&gt;
 &lt;p&gt;We've pushed new &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; docker image to Docker Hub and updated the
-demo instance at &lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+demo instance at
+&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 4.1.3&lt;/h2&gt;
 &lt;h3&gt;Enhancements&lt;/h3&gt;
 &lt;ul&gt;
@@ -791,7 +799,9 @@ lots of internal code refactoring which removes code duplication and brings down
 &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; metrics
 to 26.9% of technical debt or 10 months to fix.&lt;/p&gt;
 &lt;p&gt;We've pushed the new &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; docker image to Docker Hub and updated the
-demo instance at &lt;a href="https://demo.kiwitcms.org"&gt;https://demo.kiwitcms.org&lt;/a&gt;. Starting forward the demo will use
+demo instance at
+&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;.
+Starting forward the demo will use
 the &lt;code&gt;info-at-kiwitcms.org&lt;/code&gt; email address for all communication sent. There are real
 people behind this address so if you write to us we will reply!&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 4.1.0&lt;/h2&gt;
@@ -1326,8 +1336,8 @@ and the corresponding tcms-api version 1.5.0! This release includes a fair
 amount of bug fixes and many changes related to Kiwi's RPC layer!&lt;/p&gt;
 &lt;p&gt;Most importantly Kiwi is updated to Django 2.0.1, the API client no longer
 supports Python 2 and many RPC methods have been removed or updated.
-&lt;a href="http://demo.kiwitcms.org"&gt;http://demo.kiwitcms.org&lt;/a&gt; has also been updated so you can explore the
-new version.&lt;/p&gt;
+&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;
+has also been updated so you can explore the new version.&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 3.48&lt;/h2&gt;
 &lt;h3&gt;Enhancements and bug fixes&lt;/h3&gt;
 &lt;ul&gt;
