@@ -9,7 +9,8 @@ This is a bug-fix and enhancement update which upgrades to the latest Django
 version, resolves several issues and includes lots of internal code updates.
 
 We've pushed new `kiwitcms/kiwi` docker image to Docker Hub and updated the
-demo instance at <https://demo.kiwitcms.org>!
+demo instance at
+[https://demo.kiwitcms.org](https://demo.kiwitcms.org/login/github/)!
 
 
 Changes since Kiwi TCMS 4.1.3

@@ -20,7 +20,8 @@ email text looks like this:
 
 
 
-<https://demo.kiwitcms.org> runs a custom Docker image based on
+[https://demo.kiwitcms.org](https://demo.kiwitcms.org/login/github/)
+runs a custom Docker image based on
 `kiwitcms/kiwi`. For this image the confirmation email looks like this
 
         Welcome {{ user }},

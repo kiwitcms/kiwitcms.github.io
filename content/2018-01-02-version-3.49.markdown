@@ -9,8 +9,8 @@ amount of bug fixes and many changes related to Kiwi's RPC layer!
 
 Most importantly Kiwi is updated to Django 2.0.1, the API client no longer
 supports Python 2 and many RPC methods have been removed or updated.
-<http://demo.kiwitcms.org> has also been updated so you can explore the
-new version.
+[https://demo.kiwitcms.org](https://demo.kiwitcms.org/login/github/)
+has also been updated so you can explore the new version.
 
 
 Changes since Kiwi TCMS 3.48

@@ -122,7 +122,8 @@ Community efforts
 
 *Status: moderate progress*
 
-We are seeing a steady stream of new users registered on <https://demo.kiwitcms.org> and
+We are seeing a steady stream of new users registered on
+[https://demo.kiwitcms.org](https://demo.kiwitcms.org/login/github/) and
 there are several active contributors (issues, translations).
 
 Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg and PyCon Prague!
