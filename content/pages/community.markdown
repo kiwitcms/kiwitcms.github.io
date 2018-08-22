@@ -4,17 +4,18 @@ save_as: community/index.html
 
 # Community
 
-Kiwi TCMS is developed in the open. Here are some of the channels we use to communicate and contribute:
+Kiwi TCMS is developed in the open. Here are our communication channels in order of preference:
 
-**IRC:** [`#kiwitcms`](https://kiwiirc.com/client/irc.freenode.net/kiwitcms) on [irc.freenode.net](http://freenode.net/) (for the easiest start, [join via Kiwi IRC](https://kiwiirc.com/client/irc.freenode.net/kiwitcms))
-
-**Email:** `info-at-kiwitcms.org`
-
-**Twitter:** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
+**Stack Overflow:** Tag questions with ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms) tag
 
 **Issue tracker:** Use the GitHub [issue tracker](https://github.com/kiwitcms/Kiwi/issues) to file bugs and features request.
 
+**Twitter:** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
+
+**Email:** `info-at-kiwitcms.org`
+
 _Please do not ask individual project members for support. Use the channels above instead, where the whole community can help you and benefit from the solutions provided. If community support is insufficient for your situation, please refer to the Commercial Support section below._
+
 
 # Contributing
 
