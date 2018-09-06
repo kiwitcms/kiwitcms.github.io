@@ -12,6 +12,7 @@
     color: #1c3d32;
 }
 
+.olive-green,
 nav.primary a:hover, #pagination a:hover, #mc_embed_signup .button:hover {
     background-color: #1c3d32;
     color: #f6f6f6;

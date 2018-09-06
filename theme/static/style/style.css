@@ -156,6 +156,7 @@ nav button {
 }
 
 blockquote {
+    box-sizing: border-box;
     border-left: solid 0.4rem rgba(144, 144, 144, 0.25);
     font-style: italic;
     margin: 0 0 2em 0;
