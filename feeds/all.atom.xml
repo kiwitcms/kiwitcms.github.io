@@ -1,5 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-09-13T13:50:00+03:00</updated><entry><title>Happy birthday Kiwi TCMS</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/" rel="alternate"></link><published>2018-09-13T13:50:00+03:00</published><updated>2018-09-13T13:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-09-13:/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"&gt;&lt;/p&gt;</content></entry><entry><title>How to add API logging for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/" rel="alternate"></link><published>2018-09-07T22:00:00+03:00</published><updated>2018-09-07T22:00:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-09-07:/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;In this blog post I will show more ways to customize Kiwi TCMS by adding
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-10-04T12:45:00+03:00</updated><entry><title>Kiwi TCMS 6.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/04/kiwi-tcms-60/" rel="alternate"></link><published>2018-10-04T12:45:00+03:00</published><updated>2018-10-04T12:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-04:/blog/kiwi-tcms-team/2018/10/04/kiwi-tcms-60/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.0! This release
+introduces new database migrations, removal of
+environment properties in favor of tags, internal updates and bug fixes.
+You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release removes squashed migrations. Direct upgrades from versions
+&amp;lt; 5.3.1 to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.0! This release
+introduces new database migrations, removal of
+environment properties in favor of tags, internal updates and bug fixes.
+You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release removes squashed migrations. Direct upgrades from versions
+&amp;lt; 5.3.1 to 6.0 will break without an intermediate upgrade to 5.3.1!&lt;/p&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  cd087297f349    991.3 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-5-3-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 5.3.1&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update to &lt;a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.2/"&gt;Django 2.1.2&lt;/a&gt;
+due to high severity security issue&lt;/li&gt;
+&lt;li&gt;Update to &lt;a class="reference external" href="https://github.com/patternfly/patternfly/releases"&gt;Patternfly 3.54.8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Tag&lt;/tt&gt; objects are now shown in Admin panel&lt;/li&gt;
+&lt;li&gt;Add autocomplete when adding tags to &lt;tt class="docutils literal"&gt;TestRun&lt;/tt&gt; via UI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="removed-functionality"&gt;
+&lt;h3&gt;Removed functionality&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;TestCase new and edit views no longer allow editing of tags. Tags can be
+added/removed from the Tags tab which also makes sure to properly account
+for permissions&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;EnvGroup&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;EnvProperty&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;EnvValue&lt;/tt&gt; models in favor of tags.
+Existing values and properties are converted into tags and automatically added
+to test runs!&lt;/li&gt;
+&lt;li&gt;Convert squashed database migrations to regular ones and remove older migrations.
+&lt;strong&gt;WARNING:&lt;/strong&gt; upgrade from versions &amp;lt;= 5.3.1 to 6.0 will break without an intermediate
+upgrade to &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:5.3.1 a420465852be&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;Remove deprecated &lt;tt class="docutils literal"&gt;TestCase.estimated_time&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestRun.estimated_time&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/514"&gt;Issue #514&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="backend-api"&gt;
+&lt;h2&gt;Backend API&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No longer use &lt;tt class="docutils literal"&gt;product_version&lt;/tt&gt; for &lt;tt class="docutils literal"&gt;TestRun.create&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/522"&gt;Issue #522&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;'product' is no longer required&lt;/li&gt;
+&lt;li&gt;'product_version' is no longer required&lt;/li&gt;
+&lt;li&gt;'manager' and 'default_tester' can be usernames or IDs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCase.create&lt;/tt&gt; no longer accepts 'tag' values&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestRun.add_tag&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestRun.remove_tag&lt;/tt&gt; now return list of tags.
+Previously these methods returned &lt;tt class="docutils literal"&gt;None&lt;/tt&gt;!
+This is the list of tags assigned to the TestRun that is being modified!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix mismatched HTML tag in &lt;tt class="docutils literal"&gt;plan/get.html&lt;/tt&gt; template (Oleg Kainov)&lt;/li&gt;
+&lt;li&gt;Don't use &lt;tt class="docutils literal"&gt;|slugify&lt;/tt&gt; filter in templates which breaks HTML links with non-ASCII
+TestPlan names. Fixes
+&lt;a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/676626096/"&gt;Sentry KIWI-TCMS-38&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix pylint errors (Ivaylo Ivanov, Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Use existing JSON-RPC methods to add/remove tags via webUI and remove specialized
+backend methods that handled these requests. Also make sure to obey respective
+permissions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="subscription-based-online-service"&gt;
+&lt;h2&gt;Subscription based online service&lt;/h2&gt;
+&lt;p&gt;We are planning to convert
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.&lt;/p&gt;
+&lt;p&gt;The income from this service will go towards covering operating costs and
+supporting the
+&lt;a class="reference external" href="https://github.com/orgs/kiwitcms/people"&gt;development team&lt;/a&gt;. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515"&gt;Issue #515&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="plans-to-remove-deprecated-functionality"&gt;
+&lt;h2&gt;Plans to remove deprecated functionality&lt;/h2&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;TestRun.product_version&lt;/tt&gt; will be removed from the database schema in favor of
+&lt;tt class="docutils literal"&gt;TestRun.plan.product_version&lt;/tt&gt;! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Happy birthday Kiwi TCMS</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/" rel="alternate"></link><published>2018-09-13T13:50:00+03:00</published><updated>2018-09-13T13:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-09-13:/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"&gt;&lt;/p&gt;</content></entry><entry><title>How to add API logging for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/" rel="alternate"></link><published>2018-09-07T22:00:00+03:00</published><updated>2018-09-07T22:00:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-09-07:/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;In this blog post I will show more ways to customize Kiwi TCMS by adding
 logging capabilities to the API backend. Indeed this is a feature that
 our team deemed not required for upstream and was removed in
 &lt;a href="https://github.com/kiwitcms/Kiwi/pull/436"&gt;PR #436&lt;/a&gt;.&lt;/p&gt;
