@@ -521,6 +521,15 @@ pre code {
     }
 }
 
+@media screen and (max-width: 1090px){
+    /* smaller screens */
+
+    /*navigation section*/
+    nav img {
+        max-width: 30%;
+    }
+}
+
 @media screen and (max-width: 991px){
     /* For tablets: */
 
