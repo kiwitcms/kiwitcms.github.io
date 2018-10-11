@@ -89,6 +89,21 @@ img {
     float: left;
 }
 
+img.rounded {
+    float: left;
+    margin-left: 0;
+    margin-right: 1.5rem;
+    border: solid 0.2em;
+    border-radius: 100%;
+}
+
+.member-bio {
+    height: auto;
+    width: 100%;
+    float: left;
+    margin-bottom: 1.5rem;
+}
+
 .margin0 { margin: 0; }
 .shadow { box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0, .3); }
 .bottom-border {
@@ -503,6 +518,15 @@ pre code {
 
     .features .horizontally-stacked-list {
         padding-right: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1090px){
+    /* smaller screens */
+
+    /*navigation section*/
+    nav img {
+        max-width: 30%;
     }
 }
 
