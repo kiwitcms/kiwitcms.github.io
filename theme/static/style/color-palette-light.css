@@ -47,6 +47,10 @@ nav.primary a.active, #pagination a.active {
     background-color: #9e9e9e;
 }
 
+img.rounded {
+    border-color: #1c3d32;
+}
+
 .accent-important, #mc_embed_signup .button {
     background-color: #9ab451;
     color: #212516;
