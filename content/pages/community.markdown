@@ -33,6 +33,10 @@ This is a list of third-party companies and individuals who provide products or 
 
 # Acknowledgements
 
-Kiwi TCMS was initially started by [Red Hat, Inc.](https://www.redhat.com/en) under the name Nitrate. It was intended as a replacement for Mozilla's Testopia and has grown on its own since then. The latest development is being done by the Kiwi TCMS team with sponsorship by [Mr. Senko](http://mrsenko.com/).
+Kiwi TCMS was initially started by [Red Hat, Inc.](https://www.redhat.com/en) under the name Nitrate.
+It was intended as a replacement for Mozilla's Testopia and has grown on its own
+[since then](https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#381804-jan-24-2017-released-on-mrsenkocom).
+Latest development is done by
+[the Kiwi TCMS team]({filename}team.html) with sponsorship from [Mr. Senko](http://mrsenko.com/).
 
 The Kiwi TCMS logo is based on the [Kiwix icon](https://commons.wikimedia.org/wiki/File:Kiwix_icon.svg) by Kelson.

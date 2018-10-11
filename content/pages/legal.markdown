@@ -6,7 +6,7 @@ Legal information
 =================
 
 The Kiwi TCMS software is developed by a
-[core team](https://github.com/orgs/kiwitcms/people) and
+[core team]({filename}team.html) and
 [individual contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors).
 
 The project infrastructure is sponsored and maintained by
