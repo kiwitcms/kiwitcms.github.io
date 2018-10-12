@@ -1,6 +1,6 @@
 Title: Kiwi TCMS team updates
 headline: new team coach, team progress and internship program
-date: 2018-10-12 10:00
+date: 2018-10-12 11:10
 comments: true
 author: Alexander Todorov
 og_image: images/team/banner.png
@@ -46,6 +46,8 @@ Her working areas will be planning and organization:
   meet the aforementioned consistency point
 * serve as our professional coach, motivator and somebody who will
   take care of team health (yes I really suck at motivating others)
+
+and generally serving as another very experienced member of the team!
 
 
 We did a quick brainstorming yesterday and started to produce results
