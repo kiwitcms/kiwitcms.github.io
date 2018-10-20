@@ -2,7 +2,7 @@ Kiwi TCMS 6.1
 #############
 
 :headline: updates and database migrations
-:date: 2018-10-20 13:30
+:date: 2018-10-20 14:40
 :comments: true
 
 
@@ -14,15 +14,25 @@ You can explore everything at
 `https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_.
 
 
+**NOTE:** there is the 6.0.1 release which resolves an upgrade problem
+caused by non-applied migrations which have been later squashed and
+released in the same release! It is best to jump through the intermediate
+releases to ensure a smooth upgrade!
+
+
 Supported upgrade paths::
 
     5.3   (or older) -> 5.3.1
-    5.3.1 (or newer) -> 6.1
+    5.3.1 (or newer) -> 6.0.1
+    6.0.1            -> 6.1
 
 Docker images::
 
-    kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
     kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
+    kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+    kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+    kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+
 
 
 Changes since Kiwi TCMS 6.0
