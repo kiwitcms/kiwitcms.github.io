@@ -52,6 +52,127 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="bookmark" title="Permalink to Kiwi TCMS 6.1">
+                <h1 class="top-header">Kiwi TCMS 6.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sat 20 October 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 6.1! This release
+introduces new database migrations,
+internal updates and bug fixes. It is a small release designed
+to minimize the number of database migrations by squashing them together.
+You can explore everything at
+<a class="reference external" href="https://demo.kiwitcms.org/login/github/">https://demo.kiwitcms.org</a>.</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.1
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-0">
+<h2>Changes since Kiwi TCMS 6.0</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update <a class="reference external" href="https://github.com/pycontribs/jira">Jira from 1.0.10 to 2.0.0</a></li>
+<li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.55.0</a></li>
+<li>Use button instead of HTML link for deleting test plan (Oleg Kainov)</li>
+<li>New middleware that will check missing settings. At the moment will only
+check Base URL configuration which often gets forgotten!</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Hot-fix for error caused by the API method <tt class="docutils literal">TestRun.update</tt>. Error was
+initially reported on
+<a class="reference external" href="https://stackoverflow.com/questions/52865463/">StackOverflow</a>.
+This patch makes it possible to use the API without crashing however the
+<tt class="docutils literal">TestRun.update</tt> method doesn't handle the <tt class="docutils literal">stop_date</tt> field at the moment!</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated translation source strings</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Fix pylint errors (Ivaylo Ivanov)</li>
+<li>Remove unused <tt class="docutils literal">TestRun.list</tt> and <tt class="docutils literal">TestCase.list_confirmed</tt> methods</li>
+<li>Remove unused <tt class="docutils literal">plan_by_id_or_name()</tt> and <tt class="docutils literal">is_int()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/269">Issue #269</a></li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li>Rename <tt class="docutils literal">tcms.core.contrib.auth</tt> to <tt class="docutils literal">tcms.kiwi_auth</tt></li>
+<li>Remove field <tt class="docutils literal">user</tt> from <tt class="docutils literal">TestCaseTag</tt>, <tt class="docutils literal">TestRunTag</tt> and <tt class="docutils literal">TestPlanTag</tt>
+models</li>
+<li>Squash migrations for <tt class="docutils literal">management</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testcases</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testplans</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testruns</tt> app</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+<div class="section" id="subscription-based-online-service">
+<h2>Subscription based online service</h2>
+<p>We are planning to convert
+<a class="reference external" href="https://demo.kiwitcms.org/login/github/">https://demo.kiwitcms.org</a> into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.</p>
+<p>The income from this service will go towards covering operating costs and
+supporting the
+<a class="reference external" href="http://kiwitcms.org/team/">development team</a>. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+</div>
+<div class="section" id="plans-to-remove-deprecated-functionality">
+<h2>Plans to remove deprecated functionality</h2>
+<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
+<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/11/kiwi-tcms-winter-conference-presence/" rel="bookmark" title="Permalink to Kiwi TCMS winter conference presence">
                 <h1 class="top-header">Kiwi TCMS winter conference presence</h1>
             </a>
