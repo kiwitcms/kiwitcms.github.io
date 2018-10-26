@@ -52,6 +52,105 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="http://kiwitcms.org/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="bookmark" title="Permalink to Kiwi TCMS API performance baseline">
+                <h1 class="top-header">Kiwi TCMS API performance baseline</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
+                on Fri 26 October 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
+an experiment to establish a baseline.
+For API requests I got <strong>7.5 req/sec or 130 msec/req</strong> which is
+1.5x <a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/">slower than GitHub</a>!</p>
+<p>I used <code>perf-script</code>
+(<a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2">gits here</a>)
+to measure that. The script takes the first 250 test cases from our test suite
+and on every execution creates a new TestPlan (1 API request), then creates
+new test cases (250 requests), adds cases to test plan (250 requests),
+creates new product build (1 API request), creates new TestRun (1 API request),
+adds test cases to test run (250 requests) and finally updates the statuses
+(250 requests).</p>
+<p>A total of 1003 API requests are sent to Kiwi TCMS every time you start this script!</p>
+<p>On localhost, running the development server (<code>./manage.py runserver</code>) with an
+SQLite database I got:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">time</span> python perf-script
+
+real    2m6.450s
+user    0m1.069s
+sys     0m0.331s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m7.472s
+user    0m1.057s
+sys     0m0.342s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m9.368s
+user    0m1.072s
+sys     0m0.351s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m9.197s
+user    0m1.050s
+sys     0m0.353s
+</pre></div>
+
+
+<p>This measures at 120 msec/req or 7.85 req/sec!</p>
+<p><a href="https://demo.kiwitcms.org/login/github/">demo.kiwitcms.org</a> is running on an
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware">AWS t2.micro</a>
+instance (via docker-compose) with the default <code>centos/mariadb</code> image!
+No extra settings or changes. I used the same computer over a WiFi
+connection and a pretty standard home-speed Internet connection. Times are:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">time</span> python perf-script
+
+real    2m18.983s
+user    0m1.175s
+sys     0m0.095s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m25.937s
+user    0m1.156s
+sys     0m0.108s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m24.120s
+user    0m1.102s
+sys     0m0.098s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m21.521s
+user    0m1.154s
+sys     0m0.091s
+</pre></div>
+
+
+<p>This measures at 140 sec/req or 7.05 req/sec!</p>
+<p>Note: since I am using Python 3.6 I had to modify the file
+<code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Used by http.client if no context is explicitly passed.</span>
+<span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
+</pre></div>
+
+
+<p>The issue has been reported in
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="http://kiwitcms.org/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/" rel="bookmark" title="Permalink to Kiwi TCMS team updates">
                 <h1 class="top-header">Kiwi TCMS team updates</h1>
             </a>

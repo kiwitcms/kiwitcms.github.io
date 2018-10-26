@@ -1,5 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-10-20T14:40:00+03:00</updated><entry><title>Kiwi TCMS 6.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="alternate"></link><published>2018-10-20T14:40:00+03:00</published><updated>2018-10-20T14:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-20:/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1! This release
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-10-26T16:47:00+03:00</updated><entry><title>Kiwi TCMS API performance baseline</title><link href="http://kiwitcms.org/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="alternate"></link><published>2018-10-26T16:47:00+03:00</published><updated>2018-10-26T16:47:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-10-26:/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/</id><summary type="html">&lt;p&gt;A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
+an experiment to establish a baseline.
+For API requests I got &lt;strong&gt;7.5 req/sec or 130 msec/req&lt;/strong&gt; which is
+1.5x &lt;a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/"&gt;slower than GitHub&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;I used &lt;code&gt;perf-script&lt;/code&gt;
+(&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;gits here&lt;/a&gt;)
+to measure …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
+an experiment to establish a baseline.
+For API requests I got &lt;strong&gt;7.5 req/sec or 130 msec/req&lt;/strong&gt; which is
+1.5x &lt;a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/"&gt;slower than GitHub&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;I used &lt;code&gt;perf-script&lt;/code&gt;
+(&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;gits here&lt;/a&gt;)
+to measure that. The script takes the first 250 test cases from our test suite
+and on every execution creates a new TestPlan (1 API request), then creates
+new test cases (250 requests), adds cases to test plan (250 requests),
+creates new product build (1 API request), creates new TestRun (1 API request),
+adds test cases to test run (250 requests) and finally updates the statuses
+(250 requests).&lt;/p&gt;
+&lt;p&gt;A total of 1003 API requests are sent to Kiwi TCMS every time you start this script!&lt;/p&gt;
+&lt;p&gt;On localhost, running the development server (&lt;code&gt;./manage.py runserver&lt;/code&gt;) with an
+SQLite database I got:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; python perf-script
+
+real    2m6.450s
+user    0m1.069s
+sys     0m0.331s
+
+$ &lt;span class="nb"&gt;time&lt;/span&gt; python perf-script
+
+real    2m7.472s
+user    0m1.057s
+sys     0m0.342s
+
+$ &lt;span class="nb"&gt;time&lt;/span&gt; python perf-script
+
+real    2m9.368s
+user    0m1.072s
+sys     0m0.351s
+
+$ &lt;span class="nb"&gt;time&lt;/span&gt; python perf-script
+
+real    2m9.197s
+user    0m1.050s
+sys     0m0.353s
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This measures at 120 msec/req or 7.85 req/sec!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;demo.kiwitcms.org&lt;/a&gt; is running on an
+&lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware"&gt;AWS t2.micro&lt;/a&gt;
+instance (via docker-compose) with the default &lt;code&gt;centos/mariadb&lt;/code&gt; image!
+No extra settings or changes. I used the same computer over a WiFi
+connection and a pretty standard home-speed Internet connection. Times are:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; python perf-script
+
+real    2m18.983s
+user    0m1.175s
+sys     0m0.095s
+
+$ &lt;span class="nb"&gt;time&lt;/span&gt; python perf-script
+
+real    2m25.937s
+user    0m1.156s
+sys     0m0.108s
+
+$ &lt;span class="nb"&gt;time&lt;/span&gt; python perf-script
+
+real    2m24.120s
+user    0m1.102s
+sys     0m0.098s
+
+$ &lt;span class="nb"&gt;time&lt;/span&gt; python perf-script
+
+real    2m21.521s
+user    0m1.154s
+sys     0m0.091s
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This measures at 140 sec/req or 7.05 req/sec!&lt;/p&gt;
+&lt;p&gt;Note: since I am using Python 3.6 I had to modify the file
+&lt;code&gt;/opt/rh/rh-python36/root/lib64/python3.6/ssl.py&lt;/code&gt; to read:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Used by http.client if no context is explicitly passed.&lt;/span&gt;
+&lt;span class="n"&gt;_create_default_https_context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_create_unverified_context&lt;/span&gt; &lt;span class="c1"&gt;# this disables HTTPS cert validation&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The issue has been reported in
+&lt;a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454"&gt;RHBZ #1643454&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS 6.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="alternate"></link><published>2018-10-20T14:40:00+03:00</published><updated>2018-10-20T14:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-20:/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1! This release
 introduces new database migrations,
 internal updates and bug fixes. It is a small release designed
 to minimize the number of database migrations by squashing them together.

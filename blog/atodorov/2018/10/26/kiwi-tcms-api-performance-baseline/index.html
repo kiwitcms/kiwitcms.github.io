@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS API performance baseline</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="7.5 req/sec or 130 msec/req" >
+
+        <meta name="author" content="Alexander Todorov">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS API performance baseline">
+            <meta name="twitter:description" content="7.5 req/sec or 130 msec/req">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="http://kiwitcms.org/theme/images/twitter_card.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/atodorov/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" />
+        <meta property="og:title" content="Kiwi TCMS API performance baseline" />
+        <meta property="article:published_time" content="2018-10-26 16:47:00+03:00">
+            <meta property="og:description" content="7.5 req/sec or 130 msec/req">
+
+            <meta property="og:image" content="http://kiwitcms.org/theme/images/og_image.jpg">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org/login/github/">GitHub Login</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="http://kiwitcms.org/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li><a href="http://kiwitcms.org/team/">Team</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Kiwi TCMS API performance baseline</h1>
+        <h2 class="top-subheader">7.5 req/sec or 130 msec/req</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
+            on Fri 26 October 2018
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
+an experiment to establish a baseline.
+For API requests I got <strong>7.5 req/sec or 130 msec/req</strong> which is
+1.5x <a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/">slower than GitHub</a>!</p>
+<p>I used <code>perf-script</code>
+(<a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2">gits here</a>)
+to measure that. The script takes the first 250 test cases from our test suite
+and on every execution creates a new TestPlan (1 API request), then creates
+new test cases (250 requests), adds cases to test plan (250 requests),
+creates new product build (1 API request), creates new TestRun (1 API request),
+adds test cases to test run (250 requests) and finally updates the statuses
+(250 requests).</p>
+<p>A total of 1003 API requests are sent to Kiwi TCMS every time you start this script!</p>
+<p>On localhost, running the development server (<code>./manage.py runserver</code>) with an
+SQLite database I got:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">time</span> python perf-script
+
+real    2m6.450s
+user    0m1.069s
+sys     0m0.331s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m7.472s
+user    0m1.057s
+sys     0m0.342s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m9.368s
+user    0m1.072s
+sys     0m0.351s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m9.197s
+user    0m1.050s
+sys     0m0.353s
+</pre></div>
+
+
+<p>This measures at 120 msec/req or 7.85 req/sec!</p>
+<p><a href="https://demo.kiwitcms.org/login/github/">demo.kiwitcms.org</a> is running on an
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware">AWS t2.micro</a>
+instance (via docker-compose) with the default <code>centos/mariadb</code> image!
+No extra settings or changes. I used the same computer over a WiFi
+connection and a pretty standard home-speed Internet connection. Times are:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">time</span> python perf-script
+
+real    2m18.983s
+user    0m1.175s
+sys     0m0.095s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m25.937s
+user    0m1.156s
+sys     0m0.108s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m24.120s
+user    0m1.102s
+sys     0m0.098s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m21.521s
+user    0m1.154s
+sys     0m0.091s
+</pre></div>
+
+
+<p>This measures at 140 sec/req or 7.05 req/sec!</p>
+<p>Note: since I am using Python 3.6 I had to modify the file
+<code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Used by http.client if no context is explicitly passed.</span>
+<span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
+</pre></div>
+
+
+<p>The issue has been reported in
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
+<p>Happy testing!</p>
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50fb0d604eb24fd0"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/';
+                this.page.identifier = 'blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
