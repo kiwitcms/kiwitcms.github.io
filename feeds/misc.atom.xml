@@ -1,5 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-10-26T16:47:00+03:00</updated><entry><title>Kiwi TCMS API performance baseline</title><link href="http://kiwitcms.org/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="alternate"></link><published>2018-10-26T16:47:00+03:00</published><updated>2018-10-26T16:47:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-10-26:/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/</id><summary type="html">&lt;p&gt;A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-10-29T16:00:00+02:00</updated><entry><title>Kiwi TCMS 6.1.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="alternate"></link><published>2018-10-29T16:00:00+02:00</published><updated>2018-10-29T16:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-29:/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
+squashes database migrations and removes
+older migrations that have been squashed in previous releases, a few
+improvements and bug fixes.
+You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
+squashes database migrations and removes
+older migrations that have been squashed in previous releases, a few
+improvements and bug fixes.
+You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.1&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Dashboard will now show TestRuns which have test cases assigned to current
+user. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/520"&gt;Issue #520&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;API method &lt;tt class="docutils literal"&gt;TestRun.add_case()&lt;/tt&gt; now returns a serialized TestCaseRun object.
+Previously this method returned None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Don't show disabled Priority records in UI. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/334"&gt;Issue #334&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix some pylint errors (Ivaylo Ivanov)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove old squashed migrations for &lt;tt class="docutils literal"&gt;management&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;testplans&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;testcases&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;testruns&lt;/tt&gt; apps&lt;/li&gt;
+&lt;li&gt;Squash the remaining migrations for &lt;tt class="docutils literal"&gt;management&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;testplans&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;testcases&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;testruns&lt;/tt&gt; apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="subscription-based-online-service"&gt;
+&lt;h2&gt;Subscription based online service&lt;/h2&gt;
+&lt;p&gt;We are planning to convert
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.&lt;/p&gt;
+&lt;p&gt;The income from this service will go towards covering operating costs and
+supporting the
+&lt;a class="reference external" href="http://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515"&gt;Issue #515&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="plans-to-remove-deprecated-functionality"&gt;
+&lt;h2&gt;Plans to remove deprecated functionality&lt;/h2&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;TestRun.product_version&lt;/tt&gt; will be removed from the database schema in favor of
+&lt;tt class="docutils literal"&gt;TestRun.plan.product_version&lt;/tt&gt;! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Kiwi TCMS API performance baseline</title><link href="http://kiwitcms.org/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="alternate"></link><published>2018-10-26T16:47:00+03:00</published><updated>2018-10-26T16:47:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-10-26:/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/</id><summary type="html">&lt;p&gt;A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
 an experiment to establish a baseline.
 For API requests I got &lt;strong&gt;7.5 req/sec or 130 msec/req&lt;/strong&gt; which is
 1.5x &lt;a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/"&gt;slower than GitHub&lt;/a&gt;!&lt;/p&gt;
