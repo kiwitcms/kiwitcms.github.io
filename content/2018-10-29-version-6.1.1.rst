@@ -1,0 +1,119 @@
+Kiwi TCMS 6.1.1
+###############
+
+:headline: few updates and database migrations
+:date: 2018-10-29 16:00
+:comments: true
+
+
+We're happy to announce Kiwi TCMS version 6.1.1! This release
+squashes database migrations and removes
+older migrations that have been squashed in previous releases, a few
+improvements and bug fixes.
+You can explore everything at
+`https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_.
+
+
+Supported upgrade paths::
+
+    5.3   (or older) -> 5.3.1
+    5.3.1 (or newer) -> 6.0.1
+    6.0.1            -> 6.1
+    6.1              -> 6.1.1
+
+
+Docker images::
+
+    kiwitcms/kiwi       latest  49fa42ddfe4d    955.7 MB
+    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+    kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+    kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+    kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+
+
+
+Changes since Kiwi TCMS 6.1
+---------------------------
+
+Improvements
+~~~~~~~~~~~~
+
+- Dashboard will now show TestRuns which have test cases assigned to current
+  user. Fixes
+  `Issue #520 <https://github.com/kiwitcms/Kiwi/issues/520>`_
+- API method ``TestRun.add_case()`` now returns a serialized TestCaseRun object.
+  Previously this method returned None
+
+
+Bug fixes
+~~~~~~~~~
+
+- Don't show disabled Priority records in UI. Fixes
+  `Issue #334 <https://github.com/kiwitcms/Kiwi/issues/334>`_
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Slovenian translation <https://crowdin.com/project/kiwitcms/sl#>`_
+
+
+Refactoring
+~~~~~~~~~~~
+
+- Fix some pylint errors (Ivaylo Ivanov)
+
+
+Database
+~~~~~~~~
+
+- Remove old squashed migrations for ``management``, ``testplans``,
+  ``testcases`` and ``testruns`` apps
+- Squash the remaining migrations for ``management``, ``testplans``,
+  ``testcases`` and ``testruns`` apps
+
+
+
+How to upgrade
+---------------
+
+If you are using Kiwi TCMS as a Docker container then::
+
+    cd Kiwi/
+    git pull
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker pull centos/mariadb
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
+before upgrade!
+
+
+Subscription based online service
+---------------------------------
+
+We are planning to convert
+`https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_ into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.
+
+The income from this service will go towards covering operating costs and
+supporting the
+`development team <{filename}pages/team.html>`_. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+`Issue #515 <https://github.com/kiwitcms/Kiwi/issues/515>`_.
+
+
+Plans to remove deprecated functionality
+----------------------------------------
+
+``TestRun.product_version`` will be removed from the database schema in favor of
+``TestRun.plan.product_version``! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+`Issue #246 <https://github.com/kiwitcms/Kiwi/issues/246>`_ is fixed).
+    
