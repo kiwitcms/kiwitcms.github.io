@@ -1,5 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-10-29T16:00:00+02:00</updated><entry><title>Kiwi TCMS 6.1.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="alternate"></link><published>2018-10-29T16:00:00+02:00</published><updated>2018-10-29T16:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-29:/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-11-02T12:15:00+02:00</updated><entry><title>Kiwi TCMS 6.2</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="alternate"></link><published>2018-11-02T12:15:00+02:00</published><updated>2018-11-02T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-02:/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
+that removes squashed migrations from previous releases and includes a few
+improvements. You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; or
+find our info booth at &lt;a class="reference external" href="http://www.openfest.org"&gt;OpenFest&lt;/a&gt; in Sofia during
+the weekend and do a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
+that removes squashed migrations from previous releases and includes a few
+improvements. You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; or
+find our info booth at &lt;a class="reference external" href="http://www.openfest.org"&gt;OpenFest&lt;/a&gt; in Sofia during
+the weekend and do a live demo with the team!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (latest)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  7870085ad415    957.6 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-1-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.1.1&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update to &lt;a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.3/"&gt;Django 2.1.3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update Apache config to print logs on the console. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/549"&gt;Issue #549&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; now
+allows email associations when logging via GitHub. If you have an existing
+account which shares the same email address with your GitHub profile you
+will be redirected to that account upon logging in via GitHub!
+This also resolves a problem where existing users trying to login via GitHub
+were presented with error message that their email exists in the database!
+Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/573"&gt;Issue #573&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove old variants of squashed migrations from earlier releases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update &lt;tt class="docutils literal"&gt;tcms.tests.factories.BugFactory&lt;/tt&gt; (Ivaylo Ivanov)&lt;/li&gt;
+&lt;li&gt;Add test for &lt;tt class="docutils literal"&gt;tcms.testcases.views.group_case_bugs&lt;/tt&gt; (Ivaylo Ivanov)&lt;/li&gt;
+&lt;li&gt;Pylint fixes (Ivaylo Ivanov)&lt;/li&gt;
+&lt;li&gt;Remove unused JavaScript and re-use the existing JSON RPC methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="subscription-based-online-service"&gt;
+&lt;h2&gt;Subscription based online service&lt;/h2&gt;
+&lt;p&gt;We are planning to convert
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.&lt;/p&gt;
+&lt;p&gt;The income from this service will go towards covering operating costs and
+supporting the
+&lt;a class="reference external" href="http://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515"&gt;Issue #515&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="plans-to-remove-deprecated-functionality"&gt;
+&lt;h2&gt;Plans to remove deprecated functionality&lt;/h2&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;TestRun.product_version&lt;/tt&gt; will be removed from the database schema in favor of
+&lt;tt class="docutils literal"&gt;TestRun.plan.product_version&lt;/tt&gt;! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Kiwi TCMS 6.1.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="alternate"></link><published>2018-10-29T16:00:00+02:00</published><updated>2018-10-29T16:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-29:/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
 squashes database migrations and removes
 older migrations that have been squashed in previous releases, a few
 improvements and bug fixes.
