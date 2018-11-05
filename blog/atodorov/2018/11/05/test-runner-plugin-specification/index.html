@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Test runner plugin specification</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who wish to create plugins for popular test runners that..." >
+
+        <meta name="author" content="Alexander Todorov">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Test runner plugin specification">
+            <meta name="twitter:description" content="Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who wish to create plugins for popular test runners that...">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="http://kiwitcms.org/theme/images/twitter_card.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/atodorov/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/" />
+        <meta property="og:title" content="Test runner plugin specification" />
+        <meta property="article:published_time" content="2018-11-05 16:05:00+02:00">
+            <meta property="og:description" content="Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who wish to create plugins for popular test runners that...">
+
+            <meta property="og:image" content="http://kiwitcms.org/theme/images/og_image.jpg">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org/login/github/">GitHub Login</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="http://kiwitcms.org/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li><a href="http://kiwitcms.org/team/">Team</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Test runner plugin specification</h1>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
+            on Mon 05 November 2018
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
+wish to create plugins for popular test runners that will record test results
+in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
+<a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#using-different-testing-frameworks">Django</a>
+and <a href="https://junit.org/junit4/plugins.html">JUnit</a>!</p>
+<h2>What is a test runner?</h2>
+<p>When working with automated testing you have several components:</p>
+<ul>
+<li>A test module (or test script), e.g. <code>test_models.py</code> which contains
+  tests for your software;</li>
+<li>A test framework, e.g. Python nose, which provides the structure
+  for test classes and methods and assert methods to use;</li>
+<li>A test runner, which knows how to discover your test scripts, load them,
+  execute the testing scenarios inside of them and report the results.</li>
+</ul>
+<p>Very often all of the components above live together inside the testing framework
+but don't need to. For example the standard <code>unittest</code> module in Python
+provides a test runner but there are also <code>nose</code> and <code>py.test</code> and Django provides
+its own test runner that knows how to work with the database.</p>
+<h2>Workflow organization</h2>
+<p>Once you agree to writing a plugin we are going to create a separate GitHub
+repository where you will be granted write privileges making you an independent
+contributor to the Kiwi TCMS project!</p>
+<p>Design and architecture of the plugin is up to you, following the practices
+established by the testing framework in question. You will also have to create
+a test suite for your plugin based on the specification below.</p>
+<p>You are expected to use
+<a href="https://demo.kiwitcms.org/login/github/">demo.kiwitcms.org</a> while working on the
+plugin and afterwards. This is known as eating your own dog food!</p>
+<p>For Python we provide the <code>tcms-api</code> module which already takes care of the
+communications layer. For other languages you will have to create this layer or
+depend on other open source libraries that provide a XML-RPC or JSON-RPC
+client!</p>
+<p>You can use
+<a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2">this gist</a>
+for inspiration!</p>
+<h2>Behavior Specification</h2>
+<p><em>Please use the comments section to discuss unclear behavior and missing scenarios!</em></p>
+<div class="highlight"><pre><span></span>    SUMMARY: Will use configuration file if it exists
+    GIVEN: the file ~/.tcms.conf exists
+    WHEN: plugin initializes
+    THEN: the plugin will log an info message, read the file and
+    THEN: configure TCMS_API_URL, TCMS_USERNAME, TCMS_PASSWORD
+          variables with the respective values
+
+
+    SUMMARY: Will use ENVIRONMENT if configuration file doesn&#39;t exist
+    GIVEN: the file ~/.tcms.conf does not exists
+    WHEN: plugin initializes
+    THEN: the plugin will read configuration from environment and configure
+          the following variables/class members:
+          TCMS_API_URL, TCMS_USERNAME and TCMS_PASSWORD
+
+
+    SUMMARY: Will exit if TCMS_API_URL not configured
+    GIVEN: TCMS_API_URL variable is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will exit if TCMS_USERNAME not configured
+    GIVEN: TCMS_USERNAME is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will exit if TCMS_PASSWORD not configured
+    GIVEN: TCMS_PASSWORD is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will re-use existing TestPlan if configured
+    GIVEN: TCMS_RUN_ID environment variable is not empty
+    WHEN: plugin initializes
+    THEN:  this will be the Current_TestRun record to which the plugin is
+           going to add test execution results
+    AND: Current_TestPlan document in which the plugin will
+           search for test cases becomes Current_TestRun.plan
+
+
+    SUMMARY: Will create new TestPlan &amp; TestRun if TCMS_RUN_ID not configured
+    GIVEN: TCMS_RUN_ID environment variable is empty
+    THEN: plugin will create a new TestPlan in Kiwi TCMS with attributes:
+        name=&#39;Automated test plan for %(product)&#39;
+        product=&#39;%(product)&#39;
+        product_version=&#39;%(version)&#39;
+        type=&#39;Unit&#39;
+    WHERE: %(product) is a placeholder for TCMS_PRODUCT==TRAVIS_REPO_SLUG==JOB_NAME
+           %(version) is a placeholder for TCMS_PRODUCT_VERSION==TRAVIS_COMMIT==TRAVIS_PULL_REQUEST_SHA==GIT_COMMIT
+    THEN: plugin will crate a new TestRun in Kiwi TCMS with attributes:
+        summary=&#39;Automated test run ....&#39;
+        plan=Current TestPlan
+        build=&#39;%(build)&#39;
+        manager=TCMS_USERNAME
+    WHERE: %(build) is a placeholder for TCMS_BUILD==TRAVIS_BUILD_NUMBER==BUILD_NUMBER
+    Environment variables are specified in:
+    https://docs.travis-ci.com/user/environment-variables#default-environment-variables
+    https://wiki.jenkins.io/display/JENKINS/Building+a+software+project#Buildingasoftwareproject-belowJenkinsSetEnvironmentVariables
+
+    SUMMARY: Will not create duplicate Product, Version &amp; Build if they already exist
+    GIVEN: TCMS_RUN_ID is not configured
+    AND: %(product) exists
+    AND: %(version) exists
+    AND: %(build) exists
+    WHEN: plugin tries to auto-create TestPlan and TestRun
+    THEN: plugin will re-use %(product), %(version) and %(build) from the database
+    AND: not try to auto-create them
+
+
+    SUMMARY: Will auto-create Product, Version &amp; Build if they don&#39;t exist
+    GIVEN: TCMS_RUN_ID is not configured
+    AND: %(product) doesn&#39;t exist
+    AND: %(version) doesn&#39;t exist
+    AND: %(build) doesn&#39;t exist
+    WHEN: plugin tries to auto-create TestPlan and TestRun
+    THEN: %(product), %(version) and %(build) be created automatically
+
+
+    SUMMARY: Unit test names are added to TestPlan
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestPlan for a TestCase with the same name
+    AND: if test case doesn&#39;t exist in Current_TestPlan
+    THEN: it will be added to Current_TestPlan
+    hint: it is probably best to process all unit test results at the end!
+
+
+    SUMMARY: Unit test names are added to TestRun
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
+          the current unit test name
+    hint: (or Current_TestCase object from previous scenario, depending on implementation)
+    AND: if such TestCaseRun doesn&#39;t exist in Current_TestRun
+    THEN: it will be added to Current_TestRun
+    hint: it is probably best to process all unit test results at the end!
+
+
+    SUMMARY: Current_TestRun is updated with unit test results
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
+          the current unit test name
+    hint: (or Current_TestCase object from previous scenario, depending on implementation)
+    AND: if TestCaseRun object exists in Current_TestRun
+    THEN: its status will be updated with the execution result coming from the test runner
+    hint: it is probably best to process all unit test results at the end!
+</pre></div>
+
+
+<p>Happy testing!</p>
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50fb0d604eb24fd0"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/';
+                this.page.identifier = 'blog/atodorov/2018/11/05/test-runner-plugin-specification/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>

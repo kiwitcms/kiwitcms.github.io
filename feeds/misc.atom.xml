@@ -1,5 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-11-02T12:15:00+02:00</updated><entry><title>Kiwi TCMS 6.2</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="alternate"></link><published>2018-11-02T12:15:00+02:00</published><updated>2018-11-02T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-02:/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-11-05T16:05:00+02:00</updated><entry><title>Test runner plugin specification</title><link href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="alternate"></link><published>2018-11-05T16:05:00+02:00</published><updated>2018-11-05T16:05:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-11-05:/blog/atodorov/2018/11/05/test-runner-plugin-specification/</id><summary type="html">&lt;p&gt;Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
+wish to create plugins for popular test runners that will record test results
+in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
+&lt;a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#using-different-testing-frameworks"&gt;Django&lt;/a&gt;
+and &lt;a href="https://junit.org/junit4/plugins.html"&gt;JUnit&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;What is a test runner?&lt;/h2&gt;
+&lt;p&gt;When working with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
+wish to create plugins for popular test runners that will record test results
+in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
+&lt;a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#using-different-testing-frameworks"&gt;Django&lt;/a&gt;
+and &lt;a href="https://junit.org/junit4/plugins.html"&gt;JUnit&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;What is a test runner?&lt;/h2&gt;
+&lt;p&gt;When working with automated testing you have several components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A test module (or test script), e.g. &lt;code&gt;test_models.py&lt;/code&gt; which contains
+  tests for your software;&lt;/li&gt;
+&lt;li&gt;A test framework, e.g. Python nose, which provides the structure
+  for test classes and methods and assert methods to use;&lt;/li&gt;
+&lt;li&gt;A test runner, which knows how to discover your test scripts, load them,
+  execute the testing scenarios inside of them and report the results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Very often all of the components above live together inside the testing framework
+but don't need to. For example the standard &lt;code&gt;unittest&lt;/code&gt; module in Python
+provides a test runner but there are also &lt;code&gt;nose&lt;/code&gt; and &lt;code&gt;py.test&lt;/code&gt; and Django provides
+its own test runner that knows how to work with the database.&lt;/p&gt;
+&lt;h2&gt;Workflow organization&lt;/h2&gt;
+&lt;p&gt;Once you agree to writing a plugin we are going to create a separate GitHub
+repository where you will be granted write privileges making you an independent
+contributor to the Kiwi TCMS project!&lt;/p&gt;
+&lt;p&gt;Design and architecture of the plugin is up to you, following the practices
+established by the testing framework in question. You will also have to create
+a test suite for your plugin based on the specification below.&lt;/p&gt;
+&lt;p&gt;You are expected to use
+&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;demo.kiwitcms.org&lt;/a&gt; while working on the
+plugin and afterwards. This is known as eating your own dog food!&lt;/p&gt;
+&lt;p&gt;For Python we provide the &lt;code&gt;tcms-api&lt;/code&gt; module which already takes care of the
+communications layer. For other languages you will have to create this layer or
+depend on other open source libraries that provide a XML-RPC or JSON-RPC
+client!&lt;/p&gt;
+&lt;p&gt;You can use
+&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;this gist&lt;/a&gt;
+for inspiration!&lt;/p&gt;
+&lt;h2&gt;Behavior Specification&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Please use the comments section to discuss unclear behavior and missing scenarios!&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    SUMMARY: Will use configuration file if it exists
+    GIVEN: the file ~/.tcms.conf exists
+    WHEN: plugin initializes
+    THEN: the plugin will log an info message, read the file and
+    THEN: configure TCMS_API_URL, TCMS_USERNAME, TCMS_PASSWORD
+          variables with the respective values
+
+
+    SUMMARY: Will use ENVIRONMENT if configuration file doesn&amp;#39;t exist
+    GIVEN: the file ~/.tcms.conf does not exists
+    WHEN: plugin initializes
+    THEN: the plugin will read configuration from environment and configure
+          the following variables/class members:
+          TCMS_API_URL, TCMS_USERNAME and TCMS_PASSWORD
+
+
+    SUMMARY: Will exit if TCMS_API_URL not configured
+    GIVEN: TCMS_API_URL variable is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will exit if TCMS_USERNAME not configured
+    GIVEN: TCMS_USERNAME is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will exit if TCMS_PASSWORD not configured
+    GIVEN: TCMS_PASSWORD is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will re-use existing TestPlan if configured
+    GIVEN: TCMS_RUN_ID environment variable is not empty
+    WHEN: plugin initializes
+    THEN:  this will be the Current_TestRun record to which the plugin is
+           going to add test execution results
+    AND: Current_TestPlan document in which the plugin will
+           search for test cases becomes Current_TestRun.plan
+
+
+    SUMMARY: Will create new TestPlan &amp;amp; TestRun if TCMS_RUN_ID not configured
+    GIVEN: TCMS_RUN_ID environment variable is empty
+    THEN: plugin will create a new TestPlan in Kiwi TCMS with attributes:
+        name=&amp;#39;Automated test plan for %(product)&amp;#39;
+        product=&amp;#39;%(product)&amp;#39;
+        product_version=&amp;#39;%(version)&amp;#39;
+        type=&amp;#39;Unit&amp;#39;
+    WHERE: %(product) is a placeholder for TCMS_PRODUCT==TRAVIS_REPO_SLUG==JOB_NAME
+           %(version) is a placeholder for TCMS_PRODUCT_VERSION==TRAVIS_COMMIT==TRAVIS_PULL_REQUEST_SHA==GIT_COMMIT
+    THEN: plugin will crate a new TestRun in Kiwi TCMS with attributes:
+        summary=&amp;#39;Automated test run ....&amp;#39;
+        plan=Current TestPlan
+        build=&amp;#39;%(build)&amp;#39;
+        manager=TCMS_USERNAME
+    WHERE: %(build) is a placeholder for TCMS_BUILD==TRAVIS_BUILD_NUMBER==BUILD_NUMBER
+    Environment variables are specified in:
+    https://docs.travis-ci.com/user/environment-variables#default-environment-variables
+    https://wiki.jenkins.io/display/JENKINS/Building+a+software+project#Buildingasoftwareproject-belowJenkinsSetEnvironmentVariables
+
+    SUMMARY: Will not create duplicate Product, Version &amp;amp; Build if they already exist
+    GIVEN: TCMS_RUN_ID is not configured
+    AND: %(product) exists
+    AND: %(version) exists
+    AND: %(build) exists
+    WHEN: plugin tries to auto-create TestPlan and TestRun
+    THEN: plugin will re-use %(product), %(version) and %(build) from the database
+    AND: not try to auto-create them
+
+
+    SUMMARY: Will auto-create Product, Version &amp;amp; Build if they don&amp;#39;t exist
+    GIVEN: TCMS_RUN_ID is not configured
+    AND: %(product) doesn&amp;#39;t exist
+    AND: %(version) doesn&amp;#39;t exist
+    AND: %(build) doesn&amp;#39;t exist
+    WHEN: plugin tries to auto-create TestPlan and TestRun
+    THEN: %(product), %(version) and %(build) be created automatically
+
+
+    SUMMARY: Unit test names are added to TestPlan
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestPlan for a TestCase with the same name
+    AND: if test case doesn&amp;#39;t exist in Current_TestPlan
+    THEN: it will be added to Current_TestPlan
+    hint: it is probably best to process all unit test results at the end!
+
+
+    SUMMARY: Unit test names are added to TestRun
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
+          the current unit test name
+    hint: (or Current_TestCase object from previous scenario, depending on implementation)
+    AND: if such TestCaseRun doesn&amp;#39;t exist in Current_TestRun
+    THEN: it will be added to Current_TestRun
+    hint: it is probably best to process all unit test results at the end!
+
+
+    SUMMARY: Current_TestRun is updated with unit test results
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
+          the current unit test name
+    hint: (or Current_TestCase object from previous scenario, depending on implementation)
+    AND: if TestCaseRun object exists in Current_TestRun
+    THEN: its status will be updated with the execution result coming from the test runner
+    hint: it is probably best to process all unit test results at the end!
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS 6.2</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="alternate"></link><published>2018-11-02T12:15:00+02:00</published><updated>2018-11-02T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-02:/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
 that removes squashed migrations from previous releases and includes a few
 improvements. You can explore everything at
 &lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; or
@@ -228,13 +388,13 @@ an experiment to establish a baseline.
 For API requests I got &lt;strong&gt;7.5 req/sec or 130 msec/req&lt;/strong&gt; which is
 1.5x &lt;a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/"&gt;slower than GitHub&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;I used &lt;code&gt;perf-script&lt;/code&gt;
-(&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;gits here&lt;/a&gt;)
+(&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;gist here&lt;/a&gt;)
 to measure …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
 an experiment to establish a baseline.
 For API requests I got &lt;strong&gt;7.5 req/sec or 130 msec/req&lt;/strong&gt; which is
 1.5x &lt;a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/"&gt;slower than GitHub&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;I used &lt;code&gt;perf-script&lt;/code&gt;
-(&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;gits here&lt;/a&gt;)
+(&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;gist here&lt;/a&gt;)
 to measure that. The script takes the first 250 test cases from our test suite
 and on every execution creates a new TestPlan (1 API request), then creates
 new test cases (250 requests), adds cases to test plan (250 requests),
