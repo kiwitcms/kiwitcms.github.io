@@ -11,7 +11,7 @@ For API requests I got **7.5 req/sec or 130 msec/req** which is
 1.5x [slower than GitHub](https://blog.github.com/2012-09-05-how-we-keep-github-fast/)!
 
 I used `perf-script`
-([gits here](https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2))
+([gist here](https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2))
 to measure that. The script takes the first 250 test cases from our test suite
 and on every execution creates a new TestPlan (1 API request), then creates
 new test cases (250 requests), adds cases to test plan (250 requests),
