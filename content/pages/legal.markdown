@@ -5,12 +5,17 @@ save_as: legal/index.html
 Legal information
 =================
 
-The Kiwi TCMS software is developed by a
+Kiwi TCMS source code is developed by a
 [core team]({filename}team.html) and
 [individual contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors).
 
-The project infrastructure is sponsored and maintained by
-[Mr. Senko](http://mrsenko.com/legal/).
+The project infrastructure is sponsored and maintained by:
+
+* Company name: Open Technologies Bulgaria, Ltd;
+  doing business as [Mr. Senko](http://mrsenko.com/legal/)
+* Address: Ivan Susanin 43, Sofia 1618, Bulgaria
+* Registration number: 200601818
+* VAT number: BG200601818
 
 
 Demo accounts are removed after 90 days of inactivity. This applies to
