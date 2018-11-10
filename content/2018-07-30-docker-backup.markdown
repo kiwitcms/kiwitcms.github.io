@@ -44,7 +44,7 @@ Backing up file uploads
 
 Uploaded files can easily be backed up with:
 
-    docker exec -it kiwi_web /bin/tar -cP /var/kiwi/uploads > uploads.tar
+    docker exec -it kiwi_web /bin/tar -cP /Kiwi/uploads > uploads.tar
 
 and then restored:
 
