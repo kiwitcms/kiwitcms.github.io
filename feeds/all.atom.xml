@@ -1,5 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-11-05T16:05:00+02:00</updated><entry><title>Test runner plugin specification</title><link href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="alternate"></link><published>2018-11-05T16:05:00+02:00</published><updated>2018-11-05T16:05:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-11-05:/blog/atodorov/2018/11/05/test-runner-plugin-specification/</id><summary type="html">&lt;p&gt;Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-11-12T14:45:00+02:00</updated><entry><title>Kiwi TCMS 6.2.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/" rel="alternate"></link><published>2018-11-12T14:45:00+02:00</published><updated>2018-11-12T14:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-12:/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
+that includes some improvements and bug-fixes. You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
+that includes some improvements and bug-fixes. You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  24338088bf46    956.8 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-2"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.2&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update to &lt;a class="reference external" href="https://github.com/patternfly/patternfly/releases"&gt;Patternfly 3.57.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update to &lt;a class="reference external" href="http://initd.org/psycopg/articles/tag/release/"&gt;psycopg2 2.7.6.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix InvalidQuery, field &lt;tt class="docutils literal"&gt;TestCase.default_tester&lt;/tt&gt; cannot be both deferred and
+traversed using &lt;tt class="docutils literal"&gt;select_related&lt;/tt&gt; at the same time. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/346"&gt;Issue #346&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pylint fixes (Ivaylo Ivanov)&lt;/li&gt;
+&lt;li&gt;Remove JavaScript and Python functions in favor of existing JSON-RPC&lt;/li&gt;
+&lt;li&gt;Remove vendored-in &lt;tt class="docutils literal"&gt;js/lib/jquery.dataTables.js&lt;/tt&gt; which is now replaced by
+the npm package &lt;tt class="docutils literal"&gt;datatables.net&lt;/tt&gt; (required by Patternfly)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;
+(Christophe CHAUVET)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="misc"&gt;
+&lt;h3&gt;Misc&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; is
+using a new SSL certificate with serial number
+&lt;tt class="docutils literal"&gt;46:78:80:EA:80:A4:FC:65:17:E4:59:EC:1D:C2:27:47&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Version 6.2.1 has been published to
+&lt;a class="reference external" href="https://pypi.org/project/kiwitcms/"&gt;PyPI&lt;/a&gt; to facilitate people who want
+to deploy Kiwi TCMS on Heroku. &lt;strong&gt;Important&lt;/strong&gt;: PyPI package will be provided
+as a convenience for those who know what they are doing. Valid bugs and
+issues will be dealth with accordingly. As we do not deploy from a PyPI
+tarball we ask you to provide all the necessary
+details when reporting issues! &lt;em&gt;If you have no idea what all of this means
+then stick to the official Docker images!&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Test runner plugin specification</title><link href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="alternate"></link><published>2018-11-05T16:05:00+02:00</published><updated>2018-11-05T16:05:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-11-05:/blog/atodorov/2018/11/05/test-runner-plugin-specification/</id><summary type="html">&lt;p&gt;Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
 wish to create plugins for popular test runners that will record test results
 in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
 &lt;a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#using-different-testing-frameworks"&gt;Django&lt;/a&gt;
