@@ -1,0 +1,110 @@
+Kiwi TCMS 6.2.1
+###############
+
+:headline: some improvements, bug-fixes and French translation
+:date: 2018-11-12 14:45
+:comments: true
+
+
+We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
+that includes some improvements and bug-fixes. You can explore everything at
+`https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_!
+
+Supported upgrade paths::
+
+    5.3   (or older) -> 5.3.1
+    5.3.1 (or newer) -> 6.0.1
+    6.0.1            -> 6.1
+    6.1              -> 6.1.1
+    6.1.1            -> 6.2 (or newer)
+
+
+Docker images::
+
+    kiwitcms/kiwi       latest  24338088bf46    956.8 MB
+    kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+    kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+    kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+    kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+
+
+Changes since Kiwi TCMS 6.2
+---------------------------
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update to `Patternfly 3.57.0 <https://github.com/patternfly/patternfly/releases>`_
+- Update to `psycopg2 2.7.6.1 <http://initd.org/psycopg/articles/tag/release/>`_
+
+Bug fixes
+~~~~~~~~~
+
+- Fix InvalidQuery, field ``TestCase.default_tester`` cannot be both deferred and
+  traversed using ``select_related`` at the same time. References
+  `Issue #346 <https://github.com/kiwitcms/Kiwi/issues/346>`_
+
+Refactoring
+~~~~~~~~~~~
+
+- Pylint fixes (Ivaylo Ivanov)
+- Remove JavaScript and Python functions in favor of existing JSON-RPC
+- Remove vendored-in ``js/lib/jquery.dataTables.js`` which is now replaced by
+  the npm package ``datatables.net`` (required by Patternfly)
+
+
+Translations
+~~~~~~~~~~~~
+
+- New `French translation <https://crowdin.com/project/kiwitcms/fr#>`_
+  (Christophe CHAUVET)
+
+
+Misc
+~~~~
+
+- `https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_ is
+  using a new SSL certificate with serial number
+  ``46:78:80:EA:80:A4:FC:65:17:E4:59:EC:1D:C2:27:47``
+- Version 6.2.1 has been published to
+  `PyPI <https://pypi.org/project/kiwitcms/>`_ to facilitate people who want
+  to deploy Kiwi TCMS on Heroku. **Important**: PyPI package will be provided
+  as a convenience for those who know what they are doing. Valid bugs and
+  issues will be dealth with accordingly. As we do not deploy from a PyPI
+  tarball we ask you to provide all the necessary
+  details when reporting issues! *If you have no idea what all of this means
+  then stick to the official Docker images!*
+
+
+How to upgrade
+---------------
+
+If you are using Kiwi TCMS as a Docker container then::
+
+    cd Kiwi/
+    git pull
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker pull centos/mariadb
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
+before upgrade!
+
+**WARNING:** ``kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow::
+
+    # starting from an older Kiwi TCMS version
+    docker-compose down
+    docker pull kiwitcms/kiwi:<next_upgrade_version>
+    edit docker-compose.yml to use kiwitcms/kiwi:<next_upgrade_version>
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+    # repeat until you have reached latest
+
+
+Happy testing!
