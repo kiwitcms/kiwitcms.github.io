@@ -2,7 +2,7 @@
     <head>
         <title>the leading open source test case management system</title>
         <meta name="save_as" content="index.html">
-        <meta name="extra_javascript" content="scripts/img-gallery-handler.js">
+        <meta name="extra_javascript" content="https://www.youtube.com/iframe_api scripts/demo-video.js scripts/img-gallery-handler.js ">
     </head>
     <body>
         <!-- Header -->
@@ -28,11 +28,21 @@
                     </div>
                     <div class="col-7">
                         <div class="header-img">
-                            <a href="#" title="Watch video">
+                            <a href="#" title="Watch video" onclick="showVideo()">
                                 <i class="fa fa-play fa-5x"></i>
                             </a>
                         </div>
                     </div>
+
+                    <div id="demoVideo" class="modal" onclick="hideVideo()">
+                        <div class="modal-content">
+                            <iframe width="1120" height="700" src="https://www.youtube.com/embed/n0wAAyISxLs?hd=1&enablejsapi=1"
+                                    id="youtube-iframe" frameborder="0" allowfullscreen
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+                            </iframe>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

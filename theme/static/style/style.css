@@ -248,6 +248,41 @@ pre code {
     padding-top: 140px;
 }
 
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 5% auto;
+    padding-bottom: 0;
+    width: 1120px;
+    height: 700px;
+}
+
+/* The modal Close Button */
+.close {
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
 /* Btns */
 
 .action-btn {

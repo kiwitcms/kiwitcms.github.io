@@ -13,7 +13,7 @@
     color: #1c3d32;
 }
 
-.olive-green,
+.olive-green, .modal,
 nav.primary a:hover, #pagination a:hover, #mc_embed_signup .button:hover {
     background-color: #1c3d32;
     color: #f6f6f6;
@@ -34,6 +34,7 @@ nav.primary a.active, #pagination a.active {
     background-color: #f6f6f6;
 }
 
+.modal-content,
 .secondary, #mc_embed_signup input.email {
     background-color: #f6f6f6;
     color: #1c3d32;
