@@ -69,8 +69,20 @@
                         </div>
                     </div>
                     <div class="col-7">
-                        <div class="header-img"></div>
+                        <div class="header-img">
+                            <a href="#" title="Watch video" onclick="showVideo()">
+                                <i class="fa fa-play fa-5x"></i>
+                            </a>
+                        </div>
                     </div>
+
+                    <div id="demoVideo" class="modal" onclick="hideVideo()">
+                        <div class="modal-content">
+                            <iframe width="1120" height="700" src="https://www.youtube.com/embed/n0wAAyISxLs?hd=1&amp;enablejsapi=1" id="youtube-iframe" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+                            </iframe>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -223,7 +235,10 @@
                 </ul>
             </div>
         </footer>
+            <script src="https://www.youtube.com/iframe_api"></script>
+            <script src="scripts/demo-video.js"></script>
             <script src="scripts/img-gallery-handler.js"></script>
+            <script src=""></script>
 
             <!-- Google analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
