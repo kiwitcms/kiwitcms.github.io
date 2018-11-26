@@ -236,12 +236,17 @@ pre code {
 }
 
 .header-img {
-    width: 100%;
+    width: 613px;
     height: 350px;
     background-image: url('../images/pc_with_test_run_small.png');
     background-repeat: no-repeat;
+    text-align: center;
 }
 
+.header-img a {
+    display: block;
+    padding-top: 140px;
+}
 
 /* Btns */
 
