@@ -52,6 +52,124 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/02/kiwi-tcms-version-349/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.49">
+                <h1 class="top-header">Kiwi TCMS version 3.49</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 02 January 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Happy New Year to everyone. We're happy to announce Kiwi TCMS version 3.49
+and the corresponding tcms-api version 1.5.0! This release includes a fair
+amount of bug fixes and many changes related to Kiwi's RPC layer!</p>
+<p>Most importantly Kiwi is updated to Django 2.0.1, the API client no longer
+supports Python 2 and many RPC methods have been removed or updated.
+<a href="https://demo.kiwitcms.org/login/github/">https://demo.kiwitcms.org</a>
+has also been updated so you can explore the new version.</p>
+<h2>Changes since Kiwi TCMS 3.48</h2>
+<h3>Enhancements and bug fixes</h3>
+<ul>
+<li>Upgrade to Django 2.0.1</li>
+<li>Don't log passwords sent via RPC</li>
+<li>Log XML-RPC requests from anonymous users. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/126">Issue #126</a></li>
+<li>Order <code>TCMSEnvValue</code> records by property name and value. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/155">Issue #155</a></li>
+<li>flake8 fixes (Anton Sankov)</li>
+<li>Start building source code documentation from Python doc strings</li>
+<li>Properly urlencode emails in personal menu links</li>
+<li>Remove test case import via XML files</li>
+<li>Use django-attachments for user uploaded files. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/160">Issue #160</a>
+  As part of this change we no longer copy Plan and Case attachments when
+  cloning these objects.</li>
+</ul>
+<p>NOTE: Since django-attachments introduces new permission objects
+  you will have to adjust default permissions for existing users!
+  In order for them to be able to upload/delete their own files they
+  need to have <code>attachments.add_attachment</code> and <code>atachments.delete_attachment</code>
+  permissions.</p>
+<p>These same permissions are added by default to the 'Tester' group.
+  If you are running an existing installation registering a new user
+  with Kiwi TCMS will update the default permissions for this group!</p>
+<h3>Refactoring</h3>
+<ul>
+<li>Remove unused class EditCaseNotifyThread (Chenxiong Qi)</li>
+<li>Remove model TestPlanActivity  (Chenxiong Qi)</li>
+<li>Remove many unused models and classes</li>
+<li>Execute tests via <code>manage.py test</code> and drop py.test dependency</li>
+<li>Remove useless <code>TestTag.string_to_list</code> method. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/106">Issue #106</a></li>
+<li>Use <code>settings.AUTH_USER_MODEL</code> in ForeignKey definitions. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/143">Issue #143</a></li>
+</ul>
+<h4>Settings</h4>
+<ul>
+<li>Rename <code>EMAIL_FROM</code> to <code>DEFAULT_FROM_EMAIL</code>. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/128">Issue #128</a></li>
+<li>Rename <code>FILE_UPLOAD_DIR</code> to <code>MEDIA_ROOT</code></li>
+<li>Rename <code>MAX_UPLOAD_SIZE</code> to <code>FILE_UPLOAD_MAX_SIZE</code></li>
+<li>New setting <code>DELETE_ATTACHMENTS_FROM_DISK</code></li>
+<li>Remove unused <code>XMLRPC_TEMPLATE</code> and <code>TESTOPIA_XML_VERSION</code></li>
+</ul>
+<h3>Server side API</h3>
+<ul>
+<li>Migrate to <code>django-modern-rpc</code> and remove home-grown XML-RPC handling code.
+  As part of this change the XML-RPC endpoint has been changed to <code>/xml-rpc/</code>.
+  There's also a new JSON-RPC endpoint at <code>/json-rpc/</code>!</li>
+<li><code>Auth.login</code> method now accepts positional parameters <code>username, password</code>
+  instead of dict</li>
+<li><code>TestCaseRun.get</code> method now accepts a query dict as parameter</li>
+<li><code>TestCaseRun.get_bugs</code> method now accepts a query dict as parameter</li>
+<li>Remove <code>Build.lookup_id_by_name</code>, <code>Build.lookup_name_by_id</code> RPC methods</li>
+<li>Remove <code>Product.lookup_name_by_id</code>, <code>Product.lookup_id_by_name</code> RPC methods</li>
+<li>Remove <code>Product.get_components</code>, use <code>Product.filter_components</code> instead</li>
+<li>Remove <code>Product.get_plans</code>, use <code>TestPlan.filter</code> instead</li>
+<li>Remove <code>Product.get_runs</code>, use <code>TestRun.filter</code> instead</li>
+<li>Remove <code>Product.get_tag</code>, use <code>Tag.get_tags</code> instead</li>
+<li>Remove <code>Product.get_versions</code>, use <code>Product.filter_versions</code> instead</li>
+<li>Remove <code>TestCaseRun.filter_count</code>, use <code>TestCaseRun.filter</code> instead</li>
+<li>Remove <code>TestCaseRun.get_s</code>, use <code>TestCaseRun.get</code> instead</li>
+<li>Remove <code>TestCaseRun.get_bugs_s</code>, use <code>TestCaseRun.get_bugs</code> instead</li>
+<li>Remove <code>TestCaseRun.get_case_run_status</code>, use
+  <code>TestCaseRun.get_case_run_status_by_name</code> instead</li>
+<li>Remove <code>TestCaseRun.get_completion_time</code>, <code>TestCaseRun.get_completion_time_s</code>
+  RPC methods. Instead calculate them on the client side</li>
+<li>Rename <code>TestCaseRun.check_case_run_status</code> to <code>TestCaseRun.get_case_run_status_by_name</code></li>
+<li><code>TestCaseRun.detach_log</code> will not raise exceptions when deleting logs from
+  non-existing TestCaseRun objects.</li>
+<li>Remove <code>User.get_me</code>, instead use <code>User.get</code> without parameters</li>
+<li>Remove <code>Version.</code> and <code>Testopia.</code> RPC modules</li>
+<li>Update documentation for RPC methods in <code>Auth</code>, <code>Build</code> and <code>Env</code> namespaces.
+  Unformatted documentation is also available for the rest of the RPC methods</li>
+</ul>
+<h2>tcms-api changes since 1.4.0</h2>
+<ul>
+<li>Update endpoint configuration, compatible with Kiwi TCMS 3.49</li>
+<li>Drop support for Python 2</li>
+<li>Remove the internal <code>do_command</code> method which eliminates use of <code>eval()</code></li>
+<li>Remove <code>TCMSXmlrpc.get_me()</code> and <code>TCMSXmlrpc.build_get()</code> methods</li>
+</ul>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+docker-compose down
+make docker-image
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/" rel="bookmark" title="Permalink to Kiwi TCMS Python API client">
                 <h1 class="top-header">Kiwi TCMS Python API client</h1>
             </a>

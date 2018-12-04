@@ -1,5 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-11-12T14:45:00+02:00</updated><entry><title>Kiwi TCMS 6.2.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/" rel="alternate"></link><published>2018-11-12T14:45:00+02:00</published><updated>2018-11-12T14:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-12:/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-12-04T09:15:00+02:00</updated><entry><title>Kiwi TCMS 6.3</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/" rel="alternate"></link><published>2018-12-04T09:15:00+02:00</published><updated>2018-12-04T09:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-12-04:/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
+security update that includes new versions of Django and Patternfly,
+new database migrations, lots of improvements, bug fixes and internal
+refactoring. This version also introduces integration with GitLab issue
+tracker! You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
+security update that includes new versions of Django and Patternfly,
+new database migrations, lots of improvements, bug fixes and internal
+refactoring. This version also introduces integration with GitLab issue
+tracker! You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  8135624fdca2    960.3 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-2-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.2.1&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Resolve medium severity XSS vulnerability which can be exploited when
+previewing malicious text in Simple MDE editor. See
+&lt;a class="reference external" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19057"&gt;CVE-2018-19057&lt;/a&gt;,
+&lt;a class="reference external" href="https://snyk.io/vuln/SNYK-JS-SIMPLEMDE-72570"&gt;SNYK-JS-SIMPLEMDE-72570&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;tt class="docutils literal"&gt;mozilla/bleach&lt;/tt&gt; before rendering Markdown to the user as a second layer
+of protection against the previously mentioned XSS vulnerability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update to &lt;a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.4/"&gt;Django 2.1.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update to &lt;a class="reference external" href="https://github.com/patternfly/patternfly/releases"&gt;Patternfly 3.58.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make docker container restartable (Maik Opitz, Adam Hall)&lt;/li&gt;
+&lt;li&gt;Add GitLab issue tracker integration. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/176"&gt;Issue #176&lt;/a&gt;
+(Filipe Arruda, Federal Institute of Pernambuco)&lt;/li&gt;
+&lt;li&gt;Convert &lt;tt class="docutils literal"&gt;Create new TestPlan&lt;/tt&gt; page to Patternfly (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Upon successful registration show the list of super-users in case new
+accounts must be activated manually. This can be the same or expanded
+version of the addresses in the &lt;tt class="docutils literal"&gt;ADMIN&lt;/tt&gt; setting. Include super-users
+in email notifications sent via &lt;tt class="docutils literal"&gt;tcms.signals.notify_admins()&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;Don't include &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;admin/js/*.js&lt;/span&gt;&lt;/tt&gt; files in templates when not
+necessary. Results in faster page load. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/209"&gt;Issue #209&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enable &lt;tt class="docutils literal"&gt;nl2br&lt;/tt&gt; Markdown extension which allows newline characters
+to be rendered as &lt;tt class="docutils literal"&gt;&amp;lt;br&amp;gt;&lt;/tt&gt; tags in HTML. Visually the rendered
+text will look closer to what you seen in the text editor. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/623"&gt;Issue #623&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use auto-complete for adding components to TestCase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="removed-functionality"&gt;
+&lt;h3&gt;Removed functionality&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bulk-update of Category for selected TestCase(s) inside of
+TestPlan&lt;/li&gt;
+&lt;li&gt;Bulk-update of Components for selected TestCase(s) inside of
+TestPlan&lt;/li&gt;
+&lt;li&gt;Bulk-update of automated status for selected TestCase(s) inside of
+TestPlan&lt;/li&gt;
+&lt;li&gt;Bulk-remove for TestCase Component tab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These actions have always been a bit broken and didn't check the
+correct permission labels. You can still update items individually!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Selection of Components when creating new TestCase. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/565"&gt;Issue #565&lt;/a&gt;.
+Everywhere else Kiwi TCMS doesn't allow selection of many-to-many
+relationships when creating or editing objects. Tags, Bugs, Components,
+TestPlans can be added via dedicated tabs once the object has been saved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Hide &lt;tt class="docutils literal"&gt;KiwiUserAdmin.password&lt;/tt&gt; field from super-user. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/610"&gt;Issue #610&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Don't show inactive Priority. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/637"&gt;Issue #637&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Don't traceback when adding new users via Admin. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/642"&gt;Issue #642&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Teach &lt;tt class="docutils literal"&gt;TestRun.update()&lt;/tt&gt; API method to process the &lt;tt class="docutils literal"&gt;stop_date&lt;/tt&gt;
+field. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/554"&gt;Issue #554&lt;/a&gt; (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Previously when reporting issues to Bugzilla, directly from a TestRun,
+Kiwi TCMS displayed the error &lt;tt class="docutils literal"&gt;Enable reporting to this Issue Tracker by
+configuring its base_url&lt;/tt&gt; although that has already been configured.
+This is now fixed. See
+&lt;a class="reference external" href="https://stackoverflow.com/questions/53434949/"&gt;Stack Overflow #53434949&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;TestPlan.owner&lt;/tt&gt; field, duplicates &lt;tt class="docutils literal"&gt;TestPlan.author&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;fmt_queries()&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/330"&gt;Issue #330&lt;/a&gt; (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Remove unused parameter from &lt;tt class="docutils literal"&gt;plan_from_request_or_none()&lt;/tt&gt;. Refers to
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/303"&gt;Issue #303&lt;/a&gt; (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;ComponentActions()&lt;/tt&gt; class. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/20"&gt;Issue #20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Convert lots of AJAX calls to JSON-RPC&lt;/li&gt;
+&lt;li&gt;Remove lots of unused Python, JavaScript and templates. Both after migration
+to JSON RPC and other leftovers&lt;/li&gt;
+&lt;li&gt;Pylint fixes (Alexander Todorov, Anton Sankov)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Kiwi TCMS 6.2.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/" rel="alternate"></link><published>2018-11-12T14:45:00+02:00</published><updated>2018-11-12T14:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-12:/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
 that includes some improvements and bug-fixes. You can explore everything at
 &lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
