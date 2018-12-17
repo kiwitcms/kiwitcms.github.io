@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-12-04T09:15:00+02:00</updated><entry><title>Kiwi TCMS 6.3</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/" rel="alternate"></link><published>2018-12-04T09:15:00+02:00</published><updated>2018-12-04T09:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-12-04:/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-12-17T15:50:00+02:00</updated><entry><title>Roadmap status report for 2018</title><link href="http://kiwitcms.org/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="alternate"></link><published>2018-12-17T15:50:00+02:00</published><updated>2018-12-17T15:50:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-12-17:/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals in our 2018
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;
+(&lt;a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;mid-year update here&lt;/a&gt;).
+TLDR; goals are completed at 62%. Refactoring legacy code is showing good results,
+less so on the front-end side and there are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals in our 2018
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;
+(&lt;a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;mid-year update here&lt;/a&gt;).
+TLDR; goals are completed at 62%. Refactoring legacy code is showing good results,
+less so on the front-end side and there are items still in progress!&lt;/p&gt;
+&lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: good progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Initially &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; reported
+a "D" rating with 600+ code smells and 600+ duplications and a 1 year estimation
+to resolve these. We're now down to "C" rating with 171 smells and 203 duplications.&lt;/p&gt;
+&lt;p&gt;The level of technical debt has dropped from 32.5% down to 17.7% and we have removed
+around 14000 lines of Python code and 8000 lines of JavaScript code without
+losing significant functionality.&lt;/p&gt;
+&lt;p&gt;Checkout
+&lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt"&gt;the stats&lt;/a&gt;
+for more info!&lt;/p&gt;
+&lt;h2&gt;Use pylint and pylint-django&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: almost finished&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Both pylint and pylint-django have been integrated into our CI workflow. There are even
+some custom built plugins that we use. The number of issues reported is down to 100
+from 4000+ initially. These are predominantly &lt;code&gt;fixme&lt;/code&gt; comments which are also in parts
+of the code that are scheduled for removal and refactoring.&lt;/p&gt;
+&lt;h2&gt;Render HTML, return JSON&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Several views were modified to return pure JSON but we've not
+done any targeted work to resolve this issue. A number of other views have been
+removed in favor of using the existing JSON-RPC layer.&lt;/p&gt;
+&lt;p&gt;This is an internal refactoring effort which isn't very visible from the outside.
+This is also one of the factors contributing to the high number of removed
+source code.&lt;/p&gt;
+&lt;h2&gt;Submit forms, post JSON, GET clean URLs&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: no progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Not much has been done in this area except the occasional refactoring to
+JSON-RPC.&lt;/p&gt;
+&lt;h2&gt;API layer&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: complete&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress, dropped&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;All RPC methods have been documented! The rest of the internals will be documented
+as we go along.&lt;/p&gt;
+&lt;h2&gt;No vendored JavaScript libraries&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: good progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We still carry around jQuery, jQuery-UI and Handlebars.js. They will be
+removed once the pages using them are converted to use the Patternfly widgets
+library.&lt;/p&gt;
+&lt;h2&gt;Less HTML templates with better organization&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There are still over 50 HTML templates in &lt;code&gt;tcms/templates/&lt;/code&gt; that need to be
+refactored into Patternfly. We've been working on them one at a time and will
+focus more on this effort in the next couple of months.&lt;/p&gt;
+&lt;h2&gt;Modern interface with Patternfly&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Some of the pages have been converted to use Patternfly. The most important pages
+that still have a different look and feel are TestPlan view, TestCase view and
+TestRun view. These are also the hardest to convert because they have lots of
+tabs/components which pull information from various places. Our goal is to create
+reusable widgets for the various components (e.g. a list of TestCases) and then
+include these components into several different templates to minimize code
+duplication.&lt;/p&gt;
+&lt;h2&gt;JavaScript updates and front-end testing&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A number of JavaScript functions have been refactored and removed during the
+past few releases but there are still thousands of lines of code left to deal with.
+This effort is mostly happening in parallel with the Patternfly redesign.
+We still don't have anything to test front-end JavaScript functionality!&lt;/p&gt;
+&lt;h2&gt;Community efforts&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: good progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We are seeing a steady stream of new users registered on
+&lt;a href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt; and
+there are several active contributors on GitHub. Most of our translators are
+very active and keep their respective languages fresh and up to date!&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg, PyCon Prague,
+HackConf Sofia, PiterPy St. Petersburg and OpenFest Sofia. We've also been
+approved for a project stand at FOSDEM 2019 so watch this blog for more news.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS 6.3</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/" rel="alternate"></link><published>2018-12-04T09:15:00+02:00</published><updated>2018-12-04T09:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-12-04:/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
 security update that includes new versions of Django and Patternfly,
 new database migrations, lots of improvements, bug fixes and internal
 refactoring. This version also introduces integration with GitLab issue

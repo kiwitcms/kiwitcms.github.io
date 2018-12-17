@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Roadmap status report for 2018</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="62% complete, good progress on refactoring" >
+
+        <meta name="author" content="Alexander Todorov">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Roadmap status report for 2018">
+            <meta name="twitter:description" content="62% complete, good progress on refactoring">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:card" content="summary_large_image">
+                <meta property="twitter:image" content="http://kiwitcms.org/images/roadmap.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/atodorov/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" />
+        <meta property="og:title" content="Roadmap status report for 2018" />
+        <meta property="article:published_time" content="2018-12-17 15:50:00+02:00">
+            <meta property="og:description" content="62% complete, good progress on refactoring">
+
+                <meta property="og:image" content="http://kiwitcms.org/images/roadmap.jpg">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org/login/github/">GitHub Login</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="http://kiwitcms.org/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li><a href="http://kiwitcms.org/team/">Team</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Roadmap status report for 2018</h1>
+        <h2 class="top-subheader">62% complete, good progress on refactoring</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
+            on Mon 17 December 2018
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals in our 2018
+<a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>
+(<a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">mid-year update here</a>).
+TLDR; goals are completed at 62%. Refactoring legacy code is showing good results,
+less so on the front-end side and there are items still in progress!</p>
+<h2>Make code easier to maintain</h2>
+<p><em>Status: good progress</em></p>
+<p>Initially <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> reported
+a "D" rating with 600+ code smells and 600+ duplications and a 1 year estimation
+to resolve these. We're now down to "C" rating with 171 smells and 203 duplications.</p>
+<p>The level of technical debt has dropped from 32.5% down to 17.7% and we have removed
+around 14000 lines of Python code and 8000 lines of JavaScript code without
+losing significant functionality.</p>
+<p>Checkout
+<a href="https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt">the stats</a>
+for more info!</p>
+<h2>Use pylint and pylint-django</h2>
+<p><em>Status: almost finished</em></p>
+<p>Both pylint and pylint-django have been integrated into our CI workflow. There are even
+some custom built plugins that we use. The number of issues reported is down to 100
+from 4000+ initially. These are predominantly <code>fixme</code> comments which are also in parts
+of the code that are scheduled for removal and refactoring.</p>
+<h2>Render HTML, return JSON</h2>
+<p><em>Status: moderate progress</em></p>
+<p>Several views were modified to return pure JSON but we've not
+done any targeted work to resolve this issue. A number of other views have been
+removed in favor of using the existing JSON-RPC layer.</p>
+<p>This is an internal refactoring effort which isn't very visible from the outside.
+This is also one of the factors contributing to the high number of removed
+source code.</p>
+<h2>Submit forms, post JSON, GET clean URLs</h2>
+<p><em>Status: no progress</em></p>
+<p>Not much has been done in this area except the occasional refactoring to
+JSON-RPC.</p>
+<h2>API layer</h2>
+<p><em>Status: complete</em></p>
+<h2>Documentation</h2>
+<p><em>Status: moderate progress, dropped</em></p>
+<p>All RPC methods have been documented! The rest of the internals will be documented
+as we go along.</p>
+<h2>No vendored JavaScript libraries</h2>
+<p><em>Status: good progress</em></p>
+<p>We still carry around jQuery, jQuery-UI and Handlebars.js. They will be
+removed once the pages using them are converted to use the Patternfly widgets
+library.</p>
+<h2>Less HTML templates with better organization</h2>
+<p><em>Status: moderate progress</em></p>
+<p>There are still over 50 HTML templates in <code>tcms/templates/</code> that need to be
+refactored into Patternfly. We've been working on them one at a time and will
+focus more on this effort in the next couple of months.</p>
+<h2>Modern interface with Patternfly</h2>
+<p><em>Status: moderate progress</em></p>
+<p>Some of the pages have been converted to use Patternfly. The most important pages
+that still have a different look and feel are TestPlan view, TestCase view and
+TestRun view. These are also the hardest to convert because they have lots of
+tabs/components which pull information from various places. Our goal is to create
+reusable widgets for the various components (e.g. a list of TestCases) and then
+include these components into several different templates to minimize code
+duplication.</p>
+<h2>JavaScript updates and front-end testing</h2>
+<p><em>Status: moderate progress</em></p>
+<p>A number of JavaScript functions have been refactored and removed during the
+past few releases but there are still thousands of lines of code left to deal with.
+This effort is mostly happening in parallel with the Patternfly redesign.
+We still don't have anything to test front-end JavaScript functionality!</p>
+<h2>Community efforts</h2>
+<p><em>Status: good progress</em></p>
+<p>We are seeing a steady stream of new users registered on
+<a href="https://demo.kiwitcms.org/login/github/">https://demo.kiwitcms.org</a> and
+there are several active contributors on GitHub. Most of our translators are
+very active and keep their respective languages fresh and up to date!</p>
+<p>Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg, PyCon Prague,
+HackConf Sofia, PiterPy St. Petersburg and OpenFest Sofia. We've also been
+approved for a project stand at FOSDEM 2019 so watch this blog for more news.</p>
+<p>Happy testing!</p>
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50fb0d604eb24fd0"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/';
+                this.page.identifier = 'blog/atodorov/2018/12/17/roadmap-status-report-for-2018/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is a project sponsored by <a href="http://mrsenko.com/">Mr. Senko.</a></p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
