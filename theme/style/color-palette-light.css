@@ -19,6 +19,10 @@ nav.primary a:hover, #pagination a:hover, #mc_embed_signup .button:hover {
     color: #f6f6f6;
 }
 
+.olive-green-bottom {
+    border-bottom: dashed 0.1rem #1c3d32;
+}
+
 nav.primary a.active, #pagination a.active {
     background-color: #1c3d32;
     color: #e3edea;
