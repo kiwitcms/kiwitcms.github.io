@@ -9,7 +9,10 @@ Kiwi TCMS source code is developed by a
 [core team]({filename}team.html) and
 [individual contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors).
 
-The project infrastructure is sponsored and maintained by:
+Community donations are collected via
+[Open Source Collective](https://opencollective.com/kiwitcms).
+
+Project infrastructure is sponsored and maintained by:
 
 * Company name: Open Technologies Bulgaria, Ltd;
   doing business as [Mr. Senko](http://mrsenko.com/legal/)
