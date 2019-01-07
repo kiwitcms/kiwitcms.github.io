@@ -1,0 +1,302 @@
+Title: Project mission and goals for 2019
+date: 2019-01-10 10:35
+comments: true
+og_image: images/roadmap.jpg
+twitter_image: images/roadmap.jpg
+author: Alexander Todorov
+
+Hello testers, Kiwi TCMS has taken on a brave new
+mission! We would like to transform the testing process by making it more
+organized, transparent &amp; accountable for everyone on your team. Our goal
+is to improve engineering productivity and participation in
+testing. The following blog post outlines how we would like to achieve
+this and what goals we put before ourselves for this year.
+
+
+Complete the internal refactoring
+---------------------------------
+
+Last year we took on the challenge to bring a legacy code base up to modern
+coding standard. We did not complete that effort but made very good progress
+along the way. This is not a small task and that's why our team will continue
+with it this year.
+
+
+<img src="/images/codeclimate_jan_2019.png" style="float:none"
+     alt="CodeClimate report" title="CodeClimate report">
+
+* [CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi):
+  0 issues, 0% technical debt, health score A
+* [Scrutinizer](https://scrutinizer-ci.com/g/kiwitcms/Kiwi/):
+  only A and B type issues
+* [Pylint](https://travis-ci.org/kiwitcms/Kiwi/jobs/475946313): 0 issues
+* Remove vendored-in Handlebars, jQuery, jQuery-UI and TableDnD JavaScript
+  libraries in favor of existing npm dependencies
+* Front-end uses the existing JSON-RPC instead of backend views that
+  are only used for AJAX requests. Tip: these are usually accessed via
+  `postToURL()` and `jQ.ajax()` on the front-end
+* Inspect and classify all 3rd party issues reported from
+  [Coverity](https://scan.coverity.com/projects/kiwitcms-kiwi) and
+  [Bandit](https://travis-ci.org/kiwitcms/Kiwi/jobs/475946312). Report and fix
+  what we can, ignore the rest that do not affect Kiwi TCMS.
+
+Redesign the UI templates with the help of Patternfly
+-----------------------------------------------------
+
+There are 59 templates remaining to be converted to a modern look and feel.
+Along with them comes more refactoring and even redesign of the existing pages
+and the workflow around them. Together with refactoring this will make Kiwi TCMS
+easier to use and also to maintain.
+
+
+Modernize reporting
+-------------------
+
+We are planning to remove the existing reports feature because they are not well
+designed. We will re-implement existing functionality that our community finds useful,
+add new types of reports (incl. nicer graphics and UI) and make it possible for the
+reporting sub-system to be more easily extendable.
+
+Phase out is planned to begin after 1st March 2019! Until then we are looking for your
+feedback. Please comment in
+[Issue #657](https://github.com/kiwitcms/Kiwi/issues/657)!
+
+
+Plugins for 3rd party test automation frameworks
+------------------------------------------------
+
+These will make it easier to collect results from automated test suites into
+Kiwi TCMS for later analysis. Instead of creating scripts that parse the
+results and talk to our API you will only have to install an additional package
+in your test environment and configure the test runner to use it! Automation
+test results will then appear inside Kiwi TCMS.
+
+- [JUnit 5 plugin](https://github.com/kiwitcms/junit-plugin) - already in progress
+- [TestNG plugin](https://github.com/kiwitcms/Kiwi/issues/692) - RFC
+- [Django plugin](https://github.com/kiwitcms/Kiwi/issues/693) - RFC
+- [py.test plugin](https://github.com/kiwitcms/Kiwi/issues/694) - RFC
+
+
+If you would like to use such functionality leave your vote inside GitHub
+issues! In case you would like to write a test-runner plugin you can find the
+specification
+[here](http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/).
+
+
+Redefine bug-tracker integration
+--------------------------------
+
+> Question: Does Kiwi TCMS integrate with JIRA?
+>
+> Answer: Well, it does. How exactly do you want to integrate?
+>
+> ... silence ...
+
+The following dialog happens every time someone asks me about bug-tracker
+integration, especially with JIRA. The thing is integration is a specified
+set of behavior which may or may not be desired in a particular team. As of now
+Kiwi TCMS is able to open a URL to your bug-tracker with predefined field
+values, add comments to bug reports and report a simple summary of bugs
+inside a TestRun.
+
+We recognize this may not be enough and together with the community we
+really need to define what bug tracker integration means! The broader domain
+of application lifecycle management tools (of which TCMS is a sub-set) have an
+integrated bug tracking system. We can add something like this and save you
+the trouble of using JIRA, however many teams have already invested in
+integrating their infrastructure or just like other tools. For example we love
+GitHub issues and our team regularly makes public reports about issues that
+we find internally!
+
+
+* Goal: Redefine what bug-tracker integration means, vote in
+  [Issue #698](https://github.com/kiwitcms/Kiwi/issues/698)
+* Goal: Bug-tracker functionality inside Kiwi TCMS, similar to
+  GitHub Issues. Vote in
+  [Issue #699](https://github.com/kiwitcms/Kiwi/issues/699)
+* Goal: Integration with Redmine (per current specification), vote in
+  [Issue #41](https://github.com/kiwitcms/Kiwi/issues/41)
+* Goal: fix existing bugs around bug-tracker integration
+  (per current specification). Vote in
+  [Issue #97](https://github.com/kiwitcms/Kiwi/issues/97),
+  [Issue #117](https://github.com/kiwitcms/Kiwi/issues/117),
+  [Issue #289](https://github.com/kiwitcms/Kiwi/issues/289),
+  [Issue #290](https://github.com/kiwitcms/Kiwi/issues/290),
+  [Issue #320](https://github.com/kiwitcms/Kiwi/issues/320),
+  [Issue #479](https://github.com/kiwitcms/Kiwi/issues/479) and
+  [Issue #530](https://github.com/kiwitcms/Kiwi/issues/530)
+
+
+GitHub flow integration
+-----------------------
+
+Developers have their
+[GitHub PR flow](https://guides.github.com/introduction/flow/) and if they
+have done the job of having unit tests then they will merge only when things
+are green! This leaves additional testing efforts kind of to the side and
+doesn't really help with transparency and visibility. I'm not going to mention
+having an automatically deployed staging environment for every change
+because very few teams actually have managed to do this effectively.
+
+<img src="/images/github_kiwitcms_pr_status.png" style="float:none"
+     alt="Kiwi TCMS statuses on GitHub PR" title="Kiwi TCMS statuses on GitHub PR">
+
+* Goal: Figure out how Kiwi TCMS can integrate with GitHub flow and bridge the gap.
+  Please share and `+1` your wildest ideas in
+  [Issue #700](https://github.com/kiwitcms/Kiwi/issues/700).
+* Follow up: depending on the results in #700 we will follow with other goals and
+  sub-tasks
+
+
+Agile integration with Trello
+-----------------------------
+
+Speaking of modern engineering flow is your team truly agile? When and how
+do you plan your testing activities ? Before the devel sprint or afterwards?
+How many testers take part in refining product backlog and working on user stories?
+
+Similar to GitHub flow lots of teams and open source projects are using Trello
+to effectively organize their development process. Testing should not be left
+behind and Kiwi TCMS may be able to help.
+
+
+* Goal: Figure out how Kiwi TCMS fits into the overall `devel-test-planning`
+  process for agile teams and what we can do to make this easier for testers.
+  Please share and `+1` your wildest ideas in
+  [Issue #701](https://github.com/kiwitcms/Kiwi/issues/701)
+* Follow up: depending on the results in #701 we will follow with other goals and
+  sub-tasks
+
+
+
+Improve engineering productivity
+--------------------------------
+
+What makes a test engineer productive when they need to assess product risk and
+new features, when mapping product requirements documents (PRD) to test plans and
+test cases, when collaborating on user stories and behavior specification ?
+What makes developers, product owners, designers and other professionals productive
+when it comes to dealing with testing ?
+
+
+For example consider the following workflow:
+
+* Company has idea for a new product
+* In case this is a big product it may have its own mission, i.e. what kind
+  of problem is it trying to solve and for which group of customers
+* Product backlog is then created which outlines features that map
+  to the product mission
+* Then the team, together with test engineers perform example mapping
+  and discuss and refine the initial feature requirements. User stories
+  are created
+* Behavior specification may also be created
+* Test plans and test cases are the immediate product of BDD specs and
+  desired user stories
+
+Later we iterate through the sprints and for each sprint something like
+this happens:
+
+* Desired product features are planned for development. They must be *complete*
+  at least in terms of requirements, specs and tests
+* Devel writes code, maybe some unit tests, testers can also write automated tests
+  and/or manually verify the current state of the feature being developed
+* Testing, including exploratory is performed before feature is merged
+* Rinse and repeat
+
+
+Devel is also part of testing, right? Product owners, UX and interaction
+designers as well. Producing quality software product is a team effort!
+
+
+In every step of the way Kiwi TCMS can provide notification wizards, guidelines
+and/or documentation for best practices, facilitate tooling, e.g. to write user stories
+and assess them or map out an exploratory testing session, etc. The list
+of ideas is virtually endless. We can even go into deep learning, AI and
+blockchain but honestly who knows how to use them in testing ?
+
+Our team is not quite sure how this goal will look like 3 months from now
+but we are certain that testing needs to happen first, last and all the time
+during the entire software development lifecycle. By providing the necessary
+functionality and tools in Kiwi TCMS we can boost engineering productivity
+and steer the testing process in your organization into a better, more productive
+direction which welcomes participation from all engineering groups.
+
+Let's consider another point of view: testing is a creative activity
+which is benefited by putting your brain into a specific state of mind!
+For example Gherkin (the Given-When-Then language) has the benefit of
+forcing you to think about behavior and while doing so you are vocalizing
+the various roles in the system, what kind of actions are accepted and
+what sort of result is expected! Many times this will help you remember or
+discover missing scenarios, edge cases and raise even more questions!
+
+
+Crazy ideas, brain dumps and `+1` as always are welcome in
+[Issue #703](https://github.com/kiwitcms/Kiwi/issues/703).
+
+
+Community
+---------
+
+Coding alone is not fun! Here's what you can do to help us:
+
+* [Become a stargazer](https://github.com/kiwitcms/Kiwi/stargazers) by clicking the
+  `Star` button on our GitHub repository
+* [Follow @KiwiTCMS on Twitter](https://twitter.com/KiwiTCMS)
+* [Subscribe to our newsletter](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581) -
+  we are GDPR compliant and we don't spam, we promise!
+* Vote with a `+1` reaction on GitHub issues (top-right corner)
+* Send us testimonials and feedback about using Kiwi TCMS.
+  We will be happy to publish them on our website
+* Send us a pull request on GitHub
+* [Become a sponsor](https://opencollective.com/kiwitcms)!
+
+
+We are also looking to expand our core team and the list of occasional
+contributors. The following are mostly organizational goals:
+
+* Goal: participate in 5 conferences with a project stand
+* Goal: define how we find, recruit and onboard new team members. The
+  foundation is already set in
+  [TP-3](https://tcms.kiwitcms.org/plan/3/kiwi-tcms-team-onboarding#testcases)
+* Goal: clearly mark GitHub issues which are suitable for external contributors
+  which don’t want to spend lots of time learning how Kiwi TCMS works under the hood.
+  We're going to tag all such issues with the
+  <a href="https://github.com/kiwitcms/Kiwi/labels/help%20wanted">
+    <img src="/images/github_helpwanted.png" style="float: none; margin:0"
+         alt="GitHub help wanted" title="GitHub help wanted">
+  </a> label
+
+
+Development policy
+------------------
+
+Our team will be working on areas related to the goals above. A `+1`
+reaction on GitHub issues will help us prioritize what we work on!
+
+<img src="/images/github_plus_one.png" style="float:none"
+     alt="GitHub +1" title="GitHub +1">
+
+Bug fixes and other
+issues will be occasionally slipped into the stream and pull requests from
+non-team contributors will be reviewed and merged in a timely fashion.
+
+There is at least 1 full day of work that goes behind the scenes when
+a new version is officially released: compile changelog, build images and
+upload them, create blog post and newsletter announcement, share on social
+media, etc. We also deploy on our own Kiwi TCMS instance as a stop-gap
+measure before making everything public!
+
+New PyPI tarballs and Docker images will be released every few weeks as
+we see fit, this has been our standard process. We try to align releases
+with Django's release schedule and try to cut a new version when there are known
+security vulnerabilities fixed. However we can't guarantee this will always
+be the case!
+
+If you are in a hurry and need something quickly the best option is to
+send a pull request, build your own Docker image from source and
+maybe consider
+[sponsoring us via Open Collective](https://opencollective.com/kiwitcms)!
+
+
+
+Happy testing!
