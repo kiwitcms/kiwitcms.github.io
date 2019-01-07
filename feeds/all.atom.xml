@@ -1,5 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2018-12-17T15:50:00+02:00</updated><entry><title>Roadmap status report for 2018</title><link href="http://kiwitcms.org/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="alternate"></link><published>2018-12-17T15:50:00+02:00</published><updated>2018-12-17T15:50:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-12-17:/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-01-07T15:25:00+02:00</updated><entry><title>Kiwi TCMS 6.4</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/" rel="alternate"></link><published>2019-01-07T15:25:00+02:00</published><updated>2019-01-07T15:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-01-07:/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.4! This is a security,
+improvement and bug-fix update that includes new versions of Django,
+Patternfly and other dependencies. You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.4! This is a security,
+improvement and bug-fix update that includes new versions of Django,
+Patternfly and other dependencies. You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  39fcb88182bb    963.4 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-3"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.3&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 2.1.4 to 2.1.5, which deals with CVE-2019-3498:
+Content spoofing possibility in the default 404 page&lt;/li&gt;
+&lt;li&gt;Update Patternfly to version 3.59.0, which deals with XSS issue in bootstrap.
+See CVE-2018-14041&lt;/li&gt;
+&lt;li&gt;By default session cookies will expire after 24 hours. This can be controlled
+via the &lt;tt class="docutils literal"&gt;SESSION_COOKIE_AGE&lt;/tt&gt; setting. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/556"&gt;Issue #556&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update mysqlclient from 1.3.13 to 1.3.14&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 1.6.0 to 1.7.0&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 2.5.1 to 2.6.0&lt;/li&gt;
+&lt;li&gt;Update pygithub from 1.43.3 to 1.43.4&lt;/li&gt;
+&lt;li&gt;New API method &lt;tt class="docutils literal"&gt;TestCase.remove()&lt;/tt&gt;. Initially requested as
+&lt;a class="reference external" href="https://stackoverflow.com/questions/53844380/"&gt;SO #53844380&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Drop down select widges in Patternfly pages are now styled with
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bootstrap-select&lt;/span&gt;&lt;/tt&gt; giving them more consistent look and feel with
+the rest of the page (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Create new TestPlan page now includes toggles to control notifications
+and whether or not the test plan is active. This was previously available
+only in edit page (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;By default TestPlan notification toggles are turned on. Previously they
+were off (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Create and Edit TestPlan pages now look the same (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Kiwi TCMS is now accepting donations via
+&lt;a class="reference external" href="https://opencollective.com/kiwitcms"&gt;Open Collective&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="removed-functionality"&gt;
+&lt;h3&gt;Removed functionality&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;TestPlan page &lt;span class="pre"&gt;-&amp;gt;&lt;/span&gt; Run menu &lt;span class="pre"&gt;-&amp;gt;&lt;/span&gt; Add cases to run&lt;/tt&gt; action.
+This is the same as &lt;tt class="docutils literal"&gt;TestRun page &lt;span class="pre"&gt;-&amp;gt;&lt;/span&gt; Cases menu &lt;span class="pre"&gt;-&amp;gt;&lt;/span&gt; Add&lt;/tt&gt; action&lt;/li&gt;
+&lt;li&gt;Legacy reports will be removed after 1st March 2019. Provide your
+feedback in
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/657"&gt;Issue #657&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;/run/&lt;/tt&gt; URL path has been merged with &lt;tt class="docutils literal"&gt;/runs/&lt;/tt&gt; due to configuration
+refactoring. This may break your bookmarks or permalinks!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Don't traceback if markdown text is &lt;tt class="docutils literal"&gt;None&lt;/tt&gt;. Originally reported as
+&lt;a class="reference external" href="https://stackoverflow.com/questions/53662887/"&gt;SO #53662887&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show loading spinner when searching. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/653"&gt;Issue #653&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quick fix: when viewing TestPlan cases make TC summary link to the test case.
+Previously the summary column was a link to nowhere.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pylint fixes&lt;/li&gt;
+&lt;li&gt;New and updated internal linters&lt;/li&gt;
+&lt;li&gt;Refactor &lt;tt class="docutils literal"&gt;testplans.views.new&lt;/tt&gt; to class based view (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Refactor &lt;tt class="docutils literal"&gt;TestCase &lt;span class="pre"&gt;-&amp;gt;&lt;/span&gt; Bugs tab &lt;span class="pre"&gt;-&amp;gt;&lt;/span&gt; Remove&lt;/tt&gt; to JSON-RPC. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/18"&gt;Issue #18&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refactor &lt;tt class="docutils literal"&gt;removeCaseRunBug()&lt;/tt&gt; to JSON-RPC, References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/18"&gt;Issue #18&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;render_form()&lt;/tt&gt; methods&lt;/li&gt;
+&lt;li&gt;Remove unnecessary string-to-int conversion (Ivaylo Ivanov)&lt;/li&gt;
+&lt;li&gt;Remove obsolete label fields. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652"&gt;Issue #652&lt;/a&gt; (Anton Sankov)&lt;/li&gt;
+&lt;li&gt;Remove JavaScript that duplicates &lt;tt class="docutils literal"&gt;requestOperationUponFilteredCases()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;QuerySetIterationProxy&lt;/tt&gt; class - not used anymore&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Roadmap status report for 2018</title><link href="http://kiwitcms.org/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="alternate"></link><published>2018-12-17T15:50:00+02:00</published><updated>2018-12-17T15:50:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-12-17:/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals in our 2018
 &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;
 (&lt;a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;mid-year update here&lt;/a&gt;).

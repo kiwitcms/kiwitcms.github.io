@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS 6.4</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="security updates, improvements and bug fixes" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS 6.4">
+            <meta name="twitter:description" content="security updates, improvements and bug fixes">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="http://kiwitcms.org/theme/images/twitter_card.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/" />
+        <meta property="og:title" content="Kiwi TCMS 6.4" />
+        <meta property="article:published_time" content="2019-01-07 15:25:00+02:00">
+            <meta property="og:description" content="security updates, improvements and bug fixes">
+
+            <meta property="og:image" content="http://kiwitcms.org/theme/images/og_image.jpg">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="http://kiwitcms.org/theme/fontawesome-free-5.6.3-web/css/all.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org/login/github/">GitHub Login</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="http://kiwitcms.org/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li><a href="http://kiwitcms.org/team/">Team</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Kiwi TCMS 6.4</h1>
+        <h2 class="top-subheader">security updates, improvements and bug fixes</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Mon 07 January 2019
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>We're happy to announce Kiwi TCMS version 6.4! This is a security,
+improvement and bug-fix update that includes new versions of Django,
+Patternfly and other dependencies. You can explore everything at
+<a class="reference external" href="https://demo.kiwitcms.org/login/github/">https://demo.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  39fcb88182bb    963.4 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-3">
+<h2>Changes since Kiwi TCMS 6.3</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 2.1.4 to 2.1.5, which deals with CVE-2019-3498:
+Content spoofing possibility in the default 404 page</li>
+<li>Update Patternfly to version 3.59.0, which deals with XSS issue in bootstrap.
+See CVE-2018-14041</li>
+<li>By default session cookies will expire after 24 hours. This can be controlled
+via the <tt class="docutils literal">SESSION_COOKIE_AGE</tt> setting. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/556">Issue #556</a></li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update mysqlclient from 1.3.13 to 1.3.14</li>
+<li>Update python-gitlab from 1.6.0 to 1.7.0</li>
+<li>Update django-simple-history from 2.5.1 to 2.6.0</li>
+<li>Update pygithub from 1.43.3 to 1.43.4</li>
+<li>New API method <tt class="docutils literal">TestCase.remove()</tt>. Initially requested as
+<a class="reference external" href="https://stackoverflow.com/questions/53844380/">SO #53844380</a></li>
+<li>Drop down select widges in Patternfly pages are now styled with
+<tt class="docutils literal"><span class="pre">bootstrap-select</span></tt> giving them more consistent look and feel with
+the rest of the page (Anton Sankov)</li>
+<li>Create new TestPlan page now includes toggles to control notifications
+and whether or not the test plan is active. This was previously available
+only in edit page (Anton Sankov)</li>
+<li>By default TestPlan notification toggles are turned on. Previously they
+were off (Anton Sankov)</li>
+<li>Create and Edit TestPlan pages now look the same (Anton Sankov)</li>
+<li>Kiwi TCMS is now accepting donations via
+<a class="reference external" href="https://opencollective.com/kiwitcms">Open Collective</a></li>
+</ul>
+</div>
+<div class="section" id="removed-functionality">
+<h3>Removed functionality</h3>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">TestPlan page <span class="pre">-&gt;</span> Run menu <span class="pre">-&gt;</span> Add cases to run</tt> action.
+This is the same as <tt class="docutils literal">TestRun page <span class="pre">-&gt;</span> Cases menu <span class="pre">-&gt;</span> Add</tt> action</li>
+<li>Legacy reports will be removed after 1st March 2019. Provide your
+feedback in
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a></li>
+<li>The <tt class="docutils literal">/run/</tt> URL path has been merged with <tt class="docutils literal">/runs/</tt> due to configuration
+refactoring. This may break your bookmarks or permalinks!</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Don't traceback if markdown text is <tt class="docutils literal">None</tt>. Originally reported as
+<a class="reference external" href="https://stackoverflow.com/questions/53662887/">SO #53662887</a></li>
+<li>Show loading spinner when searching. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/653">Issue #653</a></li>
+<li>Quick fix: when viewing TestPlan cases make TC summary link to the test case.
+Previously the summary column was a link to nowhere.</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Pylint fixes</li>
+<li>New and updated internal linters</li>
+<li>Refactor <tt class="docutils literal">testplans.views.new</tt> to class based view (Anton Sankov)</li>
+<li>Refactor <tt class="docutils literal">TestCase <span class="pre">-&gt;</span> Bugs tab <span class="pre">-&gt;</span> Remove</tt> to JSON-RPC. References
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/18">Issue #18</a></li>
+<li>Refactor <tt class="docutils literal">removeCaseRunBug()</tt> to JSON-RPC, References
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/18">Issue #18</a></li>
+<li>Remove unused <tt class="docutils literal">render_form()</tt> methods</li>
+<li>Remove unnecessary string-to-int conversion (Ivaylo Ivanov)</li>
+<li>Remove obsolete label fields. References
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652">Issue #652</a> (Anton Sankov)</li>
+<li>Remove JavaScript that duplicates <tt class="docutils literal">requestOperationUponFilteredCases()</tt></li>
+<li>Remove <tt class="docutils literal">QuerySetIterationProxy</tt> class - not used anymore</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50fb0d604eb24fd0"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is sponsored by <a href="https://opencollective.com/kiwitcms">Open Source Collective</a> and
+                   <a href="http://mrsenko.com/">Mr. Senko.</a>
+                </p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
