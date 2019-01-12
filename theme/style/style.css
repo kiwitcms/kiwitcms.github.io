@@ -296,8 +296,14 @@ pre code {
 }
 
 .action-btn-small {
-    text-align: center;
     padding: 1rem;
+    display: inline-block;
+    width: 22%;
+}
+
+.action-btn-small-container {
+    width: inherit;
+    text-align: center;
 }
 
 /* About Section */
@@ -670,14 +676,10 @@ pre code {
         font-size: 2.25rem;
         line-height: 2.5rem;
     }
-    .col-3 .fa-5x {
-        font-size: 15rem;
-    }
-    .col-3 h3 {
-        font-size: 3.5rem;
-        line-height: 4rem;
-    }
 
+    .about .action-btn-small-container {
+        width: inherit;
+    }
 
     /* Screenshots section */
     .screenshots .col-2, .img-index {
@@ -765,6 +767,11 @@ pre code {
 
     .about-panel-details {
         padding-right: 1.8rem;
+    }
+
+    /*about section*/
+    .action-btn-small {
+        display: initial;
     }
 
     /* screenshot section and features page */
