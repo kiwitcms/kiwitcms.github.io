@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-01-10T10:35:00+02:00</updated><entry><title>Project mission and goals for 2019</title><link href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="alternate"></link><published>2019-01-10T10:35:00+02:00</published><updated>2019-01-10T10:35:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-01-10:/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS has taken on a brave new
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-01-17T17:30:00+02:00</updated><entry><title>Kiwi TCMS is going to FOSDEM 2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/" rel="alternate"></link><published>2019-01-17T17:30:00+02:00</published><updated>2019-01-17T17:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-01-17:/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS is going to &lt;a href="http://fosdem.org/"&gt;FOSDEM&lt;/a&gt; this year.
+This is where you can find us:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/kiwi_sticker.jpg" style="float:left; margin-right: 25px;"
+     alt="Kiwi TCMS sticker" title="Kiwi TCMS sticker"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fri Feb 1st: &lt;a href="https://fosdem.org/2019/beerevent/"&gt;after 18:00 @ Delirium Café&lt;/a&gt; -
+  we are taking part of the FOSDEM Beer Event where all participants are invited.
+  &lt;code&gt;Shout out with #KiwiTCMS&lt;/code&gt; on Twitter if you can't find us …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Hello testers, Kiwi TCMS is going to &lt;a href="http://fosdem.org/"&gt;FOSDEM&lt;/a&gt; this year.
+This is where you can find us:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/kiwi_sticker.jpg" style="float:left; margin-right: 25px;"
+     alt="Kiwi TCMS sticker" title="Kiwi TCMS sticker"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fri Feb 1st: &lt;a href="https://fosdem.org/2019/beerevent/"&gt;after 18:00 @ Delirium Café&lt;/a&gt; -
+  we are taking part of the FOSDEM Beer Event where all participants are invited.
+  &lt;code&gt;Shout out with #KiwiTCMS&lt;/code&gt; on Twitter if you can't find us in the crowd&lt;/li&gt;
+&lt;li&gt;Both days: &lt;a href="https://fosdem.org/2019/stands/"&gt;Building K, Level 2, Stand 10&lt;/a&gt;.
+  We will be together with our friends from ReportPortal and SystemTestPortal at
+  the Open Source Test Management stand&lt;/li&gt;
+&lt;li&gt;Sat Feb 2nd:
+  &lt;a href="https://fosdem.org/2019/schedule/track/lightning_talks/"&gt;18:00 @ Room H.2215 (Lightning Talks)&lt;/a&gt; -
+  &lt;a href="https://fosdem.org/2019/schedule/event/test_case_management/"&gt;10 years of open source test case management &lt;em&gt;with Kiwi TCMS&lt;/em&gt;&lt;/a&gt;
+  lightning talk&lt;/li&gt;
+&lt;li&gt;Sun Feb 3rd:
+  &lt;a href="https://fosdem.org/2019/schedule/track/python/"&gt;10:00 @ UD2.120 (Python devroom)&lt;/a&gt; -
+  &lt;a href="https://fosdem.org/2019/schedule/event/python_write_pylint_plugins/"&gt;How to write pylint plugins&lt;/a&gt;
+  presentation with examples of plugins which our team uses to make Kiwi TCMS better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We would like to meet with all of you and talk about test management and
+test process organization. In case you are stuck for crazy ideas checkout
+&lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;our project mission&lt;/a&gt; for inspiration.&lt;/p&gt;
+&lt;h2&gt;Be part of the community&lt;/h2&gt;
+&lt;p&gt;We are turning 10 years old and we have presents for you! You will have to perform
+a small challenge and you can get your hands(errr, feet) on a pair of these:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/kiwi_socks.jpg" style="float:none"
+     alt="Kiwi TCMS socks" title="Kiwi TCMS socks"&gt;&lt;/p&gt;
+&lt;p&gt;Here's what else you can do to help us:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Become a stargazer&lt;/a&gt; by clicking the
+  &lt;code&gt;Star&lt;/code&gt; button on our GitHub repository&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/KiwiTCMS"&gt;Follow @KiwiTCMS on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Subscribe to our newsletter&lt;/a&gt; -
+  we are GDPR compliant and we don't spam, we promise!&lt;/li&gt;
+&lt;li&gt;Send us testimonials and feedback about using Kiwi TCMS.
+  We will be happy to publish them on our website&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms"&gt;Become a sponsor&lt;/a&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Project mission and goals for 2019</title><link href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="alternate"></link><published>2019-01-10T10:35:00+02:00</published><updated>2019-01-10T10:35:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-01-10:/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS has taken on a brave new
 mission! We would like to transform the testing process by making it more
 organized, transparent &amp;amp; accountable for everyone on your team. Our goal
 is to improve engineering productivity and participation in
