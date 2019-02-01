@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS 6.4</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="improvements and bug fixes, automation plugins" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS 6.4">
+            <meta name="twitter:description" content="improvements and bug fixes, automation plugins">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="http://kiwitcms.org/theme/images/twitter_card.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-64/" />
+        <meta property="og:title" content="Kiwi TCMS 6.4" />
+        <meta property="article:published_time" content="2019-02-01 09:35:00+02:00">
+            <meta property="og:description" content="improvements and bug fixes, automation plugins">
+
+            <meta property="og:image" content="http://kiwitcms.org/theme/images/og_image.jpg">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="http://kiwitcms.org/theme/fontawesome-free-5.6.3-web/css/all.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org/login/github/">GitHub Login</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="http://kiwitcms.org/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li><a href="http://kiwitcms.org/team/">Team</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Kiwi TCMS 6.4</h1>
+        <h2 class="top-subheader">improvements and bug fixes, automation plugins</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Fri 01 February 2019
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>We're happy to announce Kiwi TCMS version 6.5! This is a minor security,
+improvement and bug-fix update that includes new
+versions of Django and other dependencies, removes some database fields,
+includes backend API updates and fixes several bugs.
+You can explore everything at
+<a class="reference external" href="https://demo.kiwitcms.org/login/github/">https://demo.kiwitcms.org</a>!</p>
+<p>Together with this release we announce:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/tap-plugin">kiwitcms-tap-plugin</a> : for reading
+Test Anything Protocol (TAP) files and uploading the results to Kiwi TCMS</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin">kiwitcms-junit.xml-plugin</a> :
+for reading junit.xml formatted files and uploading the results to Kiwi TCMS</li>
+</ul>
+<p>Both of these are implemented in Python and should work on standard TAP and
+junit.xml files generated by various tools!</p>
+<p>Additionally 3 more plugins are currently under development by contributors:</p>
+<ul class="simple">
+<li>Native <a class="reference external" href="https://github.com/kiwitcms/junit-plugin/">JUnit 5 plugin</a> written
+in Java</li>
+<li>Native <a class="reference external" href="https://github.com/kiwitcms/phpunit-plugin/">PHPUnit</a> written
+in PHP</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/pytest-plugin/">py.test plugin</a></li>
+</ul>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  7ca4fda602fc    1.002 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-4">
+<h2>Changes since Kiwi TCMS 6.4</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Better override of SimpleMDE markdown rendering to prevent XSS vulnerabilities
+in SimpleMDE</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update patternfly to version 3.59.1</li>
+<li>Update bleach from 3.0.2 to 3.1.0</li>
+<li>Update django-vinaigrette from 1.1.1 to 1.2.0</li>
+<li>Update django-simple-history from 2.6.0 to 2.7.0</li>
+<li>Update django-grappelli from 2.12.1 to 2.12.2</li>
+<li>Update mysqlclient from 1.3.14 to 1.4.1</li>
+<li>Update psycopg2 from 2.7.6.1 to 2.7.7</li>
+<li>Update pygithub from 1.43.4 to 1.43.5</li>
+<li>Convert TestCase page to Patternfly<ul>
+<li>page menu is under <tt class="docutils literal">...</tt> in navigation bar</li>
+<li>Test plans card is missing the old 'add plan' functionality b/c we are not
+at all sure if adding plans to test cases is used at all. Can bring it back
+upon user request!</li>
+<li>Bugs card is missing the add/remove functionality for b/c we are not
+quite sure how that functionality is used outside test runs!</li>
+</ul>
+</li>
+<li>Convert new TestCase page to Patternfly and provide Given-When-Then text
+template. This prompts the author to use a BDD style definition for their
+scenarios. We believe this puts the tester into a frame of mind more
+suitable for expressing what needs to be tested</li>
+<li>Add a favicon. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/532">Issue #532</a></li>
+<li>Sort Component, Product and Version objects alphabetically. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/633">Issue #633</a></li>
+<li>Search test case page now shows Components and Tags</li>
+<li>Search test case page now allows filtering by date. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/715">Issue #715</a></li>
+<li>Search test case page now uses radio buttons to filter by automation status</li>
+<li>Small performance improvement when searching test plans and test cases</li>
+<li>Search test run page now allows to filter by Product but still continue to
+display all Builds in the selected Product</li>
+<li>Updated doc-string formatting for some <tt class="docutils literal">tcms</tt> modules</li>
+</ul>
+</div>
+<div class="section" id="database-migrations">
+<h3>Database migrations</h3>
+<p><strong>Known issues:</strong> on our demo installation we have observed that permission
+labels were skewed after applying migrations. The symptom is that labels for
+removed models are still available, labels for some models may have been removed
+from groups/users or there could be permission labels appearing twice in the
+database.</p>
+<p>This may affect only existing installations, new installations do not have
+this problem!</p>
+<p>We are not certain what caused this but a quick fix is to remove all permissions
+from the default <em>Tester</em> group and re-add them again!</p>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">TestCase.alias</tt></li>
+<li>Remove <tt class="docutils literal">TestCaseRun.running_date</tt></li>
+<li>Remove <tt class="docutils literal">TestCaseRun.notes</tt></li>
+<li>Remove <tt class="docutils literal">TestCase.is_automated_proposed</tt></li>
+<li>Remove <tt class="docutils literal">TestCaseText</tt> model, merge into <tt class="docutils literal">TestCase.text</tt> field. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/198">Issue #198</a></li>
+<li>Remove <tt class="docutils literal">Priority.sortkey</tt></li>
+<li>Remove <tt class="docutils literal">Build.description</tt></li>
+<li>Remove <tt class="docutils literal">Classification.sortkey</tt> and <tt class="docutils literal">Classification.description</tt></li>
+<li>Convert <tt class="docutils literal">TestCase.is_automated</tt> from <tt class="docutils literal">int</tt> to <tt class="docutils literal">bool</tt></li>
+<li>Rename <tt class="docutils literal">TestCaseRun.case_run_status</tt> to <tt class="docutils literal">status</tt></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>New method <tt class="docutils literal">TestCaseRunStatus.filter()</tt></li>
+<li>New method <tt class="docutils literal">Product.create()</tt></li>
+<li>New method <tt class="docutils literal">Classification.filter()</tt></li>
+<li>New method <tt class="docutils literal">BugSystem.filter()</tt></li>
+<li>Changes to <tt class="docutils literal">TestCase.add_component()</tt>:<ul>
+<li>now accepts component name instead of id</li>
+<li>now fails if trying to add components linked to another Product.</li>
+<li>now returns serialized <tt class="docutils literal">TestCase</tt> object</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix for missing migrations from <tt class="docutils literal"><span class="pre">django-simple-history</span></tt>, see
+<a class="reference external" href="https://github.com/treyhunner/django-simple-history/issues/512">DSH #512</a> and
+<a class="reference external" href="https://stackoverflow.com/questions/54177838/">StackOverflow #54177838</a></li>
+<li>Fix cloning of test cases by surrounding bootstrap-selectpicker call with
+<tt class="docutils literal"><span class="pre">try-catch</span></tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/695">Issue #695</a></li>
+<li>Fix a traceback with TestRun report page when the RPC connection to Bugzilla
+can't be established</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Remove unused form classes, methods, fields and label attributes</li>
+<li>Remove unused or duplicate methods from <tt class="docutils literal">TestCase</tt> model</li>
+<li>Remove useless methods from BaseCaseForm()</li>
+<li>Add test for discovering missing migrations</li>
+<li>Add test for sanity checking PyPI packages which will always
+build tarball and wheel packages</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tcms-api-5-2-30-jan-2019">
+<h2>tcms-api 5.2 (30 Jan 2019)</h2>
+<ul class="simple">
+<li>Add <tt class="docutils literal">plugin_helpers.Backend</tt> which implements our test runner plugin
+<a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/">specification</a>
+in Python</li>
+<li>Add dependency to <tt class="docutils literal">kerberos</tt> (Aniello Barletta)</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-64/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-64/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is sponsored by <a href="https://opencollective.com/kiwitcms">Open Source Collective</a> and
+                   <a href="http://mrsenko.com/">Mr. Senko.</a>
+                </p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
