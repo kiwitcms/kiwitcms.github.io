@@ -1,0 +1,128 @@
+Kiwi TCMS 6.5.3
+###############
+
+:headline: security, improvements and bug fixes
+:date: 2019-02-12 00:20
+:comments: true
+
+
+We're happy to announce Kiwi TCMS version 6.5.3! This is a
+security, improvement and bug-fix update that includes new
+versions of Django, includes several database migrations and fixes several bugs.
+You can explore everything at
+`https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_!
+
+Supported upgrade paths::
+
+    5.3   (or older) -> 5.3.1
+    5.3.1 (or newer) -> 6.0.1
+    6.0.1            -> 6.1
+    6.1              -> 6.1.1
+    6.1.1            -> 6.2 (or newer)
+
+
+Docker images::
+
+    kiwitcms/kiwi       latest  b9355cf85833    1.039 GB
+    kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+    kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+    kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+    kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+
+
+Changes since Kiwi TCMS 6.5
+---------------------------
+
+Security
+~~~~~~~~
+
+- Update Django from 2.1.5 to 2.1.7. Fixes CVE-2019-6975:
+  Memory exhaustion in ``django.utils.numberformat.format()``
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update mysqlclient from 1.4.1 to 1.4.2
+- Multiple template strings marked as translatable (Christophe CHAUVET)
+
+
+Database migrations
+~~~~~~~~~~~~~~~~~~~
+
+- Email notifications for TestPlan and TestCase now default to True
+- Remove ``TestPlanEmailSettings.is_active`` field
+
+
+API
+~~~
+
+- New method ``Bug.report()``, References
+  `Issue #18 <https://github.com/kiwitcms/Kiwi/issues/18>`_
+- Method ``Bug.create()`` now accepts parameter ``auto_report=False``
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `German translation <https://crowdin.com/project/kiwitcms/de#>`_
+- Updated `French translation <https://crowdin.com/project/kiwitcms/fr#>`_
+- Updated `Slovenian translation <https://crowdin.com/project/kiwitcms/sl#>`_
+
+
+Bug fixes
+~~~~~~~~~
+
+- Show the user who actually tested a TestCase instead of hard-coded value. Fixes
+  `Issue #765 <https://github.com/kiwitcms/Kiwi/issues/765>`_
+- Properly handle pagination button states and page numbers. Fixes
+  `Issue #767 <https://github.com/kiwitcms/Kiwi/issues/767>`_
+- Add TestCase to TestPlan if creating from inside a TestPlan. Fixes
+  `Issue #777 <https://github.com/kiwitcms/Kiwi/issues/777>`_
+- Made TestCase text more readable. Fixes
+  `Issue #764 <https://github.com/kiwitcms/Kiwi/issues/764>`_
+- Include missing templates and static files from PyPI tarball
+
+
+Refactoring
+~~~~~~~~~~~
+
+- Use ``find_packages()`` when building PyPI tarball
+- Install Kiwi TCMS as tarball package inside Docker image instead of copying
+  from the source directory
+- Pylint fixes
+- Remove ``testcases.views.ReturnActions()`` which is now unused
+- Refactor New TestCase to class-based view and add tests
+
+
+
+How to upgrade
+---------------
+
+If you are using Kiwi TCMS as a Docker container then::
+
+    cd Kiwi/
+    git pull
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker pull centos/mariadb
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
+before upgrade!
+
+**WARNING:** ``kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow::
+
+    # starting from an older Kiwi TCMS version
+    docker-compose down
+    docker pull kiwitcms/kiwi:<next_upgrade_version>
+    edit docker-compose.yml to use kiwitcms/kiwi:<next_upgrade_version>
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+    # repeat until you have reached latest
+
+
+Happy testing!
