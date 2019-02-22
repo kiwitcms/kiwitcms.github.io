@@ -1,5 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-02-12T00:20:00+02:00</updated><entry><title>Kiwi TCMS 6.5.3</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/" rel="alternate"></link><published>2019-02-12T00:20:00+02:00</published><updated>2019-02-12T00:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-02-12:/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.5.3! This is a
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-02-22T15:10:00+02:00</updated><entry><title>How to use Kiwi TCMS plugins, Pt. 1</title><link href="http://kiwitcms.org/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/" rel="alternate"></link><published>2019-02-22T15:10:00+02:00</published><updated>2019-02-22T15:10:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-02-22:/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/</id><summary type="html">&lt;p&gt;In
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/"&gt;release notes for v6.5&lt;/a&gt;
+we announced several plugins which will fetch test names and execution results
+from your automated test suite.&lt;/p&gt;
+&lt;p&gt;Plugins can be controlled via environment variables which will affect how
+test results are recorded in the Kiwi TCMS database! This blog post is an introduction
+how …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/"&gt;release notes for v6.5&lt;/a&gt;
+we announced several plugins which will fetch test names and execution results
+from your automated test suite.&lt;/p&gt;
+&lt;p&gt;Plugins can be controlled via environment variables which will affect how
+test results are recorded in the Kiwi TCMS database! This blog post is an introduction
+how that works and what you can do with it! For this purpose I will be using the
+&lt;a href="https://github.com/kiwitcms/plugin-demo"&gt;plugin-demo&lt;/a&gt; repository, which simulates
+real development work.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Full documentation and list of available plugins is available in chapter
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/plugins.html"&gt;Automation Frameworks Plugins&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Always create new TestRun by default&lt;/h2&gt;
+&lt;p&gt;The default behavior is always to create a new TestRun if controlling variables
+are not overridden! Product name, version and build will receive default values
+if tests are running in Travis CI or Jenkins. For example
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496217246"&gt;Travis Build #2&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/d455fb42fb7c2aedadfd5f66de7d131109c03350"&gt;commit d455fb4&lt;/a&gt;
+creates &lt;a href="https://tcms.kiwitcms.org/runs/12/"&gt;TR-12&lt;/a&gt; and
+&lt;a href="https://tcms.kiwitcms.org/plan/10/"&gt;TP-10&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=d455fb42fb7c2aedadfd5f66de7d131109c03350
+Build=2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next we convert the README file from Markdown to reStructuredText which triggers
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496220575"&gt;Travis Build #3&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/418b80b3bbb65a799f695dc59d488c76f560fa2b"&gt;commit 418b80b&lt;/a&gt;.
+This build &lt;strong&gt;again&lt;/strong&gt; creates a new TestRun and new TestPlan for it. Respectively
+&lt;a href="https://tcms.kiwitcms.org/runs/14/"&gt;TR-14&lt;/a&gt; and
+&lt;a href="https://tcms.kiwitcms.org/plan/12/"&gt;TP-12&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=418b80b3bbb65a799f695dc59d488c76f560fa2b
+Build=3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; we can see that version is different which will affect how artifacts
+are organized in Kiwi TCMS, possibly affect how you will report status to stakeholders!&lt;/p&gt;
+&lt;h2&gt;Override ENV variables for more control&lt;/h2&gt;
+&lt;p&gt;Let's say the QA team has decided that all test results must be reported under the
+same TestPlan. This means version must be the same between various builds in Travis CI!
+To control this we export &lt;code&gt;TCMS_PRODUCT_VERSION=master&lt;/code&gt; in CI &lt;strong&gt;before&lt;/strong&gt; executing
+the TAP plugin! Checkout the commit on GitHub to see how it is done!&lt;/p&gt;
+&lt;p&gt;This triggers
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496223505"&gt;Travis Build #4&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/e484e59023caf665e8f93341395af6f397691b93"&gt;commit e484e59&lt;/a&gt;.
+Because this is the first time where Version == master the plugin creates
+&lt;a href="https://tcms.kiwitcms.org/plan/14/"&gt;TP-14&lt;/a&gt; and reports the results under
+&lt;a href="https://tcms.kiwitcms.org/runs/16/"&gt;TR-16&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=master
+Build=4
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Right after that I realized we can make this configuration a bit more generic
+because our team is planning to support multiple versions of the product and
+development will be done in separate branches!
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496228021"&gt;Travis Build #5&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/f1f2878d80a7327b54c8e33d1c6d6f14153d6d12"&gt;commit f1f2878&lt;/a&gt;
+still ends up with Version == master because we are still working on the &lt;code&gt;master&lt;/code&gt;
+branch! That is to say, the product is in active mode of development.&lt;/p&gt;
+&lt;p&gt;Results are reported in
+&lt;a href="https://tcms.kiwitcms.org/runs/18/"&gt;TR-18&lt;/a&gt; which is again part of
+&lt;a href="https://tcms.kiwitcms.org/plan/14/"&gt;TP-14&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=master
+Build=5
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496229819"&gt;Travis Build #6&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/df6153b2495bfc6825f25e544ae1806108aa490f"&gt;commit df6153b&lt;/a&gt;
+adds the new functionality &lt;em&gt;README badges&lt;/em&gt; and reports test results in
+&lt;a href="https://tcms.kiwitcms.org/runs/20/"&gt;TR-20&lt;/a&gt; which is again part of
+&lt;a href="https://tcms.kiwitcms.org/plan/14/"&gt;TP-14&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;More ENV overrides&lt;/h2&gt;
+&lt;p&gt;While giving status reports back to stakeholders and developers the information that
+we have in the TestRun is Build number! This follows the numbering scheme in Travis CI
+(or Jenkins job number) and isn't very useful.&lt;/p&gt;
+&lt;p&gt;Let's define &lt;code&gt;TCMS_BUILD&lt;/code&gt; to be the first 7 characters of the commit hash! When QA
+tells devel that something isn't working and redirects them to the TestRun they can
+immediately use the Build information and git checkout the offending variant of the product
+for investigation.&lt;/p&gt;
+&lt;p&gt;This results in
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496233565"&gt;Travis Build #7&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/bf75d0abe9695e3ee3b49b8944bab9db43bb25e6"&gt;commit bf75d0a&lt;/a&gt;,
+&lt;a href="https://tcms.kiwitcms.org/runs/22/"&gt;TR-22&lt;/a&gt;,
+&lt;a href="https://tcms.kiwitcms.org/plan/14/"&gt;TP-14&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=master
+Build=bf75d0a
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Report results in pre-existing TestRun&lt;/h2&gt;
+&lt;p&gt;There are many reasons you may want to do this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;include both manual and automation tests for the same build;&lt;/li&gt;
+&lt;li&gt;mix results from multiple test suites for the same build,
+  e.g. unit, functional, performance&lt;/li&gt;
+&lt;li&gt;mix results from multiple but similar platforms in the same build,
+  e.g. cross-platform application for iOS and Android&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To do so I've created &lt;a href="https://tcms.kiwitcms.org/runs/24/"&gt;TR-24&lt;/a&gt; beforehand and
+configured &lt;code&gt;TCMS_RUN_ID=24&lt;/code&gt; in my CI environment. TR-24 also contains
+&lt;a href="https://tcms.kiwitcms.org/case/57/"&gt;TC-57: Verify we can report results from several plugins into the same TR&lt;/a&gt;.
+this was created and added via the web interface.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; mixing additional test cases can be done either before or after
+automation results are reported with the plugin!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; when reporting results to an existing TestRun Kiwi TCMS plugins
+don't care in which TestPlan this TR is! In theory it is possible to report
+the results for &lt;code&gt;Product=kiwitcms/plugin-demo&lt;/code&gt; into any TP/TR pair! However we
+don't want to do this crazy thing and instead I've created TR-24 inside the already
+existing TP-14!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; because I don't know what is the git commit beforehand I've configured
+TR-24 with &lt;code&gt;Build=unspecified&lt;/code&gt;. If I wanted I could update this with the correct value
+once I know the commit hash for the related changes I am testing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; the plugin-demo repository uses both kiwitcms-tap-plugin and
+kiwitcms-junit.xml-plugin at the same time! They differ in the way test names
+are compiled! Both are reported in TR-24. See TC-57 text for information how to
+distinguish between the two.&lt;/p&gt;
+&lt;p&gt;See
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496237911"&gt;Travis Build #8&lt;/a&gt; for
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496237911"&gt;commit 85ad939&lt;/a&gt;,
+&lt;a href="https://tcms.kiwitcms.org/runs/24/"&gt;TR-24&lt;/a&gt;,
+&lt;a href="https://tcms.kiwitcms.org/plan/14/"&gt;TP-14&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=master
+Build=unspecified
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Also check-out comments in TR executions to see when and who had executed the test case.&lt;/p&gt;
+&lt;p&gt;So far there have been some tests which were failing (although Travis reports PASS) so
+I decided to fix them.
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496240713"&gt;Travis Build #9&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/a25b3841e656d47a7539c608e375cecbf3bed2ac"&gt;commit a25b384&lt;/a&gt;
+is still configured with &lt;code&gt;TCMS_RUN_ID=24&lt;/code&gt;. This means results will be reported in
+TR-24, effectively overwriting previous results.&lt;/p&gt;
+&lt;p&gt;Check-out &lt;em&gt;Change Log&lt;/em&gt; under each individual execution and you will see several
+time stamps when status was updated! In other words, as long as &lt;code&gt;TCMS_RUN_ID&lt;/code&gt; is
+pointing to an existing TestRun this TR will keep the results of the last test suite execution!&lt;/p&gt;
+&lt;h2&gt;Continue development, restore ENV configuration&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496243124"&gt;Travis Build #10&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/c4f1ae5ecadb249d39923cedbbf53a85e50420b3"&gt;commit c4f1ae5&lt;/a&gt;
+removes &lt;code&gt;TCMS_RUN_ID&lt;/code&gt;! Results are reported in
+&lt;a href="https://tcms.kiwitcms.org/runs/25/"&gt;TR-25&lt;/a&gt;,
+&lt;a href="https://tcms.kiwitcms.org/plan/14/"&gt;TP-14&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=master
+Build=c4f1ae5
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Branch out for an LTS version&lt;/h2&gt;
+&lt;p&gt;Our team has decided to make the first LTS release of the product. We branch out into
+&lt;code&gt;lts-v0&lt;/code&gt; branch in git and cut the first NVR. This results in
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496245067"&gt;Travis Build #11&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/9f1ef717e3fb248d65535ed66b5c4e61e6f85a6e"&gt;commit 9f1ef71&lt;/a&gt;
+&lt;a href="https://tcms.kiwitcms.org/runs/27/"&gt;TR-27&lt;/a&gt;,
+&lt;a href="https://tcms.kiwitcms.org/plan/16/"&gt;TP-16&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=lts-v0
+Build=9f1ef71
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Because this is the first time we are running tests for this product version
+we end up with the newly created TP-16!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; see how version was populated with the correct value for the git branch!
+This is because my CI config uses &lt;code&gt;TCMS_PRODUCT_VERSION=$TRAVIS_BRANCH&lt;/code&gt; and no further
+changes were required! I made this change back in Travis Build #5 anticipating what
+will come in the future!&lt;/p&gt;
+&lt;p&gt;The product is now live and customers have reported critical bugs for it:
+&lt;em&gt;URLs for the badges in README are wrong&lt;/em&gt;! I fix those and add more tests of course, see:
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496247347"&gt;Travis Build #12&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/2d72754d3f911ef4e25287f203471f4466b95d12"&gt;commit 2d72754&lt;/a&gt;,
+&lt;a href="https://tcms.kiwitcms.org/runs/29/"&gt;TR-29&lt;/a&gt; for
+&lt;a href="https://tcms.kiwitcms.org/plan/16/"&gt;TP-16&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Product=kiwitcms/plugin-demo
+Version=lts-v0
+Build=2d72754
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;TR-29 contains the new &lt;a href="https://tcms.kiwitcms.org/case/58/"&gt;TC-58&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;cherry-pick between branches&lt;/h2&gt;
+&lt;p&gt;In the &lt;code&gt;lts-v0&lt;/code&gt; branch customers have identified a serious issue. It doesn't exist on &lt;code&gt;master&lt;/code&gt;
+but the test is still valid so I cherry-pick it! In git you can backport or forwardport very
+easily. Regardless of the direction Kiwi TCMS plugins will record the test results for you.&lt;/p&gt;
+&lt;p&gt;See
+&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496252529"&gt;Travis Build #13&lt;/a&gt; for
+&lt;a href="https://github.com/kiwitcms/plugin-demo/commit/31ae5b3358137fde7d2b5c3656b384acc7331d95"&gt;commit 31ae5b3&lt;/a&gt;,
+&lt;a href="https://tcms.kiwitcms.org/runs/31/"&gt;TR-31&lt;/a&gt; for
+&lt;a href="https://tcms.kiwitcms.org/plan/14/"&gt;TP-14&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We can see that TC-58, which was originally implemented on the &lt;code&gt;lts-v0&lt;/code&gt; branch
+is now present!&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This is a very basic example of how you can organize collection and reporting for
+your automation test suite results with Kiwi TCMS. The links here only refer to
+artifacts created by &lt;code&gt;kiwitcms-tap-plugin&lt;/code&gt; while in the DB we keep others as well.&lt;/p&gt;
+&lt;p&gt;There are feature requests for more ENV variables which will allow you to control
+TestPlan creation and child/parent relationship between test plans. See
+&lt;a href="https://github.com/kiwitcms/tap-plugin/issues"&gt;https://github.com/kiwitcms/tap-plugin/issues&lt;/a&gt; and vote with a &lt;code&gt;:+1:&lt;/code&gt; reaction
+to help us plan for these features.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS automation framework plugins are nothing more than result parsers
+which talk back to a database. It is up to you to decide how to organize the
+collection of test results and how to report on them later, when the need arises.&lt;/p&gt;
+&lt;p&gt;Future installments in this post series will take a look at workflows with
+feature branches and pull requests and discuss possible organization scenarios.
+You are welcome to share your ideas in the comments below.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="plugins"></category></entry><entry><title>Kiwi TCMS 6.5.3</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/" rel="alternate"></link><published>2019-02-12T00:20:00+02:00</published><updated>2019-02-12T00:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-02-12:/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.5.3! This is a
 security, improvement and bug-fix update that includes new
 versions of Django, includes several database migrations and fixes several bugs.
 You can explore everything at
