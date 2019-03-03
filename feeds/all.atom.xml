@@ -1,5 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-03-02T19:40:00+02:00</updated><entry><title>Want to hack open source ?</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/" rel="alternate"></link><published>2019-03-02T19:40:00+02:00</published><updated>2019-03-02T19:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-02:/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/</id><summary type="html">&lt;p&gt;&lt;img src="/images/team/hiring_banner.png" style="float:none;clear-both;margin:0;max-width: 100%"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-03-03T21:27:00+02:00</updated><entry><title>Legacy reports become Telemetry</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="alternate"></link><published>2019-03-03T21:27:00+02:00</published><updated>2019-03-03T21:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-03:/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/</id><summary type="html">&lt;p&gt;As we've &lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;promised&lt;/a&gt; Kiwi TCMS is
+starting work on improving the legacy reports functionality.
+After analyzing your feedback in
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/657"&gt;Issue #657&lt;/a&gt; here's what we came up
+with. &lt;em&gt;Note: screenshots below are mockups.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;General tech specs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Once a self-contained tarball is installed inside the Docker image (or inside local virtualenv)
+  Kiwi …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;As we've &lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;promised&lt;/a&gt; Kiwi TCMS is
+starting work on improving the legacy reports functionality.
+After analyzing your feedback in
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/657"&gt;Issue #657&lt;/a&gt; here's what we came up
+with. &lt;em&gt;Note: screenshots below are mockups.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;General tech specs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Once a self-contained tarball is installed inside the Docker image (or inside local virtualenv)
+  Kiwi TCMS will be able to find it automatically and update the menu options. Aka plugins.
+  No further configuration should be necessary other than providing the source code implementing
+  the new functionality&lt;/li&gt;
+&lt;li&gt;Navigation menu will be able to support several layers of menus&lt;/li&gt;
+&lt;li&gt;Where possible Telemetry pages will reuse existing HTML templates&lt;/li&gt;
+&lt;li&gt;Telemetry data will be implemented as an RPC method that can be consumed by the front-end
+  via JSON-RPC&lt;/li&gt;
+&lt;li&gt;Charts will be rendered in the browser with c3/d3,
+  see &lt;a href="https://www.patternfly.org/pattern-library/data-visualization/area-chart/"&gt;Data Visualization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Feature: Rename TestCaseRun to TestExecution&lt;/h2&gt;
+&lt;p&gt;Inside Kiwi TCMS the term "test case" is used to refer to specific scenario of
+testing steps. A "test run" is the collection of multiple "test cases" which
+will be executed against a particular product build and environment.&lt;/p&gt;
+&lt;p&gt;The specific results are kept into what is now called "test case run". This will
+be renamed to "test execution" (internally &lt;code&gt;TestExecution&lt;/code&gt; class) to make it more
+clear and easier to distinguish among other artifacts.&lt;/p&gt;
+&lt;h2&gt;Feature: Better color coding for test execution status&lt;/h2&gt;
+&lt;p&gt;As a webUI user I want to easily distinguish between PASSED, FAILED and other statuses
+when looking at charts and graphical visualizations.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/telemetry/tr_progress_bar.png" alt="TestRun progress" style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;This feature request comes from the TestRun progress bar.
+Other charts should use the same 4 status categories and color coding standards:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IDLE - &lt;code&gt;pf-black-600&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PASSED - &lt;code&gt;pf-green-400&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;FAILED - &lt;code&gt;pf-red-100&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;OTHER - &lt;code&gt;pf-orange-400&lt;/code&gt;. This includes other statuses which are not PASSED, FAILED and IDLE.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here the percent value will continue to mean &lt;em&gt;percent completed, aka non-IDLE&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Implementation wise the &lt;code&gt;TestCaseRunStatus&lt;/code&gt; class defines methods for the actual icons to be used.
+The same can be done for colors and this can be used directly in the HTML templates.
+For color definitions see &lt;a href="https://www.patternfly.org/styles/color-palette/"&gt;Status Palette&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Feature: Printable Test Execution Report&lt;/h2&gt;
+&lt;p&gt;As a tester I want to have a nice looking TestRun execution report which I can present to
+my managers, stakeholders and/or customers. The page needs to be printer friendly for
+“Print to PDF” or print on paper!&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS already has this feature. Clicking the &lt;code&gt;[Report]&lt;/code&gt; button
+in the progress widget at &lt;a href="https://demo.kiwitcms.org/runs/625/"&gt;TR-625&lt;/a&gt; presents
+TestRun execution information in a simplified format found at
+&lt;a href="https://demo.kiwitcms.org/runs/625/report/"&gt;TR-625/Report&lt;/a&gt;.
+In order to improve the current implementation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Convert TestRun page to Patternfly which generally prints better&lt;/li&gt;
+&lt;li&gt;Add bug list at the bottom of the page, below all test execution rows&lt;/li&gt;
+&lt;li&gt;Keep “View all in Issue Tracker” link (supported only for some bug trackers)&lt;/li&gt;
+&lt;li&gt;The widget for TestRun progress must be kept&lt;/li&gt;
+&lt;li&gt;Tweak CSS classes to disable printing for visual elements that we don't need.
+  This will be decided after the entire page has been converted to Patternfly&lt;/li&gt;
+&lt;li&gt;Remove the existing &lt;code&gt;testruns.views.TestRunReportView&lt;/code&gt; and associated templates,
+  JavaScript and CSS because they will not be needed anymore&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Feature: Individual or team performance telemetry&lt;/h2&gt;
+&lt;p&gt;As a manager I want to know what the work-load/performance of individual teams and
+engineers is. I can use this information either for performance review or for 
+capacity planning of future work.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/telemetry/performance_indicator.png" alt="Individual/team performance" style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;A new page will be available under TELEMETRY -&amp;gt; Management -&amp;gt; Performance which will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow filtering by&lt;ul&gt;
+&lt;li&gt;Group (multi-select)&lt;/li&gt;
+&lt;li&gt;User (multi select, depends on Group)&lt;/li&gt;
+&lt;li&gt;Start / Stop dates&lt;/li&gt;
+&lt;li&gt;Product&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Show results per User or per Group (if no users are selected)&lt;/li&gt;
+&lt;li&gt;Allow grouping per TestRun ID or calendar week number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The backend will query &lt;code&gt;TestExecution.objects&lt;/code&gt; and apply the selected
+filters and grouping logic!
+The returned data is the count of how many tests this person/team was able to execute.&lt;/p&gt;
+&lt;p&gt;Further refinement:
+Aggregate count by statuses (executed vs. non-executed or PASSED vs. FAILED vs. OTHER).
+May be represented as a stacked bar chart if grouping of series is supported.&lt;/p&gt;
+&lt;h2&gt;Feature: Time-tracking telemetry&lt;/h2&gt;
+&lt;p&gt;As a manager I want to know how much time it took to complete previous testing activities.
+I can use this information for predicting future capacity.&lt;/p&gt;
+&lt;p&gt;New page under TELEMETRY -&amp;gt; Management -&amp;gt; Time tracking.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Filtering will be the same as performance telemetry&lt;/li&gt;
+&lt;li&gt;Grouping will be the same as performance telemetry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unknown:&lt;/strong&gt; total execution time is calculated as&lt;ul&gt;
+&lt;li&gt;the sum of duration for each TestExecution (not available ATM,
+  automation plugins not sending this info) or&lt;/li&gt;
+&lt;li&gt;the total time for the entire TestRrun (not supported by automation plugins)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Visually this will be a line chart with one line for each user/group which have
+been selected. It will be very good if the existing chart libraries allow for a
+stacked line chart or a stacked area chart here!&lt;/p&gt;
+&lt;h2&gt;Feature: Estimate TestRun completion time&lt;/h2&gt;
+&lt;p&gt;As a test lead I want to know approximately when testing is expected to complete.&lt;/p&gt;
+&lt;p&gt;This feature will utilize time-tracking data from previous executions and
+display the approximated calculation in the web UI. The most obvious place for this
+is the TestRun progress widget (under the progress bar) or the Test Run page
+(near the Started at/Finished at fields).&lt;/p&gt;
+&lt;p&gt;Example text:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Started at: YYYY-MM-DD 10:38
+Status: Running
+Duration: 1.2 / 3 hrs
+Estimated completion at: 13:30
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Unknown:&lt;/strong&gt; where does baseline duration come from? Either from the most recent TestRun
+or an average from all of the previous Test Runs. Note that cumulative TestRun duration
+is calculated between Start/Finish events while individual TestExecution records may
+sum up to a different value! This needs to be clarified.&lt;/p&gt;
+&lt;h2&gt;Feature: TestCase health telemetry&lt;/h2&gt;
+&lt;p&gt;As a tester and/or manager I want to be able to discover which TestCase(s) are the most
+common source of problems, that is they fail all the time or from time to time.
+This may indicate poor test design or bad practices when developing the product.
+This is also known as test stability or flaky tests!&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/telemetry/flaky_tests.png" alt="Flaky tests" style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;New page under TELEMETRY -&amp;gt; Testing -&amp;gt; Flaky tests&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow filtering by&lt;ul&gt;
+&lt;li&gt;Product&lt;/li&gt;
+&lt;li&gt;Test plan (refined by product)&lt;/li&gt;
+&lt;li&gt;Start / Stop dates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Show results in table form as shown in the image above&lt;/li&gt;
+&lt;li&gt;PASS/non-PASS stats will be calculated based on &lt;code&gt;TestExecution.objects&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;100% failing rate will be reported in the first table as ALWAYS FAILING&lt;/li&gt;
+&lt;li&gt;Executions where failing rate is &amp;gt;0% and &amp;lt;100% will be reported as FLAKY TESTS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Feature: Individual TestCase health widget&lt;/h2&gt;
+&lt;p&gt;As a test engineer I want to be able to quickly see health information about individual
+test case. This can help me visually locate TCs that need improvement so I can edit them
+or will help me visually judge the past history of the TC I am looking at.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/telemetry/tc_executions_card.png" alt="Individual TestCase health" style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;This depends on the previous feature. Possible places where health status can be shown:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Test Case page, Executions card: info per TP&lt;/li&gt;
+&lt;li&gt;Test Run page, Test Executions table - visual icon + % to hint the user
+  about expected TC stability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Feature: Execution trends telemetry&lt;/h2&gt;
+&lt;p&gt;As a test manager I want to see information if Product builds are getting better or worse.
+In other words what is the trend in TestExecution number and status!&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/telemetry/build_status.png" alt="Build status" style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;This is going to be a new page at TELEMETRY -&amp;gt; Testing -&amp;gt; Execution trends&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Filter by&lt;ul&gt;
+&lt;li&gt;Product&lt;/li&gt;
+&lt;li&gt;Version (refined by Product)&lt;/li&gt;
+&lt;li&gt;Build (refined by Version)&lt;/li&gt;
+&lt;li&gt;Test Plan (refined by Product)&lt;/li&gt;
+&lt;li&gt;Start / Stop dates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Shows total count of &lt;code&gt;TestExecution.objects&lt;/code&gt; (stacked area chart) with color codes for status&lt;/li&gt;
+&lt;li&gt;Group by TestRun ID or calendar week&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You will be able to select TestRuns and/or weeks for detailed comparison.&lt;/p&gt;
+&lt;h2&gt;Feature: TestRun status matrix telemetry&lt;/h2&gt;
+&lt;p&gt;As a test manager I want to see detailed information about testing status for
+specific test run(s) or a calendar period. I also want to be able to compare
+the results between various weeks and/or test runs.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/telemetry/compare_testruns.png" alt="Compare TestRuns" style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;This is a continuation of Execution trends telemetry but can be used on its own as well.
+It will be accessible from TELEMETRY -&amp;gt; Testing -&amp;gt; Status matrix&lt;/p&gt;
+&lt;p&gt;Filtering options are the same. Results are displayed in a table format where
+columns are the filtered (or previously selected) TestRun objects or calendar weeks.
+The rows are the names of individual test cases that have been executed. If a case
+is missing the cell will be empty.&lt;/p&gt;
+&lt;p&gt;Cells contain color coded information about status, timestamp of execution,
+execution duration, links to the TestExecution object, latest comment in case
+of failure.&lt;/p&gt;
+&lt;p&gt;Links to bugs will be shown in each cell with a summarized bug table below the
+charts.&lt;/p&gt;
+&lt;h2&gt;Feature: Search and compare TestRuns&lt;/h2&gt;
+&lt;p&gt;This is complimentary to the TestRun status matrix feature! While searching
+for TestRuns in SEARCH -&amp;gt; Test Runs the user will be able to select several
+rows and proceed to compare them as described above.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Want to hack open source ?</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/" rel="alternate"></link><published>2019-03-02T19:40:00+02:00</published><updated>2019-03-02T19:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-02:/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/</id><summary type="html">&lt;p&gt;&lt;img src="/images/team/hiring_banner.png" style="float:none;clear-both;margin:0;max-width: 100%"&gt;&lt;/p&gt;
 &lt;p&gt;Have you ever wanted to be part of an open source team?
 Have you ever wanted to contribute back the open source community ?
 Have you ever wanted to see your code used by thousands of people ?&lt;/p&gt;

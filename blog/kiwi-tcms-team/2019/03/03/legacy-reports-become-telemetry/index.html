@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Legacy reports become Telemetry</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="here's what is going to change" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Legacy reports become Telemetry">
+            <meta name="twitter:description" content="here's what is going to change">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:card" content="summary_large_image">
+                <meta property="twitter:image" content="http://kiwitcms.org/images/telemetry/social_image.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="http://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" />
+        <meta property="og:title" content="Legacy reports become Telemetry" />
+        <meta property="article:published_time" content="2019-03-03 21:27:00+02:00">
+            <meta property="og:description" content="here's what is going to change">
+
+                <meta property="og:image" content="http://kiwitcms.org/images/telemetry/social_image.png">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="http://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="http://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="http://kiwitcms.org/theme/fontawesome-free-5.6.3-web/css/all.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="http://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="http://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://demo.kiwitcms.org/login/github/">GitHub Login</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="http://kiwitcms.org/community/">Community</a></li>
+                    <li><a href="http://mrsenko.com">Support</a></li>
+                    <li><a href="http://kiwitcms.org/blog/">Blog</a></li>
+                    <li><a href="http://kiwitcms.org/team/">Team</a></li>
+                    <li>
+                        <form action="http://google.com/search" method="get">
+                            <input name="sitesearch" value="http://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Legacy reports become Telemetry</h1>
+        <h2 class="top-subheader">here's what is going to change</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Sun 03 March 2019
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>As we've <a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">promised</a> Kiwi TCMS is
+starting work on improving the legacy reports functionality.
+After analyzing your feedback in
+<a href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a> here's what we came up
+with. <em>Note: screenshots below are mockups.</em></p>
+<h2>General tech specs</h2>
+<ul>
+<li>Once a self-contained tarball is installed inside the Docker image (or inside local virtualenv)
+  Kiwi TCMS will be able to find it automatically and update the menu options. Aka plugins.
+  No further configuration should be necessary other than providing the source code implementing
+  the new functionality</li>
+<li>Navigation menu will be able to support several layers of menus</li>
+<li>Where possible Telemetry pages will reuse existing HTML templates</li>
+<li>Telemetry data will be implemented as an RPC method that can be consumed by the front-end
+  via JSON-RPC</li>
+<li>Charts will be rendered in the browser with c3/d3,
+  see <a href="https://www.patternfly.org/pattern-library/data-visualization/area-chart/">Data Visualization</a></li>
+</ul>
+<h2>Feature: Rename TestCaseRun to TestExecution</h2>
+<p>Inside Kiwi TCMS the term "test case" is used to refer to specific scenario of
+testing steps. A "test run" is the collection of multiple "test cases" which
+will be executed against a particular product build and environment.</p>
+<p>The specific results are kept into what is now called "test case run". This will
+be renamed to "test execution" (internally <code>TestExecution</code> class) to make it more
+clear and easier to distinguish among other artifacts.</p>
+<h2>Feature: Better color coding for test execution status</h2>
+<p>As a webUI user I want to easily distinguish between PASSED, FAILED and other statuses
+when looking at charts and graphical visualizations.</p>
+<p><img src="/images/telemetry/tr_progress_bar.png" alt="TestRun progress" style="float: none"></p>
+<p>This feature request comes from the TestRun progress bar.
+Other charts should use the same 4 status categories and color coding standards:</p>
+<ul>
+<li>IDLE - <code>pf-black-600</code></li>
+<li>PASSED - <code>pf-green-400</code></li>
+<li>FAILED - <code>pf-red-100</code></li>
+<li>OTHER - <code>pf-orange-400</code>. This includes other statuses which are not PASSED, FAILED and IDLE.</li>
+</ul>
+<p>Here the percent value will continue to mean <em>percent completed, aka non-IDLE</em>.</p>
+<p>Implementation wise the <code>TestCaseRunStatus</code> class defines methods for the actual icons to be used.
+The same can be done for colors and this can be used directly in the HTML templates.
+For color definitions see <a href="https://www.patternfly.org/styles/color-palette/">Status Palette</a>.</p>
+<h2>Feature: Printable Test Execution Report</h2>
+<p>As a tester I want to have a nice looking TestRun execution report which I can present to
+my managers, stakeholders and/or customers. The page needs to be printer friendly for
+“Print to PDF” or print on paper!</p>
+<p>Kiwi TCMS already has this feature. Clicking the <code>[Report]</code> button
+in the progress widget at <a href="https://demo.kiwitcms.org/runs/625/">TR-625</a> presents
+TestRun execution information in a simplified format found at
+<a href="https://demo.kiwitcms.org/runs/625/report/">TR-625/Report</a>.
+In order to improve the current implementation:</p>
+<ul>
+<li>Convert TestRun page to Patternfly which generally prints better</li>
+<li>Add bug list at the bottom of the page, below all test execution rows</li>
+<li>Keep “View all in Issue Tracker” link (supported only for some bug trackers)</li>
+<li>The widget for TestRun progress must be kept</li>
+<li>Tweak CSS classes to disable printing for visual elements that we don't need.
+  This will be decided after the entire page has been converted to Patternfly</li>
+<li>Remove the existing <code>testruns.views.TestRunReportView</code> and associated templates,
+  JavaScript and CSS because they will not be needed anymore</li>
+</ul>
+<h2>Feature: Individual or team performance telemetry</h2>
+<p>As a manager I want to know what the work-load/performance of individual teams and
+engineers is. I can use this information either for performance review or for 
+capacity planning of future work.</p>
+<p><img src="/images/telemetry/performance_indicator.png" alt="Individual/team performance" style="float: none"></p>
+<p>A new page will be available under TELEMETRY -&gt; Management -&gt; Performance which will:</p>
+<ul>
+<li>Allow filtering by<ul>
+<li>Group (multi-select)</li>
+<li>User (multi select, depends on Group)</li>
+<li>Start / Stop dates</li>
+<li>Product</li>
+</ul>
+</li>
+<li>Show results per User or per Group (if no users are selected)</li>
+<li>Allow grouping per TestRun ID or calendar week number</li>
+</ul>
+<p>The backend will query <code>TestExecution.objects</code> and apply the selected
+filters and grouping logic!
+The returned data is the count of how many tests this person/team was able to execute.</p>
+<p>Further refinement:
+Aggregate count by statuses (executed vs. non-executed or PASSED vs. FAILED vs. OTHER).
+May be represented as a stacked bar chart if grouping of series is supported.</p>
+<h2>Feature: Time-tracking telemetry</h2>
+<p>As a manager I want to know how much time it took to complete previous testing activities.
+I can use this information for predicting future capacity.</p>
+<p>New page under TELEMETRY -&gt; Management -&gt; Time tracking.</p>
+<ul>
+<li>Filtering will be the same as performance telemetry</li>
+<li>Grouping will be the same as performance telemetry</li>
+<li><strong>Unknown:</strong> total execution time is calculated as<ul>
+<li>the sum of duration for each TestExecution (not available ATM,
+  automation plugins not sending this info) or</li>
+<li>the total time for the entire TestRrun (not supported by automation plugins)</li>
+</ul>
+</li>
+</ul>
+<p>Visually this will be a line chart with one line for each user/group which have
+been selected. It will be very good if the existing chart libraries allow for a
+stacked line chart or a stacked area chart here!</p>
+<h2>Feature: Estimate TestRun completion time</h2>
+<p>As a test lead I want to know approximately when testing is expected to complete.</p>
+<p>This feature will utilize time-tracking data from previous executions and
+display the approximated calculation in the web UI. The most obvious place for this
+is the TestRun progress widget (under the progress bar) or the Test Run page
+(near the Started at/Finished at fields).</p>
+<p>Example text:</p>
+<div class="highlight"><pre><span></span>Started at: YYYY-MM-DD 10:38
+Status: Running
+Duration: 1.2 / 3 hrs
+Estimated completion at: 13:30
+</pre></div>
+
+
+<p><strong>Unknown:</strong> where does baseline duration come from? Either from the most recent TestRun
+or an average from all of the previous Test Runs. Note that cumulative TestRun duration
+is calculated between Start/Finish events while individual TestExecution records may
+sum up to a different value! This needs to be clarified.</p>
+<h2>Feature: TestCase health telemetry</h2>
+<p>As a tester and/or manager I want to be able to discover which TestCase(s) are the most
+common source of problems, that is they fail all the time or from time to time.
+This may indicate poor test design or bad practices when developing the product.
+This is also known as test stability or flaky tests!</p>
+<p><img src="/images/telemetry/flaky_tests.png" alt="Flaky tests" style="float: none"></p>
+<p>New page under TELEMETRY -&gt; Testing -&gt; Flaky tests</p>
+<ul>
+<li>Allow filtering by<ul>
+<li>Product</li>
+<li>Test plan (refined by product)</li>
+<li>Start / Stop dates</li>
+</ul>
+</li>
+<li>Show results in table form as shown in the image above</li>
+<li>PASS/non-PASS stats will be calculated based on <code>TestExecution.objects</code></li>
+<li>100% failing rate will be reported in the first table as ALWAYS FAILING</li>
+<li>Executions where failing rate is &gt;0% and &lt;100% will be reported as FLAKY TESTS</li>
+</ul>
+<h2>Feature: Individual TestCase health widget</h2>
+<p>As a test engineer I want to be able to quickly see health information about individual
+test case. This can help me visually locate TCs that need improvement so I can edit them
+or will help me visually judge the past history of the TC I am looking at.</p>
+<p><img src="/images/telemetry/tc_executions_card.png" alt="Individual TestCase health" style="float: none"></p>
+<p>This depends on the previous feature. Possible places where health status can be shown:</p>
+<ul>
+<li>Test Case page, Executions card: info per TP</li>
+<li>Test Run page, Test Executions table - visual icon + % to hint the user
+  about expected TC stability</li>
+</ul>
+<h2>Feature: Execution trends telemetry</h2>
+<p>As a test manager I want to see information if Product builds are getting better or worse.
+In other words what is the trend in TestExecution number and status!</p>
+<p><img src="/images/telemetry/build_status.png" alt="Build status" style="float: none"></p>
+<p>This is going to be a new page at TELEMETRY -&gt; Testing -&gt; Execution trends</p>
+<ul>
+<li>Filter by<ul>
+<li>Product</li>
+<li>Version (refined by Product)</li>
+<li>Build (refined by Version)</li>
+<li>Test Plan (refined by Product)</li>
+<li>Start / Stop dates</li>
+</ul>
+</li>
+<li>Shows total count of <code>TestExecution.objects</code> (stacked area chart) with color codes for status</li>
+<li>Group by TestRun ID or calendar week</li>
+</ul>
+<p>You will be able to select TestRuns and/or weeks for detailed comparison.</p>
+<h2>Feature: TestRun status matrix telemetry</h2>
+<p>As a test manager I want to see detailed information about testing status for
+specific test run(s) or a calendar period. I also want to be able to compare
+the results between various weeks and/or test runs.</p>
+<p><img src="/images/telemetry/compare_testruns.png" alt="Compare TestRuns" style="float: none"></p>
+<p>This is a continuation of Execution trends telemetry but can be used on its own as well.
+It will be accessible from TELEMETRY -&gt; Testing -&gt; Status matrix</p>
+<p>Filtering options are the same. Results are displayed in a table format where
+columns are the filtered (or previously selected) TestRun objects or calendar weeks.
+The rows are the names of individual test cases that have been executed. If a case
+is missing the cell will be empty.</p>
+<p>Cells contain color coded information about status, timestamp of execution,
+execution duration, links to the TestExecution object, latest comment in case
+of failure.</p>
+<p>Links to bugs will be shown in each cell with a summarized bug table below the
+charts.</p>
+<h2>Feature: Search and compare TestRuns</h2>
+<p>This is complimentary to the TestRun status matrix feature! While searching
+for TestRuns in SEARCH -&gt; Test Runs the user will be able to select several
+rows and proceed to compare them as described above.</p>
+<p>Happy testing!</p>
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div id="mrsenko_logo" class="col-1">
+                <a href="http://MrSenko.com">
+                    <i class="fa fa-user-secret fa-3x footer-logo"></i>
+                </a>
+            </div>
+            <div class="col-9 footer-copyright">
+                <p>Kiwi TCMS is sponsored by <a href="https://opencollective.com/kiwitcms">Open Source Collective</a> and
+                   <a href="http://mrsenko.com/">Mr. Senko.</a>
+                </p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
