@@ -183,6 +183,23 @@ New page under TELEMETRY -> Testing -> Flaky tests
 * Executions where failing rate is >0% and <100% will be reported as FLAKY TESTS
 
 
+Feature: TestCase breakdown telemetry
+-------------------------------------
+
+As a tester and/or manager I want to see a breakdown of tests so that I have an
+idea how the existing tests for the product are distributed!
+
+<img src="/images/telemetry/tc_breakdown.png" alt="Test case breakdown" style="float: none">
+
+New page under TELEMETRY -> Testing -> Breakdown
+
+* Allow filtering by
+    * Product
+    * Test plan (refined by product)
+    * Start / Stop dates
+
+Shows combined bar/line charts with information about test case priorities, categories,
+automation status and confirmed status.
 
 
 Feature: Individual TestCase health widget
