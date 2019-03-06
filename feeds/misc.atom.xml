@@ -144,6 +144,21 @@ This is also known as test stability or flaky tests!&lt;/p&gt;
 &lt;li&gt;100% failing rate will be reported in the first table as ALWAYS FAILING&lt;/li&gt;
 &lt;li&gt;Executions where failing rate is &amp;gt;0% and &amp;lt;100% will be reported as FLAKY TESTS&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2&gt;Feature: TestCase breakdown telemetry&lt;/h2&gt;
+&lt;p&gt;As a tester and/or manager I want to see a breakdown of tests so that I have an
+idea how the existing tests for the product are distributed!&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/telemetry/tc_breakdown.png" alt="Test case breakdown" style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;New page under TELEMETRY -&amp;gt; Testing -&amp;gt; Breakdown&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow filtering by&lt;ul&gt;
+&lt;li&gt;Product&lt;/li&gt;
+&lt;li&gt;Test plan (refined by product)&lt;/li&gt;
+&lt;li&gt;Start / Stop dates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Shows combined bar/line charts with information about test case priorities, categories,
+automation status and confirmed status.&lt;/p&gt;
 &lt;h2&gt;Feature: Individual TestCase health widget&lt;/h2&gt;
 &lt;p&gt;As a test engineer I want to be able to quickly see health information about individual
 test case. This can help me visually locate TCs that need improvement so I can edit them

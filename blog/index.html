@@ -194,6 +194,21 @@ This is also known as test stability or flaky tests!</p>
 <li>100% failing rate will be reported in the first table as ALWAYS FAILING</li>
 <li>Executions where failing rate is &gt;0% and &lt;100% will be reported as FLAKY TESTS</li>
 </ul>
+<h2>Feature: TestCase breakdown telemetry</h2>
+<p>As a tester and/or manager I want to see a breakdown of tests so that I have an
+idea how the existing tests for the product are distributed!</p>
+<p><img src="/images/telemetry/tc_breakdown.png" alt="Test case breakdown" style="float: none"></p>
+<p>New page under TELEMETRY -&gt; Testing -&gt; Breakdown</p>
+<ul>
+<li>Allow filtering by<ul>
+<li>Product</li>
+<li>Test plan (refined by product)</li>
+<li>Start / Stop dates</li>
+</ul>
+</li>
+</ul>
+<p>Shows combined bar/line charts with information about test case priorities, categories,
+automation status and confirmed status.</p>
 <h2>Feature: Individual TestCase health widget</h2>
 <p>As a test engineer I want to be able to quickly see health information about individual
 test case. This can help me visually locate TCs that need improvement so I can edit them
