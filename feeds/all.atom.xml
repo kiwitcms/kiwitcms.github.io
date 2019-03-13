@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-03-03T21:27:00+02:00</updated><entry><title>Legacy reports become Telemetry</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="alternate"></link><published>2019-03-03T21:27:00+02:00</published><updated>2019-03-03T21:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-03:/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/</id><summary type="html">&lt;p&gt;As we've &lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;promised&lt;/a&gt; Kiwi TCMS is
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-03-13T07:27:00+02:00</updated><entry><title>Taking the lead at OpenExpo Europe CfP votes</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/" rel="alternate"></link><published>2019-03-13T07:27:00+02:00</published><updated>2019-03-13T07:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-13:/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/vote_openexpo19.jpg"
+     alt="Vote for Kiwi TCMS at OpenExpo"
+     style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that Anton Sankov and Alex Todorov are currently taking
+the lead at OpenExpo Europe's CfP votes!&lt;/p&gt;
+&lt;p&gt;Going to OpenExpo will be huge boost for Kiwi TCMS so please help us make this happen!
+Voting is open until March 17th 2019! You can cast your vote …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="/images/openexpo/vote_openexpo19.jpg"
+     alt="Vote for Kiwi TCMS at OpenExpo"
+     style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that Anton Sankov and Alex Todorov are currently taking
+the lead at OpenExpo Europe's CfP votes!&lt;/p&gt;
+&lt;p&gt;Going to OpenExpo will be huge boost for Kiwi TCMS so please help us make this happen!
+Voting is open until March 17th 2019! You can cast your vote via Facebook login
+but remember to confirm your email address!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vote for Alex'es
+  &lt;a href="https://a.cstmapp.com/entries/29369/sort:votes/direction:desc"&gt;cyber security presentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vote for Anton's
+  &lt;a href="https://a.cstmapp.com/entries/30063/sort:votes/direction:desc"&gt;micro-services tech talk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vote for Alex'es
+  &lt;a href="https://a.cstmapp.com/entries/30063/sort:votes/direction:desc"&gt;pylint plugins tech-talk&lt;/a&gt;:
+  currently 3rd in the Open Source Tech Talks category&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks you &amp;amp; happy testing!&lt;/p&gt;</content></entry><entry><title>Legacy reports become Telemetry</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="alternate"></link><published>2019-03-03T21:27:00+02:00</published><updated>2019-03-03T21:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-03:/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/</id><summary type="html">&lt;p&gt;As we've &lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;promised&lt;/a&gt; Kiwi TCMS is
 starting work on improving the legacy reports functionality.
 After analyzing your feedback in
 &lt;a href="https://github.com/kiwitcms/Kiwi/issues/657"&gt;Issue #657&lt;/a&gt; here's what we came up
