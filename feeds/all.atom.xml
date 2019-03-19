@@ -1,5 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-03-13T07:27:00+02:00</updated><entry><title>Taking the lead at OpenExpo Europe CfP votes</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/" rel="alternate"></link><published>2019-03-13T07:27:00+02:00</published><updated>2019-03-13T07:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-13:/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/vote_openexpo19.jpg"
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-03-19T22:40:00+02:00</updated><entry><title>Kiwi TCMS 6.6</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="alternate"></link><published>2019-03-19T22:40:00+02:00</published><updated>2019-03-19T22:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-19:/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.6! This is a
+medium severity security update, improvement and bug-fix update.
+You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.6! This is a
+medium severity security update, improvement and bug-fix update.
+You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  c4734f98ca37    971.3 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-5-3"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.5.3&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Explicitly require marked v0.6.1 to fix medium severity ReDoS vulnerability. See
+&lt;a class="reference external" href="https://snyk.io/vuln/SNYK-JS-MARKED-73637"&gt;SNYK-JS-MARKED-73637&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;python-gitlab&lt;/span&gt;&lt;/tt&gt; from 1.7.0 to 1.8.0&lt;/li&gt;
+&lt;li&gt;Update &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-contrib-comments&lt;/span&gt;&lt;/tt&gt; from 1.9.0 to 1.9.1&lt;/li&gt;
+&lt;li&gt;More strings marked as translatable (Christophe CHAUVET)&lt;/li&gt;
+&lt;li&gt;When creating new TestCase you can now change notification settings.
+Previously this was only possible during editing&lt;/li&gt;
+&lt;li&gt;Document import-export approaches. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/795"&gt;Issue #795&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Document available test automation plugins&lt;/li&gt;
+&lt;li&gt;Improve documentation around Docker customization and SSL termination&lt;/li&gt;
+&lt;li&gt;Add documentation example of reverse rroxy configuration for HAProxy (Nicolas Auvray)&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestPlan.add_case()&lt;/tt&gt; will now set the sortkey to highest in plan + 10 (Rik)&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;LinkOnly&lt;/tt&gt; issue tracker. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/289"&gt;Issue #289&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use the same HTML template for both TestCase new &amp;amp; edit&lt;/li&gt;
+&lt;li&gt;New API methods for adding, removing and listing attachments. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/446"&gt;Issue #446&lt;/a&gt;:&lt;ul&gt;
+&lt;li&gt;TestPlan.add_attachment()&lt;/li&gt;
+&lt;li&gt;TestCase.add_attachment()&lt;/li&gt;
+&lt;li&gt;TestPlan.list_attachments()&lt;/li&gt;
+&lt;li&gt;TestCase.list_attachments()&lt;/li&gt;
+&lt;li&gt;Attachments.remove_attachment()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database-migrations"&gt;
+&lt;h3&gt;Database migrations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Populate missing &lt;tt class="docutils literal"&gt;TestCase.text&lt;/tt&gt; history.
+In version 6.5 the &lt;tt class="docutils literal"&gt;TestCase&lt;/tt&gt; model was updated to store the text
+into a single field called &lt;tt class="docutils literal"&gt;text&lt;/tt&gt; instead of 4 separate fields.
+During that migration historical records were updated to have
+the new &lt;tt class="docutils literal"&gt;text&lt;/tt&gt; field but values were not properly assigned.&lt;/p&gt;
+&lt;p&gt;The &amp;quot;effect&amp;quot; of this is that in TestCaseRun records you were not
+able to see the actual text b/c it was None.&lt;/p&gt;
+&lt;p&gt;This change ammends &lt;tt class="docutils literal"&gt;0006_merge_text_field_into_testcase_model&lt;/tt&gt; for
+installations which have not yet migrated to 6.5 or later. We also
+provide the data-only migration &lt;tt class="docutils literal"&gt;0009_populate_missing_text_history&lt;/tt&gt;
+which will inspect the current state of the DB and copy the text to
+the last historical record.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="removed-functionality"&gt;
+&lt;h3&gt;Removed functionality&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove legacy reports. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/657"&gt;Issue #657&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove &amp;quot;Save &amp;amp; Continue&amp;quot; functionality from TestCase edit page&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Renamed API methods:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCaseRun.add_log()&lt;/tt&gt;    -&amp;gt; &lt;tt class="docutils literal"&gt;TestCaseRun.add_link()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCaseRun.remove_log()&lt;/tt&gt; -&amp;gt; &lt;tt class="docutils literal"&gt;TestCaseRun.remove_link()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCaseRun.get_logs()&lt;/tt&gt;   -&amp;gt; &lt;tt class="docutils literal"&gt;TestCaseRun.get_links()&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These methods work with URL links, which can be added or removed to
+test case runs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove hard-coded timestamp in TestCase page template, References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/765"&gt;Issue #765&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix handling of &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;?from_plan&lt;/span&gt;&lt;/tt&gt; URL parameter in TestCase page&lt;/li&gt;
+&lt;li&gt;Make &lt;tt class="docutils literal"&gt;TestCase.text&lt;/tt&gt; occupy 100% width when rendered. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/798"&gt;Issue #798&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enable &lt;tt class="docutils literal"&gt;markdown.extensions.tables&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/816"&gt;Issue #816&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Handle form erros and default values for TestPlan new/edit. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/864"&gt;Issue #864&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tests + fix for failing TestCase rendering in French&lt;/li&gt;
+&lt;li&gt;Show color-coded statuses on dashboard page when seen with non-English
+language&lt;/li&gt;
+&lt;li&gt;Refactor check for confirmed test cases when editting to work with
+translations&lt;/li&gt;
+&lt;li&gt;Fix form values when filtering test cases inside TestPlan. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/674"&gt;Issue #674&lt;/a&gt; (&amp;#64;marion2016)&lt;/li&gt;
+&lt;li&gt;Show delete icon for attachments. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/847"&gt;Issue #847&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;.current_user&lt;/tt&gt; instance attribute&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;EditCaseForm&lt;/tt&gt; and use &lt;tt class="docutils literal"&gt;NewCaseForm&lt;/tt&gt; instead, References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/708"&gt;Issue #708&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/812"&gt;Issue #812&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &amp;quot;Select All&amp;quot; checkbox. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/828"&gt;Issue #828&lt;/a&gt; (Rady)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Changed misspelled source string &lt;tt class="docutils literal"&gt;Requirments&lt;/tt&gt; -&amp;gt; &lt;tt class="docutils literal"&gt;Requirements&lt;/tt&gt; (&amp;#64;Prome88)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Taking the lead at OpenExpo Europe CfP votes</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/" rel="alternate"></link><published>2019-03-13T07:27:00+02:00</published><updated>2019-03-13T07:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-13:/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/vote_openexpo19.jpg"
      alt="Vote for Kiwi TCMS at OpenExpo"
      style="float: none"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that Anton Sankov and Alex Todorov are currently taking
