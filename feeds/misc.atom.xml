@@ -1,5 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-03-19T22:40:00+02:00</updated><entry><title>Kiwi TCMS 6.6</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="alternate"></link><published>2019-03-19T22:40:00+02:00</published><updated>2019-03-19T22:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-19:/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.6! This is a
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-04-06T17:15:00+03:00</updated><entry><title>Kiwi TCMS 6.7</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="alternate"></link><published>2019-04-06T17:15:00+03:00</published><updated>2019-04-06T17:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-04-06:/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.7!
+This is a small improvement and bug-fix update.
+You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.7!
+This is a small improvement and bug-fix update.
+You can explore everything at
+&lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  702a78976de7    993.5 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-6"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.6&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 2.1.7 to 2.2&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.0.1 to 3.1&lt;/li&gt;
+&lt;li&gt;Update psycopg2 from 2.7.7 to 2.8&lt;/li&gt;
+&lt;li&gt;Update pygithub from 1.43.5 to 1.43.6&lt;/li&gt;
+&lt;li&gt;Update bleach-whitelist from 0.0.9 to 0.0.10&lt;/li&gt;
+&lt;li&gt;Update marked(.js) to version 0.6.2&lt;/li&gt;
+&lt;li&gt;Support arbitrary depth for &lt;tt class="docutils literal"&gt;MENU_ITEMS&lt;/tt&gt; setting&lt;/li&gt;
+&lt;li&gt;Support auto-discovery of 3rd party Telemetry plugins, see
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/telemetry/index.html"&gt;documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database-migrations"&gt;
+&lt;h3&gt;Database migrations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Rename &lt;tt class="docutils literal"&gt;TestCaseRun&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;TestExecution&lt;/tt&gt; including renaming existing
+permissions&lt;/li&gt;
+&lt;li&gt;Rename &lt;tt class="docutils literal"&gt;TestCaseRunStatus&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;TestExecutionStatus&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Rename &lt;tt class="docutils literal"&gt;TestCaseRun.*&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;TestExecution.*&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Rename &lt;tt class="docutils literal"&gt;TestCaseRunStatus.*&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;TestExecution.*&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;This version keeps the old names for backwards compatibility reasons but they
+will be removed in
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/889"&gt;Issue #889&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Prompt user before deleting attachments. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/867"&gt;Issue #867&lt;/a&gt; (Martin Jordanov)&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;email_case_deletion()&lt;/tt&gt; format error fixed so notifications when
+test cases are deleted are not sent (Rik)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove unused images&lt;/li&gt;
+&lt;li&gt;Install &lt;tt class="docutils literal"&gt;node_modules/&lt;/tt&gt; under &lt;tt class="docutils literal"&gt;tcms/&lt;/tt&gt; and include it inside PyPI tarball&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="native-junit-5-plugin"&gt;
+&lt;h2&gt;Native JUnit 5 plugin&lt;/h2&gt;
+&lt;p&gt;Our team is happy to announce the availability of
+&lt;a class="reference external" href="https://github.com/kiwitcms/junit-plugin/"&gt;kiwitcms-junit-plugin&lt;/a&gt;.
+This is a native JUnit 5 plugin which will read the results from your
+automated test suite and send them back to Kiwi TCMS.&lt;/p&gt;
+&lt;p&gt;Version 1.0.3 and the latest changes in master branch are still to be considered
+Beta quality. They are available for early preview and feedback.&lt;/p&gt;
+&lt;p&gt;Many thanks to &lt;a class="reference external" href="https://github.com/apetkova"&gt;Aneta Petkova&lt;/a&gt; who is the
+main contributor behind this plugin!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Kiwi TCMS 6.6</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="alternate"></link><published>2019-03-19T22:40:00+02:00</published><updated>2019-03-19T22:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-19:/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.6! This is a
 medium severity security update, improvement and bug-fix update.
 You can explore everything at
 &lt;a class="reference external" href="https://demo.kiwitcms.org/login/github/"&gt;https://demo.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
