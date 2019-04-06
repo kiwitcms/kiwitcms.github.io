@@ -1,0 +1,132 @@
+Kiwi TCMS 6.7
+#############
+
+:headline: improvements and bug fixes
+:date: 2019-04-06 17:15
+:comments: true
+
+
+We're happy to announce Kiwi TCMS version 6.7!
+This is a small improvement and bug-fix update.
+You can explore everything at
+`https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_!
+
+Supported upgrade paths::
+
+    5.3   (or older) -> 5.3.1
+    5.3.1 (or newer) -> 6.0.1
+    6.0.1            -> 6.1
+    6.1              -> 6.1.1
+    6.1.1            -> 6.2 (or newer)
+
+Docker images::
+
+    kiwitcms/kiwi       latest  702a78976de7    993.5 MB
+    kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+    kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+    kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+    kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+
+
+Changes since Kiwi TCMS 6.6
+---------------------------
+
+Improvements
+~~~~~~~~~~~~
+
+- Update Django from 2.1.7 to 2.2
+- Update markdown from 3.0.1 to 3.1
+- Update psycopg2 from 2.7.7 to 2.8
+- Update pygithub from 1.43.5 to 1.43.6
+- Update bleach-whitelist from 0.0.9 to 0.0.10
+- Update marked(.js) to version 0.6.2
+- Support arbitrary depth for ``MENU_ITEMS`` setting
+- Support auto-discovery of 3rd party Telemetry plugins, see
+  `documentation <https://kiwitcms.readthedocs.io/en/latest/telemetry/index.html>`_
+
+
+Database migrations
+~~~~~~~~~~~~~~~~~~~
+
+- Rename ``TestCaseRun`` to ``TestExecution`` including renaming existing
+  permissions
+- Rename ``TestCaseRunStatus`` to ``TestExecutionStatus``
+
+
+API
+~~~
+
+- Rename ``TestCaseRun.*`` to ``TestExecution.*``
+- Rename ``TestCaseRunStatus.*`` to ``TestExecution.*``
+- This version keeps the old names for backwards compatibility reasons but they
+  will be removed in
+  `Issue #889 <https://github.com/kiwitcms/Kiwi/issues/889>`_
+
+
+Bug fixes
+~~~~~~~~~
+
+- Prompt user before deleting attachments. Fixes
+  `Issue #867 <https://github.com/kiwitcms/Kiwi/issues/867>`_ (Martin Jordanov)
+- ``email_case_deletion()`` format error fixed so notifications when
+  test cases are deleted are not sent (Rik)
+
+
+Refactoring
+~~~~~~~~~~~
+
+- Remove unused images
+- Install ``node_modules/`` under ``tcms/`` and include it inside PyPI tarball
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Slovenian translation <https://crowdin.com/project/kiwitcms/sl#>`_
+
+
+Native JUnit 5 plugin
+---------------------
+
+Our team is happy to announce the availability of
+`kiwitcms-junit-plugin <https://github.com/kiwitcms/junit-plugin/>`_.
+This is a native JUnit 5 plugin which will read the results from your
+automated test suite and send them back to Kiwi TCMS.
+
+Version 1.0.3 and the latest changes in master branch are still to be considered
+Beta quality. They are available for early preview and feedback.
+
+Many thanks to `Aneta Petkova <https://github.com/apetkova>`_ who is the
+main contributor behind this plugin!
+
+
+How to upgrade
+---------------
+
+If you are using Kiwi TCMS as a Docker container then::
+
+    cd Kiwi/
+    git pull
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker pull centos/mariadb
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
+before upgrade!
+
+**WARNING:** ``kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow::
+
+    # starting from an older Kiwi TCMS version
+    docker-compose down
+    docker pull kiwitcms/kiwi:<next_upgrade_version>
+    edit docker-compose.yml to use kiwitcms/kiwi:<next_upgrade_version>
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+    # repeat until you have reached latest
+
+Happy testing!
