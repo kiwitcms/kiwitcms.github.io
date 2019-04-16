@@ -14,7 +14,7 @@ to 26.9% of technical debt or 10 months to fix.
 
 We've pushed the new `kiwitcms/kiwi` docker image to Docker Hub and updated the
 demo instance at
-[https://demo.kiwitcms.org](https://demo.kiwitcms.org/login/github/).
+[https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/).
 Starting forward the demo will use
 the `info-at-kiwitcms.org` email address for all communication sent. There are real
 people behind this address so if you write to us we will reply!

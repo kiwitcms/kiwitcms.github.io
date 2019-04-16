@@ -70,9 +70,9 @@ my managers, stakeholders and/or customers. The page needs to be printer friendl
 “Print to PDF” or print on paper!
 
 Kiwi TCMS already has this feature. Clicking the `[Report]` button
-in the progress widget at [TR-625](https://demo.kiwitcms.org/runs/625/) presents
+in the progress widget at [TR-625](https://public.tenant.kiwitcms.org/runs/625/) presents
 TestRun execution information in a simplified format found at
-[TR-625/Report](https://demo.kiwitcms.org/runs/625/report/).
+[TR-625/Report](https://public.tenant.kiwitcms.org/runs/625/report/).
 In order to improve the current implementation:
 
 * Convert TestRun page to Patternfly which generally prints better

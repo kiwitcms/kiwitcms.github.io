@@ -20,7 +20,7 @@ adds test cases to test run (250 requests) and finally updates the statuses
 (250 requests).
 
 A total of 1003 API requests are sent to Kiwi TCMS every time you start this script!
-An example is available at [TR #567](https://demo.kiwitcms.org/run/567/)!
+An example is available at [TR #567](https://public.tenant.kiwitcms.org/run/567/)!
 
 On localhost, running the development server (`./manage.py runserver`) with an
 SQLite database I got:
@@ -53,7 +53,7 @@ SQLite database I got:
 This measures at 120 msec/req or 7.85 req/sec!
 
 
-[demo.kiwitcms.org](https://demo.kiwitcms.org/login/github/) is running on an
+[public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/) is running on an
 [AWS t2.micro](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware)
 instance (via docker-compose) with the default `centos/mariadb` image!
 No extra settings or changes. I used the same computer over a WiFi

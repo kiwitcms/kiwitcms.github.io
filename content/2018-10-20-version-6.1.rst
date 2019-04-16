@@ -11,7 +11,7 @@ introduces new database migrations,
 internal updates and bug fixes. It is a small release designed
 to minimize the number of database migrations by squashing them together.
 You can explore everything at
-`https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_.
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_.
 
 
 **NOTE:** there is the 6.0.1 release which resolves an upgrade problem
@@ -109,7 +109,7 @@ Subscription based online service
 ---------------------------------
 
 We are planning to convert
-`https://demo.kiwitcms.org <https://demo.kiwitcms.org/login/github/>`_ into
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_ into
 a subscription based service for people who don't want to bother installing
 Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.

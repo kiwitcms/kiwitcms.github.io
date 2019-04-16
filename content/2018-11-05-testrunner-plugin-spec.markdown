@@ -43,7 +43,7 @@ established by the testing framework in question. You will also have to create
 a test suite for your plugin based on the specification below.
 
 You are expected to use
-[demo.kiwitcms.org](https://demo.kiwitcms.org/login/github/) while working on the
+[public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/) while working on the
 plugin and afterwards. This is known as eating your own dog food!
 
 For Python we provide the `tcms-api` module which already takes care of the
