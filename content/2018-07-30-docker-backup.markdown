@@ -39,6 +39,43 @@ DB schema (`/Kiwi/manage.py migrate`) before restoring the contents!
 versions `manage.py` will fail due to various issues.
 
 
+Backing up multi-tenant database
+--------------------------------
+
+The [kiwitcms-tenant](https://github.com/kiwitcms/tenants) add-on depends on the
+PostgreSQL database. It will create multiple DB schemas, one per tenant. To backup
+all tenants use the following command:
+
+    docker exec -i kiwi_db /bin/bash -c 'pg_dump --dbname=kiwi -F c' > backup.bak
+
+This will create a file in the PostgreSQL custom database dump format which
+contains all data and schema definitions. That is a binary file which can be read
+with the `pg_restore` command.
+
+To [drop and] restore the entire multi-tenant database:
+
+    docker volume rm kiwi_db_data
+    cat backup.bak | docker exec -i kiwi_db /bin/bash -c 'pg_restore --dbname=kiwi -v'
+
+
+To [drop and] restore an individual tenant:
+
+    docker exec -it kiwi_web /Kiwi/manage.py dbshell
+    
+    kiwi=> DROP SCHEMA $tenant_name CASCADE;
+    ....
+    DROP SCHEMA
+    kiwi=> CREATE SCHEMA $tenant_name;
+    CREATE SCHEMA
+    kiwi=>Ctrl+D
+    
+    cat backup.bak | docker exec -i kiwi_db /bin/bash -c 'pg_restore --dbname=kiwi -v --schema $tenant_name'
+
+
+**WARNING:** `sqlflush | dbshell` will not work when you have multiple DB schemas so you must use
+the PostgreSQL database shell to manipulate the contents of the database!
+
+
 Backing up file uploads
 -----------------------
 
@@ -55,6 +92,14 @@ by default!
 
 The same approach may be used to backup `/var/lib/mysql/` from the `kiwi_db`
 container.
+
+Backing up multi-tenant uploads
+-------------------------------
+
+By default multi-tenant file uploads are stored under `/Kiwi/uploads/tenant/$tenant_name`.
+You can archive all contents with the same procedure above. If you wish to restore
+files per tenant you will have to upload the `$tenant_name` directory into the
+docker volume.
 
 
 Alternatives
