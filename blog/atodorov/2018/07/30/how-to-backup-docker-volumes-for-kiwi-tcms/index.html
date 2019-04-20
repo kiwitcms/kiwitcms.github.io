@@ -105,6 +105,39 @@ cat database.json | docker exec -i kiwi_web /Kiwi/manage.py loaddata --format js
 DB schema (<code>/Kiwi/manage.py migrate</code>) before restoring the contents!</p>
 <p><strong>WARNING</strong>: the above steps are applicable to Kiwi TCMS 5.1 or above. On earlier
 versions <code>manage.py</code> will fail due to various issues.</p>
+<h2>Backing up multi-tenant database</h2>
+<p>The <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenant</a> add-on depends on the
+PostgreSQL database. It will create multiple DB schemas, one per tenant. To backup
+all tenants use the following command:</p>
+<div class="highlight"><pre><span></span>docker exec -i kiwi_db /bin/bash -c &#39;pg_dump --dbname=kiwi -F c&#39; &gt; backup.bak
+</pre></div>
+
+
+<p>This will create a file in the PostgreSQL custom database dump format which
+contains all data and schema definitions. That is a binary file which can be read
+with the <code>pg_restore</code> command.</p>
+<p>To [drop and] restore the entire multi-tenant database:</p>
+<div class="highlight"><pre><span></span>docker volume rm kiwi_db_data
+cat backup.bak | docker exec -i kiwi_db /bin/bash -c &#39;pg_restore --dbname=kiwi -v&#39;
+</pre></div>
+
+
+<p>To [drop and] restore an individual tenant:</p>
+<div class="highlight"><pre><span></span>docker exec -it kiwi_web /Kiwi/manage.py dbshell
+
+kiwi=&gt; DROP SCHEMA $tenant_name CASCADE;
+....
+DROP SCHEMA
+kiwi=&gt; CREATE SCHEMA $tenant_name;
+CREATE SCHEMA
+kiwi=&gt;Ctrl+D
+
+cat backup.bak | docker exec -i kiwi_db /bin/bash -c &#39;pg_restore --dbname=kiwi -v --schema $tenant_name&#39;
+</pre></div>
+
+
+<p><strong>WARNING:</strong> <code>sqlflush | dbshell</code> will not work when you have multiple DB schemas so you must use
+the PostgreSQL database shell to manipulate the contents of the database!</p>
 <h2>Backing up file uploads</h2>
 <p>Uploaded files can easily be backed up with:</p>
 <div class="highlight"><pre><span></span>docker exec -it kiwi_web /bin/tar -cP /Kiwi/uploads &gt; uploads.tar
@@ -120,6 +153,11 @@ versions <code>manage.py</code> will fail due to various issues.</p>
 by default!</p>
 <p>The same approach may be used to backup <code>/var/lib/mysql/</code> from the <code>kiwi_db</code>
 container.</p>
+<h2>Backing up multi-tenant uploads</h2>
+<p>By default multi-tenant file uploads are stored under <code>/Kiwi/uploads/tenant/$tenant_name</code>.
+You can archive all contents with the same procedure above. If you wish to restore
+files per tenant you will have to upload the <code>$tenant_name</code> directory into the
+docker volume.</p>
 <h2>Alternatives</h2>
 <p>By default both docker volumes created for Kiwi TCMS use the <code>local</code> driver
 and are available under <code>/var/lib/docker/volumes/&lt;volume_name&gt;</code> on the host
