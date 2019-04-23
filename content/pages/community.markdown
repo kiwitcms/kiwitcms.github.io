@@ -4,18 +4,10 @@ save_as: community/index.html
 
 # Community
 
-Kiwi TCMS is developed in the open. Here are our communication channels in order of preference:
-
-**Stack Overflow:** Tag questions with ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms) tag
-
-**Issue tracker:** Use the GitHub [issue tracker](https://github.com/kiwitcms/Kiwi/issues) to file bugs and features request.
-
-**Twitter:** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
-
-**Email:** `info-at-kiwitcms.org`
-
-_Please do not ask individual project members for support. Use the channels above instead, where the whole community can help you and benefit from the solutions provided. If community support is insufficient for your situation, please refer to the Commercial Support section below._
-
+- **Stack Overflow** tag ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms)
+- **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
+- **Twitter** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
+- **Email** `info-at-kiwitcms.org` (not for support requests)
 
 # Contributing
 
@@ -24,12 +16,6 @@ We welcome community contributions! Please see the [contribution page](http://ki
 # Code of Conduct
 
 To make Kiwi TCMS a welcoming and harassment-free experience for everyone, we follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
-
-# Commercial Support
-
-This is a list of third-party companies and individuals who provide products or services related to Kiwi TCMS. Kiwi TCMS is an independent open source project which does not endorse any company.
-
-- [Mr. Senko](http://mrsenko.com/)
 
 # Acknowledgements
 
