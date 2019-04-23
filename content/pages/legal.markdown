@@ -21,6 +21,16 @@ Project infrastructure is sponsored and maintained by:
 * VAT number: BG200601818
 
 
-Demo accounts are removed after 90 days of inactivity. This applies to
-users who have not logged in during that period and users who never confirmed
-their accounts! The account info is not shared with any 3rd parties!
+Privacy policy
+==============
+
+Public tenant accounts and all of their data are removed after 90 days of
+inactivity. This applies to users who have not logged in during that period
+and users who never confirmed their accounts!
+
+Private tenant accounts and all of their data are removed within 30 days of
+cancelling their subscription, as per
+[GitHub Marketplace requirements](https://developer.github.com/marketplace/integrating-with-the-github-marketplace-api/cancelling-plans/).
+
+
+Account info is not shared with 3rd parties!
