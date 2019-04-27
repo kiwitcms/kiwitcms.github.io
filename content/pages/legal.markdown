@@ -24,12 +24,13 @@ Project infrastructure is sponsored and maintained by:
 Privacy policy
 ==============
 
-Public tenant accounts and all of their data are removed after 90 days of
+Public Tenant accounts and all of their data are removed after 90 days of
 inactivity. This applies to users who have not logged in during that period
 and users who never confirmed their accounts!
 
-Private tenant accounts and all of their data are removed within 30 days of
-cancelling their subscription, as per
+FREE Public Tenant and Private Tenant accounts and all of their data
+are removed within 30 days of cancelling their GitHub Marketplace subscription,
+as per
 [GitHub Marketplace requirements](https://developer.github.com/marketplace/integrating-with-the-github-marketplace-api/cancelling-plans/).
 
 
