@@ -38,7 +38,10 @@ a {
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3, .w25 {width: 25%;}
-.col-4, .w33 {width: 33.33%;}
+.col-4, .w33 {
+    width: 30%;
+    max-width: 33.33%;
+}
 .col-5, .w41 {width: 41.66%;}
 .col-6, .w50 {width: 50%;}
 .col-7 {width: 58.33%;}
@@ -517,6 +520,23 @@ pre code {
 }
 
 
+.box {
+    border-radius: 0.5rem;
+    border: solid 0.1rem rgba(144, 144, 144, 0.25);
+    margin-bottom: 3rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.box h4 {
+    text-transform: uppercase;
+}
+
+.box div ul {
+    margin-top: 2rem;
+}
+
 @media screen and (max-width: 1360px){
     /* navigation section */
     ul.topnav li [name="q"] {
@@ -573,6 +593,12 @@ pre code {
     /*navigation section*/
     nav img {
         max-width: 30%;
+    }
+
+
+    .box {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
