@@ -1,5 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-04-06T17:15:00+03:00</updated><entry><title>Kiwi TCMS 6.7</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="alternate"></link><published>2019-04-06T17:15:00+03:00</published><updated>2019-04-06T17:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-04-06:/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.7!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-05-03T13:45:00+03:00</updated><entry><title>Kiwi TCMS 6.8</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="alternate"></link><published>2019-05-03T13:45:00+03:00</published><updated>2019-05-03T13:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-03:/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.8!
+This is a small improvement and bug-fix update.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.8!
+This is a small improvement and bug-fix update.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  fca095f95475    994.8 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-7"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.7&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 2.2 to 2.2.1&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 2.7.0 to 2.7.2&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 2.12.2 to 2.12.3&lt;/li&gt;
+&lt;li&gt;Update psycopg2 from 2.8 to 2.8.2&lt;/li&gt;
+&lt;li&gt;Update pygithub from 1.43.6 to 1.43.7&lt;/li&gt;
+&lt;li&gt;Upgrade pip and setuptools inside Docker image&lt;/li&gt;
+&lt;li&gt;Update documentation with newer screenshots and updated Tutotial. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/837/"&gt;Issue #837&lt;/a&gt; (&amp;#64;Prome88)&lt;/li&gt;
+&lt;li&gt;Document how to enable public read-only views&lt;/li&gt;
+&lt;li&gt;Remove deprecated documentation section about Bugzilla authentication&lt;/li&gt;
+&lt;li&gt;Install PostgreSQL libraries in Docker image which makes it easier to
+switch the DB backend without rebuilding the entire image&lt;/li&gt;
+&lt;li&gt;Remove npm, libxml2-devel and libxslt-devel from Docker image&lt;/li&gt;
+&lt;li&gt;Database engine configuration now respects the &lt;tt class="docutils literal"&gt;KIWI_DB_ENGINE&lt;/tt&gt; environment
+variable which defaults to &lt;tt class="docutils literal"&gt;django.db.backends.mysql&lt;/tt&gt;. This will make it
+easier for admins to change DB engine by updating their &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pin bootstrap-switch to version 3.3.4 in &lt;tt class="docutils literal"&gt;package.json&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/916/"&gt;Issue #916&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;New language &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#"&gt;Russian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;New language &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/cz#"&gt;Czech&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Don't use &lt;tt class="docutils literal"&gt;Site.objects.get_current()&lt;/tt&gt; because it has an internal cache
+and causes email notifications from tenants to use the wrong URL&lt;/li&gt;
+&lt;li&gt;More changes around renaming of TestCaseRun to TestExecution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="github-marketplace"&gt;
+&lt;h2&gt;GitHub Marketplace&lt;/h2&gt;
+&lt;p&gt;During the past week we have silently launched Kiwi TCMS on
+&lt;a class="reference external" href="https://github.com/marketplace/kiwi-tcms/"&gt;GitHub Marketplace&lt;/a&gt;. Free plans
+will be redirected to
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;public.tenant.kiwitcms.org&lt;/a&gt;
+while paid plans will be hosted under &lt;tt class="docutils literal"&gt;*.tenant.kiwitcms.org&lt;/tt&gt; sub-domains!&lt;/p&gt;
+&lt;p&gt;Our team is still working on all requirements for GitHub integration and we will
+issue a formal statement when ready!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Kiwi TCMS 6.7</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="alternate"></link><published>2019-04-06T17:15:00+03:00</published><updated>2019-04-06T17:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-04-06:/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.7!
 This is a small improvement and bug-fix update.
 You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;

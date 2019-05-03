@@ -46,6 +46,129 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="bookmark" title="Permalink to Kiwi TCMS 6.8">
+                <h1 class="top-header">Kiwi TCMS 6.8</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Fri 03 May 2019
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 6.8!
+This is a small improvement and bug-fix update.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  fca095f95475    994.8 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-7">
+<h2>Changes since Kiwi TCMS 6.7</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 2.2 to 2.2.1</li>
+<li>Update django-simple-history from 2.7.0 to 2.7.2</li>
+<li>Update django-grappelli from 2.12.2 to 2.12.3</li>
+<li>Update psycopg2 from 2.8 to 2.8.2</li>
+<li>Update pygithub from 1.43.6 to 1.43.7</li>
+<li>Upgrade pip and setuptools inside Docker image</li>
+<li>Update documentation with newer screenshots and updated Tutotial. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/837/">Issue #837</a> (&#64;Prome88)</li>
+<li>Document how to enable public read-only views</li>
+<li>Remove deprecated documentation section about Bugzilla authentication</li>
+<li>Install PostgreSQL libraries in Docker image which makes it easier to
+switch the DB backend without rebuilding the entire image</li>
+<li>Remove npm, libxml2-devel and libxslt-devel from Docker image</li>
+<li>Database engine configuration now respects the <tt class="docutils literal">KIWI_DB_ENGINE</tt> environment
+variable which defaults to <tt class="docutils literal">django.db.backends.mysql</tt>. This will make it
+easier for admins to change DB engine by updating their <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Pin bootstrap-switch to version 3.3.4 in <tt class="docutils literal">package.json</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/916/">Issue #916</a></li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>New language <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian</a></li>
+<li>New language <a class="reference external" href="https://crowdin.com/project/kiwitcms/cz#">Czech</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Don't use <tt class="docutils literal">Site.objects.get_current()</tt> because it has an internal cache
+and causes email notifications from tenants to use the wrong URL</li>
+<li>More changes around renaming of TestCaseRun to TestExecution</li>
+</ul>
+</div>
+</div>
+<div class="section" id="github-marketplace">
+<h2>GitHub Marketplace</h2>
+<p>During the past week we have silently launched Kiwi TCMS on
+<a class="reference external" href="https://github.com/marketplace/kiwi-tcms/">GitHub Marketplace</a>. Free plans
+will be redirected to
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">public.tenant.kiwitcms.org</a>
+while paid plans will be hosted under <tt class="docutils literal">*.tenant.kiwitcms.org</tt> sub-domains!</p>
+<p>Our team is still working on all requirements for GitHub integration and we will
+issue a formal statement when ready!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="bookmark" title="Permalink to Kiwi TCMS 6.7">
                 <h1 class="top-header">Kiwi TCMS 6.7</h1>
             </a>
@@ -2761,92 +2884,6 @@ Test runs should only be able to select product builds (after
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
 </div>
 
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/" rel="bookmark" title="Permalink to Kiwi TCMS team updates">
-                <h1 class="top-header">Kiwi TCMS team updates</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-                on Fri 12 October 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>I am happy to announce that <a href="http://kiwitcms.org/team/">our team</a> is steadily growing!
-As we work through our <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>,
-<a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">status update here</a>, and
-on-board new team members I start to feel the need for a bit more structure
-and organization behind the scenes. I also wish for consistent contributions
-to the project (commit early, commit often) so I can better estimate the resources
-that we have!</p>
-<p>I am also actively discussing Kiwi TCMS with lots of people at various conferences
-and generate many ideas for the future. The latest SEETEST in Belgrade was particularly
-fruitful. Some of these ideas are pulling into different directions and I need help
-to keep them under control!</p>
-<p>Development-wise sometimes I lose track of what's going on and who's doing what between
-working on Kiwi TCMS, preparing for conferences and venues to promote the project,
-doing code review of other team members, trying not to forget to check-in on
-progress (especially by interns), recruiting fresh blood and thinking about
-the overall future of the project. Our user base is growing and there are days
-where I feel like everything is happening at once or that something
-needs to be implemented ASAP (which is usually true anyway)!</p>
-<p><img class="rounded" src="/images/team/rstankova.jpg"></p>
-<p>Meet Rayna Stankova in the role of our team coach!
-Reny is a director for Women Who Code Sofia, senior QA engineer at VMware,
-mentor with CoderDojo Bulgaria and a long-time friend of mine.
-Although she is an experienced QA in her own right she will be contributing
-to the people side of Kiwi TCMS and less so technically!</p>
-<p>Her working areas will be planning and organization:</p>
-<ul>
-<li>help us (re)define the project vision and goals</li>
-<li>work with us on roadmaps and action plans so we can meet
-  the project goals faster</li>
-<li>help us (self) organize so that we are more efficient,
-  including checking progress and blockers (aka enforcer) and
-  meet the aforementioned consistency point</li>
-<li>serve as our professional coach, motivator and somebody who will
-  take care of team health (yes I really suck at motivating others)</li>
-</ul>
-<p>and generally serving as another very experienced member of the team!</p>
-<p>We did a quick brainstorming yesterday and started to produce results
-(#smileyface)! We do have a team docs space to share information
-(non-public for now, will open it gradually as we grow) and came up
-with the idea to use Kiwi TCMS as a check-list for our on-boarding/internship
-process!</p>
-<p>I don't know how it will play out but I do expect from the
-team to self-improve, be inspired, become more focused and more productive!
-<strong>All of this also applies to myself, even more so!</strong></p>
-<h2>Existing team members progress</h2>
-<p>Last year we started with 2 existing team members (Tony and myself) and 3
-new interns (Ivo, Kaloyan and Tseko) who built this website!</p>
-<p>Tony is the #4 contributor to Kiwi TCMS in
-terms of <a href="https://github.com/kiwitcms/Kiwi/graphs/contributors">number of commits</a>
-and is on track to surpass one of the original authors (before Kiwi TCMS was forked)!
-He's been working mostly on internal refactoring and resolving the thousands
-of pylint errors that we had (down to around 500 I think). This summer Tony and I
-visited the OSCAL conference in Tirana and hosted an info booth for the project.</p>
-<p>Ivo is the #5 contributor in terms of numbers of commits. He did learn very
-quickly and is working on getting rid of the remaining pylint errors. His ability
-to adapt and learn is quite impressive actually. Last month he co-hosted a
-git workshop at HackConf, a 1000+ people IT event in Sofia.</p>
-<p>Kaloyan did most of the work on our website initially (IIRC).
-Now he is studying in the Netherlands
-and not active on the project. We are working to reboot his on-boarding
-and I'm hoping he will find the time to contribute to Kiwi TCMS regularly.</p>
-<p>From the starting team only Tseko decided to move on to other ventures after
-he contributed to the website.</p>
-<h2>Internship program</h2>
-<p>At Kiwi TCMS we have a set of training
-programs that teach all the necessary technical skills before we let anyone
-actively work on the project, let alone become a team member.</p>
-<p>Our new interns are Denitsa Uzunova and Desislava Koleva. Both of them are
-coming from Vratsa Software Community and were mentors at the recently held
-CodeWeek hackathon in their home city! I wish them fast learning and good luck!</p>
-<p>Happy testing!</p>
         </div>
     </section>
 
