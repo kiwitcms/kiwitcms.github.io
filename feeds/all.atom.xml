@@ -1,5 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-05-03T13:45:00+03:00</updated><entry><title>Kiwi TCMS 6.8</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="alternate"></link><published>2019-05-03T13:45:00+03:00</published><updated>2019-05-03T13:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-03:/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.8!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-05-16T16:20:00+03:00</updated><entry><title>Kiwi TCMS 6.9</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="alternate"></link><published>2019-05-16T16:20:00+03:00</published><updated>2019-05-16T16:20:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-16:/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.9!
+This is a small improvement and bug-fix update which introduces
+our first telemetry report: testing breakdown. You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.9!
+This is a small improvement and bug-fix update which introduces
+our first telemetry report: testing breakdown. You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  a01eaeddf213    1.001 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-8"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.8&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update mysqlclient from 1.4.2 to 1.4.2.post1&lt;/li&gt;
+&lt;li&gt;Ship with prism.js so it can be used for syntax highlighting&lt;/li&gt;
+&lt;li&gt;Add Testing Breakdown telemetry&lt;/li&gt;
+&lt;li&gt;Mark more strings for translations&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;delete_user()&lt;/tt&gt; function which can delete data across
+Postgre schemas (if kiwitcms-tenants add-on is installed)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove deprecated &lt;tt class="docutils literal"&gt;TestCaseRun.&lt;/tt&gt; API methods. Use the new
+&lt;tt class="docutils literal"&gt;TestExecution.&lt;/tt&gt; methods introduced in v6.7. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/889/"&gt;Issue #889&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix typos in documentation (&amp;#64;Prome88)&lt;/li&gt;
+&lt;li&gt;Fix &lt;tt class="docutils literal"&gt;TemplateParseError&lt;/tt&gt; in email templates when removing test cases.
+On-delete email notification is now sent properly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add more tests around TestRun/TestExecution menu permissions&lt;/li&gt;
+&lt;li&gt;Minor pylint fixes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="join-us-at-openexpo-in-madrid"&gt;
+&lt;h2&gt;Join us at OpenExpo in Madrid&lt;/h2&gt;
+&lt;p&gt;Kiwi TCMS is exhibitor at &lt;a class="reference external" href="https://openexpoeurope.com/"&gt;OpenExpo Europe&lt;/a&gt;
+on June 20th in Madrid. We will be hosting an info booth and 2 technical
+presentations delivered by Anton Sankov and Alex Todorov.&lt;/p&gt;
+&lt;p&gt;Next week we are going to announce 100% discount tickets
+for our guests at the conference. If you are interested in coming
+&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;subscribe to our newsletter&lt;/a&gt;
+and don't miss the announcement!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Kiwi TCMS 6.8</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="alternate"></link><published>2019-05-03T13:45:00+03:00</published><updated>2019-05-03T13:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-03:/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.8!
 This is a small improvement and bug-fix update.
 You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
