@@ -2,7 +2,7 @@ Title: Test runner plugin specification
 date: 2018-11-05 16:05
 comments: true
 author: Alexander Todorov
-
+tags: plugins
 
 Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
 wish to create plugins for popular test runners that will record test results

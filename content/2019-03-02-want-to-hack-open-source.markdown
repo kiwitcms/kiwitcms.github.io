@@ -4,6 +4,7 @@ date: 2019-03-02 19:40
 comments: true
 og_image: images/team/hiring.png
 twitter_image: images/team/hiring.png
+tags: community, team
 
 <img src="/images/team/hiring_banner.png" style="float:none;clear-both;margin:0;max-width: 100%">
 

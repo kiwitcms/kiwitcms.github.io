@@ -4,6 +4,7 @@ comments: true
 og_image: images/roadmap.jpg
 twitter_image: images/roadmap.jpg
 author: Alexander Todorov
+tags: community
 
 Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our

@@ -3,7 +3,7 @@ headline: contributing more checkers for Kiwi TCMS
 date: 2019-05-25 14:27
 comments: true
 author: Alexander Todorov
-tags: events, community
+tags: community, events
 og_image: images/django_meetup.jpg
 twitter_image: images/django_meetup.jpg
 

@@ -4,6 +4,7 @@ date: 2018-10-11 11:53
 comments: true
 og_image: images/openfest2018_banner.png
 twitter_image: images/openfest2018_banner.png
+tags: community, events
 
 We are happy to announce that [OpenFest](http://www.openfest.org) - the biggest
 open source conference in Bulgaria has provided an info booth for our project.

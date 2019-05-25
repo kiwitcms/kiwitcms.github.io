@@ -5,7 +5,7 @@ comments: true
 author: Alexander Todorov
 og_image: images/plugins.png
 twitter_image: images/plugins.png
-tags: plugins
+tags: community, plugins
 
 In
 [release notes for v6.5]({filename}2019-02-01-version-6.5.rst)

@@ -5,6 +5,7 @@ comments: true
 author: Alexander Todorov
 og_image: images/team/banner.png
 twitter_image: images/team/banner.png
+tags: community, team
 
 I am happy to announce that [our team]({filename}pages/team.html) is steadily growing!
 As we work through our [roadmap]({filename}2018-01-22-milestones.markdown),

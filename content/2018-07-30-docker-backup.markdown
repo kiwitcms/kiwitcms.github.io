@@ -4,6 +4,7 @@ comments: true
 og_image: images/backup.png
 twitter_image: images/backup.png
 author: Alexander Todorov
+tags: customization
 
 
 When you start Kiwi TCMS by running `docker-compose up`
