@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Blog</title>
+        <title>Kiwi TCMS - Articles with tag releases</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- MailChimp Newsletter Form Styles -->
         <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
@@ -44,49 +44,6 @@
             </div>
         </nav>
         <!-- content -->
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/" rel="bookmark" title="Permalink to Pylint workshop with Django Bulgaria user group">
-                <h1 class="top-header">Pylint workshop with Django Bulgaria user group</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-                on Sat 25 May 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>On Tuesday I hosted my pylint workshop during the regular
-<a href="https://www.facebook.com/events/295673718035353/">Django Bulgaria meetup</a>.
-This edition was the first which was practice based.</p>
-<p>Attendance numbers were low but participation was very good. We managed to
-create 4 new checkers for Kiwi TCMS:</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/949">PR #949 - AutoField checker</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/950">PR #950 - OneToOneField checker</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/951">PR #951 - discover directories without __init__.py</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/952">PR #952 - empty class checker</a></li>
-</ul>
-<p>I am still waiting for a 5th pull request from one of the participants who
-decided to implement a more complex checker that will very likely land into
-pylint-django instead!</p>
-<p>Many thanks to all contributors. These new checkers have discovered quite a
-few new issues with Kiwi TCMS so this is an area which our team is going to improve.</p>
-<p>Those who missed the workshop will be able to catch up one of the next editions:</p>
-<ul>
-<li>26-29 August, GUADEC, Thessaloniki - TBC (presentation)</li>
-<li>end of September, Python meetup, Zagreb - TBA</li>
-<li>03-05 October, PyCon Balkan, Belgrade - TBC</li>
-<li>11-13 October, HackConf, Sofia</li>
-<li>15-17 October, TestCon Europe, Vilnius - TBC (backup presentation)</li>
-<li>23-25 October, Testwarez, Ossa, Poland - TBC (presentation)</li>
-<li>14-15 November, Software Engineering Conference Russia, Saint-Petersburg - TBC</li>
-<li>20-22 November, ConTEST, New York - TBC (workshop and/or presentation)</li>
-</ul>
-<p>Happy testing!</p>
-        </div>
-    </section>
     <section class="col-12 secondary">
         <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="bookmark" title="Permalink to Kiwi TCMS 6.9">
@@ -649,592 +606,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
     </section>
     <section class="col-12 secondary">
         <div class="header">
-            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/" rel="bookmark" title="Permalink to Taking the lead at OpenExpo Europe CfP votes">
-                <h1 class="top-header">Taking the lead at OpenExpo Europe CfP votes</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 13 March 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p><img src="/images/openexpo/vote_openexpo19.jpg"
-     alt="Vote for Kiwi TCMS at OpenExpo"
-     style="float: none"></p>
-<p>We are happy to announce that Anton Sankov and Alex Todorov are currently taking
-the lead at OpenExpo Europe's CfP votes!</p>
-<p>Going to OpenExpo will be huge boost for Kiwi TCMS so please help us make this happen!
-Voting is open until March 17th 2019! You can cast your vote via Facebook login
-but remember to confirm your email address!</p>
-<ul>
-<li>Vote for Alex'es
-  <a href="https://a.cstmapp.com/entries/29369/sort:votes/direction:desc">cyber security presentation</a></li>
-<li>Vote for Anton's
-  <a href="https://a.cstmapp.com/entries/30063/sort:votes/direction:desc">micro-services tech talk</a></li>
-<li>Vote for Alex'es
-  <a href="https://a.cstmapp.com/entries/30063/sort:votes/direction:desc">pylint plugins tech-talk</a>:
-  currently 3rd in the Open Source Tech Talks category</li>
-</ul>
-<p>Thanks you &amp; happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="bookmark" title="Permalink to Legacy reports become Telemetry">
-                <h1 class="top-header">Legacy reports become Telemetry</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Sun 03 March 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>As we've <a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">promised</a> Kiwi TCMS is
-starting work on improving the legacy reports functionality.
-After analyzing your feedback in
-<a href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a> here's what we came up
-with. <em>Note: screenshots below are mockups.</em></p>
-<h2>General tech specs</h2>
-<ul>
-<li>Once a self-contained tarball is installed inside the Docker image (or inside local virtualenv)
-  Kiwi TCMS will be able to find it automatically and update the menu options. Aka plugins.
-  No further configuration should be necessary other than providing the source code implementing
-  the new functionality</li>
-<li>Navigation menu will be able to support several layers of menus</li>
-<li>Where possible Telemetry pages will reuse existing HTML templates</li>
-<li>Telemetry data will be implemented as an RPC method that can be consumed by the front-end
-  via JSON-RPC</li>
-<li>Charts will be rendered in the browser with c3/d3,
-  see <a href="https://www.patternfly.org/pattern-library/data-visualization/area-chart/">Data Visualization</a></li>
-</ul>
-<h2>Feature: Rename TestCaseRun to TestExecution</h2>
-<p>Inside Kiwi TCMS the term "test case" is used to refer to specific scenario of
-testing steps. A "test run" is the collection of multiple "test cases" which
-will be executed against a particular product build and environment.</p>
-<p>The specific results are kept into what is now called "test case run". This will
-be renamed to "test execution" (internally <code>TestExecution</code> class) to make it more
-clear and easier to distinguish among other artifacts.</p>
-<h2>Feature: Better color coding for test execution status</h2>
-<p>As a webUI user I want to easily distinguish between PASSED, FAILED and other statuses
-when looking at charts and graphical visualizations.</p>
-<p><img src="/images/telemetry/tr_progress_bar.png" alt="TestRun progress" style="float: none"></p>
-<p>This feature request comes from the TestRun progress bar.
-Other charts should use the same 4 status categories and color coding standards:</p>
-<ul>
-<li>IDLE - <code>pf-black-600</code></li>
-<li>PASSED - <code>pf-green-400</code></li>
-<li>FAILED - <code>pf-red-100</code></li>
-<li>OTHER - <code>pf-orange-400</code>. This includes other statuses which are not PASSED, FAILED and IDLE.</li>
-</ul>
-<p>Here the percent value will continue to mean <em>percent completed, aka non-IDLE</em>.</p>
-<p>Implementation wise the <code>TestCaseRunStatus</code> class defines methods for the actual icons to be used.
-The same can be done for colors and this can be used directly in the HTML templates.
-For color definitions see <a href="https://www.patternfly.org/styles/color-palette/">Status Palette</a>.</p>
-<h2>Feature: Printable Test Execution Report</h2>
-<p>As a tester I want to have a nice looking TestRun execution report which I can present to
-my managers, stakeholders and/or customers. The page needs to be printer friendly for
-“Print to PDF” or print on paper!</p>
-<p>Kiwi TCMS already has this feature. Clicking the <code>[Report]</code> button
-in the progress widget at <a href="https://public.tenant.kiwitcms.org/runs/625/">TR-625</a> presents
-TestRun execution information in a simplified format found at
-<a href="https://public.tenant.kiwitcms.org/runs/625/report/">TR-625/Report</a>.
-In order to improve the current implementation:</p>
-<ul>
-<li>Convert TestRun page to Patternfly which generally prints better</li>
-<li>Add bug list at the bottom of the page, below all test execution rows</li>
-<li>Keep “View all in Issue Tracker” link (supported only for some bug trackers)</li>
-<li>The widget for TestRun progress must be kept</li>
-<li>Tweak CSS classes to disable printing for visual elements that we don't need.
-  This will be decided after the entire page has been converted to Patternfly</li>
-<li>Remove the existing <code>testruns.views.TestRunReportView</code> and associated templates,
-  JavaScript and CSS because they will not be needed anymore</li>
-</ul>
-<h2>Feature: Individual or team performance telemetry</h2>
-<p>As a manager I want to know what the work-load/performance of individual teams and
-engineers is. I can use this information either for performance review or for 
-capacity planning of future work.</p>
-<p><img src="/images/telemetry/performance_indicator.png" alt="Individual/team performance" style="float: none"></p>
-<p>A new page will be available under TELEMETRY -&gt; Management -&gt; Performance which will:</p>
-<ul>
-<li>Allow filtering by<ul>
-<li>Group (multi-select)</li>
-<li>User (multi select, depends on Group)</li>
-<li>Start / Stop dates</li>
-<li>Product</li>
-</ul>
-</li>
-<li>Show results per User or per Group (if no users are selected)</li>
-<li>Allow grouping per TestRun ID or calendar week number</li>
-</ul>
-<p>The backend will query <code>TestExecution.objects</code> and apply the selected
-filters and grouping logic!
-The returned data is the count of how many tests this person/team was able to execute.</p>
-<p>Further refinement:
-Aggregate count by statuses (executed vs. non-executed or PASSED vs. FAILED vs. OTHER).
-May be represented as a stacked bar chart if grouping of series is supported.</p>
-<h2>Feature: Time-tracking telemetry</h2>
-<p>As a manager I want to know how much time it took to complete previous testing activities.
-I can use this information for predicting future capacity.</p>
-<p>New page under TELEMETRY -&gt; Management -&gt; Time tracking.</p>
-<ul>
-<li>Filtering will be the same as performance telemetry</li>
-<li>Grouping will be the same as performance telemetry</li>
-<li><strong>Unknown:</strong> total execution time is calculated as<ul>
-<li>the sum of duration for each TestExecution (not available ATM,
-  automation plugins not sending this info) or</li>
-<li>the total time for the entire TestRrun (not supported by automation plugins)</li>
-</ul>
-</li>
-</ul>
-<p>Visually this will be a line chart with one line for each user/group which have
-been selected. It will be very good if the existing chart libraries allow for a
-stacked line chart or a stacked area chart here!</p>
-<h2>Feature: Estimate TestRun completion time</h2>
-<p>As a test lead I want to know approximately when testing is expected to complete.</p>
-<p>This feature will utilize time-tracking data from previous executions and
-display the approximated calculation in the web UI. The most obvious place for this
-is the TestRun progress widget (under the progress bar) or the Test Run page
-(near the Started at/Finished at fields).</p>
-<p>Example text:</p>
-<div class="highlight"><pre><span></span>Started at: YYYY-MM-DD 10:38
-Status: Running
-Duration: 1.2 / 3 hrs
-Estimated completion at: 13:30
-</pre></div>
-
-
-<p><strong>Unknown:</strong> where does baseline duration come from? Either from the most recent TestRun
-or an average from all of the previous Test Runs. Note that cumulative TestRun duration
-is calculated between Start/Finish events while individual TestExecution records may
-sum up to a different value! This needs to be clarified.</p>
-<h2>Feature: TestCase health telemetry</h2>
-<p>As a tester and/or manager I want to be able to discover which TestCase(s) are the most
-common source of problems, that is they fail all the time or from time to time.
-This may indicate poor test design or bad practices when developing the product.
-This is also known as test stability or flaky tests!</p>
-<p><img src="/images/telemetry/flaky_tests.png" alt="Flaky tests" style="float: none"></p>
-<p>New page under TELEMETRY -&gt; Testing -&gt; Flaky tests</p>
-<ul>
-<li>Allow filtering by<ul>
-<li>Product</li>
-<li>Test plan (refined by product)</li>
-<li>Start / Stop dates</li>
-</ul>
-</li>
-<li>Show results in table form as shown in the image above</li>
-<li>PASS/non-PASS stats will be calculated based on <code>TestExecution.objects</code></li>
-<li>100% failing rate will be reported in the first table as ALWAYS FAILING</li>
-<li>Executions where failing rate is &gt;0% and &lt;100% will be reported as FLAKY TESTS</li>
-</ul>
-<h2>Feature: TestCase breakdown telemetry</h2>
-<p>As a tester and/or manager I want to see a breakdown of tests so that I have an
-idea how the existing tests for the product are distributed!</p>
-<p><img src="/images/telemetry/tc_breakdown.png" alt="Test case breakdown" style="float: none"></p>
-<p>New page under TELEMETRY -&gt; Testing -&gt; Breakdown</p>
-<ul>
-<li>Allow filtering by<ul>
-<li>Product</li>
-<li>Test plan (refined by product)</li>
-<li>Start / Stop dates</li>
-</ul>
-</li>
-</ul>
-<p>Shows combined bar/line charts with information about test case priorities, categories,
-automation status and confirmed status.</p>
-<h2>Feature: Individual TestCase health widget</h2>
-<p>As a test engineer I want to be able to quickly see health information about individual
-test case. This can help me visually locate TCs that need improvement so I can edit them
-or will help me visually judge the past history of the TC I am looking at.</p>
-<p><img src="/images/telemetry/tc_executions_card.png" alt="Individual TestCase health" style="float: none"></p>
-<p>This depends on the previous feature. Possible places where health status can be shown:</p>
-<ul>
-<li>Test Case page, Executions card: info per TP</li>
-<li>Test Run page, Test Executions table - visual icon + % to hint the user
-  about expected TC stability</li>
-</ul>
-<h2>Feature: Execution trends telemetry</h2>
-<p>As a test manager I want to see information if Product builds are getting better or worse.
-In other words what is the trend in TestExecution number and status!</p>
-<p><img src="/images/telemetry/build_status.png" alt="Build status" style="float: none"></p>
-<p>This is going to be a new page at TELEMETRY -&gt; Testing -&gt; Execution trends</p>
-<ul>
-<li>Filter by<ul>
-<li>Product</li>
-<li>Version (refined by Product)</li>
-<li>Build (refined by Version)</li>
-<li>Test Plan (refined by Product)</li>
-<li>Start / Stop dates</li>
-</ul>
-</li>
-<li>Shows total count of <code>TestExecution.objects</code> (stacked area chart) with color codes for status</li>
-<li>Group by TestRun ID or calendar week</li>
-</ul>
-<p>You will be able to select TestRuns and/or weeks for detailed comparison.</p>
-<h2>Feature: TestRun status matrix telemetry</h2>
-<p>As a test manager I want to see detailed information about testing status for
-specific test run(s) or a calendar period. I also want to be able to compare
-the results between various weeks and/or test runs.</p>
-<p><img src="/images/telemetry/compare_testruns.png" alt="Compare TestRuns" style="float: none"></p>
-<p>This is a continuation of Execution trends telemetry but can be used on its own as well.
-It will be accessible from TELEMETRY -&gt; Testing -&gt; Status matrix</p>
-<p>Filtering options are the same. Results are displayed in a table format where
-columns are the filtered (or previously selected) TestRun objects or calendar weeks.
-The rows are the names of individual test cases that have been executed. If a case
-is missing the cell will be empty.</p>
-<p>Cells contain color coded information about status, timestamp of execution,
-execution duration, links to the TestExecution object, latest comment in case
-of failure.</p>
-<p>Links to bugs will be shown in each cell with a summarized bug table below the
-charts.</p>
-<h2>Feature: Search and compare TestRuns</h2>
-<p>This is complimentary to the TestRun status matrix feature! While searching
-for TestRuns in SEARCH -&gt; Test Runs the user will be able to select several
-rows and proceed to compare them as described above.</p>
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/" rel="bookmark" title="Permalink to Want to hack open source ?">
-                <h1 class="top-header">Want to hack open source ?</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Sat 02 March 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p><img src="/images/team/hiring_banner.png" style="float:none;clear-both;margin:0;max-width: 100%"></p>
-<p>Have you ever wanted to be part of an open source team?
-Have you ever wanted to contribute back the open source community ?
-Have you ever wanted to see your code used by thousands of people ?</p>
-<p>If yes now you have the opportunity! Read on to learn how you can help
-Kiwi TCMS and how our team can help you.</p>
-<h2>Inexperienced Python developer(s)</h2>
-<p>It is fine not to have any experience at all! You will compensate with
-commitment and hard work. Initially you are going to work on refactoring,
-cleaning up pylint errors, removing duplicate code and other issues
-reported by <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>.</p>
-<p>By doing this you will have the opportunity to learn git, Python, Django,
-some CSS, JavaScript and Patternfly HTML of course. We are going to provide
-you with all the learning materials plus help and guidance from existing team members.</p>
-<p>Everyone on the team has gone though the same training procedure and grueling tasks
-and so will you! Once you can demonstrate progress and learn the ropes you
-will continue working on more complicated tasks.</p>
-<h2>Experienced Python developer(s)</h2>
-<p>So you have some experience already, you've probably contributed code before and are
-now looking for more green stripes on your GitHub profile. We've got you covered!</p>
-<p>There are many areas to choose from: issue tracker integration, GitHub integration,
-GitLab integration, external API library, Kiwi TCMS plugins written in Python and
-customized pylint linters! This is going to be where you get your hands dirty and
-show your strengths. Our team is here to help if necessary but we expect you to
-show progress by yourself.</p>
-<p>A challenge for you will be to review pull requests from other contributors and
-be patient with less experienced contributors and team members. This is an excellent
-opportunity to work on your people skills as well.</p>
-<h2>Experienced non-Python developer(s) (with Java)</h2>
-<p>Kiwi TCMS is primarily looking for Java developers who will own our test automation
-plugins. Currently we have a plugin for JUnit 5 and TestNG is in planning. Maybe
-there will be a plugin for Jenkins as well. You are going to own these components
-and work solely on them. Unless you decide to learn Python and Django that would
-be a very easy job!</p>
-<p>.NET, PHP, Ruby, JavaScript ? We don't have a lot of code written in these languages
-but you can help change this. The main thing we'd like you to know
-(or become familiar with) are the internals of popular test automation frameworks
-for these languages and how to create plugins for them.</p>
-<h2>QA engineer with Python</h2>
-<p>You are going to test a lot! You are going to write test automation a lot! Ideally you
-already have a medium level of experience in the software testing field and
-want to improve your coding skills and/or get more experience into a different
-application domain. We also have Linux and Docker in the mix, just for fun!</p>
-<p>Your responsibility will be to design test scenarios for various features (new or existing),
-write test automation scripts and help improve overall test coverage and quality
-of Kiwi TCMS. You will also check-in on non-Python developers and
-help them with test design when necessary.</p>
-<p>There are other things that can be tested as well, for example Kiwi TCMS
-performance and scalability. Here you will have to get down to the nitty-gritty
-stuff and do some profiling to pin-point where the root cause of the problem is.</p>
-<h2>Security freak</h2>
-<p>We've got <a href="https://scan.coverity.com/projects/kiwitcms-kiwi">Coverity scan</a> and
-<a href="https://snyk.io/test/github/kiwitcms/Kiwi">Snyk</a> automatically inspecting our
-code base. We do have some other tools as well and we know they can never be enough.</p>
-<p>You will be responsible for triaging the numerous issues being reported by these
-tools and help us decide if they are a real threat or a false positive. For example
-Coverity reports hundreds of issues mostly coming from our Python and Node.js dependency
-stack. We haven't had the time to classify them and work with upstream communities
-to fix them thus the majority of your contributions will be outside of the
-Kiwi TCMS code base.</p>
-<h2>Graphics designer</h2>
-<p>Your main job is going to be creating beautiful images for our website,
-blog posts and promotional material. All the images we use are licensed under
-Creative Commons which we then modify with the specific Kiwi TCMS look and
-feel. This is not going to change, your work will remain under a permissive
-license!</p>
-<h2>Marketing specialist</h2>
-<p>You will be directly responsible for driving more traffic to our website,
-interpreting Google Analytics metrics and coming up with creative ideas
-how to boost Kiwi TCMS popularity. This means, but not limited to blog posts,
-collaborations with other projects and/or bloggers, professional magazines, etc.
-You will also be in charge of events and conferences that we go to! Whenever
-possible you will be coming with us as well!</p>
-<p>A challenge for you will be to learn some technical jargon and learn more
-about the software testing profession and software testers in general!</p>
-<h2>What's in it for you ?</h2>
-<p>You will sharpen your skills! You will use Kiwi TCMS as a platform to
-improve your career. You will experience the gratification of our community of users.</p>
-<p>This blog is the medium where you can share tips
-and tricks and technical articles about interesting features in Kiwi TCMS.
-If you'd rather have your personal blog working on Kiwi TCMS will give you lots
-of topics to write about.</p>
-<p>We go to conferences and meetups too. If public speaking is your thing
-you will have plenty of topics to talk about. We can also help you
-deliver your first presentation! Everyone on the team has done it!</p>
-<p>Our existing team will help you learn and we will help you grow. Our personal time
-is the most expensive item we can offer to you! In return we expect you to
-fulfill your commitments and when you promise something will be done you will
-make sure it is done!</p>
-<h2>How to apply ?</h2>
-<p>You can figure this out yourself.</p>
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/" rel="bookmark" title="Permalink to How to use Kiwi TCMS plugins, Pt. 1">
-                <h1 class="top-header">How to use Kiwi TCMS plugins, Pt. 1</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-                on Fri 22 February 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>In
-<a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/">release notes for v6.5</a>
-we announced several plugins which will fetch test names and execution results
-from your automated test suite.</p>
-<p>Plugins can be controlled via environment variables which will affect how
-test results are recorded in the Kiwi TCMS database! This blog post is an introduction
-how that works and what you can do with it! For this purpose I will be using the
-<a href="https://github.com/kiwitcms/plugin-demo">plugin-demo</a> repository, which simulates
-real development work.</p>
-<p><em>Full documentation and list of available plugins is available in chapter
-<a href="https://kiwitcms.readthedocs.io/en/latest/plugins.html">Automation Frameworks Plugins</a>!</em></p>
-<h2>Always create new TestRun by default</h2>
-<p>The default behavior is always to create a new TestRun if controlling variables
-are not overridden! Product name, version and build will receive default values
-if tests are running in Travis CI or Jenkins. For example
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496217246">Travis Build #2</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/d455fb42fb7c2aedadfd5f66de7d131109c03350">commit d455fb4</a>
-creates <a href="https://tcms.kiwitcms.org/runs/12/">TR-12</a> and
-<a href="https://tcms.kiwitcms.org/plan/10/">TP-10</a>!</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=d455fb42fb7c2aedadfd5f66de7d131109c03350
-Build=2
-</pre></div>
-
-
-<p>Next we convert the README file from Markdown to reStructuredText which triggers
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496220575">Travis Build #3</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/418b80b3bbb65a799f695dc59d488c76f560fa2b">commit 418b80b</a>.
-This build <strong>again</strong> creates a new TestRun and new TestPlan for it. Respectively
-<a href="https://tcms.kiwitcms.org/runs/14/">TR-14</a> and
-<a href="https://tcms.kiwitcms.org/plan/12/">TP-12</a>!</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=418b80b3bbb65a799f695dc59d488c76f560fa2b
-Build=3
-</pre></div>
-
-
-<p><strong>Important:</strong> we can see that version is different which will affect how artifacts
-are organized in Kiwi TCMS, possibly affect how you will report status to stakeholders!</p>
-<h2>Override ENV variables for more control</h2>
-<p>Let's say the QA team has decided that all test results must be reported under the
-same TestPlan. This means version must be the same between various builds in Travis CI!
-To control this we export <code>TCMS_PRODUCT_VERSION=master</code> in CI <strong>before</strong> executing
-the TAP plugin! Checkout the commit on GitHub to see how it is done!</p>
-<p>This triggers
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496223505">Travis Build #4</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/e484e59023caf665e8f93341395af6f397691b93">commit e484e59</a>.
-Because this is the first time where Version == master the plugin creates
-<a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a> and reports the results under
-<a href="https://tcms.kiwitcms.org/runs/16/">TR-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=4
-</pre></div>
-
-
-<p>Right after that I realized we can make this configuration a bit more generic
-because our team is planning to support multiple versions of the product and
-development will be done in separate branches!
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496228021">Travis Build #5</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/f1f2878d80a7327b54c8e33d1c6d6f14153d6d12">commit f1f2878</a>
-still ends up with Version == master because we are still working on the <code>master</code>
-branch! That is to say, the product is in active mode of development.</p>
-<p>Results are reported in
-<a href="https://tcms.kiwitcms.org/runs/18/">TR-18</a> which is again part of
-<a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=5
-</pre></div>
-
-
-<p><a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496229819">Travis Build #6</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/df6153b2495bfc6825f25e544ae1806108aa490f">commit df6153b</a>
-adds the new functionality <em>README badges</em> and reports test results in
-<a href="https://tcms.kiwitcms.org/runs/20/">TR-20</a> which is again part of
-<a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<h2>More ENV overrides</h2>
-<p>While giving status reports back to stakeholders and developers the information that
-we have in the TestRun is Build number! This follows the numbering scheme in Travis CI
-(or Jenkins job number) and isn't very useful.</p>
-<p>Let's define <code>TCMS_BUILD</code> to be the first 7 characters of the commit hash! When QA
-tells devel that something isn't working and redirects them to the TestRun they can
-immediately use the Build information and git checkout the offending variant of the product
-for investigation.</p>
-<p>This results in
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496233565">Travis Build #7</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/bf75d0abe9695e3ee3b49b8944bab9db43bb25e6">commit bf75d0a</a>,
-<a href="https://tcms.kiwitcms.org/runs/22/">TR-22</a>,
-<a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=bf75d0a
-</pre></div>
-
-
-<h2>Report results in pre-existing TestRun</h2>
-<p>There are many reasons you may want to do this:</p>
-<ul>
-<li>include both manual and automation tests for the same build;</li>
-<li>mix results from multiple test suites for the same build,
-  e.g. unit, functional, performance</li>
-<li>mix results from multiple but similar platforms in the same build,
-  e.g. cross-platform application for iOS and Android</li>
-</ul>
-<p>To do so I've created <a href="https://tcms.kiwitcms.org/runs/24/">TR-24</a> beforehand and
-configured <code>TCMS_RUN_ID=24</code> in my CI environment. TR-24 also contains
-<a href="https://tcms.kiwitcms.org/case/57/">TC-57: Verify we can report results from several plugins into the same TR</a>.
-this was created and added via the web interface.</p>
-<p><strong>Note:</strong> mixing additional test cases can be done either before or after
-automation results are reported with the plugin!</p>
-<p><strong>Important:</strong> when reporting results to an existing TestRun Kiwi TCMS plugins
-don't care in which TestPlan this TR is! In theory it is possible to report
-the results for <code>Product=kiwitcms/plugin-demo</code> into any TP/TR pair! However we
-don't want to do this crazy thing and instead I've created TR-24 inside the already
-existing TP-14!</p>
-<p><strong>Note:</strong> because I don't know what is the git commit beforehand I've configured
-TR-24 with <code>Build=unspecified</code>. If I wanted I could update this with the correct value
-once I know the commit hash for the related changes I am testing.</p>
-<p><strong>Important:</strong> the plugin-demo repository uses both kiwitcms-tap-plugin and
-kiwitcms-junit.xml-plugin at the same time! They differ in the way test names
-are compiled! Both are reported in TR-24. See TC-57 text for information how to
-distinguish between the two.</p>
-<p>See
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496237911">Travis Build #8</a> for
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496237911">commit 85ad939</a>,
-<a href="https://tcms.kiwitcms.org/runs/24/">TR-24</a>,
-<a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=unspecified
-</pre></div>
-
-
-<p>Also check-out comments in TR executions to see when and who had executed the test case.</p>
-<p>So far there have been some tests which were failing (although Travis reports PASS) so
-I decided to fix them.
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496240713">Travis Build #9</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/a25b3841e656d47a7539c608e375cecbf3bed2ac">commit a25b384</a>
-is still configured with <code>TCMS_RUN_ID=24</code>. This means results will be reported in
-TR-24, effectively overwriting previous results.</p>
-<p>Check-out <em>Change Log</em> under each individual execution and you will see several
-time stamps when status was updated! In other words, as long as <code>TCMS_RUN_ID</code> is
-pointing to an existing TestRun this TR will keep the results of the last test suite execution!</p>
-<h2>Continue development, restore ENV configuration</h2>
-<p><a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496243124">Travis Build #10</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/c4f1ae5ecadb249d39923cedbbf53a85e50420b3">commit c4f1ae5</a>
-removes <code>TCMS_RUN_ID</code>! Results are reported in
-<a href="https://tcms.kiwitcms.org/runs/25/">TR-25</a>,
-<a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=c4f1ae5
-</pre></div>
-
-
-<h2>Branch out for an LTS version</h2>
-<p>Our team has decided to make the first LTS release of the product. We branch out into
-<code>lts-v0</code> branch in git and cut the first NVR. This results in
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496245067">Travis Build #11</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/9f1ef717e3fb248d65535ed66b5c4e61e6f85a6e">commit 9f1ef71</a>
-<a href="https://tcms.kiwitcms.org/runs/27/">TR-27</a>,
-<a href="https://tcms.kiwitcms.org/plan/16/">TP-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=lts-v0
-Build=9f1ef71
-</pre></div>
-
-
-<p>Because this is the first time we are running tests for this product version
-we end up with the newly created TP-16!</p>
-<p><strong>Note:</strong> see how version was populated with the correct value for the git branch!
-This is because my CI config uses <code>TCMS_PRODUCT_VERSION=$TRAVIS_BRANCH</code> and no further
-changes were required! I made this change back in Travis Build #5 anticipating what
-will come in the future!</p>
-<p>The product is now live and customers have reported critical bugs for it:
-<em>URLs for the badges in README are wrong</em>! I fix those and add more tests of course, see:
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496247347">Travis Build #12</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/2d72754d3f911ef4e25287f203471f4466b95d12">commit 2d72754</a>,
-<a href="https://tcms.kiwitcms.org/runs/29/">TR-29</a> for
-<a href="https://tcms.kiwitcms.org/plan/16/">TP-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=lts-v0
-Build=2d72754
-</pre></div>
-
-
-<p>TR-29 contains the new <a href="https://tcms.kiwitcms.org/case/58/">TC-58</a>!</p>
-<h2>cherry-pick between branches</h2>
-<p>In the <code>lts-v0</code> branch customers have identified a serious issue. It doesn't exist on <code>master</code>
-but the test is still valid so I cherry-pick it! In git you can backport or forwardport very
-easily. Regardless of the direction Kiwi TCMS plugins will record the test results for you.</p>
-<p>See
-<a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496252529">Travis Build #13</a> for
-<a href="https://github.com/kiwitcms/plugin-demo/commit/31ae5b3358137fde7d2b5c3656b384acc7331d95">commit 31ae5b3</a>,
-<a href="https://tcms.kiwitcms.org/runs/31/">TR-31</a> for
-<a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<p>We can see that TC-58, which was originally implemented on the <code>lts-v0</code> branch
-is now present!</p>
-<h2>Summary</h2>
-<p>This is a very basic example of how you can organize collection and reporting for
-your automation test suite results with Kiwi TCMS. The links here only refer to
-artifacts created by <code>kiwitcms-tap-plugin</code> while in the DB we keep others as well.</p>
-<p>There are feature requests for more ENV variables which will allow you to control
-TestPlan creation and child/parent relationship between test plans. See
-<a href="https://github.com/kiwitcms/tap-plugin/issues">https://github.com/kiwitcms/tap-plugin/issues</a> and vote with a <code>:+1:</code> reaction
-to help us plan for these features.</p>
-<p>Kiwi TCMS automation framework plugins are nothing more than result parsers
-which talk back to a database. It is up to you to decide how to organize the
-collection of test results and how to report on them later, when the need arises.</p>
-<p>Future installments in this post series will take a look at workflows with
-feature branches and pull requests and discuss possible organization scenarios.
-You are welcome to share your ideas in the comments below.</p>
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/" rel="bookmark" title="Permalink to Kiwi TCMS 6.5.3">
                 <h1 class="top-header">Kiwi TCMS 6.5.3</h1>
             </a>
@@ -1578,308 +949,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
     </section>
     <section class="col-12 secondary">
         <div class="header">
-            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/" rel="bookmark" title="Permalink to Kiwi TCMS is going to FOSDEM 2019">
-                <h1 class="top-header">Kiwi TCMS is going to FOSDEM 2019</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 17 January 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>Hello testers, Kiwi TCMS is going to <a href="http://fosdem.org/">FOSDEM</a> this year.
-This is where you can find us:</p>
-<p><img src="/images/kiwi_sticker.jpg" style="float:left; margin-right: 25px;"
-     alt="Kiwi TCMS sticker" title="Kiwi TCMS sticker"></p>
-<ul>
-<li>Fri Feb 1st: <a href="https://fosdem.org/2019/beerevent/">after 18:00 @ Delirium Café</a> -
-  we are taking part of the FOSDEM Beer Event where all participants are invited.
-  <code>Shout out with #KiwiTCMS</code> on Twitter if you can't find us in the crowd</li>
-<li>Both days: <a href="https://fosdem.org/2019/stands/">Building K, Level 2, Stand 10</a>.
-  We will be together with our friends from ReportPortal and SystemTestPortal at
-  the Open Source Test Management stand</li>
-<li>Sat Feb 2nd:
-  <a href="https://fosdem.org/2019/schedule/track/lightning_talks/">18:00 @ Room H.2215 (Lightning Talks)</a> -
-  <a href="https://fosdem.org/2019/schedule/event/test_case_management/">10 years of open source test case management <em>with Kiwi TCMS</em></a>
-  lightning talk</li>
-<li>Sun Feb 3rd:
-  <a href="https://fosdem.org/2019/schedule/track/python/">10:00 @ UD2.120 (Python devroom)</a> -
-  <a href="https://fosdem.org/2019/schedule/event/python_write_pylint_plugins/">How to write pylint plugins</a>
-  presentation with examples of plugins which our team uses to make Kiwi TCMS better</li>
-</ul>
-<p>We would like to meet with all of you and talk about test management and
-test process organization. In case you are stuck for crazy ideas checkout
-<a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">our project mission</a> for inspiration.</p>
-<h2>Be part of the community</h2>
-<p>We are turning 10 years old and we have presents for you! You will have to perform
-a small challenge and you can get your hands(errr, feet) on a pair of these:</p>
-<p><img src="/images/kiwi_socks.jpg" style="float:none"
-     alt="Kiwi TCMS socks" title="Kiwi TCMS socks"></p>
-<p>Here's what else you can do to help us:</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Become a stargazer</a> by clicking the
-  <code>Star</code> button on our GitHub repository</li>
-<li><a href="https://twitter.com/KiwiTCMS">Follow @KiwiTCMS on Twitter</a></li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a> -
-  we are GDPR compliant and we don't spam, we promise!</li>
-<li>Send us testimonials and feedback about using Kiwi TCMS.
-  We will be happy to publish them on our website</li>
-<li><a href="https://opencollective.com/kiwitcms">Become a sponsor</a>!</li>
-</ul>
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="bookmark" title="Permalink to Project mission and goals for 2019">
-                <h1 class="top-header">Project mission and goals for 2019</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-                on Thu 10 January 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>Hello testers, Kiwi TCMS has taken on a brave new
-mission! We would like to transform the testing process by making it more
-organized, transparent &amp; accountable for everyone on your team. Our goal
-is to improve engineering productivity and participation in
-testing. The following blog post outlines how we would like to achieve
-this and what goals we put before ourselves for this year.</p>
-<h2>Complete the internal refactoring</h2>
-<p>Last year we took on the challenge to bring a legacy code base up to modern
-coding standard. We did not complete that effort but made very good progress
-along the way. This is not a small task and that's why our team will continue
-with it this year.</p>
-<p><img src="/images/codeclimate_jan_2019.png" style="float:none"
-     alt="CodeClimate report" title="CodeClimate report"></p>
-<ul>
-<li><a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>:
-  0 issues, 0% technical debt, health score A</li>
-<li><a href="https://scrutinizer-ci.com/g/kiwitcms/Kiwi/">Scrutinizer</a>:
-  only A and B type issues</li>
-<li><a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/475946313">Pylint</a>: 0 issues</li>
-<li>Remove vendored-in Handlebars, jQuery, jQuery-UI and TableDnD JavaScript
-  libraries in favor of existing npm dependencies</li>
-<li>Front-end uses the existing JSON-RPC instead of backend views that
-  are only used for AJAX requests. Tip: these are usually accessed via
-  <code>postToURL()</code> and <code>jQ.ajax()</code> on the front-end</li>
-<li>Inspect and classify all 3rd party issues reported from
-  <a href="https://scan.coverity.com/projects/kiwitcms-kiwi">Coverity</a> and
-  <a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/475946312">Bandit</a>. Report and fix
-  what we can, ignore the rest that do not affect Kiwi TCMS.</li>
-</ul>
-<h2>Redesign the UI templates with the help of Patternfly</h2>
-<p>There are 59 templates remaining to be converted to a modern look and feel.
-Along with them comes more refactoring and even redesign of the existing pages
-and the workflow around them. Together with refactoring this will make Kiwi TCMS
-easier to use and also to maintain.</p>
-<h2>Modernize reporting</h2>
-<p>We are planning to remove the existing reports feature because they are not well
-designed. We will re-implement existing functionality that our community finds useful,
-add new types of reports (incl. nicer graphics and UI) and make it possible for the
-reporting sub-system to be more easily extendable.</p>
-<p>Phase out is planned to begin after 1st March 2019! Until then we are looking for your
-feedback. Please comment in
-<a href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a>!</p>
-<h2>Plugins for 3rd party test automation frameworks</h2>
-<p>These will make it easier to collect results from automated test suites into
-Kiwi TCMS for later analysis. Instead of creating scripts that parse the
-results and talk to our API you will only have to install an additional package
-in your test environment and configure the test runner to use it! Automation
-test results will then appear inside Kiwi TCMS.</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/junit-plugin">JUnit 5 plugin</a> - already in progress</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/692">TestNG plugin</a> - RFC</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/693">Django plugin</a> - RFC</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/694">py.test plugin</a> - RFC</li>
-</ul>
-<p>If you would like to use such functionality leave your vote inside GitHub
-issues! In case you would like to write a test-runner plugin you can find the
-specification
-<a href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/">here</a>.</p>
-<h2>Redefine bug-tracker integration</h2>
-<blockquote>
-<p>Question: Does Kiwi TCMS integrate with JIRA?</p>
-<p>Answer: Well, it does. How exactly do you want to integrate?</p>
-<p>... silence ...</p>
-</blockquote>
-<p>The following dialog happens every time someone asks me about bug-tracker
-integration, especially with JIRA. The thing is integration is a specified
-set of behavior which may or may not be desired in a particular team. As of now
-Kiwi TCMS is able to open a URL to your bug-tracker with predefined field
-values, add comments to bug reports and report a simple summary of bugs
-inside a TestRun.</p>
-<p>We recognize this may not be enough and together with the community we
-really need to define what bug tracker integration means! The broader domain
-of application lifecycle management tools (of which TCMS is a sub-set) have an
-integrated bug tracking system. We can add something like this and save you
-the trouble of using JIRA, however many teams have already invested in
-integrating their infrastructure or just like other tools. For example we love
-GitHub issues and our team regularly makes public reports about issues that
-we find internally!</p>
-<ul>
-<li>Goal: Redefine what bug-tracker integration means, vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/698">Issue #698</a></li>
-<li>Goal: Bug-tracker functionality inside Kiwi TCMS, similar to
-  GitHub Issues. Vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/699">Issue #699</a></li>
-<li>Goal: Integration with Redmine (per current specification), vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/41">Issue #41</a></li>
-<li>Goal: fix existing bugs around bug-tracker integration
-  (per current specification). Vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/97">Issue #97</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/117">Issue #117</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/289">Issue #289</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/290">Issue #290</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/320">Issue #320</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/479">Issue #479</a> and
-  <a href="https://github.com/kiwitcms/Kiwi/issues/530">Issue #530</a></li>
-</ul>
-<h2>GitHub flow integration</h2>
-<p>Developers have their
-<a href="https://guides.github.com/introduction/flow/">GitHub PR flow</a> and if they
-have done the job of having unit tests then they will merge only when things
-are green! This leaves additional testing efforts kind of to the side and
-doesn't really help with transparency and visibility. I'm not going to mention
-having an automatically deployed staging environment for every change
-because very few teams actually have managed to do this effectively.</p>
-<p><img src="/images/github_kiwitcms_pr_status.png" style="float:none"
-     alt="Kiwi TCMS statuses on GitHub PR" title="Kiwi TCMS statuses on GitHub PR"></p>
-<ul>
-<li>Goal: Figure out how Kiwi TCMS can integrate with GitHub flow and bridge the gap.
-  Please share and <code>+1</code> your wildest ideas in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/700">Issue #700</a>.</li>
-<li>Follow up: depending on the results in #700 we will follow with other goals and
-  sub-tasks</li>
-</ul>
-<h2>Agile integration with Trello</h2>
-<p>Speaking of modern engineering flow is your team truly agile? When and how
-do you plan your testing activities ? Before the devel sprint or afterwards?
-How many testers take part in refining product backlog and working on user stories?</p>
-<p>Similar to GitHub flow lots of teams and open source projects are using Trello
-to effectively organize their development process. Testing should not be left
-behind and Kiwi TCMS may be able to help.</p>
-<ul>
-<li>Goal: Figure out how Kiwi TCMS fits into the overall <code>devel-test-planning</code>
-  process for agile teams and what we can do to make this easier for testers.
-  Please share and <code>+1</code> your wildest ideas in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/701">Issue #701</a></li>
-<li>Follow up: depending on the results in #701 we will follow with other goals and
-  sub-tasks</li>
-</ul>
-<h2>Improve engineering productivity</h2>
-<p>What makes a test engineer productive when they need to assess product risk and
-new features, when mapping product requirements documents (PRD) to test plans and
-test cases, when collaborating on user stories and behavior specification ?
-What makes developers, product owners, designers and other professionals productive
-when it comes to dealing with testing ?</p>
-<p>For example consider the following workflow:</p>
-<ul>
-<li>Company has idea for a new product</li>
-<li>In case this is a big product it may have its own mission, i.e. what kind
-  of problem is it trying to solve and for which group of customers</li>
-<li>Product backlog is then created which outlines features that map
-  to the product mission</li>
-<li>Then the team, together with test engineers perform example mapping
-  and discuss and refine the initial feature requirements. User stories
-  are created</li>
-<li>Behavior specification may also be created</li>
-<li>Test plans and test cases are the immediate product of BDD specs and
-  desired user stories</li>
-</ul>
-<p>Later we iterate through the sprints and for each sprint something like
-this happens:</p>
-<ul>
-<li>Desired product features are planned for development. They must be <em>complete</em>
-  at least in terms of requirements, specs and tests</li>
-<li>Devel writes code, maybe some unit tests, testers can also write automated tests
-  and/or manually verify the current state of the feature being developed</li>
-<li>Testing, including exploratory is performed before feature is merged</li>
-<li>Rinse and repeat</li>
-</ul>
-<p>Devel is also part of testing, right? Product owners, UX and interaction
-designers as well. Producing quality software product is a team effort!</p>
-<p>In every step of the way Kiwi TCMS can provide notification wizards, guidelines
-and/or documentation for best practices, facilitate tooling, e.g. to write user stories
-and assess them or map out an exploratory testing session, etc. The list
-of ideas is virtually endless. We can even go into deep learning, AI and
-blockchain but honestly who knows how to use them in testing ?</p>
-<p>Our team is not quite sure how this goal will look like 3 months from now
-but we are certain that testing needs to happen first, last and all the time
-during the entire software development lifecycle. By providing the necessary
-functionality and tools in Kiwi TCMS we can boost engineering productivity
-and steer the testing process in your organization into a better, more productive
-direction which welcomes participation from all engineering groups.</p>
-<p>Let's consider another point of view: testing is a creative activity
-which is benefited by putting your brain into a specific state of mind!
-For example Gherkin (the Given-When-Then language) has the benefit of
-forcing you to think about behavior and while doing so you are vocalizing
-the various roles in the system, what kind of actions are accepted and
-what sort of result is expected! Many times this will help you remember or
-discover missing scenarios, edge cases and raise even more questions!</p>
-<p>Crazy ideas, brain dumps and <code>+1</code> as always are welcome in
-<a href="https://github.com/kiwitcms/Kiwi/issues/703">Issue #703</a>.</p>
-<h2>Community</h2>
-<p>Coding alone is not fun! Here's what you can do to help us:</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Become a stargazer</a> by clicking the
-  <code>Star</code> button on our GitHub repository</li>
-<li><a href="https://twitter.com/KiwiTCMS">Follow @KiwiTCMS on Twitter</a></li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a> -
-  we are GDPR compliant and we don't spam, we promise!</li>
-<li>Vote with a <code>+1</code> reaction on GitHub issues (top-right corner)</li>
-<li>Send us testimonials and feedback about using Kiwi TCMS.
-  We will be happy to publish them on our website</li>
-<li>Send us a pull request on GitHub</li>
-<li><a href="https://opencollective.com/kiwitcms">Become a sponsor</a>!</li>
-</ul>
-<p>We are also looking to expand our core team and the list of occasional
-contributors. The following are mostly organizational goals:</p>
-<ul>
-<li>Goal: participate in 5 conferences with a project stand</li>
-<li>Goal: define how we find, recruit and onboard new team members. The
-  foundation is already set in
-  <a href="https://tcms.kiwitcms.org/plan/3/kiwi-tcms-team-onboarding#testcases">TP-3</a></li>
-<li>Goal: clearly mark GitHub issues which are suitable for external contributors
-  which don’t want to spend lots of time learning how Kiwi TCMS works under the hood.
-  We're going to tag all such issues with the
-  <a href="https://github.com/kiwitcms/Kiwi/labels/help%20wanted">
-    <img src="/images/github_helpwanted.png" style="float: none; margin:0"
-         alt="GitHub help wanted" title="GitHub help wanted">
-  </a> label</li>
-</ul>
-<h2>Development policy</h2>
-<p>Our team will be working on areas related to the goals above. A <code>+1</code>
-reaction on GitHub issues will help us prioritize what we work on!</p>
-<p><img src="/images/github_plus_one.png" style="float:none"
-     alt="GitHub +1" title="GitHub +1"></p>
-<p>Bug fixes and other
-issues will be occasionally slipped into the stream and pull requests from
-non-team contributors will be reviewed and merged in a timely fashion.</p>
-<p>There is at least 1 full day of work that goes behind the scenes when
-a new version is officially released: compile changelog, build images and
-upload them, create blog post and newsletter announcement, share on social
-media, etc. We also deploy on our own Kiwi TCMS instance as a stop-gap
-measure before making everything public!</p>
-<p>New PyPI tarballs and Docker images will be released every few weeks as
-we see fit, this has been our standard process. We try to align releases
-with Django's release schedule and try to cut a new version when there are known
-security vulnerabilities fixed. However we can't guarantee this will always
-be the case!</p>
-<p>If you are in a hurry and need something quickly the best option is to
-send a pull request, build your own Docker image from source and
-maybe consider
-<a href="https://opencollective.com/kiwitcms">sponsoring us via Open Collective</a>!</p>
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/" rel="bookmark" title="Permalink to Kiwi TCMS 6.4">
                 <h1 class="top-header">Kiwi TCMS 6.4</h1>
             </a>
@@ -2027,97 +1096,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 <p>Happy testing!</p>
 </div>
 
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="bookmark" title="Permalink to Roadmap status report for 2018">
-                <h1 class="top-header">Roadmap status report for 2018</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-                on Mon 17 December 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
-team has made towards achieving the goals in our 2018
-<a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>
-(<a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">mid-year update here</a>).
-TLDR; goals are completed at 62%. Refactoring legacy code is showing good results,
-less so on the front-end side and there are items still in progress!</p>
-<h2>Make code easier to maintain</h2>
-<p><em>Status: good progress</em></p>
-<p>Initially <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> reported
-a "D" rating with 600+ code smells and 600+ duplications and a 1 year estimation
-to resolve these. We're now down to "C" rating with 171 smells and 203 duplications.</p>
-<p>The level of technical debt has dropped from 32.5% down to 17.7% and we have removed
-around 14000 lines of Python code and 8000 lines of JavaScript code without
-losing significant functionality.</p>
-<p>Checkout
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt">the stats</a>
-for more info!</p>
-<h2>Use pylint and pylint-django</h2>
-<p><em>Status: almost finished</em></p>
-<p>Both pylint and pylint-django have been integrated into our CI workflow. There are even
-some custom built plugins that we use. The number of issues reported is down to 100
-from 4000+ initially. These are predominantly <code>fixme</code> comments which are also in parts
-of the code that are scheduled for removal and refactoring.</p>
-<h2>Render HTML, return JSON</h2>
-<p><em>Status: moderate progress</em></p>
-<p>Several views were modified to return pure JSON but we've not
-done any targeted work to resolve this issue. A number of other views have been
-removed in favor of using the existing JSON-RPC layer.</p>
-<p>This is an internal refactoring effort which isn't very visible from the outside.
-This is also one of the factors contributing to the high number of removed
-source code.</p>
-<h2>Submit forms, post JSON, GET clean URLs</h2>
-<p><em>Status: no progress</em></p>
-<p>Not much has been done in this area except the occasional refactoring to
-JSON-RPC.</p>
-<h2>API layer</h2>
-<p><em>Status: complete</em></p>
-<h2>Documentation</h2>
-<p><em>Status: moderate progress, dropped</em></p>
-<p>All RPC methods have been documented! The rest of the internals will be documented
-as we go along.</p>
-<h2>No vendored JavaScript libraries</h2>
-<p><em>Status: good progress</em></p>
-<p>We still carry around jQuery, jQuery-UI and Handlebars.js. They will be
-removed once the pages using them are converted to use the Patternfly widgets
-library.</p>
-<h2>Less HTML templates with better organization</h2>
-<p><em>Status: moderate progress</em></p>
-<p>There are still over 50 HTML templates in <code>tcms/templates/</code> that need to be
-refactored into Patternfly. We've been working on them one at a time and will
-focus more on this effort in the next couple of months.</p>
-<h2>Modern interface with Patternfly</h2>
-<p><em>Status: moderate progress</em></p>
-<p>Some of the pages have been converted to use Patternfly. The most important pages
-that still have a different look and feel are TestPlan view, TestCase view and
-TestRun view. These are also the hardest to convert because they have lots of
-tabs/components which pull information from various places. Our goal is to create
-reusable widgets for the various components (e.g. a list of TestCases) and then
-include these components into several different templates to minimize code
-duplication.</p>
-<h2>JavaScript updates and front-end testing</h2>
-<p><em>Status: moderate progress</em></p>
-<p>A number of JavaScript functions have been refactored and removed during the
-past few releases but there are still thousands of lines of code left to deal with.
-This effort is mostly happening in parallel with the Patternfly redesign.
-We still don't have anything to test front-end JavaScript functionality!</p>
-<h2>Community efforts</h2>
-<p><em>Status: good progress</em></p>
-<p>We are seeing a steady stream of new users registered on
-<a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a> and
-there are several active contributors on GitHub. Most of our translators are
-very active and keep their respective languages fresh and up to date!</p>
-<p>Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg, PyCon Prague,
-HackConf Sofia, PiterPy St. Petersburg and OpenFest Sofia. We've also been
-approved for a project stand at FOSDEM 2019 so watch this blog for more news.</p>
-<p>Happy testing!</p>
         </div>
     </section>
     <section class="col-12 secondary">
@@ -2409,176 +1387,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
     </section>
     <section class="col-12 secondary">
         <div class="header">
-            <a href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="bookmark" title="Permalink to Test runner plugin specification">
-                <h1 class="top-header">Test runner plugin specification</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-                on Mon 05 November 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
-wish to create plugins for popular test runners that will record test results
-in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
-<a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#using-different-testing-frameworks">Django</a>
-and <a href="https://junit.org/junit4/plugins.html">JUnit</a>!</p>
-<h2>What is a test runner?</h2>
-<p>When working with automated testing you have several components:</p>
-<ul>
-<li>A test module (or test script), e.g. <code>test_models.py</code> which contains
-  tests for your software;</li>
-<li>A test framework, e.g. Python nose, which provides the structure
-  for test classes and methods and assert methods to use;</li>
-<li>A test runner, which knows how to discover your test scripts, load them,
-  execute the testing scenarios inside of them and report the results.</li>
-</ul>
-<p>Very often all of the components above live together inside the testing framework
-but don't need to. For example the standard <code>unittest</code> module in Python
-provides a test runner but there are also <code>nose</code> and <code>py.test</code> and Django provides
-its own test runner that knows how to work with the database.</p>
-<h2>Workflow organization</h2>
-<p>Once you agree to writing a plugin we are going to create a separate GitHub
-repository where you will be granted write privileges making you an independent
-contributor to the Kiwi TCMS project!</p>
-<p>Design and architecture of the plugin is up to you, following the practices
-established by the testing framework in question. You will also have to create
-a test suite for your plugin based on the specification below.</p>
-<p>You are expected to use
-<a href="https://public.tenant.kiwitcms.org/login/github/">public.tenant.kiwitcms.org</a> while working on the
-plugin and afterwards. This is known as eating your own dog food!</p>
-<p>For Python we provide the <code>tcms-api</code> module which already takes care of the
-communications layer. For other languages you will have to create this layer or
-depend on other open source libraries that provide a XML-RPC or JSON-RPC
-client!</p>
-<p>You can use
-<a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2">this gist</a>
-for inspiration!</p>
-<h2>Behavior Specification</h2>
-<p><em>Please use the comments section to discuss unclear behavior and missing scenarios!</em></p>
-<div class="highlight"><pre><span></span>    SUMMARY: Will use configuration file if it exists
-    GIVEN: the file ~/.tcms.conf exists
-    WHEN: plugin initializes
-    THEN: the plugin will log an info message, read the file and
-    THEN: configure TCMS_API_URL, TCMS_USERNAME, TCMS_PASSWORD
-          variables with the respective values
-
-
-    SUMMARY: Will use ENVIRONMENT if configuration file doesn&#39;t exist
-    GIVEN: the file ~/.tcms.conf does not exists
-    WHEN: plugin initializes
-    THEN: the plugin will read configuration from environment and configure
-          the following variables/class members:
-          TCMS_API_URL, TCMS_USERNAME and TCMS_PASSWORD
-
-
-    SUMMARY: Will exit if TCMS_API_URL not configured
-    GIVEN: TCMS_API_URL variable is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
-
-
-    SUMMARY: Will exit if TCMS_USERNAME not configured
-    GIVEN: TCMS_USERNAME is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
-
-
-    SUMMARY: Will exit if TCMS_PASSWORD not configured
-    GIVEN: TCMS_PASSWORD is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
-
-
-    SUMMARY: Will re-use existing TestPlan if configured
-    GIVEN: TCMS_RUN_ID environment variable is not empty
-    WHEN: plugin initializes
-    THEN:  this will be the Current_TestRun record to which the plugin is
-           going to add test execution results
-    AND: Current_TestPlan document in which the plugin will
-           search for test cases becomes Current_TestRun.plan
-
-
-    SUMMARY: Will create new TestPlan &amp; TestRun if TCMS_RUN_ID not configured
-    GIVEN: TCMS_RUN_ID environment variable is empty
-    THEN: plugin will create a new TestPlan in Kiwi TCMS with attributes:
-        name=&#39;Automated test plan for %(product)&#39;
-        product=&#39;%(product)&#39;
-        product_version=&#39;%(version)&#39;
-        type=&#39;Unit&#39;
-    WHERE: %(product) is a placeholder for TCMS_PRODUCT==TRAVIS_REPO_SLUG==JOB_NAME
-           %(version) is a placeholder for TCMS_PRODUCT_VERSION==TRAVIS_COMMIT==TRAVIS_PULL_REQUEST_SHA==GIT_COMMIT
-    THEN: plugin will crate a new TestRun in Kiwi TCMS with attributes:
-        summary=&#39;Automated test run ....&#39;
-        plan=Current TestPlan
-        build=&#39;%(build)&#39;
-        manager=TCMS_USERNAME
-    WHERE: %(build) is a placeholder for TCMS_BUILD==TRAVIS_BUILD_NUMBER==BUILD_NUMBER
-    Environment variables are specified in:
-    https://docs.travis-ci.com/user/environment-variables#default-environment-variables
-    https://wiki.jenkins.io/display/JENKINS/Building+a+software+project#Buildingasoftwareproject-belowJenkinsSetEnvironmentVariables
-
-    SUMMARY: Will not create duplicate Product, Version &amp; Build if they already exist
-    GIVEN: TCMS_RUN_ID is not configured
-    AND: %(product) exists
-    AND: %(version) exists
-    AND: %(build) exists
-    WHEN: plugin tries to auto-create TestPlan and TestRun
-    THEN: plugin will re-use %(product), %(version) and %(build) from the database
-    AND: not try to auto-create them
-
-
-    SUMMARY: Will auto-create Product, Version &amp; Build if they don&#39;t exist
-    GIVEN: TCMS_RUN_ID is not configured
-    AND: %(product) doesn&#39;t exist
-    AND: %(version) doesn&#39;t exist
-    AND: %(build) doesn&#39;t exist
-    WHEN: plugin tries to auto-create TestPlan and TestRun
-    THEN: %(product), %(version) and %(build) be created automatically
-
-
-    SUMMARY: Unit test names are added to TestPlan
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestPlan for a TestCase with the same name
-    AND: if test case doesn&#39;t exist in Current_TestPlan
-    THEN: it will be added to Current_TestPlan
-    hint: it is probably best to process all unit test results at the end!
-
-
-    SUMMARY: Unit test names are added to TestRun
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
-          the current unit test name
-    hint: (or Current_TestCase object from previous scenario, depending on implementation)
-    AND: if such TestCaseRun doesn&#39;t exist in Current_TestRun
-    THEN: it will be added to Current_TestRun
-    hint: it is probably best to process all unit test results at the end!
-
-
-    SUMMARY: Current_TestRun is updated with unit test results
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
-          the current unit test name
-    hint: (or Current_TestCase object from previous scenario, depending on implementation)
-    AND: if TestCaseRun object exists in Current_TestRun
-    THEN: its status will be updated with the execution result coming from the test runner
-    hint: it is probably best to process all unit test results at the end!
-</pre></div>
-
-
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="bookmark" title="Permalink to Kiwi TCMS 6.2">
                 <h1 class="top-header">Kiwi TCMS 6.2</h1>
             </a>
@@ -2820,14 +1628,1220 @@ Test runs should only be able to select product builds (after
 
         </div>
     </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="bookmark" title="Permalink to Kiwi TCMS 6.1">
+                <h1 class="top-header">Kiwi TCMS 6.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sat 20 October 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 6.1! This release
+introduces new database migrations,
+internal updates and bug fixes. It is a small release designed
+to minimize the number of database migrations by squashing them together.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>.</p>
+<p><strong>NOTE:</strong> there is the 6.0.1 release which resolves an upgrade problem
+caused by non-applied migrations which have been later squashed and
+released in the same release! It is best to jump through the intermediate
+releases to ensure a smooth upgrade!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-0">
+<h2>Changes since Kiwi TCMS 6.0</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update <a class="reference external" href="https://github.com/pycontribs/jira">Jira from 1.0.10 to 2.0.0</a></li>
+<li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.55.0</a></li>
+<li>Use button instead of HTML link for deleting test plan (Oleg Kainov)</li>
+<li>New middleware that will check missing settings. At the moment will only
+check Base URL configuration which often gets forgotten!</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Hot-fix for error caused by the API method <tt class="docutils literal">TestRun.update</tt>. Error was
+initially reported on
+<a class="reference external" href="https://stackoverflow.com/questions/52865463/">StackOverflow</a>.
+This patch makes it possible to use the API without crashing however the
+<tt class="docutils literal">TestRun.update</tt> method doesn't handle the <tt class="docutils literal">stop_date</tt> field at the moment!</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated translation source strings</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Fix pylint errors (Ivaylo Ivanov)</li>
+<li>Remove unused <tt class="docutils literal">TestRun.list</tt> and <tt class="docutils literal">TestCase.list_confirmed</tt> methods</li>
+<li>Remove unused <tt class="docutils literal">plan_by_id_or_name()</tt> and <tt class="docutils literal">is_int()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/269">Issue #269</a></li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li>Rename <tt class="docutils literal">tcms.core.contrib.auth</tt> to <tt class="docutils literal">tcms.kiwi_auth</tt></li>
+<li>Remove field <tt class="docutils literal">user</tt> from <tt class="docutils literal">TestCaseTag</tt>, <tt class="docutils literal">TestRunTag</tt> and <tt class="docutils literal">TestPlanTag</tt>
+models</li>
+<li>Squash migrations for <tt class="docutils literal">management</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testcases</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testplans</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testruns</tt> app</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+<div class="section" id="subscription-based-online-service">
+<h2>Subscription based online service</h2>
+<p>We are planning to convert
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a> into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.</p>
+<p>The income from this service will go towards covering operating costs and
+supporting the
+<a class="reference external" href="http://kiwitcms.org/team/">development team</a>. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+</div>
+<div class="section" id="plans-to-remove-deprecated-functionality">
+<h2>Plans to remove deprecated functionality</h2>
+<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
+<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/04/kiwi-tcms-60/" rel="bookmark" title="Permalink to Kiwi TCMS 6.0">
+                <h1 class="top-header">Kiwi TCMS 6.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 04 October 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 6.0! This release
+introduces new database migrations, removal of
+environment properties in favor of tags, internal updates and bug fixes.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>.</p>
+<p>This release removes squashed migrations. Direct upgrades from versions
+&lt; 5.3.1 to 6.0 will break without an intermediate upgrade to 5.3.1!</p>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  cd087297f349    991.3 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-5-3-1">
+<h2>Changes since Kiwi TCMS 5.3.1</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.2/">Django 2.1.2</a>
+due to high severity security issue</li>
+<li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.54.8</a></li>
+<li><tt class="docutils literal">Tag</tt> objects are now shown in Admin panel</li>
+<li>Add autocomplete when adding tags to <tt class="docutils literal">TestRun</tt> via UI</li>
+</ul>
+</div>
+<div class="section" id="removed-functionality">
+<h3>Removed functionality</h3>
+<ul class="simple">
+<li>TestCase new and edit views no longer allow editing of tags. Tags can be
+added/removed from the Tags tab which also makes sure to properly account
+for permissions</li>
+<li>Remove <tt class="docutils literal">EnvGroup</tt>, <tt class="docutils literal">EnvProperty</tt> and <tt class="docutils literal">EnvValue</tt> models in favor of tags.
+Existing values and properties are converted into tags and automatically added
+to test runs!</li>
+<li>Convert squashed database migrations to regular ones and remove older migrations.
+<strong>WARNING:</strong> upgrade from versions &lt;= 5.3.1 to 6.0 will break without an intermediate
+upgrade to <tt class="docutils literal">kiwitcms/kiwi:5.3.1 a420465852be</tt>.</li>
+<li>Remove deprecated <tt class="docutils literal">TestCase.estimated_time</tt> and <tt class="docutils literal">TestRun.estimated_time</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/514">Issue #514</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="backend-api">
+<h2>Backend API</h2>
+<ul class="simple">
+<li>No longer use <tt class="docutils literal">product_version</tt> for <tt class="docutils literal">TestRun.create</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/522">Issue #522</a><ul>
+<li>'product' is no longer required</li>
+<li>'product_version' is no longer required</li>
+<li>'manager' and 'default_tester' can be usernames or IDs</li>
+</ul>
+</li>
+<li><tt class="docutils literal">TestCase.create</tt> no longer accepts 'tag' values</li>
+<li><tt class="docutils literal">TestRun.add_tag</tt> and <tt class="docutils literal">TestRun.remove_tag</tt> now return list of tags.
+Previously these methods returned <tt class="docutils literal">None</tt>!
+This is the list of tags assigned to the TestRun that is being modified!</li>
+</ul>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix mismatched HTML tag in <tt class="docutils literal">plan/get.html</tt> template (Oleg Kainov)</li>
+<li>Don't use <tt class="docutils literal">|slugify</tt> filter in templates which breaks HTML links with non-ASCII
+TestPlan names. Fixes
+<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/676626096/">Sentry KIWI-TCMS-38</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Fix pylint errors (Ivaylo Ivanov, Anton Sankov)</li>
+<li>Use existing JSON-RPC methods to add/remove tags via webUI and remove specialized
+backend methods that handled these requests. Also make sure to obey respective
+permissions</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+<div class="section" id="subscription-based-online-service">
+<h2>Subscription based online service</h2>
+<p>We are planning to convert
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a> into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.</p>
+<p>The income from this service will go towards covering operating costs and
+supporting the
+<a class="reference external" href="https://github.com/orgs/kiwitcms/people">development team</a>. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+</div>
+<div class="section" id="plans-to-remove-deprecated-functionality">
+<h2>Plans to remove deprecated functionality</h2>
+<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
+<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/09/04/kiwi-tcms-531/" rel="bookmark" title="Permalink to Kiwi TCMS 5.3.1">
+                <h1 class="top-header">Kiwi TCMS 5.3.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 04 September 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 5.3.1! This release
+brings lots of UI updates and removal of unused
+and/or duplicated functionality and source code. Many pages have been redesigned
+with the Patternfly library to have a modern look and feel which you can
+experience at <a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>.</p>
+<p>This will be the last release to carry around squashed migrations. In version
+6.0 older migrations will be deleted and replaced with their squashed equivalents.
+Upgrades from versions &lt; 5.3 to 6.0 will break without an intermediate upgrade to 5.3.1!</p>
+<p>Use <tt class="docutils literal">kiwitcms/kiwi:5.3.1</tt> from Docker Hub when upgrading at some point in the future!</p>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi        5.3.1               a420465852be        976.8 MB
+kiwitcms/kiwi        latest              a420465852be        976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-5-2">
+<h2>Changes since Kiwi TCMS 5.2</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.1/">Django 2.1.1</a></li>
+<li>Update Patternfly version. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/381">Issue #381</a></li>
+<li>Replace TinyMCE with SimpleMDE markdown editor. Used for TestPlan text and
+TestCase action, setup, breakdown, effect fields</li>
+<li>Allow downstream builds to customize the login templates by
+providing <tt class="docutils literal">registration/custom_login.html</tt> template. It can either
+override the entire login page or provide additional information inside
+the <tt class="docutils literal">custom_login</tt> block!</li>
+</ul>
+</div>
+<div class="section" id="known-issues">
+<h3>Known issues</h3>
+<ul class="simple">
+<li>You may need to strip existing texts from HTML tags that were generated by
+TinyMCE. Either do this manually as you go along and use/edit records or in bulk via
+the API and tools like <a class="reference external" href="https://pypi.org/project/html2text/">html2text</a>.
+We strongly advise you to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+your database before attempting to automatically edit text fields!</li>
+</ul>
+</div>
+<div class="section" id="visual-changes">
+<h3>Visual changes</h3>
+<ul class="simple">
+<li>Remove breadcrumbs at the top of pages. Only admin pages still have them</li>
+<li>Convert login and registration templates to Patternfly. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/211">Issue #211</a></li>
+<li>Convert 404 and 500 templates to Patternfly</li>
+<li>Convert dashboard page to Patternfly</li>
+<li>Convert TestRun new, edit and clone pages to Patternfly. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/17">Issue #17</a></li>
+<li>Convert Search Test Plans page to Patternfly</li>
+<li>Convert Search Test Runs page to Patternfly</li>
+<li>Convert Search Test Cases page to Patternfly</li>
+<li>TestPlan view page, Runs tab now re-uses the search form for test runs
+which is built using Patternfly</li>
+<li>Added pagination controls to pages with search results</li>
+</ul>
+</div>
+<div class="section" id="removed-functionality">
+<h3>Removed functionality</h3>
+<ul class="simple">
+<li>When creating or editing TestRun<ul>
+<li>field <tt class="docutils literal">estimated_time</tt> is scheduled for removal and is not shown</li>
+<li><tt class="docutils literal">product_version</tt> is scheduled for removal in favor of
+<tt class="docutils literal">TR.plan.product_version</tt></li>
+<li>Product &amp; Version can't be edited anymore. Must be set on the parent
+TestPlan instead. Still allows to specify builds</li>
+</ul>
+</li>
+<li>Remove the ability to clone multiple TestPlans from search results</li>
+<li>Remove the ability to upload TestPlan document files in favor of
+the existing API</li>
+<li>Remove TestCase export to XML in favor of existing API</li>
+<li>Remove Advanced Search functionality. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/448">Issue #448</a>,
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/108">Issue #108</a></li>
+<li>Remove tech preview feature: Django Report Builder</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>Marked more strings as translatable</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Don't use <tt class="docutils literal">get_full_url()</tt> where not needed. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/380">Issue #380</a></li>
+<li>Remove unused templates. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/114">Issue #114</a></li>
+<li>Submit filter form when clicking on tag value. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/426">Issue #426</a></li>
+<li>Update <tt class="docutils literal">TestCaseRun.tested_by</tt> when setting status. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/459">Issue #459</a></li>
+<li>Add tests for <tt class="docutils literal">KiwiUserAdmin</tt>. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/489">Issue #489</a></li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li>The following settings have been removed <tt class="docutils literal">MOTD_LOGIN</tt>, <tt class="docutils literal">WELCOME_MESSAGE</tt>
+and <tt class="docutils literal">TINYMCE_DEFAULT_CONFIG</tt></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Fix pylint errors (Anton Sankov, Ivaylo Ivanov)</li>
+<li>Remove lots of unused functions and classes</li>
+<li>Remove old or unnecessary templates</li>
+<li>Remove <tt class="docutils literal">html2text</tt> dependency</li>
+<li>Remove unused CSS and vendored-in JavaScript libraries</li>
+<li>Add JavaScript JSON-RPC client which is now used by the front-end to
+communicate with the existing JSON-RPC API on the back-end. This
+replaces many 'ajax' views which are only used to render the UI and were
+duplicating functionality with existing API</li>
+<li>Non <tt class="docutils literal">dist/</tt> files are no longer removed from <tt class="docutils literal">node_modules/</tt> when building
+a docker image because packages like <tt class="docutils literal">moment.js</tt> and <tt class="docutils literal"><span class="pre">bootstrap-datetimepicker.js</span></tt>
+don't ship their files in <tt class="docutils literal">dist/</tt></li>
+<li>Convert TestPlans.TreeView to JSON RPC</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+<div class="section" id="ask-your-questions-on-stackoverflow">
+<h2>Ask your questions on StackOverflow</h2>
+<p>Kiwi TCMS is now using the
+<a class="reference external" href="https://stackoverflow.com/questions/tagged/kiwi-tcms">'kiwi-tcms'</a>
+tag on StackOverflow to track questions. Please submit your support requests
+and general questions to
+<a class="reference external" href="https://stackoverflow.com/questions/tagged/kiwi-tcms">StackOverflow</a> tagged
+with the 'kiwi-tcms' tag! Support requests via GitHub or email will not be answered
+anymore (GitHub issues are for bugs or feature discussions only)!</p>
+</div>
+<div class="section" id="subscription-based-online-service">
+<h2>Subscription based online service</h2>
+<p>We are planning to convert
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a> into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.</p>
+<p>The income from this service will go towards covering operating costs and
+supporting the
+<a class="reference external" href="https://github.com/orgs/kiwitcms/people">development team</a>. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+</div>
+<div class="section" id="plans-to-remove-deprecated-functionality">
+<h2>Plans to remove deprecated functionality</h2>
+<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
+<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+<p><tt class="docutils literal">TestRun.estimated_time</tt> is scheduled for removal if not used. Objections
+and use-cases must be shared via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/514">Issue #514</a>.</p>
+<p><tt class="docutils literal">EnvGroup</tt> and <tt class="docutils literal">EnvProperty</tt> models are scheduled for removal in favor
+of <tt class="docutils literal">Tag</tt>. Internally tags are referenced in more places inside Kiwi TCMS'
+source code and they appear to be more fully developed. On the other hand
+while environment appears very similar to tags it is not exactly the same.
+Ongoing discussion is happening via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/484">Issue #484</a>.</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/" rel="bookmark" title="Permalink to Kiwi TCMS 5.2">
+                <h1 class="top-header">Kiwi TCMS 5.2</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 07 August 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 5.2! This release
+introduces new database migrations and converts
+the Docker image to a non-root user with uid 1001. You may have to adjust
+ownership/permissions on the <tt class="docutils literal">kiwi_uploads</tt> Docker volume!</p>
+<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">6bc4e3124fd4</tt>.
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>
+has also been updated!</p>
+<div class="section" id="changes-since-kiwi-tcms-5-1">
+<h2>Changes since Kiwi TCMS 5.1</h2>
+<div class="section" id="enhancements">
+<h3>Enhancements</h3>
+<ul class="simple">
+<li>Upgrade to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1/">Django 2.1</a></li>
+<li>Upgrade to <tt class="docutils literal"><span class="pre">django-report-builder</span> 6.2.2</tt>, compatible with Django 2.1</li>
+<li>Docker image now executes with uid 1001 instead of root<ul>
+<li>image based on <tt class="docutils literal">centos7</tt> image instead of <tt class="docutils literal">centos/httpd</tt></li>
+<li>image now exposes ports 8080 and 8443</li>
+<li>Apache logs now printed on Docker console</li>
+<li>SSL certificates copied to <tt class="docutils literal">/Kiwi/ssl</tt> inside Docker image instead of being bind-mounted</li>
+<li>uploads dir changed to <tt class="docutils literal">/Kiwi/uploads</tt></li>
+<li>static dir changed to <tt class="docutils literal">/Kiwi/static</tt></li>
+<li><tt class="docutils literal">/Kiwi</tt> is now owned by uid 1001</li>
+<li><tt class="docutils literal">/venv</tt> is now owned by uid 1001</li>
+<li><tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> is updated to match</li>
+</ul>
+</li>
+<li>Fix pylint errors (Ivaylo Ivanov)</li>
+<li>Allow users to see other profiles via Admin</li>
+<li>Use password change form from Admin instead of custom one</li>
+<li><tt class="docutils literal">product.py</tt> will try to import <tt class="docutils literal">local_settings.py</tt> if available in the
+same directory. This can be used to customize settings in downstream
+distributions</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Make password reset views public</li>
+<li>Don't crash when adding new users via Admin</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">UserProfile</tt> model. Kiwi TCMS doesn't needs extra information
+about users so we remove this part of the application. Custom installations
+may choose to define their own profiles if they wish</li>
+<li>Remove custom <tt class="docutils literal">DBModelBackend</tt> authentication backend</li>
+<li>Remove unused <tt class="docutils literal">tcms.core.context_processors.auth_backend_processor</tt></li>
+<li>Remove unused <tt class="docutils literal">get_using_backend()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/261">Issue #261</a></li>
+<li>Remove <tt class="docutils literal">dj_pagination</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/110">Issue #110</a></li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li><tt class="docutils literal">AUTHENTICATION_BACKENDS</tt> is removed</li>
+<li><tt class="docutils literal">PAGINATION_DEFAULT_PAGINATION</tt> is removed</li>
+<li>Navigation menu links are now defined in <tt class="docutils literal">MENU_ITEMS</tt> and can be redefined</li>
+</ul>
+</div>
+<div class="section" id="signals">
+<h3>Signals</h3>
+<ul class="simple">
+<li><tt class="docutils literal">USER_REGISTERED_SIGNAL</tt> now doesn't receive the <tt class="docutils literal">backend</tt> parameter</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" rel="bookmark" title="Permalink to Kiwi TCMS 5.1">
+                <h1 class="top-header">Kiwi TCMS 5.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 31 July 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 5.1! This release
+introduces new database migrations, an experimental reporting feature,
+deprecated functionality and bug fixes.</p>
+<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">cc9b55aa664d</tt>.
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>
+has also been updated!</p>
+<div class="section" id="changes-since-kiwi-tcms-5-0">
+<h2>Changes since Kiwi TCMS 5.0</h2>
+<div class="section" id="enhancements">
+<h3>Enhancements</h3>
+<ul class="simple">
+<li>Integrate with Django Report Builder as tech-preview. This makes it possible
+for power users and administrators to generate
+<a class="reference external" href="http://django-report-builder.readthedocs.io/en/latest/howto/">tabular reports</a>.
+You will have to know the existing DB schema if you want to create your own reports.
+See <a class="reference external" href="http://kiwitcms.readthedocs.io/en/latest/db.html">http://kiwitcms.readthedocs.io/en/latest/db.html</a>. This feature is in
+tech-preview and it may be removed if it doesn't work out. Please comment at:
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/452">Issue #452</a>.</li>
+<li>Allow using <tt class="docutils literal">manage.py dumpdata|loaddata|sqlflush|dbshell</tt> for backups, see
+<a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">blog post</a></li>
+<li>In TestCase view page add a link to delete the current test case</li>
+<li>In TestCase Admin page the <tt class="docutils literal">+ Add TestCase</tt> button now allows to create new
+test case</li>
+<li>The version menu item in the helper menu now links to
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#change-log">Changelog</a></li>
+</ul>
+</div>
+<div class="section" id="deprecated-functionality">
+<h3>Deprecated functionality</h3>
+<ul class="simple">
+<li>Start showing deprecation warning for Advanced search, see
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/448">Issue #448</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Allows Product/Version/Build to be shown in Testing Report. Fixes
+<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/618688608/">Sentry KIWI-TCMS-2C</a></li>
+<li>Default to <tt class="docutils literal"><span class="pre">https://</span></tt> links if not running locally. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/450">Issue #450</a></li>
+<li>Apply missing CSS class for object history table so it can be displayed nicely</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Squash some database migrations</li>
+<li>Fix a number of pylint issues</li>
+<li>Remove unused <tt class="docutils literal"><span class="pre">testruns.views::view_caseruns()</span></tt>. References
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/316">Issue #316</a></li>
+<li>Remove unused template <tt class="docutils literal">report/caserun.html</tt></li>
+<li>Handle TestRun deletion via admin not home grown code</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+<div class="section" id="help-us-make-kiwi-tcms-better">
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">our 2018 roadmap update</a>
+the Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/" rel="bookmark" title="Permalink to Kiwi TCMS 5.0">
+                <h1 class="top-header">Kiwi TCMS 5.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 24 July 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
+introduces object history tracking, removal of old functionality and unused code,
+lots of internal updates and bug fixes.</p>
+<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">468de0abe8a8</tt>.
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a> has also been updated!</p>
+<div class="section" id="changes-since-kiwi-tcms-4-2">
+<h2>Changes since Kiwi TCMS 4.2</h2>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">CACHE</tt> because not used</li>
+<li>Remove <tt class="docutils literal">PLAN_EMAIL_TEMPLATE</tt>, <tt class="docutils literal">CASE_EMAIL_TEMPLATE</tt> and
+<tt class="docutils literal">CASE_DELETE_EMAIL_TEMPLATE</tt>. Templates can still be overridden if desired</li>
+</ul>
+</div>
+<div class="section" id="enhancements">
+<h3>Enhancements</h3>
+<ul class="simple">
+<li>Upgrade to <a class="reference external" href="https://docs.djangoproject.com/en/2.0/releases/2.0.7/">Django 2.0.7</a></li>
+<li>Allow to delete TestPlan. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/273">Issue #273</a></li>
+<li>Don't include username in dashboard URL</li>
+<li>Copy latest TestPlan text when cloning</li>
+<li>Always require users to be logged in. Anonymous users will not be allowed
+access by default. Read-only access to some views (e.g. get TestPlan or TestRun)
+can be enabled by disabling <tt class="docutils literal">GlobalLoginRequiredMiddleware</tt>! Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/230">Issue #230</a></li>
+<li>Start tracking change history for TestPlan, TestCase, TestRun and TestCaseRun.
+Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/294">Issue #294</a></li>
+<li>History changes are recorded as unified diff which is a universally recognized format</li>
+<li>Show the actual changes in email notifications. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/199">Issue #199</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix <tt class="docutils literal">UnboundLocalError local variable 'message' referenced before assignment</tt>. Fixes
+<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/589209883/">Sentry KIWI-TCMS-1S</a></li>
+<li>Make email address unique when adding users via admin panel. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/352">Issue #352</a> and
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/68">Issue #68</a></li>
+<li>Fix <tt class="docutils literal">unsupported operand type(s) for +=: 'int' and 'datetime.timedelta'</tt> by
+initializing timedelta variable properly. Fixes
+<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/593838484/">Sentry KIWI-TCMS-1Y</a></li>
+<li>Remove <tt class="docutils literal">core.models.fields</tt> with MySQL time conversions. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/390">Issue #390</a></li>
+<li>Fix bad JavaScript comparison. Fixes Coverity #289956</li>
+<li>Remove expression with no effect. Fixes Coverity #289974</li>
+<li>Rewrite <tt class="docutils literal">request_host_link()</tt> to fix Coverity #289987</li>
+<li>Fix Coverity #289923 - Typo in identifier</li>
+<li>Don't send emails for changes performed by myself. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/216">Issue #216</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Fix pylint issues in several modules (Anton Sankov &amp; Ivaylo Ivanov)</li>
+<li>Fix wrong Plan Type template variable in advanced search form</li>
+<li>Do not use <tt class="docutils literal">Model.objects.update()</tt> because it doesn't respect history</li>
+<li>Use the standard <tt class="docutils literal">ModelChoiceField</tt> instead of custom one</li>
+<li>Use <tt class="docutils literal">updateRunStatus()</tt> instead of deprecated <tt class="docutils literal">updateObject()</tt></li>
+<li>Simplify JavaScript function <tt class="docutils literal">getInfo()</tt> and use it multiple times</li>
+<li>Simplify <tt class="docutils literal">previewPlan()</tt> by removing unused parameters</li>
+<li>Unify <tt class="docutils literal">addChildPlan()</tt> and <tt class="docutils literal">removeChildPlan()</tt></li>
+<li>Unify <tt class="docutils literal">getInfoAndUpdateObject()</tt> with <tt class="docutils literal">changeCaseRunAssignee()</tt></li>
+<li>Unify <tt class="docutils literal">onTestCaseStatusChange()</tt> with <tt class="docutils literal">changeTestCaseStatus()</tt></li>
+<li>Convert <tt class="docutils literal">TestCaseEmailSettings.cc_list</tt> to string field</li>
+<li>Merge <tt class="docutils literal">report/caseruns_table.html</tt> with <tt class="docutils literal">reports/caseruns.html</tt></li>
+<li>Rename model <tt class="docutils literal">UserActivateKey</tt> to <tt class="docutils literal">UserActivationKey</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/276">Issue #276</a></li>
+<li>Remove <tt class="docutils literal">cached_entities()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/307">Issue #307</a></li>
+<li>Remove <tt class="docutils literal">TestPlanText.checksum</tt> field</li>
+<li>Remove checksum fields for <tt class="docutils literal">TestCaseText</tt> model</li>
+<li>Remove unused and home-grown template tags</li>
+<li>Remove unused fields <tt class="docutils literal">auto_blinddown</tt>, <tt class="docutils literal">description</tt>, <tt class="docutils literal">sortkey</tt> from
+<tt class="docutils literal">TestCaseRunStatus</tt> model. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/186">Issue #186</a></li>
+<li>Remove <tt class="docutils literal">Meta.db_name</tt> effectively renaming all tables. New names will use
+Django's default naming scheme</li>
+<li>Remove RawSQL queries. We are now 100% ORM based. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/36">Issue #36</a></li>
+<li>Remove duplicate <tt class="docutils literal">MultipleEmailField</tt> definition</li>
+<li>Remove <tt class="docutils literal">TCMSLog</tt> view, <tt class="docutils literal">TCMSLogManager</tt>, <tt class="docutils literal">TCMSLogModel</tt></li>
+<li>Remove <tt class="docutils literal">TestPlanText</tt> model, use <tt class="docutils literal">TestPlan.text</tt> instead</li>
+<li>Remove unused JavaScript files
+- <tt class="docutils literal">lib/detetmine_type.js</tt>
+- <tt class="docutils literal">lib/hole.js</tt>
+- <tt class="docutils literal"><span class="pre">lib/scriptaculous-controls.js.patch</span></tt>
+- <tt class="docutils literal">lib/validations.js</tt>
+- <tt class="docutils literal">static/js/index.js</tt></li>
+<li>Remove <tt class="docutils literal">constructPlanParentPreviewDialog()</tt></li>
+<li>Remove <tt class="docutils literal">changeCasePriority()</tt></li>
+<li>Remove <tt class="docutils literal">changeCaseRunOrder()</tt></li>
+<li>Remove <tt class="docutils literal">debug_output()</tt> from JavaScript files</li>
+<li>Remove deprecated <tt class="docutils literal">/ajax/update/</tt> end-point</li>
+<li>Remove <tt class="docutils literal">taggleSortCaseRun()</tt></li>
+<li>Remove <tt class="docutils literal">strip_parameters()</tt></li>
+<li>Remove <tt class="docutils literal">_InfoObjects.users()</tt></li>
+<li>Remove <tt class="docutils literal">get_value_by_type()</tt></li>
+<li>Remove <tt class="docutils literal">testcases.views.get_log()</tt></li>
+<li>Remove <tt class="docutils literal">mail_scene()</tt> methods and related templates</li>
+</ul>
+</div>
+<div class="section" id="removed-functionality">
+<h3>Removed functionality</h3>
+<ul class="simple">
+<li>TestRun completion status is no longer updated automatically. You can still
+update the status manually via the 'Set Finished' or 'Set Running' links!
+Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/367">Issue #367</a></li>
+<li>Remove bookmarks functionality. There are many great bookmark manager apps
+and if the user is keen on bookmarks they should use one of them. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/67">Issue #67</a> and
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/210">Issue #210</a></li>
+<li>Don't track &amp; display history of changes for <tt class="docutils literal">EnvGroup</tt> model</li>
+<li>Remove Disable/Enable buttons from TestPlan page. Enabling and disabling
+can still be done via the edit page</li>
+<li>Remove <tt class="docutils literal">changeParentPlan()</tt> and the ability to change TestPlan parents
+from the 'Tree View' tab. This can be done via the edit page</li>
+<li>When viewing a TestPlan the user is no longer able to specify a sorkey for a
+particular TestCase. Instead they can use the <tt class="docutils literal"><span class="pre">Re-order</span> cases</tt> button and
+move around the entire row of cases to adjust the sort order</li>
+<li>When working with test case results, inside a TestRun you will not be allowed
+to change the order of execution. Order should be defined inside the TestPlan
+instead</li>
+<li>Remove <tt class="docutils literal">XmlRpcLog()</tt> model. Kiwi TCMS will no longer log RPC calls to the
+database. This leads to a small performance boost and can be overridden on
+individual basis if you need to do so.</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>More source strings marked as translatable</li>
+<li>New translations for Chinese Simplified, Chinese Traditional, German and Slovenian</li>
+<li>Stop keeping compiled translations under git. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/387">Issue #387</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="tcms-api-changes-since-4-2">
+<h2>tcms-api changes since 4.2</h2>
+<ul class="simple">
+<li>Requires Python 3.6 or newer because it fixes bugs related to Django's
+disabling of keep-alive connections. See <a class="reference external" href="https://bugs.python.org/issue26402">https://bugs.python.org/issue26402</a></li>
+<li>The rpc client is now accessed via <tt class="docutils literal"><span class="pre">TCMS().exec.&lt;Server-Method&gt;</span></tt></li>
+<li>Leave only XML-RPC transport classes! This removes the top-level interface
+behind the API client and the consuming side is left to work with Python
+dictionaries instead of objects.</li>
+<li>Remove the interactive <tt class="docutils literal">tcms</tt> script</li>
+<li>Remove <tt class="docutils literal">tcms_api.config</tt> module</li>
+<li>Remove logging class</li>
+<li>Remove <tt class="docutils literal">script_examples/</tt> directory. These were never tested and maintained</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+docker exec -it kiwi_web /Kiwi/manage.py populate_history --auto
+</pre>
+</div>
+<div class="section" id="help-us-make-kiwi-tcms-better">
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a class="reference external" href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/" rel="bookmark" title="Permalink to Kiwi TCMS 4.2">
+                <h1 class="top-header">Kiwi TCMS 4.2</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sun 24 June 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS and tcms-api version 4.2!
+This is a security, bug-fix and enhancement update which upgrades to the latest
+Django version under Python 3.6.
+We've pushed new <code>kiwitcms/kiwi:latest</code> docker image to Docker Hub and updated the
+demo instance at <a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>This version also includes GDPR related changes which affect our project. Read below
+for the details.</p>
+<h2>Changes since Kiwi TCMS 4.1.4</h2>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations</p>
+<h3>Security</h3>
+<ul>
+<li>Enable testing with Badit. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/237">Issue #237</a></li>
+<li>Enable testing with
+  <a href="https://scan.coverity.com/projects/kiwitcms-kiwi">Coverity Scan</a></li>
+<li>Enable testing with
+  <a href="https://pyup.io/repos/github/kiwitcms/Kiwi/">pyup.io</a></li>
+<li>Enable testing with
+  <a href="https://snyk.io/test/github/kiwitcms/Kiwi">Snyk</a></li>
+<li>Use SHA256 instead of MD5 and SHA1</li>
+<li>Use the <code>secrets</code> module for activation keys</li>
+<li>Remove unnecessary AJAX view that had remote code execution vulnerability</li>
+<li>Don't use hard-coded temporary directories</li>
+<li>Upgrade to
+  <a href="https://github.com/patternfly/patternfly/releases/tag/v3.36.0">Patternfly 3.36.0</a>
+  which fixes the following vulnerabilities:<ul>
+<li><a href="https://snyk.io/vuln/npm:moment:20161019">https://snyk.io/vuln/npm:moment:20161019</a></li>
+<li><a href="https://snyk.io/vuln/npm:moment:20170905">https://snyk.io/vuln/npm:moment:20170905</a></li>
+</ul>
+</li>
+</ul>
+<h3>Settings</h3>
+<ul>
+<li><code>BUGZILLA_AUTH_CACHE_DIR</code> is a new setting that may be specified to control
+  where Bugzilla auth cookies are saved! It is not specified by default and
+  Kiwi TCMS uses a temporary directory each time we try to login into Bugzilla!</li>
+</ul>
+<h3>Enhancements</h3>
+<ul>
+<li>Upgrade to Python 3.6. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/91">Issue #91</a></li>
+<li>Upgrade to <a href="https://docs.djangoproject.com/en/2.0/releases/2.0.6/">Django 2.0.6</a></li>
+<li>Fix around 100 pylint issues (Anton Sankov)</li>
+<li>Update email confirmation template for newly registered users and make the
+  text translatable</li>
+<li>Display <code>Last login</code> column in User admin page</li>
+<li>Add tests for <code>tcms.management.views</code> (Anton Sankov)</li>
+<li>Remove unused CSS selectors</li>
+<li>Remove unnecessary <code>templates/comments/comments.html</code></li>
+</ul>
+<h3>Bug fixes</h3>
+<ul>
+<li>Remove unused deferred field <code>product_version</code>. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523948048/">Sentry KIWI-TCMS-1C</a></li>
+<li>Rename left-over <code>get_url()</code> to <code>get_full_url()</code>. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523855781/">Sentry KIWI-TCMS-1B</a></li>
+<li>Fix empty TestPlan url and Product fields in TestRun email notification. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/353">Issue #353</a> (Matt Porter, Konsulko Group)</li>
+</ul>
+<h3>Translations</h3>
+<ul>
+<li>Updated translations for Chinese Simplified</li>
+<li>Updated translations for Chinese Traditional</li>
+<li>New language and translations for Slovenian</li>
+</ul>
+<h3>Documentation</h3>
+<ul>
+<li>Added <code>git clone</code> command to documentation. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/344">Issue #344</a> (Anton Sankov)</li>
+</ul>
+<h3>Models and database migrations</h3>
+<ul>
+<li>Increase checksum fields size to hold the new checksum values</li>
+<li>Increase <code>activation_key</code> field size to 64 chars</li>
+</ul>
+<h3>GDPR related</h3>
+<ul>
+<li>Allow users to delete their accounts. Link is present on <code>My profile</code> page.
+  This will also delete any related objects using cascade delete</li>
+<li>Try not to be so obvious when it comes to displaying email addresses across
+  the web interface. Instead show username and link to profile</li>
+</ul>
+<p>In addition the following changes were deployed to our infrastructure:</p>
+<ul>
+<li>On our website the <code>Subscribe to our newsletter</code> is now a link, instead of
+  embedded form because embedded forms can't display GDPR compliance fields.
+  If you wish to receive email from Kiwi TCMS you need to select the <code>Email</code>
+  checkbox when signing up for the newsletter.</li>
+<li>Double opt-in is now enabled when subscribing to our newsletter</li>
+<li>All newsletter addresses that have been unsubscribed have been deleted</li>
+<li>Upon registration for <a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>
+  you are no longer subscribed
+  to the newsletter. Now we send a welcome email with a link to the newsletter
+  so you can subscribe if you want</li>
+<li><a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>
+  now runs a cron job which deletes inactive accounts
+  and all of their related data. The cron job runs weekly</li>
+</ul>
+<p>We're trying to be respectful to your private data and not expose that to any
+3rd parties or use it for means other than making Kiwi TCMS better open source
+software. If you spot areas for improvement please
+<a href="https://github.com/kiwitcms/Kiwi/issues/new">report an issue</a> so we can take
+a look at it!</p>
+<h2>tcms-api changes since 4.0.0</h2>
+<ul>
+<li>Remove coloring. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/185">Issue #185</a></li>
+<li>Fix using the API client against <code>https://</code> URLs (Adam Łoszyn, Samsung)</li>
+</ul>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/04/10/kiwi-tcms-414/" rel="bookmark" title="Permalink to Kiwi TCMS 4.1.4">
+                <h1 class="top-header">Kiwi TCMS 4.1.4</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 10 April 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 4.1.4!
+This is a bug-fix and enhancement update which upgrades to the latest Django
+version, resolves several issues and includes lots of internal code updates.</p>
+<p>We've pushed new <code>kiwitcms/kiwi</code> docker image to Docker Hub and updated the
+demo instance at
+<a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>!</p>
+<h2>Changes since Kiwi TCMS 4.1.3</h2>
+<h3>Enhancements</h3>
+<ul>
+<li>Upgrade to <a href="https://docs.djangoproject.com/en/2.0/releases/2.0.4/">Django 2.0.4</a></li>
+<li>Enable pylint and fix around 700 issues (Anton Sankov)</li>
+<li>Add pylint plugin to check docstrings for triple double quotes. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/296">Issue #296</a></li>
+<li>Add pylint plugin to check for list comprehensions. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/270">Issue #270</a></li>
+<li>Add pylint plugin to check for class attributes enclosed with double underscores.
+  These are dunders and are reserved for Python!</li>
+</ul>
+<h3>Signals</h3>
+<p><strong>BREAKING CHANGES</strong>:</p>
+<ul>
+<li>Renamed <code>user_registered</code> to <code>USER_REGISTERED_SIGNAL</code> and
+  <code>post_update</code> to <code>POST_UPDATE_SIGNAL</code>!</li>
+</ul>
+<h3>Bug fixes</h3>
+<ul>
+<li>Change util function to default to https. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/220">Issue #220</a></li>
+<li>Fix
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/495015101/">Sentry KIWI-TCMS-17</a></li>
+<li>Cast iterator to list. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/501200394/">Sentry KIWI-TCMS-19</a></li>
+<li>Don't crash in Custom Report. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/499389305/">Sentry KIWI-TCMS-18</a></li>
+<li>Better handling of TestPlan documents. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/501695244/">Sentry KIWI-TCMS-1A</a></li>
+<li>Fix sorting of entries in TestPlan -&gt; Runs tab. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/472757670/">Sentry KIWI-TCMS-E</a></li>
+</ul>
+<h3>Refactoring</h3>
+<ul>
+<li>Move Bugzilla and Kerberos backends code into their own repositories. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/239">Issue #239</a></li>
+<li>Remove cache from TestCaseRunStatus. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/279">Issue #279</a></li>
+<li>Rewrite <code>UrlMixin</code>. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/157">Issue #157</a> (Chenxiong Qi)</li>
+<li>Remove unused <code>split_as_option</code> template tag</li>
+<li>Internal refactoring and more tests in <code>tcms/core/ajax.py</code></li>
+<li>Delete unused file <code>tcms/core/forms/widgets.py</code></li>
+<li>Merge <code>case/form/filter.html</code> into <code>plan/get_cases.html</code></li>
+<li>Remove unused <code>TestCaseStatus.id_to_string()</code></li>
+</ul>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/03/16/kiwi-tcms-413/" rel="bookmark" title="Permalink to Kiwi TCMS 4.1.3">
+                <h1 class="top-header">Kiwi TCMS 4.1.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Fri 16 March 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 4.1.3!
+This is a bug-fix and enhancement update which upgrades to the latest Django
+version, provides easier way for Docker administrators to override SSL certificates
+and access httpd log files and resolves several issues. This release also includes
+lots of internal code refactoring which removes code duplication and brings down
+<a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> metrics
+to 26.9% of technical debt or 10 months to fix.</p>
+<p>We've pushed the new <code>kiwitcms/kiwi</code> docker image to Docker Hub and updated the
+demo instance at
+<a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>.
+Starting forward the demo will use
+the <code>info-at-kiwitcms.org</code> email address for all communication sent. There are real
+people behind this address so if you write to us we will reply!</p>
+<h2>Changes since Kiwi TCMS 4.1.0</h2>
+<h3>Enhancements</h3>
+<ul>
+<li>Upgrade to <a href="https://docs.djangoproject.com/en/2.0/releases/2.0.3/">Django 2.0.3</a></li>
+<li>Show <code>date_joined</code> column for user admin</li>
+<li>Expose httpd logs to the host running docker. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/191">Issue #191</a></li>
+</ul>
+<h3>Bug fixes</h3>
+<ul>
+<li>Move SSL keys under common directory in the container. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/231">Issue #231</a></li>
+<li>Always select active builds for TestRun. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/245">Issue #245</a></li>
+<li>Swap <code>escape</code> and <code>escapejs</code> filters. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/234">Issue #234</a></li>
+<li>Globally disable <code>delete_selected</code> action in Admin, this removes the
+  drop down selection widget! Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/221">Issue #221</a></li>
+<li>Fix error in TestCase view when <code>from_plan</code> is empty string. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/474369640/">Sentry KIWI-TCMS-Z</a></li>
+<li>Fix sorting issue when None is compared to int. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/473996504/">Sentry KIWI-TCMS-V</a></li>
+<li>Validate form field as integer, not char. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/474058623/">Sentry KIWI-TCMS-W</a></li>
+<li>[docs] Remove information about importing test cases via XML. This functionality
+  was removed in version 3.49</li>
+</ul>
+<h3>Refactoring</h3>
+<ul>
+<li>Refactor inner class <code>CaseActions</code>. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/21">Issue #21</a> (Chenxiong Qi)</li>
+<li>Only use <code>get_cases.html</code> template. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/176">Issue #176</a></li>
+<li>Unify <code>get_details_review.html</code> and <code>get_details.html</code> templates</li>
+<li>Remove internal <code>Prompt.render</code> class and replace with Django messages</li>
+<li>Remove <code>mail/delete_plan.txt</code> template</li>
+<li>Remove <code>handle_emails_pre_plan_delete</code> signal handler</li>
+<li>Remove the <code>Export</code> button from TestPlan view, use Case-&gt;Export sub-menu
+  item in the Cases tab. Also remove the export buttons from search and advanced
+  search result templates. If you'd like to export the cases from a given
+  plan you have to open it in a new browser window and use the menu</li>
+<li>Remove the <code>Print</code> button from plan search form</li>
+<li>Remove TestRun cloning from search results and plan details, use sub-menu</li>
+<li>Remove unnecessary JavaScript handling for <code>EnvGroup</code> edit view</li>
+</ul>
+<h3>Settings</h3>
+<ul>
+<li>Remove <code>PLAN_DELELE_EMAIL_TEMPLATE</code> setting (not used)</li>
+</ul>
+<h3>Models and database migrations</h3>
+<ul>
+<li>Use Django's own <code>DurationField</code>, instead of custom one. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/183">Issue #183</a></li>
+</ul>
+<p>API clients must now send values for <code>estimated_time</code> which must be in a
+format that <code>parse_duration()</code> understands, for example 'DD HH:MM:SS'! See
+<a href="https://docs.djangoproject.com/en/2.0/ref/utils/#django.utils.dateparse.parse_duration">https://docs.djangoproject.com/en/2.0/ref/utils/#django.utils.dateparse.parse_duration</a></p>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
+<h3>Translations</h3>
+<p>There are new translatable strings introduced with this release! At this moment
+translating Kiwi TCMS in languages other than English is purely a
+community effort. If you'd like to help consult our
+<a href="http://kiwitcms.readthedocs.io/en/latest/contribution.html#translation">translations contribution page</a>.</p>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+        </div>
+    </section>
 
 <section id="pagination" class="col-12 secondary">
     <ul class="pagination">
         <li>
-            Page 1 / 3
+            Page 1 / 2
         </li>
         <li>
-            <a href="http://kiwitcms.org/blog/index2.html">Older Posts &rarr;</a>
+            <a href="http://kiwitcms.org/blog/tags/releases/index2.html">Older Posts &rarr;</a>
         </li>
     </ul>
 </section>

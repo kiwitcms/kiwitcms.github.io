@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Blog</title>
+        <title>Kiwi TCMS - Articles with tag releases</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- MailChimp Newsletter Form Styles -->
         <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
@@ -44,6 +44,310 @@
             </div>
         </nav>
         <!-- content -->
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/02/21/kiwi-tcms-410/" rel="bookmark" title="Permalink to Kiwi TCMS 4.1.0">
+                <h1 class="top-header">Kiwi TCMS 4.1.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 21 February 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 4.1.0!
+This is a bug-fix and enhancement update centered around providing more
+flexibility for administrators to configure the user approval process.
+Refer to the documentation for more information about
+<a href="http://kiwitcms.readthedocs.io/en/latest/modules/tcms.signals.html">signals handling</a>
+in Kiwi TCMS.</p>
+<h2>Changes since Kiwi TCMS 4.0.0</h2>
+<h3>Enhancements and bug fixes</h3>
+<ul>
+<li>Add tests for <code>tcms.core.ajax.tag</code> (Anton Sankov)</li>
+<li>Remove unused code from <code>tcms.core.ajax.tag</code> (Anton Sankov)</li>
+<li>Refactor <code>tcms.core.ajax.tag</code> to work with only one object. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/135">Issue #135</a> (Anton Sankov)</li>
+<li>Add test for tcms_api.TestRun. Closes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/194">Issue #194</a></li>
+<li>Send the <code>user_registered</code> signal when new users are registered</li>
+<li>Add signal handler to notify admins on new users. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/205">Issue #205</a></li>
+<li>Add <code>is_superuser</code> column to User admin. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/206">Issue #206</a></li>
+<li>Properly pass variables to blocktrans tag. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/225">Issue #225</a></li>
+<li>Minor documentation updates</li>
+</ul>
+<h3>Refactoring</h3>
+<ul>
+<li>Remove double thread when sending email on <code>post_save</code> signal</li>
+<li>Remove unused <code>EmailBackend</code> authentication backend</li>
+<li>Remove unused <code>tcms.core.models.signals</code> module</li>
+<li>Consolidate all signals and handlers in <code>tcms.signals</code></li>
+<li>Make use of <code>django_messages</code> during account registration</li>
+</ul>
+<h3>Settings</h3>
+<ul>
+<li>Remove <code>LISTENING_MODEL_SIGNAL</code> (internal setting)</li>
+<li>New setting <code>AUTO_APPROVE_NEW_USERS</code>. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/203">Issue #203</a></li>
+</ul>
+<h3>Models and database migrations</h3>
+<ul>
+<li>Remove unused fields from <code>Product</code> model:
+  <code>disallow_new</code>, <code>max_vote_super_bug</code>, <code>vote_super_user</code>,
+  <code>field votes_to_confirm</code>, <code>default_milestone</code>, <code>milestone_url</code></li>
+<li>Remove unused <code>Milestone</code> model</li>
+</ul>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
+<h3>Translations</h3>
+<p>There are new translatable strings introduced with this release,
+including translations of a few email templates! At this moment
+translating Kiwi TCMS in languages other than English is purely a
+community effort. If you'd like to help consult our
+<a href="http://kiwitcms.readthedocs.io/en/latest/contribution.html#translation">translations contribution page</a>.</p>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/" rel="bookmark" title="Permalink to Kiwi TCMS & tcms-api version 4.0.0">
+                <h1 class="top-header">Kiwi TCMS &amp; tcms-api version 4.0.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sat 10 February 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 4.0.0
+and the corresponding tcms-api version 4.0.0! This is a very big release
+which introduces tons of backwards incompatible changes to the RPC layer
+as well as several bug-fixes and enhancements!</p>
+<p>With this release Kiwi TCMS meets one of our
+<a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">milestones for 2018</a>! All XML-RPC
+namespaces now match DB model names and the API client class names. Lots of
+similar and duplicate methods were removed and existing ones were simplified.
+We've also reduced code duplication and technical debth by 1 month
+according to stats by <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>.</p>
+<p><strong>IMPORTANT:</strong> this is also the first release to officially publish the
+<code>kiwitcms/kiwi</code> image on Docker Hub!</p>
+<p><strong>WARNING:</strong> upgrading to Kiwi TCMS 4.0.0 means you will have to upgrade
+the tcms-api client as well. None of the 4.x releases is compatible with
+older releases due to the massive ammount of changes in the RPC layer.</p>
+<h2>Changes since Kiwi TCMS 3.50</h2>
+<h3>Enhancements and bug fixes</h3>
+<ul>
+<li>Upgrade to Django 2.0.2 which patches a security issue</li>
+<li>Pin JIRA client version to 1.0.10. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/195">Issue #195</a></li>
+<li>Generate api-docs for model classes</li>
+<li>Updated documentation for all RPC methods</li>
+<li>Use Grappelli jQuery initialization, fixes popup windows</li>
+<li>Unify RPC namespaces, API client class names and server-side model names.
+  Fixes <a href="https://github.com/kiwitcms/Kiwi/issues/153">Issue #153</a></li>
+</ul>
+<h3>Settings</h3>
+<ul>
+<li>Remove <code>ADMIN_PREFIX</code> setting</li>
+</ul>
+<h3>RPC methods refactoring</h3>
+<ul>
+<li>Remove <code>Build.check_build</code>, use <code>Build.filter</code></li>
+<li>Remove <code>Build.get</code>, use <code>Build.filter</code></li>
+<li>Remove <code>Build.get_caseruns</code>, use <code>TestCaseRun.filter</code></li>
+<li>
+<p>Remove <code>Build.get_runs</code>, use <code>TestRun.filter</code></p>
+</li>
+<li>
+<p>Rename <code>Env.filter_groups</code>, use <code>Env.Group.filter</code></p>
+</li>
+<li>Rename <code>Env.filter_properties</code>, use <code>Env.Property.filter</code></li>
+<li>
+<p>Rename <code>Env.filter_values</code>, use <code>Env.Value.filter</code></p>
+</li>
+<li>
+<p>Remove <code>Product.add_component</code>, use <code>Component.create</code></p>
+</li>
+<li>Remove <code>Product.add_version</code>, use <code>Version.create</code></li>
+<li>Remove <code>Product.check_category</code>, use <code>Category.filter</code></li>
+<li>Remove <code>Product.check_component</code>, use <code>Component.filter</code></li>
+<li>Remove <code>Product.check_product</code>, use <code>Product.filter</code></li>
+<li>Remove <code>Product.filter_categories</code>, use <code>Category.filter</code></li>
+<li>Remove <code>Product.filter_components</code>, use <code>Component.filter</code></li>
+<li>Remove <code>Product.filter_versions</code>, use <code>Version.filter</code></li>
+<li>Remove <code>Product.get</code>, use <code>Product.filter</code></li>
+<li>Remove <code>Product.get_builds</code>, use <code>Build.filter</code></li>
+<li>Remove <code>Product.get_cases</code>, use <code>TestCase.filter</code></li>
+<li>Remove <code>Product.get_categories</code>, use <code>Category.filter</code></li>
+<li>Remove <code>Product.get_category</code>, use <code>Category.filter</code></li>
+<li>Remove <code>Product.get_component</code>, use <code>Component.filter</code></li>
+<li>
+<p>Remove <code>Product.update_component</code>, use <code>Component.update</code></p>
+</li>
+<li>
+<p>Rename <code>Tag.get_tags</code> to <code>Tag.filter</code></p>
+</li>
+<li>
+<p>Remove <code>TestCase.add_comment</code></p>
+</li>
+<li>Update signature for <code>TestCase.add_component</code></li>
+<li>Update signature for <code>TestCase.add_tag</code></li>
+<li>Remove <code>TestCase.add_to_run</code>, use <code>TestRun.add_case</code></li>
+<li>Remove <code>TestCase.attach_bug</code>, use <code>Bug.create</code></li>
+<li>Remove <code>TestCase.calculate_average_estimated_time</code></li>
+<li>Remove <code>TestCase.calculate_total_estimated_time</code></li>
+<li>Remove <code>TestCase.check_case_status</code>, use <code>TestCaseStatus.filter</code></li>
+<li>Remove <code>TestCase.check_priority</code>, use <code>Priority.filter</code></li>
+<li>Update signature for <code>TestCase.create</code>, no longer accepts <code>plan</code>,
+  <code>component</code> and <code>bug</code> dict attributes. Instead use 
+  <code>TestPlan.add_case</code>, <code>TestCase.add_component</code> and <code>Bug.create</code></li>
+<li>Remove <code>TestCase.detach_bug</code>, use <code>Bug.remove</code></li>
+<li>Remove <code>TestCase.filter_count</code></li>
+<li>Remove <code>TestCase.get</code>, use <code>TestCase.filter</code></li>
+<li>Remove <code>TestCase.get_bugs</code>, use <code>Bug.filter({'case': ?})</code></li>
+<li>Remove <code>TestCase.get_bug_systems</code></li>
+<li>Remove <code>TestCase.get_case_status</code>, use <code>TestCaseStatus.filter</code></li>
+<li>Update signature for <code>TestCase.get_components</code></li>
+<li>Remove <code>TestCase.get_plans</code>, use <code>TestPlan.filter({'case': ?})</code></li>
+<li>Remove <code>TestCase.get_priority</code>, use <code>Priority.filter</code></li>
+<li>Remove <code>TestCase.get_tags</code>, use <code>Tag.filter({'case': ?})</code></li>
+<li>Remove <code>TestCase.get_text</code>, use <code>TestCase.filter</code></li>
+<li>Remove <code>TestCase.link_plan</code>, use <code>TestPlan.add_case</code></li>
+<li>Rename <code>TestCase.notification_add_cc</code> to <code>TestCase.add_notification_cc</code>
+  and update signature</li>
+<li>Rename <code>TestCase.notification_get_cc_list</code> to <code>TestCase.get_notification_cc</code>
+  and update signature</li>
+<li>Rename <code>TestCase.notification_remove_cc</code> to <code>TestCase.remove_notification_cc</code>
+  and update signature</li>
+<li>Update signature for <code>TestCase.remove_component</code></li>
+<li>Update signature for <code>TestCase.remove_tag</code></li>
+<li>Remove <code>TestCase.store_text</code>, use <code>TestCase.update</code> with
+  <code>setup</code>, <code>breakdown</code>, <code>action</code> and <code>effect</code> attributes in the parameter dict</li>
+<li>
+<p>Remove <code>TestCase.unlink_plan</code>, use <code>TestPlan.remove_case</code></p>
+</li>
+<li>
+<p>Remove <code>TestCasePlan.get</code></p>
+</li>
+<li>
+<p>Remove <code>TestCasePlan.update</code></p>
+</li>
+<li>
+<p>Update <code>TestCaseRun.add_comment</code> to accept a single ID as first parameter</p>
+</li>
+<li>Remove <code>TestCaseRun.attach_bug</code>, use <code>Bug.create</code></li>
+<li>Rename <code>TestCaseRun.attach_log</code> to <code>TestCaseRun.add_log</code></li>
+<li>Remove <code>TestCaseRun.detach_bug</code>, use <code>Bug.remove</code></li>
+<li>Rename <code>TestCaseRun.detach_log</code> to <code>TestCaseRun.remove_log</code></li>
+<li>Remove <code>TestCaseRun.get</code>, use <code>TestCaseRun.filter</code></li>
+<li>Remove <code>TestCaseRun.get_bugs</code>, use <code>Bug.filter({'case_run': ?})</code></li>
+<li>Remove <code>TestCaseRun.get_case_run_status_by_name</code></li>
+<li>
+<p>Update signature for <code>TestCaseRun.update</code></p>
+</li>
+<li>
+<p>Remove <code>TestPlan.add_component</code></p>
+</li>
+<li>Update signature for <code>TestPlan.add_tag</code></li>
+<li>Remove <code>TestPlan.check_plan_type</code>, use <code>PlanType.filter</code></li>
+<li>Remove <code>TestPlan.filter_count</code></li>
+<li>Remove <code>TestPlan.get</code>, use <code>TestPlan.filter</code></li>
+<li>Remove <code>TestPlan.get_all_cases_tags</code></li>
+<li>Remove <code>TestPlan.get_components</code></li>
+<li>Remove <code>TestPlan.get_env_groups</code>, use <code>Env.Group.filter({'testplan': ?})</code></li>
+<li>Remove <code>TestPlan.get_plan_type</code>, use <code>PlanType.filter</code></li>
+<li>Remove <code>TestPlan.get_product</code>, use <code>Product.filter({'plan': ?})</code></li>
+<li>Remove <code>TestPlan.get_tags</code>, use <code>Tag.filter({'plan': ?})</code></li>
+<li>Remove <code>TestPlan.get_test_cases</code>, use <code>TestCase.filter({'plan': ?})</code></li>
+<li>Remove <code>TestPlan.get_test_runs</code>, use <code>TestRun.filter({'plan': ?})</code></li>
+<li>Remove <code>TestPlan.get_text</code>, use <code>TestPlan.filter</code></li>
+<li>Rename <code>TestPlan.link_env_value</code> to <code>TestPlan.add_env_value</code>
+  and update signature</li>
+<li>Remove <code>TestPlan.remove_component</code></li>
+<li>Update signature for <code>TestPlan.remove_tag</code></li>
+<li>Remove <code>TestPlan.store_text</code>, use <code>TestPlan.update</code> with
+  a <code>text</code> attribute in the parameter values</li>
+<li>
+<p>Rename <code>TestPlan.unlink_env_value</code> to <code>TestPlan.remove_env_value</code>
+  and update signature</p>
+</li>
+<li>
+<p>Rename <code>TestRun.add_cases</code> to <code>TestRun.add_case</code> and update signature</p>
+</li>
+<li>Update signature for <code>TestRun.add_tag</code></li>
+<li>Update signature for <code>TestRun.create</code>, no longer accepts <code>case</code>
+  dict attribute. Instead use <code>TestRun.add_case</code></li>
+<li>Remove <code>TestRun.filter_count</code></li>
+<li>Remove <code>TestRun.get</code>, use <code>TestRun.filter</code></li>
+<li>Remove <code>TestRun.get_bugs</code></li>
+<li>Remove <code>TestRun.get_env_values</code>, use <code>Env.Value.filter({'testrun': ?})</code></li>
+<li>Remove <code>TestRun.get_tags</code>, use <code>Tag.filter({'run': ?})</code></li>
+<li>Rename <code>TestRun.get_test_cases</code> to <code>TestRun.get_cases</code></li>
+<li>Remove <code>TestRun.get_test_case_runs</code>, use <code>TestCaseRun.filter({'run': ?})</code></li>
+<li>Remove <code>TestRun.get_test_plan</code>, use <code>TestPlan.filter({'run': ?})[0]</code></li>
+<li>Rename <code>TestRun.remove_cases</code> to <code>TestRun.remove_case</code> and update signature</li>
+<li>Update signature for <code>TestRun.remove_tag</code></li>
+<li>
+<p>Update signature for <code>TestRun.update</code></p>
+</li>
+<li>
+<p>Rename <code>User.get</code> to <code>User.filter</code></p>
+</li>
+<li>Rename <code>User.join</code> to <code>User.join_group</code></li>
+<li>Update signature for <code>User.update</code></li>
+</ul>
+<h3>Models and database migrations</h3>
+<ul>
+<li>Remove model <code>TestEnvironment</code></li>
+<li>Remove model <code>TestEnvironmentCategory</code></li>
+<li>Remove model <code>TestEnvironmentElement</code></li>
+<li>Remove model <code>TestEnvironmentMap</code></li>
+<li>Remove model <code>TestEnvironmentProperty</code></li>
+<li>Remove model <code>TestPlanComponent</code></li>
+<li>Remove <code>TestPlan.get_text_with_version()</code></li>
+<li>Remove <code>TestRun.get_previous_or_next()</code></li>
+</ul>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
+<h2>tcms-api changes since 1.5.1</h2>
+<ul>
+<li><strong>Make the code compatible with Kiwi TCMS XML-RPC v4.0.0</strong></li>
+<li>Rename <code>Status</code> to <code>TestCaseRunStatus</code></li>
+<li>Rename <code>CaseRun</code> to <code>TestCaseRun</code></li>
+<li>Remove <code>PlanStatus</code>, use <code>TestPlan.is_active</code></li>
+<li>Remove <code>RunStatus</code>, use <code>TestRun.finished</code></li>
+<li>Remove <code>TestPlan.components</code> container</li>
+<li>Update signature for <code>TestPlan</code>. Now accept <code>text</code> kwarg in constructor
+  instead of <code>document</code>.</li>
+</ul>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<p>Happy testing!</p>
+        </div>
+    </section>
     <section class="col-12 secondary">
         <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.50">
@@ -108,120 +412,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre></div>
 
 
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="bookmark" title="Permalink to Kiwi TCMS roadmap for 2018">
-                <h1 class="top-header">Kiwi TCMS roadmap for 2018</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Mon 22 January 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>Hello everyone. As you know Kiwi TCMS has been around for a while and it has
-gone through some big changes in the last year! It started as an abandoned
-Django 1.6 project with broken test suite and is now currently running on the
-latest Django 2.0.1 with Python 3.5! It is clearly a legacy code base!</p>
-<p>We, the Kiwi TCMS team, have learned a lot more about the project and this
-blog post describes our roadmap for 2018 in terms of technical work and community
-engagement. The general technical direction is cleaner/simpler code,
-improved UI/UX and more tests!</p>
-<h2>Make code easier to maintain</h2>
-<p>The current code is a bunch of very large modules and functions and classes
-bundled together. It is also old and sometimes looks like spaghetti code.
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> gives us a "D" rating
-for maintainability with a 1 year estimated effort to fix that. There are 600+
-code smells and 600+ duplications detected by CodeClimate. Our goal is to get this
-number down to zero!</p>
-<h2>Use pylint and pylint-django</h2>
-<p>pylint is the standard static analyzer for Python and currently it reports over
-4000 errors and warnings when executed against Kiwi TCMS. This is a huge number and
-it needs to become zero! We've also identified interesting patterns that will
-make it into pylint and pylint-django plugins!</p>
-<h2>Render HTML, return JSON</h2>
-<p>The current state of affairs is a mix and match of everything. There are views that
-render HTML, others which return pure JSON, other which return HTML encoded as JSON string
-and probably everything in between. Views that render pages need to do just that
-and views that are used with AJAX calls from the UI need to return pure JSON!
-A lot of these are hiding in plain sight and will come to light when we start
-overhauling the user interface.</p>
-<h2>Submit forms, post JSON, GET clean URLs</h2>
-<p>There are lots of forms in Kiwi TCMS. Sometimes they are submitted by the user and
-other times they are serialized and POSTed by some JavaScript code. This isn't
-very easy to understand plus this entire home-grown utility code doesn't bring
-anything useful to the project. All of these need to be identified and cleaned up.
-JavaScript code needs to send or consume JSON, nothing else!</p>
-<p>There are also lots of places where Kiwi issues GET requests with a number of
-query parameters. Our goal is to minimize these and where possible have the
-parameters as part of the Django urls scheme, not as query strings.</p>
-<h2>API layer</h2>
-<p>The current API module is a bit disorganized. API namespaces don't match the
-names of the underlying DB models and the API client classes don't match any
-of the other two! The way we pass parameters and what these parameters are
-named should match between the client, the RPC method and the underlying model!</p>
-<p>In earlier releases we've removed duplicate or similar RPC methods and we
-think there are more of these that need our love.</p>
-<h2>Documentation</h2>
-<p>We've started producing documentation from doc-strings and most of the RPC
-methods have such. However it is unformatted and barely readable, sometimes
-even inaccurate. Previous releases made progress on this but there's a lot
-more to cover.</p>
-<p>All RPC methods should be documented first and then the rest of Kiwi's
-internals to make development easier!</p>
-<h2>No vendored JavaScript libraries</h2>
-<p>There are 11 vendored-in JavaScript files that we carry around in Kiwi TCMS.
-Most notable are jQuery plus a few addons and Handlebars.js. To the extent possible
-our goal is to use jQuery provided by Django or installed via NPM dependencies!</p>
-<h2>Less HTML templates with better organization</h2>
-<p>There are over 100 HTML templates in Kiwi TCMS. There are also email and even
-JavaScript templates. For example there are <code>get_cases.html</code> and <code>get_review_cases.html</code>
-which are essentially the same. This is kind of also true for templates used in
-new and edit views! Such templates should be unified!</p>
-<p>Those JavaScript templates need to be totally gone!</p>
-<p>All templates are stuffed together in a single directory and their names
-are not very predictable. They need to be split per application and follow
-some kind of naming convention.</p>
-<h2>Modern interface with Patternfly</h2>
-<p>The UI already uses the Patternfly library for some of its widgets. Most notably
-the main navigation header. Our goal is for the entire UI to be ported to Patternfly
-by updating widgets HTML and CSS where needed.
-This will also help clean things up a lot. At the same time we'll be rethinking how
-information is organized on screen and how the person interacts with it! Usability
-suggestions are very welcome!</p>
-<p>This move will also help us get rid of the Handlebars dependency which is now
-used for pop-up dialogs.</p>
-<h2>JavaScript updates and front-end testing</h2>
-<p>There's lots of JavaScript code on the front-end and honestly we don't quite know
-what it does or how it is organized. There are also no tests on the front-end
-whatsoever!</p>
-<p>It is our goal for this to change with the intention to not overdo the JavaScript
-part and keep things very minimal. At the moment we're thinking about vanilla jQuery
-that will act as a proxy between the browser and the back-end!</p>
-<h2>Community efforts</h2>
-<p>A year ago hardly anybody knew what Kiwi TCMS was, the project didn't even have
-this name, there was 1 active contributor and hardly any users! Now the community
-has started to slowly revitalize, we're seeing some contributions from our
-junior team members (more on this in another blog post) and also seeing
-folks installing and using Kiwi TCMS and reporting interesting bugs and feature
-requests around it!</p>
-<p>For the upcoming year our goal is to seek active engagement with other open source
-projects that could make use of Kiwi TCMS and work with them. Kudos to
-openSUSE for being the first
-<a href="https://github.com/openSUSE/mentoring/issues/95">to propose such integration</a>!
-We're also planning couple of appearances at a few conferences but there's
-nothing confirmed yet.</p>
-<p>Every other contribution in terms of bug reports, new users and feature requests
-is of course welcome but we're very conscious of the fact that there's tons
-of work to be done and the team is still very small!</p>
-<p>Team wise we'd like to get the existing team members up to speed and tackle
-the above tasks with priority. This will also help us introduce bug fixes
-and new features more quickly!</p>
 <p>Happy testing!</p>
         </div>
     </section>
@@ -459,40 +649,14 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 <p>Happy testing!</p>
         </div>
     </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2017/11/03/testing-testing-it-works/" rel="bookmark" title="Permalink to Testing, testing. It works!">
-                <h1 class="top-header">Testing, testing. It works!</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 03 November 2017
-            </p>
-        </div>
-
-        <div class="article">
-            <p>Welcome to the official website and blog of Kiwi TCMS.
-We are happy to finally be online!</p>
-<p>This website was built with the help of
-<a href="https://github.com/koksyncho">Kaloyan Krastev</a>,
-<a href="https://github.com/FreshyMc">Tsvetoslav Garkov</a> and
-<a href="https://github.com/ivo0126">Ivaylo Ivanov</a>
-who will be joining the project a bit later as well.</p>
-<p>In this blog you can expect various news and progress reports around the project,
-announcement of new releases and future plans. We would love to hear your
-feedback so please use the comments form below.</p>
-<p>Happy testing!</p>
-        </div>
-    </section>
 
 <section id="pagination" class="col-12 secondary">
     <ul class="pagination">
         <li>
-            <a href="http://kiwitcms.org/blog/index2.html">&larr;Newest Posts </a>
+            <a href="http://kiwitcms.org/blog/tags/releases/index.html">&larr;Newest Posts </a>
         </li>
         <li>
-            Page 3 / 3
+            Page 2 / 2
         </li>
     </ul>
 </section>
