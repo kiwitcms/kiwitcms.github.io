@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-05-25T14:27:00+03:00</updated><entry><title>Pylint workshop with Django Bulgaria user group</title><link href="http://kiwitcms.org/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/" rel="alternate"></link><published>2019-05-25T14:27:00+03:00</published><updated>2019-05-25T14:27:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-05-25:/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/</id><summary type="html">&lt;p&gt;On Tuesday I hosted my pylint workshop during the regular
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-05-27T16:15:00+03:00</updated><entry><title>Kiwi TCMS needs your help winning OpenAwards 2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/" rel="alternate"></link><published>2019-05-27T16:15:00+03:00</published><updated>2019-05-27T16:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-27:/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/openawards2019.jpg"
+     alt="Vote for Kiwi TCMS at OpenAwards 2019"
+     style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;Thanks to you, our community supporters, Anton Sankov and Alex Todorov
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/"&gt;took the lead at OpenExpo 2019 CfP votes&lt;/a&gt;.
+We need your help one more time. Our team has submitted participation in
+'Best Tech Community' and 'Best Success Story' categories.&lt;/p&gt;
+&lt;p&gt;Unfortunately our submission into 'Best Success Story' has been pulled …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="/images/openexpo/openawards2019.jpg"
+     alt="Vote for Kiwi TCMS at OpenAwards 2019"
+     style="float: none"&gt;&lt;/p&gt;
+&lt;p&gt;Thanks to you, our community supporters, Anton Sankov and Alex Todorov
+&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/"&gt;took the lead at OpenExpo 2019 CfP votes&lt;/a&gt;.
+We need your help one more time. Our team has submitted participation in
+'Best Tech Community' and 'Best Success Story' categories.&lt;/p&gt;
+&lt;p&gt;Unfortunately our submission into 'Best Success Story' has been pulled down!
+We used that category to share the story from a dead open source project into
+a thriving open source community with lots of users and contributors and to
+highlight some of our milestones. Here's the short version:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lots of technical updates and refactoring, latest everything, modern UI&lt;/li&gt;
+&lt;li&gt;the &lt;strong&gt;only&lt;/strong&gt; open source test case management system on GitHub Marketplace&lt;/li&gt;
+&lt;li&gt;nearly 60000 downloads on Docker Hub&lt;/li&gt;
+&lt;li&gt;growing and active core team&lt;/li&gt;
+&lt;li&gt;active OSS contributors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please help us gain more recognition:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://a.cstmapp.com/voteme/31129/633186885"&gt;Vote for Kiwi TCMS&lt;/a&gt;
+  in the Best Tech Community category!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks you &amp;amp; happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Pylint workshop with Django Bulgaria user group</title><link href="http://kiwitcms.org/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/" rel="alternate"></link><published>2019-05-25T14:27:00+03:00</published><updated>2019-05-25T14:27:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-05-25:/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/</id><summary type="html">&lt;p&gt;On Tuesday I hosted my pylint workshop during the regular
 &lt;a href="https://www.facebook.com/events/295673718035353/"&gt;Django Bulgaria meetup&lt;/a&gt;.
 This edition was the first which was practice based.&lt;/p&gt;
 &lt;p&gt;Attendance numbers were low but participation was very good. We managed to
