@@ -1,6 +1,6 @@
 Title: Kiwi TCMS needs your help winning OpenAwards 2019
 headline: please vote for us
-date: 2019-05-27 10:00
+date: 2019-05-27 16:15
 comments: true
 og_image: images/openexpo/openawards2019.jpg
 twitter_image: images/openexpo/openawards2019.jpg
