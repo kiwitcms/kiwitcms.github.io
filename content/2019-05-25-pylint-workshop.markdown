@@ -18,10 +18,8 @@ create 4 new checkers for Kiwi TCMS:
 - [PR #950 - OneToOneField checker](https://github.com/kiwitcms/Kiwi/pull/950)
 - [PR #951 - discover directories without \_\_init\_\_.py](https://github.com/kiwitcms/Kiwi/pull/951)
 - [PR #952 - empty class checker](https://github.com/kiwitcms/Kiwi/pull/952)
+- [PR #955 - function based view checker](https://github.com/kiwitcms/Kiwi/pull/955)
 
-I am still waiting for a 5th pull request from one of the participants who
-decided to implement a more complex checker that will very likely land into
-pylint-django instead!
 
 Many thanks to all contributors. These new checkers have discovered quite a
 few new issues with Kiwi TCMS so this is an area which our team is going to improve.
