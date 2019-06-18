@@ -46,6 +46,127 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/" rel="bookmark" title="Permalink to Kiwi TCMS 6.10">
+                <h1 class="top-header">Kiwi TCMS 6.10</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 18 June 2019
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 6.10!
+This is a small security and improvement update.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  bbb581d60ed1    1.005 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-9">
+<h2>Changes since Kiwi TCMS 6.9</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 2.2.1 to 2.2.2 for medium severity
+CVE-2019-12308 (XSS), CVE-2019-11358 (jQuery).
+<a class="reference external" href="https://docs.djangoproject.com/en/2.2/releases/2.2.2/">More info</a></li>
+<li>Add missing permission checks for menus in Test run page UI template.
+Permission check added for TestExecution status and comment menu.
+References <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/716">Issue #716</a></li>
+<li>Re-enable static analysis with <tt class="docutils literal">bandit</tt> and <tt class="docutils literal">Coverity Scan</tt> in
+Travis CI (Svetlomir Balevski)</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update psycopg2 from 2.8.2 to 2.8.3</li>
+<li>Update markdown from 3.1 to 3.1.1</li>
+<li>Update patternfly to version 3.59.2</li>
+<li>Override <tt class="docutils literal">PasswordResetForm</tt> because <tt class="docutils literal">Site.objects.get_current()</tt>
+didn't produce correct results when working with <tt class="docutils literal"><span class="pre">kiwitcms-tenants</span></tt></li>
+<li>Show column <tt class="docutils literal">is_active</tt> in user admin page</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Add test for <tt class="docutils literal">email_case_deletion()</tt> (Rik)</li>
+<li>New linter to warn about usage of <tt class="docutils literal">AutoField</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/737">Issue #737</a> (Ivo Donchev, HackSoft)</li>
+<li>New linter to discover empty classed. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/739">Issue #739</a> (Daniel Goshev)</li>
+<li>New linter to warn about usage of <tt class="docutils literal">OneToOneField</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/735">Issue #735</a> (George Goranov)</li>
+<li>New linter to warn about usage of function based views. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/734">Issue #734</a> (Yavor Lulchev, Uber)</li>
+<li>New linter to discover Python files in directories without <tt class="docutils literal">__init__.py</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/790">Issue #790</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="join-us-at-openexpo-in-madrid">
+<h2>Join us at OpenExpo in Madrid</h2>
+<p>Kiwi TCMS is exhibitor at <a class="reference external" href="https://openexpoeurope.com/">OpenExpo Europe</a>
+on June 20th in Madrid. We will be hosting an info booth and 2 technical
+presentations delivered by
+<a class="reference external" href="https://openexpoeurope.com/speaker/anton-sankov/">Anton Sankov</a> and
+<a class="reference external" href="https://openexpoeurope.com/speaker/alexander-todorov/">Alex Todorov</a>.</p>
+<p>Kiwi TCMS is also the leading finalist in the
+<a class="reference external" href="https://a.cstmapp.com/entries/31129/sort:votes/direction:desc">Best Tech Community</a>
+category at Open Awards 2019!</p>
+<p>Use <strong>OE19SPEAKERINVITE</strong> 100% discount code! Get your ticket
+<a class="reference external" href="https://www.eventbrite.es/e/openexpo-europe-2019-the-leading-enterprise-it-open-innovation-summit-tickets-56499351080?discount=OE19SPEAKERINVITE#tickets">here</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="bookmark" title="Permalink to Kiwi TCMS 6.9">
                 <h1 class="top-header">Kiwi TCMS 6.9</h1>
             </a>
@@ -2698,119 +2819,6 @@ demo instance at
 <li>Merge <code>case/form/filter.html</code> into <code>plan/get_cases.html</code></li>
 <li>Remove unused <code>TestCaseStatus.id_to_string()</code></li>
 </ul>
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span>cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre></div>
-
-
-<h2>Help us make Kiwi TCMS better</h2>
-<p>According to <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
-Kiwi TCMS team is investing a great deal of our time to make the code base more
-maintainable! For the past few releases we've been balancing code refactoring
-with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
-<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
-We want to know what works for you and what doesn't so we can make it better. Feel
-free to comment below, file GitHub issues or send us an email.</p>
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/03/16/kiwi-tcms-413/" rel="bookmark" title="Permalink to Kiwi TCMS 4.1.3">
-                <h1 class="top-header">Kiwi TCMS 4.1.3</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 16 March 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>We're happy to announce Kiwi TCMS version 4.1.3!
-This is a bug-fix and enhancement update which upgrades to the latest Django
-version, provides easier way for Docker administrators to override SSL certificates
-and access httpd log files and resolves several issues. This release also includes
-lots of internal code refactoring which removes code duplication and brings down
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> metrics
-to 26.9% of technical debt or 10 months to fix.</p>
-<p>We've pushed the new <code>kiwitcms/kiwi</code> docker image to Docker Hub and updated the
-demo instance at
-<a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>.
-Starting forward the demo will use
-the <code>info-at-kiwitcms.org</code> email address for all communication sent. There are real
-people behind this address so if you write to us we will reply!</p>
-<h2>Changes since Kiwi TCMS 4.1.0</h2>
-<h3>Enhancements</h3>
-<ul>
-<li>Upgrade to <a href="https://docs.djangoproject.com/en/2.0/releases/2.0.3/">Django 2.0.3</a></li>
-<li>Show <code>date_joined</code> column for user admin</li>
-<li>Expose httpd logs to the host running docker. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/191">Issue #191</a></li>
-</ul>
-<h3>Bug fixes</h3>
-<ul>
-<li>Move SSL keys under common directory in the container. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/231">Issue #231</a></li>
-<li>Always select active builds for TestRun. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/245">Issue #245</a></li>
-<li>Swap <code>escape</code> and <code>escapejs</code> filters. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/234">Issue #234</a></li>
-<li>Globally disable <code>delete_selected</code> action in Admin, this removes the
-  drop down selection widget! Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/221">Issue #221</a></li>
-<li>Fix error in TestCase view when <code>from_plan</code> is empty string. Fixes
-  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/474369640/">Sentry KIWI-TCMS-Z</a></li>
-<li>Fix sorting issue when None is compared to int. Fixes
-  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/473996504/">Sentry KIWI-TCMS-V</a></li>
-<li>Validate form field as integer, not char. Fixes
-  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/474058623/">Sentry KIWI-TCMS-W</a></li>
-<li>[docs] Remove information about importing test cases via XML. This functionality
-  was removed in version 3.49</li>
-</ul>
-<h3>Refactoring</h3>
-<ul>
-<li>Refactor inner class <code>CaseActions</code>. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/21">Issue #21</a> (Chenxiong Qi)</li>
-<li>Only use <code>get_cases.html</code> template. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/176">Issue #176</a></li>
-<li>Unify <code>get_details_review.html</code> and <code>get_details.html</code> templates</li>
-<li>Remove internal <code>Prompt.render</code> class and replace with Django messages</li>
-<li>Remove <code>mail/delete_plan.txt</code> template</li>
-<li>Remove <code>handle_emails_pre_plan_delete</code> signal handler</li>
-<li>Remove the <code>Export</code> button from TestPlan view, use Case-&gt;Export sub-menu
-  item in the Cases tab. Also remove the export buttons from search and advanced
-  search result templates. If you'd like to export the cases from a given
-  plan you have to open it in a new browser window and use the menu</li>
-<li>Remove the <code>Print</code> button from plan search form</li>
-<li>Remove TestRun cloning from search results and plan details, use sub-menu</li>
-<li>Remove unnecessary JavaScript handling for <code>EnvGroup</code> edit view</li>
-</ul>
-<h3>Settings</h3>
-<ul>
-<li>Remove <code>PLAN_DELELE_EMAIL_TEMPLATE</code> setting (not used)</li>
-</ul>
-<h3>Models and database migrations</h3>
-<ul>
-<li>Use Django's own <code>DurationField</code>, instead of custom one. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/183">Issue #183</a></li>
-</ul>
-<p>API clients must now send values for <code>estimated_time</code> which must be in a
-format that <code>parse_duration()</code> understands, for example 'DD HH:MM:SS'! See
-<a href="https://docs.djangoproject.com/en/2.0/ref/utils/#django.utils.dateparse.parse_duration">https://docs.djangoproject.com/en/2.0/ref/utils/#django.utils.dateparse.parse_duration</a></p>
-<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
-<h3>Translations</h3>
-<p>There are new translatable strings introduced with this release! At this moment
-translating Kiwi TCMS in languages other than English is purely a
-community effort. If you'd like to help consult our
-<a href="http://kiwitcms.readthedocs.io/en/latest/contribution.html#translation">translations contribution page</a>.</p>
 <h2>How to upgrade</h2>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
 <div class="highlight"><pre><span></span>cd Kiwi/

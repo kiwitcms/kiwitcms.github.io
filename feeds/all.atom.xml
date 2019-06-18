@@ -1,5 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-05-27T16:15:00+03:00</updated><entry><title>Kiwi TCMS needs your help winning OpenAwards 2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/" rel="alternate"></link><published>2019-05-27T16:15:00+03:00</published><updated>2019-05-27T16:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-27:/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/openawards2019.jpg"
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-06-18T22:45:00+03:00</updated><entry><title>Kiwi TCMS 6.10</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/" rel="alternate"></link><published>2019-06-18T22:45:00+03:00</published><updated>2019-06-18T22:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-06-18:/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.10!
+This is a small security and improvement update.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.10!
+This is a small security and improvement update.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  bbb581d60ed1    1.005 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-9"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.9&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 2.2.1 to 2.2.2 for medium severity
+CVE-2019-12308 (XSS), CVE-2019-11358 (jQuery).
+&lt;a class="reference external" href="https://docs.djangoproject.com/en/2.2/releases/2.2.2/"&gt;More info&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add missing permission checks for menus in Test run page UI template.
+Permission check added for TestExecution status and comment menu.
+References &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/716"&gt;Issue #716&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Re-enable static analysis with &lt;tt class="docutils literal"&gt;bandit&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;Coverity Scan&lt;/tt&gt; in
+Travis CI (Svetlomir Balevski)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update psycopg2 from 2.8.2 to 2.8.3&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.1 to 3.1.1&lt;/li&gt;
+&lt;li&gt;Update patternfly to version 3.59.2&lt;/li&gt;
+&lt;li&gt;Override &lt;tt class="docutils literal"&gt;PasswordResetForm&lt;/tt&gt; because &lt;tt class="docutils literal"&gt;Site.objects.get_current()&lt;/tt&gt;
+didn't produce correct results when working with &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;kiwitcms-tenants&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Show column &lt;tt class="docutils literal"&gt;is_active&lt;/tt&gt; in user admin page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add test for &lt;tt class="docutils literal"&gt;email_case_deletion()&lt;/tt&gt; (Rik)&lt;/li&gt;
+&lt;li&gt;New linter to warn about usage of &lt;tt class="docutils literal"&gt;AutoField&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/737"&gt;Issue #737&lt;/a&gt; (Ivo Donchev, HackSoft)&lt;/li&gt;
+&lt;li&gt;New linter to discover empty classed. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/739"&gt;Issue #739&lt;/a&gt; (Daniel Goshev)&lt;/li&gt;
+&lt;li&gt;New linter to warn about usage of &lt;tt class="docutils literal"&gt;OneToOneField&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/735"&gt;Issue #735&lt;/a&gt; (George Goranov)&lt;/li&gt;
+&lt;li&gt;New linter to warn about usage of function based views. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/734"&gt;Issue #734&lt;/a&gt; (Yavor Lulchev, Uber)&lt;/li&gt;
+&lt;li&gt;New linter to discover Python files in directories without &lt;tt class="docutils literal"&gt;__init__.py&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/790"&gt;Issue #790&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="join-us-at-openexpo-in-madrid"&gt;
+&lt;h2&gt;Join us at OpenExpo in Madrid&lt;/h2&gt;
+&lt;p&gt;Kiwi TCMS is exhibitor at &lt;a class="reference external" href="https://openexpoeurope.com/"&gt;OpenExpo Europe&lt;/a&gt;
+on June 20th in Madrid. We will be hosting an info booth and 2 technical
+presentations delivered by
+&lt;a class="reference external" href="https://openexpoeurope.com/speaker/anton-sankov/"&gt;Anton Sankov&lt;/a&gt; and
+&lt;a class="reference external" href="https://openexpoeurope.com/speaker/alexander-todorov/"&gt;Alex Todorov&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS is also the leading finalist in the
+&lt;a class="reference external" href="https://a.cstmapp.com/entries/31129/sort:votes/direction:desc"&gt;Best Tech Community&lt;/a&gt;
+category at Open Awards 2019!&lt;/p&gt;
+&lt;p&gt;Use &lt;strong&gt;OE19SPEAKERINVITE&lt;/strong&gt; 100% discount code! Get your ticket
+&lt;a class="reference external" href="https://www.eventbrite.es/e/openexpo-europe-2019-the-leading-enterprise-it-open-innovation-summit-tickets-56499351080?discount=OE19SPEAKERINVITE#tickets"&gt;here&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS needs your help winning OpenAwards 2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/" rel="alternate"></link><published>2019-05-27T16:15:00+03:00</published><updated>2019-05-27T16:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-27:/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/openawards2019.jpg"
      alt="Vote for Kiwi TCMS at OpenAwards 2019"
      style="float: none"&gt;&lt;/p&gt;
 &lt;p&gt;Thanks to you, our community supporters, Anton Sankov and Alex Todorov
