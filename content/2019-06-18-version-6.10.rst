@@ -1,0 +1,122 @@
+Kiwi TCMS 6.10
+##############
+
+:headline: medium security updates and few improvements
+:date: 2019-06-18 22:45
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 6.10!
+This is a small security and improvement update.
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_!
+
+Supported upgrade paths::
+
+    5.3   (or older) -> 5.3.1
+    5.3.1 (or newer) -> 6.0.1
+    6.0.1            -> 6.1
+    6.1              -> 6.1.1
+    6.1.1            -> 6.2 (or newer)
+
+Docker images::
+
+    kiwitcms/kiwi       latest  bbb581d60ed1    1.005 GB
+    kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+    kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+    kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+    kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+
+
+Changes since Kiwi TCMS 6.9
+---------------------------
+
+
+Security
+~~~~~~~~
+
+- Update Django from 2.2.1 to 2.2.2 for medium severity
+  CVE-2019-12308 (XSS), CVE-2019-11358 (jQuery).
+  `More info <https://docs.djangoproject.com/en/2.2/releases/2.2.2/>`_
+- Add missing permission checks for menus in Test run page UI template.
+  Permission check added for TestExecution status and comment menu.
+  References `Issue #716 <https://github.com/kiwitcms/Kiwi/issues/716>`_
+- Re-enable static analysis with ``bandit`` and ``Coverity Scan`` in
+  Travis CI (Svetlomir Balevski)
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update psycopg2 from 2.8.2 to 2.8.3
+- Update markdown from 3.1 to 3.1.1
+- Update patternfly to version 3.59.2
+- Override ``PasswordResetForm`` because ``Site.objects.get_current()``
+  didn't produce correct results when working with ``kiwitcms-tenants``
+- Show column ``is_active`` in user admin page
+
+
+Refactoring
+~~~~~~~~~~~
+
+- Add test for ``email_case_deletion()`` (Rik)
+- New linter to warn about usage of ``AutoField``. Fixes
+  `Issue #737 <https://github.com/kiwitcms/Kiwi/issues/737>`_ (Ivo Donchev, HackSoft)
+- New linter to discover empty classed. Fixes
+  `Issue #739 <https://github.com/kiwitcms/Kiwi/issues/739>`_ (Daniel Goshev)
+- New linter to warn about usage of ``OneToOneField``. Fixes
+  `Issue #735 <https://github.com/kiwitcms/Kiwi/issues/735>`_ (George Goranov)
+- New linter to warn about usage of function based views. Fixes
+  `Issue #734 <https://github.com/kiwitcms/Kiwi/issues/734>`_ (Yavor Lulchev, Uber)
+- New linter to discover Python files in directories without ``__init__.py``. Fixes
+  `Issue #790 <https://github.com/kiwitcms/Kiwi/issues/790>`_
+
+
+Join us at OpenExpo in Madrid
+-----------------------------
+
+Kiwi TCMS is exhibitor at `OpenExpo Europe <https://openexpoeurope.com/>`_
+on June 20th in Madrid. We will be hosting an info booth and 2 technical
+presentations delivered by
+`Anton Sankov <https://openexpoeurope.com/speaker/anton-sankov/>`_ and
+`Alex Todorov <https://openexpoeurope.com/speaker/alexander-todorov/>`_.
+
+Kiwi TCMS is also the leading finalist in the
+`Best Tech Community <https://a.cstmapp.com/entries/31129/sort:votes/direction:desc>`_
+category at Open Awards 2019!
+
+Use **OE19SPEAKERINVITE** 100% discount code! Get your ticket
+`here <https://www.eventbrite.es/e/openexpo-europe-2019-the-leading-enterprise-it-open-innovation-summit-tickets-56499351080?discount=OE19SPEAKERINVITE#tickets>`_!
+
+
+How to upgrade
+---------------
+
+If you are using Kiwi TCMS as a Docker container then::
+
+    cd Kiwi/
+    git pull
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker pull centos/mariadb
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
+before upgrade!
+
+**WARNING:** ``kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow::
+
+    # starting from an older Kiwi TCMS version
+    docker-compose down
+    docker pull kiwitcms/kiwi:<next_upgrade_version>
+    edit docker-compose.yml to use kiwitcms/kiwi:<next_upgrade_version>
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+    # repeat until you have reached latest
+
+Happy testing!
