@@ -46,6 +46,176 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="bookmark" title="Permalink to Test runner plugin specification">
+                <h1 class="top-header">Test runner plugin specification</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="http://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
+                on Mon 05 November 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
+wish to create plugins for popular test runners that will record test results
+in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
+<a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#using-different-testing-frameworks">Django</a>
+and <a href="https://junit.org/junit4/plugins.html">JUnit</a>!</p>
+<h2>What is a test runner?</h2>
+<p>When working with automated testing you have several components:</p>
+<ul>
+<li>A test module (or test script), e.g. <code>test_models.py</code> which contains
+  tests for your software;</li>
+<li>A test framework, e.g. Python nose, which provides the structure
+  for test classes and methods and assert methods to use;</li>
+<li>A test runner, which knows how to discover your test scripts, load them,
+  execute the testing scenarios inside of them and report the results.</li>
+</ul>
+<p>Very often all of the components above live together inside the testing framework
+but don't need to. For example the standard <code>unittest</code> module in Python
+provides a test runner but there are also <code>nose</code> and <code>py.test</code> and Django provides
+its own test runner that knows how to work with the database.</p>
+<h2>Workflow organization</h2>
+<p>Once you agree to writing a plugin we are going to create a separate GitHub
+repository where you will be granted write privileges making you an independent
+contributor to the Kiwi TCMS project!</p>
+<p>Design and architecture of the plugin is up to you, following the practices
+established by the testing framework in question. You will also have to create
+a test suite for your plugin based on the specification below.</p>
+<p>You are expected to use
+<a href="https://public.tenant.kiwitcms.org/login/github/">public.tenant.kiwitcms.org</a> while working on the
+plugin and afterwards. This is known as eating your own dog food!</p>
+<p>For Python we provide the <code>tcms-api</code> module which already takes care of the
+communications layer. For other languages you will have to create this layer or
+depend on other open source libraries that provide a XML-RPC or JSON-RPC
+client!</p>
+<p>You can use
+<a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2">this gist</a>
+for inspiration!</p>
+<h2>Behavior Specification</h2>
+<p><em>Please use the comments section to discuss unclear behavior and missing scenarios!</em></p>
+<div class="highlight"><pre><span></span>    SUMMARY: Will use configuration file if it exists
+    GIVEN: the file ~/.tcms.conf exists
+    WHEN: plugin initializes
+    THEN: the plugin will log an info message, read the file and
+    THEN: configure TCMS_API_URL, TCMS_USERNAME, TCMS_PASSWORD
+          variables with the respective values
+
+
+    SUMMARY: Will use ENVIRONMENT if configuration file doesn&#39;t exist
+    GIVEN: the file ~/.tcms.conf does not exists
+    WHEN: plugin initializes
+    THEN: the plugin will read configuration from environment and configure
+          the following variables/class members:
+          TCMS_API_URL, TCMS_USERNAME and TCMS_PASSWORD
+
+
+    SUMMARY: Will exit if TCMS_API_URL not configured
+    GIVEN: TCMS_API_URL variable is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will exit if TCMS_USERNAME not configured
+    GIVEN: TCMS_USERNAME is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will exit if TCMS_PASSWORD not configured
+    GIVEN: TCMS_PASSWORD is empty
+    WHEN: plugin initializes
+    THEN: log a warning message and exit
+    AND: depending on the test runner framework set exist status 1
+
+
+    SUMMARY: Will re-use existing TestPlan if configured
+    GIVEN: TCMS_RUN_ID environment variable is not empty
+    WHEN: plugin initializes
+    THEN:  this will be the Current_TestRun record to which the plugin is
+           going to add test execution results
+    AND: Current_TestPlan document in which the plugin will
+           search for test cases becomes Current_TestRun.plan
+
+
+    SUMMARY: Will create new TestPlan &amp; TestRun if TCMS_RUN_ID not configured
+    GIVEN: TCMS_RUN_ID environment variable is empty
+    THEN: plugin will create a new TestPlan in Kiwi TCMS with attributes:
+        name=&#39;Automated test plan for %(product)&#39;
+        product=&#39;%(product)&#39;
+        product_version=&#39;%(version)&#39;
+        type=&#39;Unit&#39;
+    WHERE: %(product) is a placeholder for TCMS_PRODUCT==TRAVIS_REPO_SLUG==JOB_NAME
+           %(version) is a placeholder for TCMS_PRODUCT_VERSION==TRAVIS_COMMIT==TRAVIS_PULL_REQUEST_SHA==GIT_COMMIT
+    THEN: plugin will crate a new TestRun in Kiwi TCMS with attributes:
+        summary=&#39;Automated test run ....&#39;
+        plan=Current TestPlan
+        build=&#39;%(build)&#39;
+        manager=TCMS_USERNAME
+    WHERE: %(build) is a placeholder for TCMS_BUILD==TRAVIS_BUILD_NUMBER==BUILD_NUMBER
+    Environment variables are specified in:
+    https://docs.travis-ci.com/user/environment-variables#default-environment-variables
+    https://wiki.jenkins.io/display/JENKINS/Building+a+software+project#Buildingasoftwareproject-belowJenkinsSetEnvironmentVariables
+
+    SUMMARY: Will not create duplicate Product, Version &amp; Build if they already exist
+    GIVEN: TCMS_RUN_ID is not configured
+    AND: %(product) exists
+    AND: %(version) exists
+    AND: %(build) exists
+    WHEN: plugin tries to auto-create TestPlan and TestRun
+    THEN: plugin will re-use %(product), %(version) and %(build) from the database
+    AND: not try to auto-create them
+
+
+    SUMMARY: Will auto-create Product, Version &amp; Build if they don&#39;t exist
+    GIVEN: TCMS_RUN_ID is not configured
+    AND: %(product) doesn&#39;t exist
+    AND: %(version) doesn&#39;t exist
+    AND: %(build) doesn&#39;t exist
+    WHEN: plugin tries to auto-create TestPlan and TestRun
+    THEN: %(product), %(version) and %(build) be created automatically
+
+
+    SUMMARY: Unit test names are added to TestPlan
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestPlan for a TestCase with the same name
+    AND: if test case doesn&#39;t exist in Current_TestPlan
+    THEN: it will be added to Current_TestPlan
+    hint: it is probably best to process all unit test results at the end!
+
+
+    SUMMARY: Unit test names are added to TestRun
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
+          the current unit test name
+    hint: (or Current_TestCase object from previous scenario, depending on implementation)
+    AND: if such TestCaseRun doesn&#39;t exist in Current_TestRun
+    THEN: it will be added to Current_TestRun
+    hint: it is probably best to process all unit test results at the end!
+
+
+    SUMMARY: Current_TestRun is updated with unit test results
+    GIVEN: we have good plugin configuration
+    WHEN: plugin loops over unit tests emitted by the test runner
+    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
+          the current unit test name
+    hint: (or Current_TestCase object from previous scenario, depending on implementation)
+    AND: if TestCaseRun object exists in Current_TestRun
+    THEN: its status will be updated with the execution result coming from the test runner
+    hint: it is probably best to process all unit test results at the end!
+</pre></div>
+
+
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="bookmark" title="Permalink to Kiwi TCMS 6.2">
                 <h1 class="top-header">Kiwi TCMS 6.2</h1>
             </a>
@@ -2036,119 +2206,6 @@ demo instance at
 <li>Merge <code>case/form/filter.html</code> into <code>plan/get_cases.html</code></li>
 <li>Remove unused <code>TestCaseStatus.id_to_string()</code></li>
 </ul>
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span>cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre></div>
-
-
-<h2>Help us make Kiwi TCMS better</h2>
-<p>According to <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
-Kiwi TCMS team is investing a great deal of our time to make the code base more
-maintainable! For the past few releases we've been balancing code refactoring
-with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
-<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
-We want to know what works for you and what doesn't so we can make it better. Feel
-free to comment below, file GitHub issues or send us an email.</p>
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/03/16/kiwi-tcms-413/" rel="bookmark" title="Permalink to Kiwi TCMS 4.1.3">
-                <h1 class="top-header">Kiwi TCMS 4.1.3</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="http://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 16 March 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>We're happy to announce Kiwi TCMS version 4.1.3!
-This is a bug-fix and enhancement update which upgrades to the latest Django
-version, provides easier way for Docker administrators to override SSL certificates
-and access httpd log files and resolves several issues. This release also includes
-lots of internal code refactoring which removes code duplication and brings down
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> metrics
-to 26.9% of technical debt or 10 months to fix.</p>
-<p>We've pushed the new <code>kiwitcms/kiwi</code> docker image to Docker Hub and updated the
-demo instance at
-<a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>.
-Starting forward the demo will use
-the <code>info-at-kiwitcms.org</code> email address for all communication sent. There are real
-people behind this address so if you write to us we will reply!</p>
-<h2>Changes since Kiwi TCMS 4.1.0</h2>
-<h3>Enhancements</h3>
-<ul>
-<li>Upgrade to <a href="https://docs.djangoproject.com/en/2.0/releases/2.0.3/">Django 2.0.3</a></li>
-<li>Show <code>date_joined</code> column for user admin</li>
-<li>Expose httpd logs to the host running docker. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/191">Issue #191</a></li>
-</ul>
-<h3>Bug fixes</h3>
-<ul>
-<li>Move SSL keys under common directory in the container. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/231">Issue #231</a></li>
-<li>Always select active builds for TestRun. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/245">Issue #245</a></li>
-<li>Swap <code>escape</code> and <code>escapejs</code> filters. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/234">Issue #234</a></li>
-<li>Globally disable <code>delete_selected</code> action in Admin, this removes the
-  drop down selection widget! Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/221">Issue #221</a></li>
-<li>Fix error in TestCase view when <code>from_plan</code> is empty string. Fixes
-  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/474369640/">Sentry KIWI-TCMS-Z</a></li>
-<li>Fix sorting issue when None is compared to int. Fixes
-  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/473996504/">Sentry KIWI-TCMS-V</a></li>
-<li>Validate form field as integer, not char. Fixes
-  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/474058623/">Sentry KIWI-TCMS-W</a></li>
-<li>[docs] Remove information about importing test cases via XML. This functionality
-  was removed in version 3.49</li>
-</ul>
-<h3>Refactoring</h3>
-<ul>
-<li>Refactor inner class <code>CaseActions</code>. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/21">Issue #21</a> (Chenxiong Qi)</li>
-<li>Only use <code>get_cases.html</code> template. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/176">Issue #176</a></li>
-<li>Unify <code>get_details_review.html</code> and <code>get_details.html</code> templates</li>
-<li>Remove internal <code>Prompt.render</code> class and replace with Django messages</li>
-<li>Remove <code>mail/delete_plan.txt</code> template</li>
-<li>Remove <code>handle_emails_pre_plan_delete</code> signal handler</li>
-<li>Remove the <code>Export</code> button from TestPlan view, use Case-&gt;Export sub-menu
-  item in the Cases tab. Also remove the export buttons from search and advanced
-  search result templates. If you'd like to export the cases from a given
-  plan you have to open it in a new browser window and use the menu</li>
-<li>Remove the <code>Print</code> button from plan search form</li>
-<li>Remove TestRun cloning from search results and plan details, use sub-menu</li>
-<li>Remove unnecessary JavaScript handling for <code>EnvGroup</code> edit view</li>
-</ul>
-<h3>Settings</h3>
-<ul>
-<li>Remove <code>PLAN_DELELE_EMAIL_TEMPLATE</code> setting (not used)</li>
-</ul>
-<h3>Models and database migrations</h3>
-<ul>
-<li>Use Django's own <code>DurationField</code>, instead of custom one. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/183">Issue #183</a></li>
-</ul>
-<p>API clients must now send values for <code>estimated_time</code> which must be in a
-format that <code>parse_duration()</code> understands, for example 'DD HH:MM:SS'! See
-<a href="https://docs.djangoproject.com/en/2.0/ref/utils/#django.utils.dateparse.parse_duration">https://docs.djangoproject.com/en/2.0/ref/utils/#django.utils.dateparse.parse_duration</a></p>
-<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
-<h3>Translations</h3>
-<p>There are new translatable strings introduced with this release! At this moment
-translating Kiwi TCMS in languages other than English is purely a
-community effort. If you'd like to help consult our
-<a href="http://kiwitcms.readthedocs.io/en/latest/contribution.html#translation">translations contribution page</a>.</p>
 <h2>How to upgrade</h2>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
 <div class="highlight"><pre><span></span>cd Kiwi/
