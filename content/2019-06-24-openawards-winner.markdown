@@ -20,4 +20,4 @@ This award is the best present we could get to mark the 10th anniversary
 of the project. More news of how we are progressing with current roadmap will
 follow soon in a separate blog post.
 
-Thanks you &amp; happy testing!
+Thank you &amp; happy testing!
