@@ -413,6 +413,23 @@ pre code {
     cursor: pointer;
 }
 
+/* Seen At Section */
+
+.fosdem-img {
+    width: 200px;
+    height: 200px;
+    background-image: url('/images/conf/fosdem.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    margin-left: 1.5rem;
+}
+
+.fosdem-img a {
+    padding-top: 10px;
+    float: right;
+}
+
 /* Footer Section */
 
 .footer {
