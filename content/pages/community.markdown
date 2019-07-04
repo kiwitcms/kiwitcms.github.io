@@ -7,6 +7,7 @@ save_as: community/index.html
 - **Stack Overflow** tag ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms)
 - **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
 - **Twitter** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
+- **Blog** tag ["community"](/blog/tags/community/)
 - **Email** `info-at-kiwitcms.org` (not for support requests)
 
 # Contributing
