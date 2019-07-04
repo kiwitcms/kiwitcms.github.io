@@ -1,5 +1,5 @@
 Title: Kiwi TCMS is OpenAwards 2019 Best Tech Community Winner
-headline: thank you everyone
+headline: thank you, everyone
 date: 2019-06-24 13:10
 comments: true
 author: Alexander Todorov
