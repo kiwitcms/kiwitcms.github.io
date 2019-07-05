@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-06-28T15:50:00+03:00</updated><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/" rel="alternate"></link><published>2019-06-28T15:50:00+03:00</published><updated>2019-06-28T15:50:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-06-28:/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-07-05T11:10:00+03:00</updated><entry><title>Contributor profile: Primož Klemen</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/" rel="alternate"></link><published>2019-07-05T11:10:00+03:00</published><updated>2019-07-05T11:10:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-05:/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/</id><summary type="html">&lt;p&gt;In this new series we are going to introduce the contributors behind Kiwi TCMS.
+This is our community and these are their stories.&lt;/p&gt;
+&lt;div class="member-bio"&gt;
+    &lt;img class="rounded" src="/images/contributors/primoz.jpg" height="150" width="150"&gt;
+    &lt;strong&gt;Primož Klemen&lt;/strong&gt; -
+    &lt;em&gt;QA tester, full time dad, Manchester United F.C. supporter&lt;/em&gt;
+
+    &lt;p&gt;
+        Primož is an early adopter and our Slovenian translator. He's been actively engaging
+        in GitHub …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;In this new series we are going to introduce the contributors behind Kiwi TCMS.
+This is our community and these are their stories.&lt;/p&gt;
+&lt;div class="member-bio"&gt;
+    &lt;img class="rounded" src="/images/contributors/primoz.jpg" height="150" width="150"&gt;
+    &lt;strong&gt;Primož Klemen&lt;/strong&gt; -
+    &lt;em&gt;QA tester, full time dad, Manchester United F.C. supporter&lt;/em&gt;
+
+    &lt;p&gt;
+        Primož is an early adopter and our Slovenian translator. He's been actively engaging
+        in GitHub issues, posted pull requests for improving documentation and follows us on
+        &lt;a href="https://stackoverflow.com/questions/tagged/kiwi-tcms"&gt;StackOverflow&lt;/a&gt; as well.
+    &lt;/p&gt;
+
+    &lt;a href="https://github.com/Prome88"&gt;
+        &lt;span class="icon fa-stack"&gt;
+            &lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;
+            &lt;i class="fab fa-github fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;a href="https://www.linkedin.com/in/primozklemen/"&gt;
+        &lt;span class="fa-stack"&gt;
+            &lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;
+            &lt;i class="fab fa-linkedin fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;What is your professional background&lt;/h2&gt;
+&lt;p&gt;I've started working in IT as tech support for the 2nd largest Slovenian ISP at the time.
+Then I've been at leading software provider for fintech in the Balkans region in the same
+role and gradually transitioned into QA role. Currently, I'm working as a QA tester for
+&lt;a href="http://better.care"&gt;Better (by Marand)&lt;/a&gt; and ensure, with help of my colleagues of course,
+proper quality of administration application for health care sector.&lt;/p&gt;
+&lt;h2&gt;When did you use open source for the first time&lt;/h2&gt;
+&lt;p&gt;If I recall correctly that would be some 14 years ago when I ditched dreaded
+Internet Explorer in favor of Mozilla Firefox browser. The whole Internet got better in
+a matter of seconds.&lt;/p&gt;
+&lt;h2&gt;What are your contributions to Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;I mainly contribute via translating the application into my native language, Slovenian.
+Currently there are
+&lt;a href="https://crowdin.com/project/kiwitcms"&gt;7 languages available&lt;/a&gt; for Kiwi TCMS so you are
+more than welcome to join and add another one.
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html#translation"&gt;Translating via Crowdin&lt;/a&gt;
+is very simple and requires no additional technical skills. I've also dabbled into project
+documentation and proposed a few updates to it. I'm also the culprit for some
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/Prome88"&gt;32 issues&lt;/a&gt; and counting,
+the majority of them being proposals for future application enhancements and few UX/UI bugs
+(déformation professionnelle :-)).&lt;/p&gt;
+&lt;h2&gt;Why did you decide to contribute to Kiwi TCMS&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The guys and gals from the Kiwi TCMS team provided us with an application which solved
+our pain about building, maintaining and running manual regression tests.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;They did all of that for free in their spare time! So I've decided to give something back to
+the whole community. This was indeed my first
+contribution to the open source world but not the last. Since then I've also
+contributed to other projects which I use on a regular basis.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In hindsight, Kiwi TCMS converted me from an open source user to open source contributor!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Was there something which was hard for you during the contribution process&lt;/h2&gt;
+&lt;p&gt;Contributing to the project, as a non-developer, is very easy and intuitive by
+either opening issues on GitHub or translating via Crowdin or even committing
+updated documentation to git repository through GitHub Desktop client.
+All of the aforementioned was new to me and I've learned in depth how to use
+these tools. I've also had the pleasure to familiarize myself with project documentation
+- Sphinx and reStructuredText are my two new best friends.&lt;/p&gt;
+&lt;h2&gt;Which is the best part of contributing to Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;Being able to actively improve an application that we use on a daily basis in our
+development process. Getting to know more people from all around the globe and see their
+insights about software quality assurance thus learning something new every day.&lt;/p&gt;
+&lt;h2&gt;What is next for you in professional and open source plan&lt;/h2&gt;
+&lt;p&gt;Professionally I'm 100% committed to &lt;a href="http://better.care"&gt;Better (by Marand)&lt;/a&gt; and helping us achieve
+the best standard of quality for health care applications which also incorporates
+using the knowledge gathered by following and/or contributing to open source.
+I'm going to continue contributing to Kiwi TCMS and
+Captura and if time allows maybe involve myself with some other interesting projects.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thank you, Primož! Happy testing!&lt;/em&gt;&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/" rel="alternate"></link><published>2019-06-28T15:50:00+03:00</published><updated>2019-06-28T15:50:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-06-28:/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
 &lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
 TL,DR: Kiwi TCMS has made progress since January, it's been tough and may not have been
