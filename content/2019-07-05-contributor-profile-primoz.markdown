@@ -7,7 +7,7 @@ comments: true
 tags: community
 
 
-In this new series we are going to introduce the contributors behind Kiwi TCMS.
+In this new [series](/blog/tags/community/) we are going to introduce the contributors behind Kiwi TCMS.
 This is our community and these are their stories.
 
 
