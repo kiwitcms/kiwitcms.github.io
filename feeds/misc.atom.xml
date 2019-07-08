@@ -1,5 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-07-05T11:10:00+03:00</updated><entry><title>Contributor profile: Primož Klemen</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/" rel="alternate"></link><published>2019-07-05T11:10:00+03:00</published><updated>2019-07-05T11:10:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-05:/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/</id><summary type="html">&lt;p&gt;In this new series we are going to introduce the contributors behind Kiwi TCMS.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-07-08T17:53:00+03:00</updated><entry><title>Contributor profile: Aneta Petkova</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/" rel="alternate"></link><published>2019-07-08T17:53:00+03:00</published><updated>2019-07-08T17:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-08:/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/</id><summary type="html">&lt;p&gt;Happy Monday, testers!
+In this &lt;a href="/blog/tags/community/"&gt;series&lt;/a&gt; we are introducing the contributors behind Kiwi TCMS.
+This is our community and these are their stories.&lt;/p&gt;
+&lt;div class="member-bio"&gt;
+    &lt;img class="rounded" src="/images/contributors/aneta.jpg" height="150" width="150"&gt;
+    &lt;strong&gt;Aneta Petkova&lt;/strong&gt; - QA Chapter Lead at SumUp
+    &lt;em&gt;&lt;/em&gt;
+
+    &lt;p&gt;
+        Aneta is a software engineer navigating the complex field of QA
+        since her first "grownup" job. She's been working in …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Happy Monday, testers!
+In this &lt;a href="/blog/tags/community/"&gt;series&lt;/a&gt; we are introducing the contributors behind Kiwi TCMS.
+This is our community and these are their stories.&lt;/p&gt;
+&lt;div class="member-bio"&gt;
+    &lt;img class="rounded" src="/images/contributors/aneta.jpg" height="150" width="150"&gt;
+    &lt;strong&gt;Aneta Petkova&lt;/strong&gt; - QA Chapter Lead at SumUp
+    &lt;em&gt;&lt;/em&gt;
+
+    &lt;p&gt;
+        Aneta is a software engineer navigating the complex field of QA
+        since her first "grownup" job. She's been working in the area of
+        test automation for web applications using different programming languages and tools.
+
+        Her mission is to inspire people to think about quality from the
+        very inception of ideas and to blur the line between developers and
+        QA specialists.
+    &lt;/p&gt;
+
+    &lt;a href="https://twitter.com/anetavp"&gt;
+        &lt;span class="fa-stack"&gt;
+            &lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;
+            &lt;i class="fab fa-twitter fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;a href="https://github.com/apetkova"&gt;
+        &lt;span class="icon fa-stack"&gt;
+            &lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;
+            &lt;i class="fab fa-github fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;a href="https://bg.linkedin.com/in/apetkova"&gt;
+        &lt;span class="fa-stack"&gt;
+            &lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;
+            &lt;i class="fab fa-linkedin fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;What is your professional background&lt;/h2&gt;
+&lt;p&gt;I have an engineering degree in computer science and I've spend the last 8 years in Quality Assurance.
+Java, TestNG and UI automation with Selenium WebDriver are my strongest technical skills but
+I use different programming languages and tools.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I believe languages and tools should only support an engineer and never define them.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Currently I am the QA Chapter Lead at &lt;a href="https://sumup.com/"&gt;SumUp&lt;/a&gt;,
+where I can work towards achieving my goals in an amazing team of people that do what they love.&lt;/p&gt;
+&lt;h2&gt;When did you use open source for the first time&lt;/h2&gt;
+&lt;p&gt;The first time I remember was in 2011, but I've probably used it before and just didn't pay attention.
+To me it seemed the same as proprietary, and I guess that means it was good.&lt;/p&gt;
+&lt;h2&gt;Describe your contributions to the project&lt;/h2&gt;
+&lt;p&gt;I created &lt;a href="https://github.com/kiwitcms/junit-plugin/"&gt;kiwitcms-junit-plugin&lt;/a&gt;.
+This is a native Java library which you can install via Maven Central. It
+will discover your automated test suite and publish test execution results in
+Kiwi TCMS. This plugin is very simple and requires only minimal configuration
+before it is ready to work.
+Check-out the example in &lt;a href="https://tcms.kiwitcms.org/plan/25/"&gt;TP-25&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;editor comment:&lt;/em&gt; Aneta and Ivo (Kiwi TCMS) hosted the
+&lt;a href="https://www.youtube.com/watch?v=r5sp0e7LsDc"&gt;"Git crash course" workshop at HackConf 2018&lt;/a&gt;.
+Kiwi TCMS will be hosting 2 workshops this year so stay tuned!&lt;/p&gt;
+&lt;h2&gt;Why did you decide to contribute to Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;I had recently switched Java for Ruby and I was feeling nostalgic.
+Also, I had spent my entire career so far in QA and I wanted to slip on
+the developer shoes for at least a little bit.&lt;/p&gt;
+&lt;h2&gt;Was there something which was hard for you during the contribution process&lt;/h2&gt;
+&lt;p&gt;I'm used to working in a team and when I started working on this project
+I was the only active Java developer. Luckily for me, I live in the time of StackOverflow,
+so I managed to get most of my questions answered by strangers on the Internet.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I learned tons of stuff, but mostly I learned I can build software, not just test it!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Which is the best part of contributing to Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;Doing something that has the potential to help others and that could be improved upon.&lt;/p&gt;
+&lt;h2&gt;What is next for you in professional and open source plan&lt;/h2&gt;
+&lt;p&gt;My current focus is moving slightly into DevOps direction and I am really overwhelmed
+by the amount of things to learn. I feel there is so much I want to experiment with.
+I am not really planning anything related to open source - it has never been a goal for me -
+but when I come across a project I feel strongly about, I'd probably be tempted to contribute.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thank you, Aneta! Happy testing!&lt;/em&gt;&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Contributor profile: Primož Klemen</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/" rel="alternate"></link><published>2019-07-05T11:10:00+03:00</published><updated>2019-07-05T11:10:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-05:/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/</id><summary type="html">&lt;p&gt;In this new &lt;a href="/blog/tags/community/"&gt;series&lt;/a&gt; we are going to introduce the contributors behind Kiwi TCMS.
 This is our community and these are their stories.&lt;/p&gt;
 &lt;div class="member-bio"&gt;
     &lt;img class="rounded" src="/images/contributors/primoz.jpg" height="150" width="150"&gt;
@@ -8,7 +98,7 @@ This is our community and these are their stories.&lt;/p&gt;
 
     &lt;p&gt;
         Primož is an early adopter and our Slovenian translator. He's been actively engaging
-        in GitHub …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;In this new series we are going to introduce the contributors behind Kiwi TCMS.
+        in GitHub …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;In this new &lt;a href="/blog/tags/community/"&gt;series&lt;/a&gt; we are going to introduce the contributors behind Kiwi TCMS.
 This is our community and these are their stories.&lt;/p&gt;
 &lt;div class="member-bio"&gt;
     &lt;img class="rounded" src="/images/contributors/primoz.jpg" height="150" width="150"&gt;
