@@ -3,8 +3,9 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('youtube-iframe');
 }
 
-function showVideo() {
+function showVideo(videoId) {
     document.getElementById('demoVideo').style.display = "block";
+    player.loadVideoById(videoId);
     player.playVideo();
 }
 
