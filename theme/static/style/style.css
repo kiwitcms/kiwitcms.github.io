@@ -430,6 +430,21 @@ pre code {
     float: right;
 }
 
+.openexpo-img {
+    width: 200px;
+    height: 200px;
+    background-image: url('/images/conf/openexpo.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    margin-left: 1.5rem;
+}
+
+.openexpo-img a {
+    padding-top: 10px;
+    float: right;
+}
+
 /* Footer Section */
 
 .footer {
