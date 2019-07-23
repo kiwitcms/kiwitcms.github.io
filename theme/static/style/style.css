@@ -445,6 +445,21 @@ pre code {
     float: right;
 }
 
+.piterpy-img {
+    width: 200px;
+    height: 200px;
+    background-image: url('/images/conf/piterpy.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    margin-left: 1.5rem;
+}
+
+.piterpy-img a {
+    padding-top: 10px;
+    float: right;
+}
+
 .fosdem-img {
     width: 200px;
     height: 200px;
