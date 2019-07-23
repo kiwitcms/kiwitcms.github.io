@@ -445,6 +445,21 @@ pre code {
     float: right;
 }
 
+.openawards19-img {
+    width: 200px;
+    height: 200px;
+    background-image: url('/images/conf/openawards19.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    margin-left: 1.5rem;
+}
+
+.openawards19-img a {
+    padding-top: 10px;
+    float: right;
+}
+
 /* Footer Section */
 
 .footer {
