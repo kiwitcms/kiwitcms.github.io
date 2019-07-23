@@ -415,17 +415,16 @@ pre code {
 
 /* Seen At Section */
 
-.fosdem-img {
+.logo-layout {
     width: 200px;
     height: 200px;
-    background-image: url('/images/conf/fosdem.png');
     background-repeat: no-repeat;
     display: inline-block;
     float: left;
     margin-left: 1.5rem;
 }
 
-.fosdem-img a {
+.play-button {
     padding-top: 10px;
     float: right;
 }
