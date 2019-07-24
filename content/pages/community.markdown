@@ -12,7 +12,7 @@ save_as: community/index.html
 
 # Contributing
 
-We welcome community contributions! Please see the [contribution page](http://kiwitcms.readthedocs.io/en/latest/contribution.html) for instructions on how to submit changes. If you are planning on making more elaborate or controversial changes, please discuss them on the issue tracker or IRC before sending a pull request.
+We welcome community contributions! Please see the [contribution page](http://kiwitcms.readthedocs.io/en/latest/contribution.html) for instructions on how to submit changes. If you are planning on making more elaborate or controversial changes, please discuss them on the issue tracker before sending a pull request.
 
 # Code of Conduct
 
