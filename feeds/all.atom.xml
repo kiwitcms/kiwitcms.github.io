@@ -1,5 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-07-08T17:53:00+03:00</updated><entry><title>Contributor profile: Aneta Petkova</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/" rel="alternate"></link><published>2019-07-08T17:53:00+03:00</published><updated>2019-07-08T17:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-08:/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/</id><summary type="html">&lt;p&gt;Happy Monday, testers!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-08-02T09:40:00+03:00</updated><entry><title>Kiwi TCMS 6.11</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="alternate"></link><published>2019-08-02T09:40:00+03:00</published><updated>2019-08-02T09:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-02:/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
+This is a security and improvement release which updates
+many internal dependencies, adds 2 new Telemetry reports, updates
+TestPlan and TestCase cloning pages and provides several other
+improvements and bug fixes. You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
+This is a security and improvement release which updates
+many internal dependencies, adds 2 new Telemetry reports, updates
+TestPlan and TestCase cloning pages and provides several other
+improvements and bug fixes. You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  6a8249d23a67    1.011 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-10"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.10&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django
+&lt;a class="reference external" href="https://docs.djangoproject.com/en/2.2/releases/2.2.4/"&gt;from 2.2.2 to 2.2.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update marked to version 0.7.0, see
+&lt;a class="reference external" href="https://github.com/markedjs/marked/releases/tag/v0.7.0"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update python-gitlab from 1.8.0 to 1.10.0&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 2.12.3 to 2.13.1&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 2.7.2 to 2.7.3&lt;/li&gt;
+&lt;li&gt;Update django-attachments to 1.4.1&lt;/li&gt;
+&lt;li&gt;Update PyGithub from 1.43.7 to 1.43.8&lt;/li&gt;
+&lt;li&gt;Update patternfly to version 3.59.3&lt;/li&gt;
+&lt;li&gt;Update prismjs to version 1.17.0&lt;/li&gt;
+&lt;li&gt;Add Testing Status Matrix telemetry&lt;/li&gt;
+&lt;li&gt;Add Testing Execution Trends telemetry&lt;/li&gt;
+&lt;li&gt;Make it possible to attach files directly inside Test Plan page&lt;/li&gt;
+&lt;li&gt;Make it possible to attach files directly inside Test Execution widget&lt;/li&gt;
+&lt;li&gt;Convert Clone TestPlan page to Patternfly, greatly simplify the UI
+and update behavior:&lt;ul&gt;
+&lt;li&gt;Cloned TP author will always be set to the current user&lt;/li&gt;
+&lt;li&gt;Cloned TC author will always be set to the current user&lt;/li&gt;
+&lt;li&gt;Always keep the original default tester for test cases when cloning&lt;/li&gt;
+&lt;li&gt;Refactor to class based view&lt;/li&gt;
+&lt;li&gt;Fix a problem where Version values failed form validation b/c
+we've been trying to filter based on non-existing field
+&lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; instead of just &lt;tt class="docutils literal"&gt;product&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Fixes a problem where erroneous Version value was shown in the UI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Convert Clone TestCase page to Patternfly, greatly simplify the UI
+and update behavior. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/838/"&gt;Issue #838&lt;/a&gt;:&lt;ul&gt;
+&lt;li&gt;Allow cloning into multiple test plans&lt;/li&gt;
+&lt;li&gt;Remove 'Filter another plan' option. Will be replaced by
+'Add TP to TC', see
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1021"&gt;Issue #1021&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Always update sortkey. Cloned TC will show at the bottom of the
+TestPlan&lt;/li&gt;
+&lt;li&gt;Cloned TC author will always be set to the current user&lt;/li&gt;
+&lt;li&gt;Always keep the original default tester&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;First parameter of RPC method &lt;tt class="docutils literal"&gt;Bug.report()&lt;/tt&gt;
+has been renamed from &lt;tt class="docutils literal"&gt;test_case_run_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;execution_id&lt;/tt&gt;. This may
+break existing API scripts which try to pass this argument by name
+instead of by position!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Allow ENV variables &lt;tt class="docutils literal"&gt;KIWI_USE_TZ&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;KIWI_TIME_ZONE&lt;/tt&gt; to control
+settings &lt;tt class="docutils literal"&gt;USE_TZ&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TIME_ZONE&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/982/"&gt;Issue #982&lt;/a&gt; (Jason Yi)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix wrong permission label when deleting comments. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1010/"&gt;Issue #1010&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Disable unnecessary pylint messages for missing-permission-required
+checker (Svetlomir Balevski)&lt;/li&gt;
+&lt;li&gt;Remove unnecessary &lt;tt class="docutils literal"&gt;from_plan&lt;/tt&gt; URL variable making cleaner URLs&lt;/li&gt;
+&lt;li&gt;kiwi_lint: Don't check nested functions for permissions&lt;/li&gt;
+&lt;li&gt;Remove and regroup JavaScript functions&lt;/li&gt;
+&lt;li&gt;Instruct pyup-bot to monitor &lt;tt class="docutils literal"&gt;requirements/tarballs.txt&lt;/tt&gt; for updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.11</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="alternate"></link><published>2019-08-02T09:40:00+03:00</published><updated>2019-08-02T09:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-02:/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
+This is a security and improvement release which updates
+many internal dependencies, adds 2 new Telemetry reports, updates
+TestPlan and TestCase cloning pages and provides several other
+improvements and bug fixes. You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
+This is a security and improvement release which updates
+many internal dependencies, adds 2 new Telemetry reports, updates
+TestPlan and TestCase cloning pages and provides several other
+improvements and bug fixes. You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  6a8249d23a67    1.011 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-10"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.10&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django
+&lt;a class="reference external" href="https://docs.djangoproject.com/en/2.2/releases/2.2.4/"&gt;from 2.2.2 to 2.2.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update marked to version 0.7.0, see
+&lt;a class="reference external" href="https://github.com/markedjs/marked/releases/tag/v0.7.0"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update python-gitlab from 1.8.0 to 1.10.0&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 2.12.3 to 2.13.1&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 2.7.2 to 2.7.3&lt;/li&gt;
+&lt;li&gt;Update django-attachments to 1.4.1&lt;/li&gt;
+&lt;li&gt;Update PyGithub from 1.43.7 to 1.43.8&lt;/li&gt;
+&lt;li&gt;Update patternfly to version 3.59.3&lt;/li&gt;
+&lt;li&gt;Update prismjs to version 1.17.0&lt;/li&gt;
+&lt;li&gt;Add Testing Status Matrix telemetry&lt;/li&gt;
+&lt;li&gt;Add Testing Execution Trends telemetry&lt;/li&gt;
+&lt;li&gt;Make it possible to attach files directly inside Test Plan page&lt;/li&gt;
+&lt;li&gt;Make it possible to attach files directly inside Test Execution widget&lt;/li&gt;
+&lt;li&gt;Convert Clone TestPlan page to Patternfly, greatly simplify the UI
+and update behavior:&lt;ul&gt;
+&lt;li&gt;Cloned TP author will always be set to the current user&lt;/li&gt;
+&lt;li&gt;Cloned TC author will always be set to the current user&lt;/li&gt;
+&lt;li&gt;Always keep the original default tester for test cases when cloning&lt;/li&gt;
+&lt;li&gt;Refactor to class based view&lt;/li&gt;
+&lt;li&gt;Fix a problem where Version values failed form validation b/c
+we've been trying to filter based on non-existing field
+&lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; instead of just &lt;tt class="docutils literal"&gt;product&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Fixes a problem where erroneous Version value was shown in the UI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Convert Clone TestCase page to Patternfly, greatly simplify the UI
+and update behavior. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/838/"&gt;Issue #838&lt;/a&gt;:&lt;ul&gt;
+&lt;li&gt;Allow cloning into multiple test plans&lt;/li&gt;
+&lt;li&gt;Remove 'Filter another plan' option. Will be replaced by
+'Add TP to TC', see
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1021"&gt;Issue #1021&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Always update sortkey. Cloned TC will show at the bottom of the
+TestPlan&lt;/li&gt;
+&lt;li&gt;Cloned TC author will always be set to the current user&lt;/li&gt;
+&lt;li&gt;Always keep the original default tester&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;First parameter of RPC method &lt;tt class="docutils literal"&gt;Bug.report()&lt;/tt&gt;
+has been renamed from &lt;tt class="docutils literal"&gt;test_case_run_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;execution_id&lt;/tt&gt;. This may
+break existing API scripts which try to pass this argument by name
+instead of by position!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Allow ENV variables &lt;tt class="docutils literal"&gt;KIWI_USE_TZ&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;KIWI_TIME_ZONE&lt;/tt&gt; to control
+settings &lt;tt class="docutils literal"&gt;USE_TZ&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TIME_ZONE&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/982/"&gt;Issue #982&lt;/a&gt; (Jason Yi)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix wrong permission label when deleting comments. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1010/"&gt;Issue #1010&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Disable unnecessary pylint messages for missing-permission-required
+checker (Svetlomir Balevski)&lt;/li&gt;
+&lt;li&gt;Remove unnecessary &lt;tt class="docutils literal"&gt;from_plan&lt;/tt&gt; URL variable making cleaner URLs&lt;/li&gt;
+&lt;li&gt;kiwi_lint: Don't check nested functions for permissions&lt;/li&gt;
+&lt;li&gt;Remove and regroup JavaScript functions&lt;/li&gt;
+&lt;li&gt;Instruct pyup-bot to monitor &lt;tt class="docutils literal"&gt;requirements/tarballs.txt&lt;/tt&gt; for updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Contributor profile: Aneta Petkova</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/" rel="alternate"></link><published>2019-07-08T17:53:00+03:00</published><updated>2019-07-08T17:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-08:/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/</id><summary type="html">&lt;p&gt;Happy Monday, testers!
 In this &lt;a href="/blog/tags/community/"&gt;series&lt;/a&gt; we are introducing the contributors behind Kiwi TCMS.
 This is our community and these are their stories.&lt;/p&gt;
 &lt;div class="member-bio"&gt;
@@ -3044,6 +3346,113 @@ docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
 &lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="subscription-based-online-service"&gt;
+&lt;h2&gt;Subscription based online service&lt;/h2&gt;
+&lt;p&gt;We are planning to convert
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.&lt;/p&gt;
+&lt;p&gt;The income from this service will go towards covering operating costs and
+supporting the
+&lt;a class="reference external" href="http://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515"&gt;Issue #515&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="plans-to-remove-deprecated-functionality"&gt;
+&lt;h2&gt;Plans to remove deprecated functionality&lt;/h2&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;TestRun.product_version&lt;/tt&gt; will be removed from the database schema in favor of
+&lt;tt class="docutils literal"&gt;TestRun.plan.product_version&lt;/tt&gt;! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.1.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="alternate"></link><published>2018-10-29T16:00:00+02:00</published><updated>2018-10-29T16:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-29:/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
+squashes database migrations and removes
+older migrations that have been squashed in previous releases, a few
+improvements and bug fixes.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
+squashes database migrations and removes
+older migrations that have been squashed in previous releases, a few
+improvements and bug fixes.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.1&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Dashboard will now show TestRuns which have test cases assigned to current
+user. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/520"&gt;Issue #520&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;API method &lt;tt class="docutils literal"&gt;TestRun.add_case()&lt;/tt&gt; now returns a serialized TestCaseRun object.
+Previously this method returned None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Don't show disabled Priority records in UI. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/334"&gt;Issue #334&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix some pylint errors (Ivaylo Ivanov)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove old squashed migrations for &lt;tt class="docutils literal"&gt;management&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;testplans&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;testcases&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;testruns&lt;/tt&gt; apps&lt;/li&gt;
+&lt;li&gt;Squash the remaining migrations for &lt;tt class="docutils literal"&gt;management&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;testplans&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;testcases&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;testruns&lt;/tt&gt; apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+before upgrade!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
 &lt;h2&gt;Subscription based online service&lt;/h2&gt;
