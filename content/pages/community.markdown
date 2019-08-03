@@ -5,7 +5,7 @@ save_as: community/index.html
 # Community
 
 - **Stack Overflow** tag ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms)
-- **Discourse forum** ["kiwi-tcms"](https://kiwitcms.discourse.group/)
+- **Discourse** [forum](https://kiwitcms.discourse.group/)
 - **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
 - **Twitter** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
 - **Blog** tag ["community"](/blog/tags/community/)
