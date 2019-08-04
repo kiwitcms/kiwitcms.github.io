@@ -1,18 +1,18 @@
     var imgs = [
         {
             title: 'Central dashboard to start your day',
-            subtitle: 'See all of your Test Runs and Test Plans in one place',
+            subtitle: 'See all of your Test executions and Test plans in one place',
             img: 'images/screenshots/001_central_dashboard.png'
         }, {
             title: 'Create IEEE 829 or free text Test Plan',
-            subtitle: 'This document describes what and how are you going to test',
+            subtitle: 'This document describes what and how you are going to test',
             img: 'images/screenshots/002_create_test_plan.png'
         }, {
             title: 'Create a Test Case',
             subtitle: 'Use Given-When-Then or bullet points to describe the scenario',
             img: 'images/screenshots/003_create_test_case.png'
         }, {
-            title: 'View existing Test Cases',
+            title: 'View existing Test Case',
             subtitle: 'Intuitive access to all the important information',
             img: 'images/screenshots/004_view_existing_test_cases.png'
         }, {
