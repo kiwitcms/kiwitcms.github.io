@@ -1,28 +1,32 @@
     var imgs = [
         {
+            title: 'Central dashboard to start your day',
+            subtitle: 'See all of your Test executions and Test plans in one place',
+            img: 'images/screenshots/001_central_dashboard.png'
+        }, {
             title: 'Create IEEE 829 or free text Test Plan',
-            subtitle: 'This document describes what and how are you going to test',
-            img: 'images/screenshots/001_create_test_plan.png'
+            subtitle: 'This document describes what and how you are going to test',
+            img: 'images/screenshots/002_create_test_plan.png'
         }, {
             title: 'Create a Test Case',
             subtitle: 'Use Given-When-Then or bullet points to describe the scenario',
-            img: 'images/screenshots/002_create_test_case.png'
+            img: 'images/screenshots/003_create_test_case.png'
+        }, {
+            title: 'View existing Test Case',
+            subtitle: 'Intuitive access to all the important information',
+            img: 'images/screenshots/004_view_existing_test_cases.png'
         }, {
             title: 'Execute Test Runs against a build',
-            subtitle: 'for each build create test runs to collect execution details',
-            img: 'images/screenshots/003_execute_tests_for_build.png'
+            subtitle: 'For each build create test runs to collect execution details',
+            img: 'images/screenshots/005_execute_tests_for_build.png'
         }, {
-            title: 'Mark individual test result statuses',
-            subtitle: 'add comments, link or report bugs',
-            img: 'images/screenshots/004_mark_individual_test_results.png'
+            title: 'Testing breakdown telemetry',
+            subtitle: 'Shows how existing Test Cases for the product are distributed',
+            img: 'images/screenshots/006_testing_breakdown_telemetry.png'
         }, {
-            title: 'Product builds report',
-            subtitle: 'shows testing progress across builds',
-            img: 'images/screenshots/005_product_builds_report.png'
-        }, {
-            title: 'Testing report per Test Plan and product build ',
-            subtitle: 'shows detailed statuses per build and test run',
-            img: 'images/screenshots/006_report_per_plan_and_build.png'
+            title: 'Status matrix telemetry',
+            subtitle: 'Detailed information about Test Execution statuses',
+            img: 'images/screenshots/007_status_matrix_telemetry.png'
         }],
         imgIndex = 0;
 
