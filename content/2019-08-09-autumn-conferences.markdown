@@ -1,5 +1,5 @@
 Title: Kiwi TCMS conference presence, AW2019
-headline: 8 events, 5 countries during Aug-Nov
+headline: 11 events, 5 countries during Aug-Nov
 date: 2019-08-09 10:55
 comments: true
 og_image: images/roadtrip.png
