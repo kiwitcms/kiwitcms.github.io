@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-08-02T09:40:00+03:00</updated><entry><title>Kiwi TCMS 6.11</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="alternate"></link><published>2019-08-02T09:40:00+03:00</published><updated>2019-08-02T09:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-02:/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-08-09T10:55:00+03:00</updated><entry><title>Kiwi TCMS conference presence, AW2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/" rel="alternate"></link><published>2019-08-09T10:55:00+03:00</published><updated>2019-08-09T10:55:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-09:/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/</id><summary type="html">&lt;p&gt;Your favorite open source test case management system is going on tour again.
+During the next several months we will be at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.facebook.com/events/647230689047274/"&gt;DEV.BG All in One, Aug 24, Sofia&lt;/a&gt;
+  where we will have an info booth&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.facebook.com/Tabara.de.Testare/"&gt;Tabara de Testare Meetup, Sept 25, Bucharest&lt;/a&gt;
+  where Alex Todorov will join a …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Your favorite open source test case management system is going on tour again.
+During the next several months we will be at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.facebook.com/events/647230689047274/"&gt;DEV.BG All in One, Aug 24, Sofia&lt;/a&gt;
+  where we will have an info booth&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.facebook.com/Tabara.de.Testare/"&gt;Tabara de Testare Meetup, Sept 25, Bucharest&lt;/a&gt;
+  where Alex Todorov will join a discussion panel. To be confirmed!&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://seetest.org/"&gt;SEETEST, Sept 26-27, Bucharest&lt;/a&gt; -
+  where you can meet with Alex Todorov and some of our community friends and contributors&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.meetup.com/Python-Hrvatska/"&gt;Python-Hrvatska Meetup, Oct 1-2, Zagreb&lt;/a&gt;
+  where Alex Todorov will be hosting &lt;em&gt;How to write pylint plugins&lt;/em&gt; workshop.
+  To be confirmed!&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.meetup.com/testival/"&gt;Testival Meetup, Oct 1-2, Zagreb&lt;/a&gt; -
+  to be confirmed!&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pyconbalkan.com/"&gt;PyCon Balkan, Oct 3-5, Belgrade&lt;/a&gt; where:&lt;ul&gt;
+&lt;li&gt;Alex Todorov will present &lt;em&gt;Extending your static analysis for fun and profit&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Kiwi TCMS team will host open source prints for 1 or 2 days (more info soon)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pionir.zamphyr.com/"&gt;Quality Assurance According to Einstein, Oct 6, Kikinda&lt;/a&gt;
+  where Alex Todorov will be meeting up with the local technical community as part of our
+  joint work with Pionir &amp;amp; Zamphyr&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.hackconf.bg/bg/"&gt;HackConf, Oct 11-13, Sofia&lt;/a&gt; where:&lt;ul&gt;
+&lt;li&gt;Rayna Stankova &amp;amp; Ivaylo Ivanov will be hosting &lt;em&gt;Git for beginners&lt;/em&gt; workshop&lt;/li&gt;
+&lt;li&gt;Anton Sankov &amp;amp; Alex Todorov will be hosting &lt;em&gt;Python for beginners&lt;/em&gt; workshop&lt;/li&gt;
+&lt;li&gt;you can use &lt;strong&gt;KIWITCMS&lt;/strong&gt; discount code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.testcon.lt/"&gt;TestCon Europe, Oct 15-17, Vilnius&lt;/a&gt;
+  where Alex Todorov will present &lt;em&gt;Finding security issues in open source&lt;/em&gt;
+  and &lt;em&gt;Extend your static analysis for fun and profit&lt;/em&gt; (backup presentation
+  in case other speakers don't show up)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.openfest.org/"&gt;OpenFest, Nov 2-3, Sofia&lt;/a&gt;
+  where we will have an info booth&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.istacon.org/"&gt;ISTA Conference, Nov 14-15, Sofia&lt;/a&gt;
+  where you can meet with Alex Todorov and some of our contributors and
+  customers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Feel free to ping us at &lt;a href="https://twitter.com/KiwiTCMS"&gt;@KiwiTCMS&lt;/a&gt; or look for the
+kiwi bird logo and come to say hi. Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.11</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="alternate"></link><published>2019-08-02T09:40:00+03:00</published><updated>2019-08-02T09:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-02:/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
 This is a security and improvement release which updates
 many internal dependencies, adds 2 new Telemetry reports, updates
 TestPlan and TestCase cloning pages and provides several other
