@@ -34,6 +34,8 @@ During the next several months we will be at:
   where Alex Todorov will present *Finding security issues in open source*
   and *Extend your static analysis for fun and profit* (backup presentation
   in case other speakers don't show up)
+* [TestWarez, Oct 24-25, Ossa (near Warsaw)](https://2019.testwarez.pl/).
+  To be confirmed!
 * [OpenFest, Nov 2-3, Sofia](http://www.openfest.org/)
   where we will have an info booth
 * [ISTA Conference, Nov 14-15, Sofia](https://www.istacon.org/)
