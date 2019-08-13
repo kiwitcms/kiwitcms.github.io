@@ -5,8 +5,12 @@
             img: 'images/screenshots/001_central_dashboard.png'
         }, {
             title: 'Create IEEE 829 or free text Test Plan',
-            subtitle: 'This document describes what and how you are going to test',
-            img: 'images/screenshots/002_create_test_plan.png'
+            subtitle: 'This document contains your overall testing strategy',
+            img: 'images/screenshots/002_testplan_00.png'
+        }, {
+            title: 'Test Plan is a collection of Test Cases',
+            subtitle: 'Add, remove, review and approve test cases before you start testing',
+            img: 'images/screenshots/002_testplan_01.png'
         }, {
             title: 'Create a Test Case',
             subtitle: 'Use Given-When-Then or bullet points to describe the scenario',
@@ -17,11 +21,15 @@
             img: 'images/screenshots/004_view_existing_test_cases.png'
         }, {
             title: 'Execute Test Runs against a build',
-            subtitle: 'For each build create test runs to collect execution details',
+            subtitle: 'For each Product build create test runs to collect execution details',
             img: 'images/screenshots/005_execute_tests_for_build.png'
         }, {
+            title: 'Bug tracker integration',
+            subtitle: 'Link to existing bug reports or report new ones directly from Kiwi TCMS',
+            img: 'images/screenshots/007_bugtracker_integration.png'
+        }, {
             title: 'Testing breakdown telemetry',
-            subtitle: 'Shows how existing Test Cases for the product are distributed',
+            subtitle: 'Shows how existing Test Cases for Product are distributed',
             img: 'images/screenshots/006_testing_breakdown_telemetry.png'
         }, {
             title: 'Status matrix telemetry',

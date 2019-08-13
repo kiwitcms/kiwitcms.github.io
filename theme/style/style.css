@@ -422,11 +422,12 @@ pre code {
     display: inline-block;
     float: left;
     margin-left: 1.5rem;
+    text-align: center;
 }
 
 .play-button {
-    padding-top: 10px;
-    float: right;
+    padding-top: 83px;
+    display: block;
 }
 
 /* Footer Section */
@@ -497,45 +498,6 @@ pre code {
     display: none;
 }
 
-/* Features Page */
-.features section { padding:0; }
-.features section div.col-12 { padding-top: 0; }
-.horizontally-stacked-list {
-    display: flex;
-    float: left;
-}
-
-.left-floating {
-    float: left;
-}
-
-.testplan {
-    float: right;
-    clear: right;
-    margin-bottom: 5rem;
-}
-
-.mark-and-status-bugs {
-    float: left;
-    margin-bottom: 5rem;
-}
-
-.call-to-action-field {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    text-align: center;
-}
-
-.about-panel {
-    padding-top: 2rem;
-}
-
-/* overrides for features page */
-.features .about-panel-title, .features .about-panel-details {
-    padding-left: 0;
-}
-
-
 .box {
     border-radius: 0.5rem;
     border: solid 0.1rem rgba(144, 144, 144, 0.25);
@@ -573,33 +535,6 @@ pre code {
 
     .screenshots .col-8 {
         width: 100%;
-    }
-
-    /* Features Page */
-    .features .col-2 {
-        display: none;
-        width: 0;
-    }
-
-    .features .col-8 {
-        width: 100%;
-        padding-left: 1.8rem;
-        padding-right: 1.8rem;
-        box-sizing: border-box;
-    }
-
-    .features .w25 {
-        min-width: 100%;
-        max-width: 100%;
-        float: none;
-    }
-
-    .features .testplan {
-        float: left;
-    }
-
-    .features .horizontally-stacked-list {
-        padding-right: 1.8rem;
     }
 }
 
@@ -689,8 +624,6 @@ pre code {
         padding-left: 1.8rem;
         padding-right: 1.8rem;
     }
-    /* override for features page */
-    .features section { padding: 0; }
 
     /* Header section */
     /* these two together will cause the laptop image to be displayed
@@ -767,11 +700,6 @@ pre code {
         text-align: left;
     }
 
-    /* features page */
-    .features img {
-        width: 100%;
-    }
-
     /* Newsletter Form Section */
     .newsletter {
         padding: 0;
@@ -821,18 +749,5 @@ pre code {
         text-align: left;
         padding-left: 1.8rem;
         box-sizing: border-box;
-    }
-
-    /* features page */
-    .features .w50 {
-        width: 100%;
-    }
-
-    .features .col-8 .horizontally-stacked-list {
-        display: inline;
-    }
-
-    .features .demo-btn {
-        margin-bottom: 1.8rem;
     }
 }
