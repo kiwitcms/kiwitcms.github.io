@@ -422,11 +422,12 @@ pre code {
     display: inline-block;
     float: left;
     margin-left: 1.5rem;
+    text-align: center;
 }
 
 .play-button {
-    padding-top: 10px;
-    float: right;
+    padding-top: 83px;
+    display: block;
 }
 
 /* Footer Section */
