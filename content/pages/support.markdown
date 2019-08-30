@@ -17,10 +17,8 @@ Use the channels above instead,
 where the whole community can help you and benefit from the solutions provided.
 If community support is insufficient for your situation, consider commercial support!*
 
-Private Tenant users or customers on a commercial subscription plan from
-[MrSenko](http://mrsenko.com):
+Private Tenant users or customers on a commercial subscription plan:
 
 - **Email:** `kiwitcms-@-mrsenko.com`
 - *Working hours*: 09-17 UTC/Mon-Fri
-- *Priority rule: see [MrSenko.com](http://mrsenko.com/#subscriptions)*
 - *Requests must include your email/GitHub username used in the subscription*

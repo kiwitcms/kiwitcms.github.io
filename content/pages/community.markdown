@@ -9,7 +9,7 @@ save_as: community/index.html
 - **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
 - **Twitter** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
 - **Blog** tag ["community"](/blog/tags/community/)
-- **Email** `info-at-kiwitcms.org` (not for support requests)
+- **Email** `info-at-kiwitcms.org` (not for [support]({filename}support.markdown) requests)
 
 # Contributing
 
@@ -26,7 +26,6 @@ It was intended as a replacement for Mozilla's Testopia and has grown on its own
 [since then](https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#381804-jan-24-2017-released-on-mrsenkocom).
 Latest development is done by
 [the Kiwi TCMS team]({filename}team.html) with sponsorship from
-[Open Source Collective](https://opencollective.com/kiwitcms) and
-[Mr. Senko](http://mrsenko.com/).
+[Open Source Collective](https://opencollective.com/kiwitcms).
 
 The Kiwi TCMS logo is based on the [Kiwix icon](https://commons.wikimedia.org/wiki/File:Kiwix_icon.svg) by Kelson.

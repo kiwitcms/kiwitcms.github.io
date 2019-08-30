@@ -438,14 +438,9 @@ pre code {
     font-size: 1.2rem;
 }
 
-.footer-logo {
-    float: right;
-    margin-right: 1rem;
-    vertical-align: middle;
-    overflow-wrap: break-word;
-}
-
 .footer-copyright {
+    padding-left: 5%;
+    box-sizing: border-box;
     line-height: 1.8em;
     vertical-align: middle;
     overflow-wrap: break-word;
@@ -678,11 +673,6 @@ pre code {
         box-sizing: border-box;
     }
 
-    /* footer section */
-    #mrsenko_logo {
-        display: none;
-        width: 0;
-    }
     .footer .col-9 {
         width: 100%;
         box-sizing: border-box;

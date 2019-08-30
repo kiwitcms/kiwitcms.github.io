@@ -15,7 +15,8 @@ Community donations are collected via
 Project infrastructure is sponsored and maintained by:
 
 * Company name: Open Technologies Bulgaria, Ltd;
-  doing business as [Mr. Senko](http://mrsenko.com/legal/)
+  doing business as [kiwitcms.org](http://kiwitcms.org) and
+  [mrsenko.com](http://mrsenko.com/legal/)
 * Address: Ivan Susanin 43, Sofia 1618, Bulgaria
 * Registration number: 200601818
 * VAT number: BG200601818
