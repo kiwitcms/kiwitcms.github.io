@@ -1,5 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-08-09T10:55:00+03:00</updated><entry><title>Kiwi TCMS conference presence, AW2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/" rel="alternate"></link><published>2019-08-09T10:55:00+03:00</published><updated>2019-08-09T10:55:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-09:/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/</id><summary type="html">&lt;p&gt;Your favorite open source test case management system is going on tour again.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-09-03T12:46:00+03:00</updated><entry><title>Open source sprints at PyCon Balkan in Belgrade</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/" rel="alternate"></link><published>2019-09-03T12:46:00+03:00</published><updated>2019-09-03T12:46:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-03:/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/</id><summary type="html">&lt;p&gt;Next month our team will be at
+&lt;a href="https://pyconbalkan.com/"&gt;PyCon Balkan, Oct 3-5&lt;/a&gt; in Belgrade. Together with
+presentation and a workshop we are going to host open source sprints!
+These will be an informal gathering where participants will be able to
+learn more about how open source works and go through their …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Next month our team will be at
+&lt;a href="https://pyconbalkan.com/"&gt;PyCon Balkan, Oct 3-5&lt;/a&gt; in Belgrade. Together with
+presentation and a workshop we are going to host open source sprints!
+These will be an informal gathering where participants will be able to
+learn more about how open source works and go through their first
+contributions. This is ideal for students and less experienced people
+but we welcome everyone. There will be tasks ranging from easy to very hard!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Who:&lt;/strong&gt; 3 mentors from Kiwi TCMS and you!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What:&lt;/strong&gt; full day of peer programming and contributing to Kiwi TCMS&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Where:&lt;/strong&gt; room will be announced on the days of the conference,
+           follow &lt;a href="https://twitter.com/KiwiTCMS"&gt;@KiwiTCMS&lt;/a&gt; for more info&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why:&lt;/strong&gt; up your tech skills, build your GitHub profile and have fun together&lt;/p&gt;
+&lt;h2&gt;Translate Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;Difficulty: easy&lt;/p&gt;
+&lt;p&gt;We have enabled Serbian language in our translation system. To get started
+checkout our
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html#translation"&gt;translation contribution&lt;/a&gt;
+page.
+Once strings are translated &lt;code&gt;kiwitcms-bot&lt;/code&gt; will automatically open a pull
+request with the new text.&lt;/p&gt;
+&lt;h2&gt;Find unused CSS classes&lt;/h2&gt;
+&lt;p&gt;Difficulty: easy&lt;/p&gt;
+&lt;p&gt;This should be relatively easy. For each class/selector defined in our CSS files
+search (grep) if any of the HTML templates use it. If it is not in use then remove
+it.&lt;/p&gt;
+&lt;h2&gt;Find unused JavaScript code&lt;/h2&gt;
+&lt;p&gt;Difficulty: easy&lt;/p&gt;
+&lt;p&gt;Similar to the above. We're not 100% certain but there could be legacy JavaScript
+functions which are no longer in use. Find them and remove them! At the very least
+you have confirmed that all functions are in use!&lt;/p&gt;
+&lt;h2&gt;CodeClimate Minor severity issues&lt;/h2&gt;
+&lt;p&gt;Difficulty: easy to moderate&lt;/p&gt;
+&lt;p&gt;Check-out the
+&lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=minor&amp;amp;status%5B%5D=&amp;amp;status%5B%5D=open&amp;amp;status%5B%5D=confirmed&amp;amp;engine_name%5B%5D=structure&amp;amp;engine_name%5B%5D=duplication&amp;amp;engine_name%5B%5D=bandit&amp;amp;engine_name%5B%5D=csslint&amp;amp;engine_name%5B%5D=fixme&amp;amp;engine_name%5B%5D=radon&amp;amp;engine_name%5B%5D=sonar-python"&gt;list of Minor severity issues&lt;/a&gt;.
+There are many of them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CSS lint issues (we suggest you start with this one)&lt;/li&gt;
+&lt;li&gt;functions longer than 25 lines of code&lt;/li&gt;
+&lt;li&gt;functions with bigger cognitive and cyclomatic complexity&lt;/li&gt;
+&lt;li&gt;modules longer than 250 LOC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Try fixing a few to see how it goes and continue if you feel confident.
+Not everything may be an issue so if you have any questions ask someone from our team.&lt;/p&gt;
+&lt;h2&gt;CodeClimate Major severity issues&lt;/h2&gt;
+&lt;p&gt;Difficulty: moderate to hard&lt;/p&gt;
+&lt;p&gt;Check-out the
+&lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=major&amp;amp;status%5B%5D=&amp;amp;status%5B%5D=open&amp;amp;status%5B%5D=confirmed&amp;amp;engine_name%5B%5D=structure&amp;amp;engine_name%5B%5D=duplication&amp;amp;engine_name%5B%5D=bandit&amp;amp;engine_name%5B%5D=csslint&amp;amp;engine_name%5B%5D=fixme&amp;amp;engine_name%5B%5D=radon&amp;amp;engine_name%5B%5D=sonar-python"&gt;list of Major severity issues&lt;/a&gt;.
+There are around 150 of them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;identical and similar code blocks&lt;/li&gt;
+&lt;li&gt;big modules&lt;/li&gt;
+&lt;li&gt;big functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most of these require some sort of refactoring, either splitting snippets
+of code into smaller pieces (functions or sub-modules) or using one function
+in several places instead of 2 very similar but different functions, etc.
+Ask our team members about which approach they prefer for fixing these issues
+to minimize the effort spent here.&lt;/p&gt;
+&lt;h2&gt;CodeClimate Critical severity issues&lt;/h2&gt;
+&lt;p&gt;Difficulty: hard&lt;/p&gt;
+&lt;p&gt;Check-out the
+&lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=critical&amp;amp;status%5B%5D=&amp;amp;status%5B%5D=open&amp;amp;status%5B%5D=confirmed&amp;amp;engine_name%5B%5D=structure&amp;amp;engine_name%5B%5D=duplication&amp;amp;engine_name%5B%5D=bandit&amp;amp;engine_name%5B%5D=csslint&amp;amp;engine_name%5B%5D=fixme&amp;amp;engine_name%5B%5D=radon&amp;amp;engine_name%5B%5D=sonar-python"&gt;list of Critical severity issues&lt;/a&gt;.
+All of these are functions with high cognitive complexity and
+the recommended way to deal with them is refactoring into
+&lt;a href="https://docs.djangoproject.com/en/2.2/topics/class-based-views/"&gt;class based views&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Improve pylint health&lt;/h2&gt;
+&lt;p&gt;Difficulty: easy&lt;/p&gt;
+&lt;p&gt;Execute pylint against the latest sources and start fixing the issues.
+Looking at &lt;a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/579167487"&gt;pylint logs&lt;/a&gt; the
+following items are relatively easy to work on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Everything in module tcms.urls&lt;/li&gt;
+&lt;li&gt;Everything in module tcms.telemetry.api&lt;/li&gt;
+&lt;li&gt;Everything in module tcms.testruns.tests.test_views&lt;/li&gt;
+&lt;li&gt;Everything in module tcms.xmlrpc.forms&lt;/li&gt;
+&lt;li&gt;Everything in module tcms.testcases.tests.test_models&lt;/li&gt;
+&lt;li&gt;Everything in module tcms.core.forms.fields&lt;/li&gt;
+&lt;li&gt;Everything in module tcms.settings.common&lt;/li&gt;
+&lt;li&gt;Everything in module tcms.settings.test&lt;/li&gt;
+&lt;li&gt;All &lt;code&gt;module-in-directory-without-init&lt;/code&gt; errors reported for module tcms.tests.__init__&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: &lt;code&gt;fixme&lt;/code&gt;, &lt;code&gt;missing-permission-required&lt;/code&gt; and &lt;code&gt;avoid-auto-field&lt;/code&gt; errors are usually harder
+to resolve and will require more work/refactoring. If you feel confident go ahead and
+fix them, if not skip to the next error message.&lt;/p&gt;
+&lt;p&gt;We also use a custom pylint checker which reports function based views.
+If you are looking for something harder to work on, then give it a try
+(see 3rd pylint line in &lt;code&gt;Makefile&lt;/code&gt;) and refactor some of the existing
+view functions into class based views.&lt;/p&gt;
+&lt;h2&gt;Fix 3rd party security issues discovered by Bandit&lt;/h2&gt;
+&lt;p&gt;Difficulty: moderate to hard&lt;/p&gt;
+&lt;p&gt;Bandit is a static analysis tool similar to pylint. It focuses on discovering
+issues which may lead to security vulnerabilities. We have resolved all such
+issues in our own source code but we also execute Bandit against the entire
+Python dependency stack. There it finds thousands of issues, so much so that
+the reporter crashes.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/579167486"&gt;In CI&lt;/a&gt; there are around
+130 issues reported. The best course of action here is to execute Bandit locally
+against the offending library and then figure out what to do:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;report an issue upstream&lt;/li&gt;
+&lt;li&gt;send a pull request upstream&lt;/li&gt;
+&lt;li&gt;if these are test files maybe exclude them from the package (e.g. don't ship them for production)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: inside Travis CI we have all runtime and testing dependencies which is more
+than what we have inside the official Docker image for Kiwi TCMS.&lt;/p&gt;
+&lt;h2&gt;Work on reported issues&lt;/h2&gt;
+&lt;p&gt;The following issues look suitable for a sprint and don't require lots of
+background knowledge:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/212"&gt;#212&lt;/a&gt; - moderate - Convert jQ to $ -
+  this is an easy search &amp;amp; rename but will require more extensive manual testing&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/431"&gt;#431&lt;/a&gt; - moderate to hard - Remove JavaScript fireEvent() -
+  17 matches in &lt;code&gt;static/js/&lt;/code&gt;. Must be replaced with direct function calls&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/652"&gt;#652&lt;/a&gt; - easy - Removal of labels from form fields -
+  all labels must be included in the HTML template and marked for translation&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/681"&gt;#681&lt;/a&gt;, &lt;a href="https://github.com/kiwitcms/Kiwi/issues/682"&gt;#682&lt;/a&gt; - moderate -
+  Move API modules &amp;amp; their tests from &lt;code&gt;xmlrpc/api/&amp;lt;app&amp;gt;.py&lt;/code&gt; to &lt;code&gt;&amp;lt;app&amp;gt;/api.py&lt;/code&gt;. These have good test
+  coverage so you have to make sure you don't break anything&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/971"&gt;#971&lt;/a&gt; - moderate - manage.py command for changing Site URL -
+  will help with automatic provisioning, e.g. Ansible. For howto see
+  &lt;a href="https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/"&gt;Django docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1021"&gt;#1021&lt;/a&gt; - moderate - Update TestCase page UI to allow adding TestPlans to cases -
+  use &lt;code&gt;TestPlan.add_case()&lt;/code&gt; API method and refresh the widget. See how Tags and Components cards work
+  in the same page&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1070"&gt;#1070&lt;/a&gt; - moderate - manage.py command for checking email settings -
+  will help with troubleshooting misconfigured email. Must raise exceptions if something fails.
+  For howto see
+  &lt;a href="https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/"&gt;Django docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/733"&gt;#733&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/736"&gt;#736&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/738"&gt;#738&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/883"&gt;#883&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1089"&gt;#1089&lt;/a&gt; - hard to very hard - New checkers for pylint -
+  Kiwi TCMS uses customized pylint checkers to discover various conditions. We need a few more
+  of them and/or update of the existing ones&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We hope to see you in Belgrade. Until then: Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS conference presence, AW2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/" rel="alternate"></link><published>2019-08-09T10:55:00+03:00</published><updated>2019-08-09T10:55:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-09:/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/</id><summary type="html">&lt;p&gt;Your favorite open source test case management system is going on tour again.
 During the next several months we will be at:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.facebook.com/events/647230689047274/"&gt;DEV.BG All in One, Aug 24, Sofia&lt;/a&gt;
