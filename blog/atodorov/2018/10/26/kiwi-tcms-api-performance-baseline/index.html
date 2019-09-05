@@ -83,7 +83,7 @@ an experiment to establish a baseline.
 For API requests I got <strong>7.5 req/sec or 130 msec/req</strong> which is
 1.5x <a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/">slower than GitHub</a>!</p>
 <p>I used <code>perf-script</code>
-(<a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2">gist here</a>)
+(<a href="https://github.com/kiwitcms/api-scripts/blob/master/perf-script">see here</a>)
 to measure that. The script takes the first 250 test cases from our test suite
 and on every execution creates a new TestPlan (1 API request), then creates
 new test cases (250 requests), adds cases to test plan (250 requests),

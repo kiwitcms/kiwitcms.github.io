@@ -3775,13 +3775,13 @@ an experiment to establish a baseline.
 For API requests I got &lt;strong&gt;7.5 req/sec or 130 msec/req&lt;/strong&gt; which is
 1.5x &lt;a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/"&gt;slower than GitHub&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;I used &lt;code&gt;perf-script&lt;/code&gt;
-(&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;gist here&lt;/a&gt;)
+(&lt;a href="https://github.com/kiwitcms/api-scripts/blob/master/perf-script"&gt;see here&lt;/a&gt;)
 to measure …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
 an experiment to establish a baseline.
 For API requests I got &lt;strong&gt;7.5 req/sec or 130 msec/req&lt;/strong&gt; which is
 1.5x &lt;a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/"&gt;slower than GitHub&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;I used &lt;code&gt;perf-script&lt;/code&gt;
-(&lt;a href="https://gist.github.com/atodorov/f5aed028b6f254d97bcaf93453abe8d2"&gt;gist here&lt;/a&gt;)
+(&lt;a href="https://github.com/kiwitcms/api-scripts/blob/master/perf-script"&gt;see here&lt;/a&gt;)
 to measure that. The script takes the first 250 test cases from our test suite
 and on every execution creates a new TestPlan (1 API request), then creates
 new test cases (250 requests), adds cases to test plan (250 requests),
