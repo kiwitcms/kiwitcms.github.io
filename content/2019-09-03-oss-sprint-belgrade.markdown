@@ -14,7 +14,7 @@ contributions. This is ideal for students and less experienced people
 but we welcome everyone. There will be tasks ranging from easy to very hard!
 
 
-**Who:** 3 mentors from Kiwi TCMS and you!
+**Who:** 4 mentors from Kiwi TCMS and you!
 
 **What:** full day of peer programming and contributing to Kiwi TCMS
 
