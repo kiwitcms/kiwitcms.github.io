@@ -15,11 +15,7 @@ During the next several months we will be at:
   where Alex Todorov will join a discussion panel. To be confirmed!
 * [SEETEST, Sept 26-27, Bucharest](https://seetest.org/) -
   where you can meet with Alex Todorov and some of our community friends and contributors
-* [Python-Hrvatska Meetup, Oct 1-2, Zagreb](https://www.meetup.com/Python-Hrvatska/)
-  where Alex Todorov will be hosting *How to write pylint plugins* workshop.
-  To be confirmed!
-* [Testival Meetup, Oct 1-2, Zagreb](https://www.meetup.com/testival/) -
-  to be confirmed!
+* [Testival Meetup, Oct 1-2, Zagreb](https://www.meetup.com/testival/)
 * [PyCon Balkan, Oct 3-5, Belgrade](https://pyconbalkan.com/) where:
     - Alex Todorov will present *Extending your static analysis for fun and profit*
     - Kiwi TCMS team will host open source prints for 1 or 2 days (more info soon)
@@ -35,7 +31,6 @@ During the next several months we will be at:
   and *Extend your static analysis for fun and profit* (backup presentation
   in case other speakers don't show up)
 * [TestWarez, Oct 24-25, Ossa (near Warsaw)](https://2019.testwarez.pl/).
-  To be confirmed!
 * [OpenFest, Nov 2-3, Sofia](http://www.openfest.org/)
   where we will have an info booth
 * [ISTA Conference, Nov 14-15, Sofia](https://www.istacon.org/)
