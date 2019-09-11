@@ -15,13 +15,16 @@ During the next several months we will be at:
   where Alex Todorov will join a discussion panel. To be confirmed!
 * [SEETEST, Sept 26-27, Bucharest](https://seetest.org/) -
   where you can meet with Alex Todorov and some of our community friends and contributors
+* [RuseConf, Sept 28, Ruse](https://ruseconf.com/) -
+  where Alex Todorov and our friend Gjore Zaharchev (Seavus, Macedonia) will host
+  2 presentations
 * [Testival Meetup, Oct 1-2, Zagreb](https://www.meetup.com/testival/)
 * [PyCon Balkan, Oct 3-5, Belgrade](https://pyconbalkan.com/) where:
     - Alex Todorov will present *Extending your static analysis for fun and profit*
     - Kiwi TCMS team will host open source prints for 1 or 2 days (more info soon)
 * [Quality Assurance According to Einstein, Oct 6, Kikinda](https://pionir.zamphyr.com/)
   where Alex Todorov will be meeting up with the local technical community as part of our
-  joint work with Pionir &amp; Zamphyr
+  joint work with Zamphyr
 * [HackConf, Oct 11-13, Sofia](https://www.hackconf.bg/bg/) where:
     - Rayna Stankova &amp; Ivaylo Ivanov will be hosting *Git for beginners* workshop
     - Anton Sankov &amp; Alex Todorov will be hosting *Python for beginners* workshop
