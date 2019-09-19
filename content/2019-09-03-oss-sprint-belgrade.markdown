@@ -165,7 +165,9 @@ Work on reported issues
 -----------------------
 
 The following issues look suitable for a sprint and don't require lots of
-background knowledge:
+background knowledge. You can also find them using the
+[`PyConBalkan`](https://github.com/kiwitcms/Kiwi/labels/PyConBalkan) label on
+GitHub:
 
 - [#212](https://github.com/kiwitcms/Kiwi/issues/212) - moderate - Convert jQ to $ -
   this is an easy search & rename but will require more extensive manual testing
