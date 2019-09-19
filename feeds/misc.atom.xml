@@ -110,7 +110,9 @@ against the offending library and then figure out what to do:&lt;/p&gt;
 than what we have inside the official Docker image for Kiwi TCMS.&lt;/p&gt;
 &lt;h2&gt;Work on reported issues&lt;/h2&gt;
 &lt;p&gt;The following issues look suitable for a sprint and don't require lots of
-background knowledge:&lt;/p&gt;
+background knowledge. You can also find them using the
+&lt;a href="https://github.com/kiwitcms/Kiwi/labels/PyConBalkan"&gt;&lt;code&gt;PyConBalkan&lt;/code&gt;&lt;/a&gt; label on
+GitHub:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/212"&gt;#212&lt;/a&gt; - moderate - Convert jQ to $ -
   this is an easy search &amp;amp; rename but will require more extensive manual testing&lt;/li&gt;
