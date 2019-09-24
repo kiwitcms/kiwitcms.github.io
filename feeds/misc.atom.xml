@@ -1,5 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-09-03T12:46:00+03:00</updated><entry><title>Open source sprints at PyCon Balkan in Belgrade</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/" rel="alternate"></link><published>2019-09-03T12:46:00+03:00</published><updated>2019-09-03T12:46:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-03:/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/</id><summary type="html">&lt;p&gt;Next month our team will be at
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-09-24T10:30:00+03:00</updated><entry><title>Kiwi TCMS 7.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/" rel="alternate"></link><published>2019-09-24T10:30:00+03:00</published><updated>2019-09-24T10:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-24:/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.0!
+This is a major release which includes security updates,
+significant database schema and API changes, many improvements,
+removed functionality, bug fixes, substantial internal refactoring and
+several new languages. You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;The 7.0 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.0!
+This is a major release which includes security updates,
+significant database schema and API changes, many improvements,
+removed functionality, bug fixes, substantial internal refactoring and
+several new languages. You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;The 7.0 version number happily coincides with the fact that we've surpassed
+70000 downloads from &lt;a class="reference external" href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  d34dc6d896bf    584 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-6-11"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 6.11&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;API method &lt;tt class="docutils literal"&gt;BugSystem.filter()&lt;/tt&gt; has been removed (now unused) but
+it was possible to use this method to steal passwords or keys used for
+Issue Tracker integration. This vulnerability could be exploited by
+users logged into Kiwi TCMS and is classified as medium severity!
+We advise you to change your integration API keys and passwords
+immediately!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 2.2.4 to 2.2.5&lt;/li&gt;
+&lt;li&gt;Update django-uuslug from 1.1.8 to 1.1.9&lt;/li&gt;
+&lt;li&gt;Update mysqlclient from 1.4.2.post1 to 1.4.4&lt;/li&gt;
+&lt;li&gt;Update python-bugzilla from 2.2.0 to 2.3.0&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 1.10.0 to 1.11.0&lt;/li&gt;
+&lt;li&gt;Update patternfly from 3.59.3 to 3.59.4&lt;/li&gt;
+&lt;li&gt;Reduce docker image size from 1.01 GB to under 600 MB&lt;/li&gt;
+&lt;li&gt;Add TestCase Health telemetry&lt;/li&gt;
+&lt;li&gt;Add support for Redmine issue tracker. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/41"&gt;Issue #41&lt;/a&gt; (Jesse C. Lin)&lt;/li&gt;
+&lt;li&gt;Add breathing room around HTML form's submit buttons (Rady Madjev)&lt;/li&gt;
+&lt;li&gt;New TestRun page action: bulk-add hyperlinks to TestExecution(s)&lt;/li&gt;
+&lt;li&gt;Make it possible to disable HTTPS by specifying the
+&lt;tt class="docutils literal"&gt;KIWI_DONT_ENFORCE_HTTPS&lt;/tt&gt; environment variable! Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1036"&gt;Issue #1036&lt;/a&gt; (Marco Descher)&lt;/li&gt;
+&lt;li&gt;Documentation updates, including internal style checker. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1000"&gt;Issue #1000&lt;/a&gt; (Prome88)&lt;/li&gt;
+&lt;li&gt;When linking a TestExecution to a defect and choosing to update the
+Issue Tracker Kiwi TCMS will not add a comment pointing back to
+TR ID/summary/URL and TE ID/summary. This provides more detailed information
+about the reproducer instead of just linking to a TestCase without any
+specific execution details like we did in the past&lt;/li&gt;
+&lt;li&gt;Display additional defect information via Issue Tracker integration.
+On Patternfly pages which show defect URLs this is accessible via a
+small info icon. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/117"&gt;Issue #117&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add minimalistic defect tracker functionality. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/699"&gt;Issue #699&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;integrated with Issue Tracker integration layer as if it was
+an external system&lt;/li&gt;
+&lt;li&gt;when adding hyperlink to TestExecition (also via API method
+&lt;tt class="docutils literal"&gt;TestExecution.add_link()&lt;/tt&gt;) this is special cased and the
+references between &lt;tt class="docutils literal"&gt;Bug&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestExecution&lt;/tt&gt; are always updated&lt;/li&gt;
+&lt;li&gt;when clicking 'Report bug' from inside Test Execution the new
+defect is reported automatically and a new browser window opens to
+display the information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database-migrations"&gt;
+&lt;h3&gt;Database migrations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Tell the migration planner to apply
+&lt;tt class="docutils literal"&gt;testruns.0006_rename_test_case_run_to_test_execution&lt;/tt&gt; after
+&lt;tt class="docutils literal"&gt;linkreference.0001_squashed&lt;/tt&gt;. This enables subsequent migrations
+and new functionality to be applied without crashing.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p class="last"&gt;Django should be able to handle this automatically both for
+existing installations and for new ones. In any case make sure
+you backup your data first and make a dry-run to verify that
+nothing breaks!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove fields &lt;tt class="docutils literal"&gt;url_reg_exp&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;validate_reg_exp&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;description&lt;/tt&gt; from
+&lt;tt class="docutils literal"&gt;BugSystem&lt;/tt&gt; model&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update the following fields in &lt;tt class="docutils literal"&gt;LinkReference&lt;/tt&gt; model:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;rename &lt;tt class="docutils literal"&gt;test_case_run&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;execution&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;add indexing for &lt;tt class="docutils literal"&gt;created_on&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;url&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;add &lt;tt class="docutils literal"&gt;is_defect&lt;/tt&gt; field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Apply &lt;tt class="docutils literal"&gt;LinkReference&lt;/tt&gt; permissions to default group &lt;tt class="docutils literal"&gt;Tester&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/881"&gt;Issue #881&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p class="last"&gt;Administrators of existing applications will need to
+apply these permissions by hand via the Admin section.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove &lt;tt class="docutils literal"&gt;testcases.Bug&lt;/tt&gt; model, replaced with &lt;tt class="docutils literal"&gt;LinkReference&lt;/tt&gt;.
+Closes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1029"&gt;Issue #1029&lt;/a&gt; and
+obsoletes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/320"&gt;Issue #320&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class="last"&gt;Linking bugs to TestExecution is now performed via URLs instead of
+keeping a reference to BUG-ID and trying to reconstruct the URL
+on the fly.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p class="last"&gt;The model named &lt;tt class="docutils literal"&gt;Bug&lt;/tt&gt; which is added by subsequent migrations
+refers to defects reported into Kiwi TCMS minimalistic defect tracker!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;New model &lt;tt class="docutils literal"&gt;bugs.Bug&lt;/tt&gt; is now available. Permissions of type
+&lt;tt class="docutils literal"&gt;bugs | bug | Can ...&lt;/tt&gt; will be applied to the default group named
+&lt;tt class="docutils literal"&gt;Tester&lt;/tt&gt; only for new installations.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p class="last"&gt;Administrators of existing applications will need to
+apply these permissions by hand via the Admin section.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestExecution.add_link()&lt;/tt&gt; method now returns serialized
+&lt;tt class="docutils literal"&gt;LinkReference&lt;/tt&gt; object.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestExecution.remove_link()&lt;/tt&gt; method now accepts one parameter of type
+&lt;tt class="docutils literal"&gt;dict&lt;/tt&gt; used to filter the objects which to remove&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestExecution.get_links()&lt;/tt&gt; method now accepts one parameter of type
+&lt;tt class="docutils literal"&gt;dict&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;int&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestExecution.add_link()&lt;/tt&gt; method signature changed from
+(int, str, str) to (dict), where the single parameter holds field values for
+the &lt;tt class="docutils literal"&gt;LinkReference&lt;/tt&gt; model&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;TestExecution.add_bug()&lt;/tt&gt; method, use &lt;tt class="docutils literal"&gt;TestExecution.add_link()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;TestExecution.remove_bug()&lt;/tt&gt; method, use
+&lt;tt class="docutils literal"&gt;TestExecution.remove_link()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;TestCase.add_bug()&lt;/tt&gt; method&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;TestCase.remove_bug()&lt;/tt&gt; method&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;Bug.remove()&lt;/tt&gt; method, use &lt;tt class="docutils literal"&gt;TestExecution.remove_link()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;Bug.create()&lt;/tt&gt; method, use &lt;tt class="docutils literal"&gt;TestExecution.add_link()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Add method &lt;tt class="docutils literal"&gt;Bug.details()&lt;/tt&gt; which together with the underlying
+&lt;tt class="docutils literal"&gt;IssueTracker.details()&lt;/tt&gt; is the foundation of how Kiwi TCMS fetches
+extra details from the issue tracking system. The default implementation
+uses OpenGraph protocol to collect the data that will be shown. You may
+override &lt;tt class="docutils literal"&gt;.details()&lt;/tt&gt; for each issue tracker (or add your own IT) to
+extend this functionality. Information is cached for 1 hour by default.
+References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/117"&gt;Issue #117&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add methods &lt;tt class="docutils literal"&gt;Bug.add_tag()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;Bug.remove_tag()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Existing method with name &lt;tt class="docutils literal"&gt;Bug.filter()&lt;/tt&gt; has changed behavior. It is
+now used to query objects from Kiwi TCMS minimalistic defect tracker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="removed-functionality"&gt;
+&lt;h3&gt;Removed functionality&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;IssueTrackerType.all_issues_link()&lt;/tt&gt; method. This was used in
+TestRun Report page to show a single link that will open all bugs in the
+Issue Tracker. Most trackers don't support this and the UI portion has
+been rewritten&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;LinkOnly&lt;/tt&gt; issue tracker - obsolete because all defects are
+now added to TestExecutions via their URLs&lt;/li&gt;
+&lt;li&gt;Remove bulk-add/bulk-remove of bugs in TestRun page, replaced by bulk-add
+for hyperlinks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Respect the &lt;tt class="docutils literal"&gt;CACHES&lt;/tt&gt; setting, see
+&lt;a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-CACHES"&gt;Django docs&lt;/a&gt;
+for more info. Initially this setting is used to cache defect details received
+via Issue Tracker integration. See
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/117"&gt;Issue #117&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Don't auto-download FontAwesome for SimpleMDE. Resolves icons disappearing
+on pages which have the markdown editor. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/905"&gt;Issue #905&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reorder HTML elements so Delete button is still visible in TestCase review
+comment section. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1013"&gt;Issue #1013&lt;/a&gt; (Rady Madjev)&lt;/li&gt;
+&lt;li&gt;Remove section that displays bugs in TestExecution container. Bugs are now
+denoted by a small icon next to their hyperlink. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/475"&gt;Issue #475&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cache Issue Tracker connections per &lt;tt class="docutils literal"&gt;base_url&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/290"&gt;Issue #290&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Lots of refactoring from function based views to class based views (Rady Madjev)&lt;/li&gt;
+&lt;li&gt;Use JavaScript and the API to remove case execution instead of dedicated
+backend function (Rady Madjev)&lt;/li&gt;
+&lt;li&gt;Update pylint directives around missing permissions (Svetlomir Balevski)&lt;/li&gt;
+&lt;li&gt;Fix typo in identifier. Fixes
+&lt;a class="reference external" href="https://scan4.coverity.com/reports.htm#v38579/p14953/fileInstanceId=65904319&amp;amp;defectInstanceId=11526612&amp;amp;mergedDefectId=344186&amp;amp;eventId=1"&gt;CID 344186&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;tt class="docutils literal"&gt;TestExecution.add_link()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestExecution.remove_link()&lt;/tt&gt; in UI
+instead of dedicated backend function.&lt;/li&gt;
+&lt;li&gt;Remove unused LinkReference views, forms and tests modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduce a translation mode where you can translate the interface via
+in-context editor. For more information see
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html#translation"&gt;Translation guide&lt;/a&gt;.
+Fixes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1098"&gt;Issue #1098&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sq#"&gt;Albanian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/el#"&gt;Greek translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/it#"&gt;Italian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/tr#"&gt;Turkish translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information check-out
+&lt;a class="reference external" href="https://crowdin.com/project/kiwitcms"&gt;all supported languages&lt;/a&gt;.
+To request new language
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/new?title=Request+new+language:+...&amp;amp;body=Please+enable+...+language+in+Crowdin"&gt;click here&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="junit-xml-plugin-v0-4"&gt;
+&lt;h2&gt;junit.xml-plugin v0.4&lt;/h2&gt;
+&lt;p&gt;A few days ago we have also released
+&lt;a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin"&gt;kiwitcms-junit.xml-plugin&lt;/a&gt;
+v0.4 with the following changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update junitparser from 1.3.2 to 1.3.4&lt;/li&gt;
+&lt;li&gt;Also support XML files with &amp;lt;testsuites&amp;gt; root tag (Katalon Studio). Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin/issues/9"&gt;Issue #9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tap-plugin-v0-4"&gt;
+&lt;h2&gt;tap-plugin v0.4&lt;/h2&gt;
+&lt;p&gt;We have also released
+&lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin"&gt;kiwitcms-tap-plugin&lt;/a&gt;
+v0.4 with the following changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Include traceback from TAP file as TestExecution comment. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin/issues/7"&gt;Issue #7&lt;/a&gt;
+(Christophe CHAUVET)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Open source sprints at PyCon Balkan in Belgrade</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/" rel="alternate"></link><published>2019-09-03T12:46:00+03:00</published><updated>2019-09-03T12:46:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-03:/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/</id><summary type="html">&lt;p&gt;Next month our team will be at
 &lt;a href="https://pyconbalkan.com/"&gt;PyCon Balkan, Oct 3-5&lt;/a&gt; in Belgrade. Together with
 presentation and a workshop we are going to host open source sprints!
 These will be an informal gathering where participants will be able to
