@@ -35,6 +35,10 @@
             title: 'Status matrix telemetry',
             subtitle: 'Detailed information about Test Execution statuses',
             img: 'images/screenshots/007_status_matrix_telemetry.png'
+        }, {
+            title: 'Execution trends telemetry',
+            subtitle: 'As a test manager I want to see information if Product builds are getting better or worse',
+            img: 'images/screenshots/008_execution_trends_telemetry.png'
         }],
         imgIndex = 0;
 
