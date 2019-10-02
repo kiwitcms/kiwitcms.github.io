@@ -39,6 +39,10 @@
             title: 'Execution trends telemetry',
             subtitle: 'As a test manager I want to see information if Product builds are getting better or worse',
             img: 'images/screenshots/008_execution_trends_telemetry.png'
+        }, {
+            title: 'TestCase health telemetry',
+            subtitle: 'As a tester and/or manager I want to be able to discover which TestCase(s) are the most common source of problems.',
+            img: 'images/screenshots/009_test_case_health_telemetry.png'
         }],
         imgIndex = 0;
 
