@@ -4,24 +4,24 @@
             subtitle: 'See all of your Test executions and Test plans in one place',
             img: 'images/screenshots/001_central_dashboard.png'
         }, {
-            title: 'Create IEEE 829 or free text Test Plan',
+            title: 'Create IEEE 829 or free text TestPlan',
             subtitle: 'This document contains your overall testing strategy',
             img: 'images/screenshots/002_testplan_00.png'
         }, {
-            title: 'Test Plan is a collection of Test Cases',
+            title: 'Test plan is a collection of test cases',
             subtitle: 'Add, remove, review and approve test cases before you start testing',
             img: 'images/screenshots/002_testplan_01.png'
         }, {
-            title: 'Create a Test Case',
+            title: 'Create a test case',
             subtitle: 'Use Given-When-Then or bullet points to describe the scenario',
             img: 'images/screenshots/003_create_test_case.png'
         }, {
-            title: 'View existing Test Case',
+            title: 'View existing test case',
             subtitle: 'Intuitive access to all the important information',
             img: 'images/screenshots/004_view_existing_test_cases.png'
         }, {
-            title: 'Execute Test Runs against a build',
-            subtitle: 'For each Product build create test runs to collect execution details',
+            title: 'Execute test runs against a build',
+            subtitle: 'For each product build create test runs to collect execution details',
             img: 'images/screenshots/005_execute_tests_for_build.png'
         }, {
             title: 'Bug tracker integration',
@@ -29,19 +29,19 @@
             img: 'images/screenshots/007_bugtracker_integration.png'
         }, {
             title: 'Testing breakdown telemetry',
-            subtitle: 'Shows how existing Test Cases for Product are distributed',
+            subtitle: 'Shows how existing test case distribution',
             img: 'images/screenshots/006_testing_breakdown_telemetry.png'
         }, {
             title: 'Status matrix telemetry',
-            subtitle: 'Detailed information about Test Execution statuses',
+            subtitle: 'Detailed information about test execution status',
             img: 'images/screenshots/007_status_matrix_telemetry.png'
         }, {
             title: 'Execution trends telemetry',
-            subtitle: 'As a test manager I want to see information if Product builds are getting better or worse',
+            subtitle: 'Information if product builds are getting better or worse',
             img: 'images/screenshots/008_execution_trends_telemetry.png'
         }, {
-            title: 'TestCase health telemetry',
-            subtitle: 'As a tester and/or manager I want to be able to discover which TestCase(s) are the most common source of problems.',
+            title: 'Test case health telemetry',
+            subtitle: 'Discover which test cases are the most common source of problems',
             img: 'images/screenshots/009_test_case_health_telemetry.png'
         }],
         imgIndex = 0;
