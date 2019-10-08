@@ -1,10 +1,10 @@
     var imgs = [
         {
             title: 'Central dashboard to start your day',
-            subtitle: 'See all of your Test executions and Test plans in one place',
+            subtitle: 'See all of your test executions and test plans in one place',
             img: 'images/screenshots/001_central_dashboard.png'
         }, {
-            title: 'Create IEEE 829 or free text TestPlan',
+            title: 'Create IEEE 829 or free text test plan',
             subtitle: 'This document contains your overall testing strategy',
             img: 'images/screenshots/002_testplan_00.png'
         }, {
