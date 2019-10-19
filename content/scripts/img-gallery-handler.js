@@ -29,7 +29,7 @@
             img: 'images/screenshots/007_bugtracker_integration.png'
         }, {
             title: 'Testing breakdown telemetry',
-            subtitle: 'Shows how existing test case distribution',
+            subtitle: 'Shows how existing test cases are distributed',
             img: 'images/screenshots/006_testing_breakdown_telemetry.png'
         }, {
             title: 'Status matrix telemetry',
