@@ -416,8 +416,8 @@ pre code {
 /* Seen At Section */
 
 .logo-layout {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-repeat: no-repeat;
     display: inline-block;
     float: left;
@@ -426,7 +426,7 @@ pre code {
 }
 
 .play-button {
-    padding-top: 83px;
+    padding-top: 58px;
     display: block;
 }
 
