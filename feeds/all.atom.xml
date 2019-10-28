@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="http://kiwitcms.org/" rel="alternate"></link><link href="http://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>http://kiwitcms.org/</id><updated>2019-09-24T10:30:00+03:00</updated><entry><title>Kiwi TCMS 7.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/" rel="alternate"></link><published>2019-09-24T10:30:00+03:00</published><updated>2019-09-24T10:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-24:/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.0!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2019-09-24T10:30:00+03:00</updated><entry><title>Kiwi TCMS 7.0</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/" rel="alternate"></link><published>2019-09-24T10:30:00+03:00</published><updated>2019-09-24T10:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-24:/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.0!
 This is a major release which includes security updates,
 significant database schema and API changes, many improvements,
 removed functionality, bug fixes, substantial internal refactoring and
@@ -284,7 +284,7 @@ v0.4 with the following changes:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="how-to-upgrade"&gt;
 &lt;h2&gt;How to upgrade&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+&lt;p&gt;&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
 If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 cd path/containing/docker-compose/
@@ -310,7 +310,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Open source sprints at PyCon Balkan in Belgrade</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/" rel="alternate"></link><published>2019-09-03T12:46:00+03:00</published><updated>2019-09-03T12:46:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-03:/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/</id><summary type="html">&lt;p&gt;Next month our team will be at
+</content><category term="releases"></category></entry><entry><title>Open source sprints at PyCon Balkan in Belgrade</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/" rel="alternate"></link><published>2019-09-03T12:46:00+03:00</published><updated>2019-09-03T12:46:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-03:/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/</id><summary type="html">&lt;p&gt;Next month our team will be at
 &lt;a href="https://pyconbalkan.com/"&gt;PyCon Balkan, Oct 3-5&lt;/a&gt; in Belgrade. Together with
 presentation and a workshop we are going to host open source sprints!
 These will be an informal gathering where participants will be able to
@@ -452,7 +452,7 @@ GitHub:&lt;/p&gt;
   Kiwi TCMS uses customized pylint checkers to discover various conditions. We need a few more
   of them and/or update of the existing ones&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;We hope to see you in Belgrade. Until then: Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS conference presence, AW2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/" rel="alternate"></link><published>2019-08-09T10:55:00+03:00</published><updated>2019-08-09T10:55:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-09:/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/</id><summary type="html">&lt;p&gt;Your favorite open source test case management system is going on tour again.
+&lt;p&gt;We hope to see you in Belgrade. Until then: Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS conference presence, AW2019</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/" rel="alternate"></link><published>2019-08-09T10:55:00+03:00</published><updated>2019-08-09T10:55:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-09:/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/</id><summary type="html">&lt;p&gt;Your favorite open source test case management system is going on tour again.
 During the next several months we will be at:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.facebook.com/events/647230689047274/"&gt;DEV.BG All in One, Aug 24, Sofia&lt;/a&gt;
@@ -497,7 +497,7 @@ During the next several months we will be at:&lt;/p&gt;
   customers&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Feel free to ping us at &lt;a href="https://twitter.com/KiwiTCMS"&gt;@KiwiTCMS&lt;/a&gt; or look for the
-kiwi bird logo and come to say hi. Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.11</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="alternate"></link><published>2019-08-02T09:40:00+03:00</published><updated>2019-08-02T09:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-02:/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
+kiwi bird logo and come to say hi. Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.11</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="alternate"></link><published>2019-08-02T09:40:00+03:00</published><updated>2019-08-02T09:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-02:/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
 This is a security and improvement release which updates
 many internal dependencies, adds 2 new Telemetry reports, updates
 TestPlan and TestCase cloning pages and provides several other
@@ -622,7 +622,7 @@ checker (Svetlomir Balevski)&lt;/li&gt;
 &lt;/div&gt;
 &lt;div class="section" id="how-to-upgrade"&gt;
 &lt;h2&gt;How to upgrade&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+&lt;p&gt;&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
 If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 cd path/containing/docker-compose/
@@ -648,7 +648,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.11</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="alternate"></link><published>2019-08-02T09:40:00+03:00</published><updated>2019-08-02T09:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-02:/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.11</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="alternate"></link><published>2019-08-02T09:40:00+03:00</published><updated>2019-08-02T09:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-08-02:/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
 This is a security and improvement release which updates
 many internal dependencies, adds 2 new Telemetry reports, updates
 TestPlan and TestCase cloning pages and provides several other
@@ -773,7 +773,7 @@ checker (Svetlomir Balevski)&lt;/li&gt;
 &lt;/div&gt;
 &lt;div class="section" id="how-to-upgrade"&gt;
 &lt;h2&gt;How to upgrade&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+&lt;p&gt;&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
 If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 cd path/containing/docker-compose/
@@ -799,7 +799,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Contributor profile: Aneta Petkova</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/" rel="alternate"></link><published>2019-07-08T17:53:00+03:00</published><updated>2019-07-08T17:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-08:/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/</id><summary type="html">&lt;p&gt;Happy Monday, testers!
+</content><category term="releases"></category></entry><entry><title>Contributor profile: Aneta Petkova</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/" rel="alternate"></link><published>2019-07-08T17:53:00+03:00</published><updated>2019-07-08T17:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-08:/blog/kiwi-tcms-team/2019/07/08/contributor-profile-aneta-petkova/</id><summary type="html">&lt;p&gt;Happy Monday, testers!
 In this &lt;a href="/blog/tags/community/"&gt;series&lt;/a&gt; we are introducing the contributors behind Kiwi TCMS.
 This is our community and these are their stories.&lt;/p&gt;
 &lt;div class="member-bio"&gt;
@@ -889,7 +889,7 @@ so I managed to get most of my questions answered by strangers on the Internet.&
 by the amount of things to learn. I feel there is so much I want to experiment with.
 I am not really planning anything related to open source - it has never been a goal for me -
 but when I come across a project I feel strongly about, I'd probably be tempted to contribute.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Thank you, Aneta! Happy testing!&lt;/em&gt;&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Contributor profile: Primož Klemen</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/" rel="alternate"></link><published>2019-07-05T11:10:00+03:00</published><updated>2019-07-05T11:10:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-05:/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/</id><summary type="html">&lt;p&gt;In this new &lt;a href="/blog/tags/community/"&gt;series&lt;/a&gt; we are going to introduce the contributors behind Kiwi TCMS.
+&lt;p&gt;&lt;em&gt;Thank you, Aneta! Happy testing!&lt;/em&gt;&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Contributor profile: Primož Klemen</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/" rel="alternate"></link><published>2019-07-05T11:10:00+03:00</published><updated>2019-07-05T11:10:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-07-05:/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/</id><summary type="html">&lt;p&gt;In this new &lt;a href="/blog/tags/community/"&gt;series&lt;/a&gt; we are going to introduce the contributors behind Kiwi TCMS.
 This is our community and these are their stories.&lt;/p&gt;
 &lt;div class="member-bio"&gt;
     &lt;img class="rounded" src="/images/contributors/primoz.jpg" height="150" width="150"&gt;
@@ -976,13 +976,13 @@ the best standard of quality for health care applications which also incorporate
 using the knowledge gathered by following and/or contributing to open source.
 I'm going to continue contributing to Kiwi TCMS and
 Captura and if time allows maybe involve myself with some other interesting projects.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Thank you, Primož! Happy testing!&lt;/em&gt;&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/" rel="alternate"></link><published>2019-06-28T15:50:00+03:00</published><updated>2019-06-28T15:50:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-06-28:/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+&lt;p&gt;&lt;em&gt;Thank you, Primož! Happy testing!&lt;/em&gt;&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Mid-year roadmap status report</title><link href="https://kiwitcms.org/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/" rel="alternate"></link><published>2019-06-28T15:50:00+03:00</published><updated>2019-06-28T15:50:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-06-28:/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
-&lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
 TL,DR: Kiwi TCMS has made progress since January, it's been tough and may not have been
 very visible. I feel like we've …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
-&lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
 TL,DR: Kiwi TCMS has made progress since January, it's been tough and may not have been
 very visible. I feel like we've been behind schedule till now! The greatest
 positive thing has been community and team development!&lt;/p&gt;
@@ -1010,7 +1010,7 @@ will probably follow towards the end of the year after we get more priority item
 the way and get more of the new team members rolling!&lt;/p&gt;
 &lt;h2&gt;Modernize reporting aka Telemetry&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: in progress, a bit behind schedule&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The specs for the new &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/"&gt;Telemetry&lt;/a&gt; system
+&lt;p&gt;The specs for the new &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/"&gt;Telemetry&lt;/a&gt; system
 have been defined after taking into account feedback on GitHub issues. Anton Sankov is
 the leading developer for this feature. So far we have 2 telemetry reports merged:
 testing break-down and status matrix. The next one will be execution trends.&lt;/p&gt;
@@ -1103,13 +1103,13 @@ who get their return address wrong so we can't get in touch directly!&lt;/p&gt;
 &lt;p&gt;In short: don't demand anything from us unless you are ready to pay for it, work for it
 yourself or propose a mutually beneficial scenario. We do try to keep the community
 happy but more importantly follow our mission and develop our core team!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/" rel="alternate"></link><published>2019-06-28T15:50:00+03:00</published><updated>2019-06-28T15:50:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-06-28:/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Mid-year roadmap status report</title><link href="https://kiwitcms.org/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/" rel="alternate"></link><published>2019-06-28T15:50:00+03:00</published><updated>2019-06-28T15:50:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-06-28:/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
-&lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
 TL,DR: Kiwi TCMS has made progress since January, it's been tough and may not have been
 very visible. I feel like we've …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
-&lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 mission and roadmap&lt;/a&gt;.
 TL,DR: Kiwi TCMS has made progress since January, it's been tough and may not have been
 very visible. I feel like we've been behind schedule till now! The greatest
 positive thing has been community and team development!&lt;/p&gt;
@@ -1137,7 +1137,7 @@ will probably follow towards the end of the year after we get more priority item
 the way and get more of the new team members rolling!&lt;/p&gt;
 &lt;h2&gt;Modernize reporting aka Telemetry&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: in progress, a bit behind schedule&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The specs for the new &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/"&gt;Telemetry&lt;/a&gt; system
+&lt;p&gt;The specs for the new &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/"&gt;Telemetry&lt;/a&gt; system
 have been defined after taking into account feedback on GitHub issues. Anton Sankov is
 the leading developer for this feature. So far we have 2 telemetry reports merged:
 testing break-down and status matrix. The next one will be execution trends.&lt;/p&gt;
@@ -1230,7 +1230,7 @@ who get their return address wrong so we can't get in touch directly!&lt;/p&gt;
 &lt;p&gt;In short: don't demand anything from us unless you are ready to pay for it, work for it
 yourself or propose a mutually beneficial scenario. We do try to keep the community
 happy but more importantly follow our mission and develop our core team!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS is OpenAwards 2019 Best Tech Community Winner</title><link href="http://kiwitcms.org/blog/atodorov/2019/06/24/kiwi-tcms-is-openawards-2019-best-tech-community-winner/" rel="alternate"></link><published>2019-06-24T13:10:00+03:00</published><updated>2019-06-24T13:10:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-06-24:/blog/atodorov/2019/06/24/kiwi-tcms-is-openawards-2019-best-tech-community-winner/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/award.jpg"
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS is OpenAwards 2019 Best Tech Community Winner</title><link href="https://kiwitcms.org/blog/atodorov/2019/06/24/kiwi-tcms-is-openawards-2019-best-tech-community-winner/" rel="alternate"></link><published>2019-06-24T13:10:00+03:00</published><updated>2019-06-24T13:10:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-06-24:/blog/atodorov/2019/06/24/kiwi-tcms-is-openawards-2019-best-tech-community-winner/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/award.jpg"
      alt="Image of the award"
      style="float: none"&gt;&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS is the winner at OpenAwards'19 category Best Tech Community!
@@ -1247,7 +1247,7 @@ the project during all of those years.&lt;/p&gt;
 &lt;p&gt;This award is the best present we could get to mark the 10th anniversary
 of the project. More news of how we are progressing with current roadmap will
 follow soon in a separate blog post.&lt;/p&gt;
-&lt;p&gt;Thank you &amp;amp; happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.10</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/" rel="alternate"></link><published>2019-06-18T22:45:00+03:00</published><updated>2019-06-18T22:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-06-18:/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.10!
+&lt;p&gt;Thank you &amp;amp; happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.10</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/" rel="alternate"></link><published>2019-06-18T22:45:00+03:00</published><updated>2019-06-18T22:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-06-18:/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.10!
 This is a small security and improvement update.
 You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
@@ -1344,7 +1344,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -1360,18 +1360,18 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS needs your help winning OpenAwards 2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/" rel="alternate"></link><published>2019-05-27T16:15:00+03:00</published><updated>2019-05-27T16:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-27:/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/openawards2019.jpg"
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS needs your help winning OpenAwards 2019</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/" rel="alternate"></link><published>2019-05-27T16:15:00+03:00</published><updated>2019-05-27T16:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-27:/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/openawards2019.jpg"
      alt="Vote for Kiwi TCMS at OpenAwards 2019"
      style="float: none"&gt;&lt;/p&gt;
 &lt;p&gt;Thanks to you, our community supporters, Anton Sankov and Alex Todorov
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/"&gt;took the lead at OpenExpo 2019 CfP votes&lt;/a&gt;.
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/"&gt;took the lead at OpenExpo 2019 CfP votes&lt;/a&gt;.
 We need your help one more time. Our team has submitted participation in
 'Best Tech Community' and 'Best Success Story' categories.&lt;/p&gt;
 &lt;p&gt;Unfortunately our submission into 'Best Success Story' has been pulled …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="/images/openexpo/openawards2019.jpg"
      alt="Vote for Kiwi TCMS at OpenAwards 2019"
      style="float: none"&gt;&lt;/p&gt;
 &lt;p&gt;Thanks to you, our community supporters, Anton Sankov and Alex Todorov
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/"&gt;took the lead at OpenExpo 2019 CfP votes&lt;/a&gt;.
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/"&gt;took the lead at OpenExpo 2019 CfP votes&lt;/a&gt;.
 We need your help one more time. Our team has submitted participation in
 'Best Tech Community' and 'Best Success Story' categories.&lt;/p&gt;
 &lt;p&gt;Unfortunately our submission into 'Best Success Story' has been pulled down!
@@ -1390,7 +1390,7 @@ highlight some of our milestones. Here's the short version:&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://a.cstmapp.com/voteme/31129/633186885"&gt;Vote for Kiwi TCMS&lt;/a&gt;
   in the Best Tech Community category!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Thanks you &amp;amp; happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Pylint workshop with Django Bulgaria user group</title><link href="http://kiwitcms.org/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/" rel="alternate"></link><published>2019-05-25T14:27:00+03:00</published><updated>2019-05-25T14:27:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-05-25:/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/</id><summary type="html">&lt;p&gt;On Tuesday I hosted my pylint workshop during the regular
+&lt;p&gt;Thanks you &amp;amp; happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Pylint workshop with Django Bulgaria user group</title><link href="https://kiwitcms.org/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/" rel="alternate"></link><published>2019-05-25T14:27:00+03:00</published><updated>2019-05-25T14:27:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-05-25:/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/</id><summary type="html">&lt;p&gt;On Tuesday I hosted my pylint workshop during the regular
 &lt;a href="https://www.facebook.com/events/295673718035353/"&gt;Django Bulgaria meetup&lt;/a&gt;.
 This edition was the first which was practice based.&lt;/p&gt;
 &lt;p&gt;Attendance numbers were low but participation was very good. We managed to
@@ -1423,7 +1423,7 @@ few new issues with Kiwi TCMS so this is an area which our team is going to impr
 &lt;li&gt;14-15 November, Software Engineering Conference Russia, Saint-Petersburg - TBC&lt;/li&gt;
 &lt;li&gt;20-22 November, ConTEST, New York - TBC (workshop and/or presentation)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.9</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="alternate"></link><published>2019-05-16T16:20:00+03:00</published><updated>2019-05-16T16:20:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-16:/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.9!
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.9</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="alternate"></link><published>2019-05-16T16:20:00+03:00</published><updated>2019-05-16T16:20:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-16:/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.9!
 This is a small improvement and bug-fix update which introduces
 our first telemetry report: testing breakdown. You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
@@ -1517,7 +1517,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -1533,7 +1533,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.8</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="alternate"></link><published>2019-05-03T13:45:00+03:00</published><updated>2019-05-03T13:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-03:/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.8!
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.8</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="alternate"></link><published>2019-05-03T13:45:00+03:00</published><updated>2019-05-03T13:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-03:/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.8!
 This is a small improvement and bug-fix update.
 You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
@@ -1632,7 +1632,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -1648,7 +1648,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.7</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="alternate"></link><published>2019-04-06T17:15:00+03:00</published><updated>2019-04-06T17:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-04-06:/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.7!
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.7</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="alternate"></link><published>2019-04-06T17:15:00+03:00</published><updated>2019-04-06T17:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-04-06:/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.7!
 This is a small improvement and bug-fix update.
 You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
@@ -1757,7 +1757,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -1773,7 +1773,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.6</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="alternate"></link><published>2019-03-19T22:40:00+02:00</published><updated>2019-03-19T22:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-19:/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.6! This is a
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.6</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="alternate"></link><published>2019-03-19T22:40:00+02:00</published><updated>2019-03-19T22:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-19:/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.6! This is a
 medium severity security update, improvement and bug-fix update.
 You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
@@ -1934,7 +1934,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -1950,7 +1950,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Taking the lead at OpenExpo Europe CfP votes</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/" rel="alternate"></link><published>2019-03-13T07:27:00+02:00</published><updated>2019-03-13T07:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-13:/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/vote_openexpo19.jpg"
+</content><category term="releases"></category></entry><entry><title>Taking the lead at OpenExpo Europe CfP votes</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/" rel="alternate"></link><published>2019-03-13T07:27:00+02:00</published><updated>2019-03-13T07:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-13:/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/</id><summary type="html">&lt;p&gt;&lt;img src="/images/openexpo/vote_openexpo19.jpg"
      alt="Vote for Kiwi TCMS at OpenExpo"
      style="float: none"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that Anton Sankov and Alex Todorov are currently taking
@@ -1973,7 +1973,7 @@ but remember to confirm your email address!&lt;/p&gt;
   &lt;a href="https://a.cstmapp.com/entries/30063/sort:votes/direction:desc"&gt;pylint plugins tech-talk&lt;/a&gt;:
   currently 3rd in the Open Source Tech Talks category&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Thank you &amp;amp; happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Legacy reports become Telemetry</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="alternate"></link><published>2019-03-03T21:27:00+02:00</published><updated>2019-03-03T21:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-03:/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/</id><summary type="html">&lt;p&gt;As we've &lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;promised&lt;/a&gt; Kiwi TCMS is
+&lt;p&gt;Thank you &amp;amp; happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Legacy reports become Telemetry</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="alternate"></link><published>2019-03-03T21:27:00+02:00</published><updated>2019-03-03T21:27:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-03:/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/</id><summary type="html">&lt;p&gt;As we've &lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;promised&lt;/a&gt; Kiwi TCMS is
 starting work on improving the legacy reports functionality.
 After analyzing your feedback in
 &lt;a href="https://github.com/kiwitcms/Kiwi/issues/657"&gt;Issue #657&lt;/a&gt; here's what we came up
@@ -1981,7 +1981,7 @@ with. &lt;em&gt;Note: screenshots below are mockups.&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;General tech specs&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Once a self-contained tarball is installed inside the Docker image (or inside local virtualenv)
-  Kiwi …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;As we've &lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;promised&lt;/a&gt; Kiwi TCMS is
+  Kiwi …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;As we've &lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;promised&lt;/a&gt; Kiwi TCMS is
 starting work on improving the legacy reports functionality.
 After analyzing your feedback in
 &lt;a href="https://github.com/kiwitcms/Kiwi/issues/657"&gt;Issue #657&lt;/a&gt; here's what we came up
@@ -2182,7 +2182,7 @@ charts.&lt;/p&gt;
 &lt;p&gt;This is complimentary to the TestRun status matrix feature! While searching
 for TestRuns in SEARCH -&amp;gt; Test Runs the user will be able to select several
 rows and proceed to compare them as described above.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Want to hack open source ?</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/" rel="alternate"></link><published>2019-03-02T19:40:00+02:00</published><updated>2019-03-02T19:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-02:/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/</id><summary type="html">&lt;p&gt;&lt;img src="/images/team/hiring_banner.png" style="float:none;clear-both;margin:0;max-width: 100%"&gt;&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Want to hack open source ?</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/" rel="alternate"></link><published>2019-03-02T19:40:00+02:00</published><updated>2019-03-02T19:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-02:/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/</id><summary type="html">&lt;p&gt;&lt;img src="/images/team/hiring_banner.png" style="float:none;clear-both;margin:0;max-width: 100%"&gt;&lt;/p&gt;
 &lt;p&gt;Have you ever wanted to be part of an open source team?
 Have you ever wanted to contribute back the open source community ?
 Have you ever wanted to see your code used by thousands of people ?&lt;/p&gt;
@@ -2277,14 +2277,14 @@ fulfill your commitments and when you promise something will be done you will
 make sure it is done!&lt;/p&gt;
 &lt;h2&gt;How to apply ?&lt;/h2&gt;
 &lt;p&gt;You can figure this out yourself.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="team"></category></entry><entry><title>How to use Kiwi TCMS plugins, Pt. 1</title><link href="http://kiwitcms.org/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/" rel="alternate"></link><published>2019-02-22T15:10:00+02:00</published><updated>2019-02-22T15:10:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-02-22:/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/</id><summary type="html">&lt;p&gt;In
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/"&gt;release notes for v6.5&lt;/a&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="team"></category></entry><entry><title>How to use Kiwi TCMS plugins, Pt. 1</title><link href="https://kiwitcms.org/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/" rel="alternate"></link><published>2019-02-22T15:10:00+02:00</published><updated>2019-02-22T15:10:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-02-22:/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/</id><summary type="html">&lt;p&gt;In
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/"&gt;release notes for v6.5&lt;/a&gt;
 we announced several plugins which will fetch test names and execution results
 from your automated test suite.&lt;/p&gt;
 &lt;p&gt;Plugins can be controlled via environment variables which will affect how
 test results are recorded in the Kiwi TCMS database! This blog post is an introduction
 how …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/"&gt;release notes for v6.5&lt;/a&gt;
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/"&gt;release notes for v6.5&lt;/a&gt;
 we announced several plugins which will fetch test names and execution results
 from your automated test suite.&lt;/p&gt;
 &lt;p&gt;Plugins can be controlled via environment variables which will affect how
@@ -2496,7 +2496,7 @@ collection of test results and how to report on them later, when the need arises
 &lt;p&gt;Future installments in this post series will take a look at workflows with
 feature branches and pull requests and discuss possible organization scenarios.
 You are welcome to share your ideas in the comments below.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="plugins"></category></entry><entry><title>Kiwi TCMS 6.5.3</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/" rel="alternate"></link><published>2019-02-12T00:20:00+02:00</published><updated>2019-02-12T00:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-02-12:/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.5.3! This is a
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="plugins"></category></entry><entry><title>Kiwi TCMS 6.5.3</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/" rel="alternate"></link><published>2019-02-12T00:20:00+02:00</published><updated>2019-02-12T00:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-02-12:/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.5.3! This is a
 security, improvement and bug-fix update that includes new
 versions of Django, includes several database migrations and fixes several bugs.
 You can explore everything at
@@ -2602,7 +2602,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -2618,7 +2618,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.5</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/" rel="alternate"></link><published>2019-02-01T09:35:00+02:00</published><updated>2019-02-01T09:35:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-02-01:/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.5! This is a minor security,
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.5</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/" rel="alternate"></link><published>2019-02-01T09:35:00+02:00</published><updated>2019-02-01T09:35:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-02-01:/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.5! This is a minor security,
 improvement and bug-fix update that includes new
 versions of Django and other dependencies, removes some database fields,
 includes backend API updates and fixes several bugs.
@@ -2804,7 +2804,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -2820,7 +2820,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS is going to FOSDEM 2019</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/" rel="alternate"></link><published>2019-01-17T17:30:00+02:00</published><updated>2019-01-17T17:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-01-17:/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS is going to &lt;a href="http://fosdem.org/"&gt;FOSDEM&lt;/a&gt; this year.
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS is going to FOSDEM 2019</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/" rel="alternate"></link><published>2019-01-17T17:30:00+02:00</published><updated>2019-01-17T17:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-01-17:/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS is going to &lt;a href="http://fosdem.org/"&gt;FOSDEM&lt;/a&gt; this year.
 This is where you can find us:&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/kiwi_sticker.jpg" style="float:left; margin-right: 25px;"
      alt="Kiwi TCMS sticker" title="Kiwi TCMS sticker"&gt;&lt;/p&gt;
@@ -2849,7 +2849,7 @@ This is where you can find us:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;We would like to meet with all of you and talk about test management and
 test process organization. In case you are stuck for crazy ideas checkout
-&lt;a href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;our project mission&lt;/a&gt; for inspiration.&lt;/p&gt;
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;our project mission&lt;/a&gt; for inspiration.&lt;/p&gt;
 &lt;h2&gt;Be part of the community&lt;/h2&gt;
 &lt;p&gt;We are turning 10 years old and we have presents for you! You will have to perform
 a small challenge and you can get your hands(errr, feet) on a pair of these:&lt;/p&gt;
@@ -2866,7 +2866,7 @@ a small challenge and you can get your hands(errr, feet) on a pair of these:&lt;
   We will be happy to publish them on our website&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms"&gt;Become a sponsor&lt;/a&gt;!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Project mission and goals for 2019</title><link href="http://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="alternate"></link><published>2019-01-10T10:35:00+02:00</published><updated>2019-01-10T10:35:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-01-10:/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS has taken on a brave new
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Project mission and goals for 2019</title><link href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="alternate"></link><published>2019-01-10T10:35:00+02:00</published><updated>2019-01-10T10:35:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-01-10:/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS has taken on a brave new
 mission! We would like to transform the testing process by making it more
 organized, transparent &amp;amp; accountable for everyone on your team. Our goal
 is to improve engineering productivity and participation in
@@ -3101,7 +3101,7 @@ be the case!&lt;/p&gt;
 send a pull request, build your own Docker image from source and
 maybe consider
 &lt;a href="https://opencollective.com/kiwitcms"&gt;sponsoring us via Open Collective&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 6.4</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/" rel="alternate"></link><published>2019-01-07T15:25:00+02:00</published><updated>2019-01-07T15:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-01-07:/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.4! This is a security,
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 6.4</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/" rel="alternate"></link><published>2019-01-07T15:25:00+02:00</published><updated>2019-01-07T15:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-01-07:/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.4! This is a security,
 improvement and bug-fix update that includes new versions of Django,
 Patternfly and other dependencies. You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
@@ -3227,7 +3227,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -3243,15 +3243,15 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Roadmap status report for 2018</title><link href="http://kiwitcms.org/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="alternate"></link><published>2018-12-17T15:50:00+02:00</published><updated>2018-12-17T15:50:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-12-17:/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+</content><category term="releases"></category></entry><entry><title>Roadmap status report for 2018</title><link href="https://kiwitcms.org/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="alternate"></link><published>2018-12-17T15:50:00+02:00</published><updated>2018-12-17T15:50:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-12-17:/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals in our 2018
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;
-(&lt;a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;mid-year update here&lt;/a&gt;).
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;
+(&lt;a href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;mid-year update here&lt;/a&gt;).
 TLDR; goals are completed at 62%. Refactoring legacy code is showing good results,
 less so on the front-end side and there are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals in our 2018
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;
-(&lt;a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;mid-year update here&lt;/a&gt;).
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;
+(&lt;a href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;mid-year update here&lt;/a&gt;).
 TLDR; goals are completed at 62%. Refactoring legacy code is showing good results,
 less so on the front-end side and there are items still in progress!&lt;/p&gt;
 &lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
@@ -3323,7 +3323,7 @@ very active and keep their respective languages fresh and up to date!&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg, PyCon Prague,
 HackConf Sofia, PiterPy St. Petersburg and OpenFest Sofia. We've also been
 approved for a project stand at FOSDEM 2019 so watch this blog for more news.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 6.3</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/" rel="alternate"></link><published>2018-12-04T09:15:00+02:00</published><updated>2018-12-04T09:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-12-04:/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 6.3</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/" rel="alternate"></link><published>2018-12-04T09:15:00+02:00</published><updated>2018-12-04T09:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-12-04:/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
 security update that includes new versions of Django and Patternfly,
 new database migrations, lots of improvements, bug fixes and internal
 refactoring. This version also introduces integration with GitLab issue
@@ -3469,7 +3469,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -3485,7 +3485,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.2.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/" rel="alternate"></link><published>2018-11-12T14:45:00+02:00</published><updated>2018-11-12T14:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-12:/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.2.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/" rel="alternate"></link><published>2018-11-12T14:45:00+02:00</published><updated>2018-11-12T14:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-12:/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
 that includes some improvements and bug-fixes. You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
@@ -3574,7 +3574,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -3590,7 +3590,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Test runner plugin specification</title><link href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="alternate"></link><published>2018-11-05T16:05:00+02:00</published><updated>2018-11-05T16:05:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-11-05:/blog/atodorov/2018/11/05/test-runner-plugin-specification/</id><summary type="html">&lt;p&gt;Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
+</content><category term="releases"></category></entry><entry><title>Test runner plugin specification</title><link href="https://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="alternate"></link><published>2018-11-05T16:05:00+02:00</published><updated>2018-11-05T16:05:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-11-05:/blog/atodorov/2018/11/05/test-runner-plugin-specification/</id><summary type="html">&lt;p&gt;Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
 wish to create plugins for popular test runners that will record test results
 in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
 &lt;a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#using-different-testing-frameworks"&gt;Django&lt;/a&gt;
@@ -3750,7 +3750,7 @@ for inspiration!&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="plugins"></category></entry><entry><title>Kiwi TCMS 6.2</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="alternate"></link><published>2018-11-02T12:15:00+02:00</published><updated>2018-11-02T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-02:/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="plugins"></category></entry><entry><title>Kiwi TCMS 6.2</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="alternate"></link><published>2018-11-02T12:15:00+02:00</published><updated>2018-11-02T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-02:/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
 that removes squashed migrations from previous releases and includes a few
 improvements. You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; or
@@ -3830,7 +3830,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
@@ -3854,7 +3854,7 @@ Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
 &lt;p&gt;The income from this service will go towards covering operating costs and
 supporting the
-&lt;a class="reference external" href="http://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
+&lt;a class="reference external" href="https://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
 blog for further announcements about this. Meanwhile you may share your
 thoughts via
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515"&gt;Issue #515&lt;/a&gt;.&lt;/p&gt;
@@ -3867,7 +3867,7 @@ to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.1.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="alternate"></link><published>2018-10-29T16:00:00+02:00</published><updated>2018-10-29T16:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-29:/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.1.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="alternate"></link><published>2018-10-29T16:00:00+02:00</published><updated>2018-10-29T16:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-29:/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
 squashes database migrations and removes
 older migrations that have been squashed in previous releases, a few
 improvements and bug fixes.
@@ -3949,7 +3949,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
@@ -3961,7 +3961,7 @@ Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
 &lt;p&gt;The income from this service will go towards covering operating costs and
 supporting the
-&lt;a class="reference external" href="http://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
+&lt;a class="reference external" href="https://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
 blog for further announcements about this. Meanwhile you may share your
 thoughts via
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515"&gt;Issue #515&lt;/a&gt;.&lt;/p&gt;
@@ -3974,7 +3974,7 @@ to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.1.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="alternate"></link><published>2018-10-29T16:00:00+02:00</published><updated>2018-10-29T16:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-29:/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.1.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="alternate"></link><published>2018-10-29T16:00:00+02:00</published><updated>2018-10-29T16:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-29:/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
 squashes database migrations and removes
 older migrations that have been squashed in previous releases, a few
 improvements and bug fixes.
@@ -4056,7 +4056,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
@@ -4068,7 +4068,7 @@ Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
 &lt;p&gt;The income from this service will go towards covering operating costs and
 supporting the
-&lt;a class="reference external" href="http://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
+&lt;a class="reference external" href="https://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
 blog for further announcements about this. Meanwhile you may share your
 thoughts via
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515"&gt;Issue #515&lt;/a&gt;.&lt;/p&gt;
@@ -4081,7 +4081,7 @@ to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS API performance baseline</title><link href="http://kiwitcms.org/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="alternate"></link><published>2018-10-26T16:47:00+03:00</published><updated>2018-10-26T16:47:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-10-26:/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/</id><summary type="html">&lt;p&gt;A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS API performance baseline</title><link href="https://kiwitcms.org/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="alternate"></link><published>2018-10-26T16:47:00+03:00</published><updated>2018-10-26T16:47:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-10-26:/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/</id><summary type="html">&lt;p&gt;A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
 an experiment to establish a baseline.
 For API requests I got &lt;strong&gt;7.5 req/sec or 130 msec/req&lt;/strong&gt; which is
 1.5x &lt;a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/"&gt;slower than GitHub&lt;/a&gt;!&lt;/p&gt;
@@ -4171,7 +4171,7 @@ sys     0m0.091s
 
 &lt;p&gt;The issue has been reported in
 &lt;a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454"&gt;RHBZ #1643454&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS 6.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="alternate"></link><published>2018-10-20T14:40:00+03:00</published><updated>2018-10-20T14:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-20:/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1! This release
+&lt;p&gt;Happy testing!&lt;/p&gt;</content></entry><entry><title>Kiwi TCMS 6.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="alternate"></link><published>2018-10-20T14:40:00+03:00</published><updated>2018-10-20T14:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-20:/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1! This release
 introduces new database migrations,
 internal updates and bug fixes. It is a small release designed
 to minimize the number of database migrations by squashing them together.
@@ -4264,7 +4264,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
@@ -4276,7 +4276,7 @@ Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
 &lt;p&gt;The income from this service will go towards covering operating costs and
 supporting the
-&lt;a class="reference external" href="http://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
+&lt;a class="reference external" href="https://kiwitcms.org/team/"&gt;development team&lt;/a&gt;. Watch this
 blog for further announcements about this. Meanwhile you may share your
 thoughts via
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515"&gt;Issue #515&lt;/a&gt;.&lt;/p&gt;
@@ -4289,14 +4289,14 @@ to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS team updates</title><link href="http://kiwitcms.org/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/" rel="alternate"></link><published>2018-10-12T11:10:00+03:00</published><updated>2018-10-12T11:10:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-10-12:/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/</id><summary type="html">&lt;p&gt;I am happy to announce that &lt;a href="http://kiwitcms.org/team/"&gt;our team&lt;/a&gt; is steadily growing!
-As we work through our &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;,
-&lt;a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;status update here&lt;/a&gt;, and
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS team updates</title><link href="https://kiwitcms.org/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/" rel="alternate"></link><published>2018-10-12T11:10:00+03:00</published><updated>2018-10-12T11:10:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-10-12:/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/</id><summary type="html">&lt;p&gt;I am happy to announce that &lt;a href="https://kiwitcms.org/team/"&gt;our team&lt;/a&gt; is steadily growing!
+As we work through our &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;,
+&lt;a href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;status update here&lt;/a&gt;, and
 on-board new team members I start to feel the need for a bit more structure
 and organization behind the scenes. I also wish for consistent contributions
-to the project …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am happy to announce that &lt;a href="http://kiwitcms.org/team/"&gt;our team&lt;/a&gt; is steadily growing!
-As we work through our &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;,
-&lt;a href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;status update here&lt;/a&gt;, and
+to the project …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am happy to announce that &lt;a href="https://kiwitcms.org/team/"&gt;our team&lt;/a&gt; is steadily growing!
+As we work through our &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;,
+&lt;a href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;status update here&lt;/a&gt;, and
 on-board new team members I start to feel the need for a bit more structure
 and organization behind the scenes. I also wish for consistent contributions
 to the project (commit early, commit often) so I can better estimate the resources
@@ -4364,7 +4364,7 @@ actively work on the project, let alone become a team member.&lt;/p&gt;
 &lt;p&gt;Our new interns are Denitsa Uzunova and Desislava Koleva. Both of them are
 coming from Vratsa Software Community and were mentors at the recently held
 CodeWeek hackathon in their home city! I wish them fast learning and good luck!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="team"></category></entry><entry><title>Kiwi TCMS winter conference presence</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/11/kiwi-tcms-winter-conference-presence/" rel="alternate"></link><published>2018-10-11T11:53:00+03:00</published><updated>2018-10-11T11:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-11:/blog/kiwi-tcms-team/2018/10/11/kiwi-tcms-winter-conference-presence/</id><summary type="html">&lt;p&gt;We are happy to announce that &lt;a href="http://www.openfest.org"&gt;OpenFest&lt;/a&gt; - the biggest
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="team"></category></entry><entry><title>Kiwi TCMS winter conference presence</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/10/11/kiwi-tcms-winter-conference-presence/" rel="alternate"></link><published>2018-10-11T11:53:00+03:00</published><updated>2018-10-11T11:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-11:/blog/kiwi-tcms-team/2018/10/11/kiwi-tcms-winter-conference-presence/</id><summary type="html">&lt;p&gt;We are happy to announce that &lt;a href="http://www.openfest.org"&gt;OpenFest&lt;/a&gt; - the biggest
 open source conference in Bulgaria has provided an info booth for our project.
 This year the event will be held on 3rd and 4th of November at Sofia Tech Park!&lt;/p&gt;
 &lt;p&gt;Last time the team went to a conference together we had …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that &lt;a href="http://www.openfest.org"&gt;OpenFest&lt;/a&gt; - the biggest
@@ -4413,7 +4413,7 @@ us in Russia until the end of the year:&lt;/p&gt;
   secure&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Feel free to ping us at &lt;a href="https://twitter.com/KiwiTCMS"&gt;@KiwiTCMS&lt;/a&gt; or look for the
-kiwi bird logo and come to say hi. Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/10/04/kiwi-tcms-60/" rel="alternate"></link><published>2018-10-04T12:45:00+03:00</published><updated>2018-10-04T12:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-04:/blog/kiwi-tcms-team/2018/10/04/kiwi-tcms-60/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.0! This release
+kiwi bird logo and come to say hi. Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.0</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/10/04/kiwi-tcms-60/" rel="alternate"></link><published>2018-10-04T12:45:00+03:00</published><updated>2018-10-04T12:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-10-04:/blog/kiwi-tcms-team/2018/10/04/kiwi-tcms-60/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.0! This release
 introduces new database migrations, removal of
 environment properties in favor of tags, internal updates and bug fixes.
 You can explore everything at
@@ -4511,7 +4511,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
@@ -4536,7 +4536,7 @@ to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246"&gt;Issue #246&lt;/a&gt; is fixed).&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Happy birthday Kiwi TCMS</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/" rel="alternate"></link><published>2018-09-13T13:50:00+03:00</published><updated>2018-09-13T13:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-09-13:/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"&gt;&lt;/p&gt;</content><category term="community"></category></entry><entry><title>How to add API logging for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/" rel="alternate"></link><published>2018-09-07T22:00:00+03:00</published><updated>2018-09-07T22:00:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-09-07:/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;In this blog post I will show more ways to customize Kiwi TCMS by adding
+</content><category term="releases"></category></entry><entry><title>Happy birthday Kiwi TCMS</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/" rel="alternate"></link><published>2018-09-13T13:50:00+03:00</published><updated>2018-09-13T13:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-09-13:/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"&gt;&lt;/p&gt;</content><category term="community"></category></entry><entry><title>How to add API logging for Kiwi TCMS</title><link href="https://kiwitcms.org/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/" rel="alternate"></link><published>2018-09-07T22:00:00+03:00</published><updated>2018-09-07T22:00:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-09-07:/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;In this blog post I will show more ways to customize Kiwi TCMS by adding
 logging capabilities to the API backend. Indeed this is a feature that
 our team deemed not required for upstream and was removed in
 &lt;a href="https://github.com/kiwitcms/Kiwi/pull/436"&gt;PR #436&lt;/a&gt;.&lt;/p&gt;
@@ -4651,7 +4651,7 @@ Kiwi TCMS defaults:&lt;/p&gt;
 
 &lt;p&gt;Kiwi TCMS will import your &lt;code&gt;local_settings.py&lt;/code&gt; and enable the logging application.
 Now build your customized Docker image and use it for deployment!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="customization"></category></entry><entry><title>Kiwi TCMS 5.3.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/09/04/kiwi-tcms-531/" rel="alternate"></link><published>2018-09-04T23:00:00+03:00</published><updated>2018-09-04T23:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-09-04:/blog/kiwi-tcms-team/2018/09/04/kiwi-tcms-531/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.3.1! This release
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="customization"></category></entry><entry><title>Kiwi TCMS 5.3.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/09/04/kiwi-tcms-531/" rel="alternate"></link><published>2018-09-04T23:00:00+03:00</published><updated>2018-09-04T23:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-09-04:/blog/kiwi-tcms-team/2018/09/04/kiwi-tcms-531/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.3.1! This release
 brings lots of UI updates and removal of unused
 and/or duplicated functionality and source code. Many pages have been redesigned
 with the Patternfly library to have a modern look and feel which you can
@@ -4691,7 +4691,7 @@ the &lt;tt class="docutils literal"&gt;custom_login&lt;/tt&gt; block!&lt;/li&gt;
 &lt;li&gt;You may need to strip existing texts from HTML tags that were generated by
 TinyMCE. Either do this manually as you go along and use/edit records or in bulk via
 the API and tools like &lt;a class="reference external" href="https://pypi.org/project/html2text/"&gt;html2text&lt;/a&gt;.
-We strongly advise you to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+We strongly advise you to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 your database before attempting to automatically edit text fields!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -4795,7 +4795,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="ask-your-questions-on-stackoverflow"&gt;
@@ -4839,7 +4839,7 @@ while environment appears very similar to tags it is not exactly the same.
 Ongoing discussion is happening via
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/484"&gt;Issue #484&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 5.2</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/" rel="alternate"></link><published>2018-08-07T22:45:00+03:00</published><updated>2018-08-07T22:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-08-07:/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.2! This release
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 5.2</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/" rel="alternate"></link><published>2018-08-07T22:45:00+03:00</published><updated>2018-08-07T22:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-08-07:/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.2! This release
 introduces new database migrations and converts
 the Docker image to a non-root user with uid 1001. You may have to adjust
 ownership/permissions on the &lt;tt class="docutils literal"&gt;kiwi_uploads&lt;/tt&gt; Docker volume!&lt;/p&gt;
@@ -4926,10 +4926,10 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>How to override templates for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="alternate"></link><published>2018-08-06T11:40:00+03:00</published><updated>2018-08-06T11:40:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-08-06:/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;This is the first publication in our customization series. It will show you
+</content><category term="releases"></category></entry><entry><title>How to override templates for Kiwi TCMS</title><link href="https://kiwitcms.org/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="alternate"></link><published>2018-08-06T11:40:00+03:00</published><updated>2018-08-06T11:40:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-08-06:/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;This is the first publication in our customization series. It will show you
 how to override any template used by Kiwi TCMS. As an example we will override
 the email template that is used when registering new account. By default the
 email text looks like this:&lt;/p&gt;
@@ -4993,7 +4993,7 @@ inside the docker image&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;This approach can be used for all templates that you wish to override. Take into
 account that file names must match (Django searches templates by directory path).
 Now build your customized Docker image and use that for deployment!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="customization"></category></entry><entry><title>Kiwi TCMS 5.1</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" rel="alternate"></link><published>2018-07-31T12:00:00+03:00</published><updated>2018-07-31T12:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-31:/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.1! This release
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="customization"></category></entry><entry><title>Kiwi TCMS 5.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" rel="alternate"></link><published>2018-07-31T12:00:00+03:00</published><updated>2018-07-31T12:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-31:/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.1! This release
 introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
@@ -5019,7 +5019,7 @@ See &lt;a class="reference external" href="http://kiwitcms.readthedocs.io/en/lat
 tech-preview and it may be removed if it doesn't work out. Please comment at:
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/452"&gt;Issue #452&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Allow using &lt;tt class="docutils literal"&gt;manage.py dumpdata|loaddata|sqlflush|dbshell&lt;/tt&gt; for backups, see
-&lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;blog post&lt;/a&gt;&lt;/li&gt;
+&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;blog post&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;In TestCase view page add a link to delete the current test case&lt;/li&gt;
 &lt;li&gt;In TestCase Admin page the &lt;tt class="docutils literal"&gt;+ Add TestCase&lt;/tt&gt; button now allows to create new
 test case&lt;/li&gt;
@@ -5068,12 +5068,12 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;Don't forget to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
+&lt;p&gt;Don't forget to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;backup&lt;/a&gt;
 before upgrade!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="help-us-make-kiwi-tcms-better"&gt;
 &lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
-&lt;p&gt;According to &lt;a class="reference external" href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;our 2018 roadmap update&lt;/a&gt;
+&lt;p&gt;According to &lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/"&gt;our 2018 roadmap update&lt;/a&gt;
 the Kiwi TCMS team is investing a great deal of our time to make the code base more
 maintainable! For the past few releases we've been balancing code refactoring
 with bug-fixing and enhancements and we have lots of ideas down the line.&lt;/p&gt;
@@ -5082,7 +5082,7 @@ We want to know what works for you and what doesn't so we can make it better. Fe
 free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>How to backup Docker volumes for Kiwi TCMS</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" rel="alternate"></link><published>2018-07-30T00:25:00+03:00</published><updated>2018-07-30T00:25:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-30:/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;When you start Kiwi TCMS by running &lt;code&gt;docker-compose up&lt;/code&gt;
+</content><category term="releases"></category></entry><entry><title>How to backup Docker volumes for Kiwi TCMS</title><link href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" rel="alternate"></link><published>2018-07-30T00:25:00+03:00</published><updated>2018-07-30T00:25:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-30:/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;When you start Kiwi TCMS by running &lt;code&gt;docker-compose up&lt;/code&gt;
 (see &lt;a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose"&gt;here&lt;/a&gt;)
 it will automatically create 2 volumes: &lt;code&gt;kiwi_db_data&lt;/code&gt; and &lt;code&gt;kiwi_uploads&lt;/code&gt;.
 This blog post will outline how to backup these docker volumes.&lt;/p&gt;
@@ -5177,15 +5177,15 @@ and create these volumes as LVM2 block devices. Then use
 &lt;code&gt;lvcreate -s&lt;/code&gt; command to create a snapshot volume. For more information see
 &lt;a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/logical_volume_manager_administration/index#snapshot_volumes"&gt;chapter 2.3.5. Snapshot Volumes&lt;/a&gt;
 from the LVM Administrator Guide for Red Hat Enterprise Linux 7.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="customization"></category></entry><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="alternate"></link><published>2018-07-25T16:30:00+03:00</published><updated>2018-07-25T16:30:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-25:/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="customization"></category></entry><entry><title>Mid-year roadmap status report</title><link href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="alternate"></link><published>2018-07-25T16:30:00+03:00</published><updated>2018-07-25T16:30:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-25:/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Initially &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; reported
 a "D" rating with a 1 year estimated effort. Now it is still on "D …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Initially &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; reported
@@ -5246,15 +5246,15 @@ past few releases but there are still thousands of lines of code left to deal wi
 there are several active contributors (issues, translations).&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg and PyCon Prague!
 We're planning to attend HackConf and OpenFest in Sofia by the end of the year.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Mid-year roadmap status report</title><link href="http://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="alternate"></link><published>2018-07-25T16:30:00+03:00</published><updated>2018-07-25T16:30:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-25:/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Mid-year roadmap status report</title><link href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="alternate"></link><published>2018-07-25T16:30:00+03:00</published><updated>2018-07-25T16:30:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2018-07-25:/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Initially &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; reported
 a "D" rating with a 1 year estimated effort. Now it is still on "D …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;roadmap&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Make code easier to maintain&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Initially &lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; reported
@@ -5315,7 +5315,7 @@ past few releases but there are still thousands of lines of code left to deal wi
 there are several active contributors (issues, translations).&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg and PyCon Prague!
 We're planning to attend HackConf and OpenFest in Sofia by the end of the year.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 5.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/" rel="alternate"></link><published>2018-07-24T16:30:00+03:00</published><updated>2018-07-24T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-24:/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 5.0</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/" rel="alternate"></link><published>2018-07-24T16:30:00+03:00</published><updated>2018-07-24T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-07-24:/blog/kiwi-tcms-team/2018/07/24/kiwi-tcms-50/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
 introduces object history tracking, removal of old functionality and unused code,
 lots of internal updates and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;468de0abe8a8&lt;/tt&gt;.
@@ -5492,7 +5492,7 @@ docker exec -it kiwi_web /Kiwi/manage.py populate_history --auto
 &lt;/div&gt;
 &lt;div class="section" id="help-us-make-kiwi-tcms-better"&gt;
 &lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
-&lt;p&gt;According to &lt;a class="reference external" href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
+&lt;p&gt;According to &lt;a class="reference external" href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
 Kiwi TCMS team is investing a great deal of our time to make the code base more
 maintainable! For the past few releases we've been balancing code refactoring
 with bug-fixing and minor enhancements and we have lots of ideas down the line.&lt;/p&gt;
@@ -5501,7 +5501,7 @@ We want to know what works for you and what doesn't so we can make it better. Fe
 free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 4.2</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/" rel="alternate"></link><published>2018-06-24T17:05:00+03:00</published><updated>2018-06-24T17:05:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-06-24:/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 4.2!
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 4.2</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/" rel="alternate"></link><published>2018-06-24T17:05:00+03:00</published><updated>2018-06-24T17:05:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-06-24:/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 4.2!
 This is a security, bug-fix and enhancement update which upgrades to the latest
 Django version under Python 3.6.
 We've pushed new &lt;code&gt;kiwitcms/kiwi:latest&lt;/code&gt; docker image to Docker Hub and updated the
@@ -5627,14 +5627,14 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 
 
 &lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
-&lt;p&gt;According to &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
+&lt;p&gt;According to &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
 Kiwi TCMS team is investing a great deal of our time to make the code base more
 maintainable! For the past few releases we've been balancing code refactoring
 with bug-fixing and minor enhancements and we have lots of ideas down the line.&lt;/p&gt;
 &lt;p&gt;We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
 We want to know what works for you and what doesn't so we can make it better. Feel
 free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS conference presence</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/" rel="alternate"></link><published>2018-04-11T15:35:00+03:00</published><updated>2018-04-11T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-04-11:/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/</id><summary type="html">&lt;p&gt;Kiwi TCMS is going on a small conference tour. This is where you can find us
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS conference presence</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/" rel="alternate"></link><published>2018-04-11T15:35:00+03:00</published><updated>2018-04-11T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-04-11:/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/</id><summary type="html">&lt;p&gt;Kiwi TCMS is going on a small conference tour. This is where you can find us
 in the next couple of months:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://bulgariawebsummit.com/"&gt;Bulgaria Web Summit&lt;/a&gt; - 14 April, Sofia&lt;/li&gt;
@@ -5655,7 +5655,7 @@ to that you can catch-up with Alex Todorov, Kiwi's project lead at:
 &lt;a href="https://cz.pycon.org/2018/"&gt;PyCon CZ&lt;/a&gt;(1-3 June, Prague) and
 &lt;a href="https://devitconf.org/"&gt;DEVit&lt;/a&gt;(10-11 June, Thessaloniki).&lt;/p&gt;
 &lt;p&gt;If you can ping us at &lt;a href="https://twitter.com/KiwiTCMS"&gt;@KiwiTCMS&lt;/a&gt; or look for the
-kiwi bird logo and come to say hi!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 4.1.4</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/04/10/kiwi-tcms-414/" rel="alternate"></link><published>2018-04-10T21:45:00+03:00</published><updated>2018-04-10T21:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-04-10:/blog/kiwi-tcms-team/2018/04/10/kiwi-tcms-414/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.1.4!
+kiwi bird logo and come to say hi!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 4.1.4</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/04/10/kiwi-tcms-414/" rel="alternate"></link><published>2018-04-10T21:45:00+03:00</published><updated>2018-04-10T21:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-04-10:/blog/kiwi-tcms-team/2018/04/10/kiwi-tcms-414/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.1.4!
 This is a bug-fix and enhancement update which upgrades to the latest Django
 version, resolves several issues and includes lots of internal code updates.&lt;/p&gt;
 &lt;p&gt;We've pushed new &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; docker image to Docker Hub and updated the
@@ -5725,14 +5725,14 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 
 
 &lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
-&lt;p&gt;According to &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
+&lt;p&gt;According to &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
 Kiwi TCMS team is investing a great deal of our time to make the code base more
 maintainable! For the past few releases we've been balancing code refactoring
 with bug-fixing and minor enhancements and we have lots of ideas down the line.&lt;/p&gt;
 &lt;p&gt;We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
 We want to know what works for you and what doesn't so we can make it better. Feel
 free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 4.1.3</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/03/16/kiwi-tcms-413/" rel="alternate"></link><published>2018-03-16T10:45:00+02:00</published><updated>2018-03-16T10:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-03-16:/blog/kiwi-tcms-team/2018/03/16/kiwi-tcms-413/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.1.3!
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 4.1.3</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/03/16/kiwi-tcms-413/" rel="alternate"></link><published>2018-03-16T10:45:00+02:00</published><updated>2018-03-16T10:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-03-16:/blog/kiwi-tcms-team/2018/03/16/kiwi-tcms-413/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.1.3!
 This is a bug-fix and enhancement update which upgrades to the latest Django
 version, provides easier way for Docker administrators to override SSL certificates
 and access httpd log files and resolves several issues. This release also includes
@@ -5826,14 +5826,14 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 
 
 &lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
-&lt;p&gt;According to &lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
+&lt;p&gt;According to &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
 Kiwi TCMS team is investing a great deal of our time to make the code base more
 maintainable! For the past few releases we've been balancing code refactoring
 with bug-fixing and minor enhancements and we have lots of ideas down the line.&lt;/p&gt;
 &lt;p&gt;We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
 We want to know what works for you and what doesn't so we can make it better. Feel
 free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 4.1.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/02/21/kiwi-tcms-410/" rel="alternate"></link><published>2018-02-21T22:45:00+02:00</published><updated>2018-02-21T22:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-02-21:/blog/kiwi-tcms-team/2018/02/21/kiwi-tcms-410/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.1.0!
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 4.1.0</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/02/21/kiwi-tcms-410/" rel="alternate"></link><published>2018-02-21T22:45:00+02:00</published><updated>2018-02-21T22:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-02-21:/blog/kiwi-tcms-team/2018/02/21/kiwi-tcms-410/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.1.0!
 This is a bug-fix and enhancement update centered around providing more
 flexibility for administrators to configure the user approval process.
 Refer to the documentation for more information about
@@ -5901,7 +5901,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS &amp; tcms-api version 4.0.0</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/" rel="alternate"></link><published>2018-02-10T15:30:00+02:00</published><updated>2018-02-10T15:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-02-10:/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.0.0
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS &amp; tcms-api version 4.0.0</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/" rel="alternate"></link><published>2018-02-10T15:30:00+02:00</published><updated>2018-02-10T15:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-02-10:/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.0.0
 and the corresponding tcms-api version 4.0.0! This is a very big release
 which introduces tons of backwards incompatible changes to the RPC layer
 as well as several bug-fixes and enhancements!&lt;/p&gt;
@@ -5910,7 +5910,7 @@ and the corresponding tcms-api version 4.0.0! This is a very big release
 which introduces tons of backwards incompatible changes to the RPC layer
 as well as several bug-fixes and enhancements!&lt;/p&gt;
 &lt;p&gt;With this release Kiwi TCMS meets one of our
-&lt;a href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;milestones for 2018&lt;/a&gt;! All XML-RPC
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;milestones for 2018&lt;/a&gt;! All XML-RPC
 namespaces now match DB model names and the API client class names. Lots of
 similar and duplicate methods were removed and existing ones were simplified.
 We've also reduced code duplication and technical debth by 1 month
@@ -6115,7 +6115,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS version 3.50</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="alternate"></link><published>2018-01-25T11:30:00+02:00</published><updated>2018-01-25T11:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-25:/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 3.50
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS version 3.50</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="alternate"></link><published>2018-01-25T11:30:00+02:00</published><updated>2018-01-25T11:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-25:/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 3.50
 and the corresponding tcms-api version 1.5.1! This is a bug-fix and
 enhancement release and we advise you to upgrade as soon as possible!&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 3.49&lt;/h2&gt;
@@ -6172,7 +6172,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS roadmap for 2018</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="alternate"></link><published>2018-01-22T12:10:00+02:00</published><updated>2018-01-22T12:10:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-22:/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone. As you know Kiwi TCMS has been around for a while and it has
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS roadmap for 2018</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="alternate"></link><published>2018-01-22T12:10:00+02:00</published><updated>2018-01-22T12:10:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-22:/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone. As you know Kiwi TCMS has been around for a while and it has
 gone through some big changes in the last year! It started as an abandoned
 Django 1.6 project with broken test suite and is now currently running on the
 latest Django 2.0.1 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone. As you know Kiwi TCMS has been around for a while and it has
@@ -6273,7 +6273,7 @@ of work to be done and the team is still very small!&lt;/p&gt;
 &lt;p&gt;Team wise we'd like to get the existing team members up to speed and tackle
 the above tasks with priority. This will also help us introduce bug fixes
 and new features more quickly!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS version 3.49</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2018/01/02/kiwi-tcms-version-349/" rel="alternate"></link><published>2018-01-02T15:30:00+02:00</published><updated>2018-01-02T15:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-02:/blog/kiwi-tcms-team/2018/01/02/kiwi-tcms-version-349/</id><summary type="html">&lt;p&gt;Happy New Year to everyone. We're happy to announce Kiwi TCMS version 3.49
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS version 3.49</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/02/kiwi-tcms-version-349/" rel="alternate"></link><published>2018-01-02T15:30:00+02:00</published><updated>2018-01-02T15:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-01-02:/blog/kiwi-tcms-team/2018/01/02/kiwi-tcms-version-349/</id><summary type="html">&lt;p&gt;Happy New Year to everyone. We're happy to announce Kiwi TCMS version 3.49
 and the corresponding tcms-api version 1.5.0! This release includes a fair
 amount of bug fixes and many changes related to Kiwi's RPC layer!&lt;/p&gt;
 &lt;p&gt;Most importantly Kiwi is updated to Django 2.0.1, the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Happy New Year to everyone. We're happy to announce Kiwi TCMS version 3.49
@@ -6378,7 +6378,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS Python API client</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/" rel="alternate"></link><published>2017-12-08T15:20:00+02:00</published><updated>2017-12-08T15:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-12-08:/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/</id><summary type="html">&lt;p&gt;We are happy to announce the first official release of the
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS Python API client</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/" rel="alternate"></link><published>2017-12-08T15:20:00+02:00</published><updated>2017-12-08T15:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-12-08:/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/</id><summary type="html">&lt;p&gt;We are happy to announce the first official release of the
 &lt;a href="https://pypi.org/project/tcms-api/"&gt;tcms-api&lt;/a&gt; package!
 This is a Python client for Kiwi TCMS.&lt;/p&gt;
 &lt;p&gt;There are couple of main distinctions in this module:&lt;/p&gt;
@@ -6409,7 +6409,7 @@ to spend some time reading the code to figure out how everything works.&lt;/p&gt
 to do so! Please download the &lt;code&gt;tcms-api&lt;/code&gt; module, check it out, write and contribute
 example scripts (you can use the demo site for this), send us bug reports, suggestions
 and pull requests!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS version 3.48</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/" rel="alternate"></link><published>2017-11-28T22:00:00+02:00</published><updated>2017-11-28T22:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-11-28:/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/</id><summary type="html">&lt;p&gt;We're proud to announce Kiwi TCMS version 3.48!
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Kiwi TCMS version 3.48</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/" rel="alternate"></link><published>2017-11-28T22:00:00+02:00</published><updated>2017-11-28T22:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-11-28:/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/</id><summary type="html">&lt;p&gt;We're proud to announce Kiwi TCMS version 3.48!
 This is the first release to be announced on our blog and it is also an
 important one!&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS 3.48 introduces new versions of Django and Patternfly,
@@ -6475,7 +6475,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Testing, testing. It works!</title><link href="http://kiwitcms.org/blog/kiwi-tcms-team/2017/11/03/testing-testing-it-works/" rel="alternate"></link><published>2017-11-03T11:15:00+02:00</published><updated>2017-11-03T11:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-11-03:/blog/kiwi-tcms-team/2017/11/03/testing-testing-it-works/</id><summary type="html">&lt;p&gt;Welcome to the official website and blog of Kiwi TCMS.
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Testing, testing. It works!</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2017/11/03/testing-testing-it-works/" rel="alternate"></link><published>2017-11-03T11:15:00+02:00</published><updated>2017-11-03T11:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2017-11-03:/blog/kiwi-tcms-team/2017/11/03/testing-testing-it-works/</id><summary type="html">&lt;p&gt;Welcome to the official website and blog of Kiwi TCMS.
 We are happy to finally be online!&lt;/p&gt;
 &lt;p&gt;This website was built with the help of
 &lt;a href="https://github.com/koksyncho"&gt;Kaloyan Krastev&lt;/a&gt;,
