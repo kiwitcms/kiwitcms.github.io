@@ -46,6 +46,137 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/" rel="bookmark" title="Permalink to Kiwi TCMS 6.5.3">
+                <h1 class="top-header">Kiwi TCMS 6.5.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 12 February 2019
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 6.5.3! This is a
+security, improvement and bug-fix update that includes new
+versions of Django, includes several database migrations and fixes several bugs.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  b9355cf85833    1.039 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-5">
+<h2>Changes since Kiwi TCMS 6.5</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 2.1.5 to 2.1.7. Fixes CVE-2019-6975:
+Memory exhaustion in <tt class="docutils literal">django.utils.numberformat.format()</tt></li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update mysqlclient from 1.4.1 to 1.4.2</li>
+<li>Multiple template strings marked as translatable (Christophe CHAUVET)</li>
+</ul>
+</div>
+<div class="section" id="database-migrations">
+<h3>Database migrations</h3>
+<ul class="simple">
+<li>Email notifications for TestPlan and TestCase now default to True</li>
+<li>Remove <tt class="docutils literal">TestPlanEmailSettings.is_active</tt> field</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>New method <tt class="docutils literal">Bug.report()</tt>, References
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/18">Issue #18</a></li>
+<li>Method <tt class="docutils literal">Bug.create()</tt> now accepts parameter <tt class="docutils literal">auto_report=False</tt></li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Show the user who actually tested a TestCase instead of hard-coded value. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/765">Issue #765</a></li>
+<li>Properly handle pagination button states and page numbers. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/767">Issue #767</a></li>
+<li>Add TestCase to TestPlan if creating from inside a TestPlan. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/777">Issue #777</a></li>
+<li>Made TestCase text more readable. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/764">Issue #764</a></li>
+<li>Include missing templates and static files from PyPI tarball</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Use <tt class="docutils literal">find_packages()</tt> when building PyPI tarball</li>
+<li>Install Kiwi TCMS as tarball package inside Docker image instead of copying
+from the source directory</li>
+<li>Pylint fixes</li>
+<li>Remove <tt class="docutils literal">testcases.views.ReturnActions()</tt> which is now unused</li>
+<li>Refactor New TestCase to class-based view and add tests</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/" rel="bookmark" title="Permalink to Kiwi TCMS 6.5">
                 <h1 class="top-header">Kiwi TCMS 6.5</h1>
             </a>
@@ -2450,81 +2581,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 before upgrade!</p>
 </div>
 
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="https://kiwitcms.org/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to override templates for Kiwi TCMS">
-                <h1 class="top-header">How to override templates for Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="https://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-                on Mon 06 August 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>This is the first publication in our customization series. It will show you
-how to override any template used by Kiwi TCMS. As an example we will override
-the email template that is used when registering new account. By default the
-email text looks like this:</p>
-<div class="highlight"><pre><span></span><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
-<span class="x">    thank you for signing up for an </span><span class="cp">{{</span> <span class="nv">site_domain</span> <span class="cp">}}</span><span class="x"> account!</span>
-
-<span class="x">    To activate your account, click this link:</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span><span class="x"></span>
-</pre></div>
-
-
-<p><a href="https://public.tenant.kiwitcms.org/login/github/">https://public.tenant.kiwitcms.org</a>
-runs a custom Docker image based on
-<code>kiwitcms/kiwi</code>. For this image the confirmation email looks like this</p>
-<div class="highlight"><pre><span></span><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
-<span class="x">    thank you for signing up for our Kiwi TCMS demo!</span>
-
-<span class="x">    To activate your account, click this link:</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span><span class="x"></span>
-
-<span class="x">    GDPR no longer allows us to automatically subscribe you to</span>
-<span class="x">    our newsletter. If you wish to keep in touch and receive emails</span>
-<span class="x">    with news and updates around Kiwi TCMS please subscribe at:</span>
-<span class="x">    https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581</span>
-
-<span class="x">    --</span>
-<span class="x">    Happy testing!</span>
-<span class="x">    The Kiwi TCMS team</span>
-<span class="x">    http://kiwitcms.org</span>
-</pre></div>
-
-
-<p>The file that we want to override is <code>tcms/templates/email/confirm_registration.txt</code>.</p>
-<p>Create a local directory (git repository) which will hold customization configuration
-and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
-<p>Next you want to make this file available inside your docker image so your <code>Dockerfile</code>
-should look like this:</p>
-<div class="highlight"><pre><span></span>    FROM kiwitcms/kiwi
-
-    COPY ./templates.d/ /venv/lib64/python3.6/site-packages/tcms/overridden_templates/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
-</pre></div>
-
-
-<p>where <code>local_settings.py</code> contains</p>
-<div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">os</span>
-    <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-
-    <span class="n">settings</span><span class="o">.</span><span class="n">TEMPLATES</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;DIRS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">TCMS_ROOT_PATH</span><span class="p">,</span> <span class="s1">&#39;overridden_templates&#39;</span><span class="p">))</span>
-</pre></div>
-
-
-<p>The following code states <em>instruct Django to look into <code>overridden_templates</code> first and
-use any templates it finds there; also make my files available in that specific location
-inside the docker image</em>.</p>
-<p>This approach can be used for all templates that you wish to override. Take into
-account that file names must match (Django searches templates by directory path).
-Now build your customized Docker image and use that for deployment!</p>
-<p>Happy testing!</p>
         </div>
     </section>
 

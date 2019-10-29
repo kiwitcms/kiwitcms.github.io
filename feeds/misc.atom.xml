@@ -1,5 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2019-09-24T10:30:00+03:00</updated><entry><title>Kiwi TCMS 7.0</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/" rel="alternate"></link><published>2019-09-24T10:30:00+03:00</published><updated>2019-09-24T10:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-24:/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.0!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2019-10-29T13:40:00+02:00</updated><entry><title>Kiwi TCMS 7.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/" rel="alternate"></link><published>2019-10-29T13:40:00+02:00</published><updated>2019-10-29T13:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-10-29:/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.1!
+This is a small improvement update which includes
+database schema and API changes, several other improvements,
+internal refactoring and updated translations.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.1!
+This is a small improvement update which includes
+database schema and API changes, several other improvements,
+internal refactoring and updated translations.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  c8cf36ac5ca5    602 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-7-0"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 7.0&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django from 2.2.5 to 2.2.6&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 1.11.0 to 1.12.1&lt;/li&gt;
+&lt;li&gt;Update pygithub from 1.43.8 to 1.44&lt;/li&gt;
+&lt;li&gt;Update psycopg2 from 2.8.3 to 2.8.4&lt;/li&gt;
+&lt;li&gt;Add help tooltips in all telemetry pages&lt;/li&gt;
+&lt;li&gt;Better styling for checkboxes in 'Add hyperlink' dialog,
+part of TestRun page&lt;/li&gt;
+&lt;li&gt;Add hyperlink validation. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1147"&gt;Issue #1147&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database-migrations"&gt;
+&lt;h3&gt;Database migrations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;bugs&lt;/tt&gt; permissions to &lt;tt class="docutils literal"&gt;Tester&lt;/tt&gt; group. Will make any difference
+only if upgrading from existing installation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New method &lt;tt class="docutils literal"&gt;Bug.remove()&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Always build with the latest versions of translations&lt;/li&gt;
+&lt;li&gt;Add 'Delete' menu item in Bugs page. Fixes #1153
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1154"&gt;Issue #1153&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;When deleting hyperlink from TestExecution hide the actual UI
+elements from the page&lt;/li&gt;
+&lt;li&gt;Fix failure to delete TCs when the number of TCs inside TP is greater
+than 100. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1149"&gt;Issue #1149&lt;/a&gt; and
+&lt;a class="reference external" href="https://sentry.io/organizations/open-technologies-bulgaria-ltd/issues/1245504316/"&gt;Sentry KIWI-TCMS-8F&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Rename directory &lt;tt class="docutils literal"&gt;xmlrpc&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;rpc&lt;/tt&gt; and pylint updates. Refs
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/682"&gt;Issue #682&lt;/a&gt;
+(Matej Aleksandrov, Sinergise)&lt;/li&gt;
+&lt;li&gt;Remove labels from form fields, Refs
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652"&gt;Issue #652&lt;/a&gt; (Azmi YÜKSEL)&lt;/li&gt;
+&lt;li&gt;New base class for tests around permissions (Svetlomir Balevski)&lt;/li&gt;
+&lt;li&gt;New &amp;quot;blueprint&amp;quot; test case around permissions to make testing in this area more
+robust&lt;/li&gt;
+&lt;li&gt;Refactor many views from function based to class based&lt;/li&gt;
+&lt;li&gt;Update stale tests in &lt;tt class="docutils literal"&gt;tcms/core/tests/&lt;/tt&gt; and make sure they aren't ignored
+by the test runner&lt;/li&gt;
+&lt;li&gt;Remove empty class &lt;tt class="docutils literal"&gt;XMLRPCBaseCaseForm&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;XMLRPCNewCaseForm&lt;/tt&gt;, duplicate of &lt;tt class="docutils literal"&gt;NewCaseForm&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;rpc.forms.UpdateCaseForm&lt;/tt&gt; in favor of &lt;tt class="docutils literal"&gt;XMLRPCUpdateCaseForm&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Update only English sources with new strings as a temporary workaround b/c
+Crowdin uses different formatting heuristics than gettext. This will minimize
+the number of .po format changes&lt;/li&gt;
+&lt;li&gt;A few pylint fixes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sq#"&gt;Albanian translation&lt;/a&gt; - 97%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt; - 91%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified&lt;/a&gt; - 71%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/el#"&gt;Greek translation&lt;/a&gt; - 44%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/it#"&gt;Italian translation&lt;/a&gt; - 97%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt; - 0%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/mk#"&gt;Macedonian translation&lt;/a&gt; - 11%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#"&gt;Russian translation&lt;/a&gt; - 97%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt; - 100%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/es-ES#"&gt;Spanish translation&lt;/a&gt; - 96%&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/tr#"&gt;Turkish translation&lt;/a&gt; - 97%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="acknowledgments"&gt;
+&lt;h2&gt;Acknowledgments&lt;/h2&gt;
+&lt;p&gt;A special &amp;quot;thank you&amp;quot; goes to our friends from
+&lt;a class="reference external" href="https://pyconbalkan.com/"&gt;PyCon Balkan&lt;/a&gt; in Belgrade who allowed us to host
+an open source coding sprint in Belgrade during the conference!&lt;/p&gt;
+&lt;p&gt;A second &amp;quot;thank you&amp;quot; goes to
+&lt;a class="reference external" href="https://openlabs.cc/en/"&gt;Open Labs Hackerspace&lt;/a&gt; who hosted a localization
+sprint in Tirana and contributed to several different languages!&lt;/p&gt;
+&lt;p&gt;Thank you for being part of our community. Version 7.1 includes all of your
+contributions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="website-updates"&gt;
+&lt;h2&gt;Website updates&lt;/h2&gt;
+&lt;p&gt;We're using the opportunity to share that website is now serving via SSL courtesy
+of GitHub and Let's encrypt.&lt;/p&gt;
+&lt;p&gt;Our main page has also been updated to showcase some of our customers:
+Better (Slovenia), Minds, Inc (USA), Musala Soft (Bulgaria). If you would like to
+feature your corporate logo drop and tell us how you use Kiwi TCMS then
+drop us an email!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="upcoming-conferences"&gt;
+&lt;h2&gt;Upcoming conferences&lt;/h2&gt;
+&lt;p&gt;The next two events we are going to participate are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;[OpenFest, Nov 2-3, Sofia](&lt;a class="reference external" href="http://www.openfest.org/"&gt;http://www.openfest.org/&lt;/a&gt;)
+where we will have an info booth&lt;/li&gt;
+&lt;li&gt;[ISTA Conference, Nov 14-15, Sofia](&lt;a class="reference external" href="https://www.istacon.org/"&gt;https://www.istacon.org/&lt;/a&gt;)
+where you can meet with Alex Todorov and some of our contributors and
+customers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are around come and say &amp;quot;Happy testing&amp;quot;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="upcoming-fosdem-2020"&gt;
+&lt;h2&gt;Upcoming FOSDEM 2020&lt;/h2&gt;
+&lt;p&gt;We are happy to announce that our team, together with SUSE and Linaro will be
+hosting the
+&lt;a class="reference external" href="http://fosdem-testingautomation.github.io/"&gt;Testing and Automation Developer Room&lt;/a&gt;
+at FOSDEM in Brussels next February.&lt;/p&gt;
+&lt;p&gt;Call for papers is open until December 10th 2019. Anything related to
+software testing and open source is welcome. Apply from the link above.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS 7.0</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/" rel="alternate"></link><published>2019-09-24T10:30:00+03:00</published><updated>2019-09-24T10:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-09-24:/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.0!
 This is a major release which includes security updates,
 significant database schema and API changes, many improvements,
 removed functionality, bug fixes, substantial internal refactoring and
