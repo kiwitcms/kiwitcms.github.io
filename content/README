@@ -1,9 +1,10 @@
-# Kiwi TCMS website
+Kiwi TCMS website
+-----------------
 
 Website is built with [Pelican](https://blog.getpelican.com/). To start hacking
 you need:
 
-- Python `3.6`
+- Python 3.6
 - fork this repository
 - `git clone` your fork
 - `git checkout source`
