@@ -1,17 +1,38 @@
 Kiwi TCMS website
 -----------------
 
-Website is built with [Pelican](https://blog.getpelican.com/). To start hacking
-you need:
+This website is built with Pelican, https://blog.getpelican.com/.
+To start hacking you need:
 
-- Python 3.6
-- fork this repository
-- `git clone` your fork
-- `git checkout source`
+- make, preferably GNU Make. See https://en.wikipedia.org/wiki/Make_(software),
+  https://www.gnu.org/software/make/ and your Linux distribution
+- Python 3.6 or later, see https://www.python.org/downloads/
+- git client, see https://git-scm.com/downloads or https://desktop.github.com/
+- fork this repository, see https://help.github.com/en/github/getting-started-with-github/fork-a-repo
+- `git clone` your fork, see ^^^
+- create a virtual environment with `venv`, see https://docs.python.org/3/library/venv.html
+- activate the virtual environment created above (`<venv>/bin/activate`)
+- `cd kiwitcms.github.io/`
 - `pip install -r requirements.txt`
-- `git checkout -b your_topic_branch_name`
+- `git checkout source` to switch to the `source` branch
+- `git checkout -b name_of_your_branch`
 
-Use `make regenerate` and `make serve` to regenerate your changes and
-serve them at http://localhost:8000/ for preview!
+In 2 separate terminals use:
 
-Once you are ready submit a pull request against the `source` branch!
+- `make regenerate` to regenerate the website with latest changes
+- `make serve` to serve them at http://localhost:8000/ for preview
+
+Edit files to make changes in the website. You are most likely looking
+for files in `content/pages/`!
+
+Once you are ready:
+
+- `git commit` you changes
+- `git push origin name_of_your_branch`
+- open a pull request against the `source` branch!
+
+For more help see:
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests
+
+
+WARNING: do not convert this file to Markdown, see c72b3ab.
