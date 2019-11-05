@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/fontawesome-free-5.6.3-web/css/all.min.css">
         <!-- Mobile nav script -->
         <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/scripts/mobile-nav.js"></script>
+
     </head>
     <body class="{% block page_body_class %}{% endblock %}" onload="setMobileNavBehaviour()">
         <!-- Nav -->
@@ -73,6 +74,12 @@
         {% if page and page.extra_javascript %}
             {% for script in page.extra_javascript.split(' ') %}
             <script src="{{ script }}"></script>
+            {% endfor %}
+        {% endif %}
+
+        {% if page and page.extra_css %}
+            {% for stylesheet in page.extra_css.split(' ') %}
+            <link rel="stylesheet" href="{{ stylesheet }}">
             {% endfor %}
         {% endif %}
 
