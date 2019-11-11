@@ -1,5 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2019-10-29T13:40:00+02:00</updated><entry><title>Kiwi TCMS 7.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/" rel="alternate"></link><published>2019-10-29T13:40:00+02:00</published><updated>2019-10-29T13:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-10-29:/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.1!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2019-11-11T11:11:00+02:00</updated><entry><title>How to override bug details in Kiwi TCMS</title><link href="https://kiwitcms.org/blog/atodorov/2019/11/11/how-to-override-bug-details-in-kiwi-tcms/" rel="alternate"></link><published>2019-11-11T11:11:00+02:00</published><updated>2019-11-11T11:11:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-11-11:/blog/atodorov/2019/11/11/how-to-override-bug-details-in-kiwi-tcms/</id><summary type="html">&lt;p&gt;Starting with version 7.0 Kiwi TCMS pages displaying URLs to bugs also
+contain an info icon which shows additional information as tooltip. These
+are designed to provide more contextual information about the bug. By default
+the tooltip shows the OpenGraph metadata for that URL. This article
+will explain how …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Starting with version 7.0 Kiwi TCMS pages displaying URLs to bugs also
+contain an info icon which shows additional information as tooltip. These
+are designed to provide more contextual information about the bug. By default
+the tooltip shows the OpenGraph metadata for that URL. This article
+will explain how to override this in 2 different ways.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/testcase_shows_bug_details.png" alt="bug details shown" style="float:none"&gt;&lt;/p&gt;
+&lt;h2&gt;Option #1: using the caching layer&lt;/h2&gt;
+&lt;p&gt;Additional bug information is cached on the application layer. The cache
+key is the bug URL! By default Kiwi TCMS uses local-memory caching which
+isn't accessible for external processes but can be reconfigured very easily.
+This example changes the &lt;code&gt;CACHES&lt;/code&gt; setting to use a directory on the
+file system like so&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CACHES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;BACKEND&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;django.core.cache.backends.filebased.FileBasedCache&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;LOCATION&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/tmp/kiwi-cache&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;TIMEOUT&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3600&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then you need to poll your 3rd party bug tracker (and/or other systems) and
+update the cache for each URL&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.core.cache&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cache&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tcms.core.contrib.linkreference.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LinkReference&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;reference&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;LinkReference&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;is_defect&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# possibly filter objects coming only from your own bug tracker&lt;/span&gt;
+    &lt;span class="c1"&gt;# in case there are multiple trackers in use&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# custom methods to grab more information. Must return strings&lt;/span&gt;
+    &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fetch_title_from_bug_tracker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reference&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fetch_description_from_bug_tracker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reference&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# store the information in Kiwi TCMS cache&lt;/span&gt;
+    &lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reference&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then execute the Python script above regularly. For example use the following
+as your cron script&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;VIRTUAL_ENV&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/venv
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/venv/bin:&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+cat /path/to/cache_updater.py &lt;span class="p"&gt;|&lt;/span&gt; /Kiwi/manage.py shell
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/images/testcase_shows_bug_details_cache.png" alt="bug details from customized cache" style="float:none"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kiwi TCMS expires cache entries after an hour. Either change
+  the &lt;code&gt;TIMEOUT&lt;/code&gt; setting shown above or run your script more frequently&lt;/li&gt;
+&lt;li&gt;How to modify default Kiwi TCMS settings is documented
+  &lt;a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Python + Bash scripts above don't need to be on the same system where Kiwi TCMS
+  is hosted. However they need the same Python 3 virtualenv and cache settings as
+  Kiwi TCMS does&lt;/li&gt;
+&lt;li&gt;Information about Django's cache framework and available backends
+  can be found &lt;a href="https://docs.djangoproject.com/en/2.2/topics/cache/"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;memcached&lt;/code&gt; is a supported cache backend option, see
+  &lt;a href="https://docs.djangoproject.com/en/2.2/topics/cache/#memcached"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pypi.org/project/django-elasticache/"&gt;django-elasticache&lt;/a&gt; is a
+  backend for Amazon ElastiCache which provides several configuration examples&lt;/li&gt;
+&lt;li&gt;Both &lt;a href="https://github.com/niwinz/django-redis"&gt;django-redis&lt;/a&gt; and
+  &lt;a href="https://github.com/sebleier/django-redis-cache"&gt;django-redis-cache&lt;/a&gt; are good
+  libraries which support Redis&lt;/li&gt;
+&lt;li&gt;Any 3rd party libraries must be &lt;code&gt;pip3 install&lt;/code&gt;-ed into your own docker image&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Option #2: extend bug tracker integration&lt;/h2&gt;
+&lt;p&gt;Let's say you are already running a customized Docker image of Kiwi TCMS. Then
+you may opt-in to extend the existing bug tracker integration code which provides
+the information shown in the tooltip. In this example I've extended the
+&lt;code&gt;KiwiTCMS&lt;/code&gt; bug tracker implementation but you can even provide your own from
+scratch&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExtendedBugTracker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KiwiTCMS&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;details&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;details&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;EXTENDED: &amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;h1&amp;gt;IMPORTANT&amp;lt;/h1&amp;gt;&amp;#39;&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then import the new &lt;code&gt;ExtendedBugTracker&lt;/code&gt; class inside
+&lt;code&gt;tcms/issuetracker/types.py&lt;/code&gt; like so&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gh"&gt;index 9ad90ac..2c76621 100644&lt;/span&gt;
+&lt;span class="gd"&gt;--- a/tcms/issuetracker/types.py&lt;/span&gt;
+&lt;span class="gi"&gt;+++ b/tcms/issuetracker/types.py&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -17,6 +17,9 @@ from django.conf import settings&lt;/span&gt;
+
+ from tcms.issuetracker.base import IssueTrackerType
+ from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
+&lt;span class="gi"&gt;+from tcms.issuetracker.kiwitcms import ExtendedBugTracker&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
+to &lt;em&gt;ExtendedBugTracker&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/testcase_shows_bug_details_extended.png" alt="bug details extended internally" style="float:none"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;ExtendedBugTracker&lt;/em&gt; may live anywhere on the filesystem but Python must be
+  able to import it&lt;/li&gt;
+&lt;li&gt;It is best to bundle all of your customizations into a Python package and
+  &lt;code&gt;pip3 install&lt;/code&gt; it into your customized docker image&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ExtendedBugTracker&lt;/em&gt; must be imported into &lt;code&gt;tcms/issuetracker/types.py&lt;/code&gt; in order
+  for the admin interface and other functions to find it. You may also place the
+  import at the bottom of &lt;code&gt;tcms/issuetracker/types.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;API documentation for bug tracker integration can be found
+  &lt;a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.issuetracker.html"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rebuilding the docker image is outside the scope of this article. Have a look
+  at this
+  &lt;a href="https://github.com/MrSenko/kiwitcms-enterprise/blob/master/Dockerfile"&gt;Dockerfile&lt;/a&gt;
+  for inspiration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="customization"></category></entry><entry><title>Kiwi TCMS 7.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/" rel="alternate"></link><published>2019-10-29T13:40:00+02:00</published><updated>2019-10-29T13:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-10-29:/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.1!
 This is a small improvement update which includes
 database schema and API changes, several other improvements,
 internal refactoring and updated translations.
