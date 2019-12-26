@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Roadmap status report for 2019</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="50-60% complete, slower pace, less visible progress" >
+
+        <meta name="author" content="Alexander Todorov">
+
+        <meta name="tags" content="community" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Roadmap status report for 2019">
+            <meta name="twitter:description" content="50-60% complete, slower pace, less visible progress">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:card" content="summary_large_image">
+                <meta property="twitter:image" content="https://kiwitcms.org/images/roadmap.jpg">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/atodorov/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/" />
+        <meta property="og:title" content="Roadmap status report for 2019" />
+        <meta property="article:published_time" content="2019-12-26 16:56:00+02:00">
+            <meta property="og:description" content="50-60% complete, slower pace, less visible progress">
+
+                <meta property="og:image" content="https://kiwitcms.org/images/roadmap.jpg">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="https://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="https://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="https://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://kiwitcms.org/theme/fontawesome-free-5.6.3-web/css/all.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="https://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="https://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://public.tenant.kiwitcms.org/login/github/">GitHub Login</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="https://kiwitcms.org/community/">Community</a></li>
+                    <li><a href="https://kiwitcms.org/support/">Support</a></li>
+                    <li><a href="https://kiwitcms.org/blog/">Blog</a></li>
+                    <li><a href="https://kiwitcms.org/team/">Team</a></li>
+                    <li>
+                        <form action="https://google.com/search" method="get">
+                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Roadmap status report for 2019</h1>
+        <h2 class="top-subheader">50-60% complete, slower pace, less visible progress</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
+            on Thu 26 December 2019
+                under
+                    <a href="https://kiwitcms.org/blog/tags/community/">community</a>
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals on our
+<a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">2019 roadmap</a>.
+TL,DR: last year we've made lots of big and visible changes in Kiwi TCMS.
+This year less so. Progress has been slower than before and not so much
+visible. Community and team is growing. More contributors are welcome.</p>
+<h2>Complete the internal refactoring</h2>
+<p><em>Status: small progress, needs help</em></p>
+<p><a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> progress is:</p>
+<ul>
+<li>-60 code smells</li>
+<li>-55 duplications</li>
+<li>-50 other issues</li>
+<li>4.4% technical debt improvement</li>
+<li>-240 hrs remaining until issues are fixed</li>
+</ul>
+<p>The trend is showing less issues remaining
+but it has been a slow progress. As we fix the easier items the remaining ones
+become harder to deal with.</p>
+<p>We've done minor work related to fixing issues reported by pylint. Around
+150 of them still remain!</p>
+<p>We have not done any targeted work to resolve other issues reported by Scrutinizer,
+remove vendored-in JavaScript libraries, JavaScript refactoring or
+classification of issues in 3rd party dependencies.</p>
+<h2>Redesign the UI templates with the help of Patternfly</h2>
+<p><em>Status: 60% done, needs help</em></p>
+<p>There are 22 HTML templates remaining to be redesigned (from 59). That's mostly
+due to internal cleanup and some refactoring! Test plan and Test run pages are the
+two major templates that still need to be redesigned with Patternfly.</p>
+<h2>Modernize reporting aka Telemetry</h2>
+<p><em>Status: 60% done, in progress, behind schedule</em></p>
+<p>The specs for the new <a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Telemetry</a> system
+have been defined after taking into account feedback on GitHub issues. Anton Sankov is
+the leading developer for this feature. So far we have 4 telemetry reports merged:
+testing break-down, status matrix, execution trends and flaky tests.</p>
+<p>There are lots of minor issues or missing functionality in these first iterations
+(compared to specification). Work continues on the other telemetry use-cases
+and related items.</p>
+<h2>Plugins for 3rd party test automation frameworks</h2>
+<p><em>Status: good, needs help</em></p>
+<p><em>UPDATE:</em> no change in last 6 months.</p>
+<p>If you'd like to see plugins for more test automation frameworks
+and/or file formats please checkout the
+<a href="https://kiwitcms.readthedocs.io/en/latest/automation-frameworks.html">documentation</a>
+for links and more info.</p>
+<h2>Redefine bug-tracker integration</h2>
+<p><em>Status: 66% complete, in progress, behind schedule</em></p>
+<p>We've been making slow progress on this milestone lately. For more info
+see
+<a href="https://github.com/kiwitcms/Kiwi/milestone/1">https://github.com/kiwitcms/Kiwi/milestone/1</a></p>
+<h2>GitHub flow integration</h2>
+<p><em>Status: done, awaiting deployment</em></p>
+<p>Our team spent some time making Kiwi TCMS the first open source TCMS available
+on the <a href="https://github.com/marketplace/kiwi-tcms">GitHub Marketplace</a>. At the end
+of this year we were able to create a small application that allows further
+integration and extending the testing workflow to the GitHub platform.</p>
+<p>This is waiting on a few more clarifications from GitHub before we deploy but
+for now it can be considered as done. Future functionality will be tracked
+and developed directly at
+<a href="https://github.com/kiwitcms/github-app/issues">https://github.com/kiwitcms/github-app/issues</a>.</p>
+<h2>Agile integration with Trello</h2>
+<p><em>Status: no progress, will drop</em></p>
+<p>This will be dropped from roadmap for the next year until we can get more interest
+from the community.</p>
+<h2>Improve engineering productivity</h2>
+<p><em>Status: no progress</em></p>
+<p>Looking for external help here. This will stay as a low priority item on our
+roadmap for 2020 until we can free more resources on the team.</p>
+<h2>Community</h2>
+<p><em>Status: great, on track, needs work</em></p>
+<p>This is our strongest area during this year. We have a strong presence in
+multiple communities, our event schedule is very busy and we are gaining more
+recognition every day! Core team hit several big bumps this year and is still
+recovering with a few more people onboarding.</p>
+<p>Kiwi TCMS suffers from the problem that many of our users can't be contributors
+or simply don't want to!</p>
+<p>In short: it is important for us to follow our mission and develop our core team
+so we can deliver on promises made in our roadmap! That requires a lot of time and
+effort which reduces short-term productivity.</p>
+<p>Happy testing!</p>
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/';
+                this.page.identifier = 'blog/atodorov/2019/12/26/roadmap-status-report-for-2019/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div class="col-10 footer-copyright">
+                <p>Kiwi TCMS is sponsored by <a href="https://opencollective.com/kiwitcms">Open Source Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>

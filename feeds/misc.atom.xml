@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2019-12-09T10:25:00+02:00</updated><entry><title>Kiwi TCMS 7.2</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/12/09/kiwi-tcms-72/" rel="alternate"></link><published>2019-12-09T10:25:00+02:00</published><updated>2019-12-09T10:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-12-09:/blog/kiwi-tcms-team/2019/12/09/kiwi-tcms-72/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.2!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2019-12-26T16:56:00+02:00</updated><entry><title>Roadmap status report for 2019</title><link href="https://kiwitcms.org/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/" rel="alternate"></link><published>2019-12-26T16:56:00+02:00</published><updated>2019-12-26T16:56:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-12-26:/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals on our
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 roadmap&lt;/a&gt;.
+TL,DR: last year we've made lots of big and visible changes in Kiwi TCMS.
+This year less so. Progress has been slower than before …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals on our
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 roadmap&lt;/a&gt;.
+TL,DR: last year we've made lots of big and visible changes in Kiwi TCMS.
+This year less so. Progress has been slower than before and not so much
+visible. Community and team is growing. More contributors are welcome.&lt;/p&gt;
+&lt;h2&gt;Complete the internal refactoring&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: small progress, needs help&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://codeclimate.com/github/kiwitcms/Kiwi"&gt;CodeClimate&lt;/a&gt; progress is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-60 code smells&lt;/li&gt;
+&lt;li&gt;-55 duplications&lt;/li&gt;
+&lt;li&gt;-50 other issues&lt;/li&gt;
+&lt;li&gt;4.4% technical debt improvement&lt;/li&gt;
+&lt;li&gt;-240 hrs remaining until issues are fixed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The trend is showing less issues remaining
+but it has been a slow progress. As we fix the easier items the remaining ones
+become harder to deal with.&lt;/p&gt;
+&lt;p&gt;We've done minor work related to fixing issues reported by pylint. Around
+150 of them still remain!&lt;/p&gt;
+&lt;p&gt;We have not done any targeted work to resolve other issues reported by Scrutinizer,
+remove vendored-in JavaScript libraries, JavaScript refactoring or
+classification of issues in 3rd party dependencies.&lt;/p&gt;
+&lt;h2&gt;Redesign the UI templates with the help of Patternfly&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: 60% done, needs help&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There are 22 HTML templates remaining to be redesigned (from 59). That's mostly
+due to internal cleanup and some refactoring! Test plan and Test run pages are the
+two major templates that still need to be redesigned with Patternfly.&lt;/p&gt;
+&lt;h2&gt;Modernize reporting aka Telemetry&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: 60% done, in progress, behind schedule&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The specs for the new &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/"&gt;Telemetry&lt;/a&gt; system
+have been defined after taking into account feedback on GitHub issues. Anton Sankov is
+the leading developer for this feature. So far we have 4 telemetry reports merged:
+testing break-down, status matrix, execution trends and flaky tests.&lt;/p&gt;
+&lt;p&gt;There are lots of minor issues or missing functionality in these first iterations
+(compared to specification). Work continues on the other telemetry use-cases
+and related items.&lt;/p&gt;
+&lt;h2&gt;Plugins for 3rd party test automation frameworks&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: good, needs help&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;UPDATE:&lt;/em&gt; no change in last 6 months.&lt;/p&gt;
+&lt;p&gt;If you'd like to see plugins for more test automation frameworks
+and/or file formats please checkout the
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/automation-frameworks.html"&gt;documentation&lt;/a&gt;
+for links and more info.&lt;/p&gt;
+&lt;h2&gt;Redefine bug-tracker integration&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: 66% complete, in progress, behind schedule&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We've been making slow progress on this milestone lately. For more info
+see
+&lt;a href="https://github.com/kiwitcms/Kiwi/milestone/1"&gt;https://github.com/kiwitcms/Kiwi/milestone/1&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;GitHub flow integration&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: done, awaiting deployment&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Our team spent some time making Kiwi TCMS the first open source TCMS available
+on the &lt;a href="https://github.com/marketplace/kiwi-tcms"&gt;GitHub Marketplace&lt;/a&gt;. At the end
+of this year we were able to create a small application that allows further
+integration and extending the testing workflow to the GitHub platform.&lt;/p&gt;
+&lt;p&gt;This is waiting on a few more clarifications from GitHub before we deploy but
+for now it can be considered as done. Future functionality will be tracked
+and developed directly at
+&lt;a href="https://github.com/kiwitcms/github-app/issues"&gt;https://github.com/kiwitcms/github-app/issues&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Agile integration with Trello&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: no progress, will drop&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This will be dropped from roadmap for the next year until we can get more interest
+from the community.&lt;/p&gt;
+&lt;h2&gt;Improve engineering productivity&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: no progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Looking for external help here. This will stay as a low priority item on our
+roadmap for 2020 until we can free more resources on the team.&lt;/p&gt;
+&lt;h2&gt;Community&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Status: great, on track, needs work&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This is our strongest area during this year. We have a strong presence in
+multiple communities, our event schedule is very busy and we are gaining more
+recognition every day! Core team hit several big bumps this year and is still
+recovering with a few more people onboarding.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS suffers from the problem that many of our users can't be contributors
+or simply don't want to!&lt;/p&gt;
+&lt;p&gt;In short: it is important for us to follow our mission and develop our core team
+so we can deliver on promises made in our roadmap! That requires a lot of time and
+effort which reduces short-term productivity.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 7.2</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/12/09/kiwi-tcms-72/" rel="alternate"></link><published>2019-12-09T10:25:00+02:00</published><updated>2019-12-09T10:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-12-09:/blog/kiwi-tcms-team/2019/12/09/kiwi-tcms-72/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.2!
 This is an improvement &amp;amp; bug fix release which includes
 new database migrations and API methods, internal refactoring and updated
 translations.
