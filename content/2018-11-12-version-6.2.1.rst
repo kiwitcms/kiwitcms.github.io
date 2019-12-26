@@ -8,7 +8,7 @@ Kiwi TCMS 6.2.1
 
 We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
 that includes some improvements and bug-fixes. You can explore everything at
-`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_!
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_!
 
 Supported upgrade paths::
 
@@ -65,7 +65,7 @@ Translations
 Misc
 ~~~~
 
-- `https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_ is
+- `https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_ is
   using a new SSL certificate with serial number
   ``46:78:80:EA:80:A4:FC:65:17:E4:59:EC:1D:C2:27:47``
 - Version 6.2.1 has been published to

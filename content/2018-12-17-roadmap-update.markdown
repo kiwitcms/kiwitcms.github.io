@@ -135,7 +135,7 @@ Community efforts
 *Status: good progress*
 
 We are seeing a steady stream of new users registered on
-[https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/) and
+[https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/) and
 there are several active contributors on GitHub. Most of our translators are
 very active and keep their respective languages fresh and up to date!
 

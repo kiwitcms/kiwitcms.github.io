@@ -11,7 +11,7 @@ We're happy to announce Kiwi TCMS version 6.0! This release
 introduces new database migrations, removal of
 environment properties in favor of tags, internal updates and bug fixes.
 You can explore everything at
-`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_.
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_.
 
 
 This release removes squashed migrations. Direct upgrades from versions
@@ -113,7 +113,7 @@ Subscription based online service
 ---------------------------------
 
 We are planning to convert
-`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_ into
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_ into
 a subscription based service for people who don't want to bother installing
 Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.

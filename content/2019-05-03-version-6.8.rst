@@ -10,7 +10,7 @@ Kiwi TCMS 6.8
 We're happy to announce Kiwi TCMS version 6.8!
 This is a small improvement and bug-fix update.
 You can explore everything at
-`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_!
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_!
 
 Supported upgrade paths::
 
@@ -84,7 +84,7 @@ GitHub Marketplace
 During the past week we have silently launched Kiwi TCMS on
 `GitHub Marketplace <https://github.com/marketplace/kiwi-tcms/>`_. Free plans
 will be redirected to
-`public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_
+`public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_
 while paid plans will be hosted under ``*.tenant.kiwitcms.org`` sub-domains!
 
 Our team is still working on all requirements for GitHub integration and we will

@@ -20,7 +20,7 @@ email text looks like this:
 
 
 
-[https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/)
+[https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/)
 runs a custom Docker image based on
 `kiwitcms/kiwi`. For this image the confirmation email looks like this
 

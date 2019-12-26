@@ -11,7 +11,7 @@ security update that includes new versions of Django and Patternfly,
 new database migrations, lots of improvements, bug fixes and internal
 refactoring. This version also introduces integration with GitLab issue
 tracker! You can explore everything at
-`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github/>`_!
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_!
 
 Supported upgrade paths::
 

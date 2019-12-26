@@ -53,7 +53,7 @@ SQLite database I got:
 This measures at 120 msec/req or 7.85 req/sec!
 
 
-[public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/) is running on an
+[public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/) is running on an
 [AWS t2.micro](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware)
 instance (via docker-compose) with the default `centos/mariadb` image!
 No extra settings or changes. I used the same computer over a WiFi

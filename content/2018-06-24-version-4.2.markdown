@@ -8,7 +8,7 @@ We're happy to announce Kiwi TCMS and tcms-api version 4.2!
 This is a security, bug-fix and enhancement update which upgrades to the latest
 Django version under Python 3.6.
 We've pushed new `kiwitcms/kiwi:latest` docker image to Docker Hub and updated the
-demo instance at [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/)!
+demo instance at [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/)!
 
 This version also includes GDPR related changes which affect our project. Read below
 for the details.
@@ -99,11 +99,11 @@ In addition the following changes were deployed to our infrastructure:
   checkbox when signing up for the newsletter.
 - Double opt-in is now enabled when subscribing to our newsletter
 - All newsletter addresses that have been unsubscribed have been deleted
-- Upon registration for [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/)
+- Upon registration for [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/)
   you are no longer subscribed
   to the newsletter. Now we send a welcome email with a link to the newsletter
   so you can subscribe if you want
-- [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/)
+- [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/)
   now runs a cron job which deletes inactive accounts
   and all of their related data. The cron job runs weekly
 

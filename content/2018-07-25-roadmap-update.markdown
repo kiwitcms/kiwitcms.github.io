@@ -124,7 +124,7 @@ Community efforts
 *Status: moderate progress*
 
 We are seeing a steady stream of new users registered on
-[https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github/) and
+[https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/) and
 there are several active contributors (issues, translations).
 
 Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg and PyCon Prague!
