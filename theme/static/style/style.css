@@ -100,6 +100,10 @@ img.rounded {
     border-radius: 100%;
 }
 
+.left-pad-15 {
+    padding-left: 1.5rem;
+}
+
 .member-bio {
     height: auto;
     width: 100%;
