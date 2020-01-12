@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2019-12-26T16:56:00+02:00</updated><entry><title>Roadmap status report for 2019</title><link href="https://kiwitcms.org/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/" rel="alternate"></link><published>2019-12-26T16:56:00+02:00</published><updated>2019-12-26T16:56:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-12-26:/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-01-12T18:31:00+02:00</updated><entry><title>Kiwi TCMS is migrating from OAuth to GitHub App</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/" rel="alternate"></link><published>2020-01-12T18:31:00+02:00</published><updated>2020-01-12T18:31:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-01-12:/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS is migrating from its OAuth backend
+to the so called "GitHub App" backend in order to enable further
+integration with GitHub's PR flow as stated previously in our
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;yearly goals&lt;/a&gt;.
+This blog post outlines the differences between the old and the new!&lt;/p&gt;
+&lt;p&gt;The old OAuth application …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers, Kiwi TCMS is migrating from its OAuth backend
+to the so called "GitHub App" backend in order to enable further
+integration with GitHub's PR flow as stated previously in our
+&lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;yearly goals&lt;/a&gt;.
+This blog post outlines the differences between the old and the new!&lt;/p&gt;
+&lt;p&gt;The old OAuth application only had access to your username, name and email
+for authentication purposes. Its authorization screen looked like so:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/github/oauth_login.png"
+    alt="OAuth login screen"
+    style="float:none"&gt;&lt;/p&gt;
+&lt;p&gt;GitHub Apps on the other hand are designed for more granular access and tighter
+integration with the GitHub platform. This type of application still allows you
+to perform 1-click login into
+&lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;. If this is your
+first time logging into Kiwi TCMS after the migration you will see the following screen:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/github/app_login.png"
+    alt="App login screen"
+    style="float:none"&gt;&lt;/p&gt;
+&lt;p&gt;Notice how the heading, information section and action button are slightly different!
+The important section is &lt;strong&gt;Resources on your account&lt;/strong&gt;! We still only need your
+name, username and email address! Existing Kiwi TCMS accounts (from before the migration)
+will continue to work and they will still have access to all of their data previously
+created. Authorization of this new GitHub app (e.g. login only) does not give it
+permissions to access your repositories and act on your behalf.&lt;/p&gt;
+&lt;p&gt;To permit this GitHub App to access your repositories and/or act on your behalf
+you must &lt;strong&gt;Install&lt;/strong&gt; it first. That is tell Kiwi TCMS GitHub integration code
+what kind of resources from your GitHub account it is allowed to access. You may
+install into your personal GitHub account or an organizational account! You may
+do this by following the &lt;strong&gt;Install &amp;amp; Authorize&lt;/strong&gt; button on our home page or
+directly from &lt;a href="https://github.com/apps/kiwi-tcms"&gt;https://github.com/apps/kiwi-tcms&lt;/a&gt;!
+The screen should look like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/github/app_installation.png"
+    alt="App installation screen"
+    style="float:none"&gt;&lt;/p&gt;
+&lt;p&gt;Initially we ask for read-only access to a few resources so Kiwi TCMS can start
+receiving webhooks from GitHub and synchronize information about your repositories
+into our database. This is documented both on the app installation screen itself
+(required by GitHub) and on
+&lt;a href="https://github.com/kiwitcms/github-app"&gt;https://github.com/kiwitcms/github-app&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Further ideas about integration between GitHub and Kiwi TCMS, including the original
+idea about status checks from &lt;a href="https://github.com/kiwitcms/Kiwi/issues/700"&gt;Issue #700&lt;/a&gt;,
+can be found at
+&lt;a href="https://github.com/kiwitcms/github-app/issues"&gt;https://github.com/kiwitcms/github-app/issues&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Help us grow&lt;/h2&gt;
+&lt;p&gt;After this migration we're back to zero! The thousands of authorizations we've had
+on our legacy OAuth app can't be migrated to the new app. This also means our
+listing on GitHub Marketplace will be taken down and we have to qualify through the
+entire process from scratch.&lt;/p&gt;
+&lt;p&gt;Please help us get back on track! Here's what we ask you to do (in this order):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; and
+  click the GitHub login icon, follow through with the process;&lt;/li&gt;
+&lt;li&gt;Go to &lt;a href="https://github.com/apps/kiwi-tcms"&gt;https://github.com/apps/kiwi-tcms&lt;/a&gt; and
+  click the &lt;strong&gt;Install&lt;/strong&gt; button, select account &amp;amp; repositories and complete the
+  process;&lt;/li&gt;
+&lt;li&gt;Share this blog post with friends, co-workers and other testers who might be
+  interested to help!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you! Happy testing and happy new year!&lt;/p&gt;</content><category term="releases"></category></entry><entry><title>Roadmap status report for 2019</title><link href="https://kiwitcms.org/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/" rel="alternate"></link><published>2019-12-26T16:56:00+02:00</published><updated>2019-12-26T16:56:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2019-12-26:/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/</id><summary type="html">&lt;p&gt;Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
 &lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;2019 roadmap&lt;/a&gt;.
 TL,DR: last year we've made lots of big and visible changes in Kiwi TCMS.
@@ -410,7 +473,7 @@ This is a small improvement update which includes
 database schema and API changes, several other improvements,
 internal refactoring and updated translations.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.1!
@@ -418,7 +481,7 @@ This is a small improvement update which includes
 database schema and API changes, several other improvements,
 internal refactoring and updated translations.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -593,13 +656,13 @@ This is a major release which includes security updates,
 significant database schema and API changes, many improvements,
 removed functionality, bug fixes, substantial internal refactoring and
 several new languages. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;The 7.0 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.0!
 This is a major release which includes security updates,
 significant database schema and API changes, many improvements,
 removed functionality, bug fixes, substantial internal refactoring and
 several new languages. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;The 7.0 version number happily coincides with the fact that we've surpassed
 70000 downloads from &lt;a class="reference external" href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
@@ -1091,12 +1154,12 @@ This is a security and improvement release which updates
 many internal dependencies, adds 2 new Telemetry reports, updates
 TestPlan and TestCase cloning pages and provides several other
 improvements and bug fixes. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.11!
 This is a security and improvement release which updates
 many internal dependencies, adds 2 new Telemetry reports, updates
 TestPlan and TestCase cloning pages and provides several other
 improvements and bug fixes. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -1561,7 +1624,7 @@ follow soon in a separate blog post.&lt;/p&gt;
 &lt;p&gt;Thank you &amp;amp; happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.10</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/" rel="alternate"></link><published>2019-06-18T22:45:00+03:00</published><updated>2019-06-18T22:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-06-18:/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.10!
 This is a small security and improvement update.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -1569,7 +1632,7 @@ You can explore everything at
 6.0.1            -&amp;gt; 6.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.10!
 This is a small security and improvement update.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -1737,14 +1800,14 @@ few new issues with Kiwi TCMS so this is an area which our team is going to impr
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 6.9</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="alternate"></link><published>2019-05-16T16:20:00+03:00</published><updated>2019-05-16T16:20:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-16:/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.9!
 This is a small improvement and bug-fix update which introduces
 our first telemetry report: testing breakdown. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
 5.3.1 (or newer …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.9!
 This is a small improvement and bug-fix update which introduces
 our first telemetry report: testing breakdown. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -1847,7 +1910,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.8</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="alternate"></link><published>2019-05-03T13:45:00+03:00</published><updated>2019-05-03T13:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-05-03:/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.8!
 This is a small improvement and bug-fix update.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -1855,7 +1918,7 @@ You can explore everything at
 6.0.1            -&amp;gt; 6.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.8!
 This is a small improvement and bug-fix update.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -1926,7 +1989,7 @@ and causes email notifications from tenants to use the wrong URL&lt;/li&gt;
 &lt;p&gt;During the past week we have silently launched Kiwi TCMS on
 &lt;a class="reference external" href="https://github.com/marketplace/kiwi-tcms/"&gt;GitHub Marketplace&lt;/a&gt;. Free plans
 will be redirected to
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;public.tenant.kiwitcms.org&lt;/a&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;public.tenant.kiwitcms.org&lt;/a&gt;
 while paid plans will be hosted under &lt;tt class="docutils literal"&gt;*.tenant.kiwitcms.org&lt;/tt&gt; sub-domains!&lt;/p&gt;
 &lt;p&gt;Our team is still working on all requirements for GitHub integration and we will
 issue a formal statement when ready!&lt;/p&gt;
@@ -1962,7 +2025,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.7</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="alternate"></link><published>2019-04-06T17:15:00+03:00</published><updated>2019-04-06T17:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-04-06:/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.7!
 This is a small improvement and bug-fix update.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -1970,7 +2033,7 @@ You can explore everything at
 6.0.1            -&amp;gt; 6.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.7!
 This is a small improvement and bug-fix update.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -2087,7 +2150,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.6</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="alternate"></link><published>2019-03-19T22:40:00+02:00</published><updated>2019-03-19T22:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-03-19:/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.6! This is a
 medium severity security update, improvement and bug-fix update.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -2095,7 +2158,7 @@ You can explore everything at
 6.0 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.6! This is a
 medium severity security update, improvement and bug-fix update.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -2811,14 +2874,14 @@ You are welcome to share your ideas in the comments below.&lt;/p&gt;
 security, improvement and bug-fix update that includes new
 versions of Django, includes several database migrations and fixes several bugs.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.5.3! This is a
 security, improvement and bug-fix update that includes new
 versions of Django, includes several database migrations and fixes several bugs.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -2934,13 +2997,13 @@ improvement and bug-fix update that includes new
 versions of Django and other dependencies, removes some database fields,
 includes backend API updates and fixes several bugs.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Together …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.5! This is a minor security,
 improvement and bug-fix update that includes new
 versions of Django and other dependencies, removes some database fields,
 includes backend API updates and fixes several bugs.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Together with this release we announce:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin"&gt;kiwitcms-tap-plugin&lt;/a&gt; : for reading
@@ -3415,14 +3478,14 @@ maybe consider
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 6.4</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/" rel="alternate"></link><published>2019-01-07T15:25:00+02:00</published><updated>2019-01-07T15:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2019-01-07:/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.4! This is a security,
 improvement and bug-fix update that includes new versions of Django,
 Patternfly and other dependencies. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
 5.3.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.4! This is a security,
 improvement and bug-fix update that includes new versions of Django,
 Patternfly and other dependencies. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -3628,7 +3691,7 @@ We still don't have anything to test front-end JavaScript functionality!&lt;/p&g
 &lt;h2&gt;Community efforts&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: good progress&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;We are seeing a steady stream of new users registered on
-&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; and
+&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; and
 there are several active contributors on GitHub. Most of our translators are
 very active and keep their respective languages fresh and up to date!&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg, PyCon Prague,
@@ -3639,12 +3702,12 @@ security update that includes new versions of Django and Patternfly,
 new database migrations, lots of improvements, bug fixes and internal
 refactoring. This version also introduces integration with GitLab issue
 tracker! You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
 security update that includes new versions of Django and Patternfly,
 new database migrations, lots of improvements, bug fixes and internal
 refactoring. This version also introduces integration with GitLab issue
 tracker! You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -3798,14 +3861,14 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/div&gt;
 </content><category term="releases"></category></entry><entry><title>Kiwi TCMS 6.2.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/" rel="alternate"></link><published>2018-11-12T14:45:00+02:00</published><updated>2018-11-12T14:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-12:/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
 that includes some improvements and bug-fixes. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
 5.3.1 (or newer) -&amp;gt; 6.0.1
 6 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
 that includes some improvements and bug-fixes. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -3859,7 +3922,7 @@ the npm package &lt;tt class="docutils literal"&gt;datatables.net&lt;/tt&gt; (re
 &lt;div class="section" id="misc"&gt;
 &lt;h3&gt;Misc&lt;/h3&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; is
+&lt;li&gt;&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; is
 using a new SSL certificate with serial number
 &lt;tt class="docutils literal"&gt;46:78:80:EA:80:A4:FC:65:17:E4:59:EC:1D:C2:27:47&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;Version 6.2.1 has been published to
@@ -3934,7 +3997,7 @@ contributor to the Kiwi TCMS project!&lt;/p&gt;
 established by the testing framework in question. You will also have to create
 a test suite for your plugin based on the specification below.&lt;/p&gt;
 &lt;p&gt;You are expected to use
-&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;public.tenant.kiwitcms.org&lt;/a&gt; while working on the
+&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;public.tenant.kiwitcms.org&lt;/a&gt; while working on the
 plugin and afterwards. This is known as eating your own dog food!&lt;/p&gt;
 &lt;p&gt;For Python we provide the &lt;code&gt;tcms-api&lt;/code&gt; module which already takes care of the
 communications layer. For other languages you will have to create this layer or
@@ -4064,12 +4127,12 @@ for inspiration!&lt;/p&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="plugins"></category></entry><entry><title>Kiwi TCMS 6.2</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="alternate"></link><published>2018-11-02T12:15:00+02:00</published><updated>2018-11-02T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2018-11-02:/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
 that removes squashed migrations from previous releases and includes a few
 improvements. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; or
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; or
 find our info booth at &lt;a class="reference external" href="http://www.openfest.org"&gt;OpenFest&lt;/a&gt; in Sofia during
 the weekend and do …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
 that removes squashed migrations from previous releases and includes a few
 improvements. You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; or
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; or
 find our info booth at &lt;a class="reference external" href="http://www.openfest.org"&gt;OpenFest&lt;/a&gt; in Sofia during
 the weekend and do a live demo with the team!&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
@@ -4097,7 +4160,7 @@ kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 &lt;li&gt;Update to &lt;a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.3/"&gt;Django 2.1.3&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Update Apache config to print logs on the console. Fixes
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/549"&gt;Issue #549&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; now
+&lt;li&gt;&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; now
 allows email associations when logging via GitHub. If you have an existing
 account which shares the same email address with your GitHub profile you
 will be redirected to that account upon logging in via GitHub!
@@ -4159,7 +4222,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;div class="section" id="subscription-based-online-service"&gt;
 &lt;h2&gt;Subscription based online service&lt;/h2&gt;
 &lt;p&gt;We are planning to convert
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
 a subscription based service for people who don't want to bother installing
 Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
@@ -4183,7 +4246,7 @@ squashes database migrations and removes
 older migrations that have been squashed in previous releases, a few
 improvements and bug fixes.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1.1! This release
@@ -4191,7 +4254,7 @@ squashes database migrations and removes
 older migrations that have been squashed in previous releases, a few
 improvements and bug fixes.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -4266,7 +4329,7 @@ before upgrade!&lt;/p&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
 &lt;h2&gt;Subscription based online service&lt;/h2&gt;
 &lt;p&gt;We are planning to convert
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
 a subscription based service for people who don't want to bother installing
 Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
@@ -4334,7 +4397,7 @@ sys     0m0.353s
 
 
 &lt;p&gt;This measures at 120 msec/req or 7.85 req/sec!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;public.tenant.kiwitcms.org&lt;/a&gt; is running on an
+&lt;p&gt;&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;public.tenant.kiwitcms.org&lt;/a&gt; is running on an
 &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware"&gt;AWS t2.micro&lt;/a&gt;
 instance (via docker-compose) with the default &lt;code&gt;centos/mariadb&lt;/code&gt; image!
 No extra settings or changes. I used the same computer over a WiFi
@@ -4380,13 +4443,13 @@ introduces new database migrations,
 internal updates and bug fixes. It is a small release designed
 to minimize the number of database migrations by squashing them together.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; there is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.1! This release
 introduces new database migrations,
 internal updates and bug fixes. It is a small release designed
 to minimize the number of database migrations by squashing them together.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; there is the 6.0.1 release which resolves an upgrade problem
 caused by non-applied migrations which have been later squashed and
 released in the same release! It is best to jump through the intermediate
@@ -4474,7 +4537,7 @@ before upgrade!&lt;/p&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
 &lt;h2&gt;Subscription based online service&lt;/h2&gt;
 &lt;p&gt;We are planning to convert
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
 a subscription based service for people who don't want to bother installing
 Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
@@ -4621,13 +4684,13 @@ kiwi bird logo and come to say hi. Happy testing!&lt;/p&gt;</content><category t
 introduces new database migrations, removal of
 environment properties in favor of tags, internal updates and bug fixes.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release removes squashed migrations. Direct upgrades from versions
 &amp;lt; 5.3.1 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.0! This release
 introduces new database migrations, removal of
 environment properties in favor of tags, internal updates and bug fixes.
 You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release removes squashed migrations. Direct upgrades from versions
 &amp;lt; 5.3.1 to 6.0 will break without an intermediate upgrade to 5.3.1!&lt;/p&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
@@ -4721,7 +4784,7 @@ before upgrade!&lt;/p&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
 &lt;h2&gt;Subscription based online service&lt;/h2&gt;
 &lt;p&gt;We are planning to convert
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
 a subscription based service for people who don't want to bother installing
 Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
@@ -4859,11 +4922,11 @@ Now build your customized Docker image and use it for deployment!&lt;/p&gt;
 brings lots of UI updates and removal of unused
 and/or duplicated functionality and source code. Many pages have been redesigned
 with the Patternfly library to have a modern look and feel which you can
-experience at &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.3.1! This release
+experience at &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.3.1! This release
 brings lots of UI updates and removal of unused
 and/or duplicated functionality and source code. Many pages have been redesigned
 with the Patternfly library to have a modern look and feel which you can
-experience at &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
+experience at &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This will be the last release to carry around squashed migrations. In version
 6.0 older migrations will be deleted and replaced with their squashed equivalents.
 Upgrades from versions &amp;lt; 5.3 to 6.0 will break without an intermediate upgrade to 5.3.1!&lt;/p&gt;
@@ -5015,7 +5078,7 @@ anymore (GitHub issues are for bugs or feature discussions only)!&lt;/p&gt;
 &lt;div class="section" id="subscription-based-online-service"&gt;
 &lt;h2&gt;Subscription based online service&lt;/h2&gt;
 &lt;p&gt;We are planning to convert
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; into
 a subscription based service for people who don't want to bother installing
 Kiwi TCMS on their own systems and just want to use it for test collaboration
 with their team.&lt;/p&gt;
@@ -5052,7 +5115,7 @@ introduces new database migrations and converts
 the Docker image to a non-root user with uid 1001. You may have to adjust
 ownership/permissions on the &lt;tt class="docutils literal"&gt;kiwi_uploads&lt;/tt&gt; Docker volume!&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;6bc4e3124fd4&lt;/tt&gt;.
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
 has also been updated!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-5-1"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 5.1&lt;/h2&gt;
@@ -5150,7 +5213,7 @@ email text looks like this:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+&lt;p&gt;&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
 runs a custom Docker image based on
 &lt;code&gt;kiwitcms/kiwi&lt;/code&gt;. For this image the confirmation email looks like this&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;    Welcome &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;,&lt;/span&gt;
@@ -5201,14 +5264,14 @@ Now build your customized Docker image and use that for deployment!&lt;/p&gt;
 introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
 has also been updated!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-5-0"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 5.0 …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 5.1! This release
 introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;cc9b55aa664d&lt;/tt&gt;.
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
 has also been updated!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-5-0"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 5.0&lt;/h2&gt;
@@ -5446,7 +5509,7 @@ past few releases but there are still thousands of lines of code left to deal wi
 &lt;h2&gt;Community efforts&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Status: moderate progress&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;We are seeing a steady stream of new users registered on
-&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; and
+&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; and
 there are several active contributors (issues, translations).&lt;/p&gt;
 &lt;p&gt;Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg and PyCon Prague!
 We're planning to attend HackConf and OpenFest in Sofia by the end of the year.&lt;/p&gt;
@@ -5454,11 +5517,11 @@ We're planning to attend HackConf and OpenFest in Sofia by the end of the year.&
 introduces object history tracking, removal of old functionality and unused code,
 lots of internal updates and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;468de0abe8a8&lt;/tt&gt;.
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; has also been …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; has also been …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
 introduces object history tracking, removal of old functionality and unused code,
 lots of internal updates and bug fixes.&lt;/p&gt;
 &lt;p&gt;The new &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; docker image has Image ID &lt;tt class="docutils literal"&gt;468de0abe8a8&lt;/tt&gt;.
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; has also been updated!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-4-2"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 4.2&lt;/h2&gt;
 &lt;div class="section" id="settings"&gt;
@@ -5640,11 +5703,11 @@ free to comment below, file GitHub issues or send us an email.&lt;/p&gt;
 This is a security, bug-fix and enhancement update which upgrades to the latest
 Django version under Python 3.6.
 We've pushed new &lt;code&gt;kiwitcms/kiwi:latest&lt;/code&gt; docker image to Docker Hub and updated the
-demo instance at &lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 4.2!
+demo instance at &lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS and tcms-api version 4.2!
 This is a security, bug-fix and enhancement update which upgrades to the latest
 Django version under Python 3.6.
 We've pushed new &lt;code&gt;kiwitcms/kiwi:latest&lt;/code&gt; docker image to Docker Hub and updated the
-demo instance at &lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+demo instance at &lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;This version also includes GDPR related changes which affect our project. Read below
 for the details.&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 4.1.4&lt;/h2&gt;
@@ -5730,11 +5793,11 @@ for the details.&lt;/p&gt;
   checkbox when signing up for the newsletter.&lt;/li&gt;
 &lt;li&gt;Double opt-in is now enabled when subscribing to our newsletter&lt;/li&gt;
 &lt;li&gt;All newsletter addresses that have been unsubscribed have been deleted&lt;/li&gt;
-&lt;li&gt;Upon registration for &lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+&lt;li&gt;Upon registration for &lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
   you are no longer subscribed
   to the newsletter. Now we send a welcome email with a link to the newsletter
   so you can subscribe if you want&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
   now runs a cron job which deletes inactive accounts
   and all of their related data. The cron job runs weekly&lt;/li&gt;
 &lt;/ul&gt;
@@ -5799,7 +5862,7 @@ This is a bug-fix and enhancement update which upgrades to the latest Django
 version, resolves several issues and includes lots of internal code updates.&lt;/p&gt;
 &lt;p&gt;We've pushed new &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; docker image to Docker Hub and updated the
 demo instance at
-&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 4.1.3&lt;/h2&gt;
 &lt;h3&gt;Enhancements&lt;/h3&gt;
 &lt;ul&gt;
@@ -5880,7 +5943,7 @@ lots of internal code refactoring which removes code duplication and brings down
 to 26.9% of technical debt or 10 months to fix.&lt;/p&gt;
 &lt;p&gt;We've pushed the new &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; docker image to Docker Hub and updated the
 demo instance at
-&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.
+&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;.
 Starting forward the demo will use
 the &lt;code&gt;info-at-kiwitcms.org&lt;/code&gt; email address for all communication sent. There are real
 people behind this address so if you write to us we will reply!&lt;/p&gt;
@@ -6416,7 +6479,7 @@ and the corresponding tcms-api version 1.5.0! This release includes a fair
 amount of bug fixes and many changes related to Kiwi's RPC layer!&lt;/p&gt;
 &lt;p&gt;Most importantly Kiwi is updated to Django 2.0.1, the API client no longer
 supports Python 2 and many RPC methods have been removed or updated.
-&lt;a href="https://public.tenant.kiwitcms.org/login/github/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
 has also been updated so you can explore the new version.&lt;/p&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 3.48&lt;/h2&gt;
 &lt;h3&gt;Enhancements and bug fixes&lt;/h3&gt;
