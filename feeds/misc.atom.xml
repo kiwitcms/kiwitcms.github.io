@@ -5416,7 +5416,7 @@ cat backup.bak | docker exec -i kiwi_db /bin/bash -c &amp;#39;pg_restore --dbnam
 the PostgreSQL database shell to manipulate the contents of the database!&lt;/p&gt;
 &lt;h2&gt;Backing up file uploads&lt;/h2&gt;
 &lt;p&gt;Uploaded files can easily be backed up with:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker exec -it kiwi_web /bin/tar -cP /Kiwi/uploads &amp;gt; uploads.tar
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker exec -i kiwi_web /bin/tar -cP /Kiwi/uploads &amp;gt; uploads.tar
 &lt;/pre&gt;&lt;/div&gt;
 
 
