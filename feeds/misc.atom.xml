@@ -1,5 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-01-12T18:31:00+02:00</updated><entry><title>Kiwi TCMS is migrating from OAuth to GitHub App</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/" rel="alternate"></link><published>2020-01-12T18:31:00+02:00</published><updated>2020-01-12T18:31:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-01-12:/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS is migrating from its OAuth backend
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-01-16T01:00:00+02:00</updated><entry><title>Kiwi TCMS 7.3</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/" rel="alternate"></link><published>2020-01-16T01:00:00+02:00</published><updated>2020-01-16T01:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-01-16:/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.3!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a critical security update for
+&lt;strong&gt;CVE-2019-19844: Potential account hijack via password reset form!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Also migrates to Django 3.0 and includes several other improvement
+and bug-fixes!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.3!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a critical security update for
+&lt;strong&gt;CVE-2019-19844: Potential account hijack via password reset form!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Also migrates to Django 3.0 and includes several other improvement
+and bug-fixes!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  4026ee62e488    556 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-7-2"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 7.2&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 2.2.8 to 3.0.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update python-gitlab from 1.13.0 to 1.15.0&lt;/li&gt;
+&lt;li&gt;Update pygithub from 1.44.1 to 1.45&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 2.13.2 to 2.13.3&lt;/li&gt;
+&lt;li&gt;Bump django-uuslug from 1.1.9 to 1.2.0&lt;/li&gt;
+&lt;li&gt;Bump django-attachments from 1.4.1 to 1.5&lt;/li&gt;
+&lt;li&gt;Bump django-vinaigrette from 1.2.0 to 2.0.1&lt;/li&gt;
+&lt;li&gt;Update marked to version 0.8.0&lt;/li&gt;
+&lt;li&gt;Update prismjs to version 1.19.0&lt;/li&gt;
+&lt;li&gt;Generalize existing &lt;tt class="docutils literal"&gt;kiwitcms.telemetry.plugins&lt;/tt&gt; handling code by
+renaming the entry point to &lt;tt class="docutils literal"&gt;kiwitcms.plugins&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Refactor views to class based (Svetlozar Stoyanov)&lt;/li&gt;
+&lt;li&gt;Teach Kiwi TCMS to automatically report bugs to GitHub when the user
+selects such action. Fall back to opening a new browser window for
+manually entering the bug if something goes wrong&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;When migrating from the older &lt;tt class="docutils literal"&gt;Bug&lt;/tt&gt; model to &lt;tt class="docutils literal"&gt;LinkReference&lt;/tt&gt; skip
+bugs which are attached directly to test cases instead of test executions.
+See &lt;a class="reference external" href="https://stackoverflow.com/questions/59321756/"&gt;SO #59321756&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;AutoField.max_length&lt;/tt&gt; because it is ignored by Django 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCase.update()&lt;/tt&gt; method now allows to update the &lt;tt class="docutils literal"&gt;author&lt;/tt&gt; field. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/630"&gt;Issue #630&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Modify template pass &lt;tt class="docutils literal"&gt;object&lt;/tt&gt; as &lt;tt class="docutils literal"&gt;test_plan&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1307"&gt;Issue #1307&lt;/a&gt; (Ed Oswald S. Go)&lt;/li&gt;
+&lt;li&gt;Enable version selection in test plan search page. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1276"&gt;Issue #1276&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Apply percentage rounding for completed test executions. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1230"&gt;Issue #1230&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix a logical bug in conditional expression when deciding whether or not
+reporting bugs to selected issue tracker is disabled&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add code of conduct. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1185"&gt;Issue #1185&lt;/a&gt; (Rosen Sasov)&lt;/li&gt;
+&lt;li&gt;Add test for &lt;tt class="docutils literal"&gt;KIWI_DONT_ENFORSE_HTTPS&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1274"&gt;Issue #1274&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Replace &lt;tt class="docutils literal"&gt;ugettext_lazy&lt;/tt&gt; with &lt;tt class="docutils literal"&gt;gettext_lazy&lt;/tt&gt; for Django 3&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;BaseCaseSearchForm.bug_id&lt;/tt&gt; field&lt;/li&gt;
+&lt;li&gt;Refactor testcase edit view to class-based&lt;/li&gt;
+&lt;li&gt;Happy New Year pylint&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/vi#"&gt;Vietnamese translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="github-integration"&gt;
+&lt;h2&gt;GitHub integration&lt;/h2&gt;
+&lt;p&gt;The hosted version of Kiwi TCMS ships with additional GitHub integration. See
+&lt;a class="reference external" href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/"&gt;GitHub App announcement&lt;/a&gt; and
+&lt;a class="reference external" href="https://github.com/kiwitcms/github-app/blob/master/README.rst"&gt;github-app&lt;/a&gt;
+for more information!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="upcoming-conferences"&gt;
+&lt;h2&gt;Upcoming conferences&lt;/h2&gt;
+&lt;p&gt;The next two events we are going to participate are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://devconfcz2020a.sched.com/speaker/a.sankov96"&gt;DevConf.CZ, Jan 24-26, Brno&lt;/a&gt;
+where Anton Sankov will be a speaker&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/11/26/kiwi-tcms-is-going-to-fosdem-2020/"&gt;FOSDEM, Feb 1-2, Brussels&lt;/a&gt;
+where you can meet with the entire team&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are around come and say &amp;quot;Happy testing&amp;quot;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS is migrating from OAuth to GitHub App</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/" rel="alternate"></link><published>2020-01-12T18:31:00+02:00</published><updated>2020-01-12T18:31:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-01-12:/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/</id><summary type="html">&lt;p&gt;Hello testers, Kiwi TCMS is migrating from its OAuth backend
 to the so called "GitHub App" backend in order to enable further
 integration with GitHub's PR flow as stated previously in our
 &lt;a href="https://kiwitcms.org/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/"&gt;yearly goals&lt;/a&gt;.
