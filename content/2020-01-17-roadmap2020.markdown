@@ -1,0 +1,126 @@
+Title: Project roadmap 2020
+headline: team, technical & community towards sustainability
+date: 2020-01-17 19:40
+comments: true
+og_image: images/roadmap.jpg
+twitter_image: images/roadmap.jpg
+author: Alexander Todorov
+tags: community
+
+Hello testers,
+the Kiwi TCMS team sat down together last week and talked about what we feel
+is important for us during the upcoming year. This blog post outlines our
+roadmap for 2020!
+
+<img style="background-color: inherit" src="/images/roadmap2020.png" alt="roadmap image 2020">
+
+
+Project sustainability
+======================
+
+The big goal towards which we are striving is to turn Kiwi TCMS into a
+sustainable open source project. For now this means several key areas:
+
+    1) Team
+    2) Technical
+    3) Community
+
+Team
+----
+
+Right now we have a core team with 6 newcomers on-boarding.
+Engineering performance is all over the place with some people contributing
+too much while others contributing too little. More importantly there is no
+consistent pace of contributions which makes planning timely completion of
+technical tasks impossible.
+
+At the moment we do operate as a bunch of disconnected people who happen to
+talk to each other from time to time.
+
+We are going to adjust our internal processes and how we on-board new members.
+In fact we did our first "scrum-like" meeting this week and agreed to change
+our existing practice and strive to become better as a team!
+
+**Goal:** to have a cohesive team at the end of the year which operates with
+a predictable capacity.
+
+**Goal:** 1 PR/week/person as broad measure of individual performance.
+
+
+Technical
+---------
+
+The areas shown on the picture above will receive more priority.
+
+**Goal:** complete remaining [Telemetry features]({filename}2019-03-03-telemetry.markdown).
+
+**Goal:** complete
+[bug-tracker integration milestone](https://github.com/kiwitcms/Kiwi/milestone/1).
+
+**Goal:** all pylint issues resolved.
+
+**Goal:** migrate all remaining legacy templates to Patternfly UI. See
+[patternfly-migration](https://github.com/kiwitcms/Kiwi/milestone/3) milestone.
+
+**Goal:** where FE sends AJAX requests to BE views replace with JSON RPC API instead.
+
+**Extra:** start tackling the JavaScript mess that we have. This depends and is related
+to Patternfly migration and overall refactoring.
+
+**Extra:** make it easier for downstream installations to extend and override parts
+of Kiwi TCMS in order for users to adjust the system to their own needs.
+The system is pretty flexible as-is but there have been requests,
+both online and offline, to provide some extra features! We'll start looking
+into them, likely making partial progress in the next 12 months.
+
+
+Community
+---------
+
+Last year Kiwi TCMS had massive success at every single conference that we've been to.
+Both project and team have been well received. While we are going to continue
+being part of various communities around the world we are trying to limit
+extensive travel and focus on functionality and partnerships which will
+increase Kiwi TCMS eco-system, make the project even more popular and
+drive further adoption!
+
+**Goal:** extended GitHub integration via
+[kiwitcms-github-app](https://github.com/kiwitcms/github-app/) plugin.
+
+**Goal:** release the following
+[test automation framework plugins](https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html)
+for Kiwi TCMS:
+
+- [PHPUnit plugin](https://github.com/kiwitcms/phpunit-plugin/)
+- [py.test plugin](https://github.com/kiwitcms/pytest-plugin/)
+- TestNG plugin
+- Jenkins plugin
+- Robot framework plugin
+- Django plugin
+
+For more information see
+[test-automation-plugins](https://github.com/kiwitcms/Kiwi/milestone/2) milestone.
+
+**Ongoing:** work with our partners from the proprietary and open source worlds.
+This is hard to quantify and lots of it doesn't actually depend on the team.
+However we are continuing to talk to them regularly. Expect new feedback to
+become available under GitHub Issues.
+
+**Extra:** see what we can do about testing productivity! This has always been
+part of our mission but we have not been able to produce anything worth sharing.
+We do have ideas in this space but we are generally looking for partnerships and collaborations.
+It is very likely that there will not be very much progress on this front
+because it is hard to define it properly :-(.
+
+
+Summary
+-------
+
+At the end of the day most of these goals compliment each other and help drive all of
+them to completion. Many of the still on-boarding people have expressed desire to
+improve their Python & Django skills. Working to resolve issues in the above specific
+areas will give them this opportunity! I expect they will show good progress on their respective
+tasks so we can write more about them on this blog.
+
+
+Happy testing!
