@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-01-16T01:00:00+02:00</updated><entry><title>Kiwi TCMS 7.3</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/" rel="alternate"></link><published>2020-01-16T01:00:00+02:00</published><updated>2020-01-16T01:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-01-16:/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.3!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-01-17T19:40:00+02:00</updated><entry><title>Project roadmap 2020</title><link href="https://kiwitcms.org/blog/atodorov/2020/01/17/project-roadmap-2020/" rel="alternate"></link><published>2020-01-17T19:40:00+02:00</published><updated>2020-01-17T19:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2020-01-17:/blog/atodorov/2020/01/17/project-roadmap-2020/</id><summary type="html">&lt;p&gt;Hello testers,
+the Kiwi TCMS team sat down together last week and talked about what we feel
+is important for us during the upcoming year. This blog post outlines our
+roadmap for 2020!&lt;/p&gt;
+&lt;p&gt;&lt;img style="background-color: inherit" src="/images/roadmap2020.png" alt="roadmap image 2020"&gt;&lt;/p&gt;
+&lt;h1&gt;Project sustainability&lt;/h1&gt;
+&lt;p&gt;The big goal towards which we are striving is to turn Kiwi TCMS into a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers,
+the Kiwi TCMS team sat down together last week and talked about what we feel
+is important for us during the upcoming year. This blog post outlines our
+roadmap for 2020!&lt;/p&gt;
+&lt;p&gt;&lt;img style="background-color: inherit" src="/images/roadmap2020.png" alt="roadmap image 2020"&gt;&lt;/p&gt;
+&lt;h1&gt;Project sustainability&lt;/h1&gt;
+&lt;p&gt;The big goal towards which we are striving is to turn Kiwi TCMS into a
+sustainable open source project. For now this means several key areas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1) Team
+2) Technical
+3) Community
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Team&lt;/h2&gt;
+&lt;p&gt;Right now we have a core team with 6 newcomers on-boarding.
+Engineering performance is all over the place with some people contributing
+too much while others contributing too little. More importantly there is no
+consistent pace of contributions which makes planning timely completion of
+technical tasks impossible.&lt;/p&gt;
+&lt;p&gt;At the moment we do operate as a bunch of disconnected people who happen to
+talk to each other from time to time.&lt;/p&gt;
+&lt;p&gt;We are going to adjust our internal processes and how we on-board new members.
+In fact we did our first "scrum-like" meeting this week and agreed to change
+our existing practice and strive to become better as a team!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; to have a cohesive team at the end of the year which operates with
+a predictable capacity.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; 1 PR/week/person as broad measure of individual performance.&lt;/p&gt;
+&lt;h2&gt;Technical&lt;/h2&gt;
+&lt;p&gt;The areas shown on the picture above will receive more priority.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; complete remaining &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/"&gt;Telemetry features&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; complete
+&lt;a href="https://github.com/kiwitcms/Kiwi/milestone/1"&gt;bug-tracker integration milestone&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; all pylint issues resolved.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; migrate all remaining legacy templates to Patternfly UI. See
+&lt;a href="https://github.com/kiwitcms/Kiwi/milestone/3"&gt;patternfly-migration&lt;/a&gt; milestone.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; where FE sends AJAX requests to BE views replace with JSON RPC API instead.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extra:&lt;/strong&gt; start tackling the JavaScript mess that we have. This depends and is related
+to Patternfly migration and overall refactoring.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extra:&lt;/strong&gt; make it easier for downstream installations to extend and override parts
+of Kiwi TCMS in order for users to adjust the system to their own needs.
+The system is pretty flexible as-is but there have been requests,
+both online and offline, to provide some extra features! We'll start looking
+into them, likely making partial progress in the next 12 months.&lt;/p&gt;
+&lt;h2&gt;Community&lt;/h2&gt;
+&lt;p&gt;Last year Kiwi TCMS had massive success at every single conference that we've been to.
+Both project and team have been well received. While we are going to continue
+being part of various communities around the world we are trying to limit
+extensive travel and focus on functionality and partnerships which will
+increase Kiwi TCMS eco-system, make the project even more popular and
+drive further adoption!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; extended GitHub integration via
+&lt;a href="https://github.com/kiwitcms/github-app/"&gt;kiwitcms-github-app&lt;/a&gt; plugin.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; release the following
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html"&gt;test automation framework plugins&lt;/a&gt;
+for Kiwi TCMS:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/phpunit-plugin/"&gt;PHPUnit plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/pytest-plugin/"&gt;py.test plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TestNG plugin&lt;/li&gt;
+&lt;li&gt;Jenkins plugin&lt;/li&gt;
+&lt;li&gt;Robot framework plugin&lt;/li&gt;
+&lt;li&gt;Django plugin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information see
+&lt;a href="https://github.com/kiwitcms/Kiwi/milestone/2"&gt;test-automation-plugins&lt;/a&gt; milestone.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ongoing:&lt;/strong&gt; work with our partners from the proprietary and open source worlds.
+This is hard to quantify and lots of it doesn't actually depend on the team.
+However we are continuing to talk to them regularly. Expect new feedback to
+become available under GitHub Issues.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extra:&lt;/strong&gt; see what we can do about testing productivity! This has always been
+part of our mission but we have not been able to produce anything worth sharing.
+We do have ideas in this space but we are generally looking for partnerships and collaborations.
+It is very likely that there will not be very much progress on this front
+because it is hard to define it properly :-(.&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;At the end of the day most of these goals compliment each other and help drive all of
+them to completion. Many of the still on-boarding people have expressed desire to
+improve their Python &amp;amp; Django skills. Working to resolve issues in the above specific
+areas will give them this opportunity! I expect they will show good progress on their respective
+tasks so we can write more about them on this blog.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 7.3</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/" rel="alternate"></link><published>2020-01-16T01:00:00+02:00</published><updated>2020-01-16T01:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-01-16:/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.3!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a critical security update for
 &lt;strong&gt;CVE-2019-19844: Potential account hijack via password reset form!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Also migrates to Django 3.0 and includes several other improvement

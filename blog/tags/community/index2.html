@@ -47,6 +47,85 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="bookmark" title="Permalink to Mid-year roadmap status report">
+                <h1 class="top-header">Mid-year roadmap status report</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="https://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
+                on Wed 25 July 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals on our
+<a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>.</p>
+<h2>Make code easier to maintain</h2>
+<p><em>Status: moderate progress</em></p>
+<p>Initially <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> reported
+a "D" rating with a 1 year estimated effort. Now it is still on "D" rating with
+a 7 months estimated effort to bring the project back in shape.
+Code smells have dropped from 600+ to 418, duplications have been reduced from 600+ to 359!
+At the same time technical debt ratio has been decreased from 32,5% to 21,6% and
+little over 10000 lines of code have been removed from the source code.
+Checkout
+<a href="https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt">the stats</a>
+for more info!</p>
+<h2>Use pylint and pylint-django</h2>
+<p><em>Status: good progress</em></p>
+<p>Both pylint and pylint-django have been integrated into our CI workflow. There are even
+a few custom built plugins that we use. The number of issues reported is down to around 900
+from 4000+ initially. The cleanup has been lead by <a href="https://github.com/asankov">Anton Sankov</a>
+with help from <a href="https://github.com/ivo0126">Ivaylo Ivanov</a> and myself.</p>
+<h2>Render HTML, return JSON</h2>
+<p><em>Status: no progress</em></p>
+<p>Several views were probably modified to return pure JSON in the meantime but we've not
+done any targeted work to resolve this issue.</p>
+<h2>Submit forms, post JSON, GET clean URLs</h2>
+<p><em>Status: no progress</em></p>
+<p>Same as above, not much has been done in this area.</p>
+<h2>API layer</h2>
+<p><em>Status: complete</em></p>
+<p>After Kiwi TCMS v4.0 the server side API has been reorganized and updated
+to follow the model/method names used internally.</p>
+<p>After the recent version 5.0 the client side API library has been stripped
+to its most basic form so that you can work directly with the responses from
+the server.</p>
+<p>There is no more duplication and ambiguity in names because there isn't
+a lot of code left!</p>
+<h2>Documentation</h2>
+<p><em>Status: moderate progress, dropped</em></p>
+<p>All RPC methods have been documented! The rest of the internals will be documented
+as we go along.</p>
+<h2>No vendored JavaScript libraries</h2>
+<p><em>Status: moderate progress</em></p>
+<p>Several JavaScript libraries have been removed but we still carry around jQuery
+and Handlebars.js. No work has been done to convert Kiwi TCMS to use the jQuery
+version provided with Django.</p>
+<h2>Less HTML templates with better organization</h2>
+<p><em>Status: minimal progress</em></p>
+<p>There are still over 100 HTML templates in Kiwi TCMS. Some of the HTML templates
+have been merged together, some email templates have been refactored and marked
+as translatable but the majority of them have not been updated for a long time.</p>
+<h2>Modern interface with Patternfly</h2>
+<p><em>Status: no progress</em></p>
+<h2>JavaScript updates and front-end testing</h2>
+<p><em>Status: small progress</em></p>
+<p>A number of JavaScript functions have been refactored and removed during the
+past few releases but there are still thousands of lines of code left to deal with.</p>
+<h2>Community efforts</h2>
+<p><em>Status: moderate progress</em></p>
+<p>We are seeing a steady stream of new users registered on
+<a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> and
+there are several active contributors (issues, translations).</p>
+<p>Kiwi TCMS was represented at OSCAL Tirana, DjangoCon Heidelberg and PyCon Prague!
+We're planning to attend HackConf and OpenFest in Sofia by the end of the year.</p>
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/" rel="bookmark" title="Permalink to Kiwi TCMS conference presence">
                 <h1 class="top-header">Kiwi TCMS conference presence</h1>
             </a>
