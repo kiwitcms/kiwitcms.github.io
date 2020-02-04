@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-01-17T19:40:00+02:00</updated><entry><title>Project roadmap 2020</title><link href="https://kiwitcms.org/blog/atodorov/2020/01/17/project-roadmap-2020/" rel="alternate"></link><published>2020-01-17T19:40:00+02:00</published><updated>2020-01-17T19:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2020-01-17:/blog/atodorov/2020/01/17/project-roadmap-2020/</id><summary type="html">&lt;p&gt;Hello testers,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-02-04T18:25:00+02:00</updated><entry><title>GitHub OAuth tokens have been revoked</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/" rel="alternate"></link><published>2020-02-04T18:25:00+02:00</published><updated>2020-02-04T18:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-02-04:/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/</id><summary type="html">&lt;p&gt;Hello testers as we've
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/"&gt;stated previously&lt;/a&gt;
+Kiwi TCMS has migrated to a new GitHub backend. The previous OAuth
+application with ID &lt;code&gt;e45b09369720518e1fc3&lt;/code&gt; has been deprecated.&lt;/p&gt;
+&lt;p&gt;OAuth tokens for this application have been revoked and you should have
+received an email notification from GitHub about this.&lt;/p&gt;
+&lt;p&gt;If you still have an …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers as we've
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/"&gt;stated previously&lt;/a&gt;
+Kiwi TCMS has migrated to a new GitHub backend. The previous OAuth
+application with ID &lt;code&gt;e45b09369720518e1fc3&lt;/code&gt; has been deprecated.&lt;/p&gt;
+&lt;p&gt;OAuth tokens for this application have been revoked and you should have
+received an email notification from GitHub about this.&lt;/p&gt;
+&lt;p&gt;If you still have an active Marketplace listing we kindly ask you to
+cancel it until we're able to deploy the improved integration on
+GitHub Marketplace again.&lt;/p&gt;
+&lt;p&gt;Thank you!&lt;/p&gt;</content></entry><entry><title>Project roadmap 2020</title><link href="https://kiwitcms.org/blog/atodorov/2020/01/17/project-roadmap-2020/" rel="alternate"></link><published>2020-01-17T19:40:00+02:00</published><updated>2020-01-17T19:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2020-01-17:/blog/atodorov/2020/01/17/project-roadmap-2020/</id><summary type="html">&lt;p&gt;Hello testers,
 the Kiwi TCMS team sat down together last week and talked about what we feel
 is important for us during the upcoming year. This blog post outlines our
 roadmap for 2020!&lt;/p&gt;

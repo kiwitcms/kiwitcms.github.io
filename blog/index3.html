@@ -47,6 +47,134 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="bookmark" title="Permalink to Kiwi TCMS 6.1">
+                <h1 class="top-header">Kiwi TCMS 6.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sat 20 October 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 6.1! This release
+introduces new database migrations,
+internal updates and bug fixes. It is a small release designed
+to minimize the number of database migrations by squashing them together.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>.</p>
+<p><strong>NOTE:</strong> there is the 6.0.1 release which resolves an upgrade problem
+caused by non-applied migrations which have been later squashed and
+released in the same release! It is best to jump through the intermediate
+releases to ensure a smooth upgrade!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-0">
+<h2>Changes since Kiwi TCMS 6.0</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update <a class="reference external" href="https://github.com/pycontribs/jira">Jira from 1.0.10 to 2.0.0</a></li>
+<li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.55.0</a></li>
+<li>Use button instead of HTML link for deleting test plan (Oleg Kainov)</li>
+<li>New middleware that will check missing settings. At the moment will only
+check Base URL configuration which often gets forgotten!</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Hot-fix for error caused by the API method <tt class="docutils literal">TestRun.update</tt>. Error was
+initially reported on
+<a class="reference external" href="https://stackoverflow.com/questions/52865463/">StackOverflow</a>.
+This patch makes it possible to use the API without crashing however the
+<tt class="docutils literal">TestRun.update</tt> method doesn't handle the <tt class="docutils literal">stop_date</tt> field at the moment!</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated translation source strings</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Fix pylint errors (Ivaylo Ivanov)</li>
+<li>Remove unused <tt class="docutils literal">TestRun.list</tt> and <tt class="docutils literal">TestCase.list_confirmed</tt> methods</li>
+<li>Remove unused <tt class="docutils literal">plan_by_id_or_name()</tt> and <tt class="docutils literal">is_int()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/269">Issue #269</a></li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li>Rename <tt class="docutils literal">tcms.core.contrib.auth</tt> to <tt class="docutils literal">tcms.kiwi_auth</tt></li>
+<li>Remove field <tt class="docutils literal">user</tt> from <tt class="docutils literal">TestCaseTag</tt>, <tt class="docutils literal">TestRunTag</tt> and <tt class="docutils literal">TestPlanTag</tt>
+models</li>
+<li>Squash migrations for <tt class="docutils literal">management</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testcases</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testplans</tt> app</li>
+<li>Squash migrations for <tt class="docutils literal">testruns</tt> app</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+<div class="section" id="subscription-based-online-service">
+<h2>Subscription based online service</h2>
+<p>We are planning to convert
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.</p>
+<p>The income from this service will go towards covering operating costs and
+supporting the
+<a class="reference external" href="https://kiwitcms.org/team/">development team</a>. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+</div>
+<div class="section" id="plans-to-remove-deprecated-functionality">
+<h2>Plans to remove deprecated functionality</h2>
+<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
+<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="https://kiwitcms.org/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/" rel="bookmark" title="Permalink to Kiwi TCMS team updates">
                 <h1 class="top-header">Kiwi TCMS team updates</h1>
             </a>
@@ -2070,120 +2198,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre></div>
 
 
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="bookmark" title="Permalink to Kiwi TCMS roadmap for 2018">
-                <h1 class="top-header">Kiwi TCMS roadmap for 2018</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Mon 22 January 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>Hello everyone. As you know Kiwi TCMS has been around for a while and it has
-gone through some big changes in the last year! It started as an abandoned
-Django 1.6 project with broken test suite and is now currently running on the
-latest Django 2.0.1 with Python 3.5! It is clearly a legacy code base!</p>
-<p>We, the Kiwi TCMS team, have learned a lot more about the project and this
-blog post describes our roadmap for 2018 in terms of technical work and community
-engagement. The general technical direction is cleaner/simpler code,
-improved UI/UX and more tests!</p>
-<h2>Make code easier to maintain</h2>
-<p>The current code is a bunch of very large modules and functions and classes
-bundled together. It is also old and sometimes looks like spaghetti code.
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> gives us a "D" rating
-for maintainability with a 1 year estimated effort to fix that. There are 600+
-code smells and 600+ duplications detected by CodeClimate. Our goal is to get this
-number down to zero!</p>
-<h2>Use pylint and pylint-django</h2>
-<p>pylint is the standard static analyzer for Python and currently it reports over
-4000 errors and warnings when executed against Kiwi TCMS. This is a huge number and
-it needs to become zero! We've also identified interesting patterns that will
-make it into pylint and pylint-django plugins!</p>
-<h2>Render HTML, return JSON</h2>
-<p>The current state of affairs is a mix and match of everything. There are views that
-render HTML, others which return pure JSON, other which return HTML encoded as JSON string
-and probably everything in between. Views that render pages need to do just that
-and views that are used with AJAX calls from the UI need to return pure JSON!
-A lot of these are hiding in plain sight and will come to light when we start
-overhauling the user interface.</p>
-<h2>Submit forms, post JSON, GET clean URLs</h2>
-<p>There are lots of forms in Kiwi TCMS. Sometimes they are submitted by the user and
-other times they are serialized and POSTed by some JavaScript code. This isn't
-very easy to understand plus this entire home-grown utility code doesn't bring
-anything useful to the project. All of these need to be identified and cleaned up.
-JavaScript code needs to send or consume JSON, nothing else!</p>
-<p>There are also lots of places where Kiwi issues GET requests with a number of
-query parameters. Our goal is to minimize these and where possible have the
-parameters as part of the Django urls scheme, not as query strings.</p>
-<h2>API layer</h2>
-<p>The current API module is a bit disorganized. API namespaces don't match the
-names of the underlying DB models and the API client classes don't match any
-of the other two! The way we pass parameters and what these parameters are
-named should match between the client, the RPC method and the underlying model!</p>
-<p>In earlier releases we've removed duplicate or similar RPC methods and we
-think there are more of these that need our love.</p>
-<h2>Documentation</h2>
-<p>We've started producing documentation from doc-strings and most of the RPC
-methods have such. However it is unformatted and barely readable, sometimes
-even inaccurate. Previous releases made progress on this but there's a lot
-more to cover.</p>
-<p>All RPC methods should be documented first and then the rest of Kiwi's
-internals to make development easier!</p>
-<h2>No vendored JavaScript libraries</h2>
-<p>There are 11 vendored-in JavaScript files that we carry around in Kiwi TCMS.
-Most notable are jQuery plus a few addons and Handlebars.js. To the extent possible
-our goal is to use jQuery provided by Django or installed via NPM dependencies!</p>
-<h2>Less HTML templates with better organization</h2>
-<p>There are over 100 HTML templates in Kiwi TCMS. There are also email and even
-JavaScript templates. For example there are <code>get_cases.html</code> and <code>get_review_cases.html</code>
-which are essentially the same. This is kind of also true for templates used in
-new and edit views! Such templates should be unified!</p>
-<p>Those JavaScript templates need to be totally gone!</p>
-<p>All templates are stuffed together in a single directory and their names
-are not very predictable. They need to be split per application and follow
-some kind of naming convention.</p>
-<h2>Modern interface with Patternfly</h2>
-<p>The UI already uses the Patternfly library for some of its widgets. Most notably
-the main navigation header. Our goal is for the entire UI to be ported to Patternfly
-by updating widgets HTML and CSS where needed.
-This will also help clean things up a lot. At the same time we'll be rethinking how
-information is organized on screen and how the person interacts with it! Usability
-suggestions are very welcome!</p>
-<p>This move will also help us get rid of the Handlebars dependency which is now
-used for pop-up dialogs.</p>
-<h2>JavaScript updates and front-end testing</h2>
-<p>There's lots of JavaScript code on the front-end and honestly we don't quite know
-what it does or how it is organized. There are also no tests on the front-end
-whatsoever!</p>
-<p>It is our goal for this to change with the intention to not overdo the JavaScript
-part and keep things very minimal. At the moment we're thinking about vanilla jQuery
-that will act as a proxy between the browser and the back-end!</p>
-<h2>Community efforts</h2>
-<p>A year ago hardly anybody knew what Kiwi TCMS was, the project didn't even have
-this name, there was 1 active contributor and hardly any users! Now the community
-has started to slowly revitalize, we're seeing some contributions from our
-junior team members (more on this in another blog post) and also seeing
-folks installing and using Kiwi TCMS and reporting interesting bugs and feature
-requests around it!</p>
-<p>For the upcoming year our goal is to seek active engagement with other open source
-projects that could make use of Kiwi TCMS and work with them. Kudos to
-openSUSE for being the first
-<a href="https://github.com/openSUSE/mentoring/issues/95">to propose such integration</a>!
-We're also planning couple of appearances at a few conferences but there's
-nothing confirmed yet.</p>
-<p>Every other contribution in terms of bug reports, new users and feature requests
-is of course welcome but we're very conscious of the fact that there's tons
-of work to be done and the team is still very small!</p>
-<p>Team wise we'd like to get the existing team members up to speed and tackle
-the above tasks with priority. This will also help us introduce bug fixes
-and new features more quickly!</p>
 <p>Happy testing!</p>
         </div>
     </section>
