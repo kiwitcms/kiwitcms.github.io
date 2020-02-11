@@ -47,6 +47,62 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="https://kiwitcms.org/blog/atodorov/2020/02/11/i-deleted-our-newsletter-from-mailchimp-please-re-subscribe/" rel="bookmark" title="Permalink to I deleted our newsletter from Mailchimp ! Please re-subscribe">
+                <h1 class="top-header">I deleted our newsletter from Mailchimp ! Please re-subscribe</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="https://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
+                on Tue 11 February 2020
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Hello testers,
+I have to admit that I made a rookie mistake and deleted the entire email database
+for the Kiwi TCMS
+<a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">newsletter</a>!
+And of course we didn't have a backup of this database :-(. Please
+<a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">re-subscribe here</a>
+and read below if you are interested to know what happened.</p>
+<p>Last week, while exploring how to cancel active subscriptions for our
+deprecated GitHub Marketplace listing I found there is no way to cancel
+those programatically. So I've compiled a list of email addresses and decided
+to send subscribers an email asking them to cancel their subscriptions.</p>
+<p>For this purpose I decided to import the contacts into Mailchimp because
+it gives you a better interface to design the actual message, include images
+in the message body, preview and test the message before it is sent! The import
+of addresses went fine, new addresses were tagged appropriately to separate them
+from the rest of the newsletter audience <strong>but</strong> they were not subscribed to
+receive emails automatically.</p>
+<p>I selected "non-subscribed" option when importing as a second barrier to
+accidentally emailing people who do not want to receive regular news from us!
+However it turned out Mailchimp can't send messages to non-subscribed addresses!
+Maybe that's part of their attempts to be GDPR compliant.</p>
+<p>So I decided to delete the freshly imported addresses, import them again
+and this time tag + subscribe them during the import! When selecting the addresses
+for deletion I am 99% confident I did filter them by tag first and then selected
+<strong>DELETE</strong>! And the entire contacts list was gone!</p>
+<p>I've also contacted Mailchimp immediately to ask whether or not the addresses
+can be restored. Unfortunately they are trying to be super GDPR compliant and
+claim they don't have this information into their system anymore.
+And in this particular case we've been relying on the vendor to keep backups
+on their end so didn't even think about trying to backup this database!</p>
+<p>For users who have accounts at
+<a href="https://public.tenant.kiwitcms.org">https://public.tenant.kiwitcms.org</a>
+we do have
+their email addresses but we're not going to automatically re-subscribe them.
+We've stopped auto-subscribing
+<a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/">2 years ago</a> and also there's
+no way of telling which addresses were on the list in the first hand.</p>
+<p>Please
+<a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">re-subscribe here</a>
+and I promise we're going to start backing up the newsletter database as well.</p>
+<p>Thank you!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/" rel="bookmark" title="Permalink to GitHub OAuth tokens have been revoked">
                 <h1 class="top-header">GitHub OAuth tokens have been revoked</h1>
             </a>
@@ -2246,47 +2302,6 @@ highlight some of our milestones. Here's the short version:</p>
   in the Best Tech Community category!</li>
 </ul>
 <p>Thanks you &amp; happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="https://kiwitcms.org/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/" rel="bookmark" title="Permalink to Pylint workshop with Django Bulgaria user group">
-                <h1 class="top-header">Pylint workshop with Django Bulgaria user group</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="https://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-                on Sat 25 May 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>On Tuesday I hosted my pylint workshop during the regular
-<a href="https://www.facebook.com/events/295673718035353/">Django Bulgaria meetup</a>.
-This edition was the first which was practice based.</p>
-<p>Attendance numbers were low but participation was very good. We managed to
-create 4 new checkers for Kiwi TCMS:</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/949">PR #949 - AutoField checker</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/950">PR #950 - OneToOneField checker</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/951">PR #951 - discover directories without __init__.py</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/952">PR #952 - empty class checker</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/955">PR #955 - function based view checker</a></li>
-</ul>
-<p>Many thanks to all contributors. These new checkers have discovered quite a
-few new issues with Kiwi TCMS so this is an area which our team is going to improve.</p>
-<p>Those who missed the workshop will be able to catch up one of the next editions:</p>
-<ul>
-<li>26-29 August, GUADEC, Thessaloniki - TBC (presentation)</li>
-<li>end of September, Python meetup, Zagreb - TBA</li>
-<li>03-05 October, PyCon Balkan, Belgrade - TBC</li>
-<li>11-13 October, HackConf, Sofia</li>
-<li>15-17 October, TestCon Europe, Vilnius - TBC (backup presentation)</li>
-<li>23-25 October, Testwarez, Ossa, Poland - TBC (presentation)</li>
-<li>14-15 November, Software Engineering Conference Russia, Saint-Petersburg - TBC</li>
-<li>20-22 November, ConTEST, New York - TBC (workshop and/or presentation)</li>
-</ul>
-<p>Happy testing!</p>
         </div>
     </section>
 

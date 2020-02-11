@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-02-04T18:25:00+02:00</updated><entry><title>GitHub OAuth tokens have been revoked</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/" rel="alternate"></link><published>2020-02-04T18:25:00+02:00</published><updated>2020-02-04T18:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-02-04:/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/</id><summary type="html">&lt;p&gt;Hello testers as we've
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-02-11T12:25:00+02:00</updated><entry><title>I deleted our newsletter from Mailchimp ! Please re-subscribe</title><link href="https://kiwitcms.org/blog/atodorov/2020/02/11/i-deleted-our-newsletter-from-mailchimp-please-re-subscribe/" rel="alternate"></link><published>2020-02-11T12:25:00+02:00</published><updated>2020-02-11T12:25:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:kiwitcms.org,2020-02-11:/blog/atodorov/2020/02/11/i-deleted-our-newsletter-from-mailchimp-please-re-subscribe/</id><summary type="html">&lt;p&gt;Hello testers,
+I have to admit that I made a rookie mistake and deleted the entire email database
+for the Kiwi TCMS
+&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;newsletter&lt;/a&gt;!
+And of course we didn't have a backup of this database :-(. Please
+&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;re-subscribe here&lt;/a&gt;
+and read below if you are interested to know what happened.&lt;/p&gt;
+&lt;p&gt;Last week …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers,
+I have to admit that I made a rookie mistake and deleted the entire email database
+for the Kiwi TCMS
+&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;newsletter&lt;/a&gt;!
+And of course we didn't have a backup of this database :-(. Please
+&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;re-subscribe here&lt;/a&gt;
+and read below if you are interested to know what happened.&lt;/p&gt;
+&lt;p&gt;Last week, while exploring how to cancel active subscriptions for our
+deprecated GitHub Marketplace listing I found there is no way to cancel
+those programatically. So I've compiled a list of email addresses and decided
+to send subscribers an email asking them to cancel their subscriptions.&lt;/p&gt;
+&lt;p&gt;For this purpose I decided to import the contacts into Mailchimp because
+it gives you a better interface to design the actual message, include images
+in the message body, preview and test the message before it is sent! The import
+of addresses went fine, new addresses were tagged appropriately to separate them
+from the rest of the newsletter audience &lt;strong&gt;but&lt;/strong&gt; they were not subscribed to
+receive emails automatically.&lt;/p&gt;
+&lt;p&gt;I selected "non-subscribed" option when importing as a second barrier to
+accidentally emailing people who do not want to receive regular news from us!
+However it turned out Mailchimp can't send messages to non-subscribed addresses!
+Maybe that's part of their attempts to be GDPR compliant.&lt;/p&gt;
+&lt;p&gt;So I decided to delete the freshly imported addresses, import them again
+and this time tag + subscribe them during the import! When selecting the addresses
+for deletion I am 99% confident I did filter them by tag first and then selected
+&lt;strong&gt;DELETE&lt;/strong&gt;! And the entire contacts list was gone!&lt;/p&gt;
+&lt;p&gt;I've also contacted Mailchimp immediately to ask whether or not the addresses
+can be restored. Unfortunately they are trying to be super GDPR compliant and
+claim they don't have this information into their system anymore.
+And in this particular case we've been relying on the vendor to keep backups
+on their end so didn't even think about trying to backup this database!&lt;/p&gt;
+&lt;p&gt;For users who have accounts at
+&lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+we do have
+their email addresses but we're not going to automatically re-subscribe them.
+We've stopped auto-subscribing
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/"&gt;2 years ago&lt;/a&gt; and also there's
+no way of telling which addresses were on the list in the first hand.&lt;/p&gt;
+&lt;p&gt;Please
+&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;re-subscribe here&lt;/a&gt;
+and I promise we're going to start backing up the newsletter database as well.&lt;/p&gt;
+&lt;p&gt;Thank you!&lt;/p&gt;</content></entry><entry><title>GitHub OAuth tokens have been revoked</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/" rel="alternate"></link><published>2020-02-04T18:25:00+02:00</published><updated>2020-02-04T18:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-02-04:/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/</id><summary type="html">&lt;p&gt;Hello testers as we've
 &lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/"&gt;stated previously&lt;/a&gt;
 Kiwi TCMS has migrated to a new GitHub backend. The previous OAuth
 application with ID &lt;code&gt;e45b09369720518e1fc3&lt;/code&gt; has been deprecated.&lt;/p&gt;
