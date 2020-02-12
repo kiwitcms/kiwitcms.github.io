@@ -120,7 +120,7 @@ switching to Postgres first and then upgrading!</p>
 </li>
 <li><p class="first"><tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from MariaDB 5.5 to MariaDB 10.3.
 The 10.x MariaDB containers change their <tt class="docutils literal">datadir</tt> configuration from
-<tt class="docutils literal">/var/lib/mysql</tt> to <tt class="docutils literal">/var/lib/mysql/data</tt>! We recomment first upgrading
+<tt class="docutils literal">/var/lib/mysql</tt> to <tt class="docutils literal">/var/lib/mysql/data</tt>! We recommend first upgrading
 your MariaDB version, using Kiwi TCMS 7.3 and afterwards upgrading to
 Kiwi TCMS 8.0:</p>
 <ol class="arabic">
@@ -278,7 +278,7 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 cd path/containing/docker-compose/
 docker-compose down
 docker pull kiwitcms/kiwi
-docker pull centos/mariadb
+docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
