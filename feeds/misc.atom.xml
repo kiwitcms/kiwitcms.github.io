@@ -151,7 +151,7 @@ newest API. At the time of Kiwi TCMS v8.0 release their versions are:&lt;/p&gt;
 &lt;li&gt;Make &lt;tt class="docutils literal"&gt;tcms.tests.storage.RaiseWhenFileNotFound`&lt;/tt&gt; capable of finding
 finding static files on Windows which enables development mode for folks
 not using Linux environment. See
-&lt;a class="reference external" href="https://stackoverflow.com/questions/55297178"&gt;SO #55297178&lt;/a&gt; (Mfo Eti-mfon)&lt;/li&gt;
+&lt;a class="reference external" href="https://stackoverflow.com/questions/55297178"&gt;SO #55297178&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
 &lt;li&gt;Allow changing test execution status without adding comment. Fixes
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1261"&gt;Issue #1261&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Properly refresh test run progress bar when changing statuses. Fixes
