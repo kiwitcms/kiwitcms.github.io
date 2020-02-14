@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - We're not participating in "QA of the year" award</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="ironically because of a bug" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="We're not participating in "QA of the year" award">
+            <meta name="twitter:description" content="ironically because of a bug">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:card" content="summary_large_image">
+                <meta property="twitter:image" content="https://kiwitcms.org/images/award.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/14/were-not-participating-in-qa-of-the-year-award/" />
+        <meta property="og:title" content="We're not participating in "QA of the year" award" />
+        <meta property="article:published_time" content="2020-02-14 14:45:00+02:00">
+            <meta property="og:description" content="ironically because of a bug">
+
+                <meta property="og:image" content="https://kiwitcms.org/images/award.png">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="https://kiwitcms.org/theme/style/style.css" rel="stylesheet">
+        <link href="https://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="https://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://kiwitcms.org/theme/fontawesome-free-5.6.3-web/css/all.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="https://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="https://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="https://kiwitcms.org/features/">Features</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="https://kiwitcms.org/community/">Community</a></li>
+                    <li><a href="https://kiwitcms.org/support/">Support</a></li>
+                    <li><a href="https://kiwitcms.org/blog/">Blog</a></li>
+                    <li><a href="https://kiwitcms.org/team/">Team</a></li>
+                    <li>
+                        <form action="https://google.com/search" method="get">
+                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">We're not participating in "QA of the year" award</h1>
+        <h2 class="top-subheader">ironically because of a bug</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Fri 14 February 2020
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+
+        <div id="codefund"></div>
+        <script src="https://app.codefund.io/properties/676/funder.js" async="async"></script>
+
+        <p>Hello testers,
+this is the story of how our team is not taking part of
+the "QA of the year" contest organized by the
+<a href="https://qachallengeaccepted.com/">QA: Challenge Accepted</a> conference despite
+<a href="https://www.facebook.com/groups/qabulgaria/permalink/2542909712425297/">being nominated by Alex</a>.
+In collaboration with Peter Sabev (organizer) we've managed to figure out what happened:</p>
+<ul>
+<li>On Nov 17th Alex nominated the Kiwi TCMS team for the award</li>
+<li>Last week Alex discovered our team is not listed on the voting page</li>
+<li>The Peter told us he's not seen any nomination related to
+  Kiwi TCMS at all which made everything feel even stranger</li>
+<li>We've managed to dig out browser history from November
+  and it clearly shows the nomination form was submitted correctly</li>
+<li>It was even possible to load the confirmation URL and edit the
+  submission</li>
+<li>Upon second submission the nomination was clearly visible on the
+  other side, Peter confirmed this</li>
+</ul>
+<p>Then after a few days we've got word back - Peter had figured out what
+happened. Apparently the same Google form has been opened on 2 different
+computers and one of them overwrote the existing submissions.</p>
+<p>This kind of issue can be avoided by employing the following measures:</p>
+<ul>
+<li>Make the submission results public so that everyone can verify their nomination
+  is indeed present on the list. It does take away anonymity and can also expose
+  personal information like email/phone/employer. ID, name and submission time-stamp
+  however will be enough</li>
+<li>History of edits could also be exposed publicly for extra safety</li>
+<li>Turn on some sort of overwrite protection similar to what you have for git
+  branches. At the very least have a warning before allowing data overwrite</li>
+<li>Turn on email confirmation - the existing form didn't have this enabled</li>
+<li>On our side: double check submission has been received - will put more
+  pressure on the organizing team</li>
+</ul>
+<p>Sadly the issue was discovered after
+the submission deadline has ended so Kiwi TCMS can't participate in this year's contest.
+We wish the rest of the finalists best of luck and we're going to see you
+at QA: Challenge Accepted next month.</p>
+<p>Happy testing!</p>
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+    <section class="col-12 comments secondary">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/14/were-not-participating-in-qa-of-the-year-award/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2020/02/14/were-not-participating-in-qa-of-the-year-award/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div class="col-10 footer-copyright">
+                <p>Kiwi TCMS is sponsored by <a href="https://opencollective.com/kiwitcms">Open Source Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
