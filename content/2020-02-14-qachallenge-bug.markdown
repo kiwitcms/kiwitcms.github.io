@@ -1,4 +1,4 @@
-Title: We're not participating in "QA of the year" award
+Title: We're not participating in 'QA of the year' award
 Headline: ironically because of a bug
 date: 2020-02-14 14:45
 comments: true
