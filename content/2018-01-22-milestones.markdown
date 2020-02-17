@@ -4,7 +4,7 @@ date: 2018-01-22 12:10
 comments: true
 og_image: images/roadmap.jpg
 twitter_image: images/roadmap.jpg
-tags: community
+tags: community, roadmap
 
 Hello everyone. As you know Kiwi TCMS has been around for a while and it has
 gone through some big changes in the last year! It started as an abandoned
