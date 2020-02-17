@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-02-14T14:45:00+02:00</updated><entry><title>We're not participating in 'QA of the year' award</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/14/were-not-participating-in-qa-of-the-year-award/" rel="alternate"></link><published>2020-02-14T14:45:00+02:00</published><updated>2020-02-14T14:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-02-14:/blog/kiwi-tcms-team/2020/02/14/were-not-participating-in-qa-of-the-year-award/</id><summary type="html">&lt;p&gt;Hello testers,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-02-17T15:37:00+02:00</updated><entry><title>Catch-up with Kiwi TCMS in Sofia, Singapore, Kiev &amp; Moscow</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/17/catch-up-with-kiwi-tcms-in-sofia-singapore-kiev-moscow/" rel="alternate"></link><published>2020-02-17T15:37:00+02:00</published><updated>2020-02-17T15:37:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-02-17:/blog/kiwi-tcms-team/2020/02/17/catch-up-with-kiwi-tcms-in-sofia-singapore-kiev-moscow/</id><summary type="html">&lt;p&gt;Hello testers,
+you can catch-up with your favorite open source test case management system
+during the month of March. Here's a list of events we are going to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;March 14 - &lt;a href="https://qachallengeaccepted.com/"&gt;QA: Challenge Accepted, Sofia&lt;/a&gt;
+  where we will have an info booth. You will get a 15% community discount if
+  you …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Hello testers,
+you can catch-up with your favorite open source test case management system
+during the month of March. Here's a list of events we are going to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;March 14 - &lt;a href="https://qachallengeaccepted.com/"&gt;QA: Challenge Accepted, Sofia&lt;/a&gt;
+  where we will have an info booth. You will get a 15% community discount if
+  you email &lt;strong&gt;tickets@qachallengeaccepted.com&lt;/strong&gt; and mention this blog post&lt;/li&gt;
+&lt;li&gt;March 19-21 - &lt;a href="https://summit.fossasia.org/"&gt;OpenTechSummit, Singapore&lt;/a&gt; -
+  aka FOSS ASIA summit:&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Kiwi TCMS exhibition booth&lt;/em&gt; - 3 days&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How to write pylint plugins for fun &amp;amp; profit&lt;/em&gt; workshop on March 19th&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Testing [for] security [in] open source&lt;/em&gt; presentation on March 21st&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will be giving away 5 tickets plus a 25% discount code very soon. Waiting
+  for confirmation on those by the FOSS ASIA events team! Watch this space
+  and follow us on Twitter for more info.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;March 27-28 - &lt;a href="https://testingstage.com/"&gt;TestingStage, Kiev&lt;/a&gt; where Alex
+  will present his &lt;em&gt;Static analysis as a test tool&lt;/em&gt; session. You can also claim
+  15% ticket discount by using promo-code &lt;strong&gt;AlexanderTodorov&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;April 1-2 - &lt;a href="https://testconf.ru/"&gt;TestCon Moscow&lt;/a&gt; where Alex will present
+  the &lt;em&gt;Static analysis as a test tool&lt;/em&gt; again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Original plan was to visit &lt;a href="https://opentestcon.org/"&gt;OpenTest Con, Beijing&lt;/a&gt;
+between March 30-31 which has now been cancelled! The new plan is to
+stay 2-3 more days in Kiev and join some meetups if available.&lt;/p&gt;
+&lt;p&gt;Feel free to ping us at &lt;a href="https://twitter.com/KiwiTCMS"&gt;@KiwiTCMS&lt;/a&gt; or look for the
+kiwi bird logo and come to say hi. Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="events"></category></entry><entry><title>We're not participating in 'QA of the year' award</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/14/were-not-participating-in-qa-of-the-year-award/" rel="alternate"></link><published>2020-02-14T14:45:00+02:00</published><updated>2020-02-14T14:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-02-14:/blog/kiwi-tcms-team/2020/02/14/were-not-participating-in-qa-of-the-year-award/</id><summary type="html">&lt;p&gt;Hello testers,
 this is the story of how our team is not taking part of
 the "QA of the year" contest organized by the
 &lt;a href="https://qachallengeaccepted.com/"&gt;QA: Challenge Accepted&lt;/a&gt; conference despite
