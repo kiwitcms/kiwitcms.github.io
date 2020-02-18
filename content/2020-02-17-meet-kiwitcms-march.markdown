@@ -19,9 +19,12 @@ during the month of March. Here's a list of events we are going to:
     - *How to write pylint plugins for fun & profit* workshop on March 19th
     - *Testing [for] security [in] open source* presentation on March 21st
 
-  We will be giving away 5 tickets plus a 25% discount code very soon. Waiting
-  for confirmation on those by the FOSS ASIA events team! Watch this space
-  and follow us on Twitter for more info.
+  To claim a free Community Standard Ticket use code
+  [atodorov](https://eventyay.com/e/a74665c3?code=atodorov). First 5 tickets
+  only!
+
+  To claim a 25% discount use code
+  [fossasia-speaker](https://eventyay.com/e/a74665c3?code=fossasia-speaker).
 
 * March 27-28 - [TestingStage, Kiev](https://testingstage.com/) where Alex
   will present his *Static analysis as a test tool* session. You can also claim
