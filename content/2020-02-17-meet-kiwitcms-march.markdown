@@ -21,9 +21,7 @@ during the month of March. Here's a list of events we are going to:
 
   To claim a free Community Standard Ticket use code
   [atodorov](https://eventyay.com/e/a74665c3?code=atodorov). First 5 tickets
-  only!
-
-  To claim a 25% discount use code
+  only! For a 25% discount use code
   [fossasia-speaker](https://eventyay.com/e/a74665c3?code=fossasia-speaker).
 
 * March 27-28 - [TestingStage, Kiev](https://testingstage.com/) where Alex
