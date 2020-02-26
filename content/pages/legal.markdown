@@ -12,7 +12,7 @@ Kiwi TCMS source code is developed by a
 Community donations are collected via
 [Open Source Collective](https://opencollective.com/kiwitcms).
 
-Project infrastructure is sponsored and maintained by:
+Project infrastructure, development and support services provided by:
 
 * Company name: Open Technologies Bulgaria, Ltd;
   doing business as [kiwitcms.org](http://kiwitcms.org) and
