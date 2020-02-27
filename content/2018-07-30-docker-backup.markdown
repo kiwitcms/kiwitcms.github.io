@@ -55,8 +55,8 @@ with the `pg_restore` command.
 
 To [drop and] restore the entire multi-tenant database:
 
-    docker volume rm kiwi_db_data
-    cat backup.bak | docker exec -i kiwi_db /bin/bash -c 'pg_restore --dbname=kiwi -v'
+    docker exec -i kiwi_db /bin/bash -c 'psql -c "DROP DATABASE IF EXISTS kiwi;"'
+    cat backup.bak | docker exec -i kiwi_db /bin/bash -c 'pg_restore --dbname=template1 -vcC'
 
 
 To [drop and] restore an individual tenant:
