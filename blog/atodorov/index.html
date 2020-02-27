@@ -1815,8 +1815,8 @@ all tenants use the following command:</p>
 contains all data and schema definitions. That is a binary file which can be read
 with the <code>pg_restore</code> command.</p>
 <p>To [drop and] restore the entire multi-tenant database:</p>
-<div class="highlight"><pre><span></span>docker volume rm kiwi_db_data
-cat backup.bak | docker exec -i kiwi_db /bin/bash -c &#39;pg_restore --dbname=kiwi -v&#39;
+<div class="highlight"><pre><span></span>docker exec -i kiwi_db /bin/bash -c &#39;psql -c &quot;DROP DATABASE IF EXISTS kiwi;&quot;&#39;
+cat backup.bak | docker exec -i kiwi_db /bin/bash -c &#39;pg_restore --dbname=template1 -vcC&#39;
 </pre></div>
 
 
