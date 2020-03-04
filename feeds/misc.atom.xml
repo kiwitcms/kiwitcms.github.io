@@ -1,5 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-02-17T15:37:00+02:00</updated><entry><title>Catch-up with Kiwi TCMS in Sofia, Singapore, Kiev &amp; Moscow</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/17/catch-up-with-kiwi-tcms-in-sofia-singapore-kiev-moscow/" rel="alternate"></link><published>2020-02-17T15:37:00+02:00</published><updated>2020-02-17T15:37:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-02-17:/blog/kiwi-tcms-team/2020/02/17/catch-up-with-kiwi-tcms-in-sofia-singapore-kiev-moscow/</id><summary type="html">&lt;p&gt;Hello testers,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/misc.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-03-04T15:50:00+02:00</updated><entry><title>Kiwi TCMS 8.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/" rel="alternate"></link><published>2020-03-04T15:50:00+02:00</published><updated>2020-03-04T15:50:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-03-04:/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+this is a small security and improvement release which
+also includes several bug fixes, internal refactoring and updated translations.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+this is a small security and improvement release which
+also includes several bug fixes, internal refactoring and updated translations.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  fbb363af2d90    557 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-8-0"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 8.0&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;JSON-RPC handler will now HTML escape all strings. This prevents XSS attacks
+via tags, components or anything else which is loaded on the web page via RPC
+and then shown as string. Even if someone saves &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;script&amp;gt;alert(123);&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/tt&gt;
+in the database the returned result will be HTML escaped and will not be executed
+as JavaScript!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is easy to exploit but people able to do so should have accounts in
+your Kiwi TCMS installation and write privileges on their accounts. If they
+do this means they can cause a lot more damage much more easily!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update Django from 3.0.3 to 3.0.4 - fixes security issue CVE-2020-9402:
+Potential SQL injection via &lt;tt class="docutils literal"&gt;tolerance&lt;/tt&gt; parameter in GIS functions and aggregates
+on Oracle which we believe does not affect Kiwi TCMS&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update bleach from 3.1.0 to 3.1.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-colorfield from 0.1.15 to 0.2.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update markdown from 3.2 to 3.2.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;On bug creation send email to assignee. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1154"&gt;Issue #1154&lt;/a&gt; (Mfon Eti-mfon)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Make it possible to provide override settings in a directory. Kiwi TCMS will
+respect:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;local_settings.py&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;local_settings_dir/*.py&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information see
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization"&gt;https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Allow adding TestPlan to TestCase via UI. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1021"&gt;Issue #1021&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add visual representation of failures in TestCase health telemetry&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add helper text to TestExecutionStatus admin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add link to discussion forum in Help menu&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCase.create()&lt;/tt&gt; method no longer accepts &lt;tt class="docutils literal"&gt;product&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt;
+fields which have previously been deprecated&lt;/li&gt;
+&lt;li&gt;API methods which receive True/False values will no longer parse yes,no,1,0 values.
+The only accepted values are boolean constants defined in the calling programming
+language which are then transmitted via XML-RPC or JSON-RPC and converted to
+native boolean on the backend&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The number of search results shown per page can now be controlled via
+&lt;tt class="docutils literal"&gt;DEFAULT_PAGE_SIZE&lt;/tt&gt; setting, which is 100 by default. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1210"&gt;Issue #1210&lt;/a&gt; (Ivailo Karabojkov)&lt;/li&gt;
+&lt;li&gt;Use comma separated display of components in bug reports. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1157"&gt;Issue #1157&lt;/a&gt; (Ivailo Karabojkov)&lt;/li&gt;
+&lt;li&gt;Update selector for 'Select All' test executions in TestRun page. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1404"&gt;Issue #1404&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix crash when sorting test cases in TestPlan page. Fixes
+&lt;a class="reference external" href="https://sentry.io/organizations/open-technologies-bulgaria-ltd/issues/1519809326/"&gt;Sentry #KIWI-TCMS-A6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix a &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;TC-undefined&lt;/span&gt;&lt;/tt&gt; displayed in TestCase health telemetry&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add test for &lt;tt class="docutils literal"&gt;TestRunAdmin.change_view()&lt;/tt&gt; (Mariyan Garvanski)&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;showCaseRunsWithSelectedStatus&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Internal JavaScript updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="github-marketplace-listing-deprecation"&gt;
+&lt;h2&gt;GitHub Marketplace listing deprecation&lt;/h2&gt;
+&lt;p&gt;As we've stated previously Kiwi TCMS has migrated to a new GitHub backend and
+OAuth tokens for the previous backend have been revoked and the
+existing listing on GitHub Marketplace is deprecated. It is a non-functioning
+app at the moment!&lt;/p&gt;
+&lt;p&gt;It is not possible for us to cancel Marketplace subscriptions programatically,
+that is GitHub does not provide such API. Active subscribers please follow these
+3 steps to help us clean up stale information:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Go to &lt;a class="reference external" href="https://github.com/marketplace/kiwi-tcms"&gt;https://github.com/marketplace/kiwi-tcms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;From &amp;quot;Edit your plan&amp;quot; button at the top select your GitHub account&lt;/li&gt;
+&lt;li&gt;Then click &amp;quot;Cancel this plan&amp;quot; link which is at the left-hand side
+at the bottom of the description box!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb-103-centos7
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Catch-up with Kiwi TCMS in Sofia, Singapore, Kiev &amp; Moscow</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/02/17/catch-up-with-kiwi-tcms-in-sofia-singapore-kiev-moscow/" rel="alternate"></link><published>2020-02-17T15:37:00+02:00</published><updated>2020-02-17T15:37:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-02-17:/blog/kiwi-tcms-team/2020/02/17/catch-up-with-kiwi-tcms-in-sofia-singapore-kiev-moscow/</id><summary type="html">&lt;p&gt;Hello testers,
 you can catch-up with your favorite open source test case management system
 during the month of March. Here's a list of events we are going to:&lt;/p&gt;
 &lt;ul&gt;
