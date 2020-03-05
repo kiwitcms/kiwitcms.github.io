@@ -23,6 +23,9 @@ during the month of March. Here's a list of events we are going to:
   [atodorov](https://eventyay.com/e/a74665c3?code=atodorov). First 5 tickets
   only! For a 25% discount use code
   [fossasia-speaker](https://eventyay.com/e/a74665c3?code=fossasia-speaker).
+  For a 25% discount use code
+  [exhibitor-friends](https://eventyay.com/e/a74665c3?code=exhibitor-friends)
+  - applies only to Community Standard Ticket.
 
 * March 27-28 - [TestingStage, Kiev](https://testingstage.com/) where Alex
   will present his *Static analysis as a test tool* session. You can also claim
