@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-03-04T15:50:00+02:00</updated><entry><title>Kiwi TCMS 8.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/" rel="alternate"></link><published>2020-03-04T15:50:00+02:00</published><updated>2020-03-04T15:50:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-03-04:/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.1!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-03-27T10:47:00+02:00</updated><entry><title>Kiwi TCMS is Open Source Seed Award winner</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/" rel="alternate"></link><published>2020-03-27T10:47:00+02:00</published><updated>2020-03-27T10:47:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-03-27:/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/</id><summary type="html">&lt;p&gt;Kiwi TCMS is the proud winner of a $10,000 award from Mozilla, Indeed,
+Open Collective, Ford Foundation &amp;amp; Simply Secure. Read below for the full story!&lt;/p&gt;
+&lt;p&gt;At the end of January Zahari alerted our team about the
+&lt;a href="https://opencollective.com/open-source-speed-dating/events/open-source-speed-dating-fosdem-2020-96f78c6c"&gt;Open Source Speed Dating FOSDEM 2020&lt;/a&gt;
+event and Alex was very swift in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS is the proud winner of a $10,000 award from Mozilla, Indeed,
+Open Collective, Ford Foundation &amp;amp; Simply Secure. Read below for the full story!&lt;/p&gt;
+&lt;p&gt;At the end of January Zahari alerted our team about the
+&lt;a href="https://opencollective.com/open-source-speed-dating/events/open-source-speed-dating-fosdem-2020-96f78c6c"&gt;Open Source Speed Dating FOSDEM 2020&lt;/a&gt;
+event and Alex was very swift in filing the application form. Just as we landed
+in Brussels, ready to host
+&lt;a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/11/26/kiwi-tcms-is-going-to-fosdem-2020/"&gt;Testing and Automation devroom and the Open Source Test Management stand&lt;/a&gt;,
+we got the news - Kiwi TCMS has been selected as a participant.&lt;/p&gt;
+&lt;p&gt;What followed was a very hasty day of preparing a 5 min pitch and rehearsing it
+as much as possible so we can be ready to present our project. Alex prepared the
+pitch and made final review and polishing together with Anton.
+For the record everything was written down on paper,
+including important facts about the project and schedule - when and where is our slot,
+how is Alex going to get there, when does he need to leave to be on time, etc.
+We believe that preparation was key here and that's why our team always tries to
+be prepared when we participate at events! It was as good
+as it can get, no more changes!&lt;/p&gt;
+&lt;p&gt;On Feb 1st all hell broke loose - it was day #1 of FOSDEM,
+the Testing an Automation devroom was full with amazing speakers and packed with people,
+&lt;a href="https://fosdem.org/2020/schedule/track/testing_and_automation/"&gt;watch videos here&lt;/a&gt;,
+there was barely time to eat or drink water and at 5PM Alex had to rush across town to pitch
+Kiwi TCMS!&lt;/p&gt;
+&lt;p&gt;Then everything went like clockwork - weather was warm for the season,
+Alex decided to walk from ULB to La Tricoterie, both so he doesn't get stuck in traffic but
+also to regulate stress level and be clear minded for what comes next. He arrived just on
+time to meet with new folks and have a glass of wine before taking his turn with the judges.&lt;/p&gt;
+&lt;p&gt;Open Source Speed Dating is a format where projects pitch to a team of 3 judges who then
+follow up with various questions. Their goal is to assess how suitable your project is
+for the money they are giving away but also how would actually receiving an award help the project.
+You do get guidance how to prepare and what sort of information the judges are looking for.
+However you have no idea who the other participants are and who are you competing against!
+All you have is a 15 minutes slot where you have to give the best of you and hope it is
+enough.&lt;/p&gt;
+&lt;p&gt;Afterwards we reunited together, did even more walking, played the SPACESHIP at
+&lt;em&gt;Let Me Out&lt;/em&gt; escape room and finished with a mandatory team dinner in the hearth of Brussels.&lt;/p&gt;
+&lt;p&gt;Following an internal selection process and due diligence we finally received the award.
+&lt;a href="https://opencollective.com/kiwitcms/transactions"&gt;$10,000 for open source&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;As a side note we also got to know who the other winners are, which can be seen from
+&lt;a href="https://opencollective.com/open-source-speed-dating/transactions"&gt;Open Source Speed Dating records&lt;/a&gt;:
+F-Droid, ossia, MNT Research GmbH and Kiwi TCMS!&lt;/p&gt;
+&lt;h2&gt;We’re giving all of it to our community&lt;/h2&gt;
+&lt;p&gt;All money from the &lt;a href="https://opencollective.com/kiwitcms/"&gt;Kiwi TCMS Collective&lt;/a&gt;
+will be going towards funding development tasks.
+Like Alex told the judges - this will help us enable more hands working on Kiwi TCMS
+and complete pending work faster. Stay tuned for our bounty program announcement!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 8.1</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/" rel="alternate"></link><published>2020-03-04T15:50:00+02:00</published><updated>2020-03-04T15:50:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-03-04:/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.1!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 this is a small security and improvement release which
 also includes several bug fixes, internal refactoring and updated translations.
