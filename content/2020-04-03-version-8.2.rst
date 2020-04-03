@@ -1,0 +1,146 @@
+Kiwi TCMS 8.2
+#############
+
+:headline: update 3rd party libraries, small improvements & API changes
+:date: 2020-04-03 22:25
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 8.2!
+
+**IMPORTANT:** 
+this is a small release which updates 3rd party libraries,
+provides minor improvements, minor API changes and some new translations.
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+
+Supported upgrade paths::
+
+    5.3   (or older) -> 5.3.1
+    5.3.1 (or newer) -> 6.0.1
+    6.0.1            -> 6.1
+    6.1              -> 6.1.1
+    6.1.1            -> 6.2 (or newer)
+
+Docker images::
+
+    kiwitcms/kiwi       latest  7c1b947b9a43    561 MB
+    kiwitcms/kiwi       6.2     7870085ad415    957 MB
+    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+    kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+    kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+    kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+
+
+Changes since Kiwi TCMS 8.1
+---------------------------
+
+Improvements
+~~~~~~~~~~~~
+
+- Update bleach from 3.1.1 to 3.1.4
+- Update django from 3.0.4 to 3.0.5
+- Update django-colorfield from 0.2.1 to 0.2.2
+- Update pygithub from 1.46 to 1.47
+- Update python-gitlab from 2.0.1 to 2.1.2
+- Update marked(js) to version 0.8.2
+- Change default MariaDB charset and collation to utf8mb4. Will only affect
+  new installations. Closes
+  `Issue #327 <https://github.com/kiwitcms/Kiwi/issues/327>`_
+- Document ``TCMS_PLAN_ID`` ENV variable supported by automation framework
+  plugins
+- Test case Search page now allows searching for records containing the
+  specified text. Closes #1209 @Schwarzkrieger
+- Provide ``../site-packages/tcms_settings_dir/`` when installing Kiwi TCMS
+  which is an empty pkgutil-style namespace where other packages can drop
+  their configuration
+- Hide empty values in Execution trends chart tooltips
+
+
+API
+~~~
+
+- Remove ``Auth.login_krbv()`` method
+- Method ``TestRun.update()`` will now accept ``%Y-%m-%d %H:%M:%S``
+  timestamp format. The previous format ``%Y-%m-%d`` is also supported
+- Method ``TestExecution.create()`` now defaults to first neutral status
+  instead of searching for the hard-coded ``IDLE``. That means newly created
+  test executions which do not specify status will be created with the first
+  neutral status found in the database
+
+
+Refactoring
+~~~~~~~~~~~
+
+- Fix pylint errors. Closes
+  `Issue #1510 <https://github.com/kiwitcms/Kiwi/issues/1510>`_ (@cmbahadir)
+- Add tests for ``TestRunAdmin.delete_view()`` (Mariyan Garvanski)
+- Revert "[l10n] Add Serializer class which returns untranslated models"
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Bulgarian translation <https://crowdin.com/project/kiwitcms/bg#>`_
+- Updated `Portuguese, Brazilian translation <https://crowdin.com/project/kiwitcms/pt-BR#>`_
+
+
+social-auth-kerberos v0.2.4
+---------------------------
+
+A new version of our Kerberos authentication backend has been released
+as well. For more info check
+https://github.com/kiwitcms/python-social-auth-kerberos#changelog.
+This version is included with *Kiwi TCMS Enterprise*.
+
+
+tcms-api v8.2.0
+---------------
+
+New version of our ``tcms-api`` library has been released as well.
+Notable changes include the bug-fixes for Kerberos support and the
+ability to use Kerberos on Windows. For more information see
+https://github.com/kiwitcms/tcms-api/#changelog.
+
+
+tap-plugin & junit.xml-plugin v8.2
+----------------------------------
+
+Both plugins are now using the latest version of ``tcms-api`` library
+and include additional improvements like being able to specify
+existing TestPlan and setting ``stop_date`` for the automated TestRun.
+For more information see https://github.com/kiwitcms/tap-plugin#changelog
+and https://github.com/kiwitcms/junit.xml-plugin/#changelog
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+If you are using Kiwi TCMS as a Docker container then::
+
+    cd path/containing/docker-compose/
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker pull centos/mariadb-103-centos7
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+**WHERE:** ``docker-compose.yml`` has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!
+
+**WARNING:** ``kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow::
+
+    # starting from an older Kiwi TCMS version
+    docker-compose down
+    docker pull kiwitcms/kiwi:<next_upgrade_version>
+    edit docker-compose.yml to use kiwitcms/kiwi:<next_upgrade_version>
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+    # repeat until you have reached latest
+
+Happy testing!
