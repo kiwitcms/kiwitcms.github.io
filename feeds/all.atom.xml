@@ -1,5 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-03-27T10:47:00+02:00</updated><entry><title>Kiwi TCMS is Open Source Seed Award winner</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/" rel="alternate"></link><published>2020-03-27T10:47:00+02:00</published><updated>2020-03-27T10:47:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-03-27:/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/</id><summary type="html">&lt;p&gt;Kiwi TCMS is the proud winner of a $10,000 award from Mozilla, Indeed,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="https://kiwitcms.org/" rel="alternate"></link><link href="https://kiwitcms.org/feeds/all.atom.xml" rel="self"></link><id>https://kiwitcms.org/</id><updated>2020-04-03T22:25:00+03:00</updated><entry><title>Kiwi TCMS 8.2</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/04/03/kiwi-tcms-82/" rel="alternate"></link><published>2020-04-03T22:25:00+03:00</published><updated>2020-04-03T22:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-04-03:/blog/kiwi-tcms-team/2020/04/03/kiwi-tcms-82/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.2!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+this is a small release which updates 3rd party libraries,
+provides minor improvements, minor API changes and some new translations.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1 …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.2!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+this is a small release which updates 3rd party libraries,
+provides minor improvements, minor API changes and some new translations.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  7c1b947b9a43    561 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-8-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 8.1&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update bleach from 3.1.1 to 3.1.4&lt;/li&gt;
+&lt;li&gt;Update django from 3.0.4 to 3.0.5&lt;/li&gt;
+&lt;li&gt;Update django-colorfield from 0.2.1 to 0.2.2&lt;/li&gt;
+&lt;li&gt;Update pygithub from 1.46 to 1.47&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 2.0.1 to 2.1.2&lt;/li&gt;
+&lt;li&gt;Update marked(js) to version 0.8.2&lt;/li&gt;
+&lt;li&gt;Change default MariaDB charset and collation to utf8mb4. Will only affect
+new installations. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/327"&gt;Issue #327&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Document &lt;tt class="docutils literal"&gt;TCMS_PLAN_ID&lt;/tt&gt; ENV variable supported by automation framework
+plugins&lt;/li&gt;
+&lt;li&gt;Test case Search page now allows searching for records containing the
+specified text. Closes #1209 &amp;#64;Schwarzkrieger&lt;/li&gt;
+&lt;li&gt;Provide &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;../site-packages/tcms_settings_dir/&lt;/span&gt;&lt;/tt&gt; when installing Kiwi TCMS
+which is an empty pkgutil-style namespace where other packages can drop
+their configuration&lt;/li&gt;
+&lt;li&gt;Hide empty values in Execution trends chart tooltips&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;Auth.login_krbv()&lt;/tt&gt; method&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.update()&lt;/tt&gt; will now accept &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;%Y-%m-%d&lt;/span&gt; &lt;span class="pre"&gt;%H:%M:%S&lt;/span&gt;&lt;/tt&gt;
+timestamp format. The previous format &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;%Y-%m-%d&lt;/span&gt;&lt;/tt&gt; is also supported&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestExecution.create()&lt;/tt&gt; now defaults to first neutral status
+instead of searching for the hard-coded &lt;tt class="docutils literal"&gt;IDLE&lt;/tt&gt;. That means newly created
+test executions which do not specify status will be created with the first
+neutral status found in the database&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix pylint errors. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1510"&gt;Issue #1510&lt;/a&gt; (&amp;#64;cmbahadir)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;TestRunAdmin.delete_view()&lt;/tt&gt; (Mariyan Garvanski)&lt;/li&gt;
+&lt;li&gt;Revert &amp;quot;[l10n] Add Serializer class which returns untranslated models&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#"&gt;Portuguese, Brazilian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="social-auth-kerberos-v0-2-4"&gt;
+&lt;h2&gt;social-auth-kerberos v0.2.4&lt;/h2&gt;
+&lt;p&gt;A new version of our Kerberos authentication backend has been released
+as well. For more info check
+&lt;a class="reference external" href="https://github.com/kiwitcms/python-social-auth-kerberos#changelog"&gt;https://github.com/kiwitcms/python-social-auth-kerberos#changelog&lt;/a&gt;.
+This version is included with &lt;em&gt;Kiwi TCMS Enterprise&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tcms-api-v8-2-0"&gt;
+&lt;h2&gt;tcms-api v8.2.0&lt;/h2&gt;
+&lt;p&gt;New version of our &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;tcms-api&lt;/span&gt;&lt;/tt&gt; library has been released as well.
+Notable changes include the bug-fixes for Kerberos support and the
+ability to use Kerberos on Windows. For more information see
+&lt;a class="reference external" href="https://github.com/kiwitcms/tcms-api/#changelog"&gt;https://github.com/kiwitcms/tcms-api/#changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tap-plugin-junit-xml-plugin-v8-2"&gt;
+&lt;h2&gt;tap-plugin &amp;amp; junit.xml-plugin v8.2&lt;/h2&gt;
+&lt;p&gt;Both plugins are now using the latest version of &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;tcms-api&lt;/span&gt;&lt;/tt&gt; library
+and include additional improvements like being able to specify
+existing TestPlan and setting &lt;tt class="docutils literal"&gt;stop_date&lt;/tt&gt; for the automated TestRun.
+For more information see &lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin#changelog"&gt;https://github.com/kiwitcms/tap-plugin#changelog&lt;/a&gt;
+and &lt;a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin/#changelog"&gt;https://github.com/kiwitcms/junit.xml-plugin/#changelog&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb-103-centos7
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+&lt;/pre&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS is Open Source Seed Award winner</title><link href="https://kiwitcms.org/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/" rel="alternate"></link><published>2020-03-27T10:47:00+02:00</published><updated>2020-03-27T10:47:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:kiwitcms.org,2020-03-27:/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/</id><summary type="html">&lt;p&gt;Kiwi TCMS is the proud winner of a $10,000 award from Mozilla, Indeed,
 Open Collective, Ford Foundation &amp;amp; Simply Secure. Read below for the full story!&lt;/p&gt;
 &lt;p&gt;At the end of January Zahari alerted our team about the
 &lt;a href="https://opencollective.com/open-source-speed-dating/events/open-source-speed-dating-fosdem-2020-96f78c6c"&gt;Open Source Speed Dating FOSDEM 2020&lt;/a&gt;
