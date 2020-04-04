@@ -10,7 +10,7 @@ Public Tenant users or anyone not on a commercial subscription plan:
 - Use [GitHub Issue Tracker](https://github.com/kiwitcms/Kiwi/issues) to file bugs and feature requests
 - Ask questions with ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms) tag on
   Stack Overflow
-- *Priority rule: as-we-see-fit*
+- *Priority rule: <a href="/blog/tags/roadmap">based-on-roadmap</a>*
 
 *Do not ask individual project members for support, your request will be ignored!
 Use the channels above instead,
