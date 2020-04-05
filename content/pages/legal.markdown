@@ -15,11 +15,12 @@ Community donations are collected via
 Project infrastructure, development and support services provided by:
 
 * Company name: Open Technologies Bulgaria, Ltd;
-  doing business as [kiwitcms.org](http://kiwitcms.org) and
-  [mrsenko.com](http://mrsenko.com/legal/)
 * Address: Ivan Susanin 43, Sofia 1618, Bulgaria
 * Registration number: 200601818
 * VAT number: BG200601818
+* Domain names: [kiwitcms.eu](http://kiwitcms.eu),
+                [kiwitcms.org](http://kiwitcms.org),
+                [mrsenko.com](http://mrsenko.com/legal/)
 
 
 Privacy policy
