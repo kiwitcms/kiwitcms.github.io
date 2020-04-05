@@ -16,48 +16,48 @@
         <meta name="twitter:title" content="Kiwi TCMS 5.1">
             <meta name="twitter:description" content="tech-preview: Django Report Builder">
         <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+            <meta name="twitter:image" content="/theme/images/twitter_card.png">
 
         <meta property="og:site_name" content="Kiwi TCMS">
         <meta property="og:type" content="article" />
-            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
-        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" />
+            <meta property="article:author" content="/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" />
         <meta property="og:title" content="Kiwi TCMS 5.1" />
         <meta property="article:published_time" content="2018-07-31 12:00:00+03:00">
             <meta property="og:description" content="tech-preview: Django Report Builder">
 
-            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.jpg">
+            <meta property="og:image" content="/theme/images/og_image.jpg">
         <!-- MailChimp Newsletter Form Styles -->
         <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
-        <link href="https://kiwitcms.org/theme/style/style.css" rel="stylesheet">
-        <link href="https://kiwitcms.org/theme/style/color-palette-light.css" rel="stylesheet">
-        <link href="https://kiwitcms.org/theme/style/github.css" rel="stylesheet">
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
         <!-- Other Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://kiwitcms.org/theme/fontawesome-free-5.6.3-web/css/all.min.css">
+        <link rel="stylesheet" href="/theme/fontawesome-free-5.6.3-web/css/all.min.css">
         <!-- Mobile nav script -->
-        <script type="text/javascript" src="https://kiwitcms.org/theme/scripts/mobile-nav.js"></script>
+        <script type="text/javascript" src="/theme/scripts/mobile-nav.js"></script>
 
     </head>
     <body class="" onload="setMobileNavBehaviour()">
         <!-- Nav -->
         <nav class="col-12 primary">
             <a href="/">
-                <img src="https://kiwitcms.org/theme/images/kiwi_logo_h50.png" name="logo">
+                <img src="/theme/images/kiwi_logo_h50.png" name="logo">
             </a>
             <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
             <div id="mobile-mask">
                 <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
                 <ul class="topnav">
-                    <li><a href="https://kiwitcms.org/features/">Features</a></li>
+                    <li><a href="/features/">Features</a></li>
                     <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                    <li><a href="https://kiwitcms.org/community/">Community</a></li>
-                    <li><a href="https://kiwitcms.org/support/">Support</a></li>
-                    <li><a href="https://kiwitcms.org/blog/">Blog</a></li>
-                    <li><a href="https://kiwitcms.org/team/">Team</a></li>
+                    <li><a href="/community/">Community</a></li>
+                    <li><a href="/support/">Support</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/team/">Team</a></li>
                     <li>
                         <form action="https://google.com/search" method="get">
                             <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
@@ -74,10 +74,10 @@
 
         <p class="post-meta">
             Posted by
-                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
             on Tue 31 July 2018
                 under
-                    <a href="https://kiwitcms.org/blog/tags/releases/">releases</a>
+                    <a href="/blog/tags/releases/">releases</a>
         </p>
     </header>
 
@@ -101,7 +101,7 @@ See <a class="reference external" href="http://kiwitcms.readthedocs.io/en/latest
 tech-preview and it may be removed if it doesn't work out. Please comment at:
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/452">Issue #452</a>.</li>
 <li>Allow using <tt class="docutils literal">manage.py dumpdata|loaddata|sqlflush|dbshell</tt> for backups, see
-<a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">blog post</a></li>
+<a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">blog post</a></li>
 <li>In TestCase view page add a link to delete the current test case</li>
 <li>In TestCase Admin page the <tt class="docutils literal">+ Add TestCase</tt> button now allows to create new
 test case</li>
@@ -150,12 +150,12 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
-<p>Don't forget to <a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
 </div>
 <div class="section" id="help-us-make-kiwi-tcms-better">
 <h2>Help us make Kiwi TCMS better</h2>
-<p>According to <a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">our 2018 roadmap update</a>
+<p>According to <a class="reference external" href="/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">our 2018 roadmap update</a>
 the Kiwi TCMS team is investing a great deal of our time to make the code base more
 maintainable! For the past few releases we've been balancing code refactoring
 with bug-fixing and enhancements and we have lots of ideas down the line.</p>
@@ -171,22 +171,6 @@ free to comment below, file GitHub issues or send us an email.</p>
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
         <div class="addthis_inline_share_toolbox secondary"></div>
 
-    <section class="col-12 comments secondary">
-        <div id="disqus_thread"></div>
-        <script>
-            var disqus_config = function () {
-                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/';
-                this.page.identifier = 'blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/';
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://kiwitcms.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the comments</noscript>
-    </section>
         <!-- Newsletter Form Section -->
         <section class="newsletter secondary col-12">
             <div id="mc_embed_signup">
