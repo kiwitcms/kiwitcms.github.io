@@ -25,7 +25,7 @@ Kiwi TCMS was initially started by [Red Hat, Inc.](https://www.redhat.com/en) un
 It was intended as a replacement for Mozilla's Testopia and has grown on its own
 [since then](https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#381804-jan-24-2017-released-on-mrsenkocom).
 Latest development is done by
-[the Kiwi TCMS team]({filename}team.html) with sponsorship from
-[Open Source Collective](https://opencollective.com/kiwitcms).
+[the Kiwi TCMS team]({filename}team.html) and its
+[contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors).
 
 The Kiwi TCMS logo is based on the [Kiwix icon](https://commons.wikimedia.org/wiki/File:Kiwix_icon.svg) by Kelson.

@@ -10,7 +10,7 @@ Kiwi TCMS source code is developed by a
 [individual contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors).
 
 Community donations are collected via
-[Open Source Collective](https://opencollective.com/kiwitcms).
+[Open Collective](https://opencollective.com/kiwitcms).
 
 Project infrastructure, development and support services provided by:
 
