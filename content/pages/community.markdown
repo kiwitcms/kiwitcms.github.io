@@ -9,7 +9,7 @@ save_as: community/index.html
 - **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
 - **Twitter** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
 - **Blog** tag ["community"](/blog/tags/community/)
-- **Email** `info-at-kiwitcms.org` (not for [support]({filename}support.markdown) requests)
+- **Email** `info-at-kiwitcms.eu` or `info-at-kiwitcms.org` (not for [support]({filename}support.markdown) requests)
 
 # Contributing
 
