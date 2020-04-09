@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-04-03T22:25:00+03:00</updated><entry><title>Kiwi TCMS 8.2</title><link href="/blog/kiwi-tcms-team/2020/04/03/kiwi-tcms-82/" rel="alternate"></link><published>2020-04-03T22:25:00+03:00</published><updated>2020-04-03T22:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-03:/blog/kiwi-tcms-team/2020/04/03/kiwi-tcms-82/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.2!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-04-09T13:48:00+03:00</updated><entry><title>Please vote for Kiwi TCMS in 2020 .eu Web Awards</title><link href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/" rel="alternate"></link><published>2020-04-09T13:48:00+03:00</published><updated>2020-04-09T13:48:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-09:/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/</id><summary type="html">&lt;p&gt;&lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;
+    &lt;img
+        style="float: none; margin-left:0"
+        src="/images/eu_web_awards_horizontal.png"
+        alt="Click here to vote for Kiwi TCMS"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; Display open source advertising in Brussels airport&lt;/span&gt;
+&lt;span class="k"&gt;    Given &lt;/span&gt;&lt;span class="nf"&gt;one of the prizes is a &lt;/span&gt;&lt;span class="s"&gt;2&lt;/span&gt;&lt;span class="nf"&gt; month billboard advertising campaign&lt;/span&gt;
+&lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;the awards ceremony is on Nov &lt;/span&gt;&lt;span class="s"&gt;18&lt;/span&gt;&lt;span class="nf"&gt;th &lt;/span&gt;&lt;span class="s"&gt;2020&lt;/span&gt;&lt;span class="nf"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;Kiwi TCMS wins&lt;/span&gt;
+&lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;there is good chance this campaign coincides with FOSDEM&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;https://webawards.eurid.eu …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;
+    &lt;img
+        style="float: none; margin-left:0"
+        src="/images/eu_web_awards_horizontal.png"
+        alt="Click here to vote for Kiwi TCMS"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; Display open source advertising in Brussels airport&lt;/span&gt;
+&lt;span class="k"&gt;    Given &lt;/span&gt;&lt;span class="nf"&gt;one of the prizes is a &lt;/span&gt;&lt;span class="s"&gt;2&lt;/span&gt;&lt;span class="nf"&gt; month billboard advertising campaign&lt;/span&gt;
+&lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;the awards ceremony is on Nov &lt;/span&gt;&lt;span class="s"&gt;18&lt;/span&gt;&lt;span class="nf"&gt;th &lt;/span&gt;&lt;span class="s"&gt;2020&lt;/span&gt;&lt;span class="nf"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;Kiwi TCMS wins&lt;/span&gt;
+&lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;there is good chance this campaign coincides with FOSDEM&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;https://webawards.eurid.eu/?q=kiwitcms.eu&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Point your mouse to the photo of our website and click
+  the Thumbs Up &amp;#128077; button;&lt;/li&gt;
+&lt;li&gt;No email or registration required!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Out team promises to do everything in our power so that visitors to
+&lt;a href="http://fosdem.org"&gt;FOSDEM 2021&lt;/a&gt; start feeling the community vibe directly
+at the airport!&lt;/p&gt;
+&lt;p&gt;Please vote and share.&lt;/p&gt;
+&lt;p&gt;Thank you!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Kiwi TCMS 8.2</title><link href="/blog/kiwi-tcms-team/2020/04/03/kiwi-tcms-82/" rel="alternate"></link><published>2020-04-03T22:25:00+03:00</published><updated>2020-04-03T22:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-03:/blog/kiwi-tcms-team/2020/04/03/kiwi-tcms-82/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.2!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 this is a small release which updates 3rd party libraries,
 provides minor improvements, minor API changes and some new translations.
