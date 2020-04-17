@@ -1,5 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-04-09T13:48:00+03:00</updated><entry><title>Please vote for Kiwi TCMS in 2020 .eu Web Awards</title><link href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/" rel="alternate"></link><published>2020-04-09T13:48:00+03:00</published><updated>2020-04-09T13:48:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-09:/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/</id><summary type="html">&lt;p&gt;&lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-04-17T12:53:00+03:00</updated><entry><title>Kiwi TCMS open source bounty program, Round 01</title><link href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/" rel="alternate"></link><published>2020-04-17T12:53:00+03:00</published><updated>2020-04-17T12:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-17:/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/</id><summary type="html">&lt;p&gt;&lt;img src="/images/bounty_program.png"
+    alt="bounty program banner"
+    style="float:none"&gt;&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS is donating € 10000 (ten thousand euro) to our community to enable more hands working
+together and give an opportunity for people to get exposed to open source
+contributions. You will help us complete pending tasks faster while
+learning something new and receive a bonus for your efforts!
+This …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="/images/bounty_program.png"
+    alt="bounty program banner"
+    style="float:none"&gt;&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS is donating € 10000 (ten thousand euro) to our community to enable more hands working
+together and give an opportunity for people to get exposed to open source
+contributions. You will help us complete pending tasks faster while
+learning something new and receive a bonus for your efforts!
+This blog post outlines the rules of our open source bounty program.&lt;/p&gt;
+&lt;h2&gt;Who is eligible to participate&lt;/h2&gt;
+&lt;p&gt;Everyone who meets the following criteria is eligible to participate:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Has an account on &lt;a href="https://opencollective.com"&gt;https://opencollective.com&lt;/a&gt; - needed to follow program updates
+  and request payments&lt;/li&gt;
+&lt;li&gt;Has a bank account - needed for actual money transfer, more info below!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are beginner in Python, Django or some other technology that we use
+please consider available documentation, your local user group, developers forum and
+StackOverflow to get help. Do not turn GitHub issues into a
+"getting started in programming" discussion.&lt;/p&gt;
+&lt;h2&gt;Engagement rules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Program will be split into multiple rounds as we work to clearly define
+  what needs to be done and adjust priorities&lt;/li&gt;
+&lt;li&gt;News and updates will be posted at &lt;a href="https://opencollective.com/kiwitcms/updates/"&gt;https://opencollective.com/kiwitcms/updates/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;You are expected to mostly work alone on issues&lt;/li&gt;
+&lt;li&gt;Technical discussion will be happening via GitHub pull requests and/or GitHub issues
+  under &lt;a href="https://github.com/kiwitcms/Kiwi"&gt;https://github.com/kiwitcms/Kiwi&lt;/a&gt; unless indicated otherwise&lt;/li&gt;
+&lt;li&gt;Translation related discussion will be happening via Crowdin under
+  &lt;a href="https://crowdin.com/project/kiwitcms/discussions"&gt;https://crowdin.com/project/kiwitcms/discussions&lt;/a&gt; when needed&lt;/li&gt;
+&lt;li&gt;Do not contact individual team members privately, we are going to ignore such messages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;FIFO order for code review&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Contributions will be reviewed and merged in a rolling &lt;em&gt;first-in-first-out&lt;/em&gt; order,
+  that is we review 1 PR and while waiting for updates continue on the next in the queue&lt;/li&gt;
+&lt;li&gt;In case of collisions, multiple contributions that try to resolve the same problem,
+  our team will review the first one, then the second one, etc. The pull request
+  which is first to pass DoD and code review will be merged and the conflicting ones closed&lt;/li&gt;
+&lt;li&gt;Please comment on issues and work together with other community members to
+  split the work and avoid collisions as much as possible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;About issues&lt;/h2&gt;
+&lt;p&gt;Our team will try to clearly describe each task and what constitutes a
+successfully completed task, e.g. &lt;em&gt;definition of done&lt;/em&gt; (DoD). If this isn't the case
+please ask questions and seek clarification about such tasks.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Only Issues under the &lt;a href="https://github.com/kiwitcms/Kiwi/milestone/4"&gt;bounty-program milestone&lt;/a&gt;
+  &lt;strong&gt;AND&lt;/strong&gt; labelled with a specific monetary amount are eligible for payout!&lt;/li&gt;
+&lt;li&gt;Unlabelled issues need further refinement before they can be accepted for bounties!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Payout rules&lt;/h2&gt;
+&lt;p&gt;Once DoD has been met and the contribution is merged you may claim the assigned bounty.
+You must perform the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/expenses/new"&gt;Submit an expense&lt;/a&gt; to the
+  Kiwi TCMS Collective&lt;/li&gt;
+&lt;li&gt;All expenses submitted to the Kiwi TCMS Collective must follow the invoicing rules
+  of our Fiscal Host.
+  &lt;a href="https://docs.google.com/document/d/1-unqsnko4Eaza3fSuVAUFqvhMwe-h1V8jhruTDBjrUY/copy"&gt;Here is an invoice template (Google Doc)&lt;/a&gt;
+  you can use. Fill-in the blue parts and leave the black parts&lt;/li&gt;
+&lt;li&gt;Invoice &amp;amp; expense description contains the number of issue(s) and PR(s) for which
+  bounty is claimed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Identity cross validation:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once an expense has been submitted add a comment with your GitHub/Crowdin username
+to it + open a
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/new?assignees=atodorov&amp;amp;labels=&amp;amp;template=claim_bounty.md&amp;amp;title="&gt;new issue in GitHub&lt;/a&gt;
+/new discussion in Crowdin with link to
+the expense submission. This will help us cross-validate that we are talking
+to the same person between platforms.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note on bank transfers&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A message from our &lt;a href="https://opencollective.com/europe"&gt;Fiscal Host&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We currently prefer to do payouts using bank transfers.
+We used to support PayPal but fees were way too high for the collectives.&lt;/p&gt;
+&lt;p&gt;About bank transfer, we do EU transfers as well as non EU (which takes more time obviously).&lt;/p&gt;
+&lt;p&gt;We noticed that several collectives are now using Revolut bank accounts which is the
+easiest and cheapest way (it’s free) to receive money anywhere in the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It looks like the fastest &amp;amp; cheapest way to get paid is via Revolut account if you have one,
+followed by standard bank transfer and PayPal account is last!&lt;/p&gt;
+&lt;h2&gt;Bounties: translation related tasks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Chinese Simplified -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1459"&gt;#1459&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1460"&gt;#1460&lt;/a&gt;
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1461"&gt;#1461&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1462"&gt;#1462&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1463"&gt;#1463&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hindi -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1464"&gt;#1464&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1465"&gt;#1465&lt;/a&gt;
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1466"&gt;#1466&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1467"&gt;#1467&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1468"&gt;#1468&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Indonesian -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1469"&gt;#1469&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1470"&gt;#1470&lt;/a&gt;
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1471"&gt;#1471&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1472"&gt;#1472&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1473"&gt;#1473&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bengali -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1474"&gt;#1474&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1475"&gt;#1475&lt;/a&gt;
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1476"&gt;#1476&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1477"&gt;#1477&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1478"&gt;#1478&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;German -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1505"&gt;#1505&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1506"&gt;#1506&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1507"&gt;#1507&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1508"&gt;#1508&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1509"&gt;#1509&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Japanese -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1489"&gt;#1489&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1490"&gt;#1490&lt;/a&gt;
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1491"&gt;#1491&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1492"&gt;#1492&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1493"&gt;#1493&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Swahili -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1494"&gt;#1494&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1495"&gt;#1495&lt;/a&gt;
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1497"&gt;#1497&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1498"&gt;#1498&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1499"&gt;#1499&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vietnamese -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1484"&gt;#1484&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1485"&gt;#1485&lt;/a&gt;
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1486"&gt;#1486&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1487"&gt;#1487&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1488"&gt;#1488&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Korean -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1479"&gt;#1479&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1480"&gt;#1480&lt;/a&gt;
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1481"&gt;#1481&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1482"&gt;#1482&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1483"&gt;#1483&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Bounties: test automation plugins&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Django test runner reporting plugin -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/693"&gt;#693&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;py.test reporting plugin - &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1511"&gt;#1511&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JUnit plugin: annotation &amp;amp; improvement for test case mapping -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1512"&gt;#1512&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TestNG plugin -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/692"&gt;#692&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Bounties: assorted technical issues&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pylint -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1192"&gt;#1192&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript: Add buttons for creating tables in text editor -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1531"&gt;#1531&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Migration from Travis CI to GitHub workflows -
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1550"&gt;#1550&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1551"&gt;#1551&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1552"&gt;#1552&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1553"&gt;#1553&lt;/a&gt;,
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1554"&gt;#1554&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Call for sponsors&lt;/h2&gt;
+&lt;p&gt;We are also calling upon teams and organizations who use Kiwi TCMS in their
+testing workflows. Please consider making a one-time donation or
+becoming a regular sponsor via our
+&lt;a href="https://opencollective.com/kiwitcms#section-contribute"&gt;Collective&lt;/a&gt;.
+You can contribute as low as € 1! The entire budget will be distributed to the community!&lt;/p&gt;
+&lt;h2&gt;Vote for Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;Our website has been nominated in the &lt;em&gt;2020 .eu Web Awards&lt;/em&gt; and
+&lt;a href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/"&gt;we've promised&lt;/a&gt;
+to do everything in our power to greet future FOSDEM visitors with
+an open source billboard advertising at BRU airport. We need your help
+to do that!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;https://webawards.eurid.eu/?q=kiwitcms.eu&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Point your mouse to the photo of our website and click the Thumbs Up &amp;#128077; button;&lt;/li&gt;
+&lt;li&gt;No email or registration required!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy bounty hunting!&lt;/p&gt;</content><category term="community"></category></entry><entry><title>Please vote for Kiwi TCMS in 2020 .eu Web Awards</title><link href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/" rel="alternate"></link><published>2020-04-09T13:48:00+03:00</published><updated>2020-04-09T13:48:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-09:/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/</id><summary type="html">&lt;p&gt;&lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;
     &lt;img
         style="float: none; margin-left:0"
         src="/images/eu_web_awards_horizontal.png"
