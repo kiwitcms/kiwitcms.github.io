@@ -9,7 +9,7 @@ tags: community
 
 <img src="/images/bounty_program.png"
     alt="bounty program banner"
-    style="float:none">
+    style="float:none;margin-left:0">
 
 
 Kiwi TCMS is donating € 10000 (ten thousand euro) to our community to enable more hands working
