@@ -1,0 +1,150 @@
+Kiwi TCMS 8.3
+#############
+
+:headline: update 3rd party libraries, several improvements, API updates & translations
+:date: 2020-04-27 06:50
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 8.3!
+
+**IMPORTANT:** this is a small release which updates 3rd party libraries,
+provides several improvements, includes minor API updates and new translations.
+It is the first release to include contributions via our
+`open source bounty program <{filename}2020-04-17-bounty-program-part01.markdown>`_.
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+
+Supported upgrade paths::
+
+    5.3   (or older) -> 5.3.1
+    5.3.1 (or newer) -> 6.0.1
+    6.0.1            -> 6.1
+    6.1              -> 6.1.1
+    6.1.1            -> 6.2 (or newer)
+
+Docker images::
+
+    kiwitcms/kiwi       latest  c5dbd9a7ded6    562 MB
+    kiwitcms/kiwi       6.2     7870085ad415    957 MB
+    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+    kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+    kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+    kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+
+
+Changes since Kiwi TCMS 8.2
+---------------------------
+
+Improvements
+~~~~~~~~~~~~
+
+- Update django-colorfield from 0.2.2 to 0.3.0
+- Update django-simple-history from 2.8.0 to 2.9.0
+- Update prismjs from 1.19.0 to 1.20.0
+- Update psycopg2 from 2.8.4 to 2.8.5
+- Update pygithub from 1.47 to 1.50
+- Update python-gitlab from 2.1.2 to 2.2.0
+- It is now possible to reopen closed bugs - Fixes
+  `Issue #1152 <https://github.com/kiwitcms/Kiwi/issues/1152>`_ (@cmbahadir)
+- Visual improvements for Status matrix telemetry:
+
+  - columns now link to test runs
+  - tool-tips show test run summary
+
+- Show TOTAL in tool-tip for Execution trends telemetry
+- Self-signed SSL certificate is now built more frequently and is valid
+  for 10 years
+- Improved documentation around self-signed certificates
+- Improved documentation around e-mail backend configuration. Closes
+  `Issue #1070 <https://github.com/kiwitcms/Kiwi/issues/1070>`_
+  (@Schwarzkrieger)
+
+
+API
+~~~
+
+- Methods ``TestPlan.create``, ``TestPlan.update`` and ``TestRun.update``
+  now use Django's ModelForm to properly validate input data against the model
+- Method ``TestCase.update`` now also accepts username and email values for
+  fields ``author``, ``default_tester`` and ``reviewer``
+
+
+Refactoring
+~~~~~~~~~~~
+
+- Migrate bandit test job to GitHub workflows, Closes
+  `Issue #1550 <https://github.com/kiwitcms/Kiwi/issues/1550>`_ (@lcmtwn)
+- Migrate doc8 test job to GitHub workflows. Closes
+  `Issue #1551 <https://github.com/kiwitcms/Kiwi/issues/1551>`_ (@Prome88)
+- Add 2 more tests (Mariyan Garvanski)
+- Convert TP edit page to class based view
+- Convert forms to ModelForm
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Chinese Simplified translation <https://crowdin.com/project/kiwitcms/zh-CN#>`_
+- Updated `German translation <https://crowdin.com/project/kiwitcms/de#>`_
+- Updated `French translation <https://crowdin.com/project/kiwitcms/fr#>`_
+- Updated `Portuguese, Brazilian translation <https://crowdin.com/project/kiwitcms/pt-BR#>`_
+- Updated `Russian translation <https://crowdin.com/project/kiwitcms/ru#>`_
+- Updated `Slovenian translation <https://crowdin.com/project/kiwitcms/sl#>`_
+- Updated `Vietnamese translation <https://crowdin.com/project/kiwitcms/vi#>`_
+
+
+Kiwi TCMS Enterprise v8.3-mt
+----------------------------
+
+Includes internal refactoring and upgrades around Tenant schema names/domain names
+validation and better visual hints when creating tenants. For a list of changes see
+https://github.com/MrSenko/kiwitcms-enterprise/#v83-mt-27-apr-2020
+
+
+Vote for Kiwi TCMS
+------------------
+
+Our website has been nominated in the *2020 .eu Web Awards* and
+`we've promised <{filename}2020-04-09-eu-web-awards-vote-for-us.markdown>`_
+to do everything in our power to greet future FOSDEM visitors with
+an open source billboard advertising at BRU airport. We need your help
+to do that!
+
+- Go to https://webawards.eurid.eu/?q=kiwitcms.eu;
+- Point your mouse to the photo of our website and click the Thumbs Up &#128077; button;
+- No email or registration required!
+
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+If you are using Kiwi TCMS as a Docker container then::
+
+    cd path/containing/docker-compose/
+    docker-compose down
+    docker pull kiwitcms/kiwi
+    docker pull centos/mariadb-103-centos7
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+**WHERE:** ``docker-compose.yml`` has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!
+
+**WARNING:** ``kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow::
+
+    # starting from an older Kiwi TCMS version
+    docker-compose down
+    docker pull kiwitcms/kiwi:<next_upgrade_version>
+    edit docker-compose.yml to use kiwitcms/kiwi:<next_upgrade_version>
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+    # repeat until you have reached latest
+
+Happy testing!
