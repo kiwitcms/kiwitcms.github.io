@@ -47,6 +47,154 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/04/27/kiwi-tcms-83/" rel="bookmark" title="Permalink to Kiwi TCMS 8.3">
+                <h1 class="top-header">Kiwi TCMS 8.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Mon 27 April 2020
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 8.3!</p>
+<p><strong>IMPORTANT:</strong> this is a small release which updates 3rd party libraries,
+provides several improvements, includes minor API updates and new translations.
+It is the first release to include contributions via our
+<a class="reference external" href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/">open source bounty program</a>.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  c5dbd9a7ded6    562 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-8-2">
+<h2>Changes since Kiwi TCMS 8.2</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update django-colorfield from 0.2.2 to 0.3.0</li>
+<li>Update django-simple-history from 2.8.0 to 2.9.0</li>
+<li>Update prismjs from 1.19.0 to 1.20.0</li>
+<li>Update psycopg2 from 2.8.4 to 2.8.5</li>
+<li>Update pygithub from 1.47 to 1.50</li>
+<li>Update python-gitlab from 2.1.2 to 2.2.0</li>
+<li>It is now possible to reopen closed bugs - Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1152">Issue #1152</a> (&#64;cmbahadir)</li>
+<li>Visual improvements for Status matrix telemetry:<ul>
+<li>columns now link to test runs</li>
+<li>tool-tips show test run summary</li>
+</ul>
+</li>
+<li>Show TOTAL in tool-tip for Execution trends telemetry</li>
+<li>Self-signed SSL certificate is now built more frequently and is valid
+for 10 years</li>
+<li>Improved documentation around self-signed certificates</li>
+<li>Improved documentation around e-mail backend configuration. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1070">Issue #1070</a>
+(&#64;Schwarzkrieger)</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Methods <tt class="docutils literal">TestPlan.create</tt>, <tt class="docutils literal">TestPlan.update</tt> and <tt class="docutils literal">TestRun.update</tt>
+now use Django's ModelForm to properly validate input data against the model</li>
+<li>Method <tt class="docutils literal">TestCase.update</tt> now also accepts username and email values for
+fields <tt class="docutils literal">author</tt>, <tt class="docutils literal">default_tester</tt> and <tt class="docutils literal">reviewer</tt></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Migrate bandit test job to GitHub workflows, Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1550">Issue #1550</a> (&#64;lcmtwn)</li>
+<li>Migrate doc8 test job to GitHub workflows. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1551">Issue #1551</a> (&#64;Prome88)</li>
+<li>Add 2 more tests (Mariyan Garvanski)</li>
+<li>Convert TP edit page to class based view</li>
+<li>Convert forms to ModelForm</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#">Portuguese, Brazilian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/vi#">Vietnamese translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v8-3-mt">
+<h2>Kiwi TCMS Enterprise v8.3-mt</h2>
+<p>Includes internal refactoring and upgrades around Tenant schema names/domain names
+validation and better visual hints when creating tenants. For a list of changes see
+<a class="reference external" href="https://github.com/MrSenko/kiwitcms-enterprise/#v83-mt-27-apr-2020">https://github.com/MrSenko/kiwitcms-enterprise/#v83-mt-27-apr-2020</a></p>
+</div>
+<div class="section" id="vote-for-kiwi-tcms">
+<h2>Vote for Kiwi TCMS</h2>
+<p>Our website has been nominated in the <em>2020 .eu Web Awards</em> and
+<a class="reference external" href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/">we've promised</a>
+to do everything in our power to greet future FOSDEM visitors with
+an open source billboard advertising at BRU airport. We need your help
+to do that!</p>
+<ul class="simple">
+<li>Go to <a class="reference external" href="https://webawards.eurid.eu/?q=kiwitcms.eu">https://webawards.eurid.eu/?q=kiwitcms.eu</a>;</li>
+<li>Point your mouse to the photo of our website and click the Thumbs Up &amp;#128077; button;</li>
+<li>No email or registration required!</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb-103-centos7
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/" rel="bookmark" title="Permalink to Kiwi TCMS open source bounty program, Round 01">
                 <h1 class="top-header">Kiwi TCMS open source bounty program, Round 01</h1>
             </a>
@@ -2388,160 +2536,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 <p>Happy testing!</p>
 </div>
 
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/09/03/open-source-sprints-at-pycon-balkan-in-belgrade/" rel="bookmark" title="Permalink to Open source sprints at PyCon Balkan in Belgrade">
-                <h1 class="top-header">Open source sprints at PyCon Balkan in Belgrade</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 03 September 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>Next month our team will be at
-<a href="https://pyconbalkan.com/">PyCon Balkan, Oct 3-5</a> in Belgrade. Together with
-presentation and a workshop we are going to host open source sprints!
-These will be an informal gathering where participants will be able to
-learn more about how open source works and go through their first
-contributions. This is ideal for students and less experienced people
-but we welcome everyone. There will be tasks ranging from easy to very hard!</p>
-<p><strong>Who:</strong> 4 mentors from Kiwi TCMS and you!</p>
-<p><strong>What:</strong> full day of peer programming and contributing to Kiwi TCMS</p>
-<p><strong>Where:</strong> room will be announced on the days of the conference,
-           follow <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a> for more info</p>
-<p><strong>Why:</strong> up your tech skills, build your GitHub profile and have fun together</p>
-<h2>Translate Kiwi TCMS</h2>
-<p>Difficulty: easy</p>
-<p>We have enabled Serbian language in our translation system. To get started
-checkout our
-<a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html#translation">translation contribution</a>
-page.
-Once strings are translated <code>kiwitcms-bot</code> will automatically open a pull
-request with the new text.</p>
-<h2>Find unused CSS classes</h2>
-<p>Difficulty: easy</p>
-<p>This should be relatively easy. For each class/selector defined in our CSS files
-search (grep) if any of the HTML templates use it. If it is not in use then remove
-it.</p>
-<h2>Find unused JavaScript code</h2>
-<p>Difficulty: easy</p>
-<p>Similar to the above. We're not 100% certain but there could be legacy JavaScript
-functions which are no longer in use. Find them and remove them! At the very least
-you have confirmed that all functions are in use!</p>
-<h2>CodeClimate Minor severity issues</h2>
-<p>Difficulty: easy to moderate</p>
-<p>Check-out the
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=minor&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Minor severity issues</a>.
-There are many of them:</p>
-<ul>
-<li>CSS lint issues (we suggest you start with this one)</li>
-<li>functions longer than 25 lines of code</li>
-<li>functions with bigger cognitive and cyclomatic complexity</li>
-<li>modules longer than 250 LOC</li>
-</ul>
-<p>Try fixing a few to see how it goes and continue if you feel confident.
-Not everything may be an issue so if you have any questions ask someone from our team.</p>
-<h2>CodeClimate Major severity issues</h2>
-<p>Difficulty: moderate to hard</p>
-<p>Check-out the
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=major&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Major severity issues</a>.
-There are around 150 of them:</p>
-<ul>
-<li>identical and similar code blocks</li>
-<li>big modules</li>
-<li>big functions</li>
-</ul>
-<p>Most of these require some sort of refactoring, either splitting snippets
-of code into smaller pieces (functions or sub-modules) or using one function
-in several places instead of 2 very similar but different functions, etc.
-Ask our team members about which approach they prefer for fixing these issues
-to minimize the effort spent here.</p>
-<h2>CodeClimate Critical severity issues</h2>
-<p>Difficulty: hard</p>
-<p>Check-out the
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=critical&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Critical severity issues</a>.
-All of these are functions with high cognitive complexity and
-the recommended way to deal with them is refactoring into
-<a href="https://docs.djangoproject.com/en/2.2/topics/class-based-views/">class based views</a>.</p>
-<h2>Improve pylint health</h2>
-<p>Difficulty: easy</p>
-<p>Execute pylint against the latest sources and start fixing the issues.
-Looking at <a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/579167487">pylint logs</a> the
-following items are relatively easy to work on:</p>
-<ul>
-<li>Everything in module tcms.urls</li>
-<li>Everything in module tcms.telemetry.api</li>
-<li>Everything in module tcms.testruns.tests.test_views</li>
-<li>Everything in module tcms.xmlrpc.forms</li>
-<li>Everything in module tcms.testcases.tests.test_models</li>
-<li>Everything in module tcms.core.forms.fields</li>
-<li>Everything in module tcms.settings.common</li>
-<li>Everything in module tcms.settings.test</li>
-<li>All <code>module-in-directory-without-init</code> errors reported for module tcms.tests.__init__</li>
-</ul>
-<p>Note: <code>fixme</code>, <code>missing-permission-required</code> and <code>avoid-auto-field</code> errors are usually harder
-to resolve and will require more work/refactoring. If you feel confident go ahead and
-fix them, if not skip to the next error message.</p>
-<p>We also use a custom pylint checker which reports function based views.
-If you are looking for something harder to work on, then give it a try
-(see 3rd pylint line in <code>Makefile</code>) and refactor some of the existing
-view functions into class based views.</p>
-<h2>Fix 3rd party security issues discovered by Bandit</h2>
-<p>Difficulty: moderate to hard</p>
-<p>Bandit is a static analysis tool similar to pylint. It focuses on discovering
-issues which may lead to security vulnerabilities. We have resolved all such
-issues in our own source code but we also execute Bandit against the entire
-Python dependency stack. There it finds thousands of issues, so much so that
-the reporter crashes.</p>
-<p><a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/579167486">In CI</a> there are around
-130 issues reported. The best course of action here is to execute Bandit locally
-against the offending library and then figure out what to do:</p>
-<ul>
-<li>report an issue upstream</li>
-<li>send a pull request upstream</li>
-<li>if these are test files maybe exclude them from the package (e.g. don't ship them for production)</li>
-</ul>
-<p>Note: inside Travis CI we have all runtime and testing dependencies which is more
-than what we have inside the official Docker image for Kiwi TCMS.</p>
-<h2>Work on reported issues</h2>
-<p>The following issues look suitable for a sprint and don't require lots of
-background knowledge. You can also find them using the
-<a href="https://github.com/kiwitcms/Kiwi/labels/PyConBalkan"><code>PyConBalkan</code></a> label on
-GitHub:</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/212">#212</a> - moderate - Convert jQ to $ -
-  this is an easy search &amp; rename but will require more extensive manual testing</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/431">#431</a> - moderate to hard - Remove JavaScript fireEvent() -
-  17 matches in <code>static/js/</code>. Must be replaced with direct function calls</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/652">#652</a> - easy - Removal of labels from form fields -
-  all labels must be included in the HTML template and marked for translation</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/681">#681</a>, <a href="https://github.com/kiwitcms/Kiwi/issues/682">#682</a> - moderate -
-  Move API modules &amp; their tests from <code>xmlrpc/api/&lt;app&gt;.py</code> to <code>&lt;app&gt;/api.py</code>. These have good test
-  coverage so you have to make sure you don't break anything</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/971">#971</a> - moderate - manage.py command for changing Site URL -
-  will help with automatic provisioning, e.g. Ansible. For howto see
-  <a href="https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/">Django docs</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1021">#1021</a> - moderate - Update TestCase page UI to allow adding TestPlans to cases -
-  use <code>TestPlan.add_case()</code> API method and refresh the widget. See how Tags and Components cards work
-  in the same page</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1070">#1070</a> - moderate - manage.py command for checking email settings -
-  will help with troubleshooting misconfigured email. Must raise exceptions if something fails.
-  For howto see
-  <a href="https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/">Django docs</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/733">#733</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/736">#736</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/738">#738</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/883">#883</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/1089">#1089</a> - hard to very hard - New checkers for pylint -
-  Kiwi TCMS uses customized pylint checkers to discover various conditions. We need a few more
-  of them and/or update of the existing ones</li>
-</ul>
-<p>We hope to see you in Belgrade. Until then: Happy testing!</p>
         </div>
     </section>
 
