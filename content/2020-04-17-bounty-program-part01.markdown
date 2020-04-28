@@ -4,7 +4,7 @@ date: 2020-04-17 12:53
 comments: true
 og_image: images/bounty_program.png
 twitter_image: images/bounty_program.png
-tags: community
+tags: community, bounty-program
 
 
 <img src="/images/bounty_program.png"
