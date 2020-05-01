@@ -12,6 +12,8 @@ from pelicanconf import *
 
 # disable b/c we want to serve both via kiwitcms.org and kiwitcms.eu
 #SITEURL = 'https://kiwitcms.org'
+# will only be used for twitter & og images
+_SITEURL = 'https://kiwitcms.org'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
