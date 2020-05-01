@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-04-27T06:50:00+03:00</updated><entry><title>Kiwi TCMS 8.3</title><link href="/blog/kiwi-tcms-team/2020/04/27/kiwi-tcms-83/" rel="alternate"></link><published>2020-04-27T06:50:00+03:00</published><updated>2020-04-27T06:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-27:/blog/kiwi-tcms-team/2020/04/27/kiwi-tcms-83/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.3!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-05-01T13:15:00+03:00</updated><entry><title>Kiwi TCMS open source bounty program, Round 02</title><link href="/blog/kiwi-tcms-team/2020/05/01/kiwi-tcms-open-source-bounty-program-round-02/" rel="alternate"></link><published>2020-05-01T13:15:00+03:00</published><updated>2020-05-01T13:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-05-01:/blog/kiwi-tcms-team/2020/05/01/kiwi-tcms-open-source-bounty-program-round-02/</id><summary type="html">&lt;p&gt;Kiwi TCMS is donating € 10000 (ten thousand euro) to our community to enable more hands working
+together and give an opportunity for people to get exposed to open source
+contributions. You can read more about the rules of the program in
+&lt;a href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/"&gt;Round 01&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;Bounties announced in Round 02&lt;/h2&gt;
+&lt;p&gt;Custom pylint …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS is donating € 10000 (ten thousand euro) to our community to enable more hands working
+together and give an opportunity for people to get exposed to open source
+contributions. You can read more about the rules of the program in
+&lt;a href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/"&gt;Round 01&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;Bounties announced in Round 02&lt;/h2&gt;
+&lt;p&gt;Custom pylint plugins:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/736"&gt;#736&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/738"&gt;#738&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1126"&gt;#1126&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1303"&gt;#1303&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1384"&gt;#1384&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Automation tests:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1596"&gt;#1596&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1597"&gt;#1597&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1598"&gt;#1598&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1599"&gt;#1599&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1600"&gt;#1600&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1601"&gt;#1601&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1602"&gt;#1602&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1603"&gt;#1603&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1604"&gt;#1604&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1605"&gt;#1605&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1606"&gt;#1606&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1607"&gt;#1607&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1608"&gt;#1608&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1609"&gt;#1609&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1610"&gt;#1610&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1611"&gt;#1611&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1612"&gt;#1612&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1613"&gt;#1613&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1614"&gt;#1614&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1615"&gt;#1615&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1616"&gt;#1616&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1617"&gt;#1617&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1618"&gt;#1618&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1619"&gt;#1619&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1620"&gt;#1620&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1621"&gt;#1621&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1622"&gt;#1622&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1623"&gt;#1623&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1624"&gt;#1624&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1625"&gt;#1625&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1626"&gt;#1626&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1627"&gt;#1627&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1628"&gt;#1628&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1629"&gt;#1629&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1630"&gt;#1630&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1631"&gt;#1631&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Call for sponsors&lt;/h2&gt;
+&lt;p&gt;We are also calling upon teams and organizations who use Kiwi TCMS in their
+testing workflows. Please consider making a one-time donation or
+becoming a regular sponsor via our
+&lt;a href="https://opencollective.com/kiwitcms#section-contribute"&gt;Collective&lt;/a&gt;.
+You can contribute as low as € 1! The entire budget will be distributed to the community!&lt;/p&gt;
+&lt;h2&gt;Vote for Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;Our website has been nominated in the &lt;em&gt;2020 .eu Web Awards&lt;/em&gt; and
+&lt;a href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/"&gt;we've promised&lt;/a&gt;
+to do everything in our power to greet future FOSDEM visitors with
+an open source billboard advertising at BRU airport. We need your help
+to do that!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;https://webawards.eurid.eu/?q=kiwitcms.eu&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Point your mouse to the photo of our website and click the Thumbs Up &amp;#128077; button;&lt;/li&gt;
+&lt;li&gt;No email or registration required!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="bounty-program"></category></entry><entry><title>Kiwi TCMS 8.3</title><link href="/blog/kiwi-tcms-team/2020/04/27/kiwi-tcms-83/" rel="alternate"></link><published>2020-04-27T06:50:00+03:00</published><updated>2020-04-27T06:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-27:/blog/kiwi-tcms-team/2020/04/27/kiwi-tcms-83/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.3!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which updates 3rd party libraries,
 provides several improvements, includes minor API updates and new translations.
 It is the first release to include contributions via our
