@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-05-01T13:15:00+03:00</updated><entry><title>Kiwi TCMS open source bounty program, Round 02</title><link href="/blog/kiwi-tcms-team/2020/05/01/kiwi-tcms-open-source-bounty-program-round-02/" rel="alternate"></link><published>2020-05-01T13:15:00+03:00</published><updated>2020-05-01T13:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-05-01:/blog/kiwi-tcms-team/2020/05/01/kiwi-tcms-open-source-bounty-program-round-02/</id><summary type="html">&lt;p&gt;Kiwi TCMS is donating € 10000 (ten thousand euro) to our community to enable more hands working
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-05-06T11:57:00+03:00</updated><entry><title>Robot Framework plugin for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/05/06/robot-framework-plugin-for-kiwi-tcms/" rel="alternate"></link><published>2020-05-06T11:57:00+03:00</published><updated>2020-05-06T11:57:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-05-06:/blog/kiwi-tcms-team/2020/05/06/robot-framework-plugin-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;We're happy to announce the initial release of
+&lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;kiwitcms-robotframework-plugin&lt;/a&gt;!
+This package allows you execute your Robot Framework test suite and report the
+results into Kiwi TCMS!
+This plugin is the brain child of our contributor Aniello Barletta and has its
+roots in the
+&lt;a class="reference external" href="https://www.meetup.com/Robot-Framework-Milano/events/269468758/"&gt;Robot Framework Milano user-group&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pip …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;We're happy to announce the initial release of
+&lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;kiwitcms-robotframework-plugin&lt;/a&gt;!
+This package allows you execute your Robot Framework test suite and report the
+results into Kiwi TCMS!
+This plugin is the brain child of our contributor Aniello Barletta and has its
+roots in the
+&lt;a class="reference external" href="https://www.meetup.com/Robot-Framework-Milano/events/269468758/"&gt;Robot Framework Milano user-group&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pip install kiwitcms-robotframework-plugin
+&lt;/pre&gt;
+&lt;p&gt;and then make use of it like so:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+robot --listener zealand.listener.KiwiTCMS
+&lt;/pre&gt;
+&lt;p&gt;The plugin needs the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;~/.tcms.conf&lt;/span&gt;&lt;/tt&gt; configuration file:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[tcms]
+url = https://tcms.server/xml-rpc/
+username = your-username
+password = your-password
+&lt;/pre&gt;
+&lt;p&gt;and you can also specify the &lt;tt class="docutils literal"&gt;${plan_id}&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;${product}&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;${build_user_email}&lt;/tt&gt; variables
+in your .robot files. If any of these are missing it will attempt to discover
+the necessary information from your environment. The exact behavior is documented
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html#plugin-configuration"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This plugin uses the upstream
+&lt;a class="reference external" href="https://github.com/robotframework/WebDemo"&gt;robotframework/WebDemo&lt;/a&gt; test suite
+with &lt;tt class="docutils literal"&gt;SeleniumLibrary&lt;/tt&gt; in a combination with a downstream test with the
+&lt;tt class="docutils literal"&gt;OperatingSystem&lt;/tt&gt; library. The results are reported in
+&lt;a class="reference external" href="https://tcms.kiwitcms.org/plan/290/"&gt;TP-290&lt;/a&gt;. For more information checkout our
+&lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;package repository&lt;/a&gt; on GitHub!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+</content><category term="releases"></category></entry><entry><title>Kiwi TCMS open source bounty program, Round 02</title><link href="/blog/kiwi-tcms-team/2020/05/01/kiwi-tcms-open-source-bounty-program-round-02/" rel="alternate"></link><published>2020-05-01T13:15:00+03:00</published><updated>2020-05-01T13:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-05-01:/blog/kiwi-tcms-team/2020/05/01/kiwi-tcms-open-source-bounty-program-round-02/</id><summary type="html">&lt;p&gt;Kiwi TCMS is donating € 10000 (ten thousand euro) to our community to enable more hands working
 together and give an opportunity for people to get exposed to open source
 contributions. You can read more about the rules of the program in
 &lt;a href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/"&gt;Round 01&lt;/a&gt;!&lt;/p&gt;
