@@ -11,7 +11,7 @@ We're happy to announce the initial release of
 `kiwitcms-robotframework-plugin <https://github.com/kiwitcms/robotframework-plugin>`_!
 This package allows you execute your Robot Framework test suite and report the
 results into Kiwi TCMS!
-This plugin is the brain child of our contributor Aniello Barletta and has its
+This plugin is the brain child of our Luca Valentini and Aniello Barletta and has its
 roots in the
 `Robot Framework Milano user-group <https://www.meetup.com/Robot-Framework-Milano/events/269468758/>`_.
 
