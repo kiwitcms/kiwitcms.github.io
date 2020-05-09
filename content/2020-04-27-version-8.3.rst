@@ -127,6 +127,7 @@ If you are using Kiwi TCMS as a Docker container then::
 
     cd path/containing/docker-compose/
     docker-compose down
+    # !!! docker tag to keep older image version on the machine
     docker pull kiwitcms/kiwi
     docker pull centos/mariadb-103-centos7
     docker-compose up -d
