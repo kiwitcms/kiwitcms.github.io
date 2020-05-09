@@ -226,25 +226,15 @@ If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 cd path/containing/docker-compose/
 docker-compose down
+# !!! docker tag to keep older image version on the machine
 docker pull kiwitcms/kiwi
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
-The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="releases"></category></entry><entry><title>Kiwi TCMS open source bounty program, Round 01</title><link href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/" rel="alternate"></link><published>2020-04-17T12:53:00+03:00</published><updated>2020-04-17T12:53:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-04-17:/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/</id><summary type="html">&lt;p&gt;&lt;img src="/images/bounty_program.png"
