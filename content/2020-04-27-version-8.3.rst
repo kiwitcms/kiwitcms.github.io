@@ -133,19 +133,8 @@ If you are using Kiwi TCMS as a Docker container then::
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
 
-**WHERE:** ``docker-compose.yml`` has been updated from your private git repository!
-The file provided in our GitHub repository is an example. Not for production use!
-
-**WARNING:** ``kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow::
-
-    # starting from an older Kiwi TCMS version
-    docker-compose down
-    docker pull kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use kiwitcms/kiwi:<next_upgrade_version>
-    docker-compose up -d
-    docker exec -it kiwi_web /Kiwi/manage.py migrate
-    # repeat until you have reached latest
+Refer to
+`our documentation <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading>`_
+for more details!
 
 Happy testing!
