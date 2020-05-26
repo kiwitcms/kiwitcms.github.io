@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-05-06T11:57:00+03:00</updated><entry><title>Robot Framework plugin for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/05/06/robot-framework-plugin-for-kiwi-tcms/" rel="alternate"></link><published>2020-05-06T11:57:00+03:00</published><updated>2020-05-06T11:57:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-05-06:/blog/kiwi-tcms-team/2020/05/06/robot-framework-plugin-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;We're happy to announce the initial release of
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-05-26T12:40:00+03:00</updated><entry><title>Kiwi TCMS is partnering up with Pionir</title><link href="/blog/kiwi-tcms-team/2020/05/26/kiwi-tcms-is-partnering-up-with-pionir/" rel="alternate"></link><published>2020-05-26T12:40:00+03:00</published><updated>2020-05-26T12:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-05-26:/blog/kiwi-tcms-team/2020/05/26/kiwi-tcms-is-partnering-up-with-pionir/</id><summary type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with
+&lt;a href="https://pionir.org/"&gt;Pionir&lt;/a&gt; on the development of open source hardware
+for testers!
+Pionir is a free school focused on creating a new generation of digital leaders,
+an exponential culture and solving challenges using technology. They are located
+in Kikinda …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with
+&lt;a href="https://pionir.org/"&gt;Pionir&lt;/a&gt; on the development of open source hardware
+for testers!
+Pionir is a free school focused on creating a new generation of digital leaders,
+an exponential culture and solving challenges using technology. They are located
+in Kikinda, Serbia.&lt;/p&gt;
+&lt;p&gt;&lt;img style="background-color:inherit; margin-left:0"
+     src="/images/pionir_students.jpg"
+     alt="Pionir students"&gt;&lt;/p&gt;
+&lt;p&gt;This is not our first collaboration - the students are already
+aware of the Kiwi TCMS project and last year they participated in
+&lt;a href="/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/"&gt;presentation &amp;amp; workshop hosted by Alex&lt;/a&gt;.
+Zamphyr, the organization behind Pionir, is also one of the first open source projects
+on our OSS program!&lt;/p&gt;
+&lt;h2&gt;Black boxes for black-box testing&lt;/h2&gt;
+&lt;p&gt;Black-box testing is a method of software testing that examines the functionality
+of the subject under test without peering into its internal structures or workings.
+It is often performed by manipulating the possible inputs and examining the resulting
+output. Experienced black-box testers often develop a hunch for where bugs my be
+and it is not uncommon for them to discover some obscure problems nobody else thought
+about. More often than not the basis for this is developing an understanding/expectation
+how the SUT works by careful exploration during many iterations. Thus being able to
+explore a SUT, observe its behavior, keep mental notes about possible relations
+between input-behavior-output and analyzing what is happening under the hood becomes
+an important skill for testers.&lt;/p&gt;
+&lt;p&gt;The idea for having something unknown to explore &amp;amp; train your skills first comes
+from &lt;a href="http://blackboxpuzzles.workroomprds.com/"&gt;James Lyndsay’s Black Box Puzzles&lt;/a&gt; and
+was more recently implemented by
+&lt;a href="http://blog.brainforit.com/2017/02/06/black-boxes-for-black-box-testing/"&gt;Claudiu Draghia&lt;/a&gt;.
+Now it's our turn!&lt;/p&gt;
+&lt;h2&gt;Project description&lt;/h2&gt;
+&lt;p&gt;Pionir will be developing hardware black boxes for teaching exploratory testing in
+cooperation with Kiwi TCMS. We have dedicated
+&lt;a href="https://opencollective.com/kiwitcms/expenses/18960"&gt;€2000 from our bounty program&lt;/a&gt;
+for students of the free school towards completing this project.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The goal of the project is to produce at least 3 boxes and reference designs that will
+serve as a didactic tool for teaching, but also be free and open hardware, and as such,
+available to everyone to build from source.&lt;/p&gt;
+&lt;p&gt;This project will be trusted to the students of the free school who will get opportunity
+to take part in the challenging process of building a digital appliance,
+from designing the machine logic, to develop and prototype hardware.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The project includes designing, assembling, programming, documenting and delivering this
+hardware to us! Everything is expected to be open source: list of components,
+assembly instructions, 3D design files, source code, documentation and instructions!
+Our goal is that this will be relatively cheap and easy to build so everyone else
+can build their own boxes.
+During the next several months there will be new repositories created under
+&lt;a href="https://github.com/kiwitcms"&gt;https://github.com/kiwitcms&lt;/a&gt; to host the various boxes.&lt;/p&gt;
+&lt;p&gt;The black boxes are expected to be available in October 2020 - just in time for the
+upcoming conference season where members of the larger testing and open source
+communities will be able to practice with them!&lt;/p&gt;
+&lt;h2&gt;Call for sponsors&lt;/h2&gt;
+&lt;p&gt;We are also calling upon teams and organizations who use Kiwi TCMS in their
+testing workflows. Please consider making a one-time donation or
+becoming a regular sponsor via our
+&lt;a href="https://opencollective.com/kiwitcms#section-contribute"&gt;Collective&lt;/a&gt;.
+You can contribute as low as € 1! The entire budget will be distributed to the community!&lt;/p&gt;
+&lt;h2&gt;Vote for Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;Our website has been nominated in the &lt;em&gt;2020 .eu Web Awards&lt;/em&gt; and
+&lt;a href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/"&gt;we've promised&lt;/a&gt;
+to do everything in our power to greet future FOSDEM visitors with
+an open source billboard advertising at BRU airport. We need your help
+to do that!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;https://webawards.eurid.eu/?q=kiwitcms.eu&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Point your mouse to the photo of our website and click the Thumbs Up &amp;#128077; button;&lt;/li&gt;
+&lt;li&gt;No email or registration required!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="community"></category><category term="bounty-program"></category></entry><entry><title>Robot Framework plugin for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/05/06/robot-framework-plugin-for-kiwi-tcms/" rel="alternate"></link><published>2020-05-06T11:57:00+03:00</published><updated>2020-05-06T11:57:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-05-06:/blog/kiwi-tcms-team/2020/05/06/robot-framework-plugin-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;We're happy to announce the initial release of
 &lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;kiwitcms-robotframework-plugin&lt;/a&gt;!
 This package allows you execute your Robot Framework test suite and report the
 results into Kiwi TCMS!
