@@ -26,7 +26,11 @@
         }, {
             title: 'Bug tracker integration',
             subtitle: 'Link to existing bug reports or report new ones directly from Kiwi TCMS',
-            img: 'images/screenshots/007_bugtracker_integration.png'
+            img: 'images/screenshots/007_bugtracker_github.png'
+        }, {
+            title: 'Automatic 1-click bug report',
+            subtitle: 'Open bugs in 3rd party systems from test executions. Fully customizable',
+            img: 'images/screenshots/007_bugtracker_jira.png'
         }, {
             title: 'Testing breakdown telemetry',
             subtitle: 'Shows how existing test cases are distributed',
