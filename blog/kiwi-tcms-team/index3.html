@@ -53,6 +53,134 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="bookmark" title="Permalink to Kiwi TCMS 6.2">
+                <h1 class="top-header">Kiwi TCMS 6.2</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Fri 02 November 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 6.2! This is a small release
+that removes squashed migrations from previous releases and includes a few
+improvements. You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> or
+find our info booth at <a class="reference external" href="http://www.openfest.org">OpenFest</a> in Sofia during
+the weekend and do a live demo with the team!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (latest)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  7870085ad415    957.6 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-1-1">
+<h2>Changes since Kiwi TCMS 6.1.1</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.3/">Django 2.1.3</a></li>
+<li>Update Apache config to print logs on the console. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/549">Issue #549</a></li>
+<li><a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> now
+allows email associations when logging via GitHub. If you have an existing
+account which shares the same email address with your GitHub profile you
+will be redirected to that account upon logging in via GitHub!
+This also resolves a problem where existing users trying to login via GitHub
+were presented with error message that their email exists in the database!
+Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/573">Issue #573</a></li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li>Remove old variants of squashed migrations from earlier releases</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Update <tt class="docutils literal">tcms.tests.factories.BugFactory</tt> (Ivaylo Ivanov)</li>
+<li>Add test for <tt class="docutils literal">tcms.testcases.views.group_case_bugs</tt> (Ivaylo Ivanov)</li>
+<li>Pylint fixes (Ivaylo Ivanov)</li>
+<li>Remove unused JavaScript and re-use the existing JSON RPC methods</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+</div>
+<div class="section" id="subscription-based-online-service">
+<h2>Subscription based online service</h2>
+<p>We are planning to convert
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.</p>
+<p>The income from this service will go towards covering operating costs and
+supporting the
+<a class="reference external" href="/team/">development team</a>. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+</div>
+<div class="section" id="plans-to-remove-deprecated-functionality">
+<h2>Plans to remove deprecated functionality</h2>
+<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
+<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="bookmark" title="Permalink to Kiwi TCMS 6.1.1">
                 <h1 class="top-header">Kiwi TCMS 6.1.1</h1>
             </a>
@@ -2119,83 +2247,6 @@ to spend some time reading the code to figure out how everything works.</p>
 to do so! Please download the <code>tcms-api</code> module, check it out, write and contribute
 example scripts (you can use the demo site for this), send us bug reports, suggestions
 and pull requests!</p>
-<p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.48">
-                <h1 class="top-header">Kiwi TCMS version 3.48</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 28 November 2017
-            </p>
-        </div>
-
-        <div class="article">
-            <p>We're proud to announce Kiwi TCMS version 3.48!
-This is the first release to be announced on our blog and it is also an
-important one!</p>
-<p>Kiwi TCMS 3.48 introduces new versions of Django and Patternfly,
-a Python API client library, many bug-fixes and updated documentation.</p>
-<h2>Changes since KiwiTCMS 3.44</h2>
-<ul>
-<li>Update to Django 1.11.7 (Mr. Senko)</li>
-<li>Update documentation including high level information
-  about how data is organized within Kiwi TCMS and how to work
-  with the system. (Mr. Senko)</li>
-<li>Stop caching report views. (Mr. Senko)</li>
-<li>Make test execution comments optional. Fixes
-  <a href="https://github.com/MrSenko/Kiwi/issues/77">Issue #77</a>. (Mr. Senko)</li>
-<li>Escape special symbols when exporting JSON.
-  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/78">Issue #78</a>. (Mr. Senko)</li>
-<li>Remove Test Run export to XML functionality in favor of API.
-  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/79">Issue #79</a>. (Mr. Senko)</li>
-<li>Make it possible to search Test Runs via Env properties.
-  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/82">Issue #82</a>. (Mr. Senko)</li>
-<li>Display Environment properties in Test Run search results. (Mr. Senko)</li>
-<li>Allow bulk update TestCase.default_tester via email.
-  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/85">Issue #85</a>. (Mr. Senko)</li>
-<li>Don't crash reports when there are untested TestCaseRuns.
-  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/88">Issue #88</a>. (Mr. Senko)</li>
-<li>Bind localhost:80 to container:80.
-  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/99">Issue #99</a>. (Mr. Senko)</li>
-<li>Enable testing with Python 3.6 in preparation for migration. (Mr. Senko)</li>
-<li>If JIRA isn't fully configured then don't connect. Fixes
-  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/100">Issue #100</a>. (Mr. Senko)</li>
-<li>Pin patternfly version to 3.30 and update templates.
-  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/120">Issue #120</a>. (Mr. Senko)</li>
-<li>Show status name rather than status id in TestCaseRun change log. (Chenxiong Qi)</li>
-<li>[api] Adds a Python API client with changes that make it possible to
-  execute on both Python 2 and Python 3. For now take a look at
-  <code>tcms_api/script_examples/</code> for examples how to use it.</li>
-<li>[api] Remove experimental support for Teiid. (Mr. Senko)</li>
-<li>[api] Cache level defaults to <code>CACHE_NONE</code> if not set. (Mr. Senko)</li>
-<li>[api] Remove persistent cache, in-memory caching is still available. (Mr. Senko)</li>
-<li>[api] Remove multicall support. (Mr. Senko)</li>
-</ul>
-<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
-<p><em>NOTE:</em> the API client has been initially developed as the <em>python-nitrate</em>
-project by Petr Splichal and other contributors! We've decided to fork their
-code base into Kiwi's repository and continue further development in a central
-place. This makes it easier testing the API server and client together and
-allows us to move more rapidly! </p>
-<p>As of now there isn't a lot of documentation
-and examples on how to use the API client but we are looking to improve this.
-Additional documentation and examples will be published in the project's
-repository or on this blog!</p>
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span>cd Kiwi/
-docker-compose down
-make docker-image
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre></div>
-
-
 <p>Happy testing!</p>
         </div>
     </section>
