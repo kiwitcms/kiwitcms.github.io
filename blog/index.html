@@ -47,6 +47,39 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/" rel="bookmark" title="Permalink to Versioned releases of Kiwi TCMS">
+                <h1 class="top-header">Versioned releases of Kiwi TCMS</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 23 June 2020
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We are happy to announce that versioned releases of Kiwi TCMS container
+images are now available to customers with an active
+<a href="/#subscriptions">enterprise subscription</a>.</p>
+<p>For a long time our release policy has been to push only <code>latest</code> version
+of our upstream <code>kiwitcms/kiwi</code> containers. This upstream channel doesn't
+carry version tags and receives versioned releases only when there are
+backwards incompatible database migrations!
+This proved challenging to administrators who don't upgrade
+immediately to the latest version as soon as it comes out.</p>
+<p>For example this happens in environments where admins use the upstream images
+as proof of concept and later switch to a production grade installation.
+Quite often they migrate to the <em>Kiwi TCMS Enterprise</em> containers during the
+same time.</p>
+<p>Starting today versioned releases of Kiwi TCMS (single tenant) will be available
+via the <code>mrsenko/kiwitcms</code> private repository on Docker Hub.
+This repository includes tagged versions of the same docker images coming from
+the <code>kiwitcms/kiwi</code> channel!
+Access is granted automatically to all existing enterprise subscribers!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/06/03/kiwi-tcms-84/" rel="bookmark" title="Permalink to Kiwi TCMS 8.4">
                 <h1 class="top-header">Kiwi TCMS 8.4</h1>
             </a>
@@ -2131,184 +2164,6 @@ or simply don't want to!</p>
 so we can deliver on promises made in our roadmap! That requires a lot of time and
 effort which reduces short-term productivity.</p>
 <p>Happy testing!</p>
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/12/09/kiwi-tcms-72/" rel="bookmark" title="Permalink to Kiwi TCMS 7.2">
-                <h1 class="top-header">Kiwi TCMS 7.2</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Mon 09 December 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>We're happy to announce Kiwi TCMS version 7.2!
-This is an improvement &amp; bug fix release which includes
-new database migrations and API methods, internal refactoring and updated
-translations.
-You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  f9a8a044c34e    537 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-7-1">
-<h2>Changes since Kiwi TCMS 7.1</h2>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Base docker image to new CentOS 8</li>
-<li>Update Django from 2.2.6 to 2.2.8</li>
-<li>Update django-contrib-comments from 1.9.1 to 1.9.2</li>
-<li>Update django-grappelli from 2.13.1 to 2.13.2</li>
-<li>Update django-modern-rpc from 0.11.1 to 0.12.0</li>
-<li>Update django-simple-history from 2.7.3 to 2.8.0</li>
-<li>Update mysqlclient from 1.4.4 to 1.4.6</li>
-<li>Update pygithub from 1.44 to 1.44.1</li>
-<li>Update python-gitlab from 1.12.1 to 1.13.0</li>
-<li>Several documentation updates</li>
-</ul>
-</div>
-<div class="section" id="database-migrations">
-<h3>Database migrations</h3>
-<ul class="simple">
-<li>Add new database fields <tt class="docutils literal">weight</tt>, <tt class="docutils literal">icon</tt> and <tt class="docutils literal">color</tt> to
-<tt class="docutils literal">TestExecutionStatus</tt> and adjust existing code to work with them.
-This is a necessary step before allowing customization of test execution
-statuses, see
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/236">Issue #236</a></li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li>RPC method <tt class="docutils literal">TestExecution.add_comment()</tt> now requires
-<tt class="docutils literal">django_comments.add_comment</tt> permission</li>
-<li>Add new RPC method <tt class="docutils literal">TestExecution.remove_comment()</tt></li>
-<li>Add new RPC method <tt class="docutils literal">TestCase.add_comment()</tt></li>
-<li>Add new RPC method <tt class="docutils literal">TestCase.remove_comment()</tt></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li><tt class="docutils literal">testplans.views.DeleteCasesView</tt> now requires <tt class="docutils literal">testplans.change_testplan</tt>
-permission (Svetlomir Balevski)</li>
-<li><tt class="docutils literal">testplans.views.ReorderCasesView</tt> now requires <tt class="docutils literal">testplans.change_testplan</tt>
-permission (Svetlomir Balevski)</li>
-<li>Fix counting bug in execution trends telemetry</li>
-<li>Fix several telemetry queries to still show data in the corner case
-where test cases have been deleted from a TestPlan but test runs
-are still available</li>
-<li>Fix broken bulk menu in TestRun page when (translated) status names
-are too long</li>
-<li>Automatically expand TestExecution comment history if there are comments
-present. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/349">Issue #349</a> (Matt Porter)</li>
-<li>Document timezone settings and show current server time in navbar. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1206">Issue #1206</a></li>
-<li>Check for permissions in HTML template. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/961">Issue #961</a></li>
-<li>Document bug tracker integration support. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/698">Issue #698</a></li>
-<li>Delete comments when TestCase and TestExecution are removed. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1028">Issue #1028</a></li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Pylint fixes (Mariyan Garvanski)</li>
-<li>Use <tt class="docutils literal">django.utils.timezone.now()</tt> instead of <tt class="docutils literal">datetime.now()</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/545">Issue #545</a></li>
-<li>Use JSON-RPC instead of backend views when working with comments. Resolves
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/960">Issue #960</a></li>
-<li>Remove <tt class="docutils literal">tcms.core.contrib.comments</tt> module. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/959">Issue #959</a></li>
-<li>Remove <tt class="docutils literal">label=</tt> attribute from form field. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652">Issue #652</a></li>
-<li>Move and rename XML-RPC forms. Resolves
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/681">Issue #681</a></li>
-<li>Convert <tt class="docutils literal">testplans.views.DeleteCasesView</tt> to JSON-RPC</li>
-<li>Refactor more views from function based to class based</li>
-<li>Remove duplicate JavaScript</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="important-changes">
-<h2>Important changes</h2>
-<p>Soon Kiwi TCMS will switch from <em>OAuth</em> to <em>GitHub App</em> integration type with GitHub.
-Login with your GitHub accounts will still be supported but you will also be
-able to <em>INSTALL</em> Kiwi TCMS into your account/organization/repositories.
-This will open the possibility for further integration with GitHub as expressed
-in our <a class="reference external" href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">roadmap for 2019</a>!</p>
-<p>We are going to share more information when this becomes available.</p>
-</div>
-<div class="section" id="upcoming-conferences">
-<h2>Upcoming conferences</h2>
-<p>The next two events we are going to participate are:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://www.devconf.info/cz/">DevConf.CZ, Jan 24-26, Brno</a>
-where Anton Sankov will be a speaker</li>
-<li><a class="reference external" href="/blog/kiwi-tcms-team/2019/11/26/kiwi-tcms-is-going-to-fosdem-2020/">FOSDEM, Feb 1-2, Brussels</a>
-where you can meet with the entire team</li>
-</ul>
-<p>If you are around come and say &quot;Happy testing&quot;!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd path/containing/docker-compose/
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
-The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:</p>
-<pre class="literal-block">
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-</pre>
-<p>Happy testing!</p>
-</div>
-
         </div>
     </section>
 

@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-03T23:06:00+03:00</updated><entry><title>Kiwi TCMS 8.4</title><link href="/blog/kiwi-tcms-team/2020/06/03/kiwi-tcms-84/" rel="alternate"></link><published>2020-06-03T23:06:00+03:00</published><updated>2020-06-03T23:06:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-03:/blog/kiwi-tcms-team/2020/06/03/kiwi-tcms-84/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.4!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-23T00:12:00+03:00</updated><entry><title>Versioned releases of Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/" rel="alternate"></link><published>2020-06-23T00:12:00+03:00</published><updated>2020-06-23T00:12:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-23:/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/</id><summary type="html">&lt;p&gt;We are happy to announce that versioned releases of Kiwi TCMS container
+images are now available to customers with an active
+&lt;a href="/#subscriptions"&gt;enterprise subscription&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a long time our release policy has been to push only &lt;code&gt;latest&lt;/code&gt; version
+of our upstream &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; containers. This upstream channel doesn't
+carry version tags …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that versioned releases of Kiwi TCMS container
+images are now available to customers with an active
+&lt;a href="/#subscriptions"&gt;enterprise subscription&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a long time our release policy has been to push only &lt;code&gt;latest&lt;/code&gt; version
+of our upstream &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; containers. This upstream channel doesn't
+carry version tags and receives versioned releases only when there are
+backwards incompatible database migrations!
+This proved challenging to administrators who don't upgrade
+immediately to the latest version as soon as it comes out.&lt;/p&gt;
+&lt;p&gt;For example this happens in environments where admins use the upstream images
+as proof of concept and later switch to a production grade installation.
+Quite often they migrate to the &lt;em&gt;Kiwi TCMS Enterprise&lt;/em&gt; containers during the
+same time.&lt;/p&gt;
+&lt;p&gt;Starting today versioned releases of Kiwi TCMS (single tenant) will be available
+via the &lt;code&gt;mrsenko/kiwitcms&lt;/code&gt; private repository on Docker Hub.
+This repository includes tagged versions of the same docker images coming from
+the &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; channel!
+Access is granted automatically to all existing enterprise subscribers!&lt;/p&gt;</content><category term="community"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS 8.4</title><link href="/blog/kiwi-tcms-team/2020/06/03/kiwi-tcms-84/" rel="alternate"></link><published>2020-06-03T23:06:00+03:00</published><updated>2020-06-03T23:06:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-03:/blog/kiwi-tcms-team/2020/06/03/kiwi-tcms-84/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.4!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a medium sized release which includes
 minor security fixes, many improvements &amp;amp; bug-fixes and translations
 in several new languages. It is the second release to include
