@@ -2,8 +2,31 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Authors</title>
+        <title>Kiwi TCMS - Django plugin for Kiwi TCMS</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="initial release" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="tags" content="releases" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Django plugin for Kiwi TCMS">
+            <meta name="twitter:description" content="initial release">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/" />
+        <meta property="og:title" content="Django plugin for Kiwi TCMS" />
+        <meta property="article:published_time" content="2020-06-30 12:47:00+03:00">
+            <meta property="og:description" content="initial release">
+
+            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.jpg">
         <!-- MailChimp Newsletter Form Styles -->
         <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
@@ -46,17 +69,53 @@
         </nav>
         <!-- content -->
     <header class="col-12 header secondary">
-        <h1 class="top-header">Blog authors</h1>
+        <h1 class="top-header">Django plugin for Kiwi TCMS</h1>
+        <h2 class="top-subheader">initial release</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Tue 30 June 2020
+                under
+                    <a href="/blog/tags/releases/">releases</a>
+        </p>
     </header>
 
-    <section class="col-12 article secondary">
-        <a href="/blog/atodorov/" rel="bookmark">
-            <h2 class="top-subheader">Alexander Todorov (17)</h2>
-        </a>
-        <a href="/blog/kiwi-tcms-team/" rel="bookmark">
-            <h2 class="top-subheader">Kiwi TCMS Team (64)</h2>
-        </a>
-    </section>
+    <article class="col-12 article secondary">
+        <p>We're happy to announce the initial release of
+<a class="reference external" href="https://github.com/kiwitcms/django-plugin">kiwitcms-django-plugin</a>!
+This package allows you execute your Django test suite and report the
+results into Kiwi TCMS!
+This plugin has been developed by contributor Bryan Mutai as part of our
+<a class="reference external" href="/blog/tags/bounty-program/">open source bounty program</a>.</p>
+<p>To install:</p>
+<pre class="literal-block">
+pip install kiwitcms-django-plugin
+</pre>
+<p>and then in your <tt class="docutils literal">settings.py</tt> specify:</p>
+<pre class="literal-block">
+TEST_RUNNER = 'tcms_django_plugin.TestRunner'
+</pre>
+<p>This plugin needs the <tt class="docutils literal"><span class="pre">~/.tcms.conf</span></tt> configuration file:</p>
+<pre class="literal-block">
+[tcms]
+url = https://tcms.server/xml-rpc/
+username = your-username
+password = your-password
+</pre>
+<p>Product information and how to report can be controlled via environment variables
+which are documented
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html#plugin-configuration">here</a>.
+Example results from the plugin's own test suite are reported in
+<a class="reference external" href="https://tcms.kiwitcms.org/plan/296/">TP-296</a>!</p>
+<p>Happy testing!</p>
+
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
         <!-- Newsletter Form Section -->
         <section class="newsletter secondary col-12">
             <div id="mc_embed_signup">

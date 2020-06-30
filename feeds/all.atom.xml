@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-23T00:12:00+03:00</updated><entry><title>Versioned releases of Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/" rel="alternate"></link><published>2020-06-23T00:12:00+03:00</published><updated>2020-06-23T00:12:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-23:/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/</id><summary type="html">&lt;p&gt;We are happy to announce that versioned releases of Kiwi TCMS container
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-30T12:47:00+03:00</updated><entry><title>Django plugin for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/" rel="alternate"></link><published>2020-06-30T12:47:00+03:00</published><updated>2020-06-30T12:47:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-30:/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;We're happy to announce the initial release of
+&lt;a class="reference external" href="https://github.com/kiwitcms/django-plugin"&gt;kiwitcms-django-plugin&lt;/a&gt;!
+This package allows you execute your Django test suite and report the
+results into Kiwi TCMS!
+This plugin has been developed by contributor Bryan Mutai as part of our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pip install kiwitcms-django-plugin
+&lt;/pre&gt;
+&lt;p&gt;and then in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce the initial release of
+&lt;a class="reference external" href="https://github.com/kiwitcms/django-plugin"&gt;kiwitcms-django-plugin&lt;/a&gt;!
+This package allows you execute your Django test suite and report the
+results into Kiwi TCMS!
+This plugin has been developed by contributor Bryan Mutai as part of our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pip install kiwitcms-django-plugin
+&lt;/pre&gt;
+&lt;p&gt;and then in your &lt;tt class="docutils literal"&gt;settings.py&lt;/tt&gt; specify:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+TEST_RUNNER = 'tcms_django_plugin.TestRunner'
+&lt;/pre&gt;
+&lt;p&gt;This plugin needs the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;~/.tcms.conf&lt;/span&gt;&lt;/tt&gt; configuration file:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[tcms]
+url = https://tcms.server/xml-rpc/
+username = your-username
+password = your-password
+&lt;/pre&gt;
+&lt;p&gt;Product information and how to report can be controlled via environment variables
+which are documented
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html#plugin-configuration"&gt;here&lt;/a&gt;.
+Example results from the plugin's own test suite are reported in
+&lt;a class="reference external" href="https://tcms.kiwitcms.org/plan/296/"&gt;TP-296&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+</content><category term="releases"></category></entry><entry><title>Versioned releases of Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/" rel="alternate"></link><published>2020-06-23T00:12:00+03:00</published><updated>2020-06-23T00:12:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-23:/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/</id><summary type="html">&lt;p&gt;We are happy to announce that versioned releases of Kiwi TCMS container
 images are now available to customers with an active
 &lt;a href="/#subscriptions"&gt;enterprise subscription&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For a long time our release policy has been to push only &lt;code&gt;latest&lt;/code&gt; version

@@ -53,6 +53,197 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/" rel="bookmark" title="Permalink to Kiwi TCMS 7.1">
+                <h1 class="top-header">Kiwi TCMS 7.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 29 October 2019
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 7.1!
+This is a small improvement update which includes
+database schema and API changes, several other improvements,
+internal refactoring and updated translations.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  c8cf36ac5ca5    602 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-7-0">
+<h2>Changes since Kiwi TCMS 7.0</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update django from 2.2.5 to 2.2.6</li>
+<li>Update python-gitlab from 1.11.0 to 1.12.1</li>
+<li>Update pygithub from 1.43.8 to 1.44</li>
+<li>Update psycopg2 from 2.8.3 to 2.8.4</li>
+<li>Add help tooltips in all telemetry pages</li>
+<li>Better styling for checkboxes in 'Add hyperlink' dialog,
+part of TestRun page</li>
+<li>Add hyperlink validation. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1147">Issue #1147</a></li>
+</ul>
+</div>
+<div class="section" id="database-migrations">
+<h3>Database migrations</h3>
+<ul class="simple">
+<li>Add <tt class="docutils literal">bugs</tt> permissions to <tt class="docutils literal">Tester</tt> group. Will make any difference
+only if upgrading from existing installation</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>New method <tt class="docutils literal">Bug.remove()</tt></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Always build with the latest versions of translations</li>
+<li>Add 'Delete' menu item in Bugs page. Fixes #1153
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1154">Issue #1153</a></li>
+<li>When deleting hyperlink from TestExecution hide the actual UI
+elements from the page</li>
+<li>Fix failure to delete TCs when the number of TCs inside TP is greater
+than 100. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1149">Issue #1149</a> and
+<a class="reference external" href="https://sentry.io/organizations/open-technologies-bulgaria-ltd/issues/1245504316/">Sentry KIWI-TCMS-8F</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Rename directory <tt class="docutils literal">xmlrpc</tt> to <tt class="docutils literal">rpc</tt> and pylint updates. Refs
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/682">Issue #682</a>
+(Matej Aleksandrov, Sinergise)</li>
+<li>Remove labels from form fields, Refs
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652">Issue #652</a> (Azmi YÜKSEL)</li>
+<li>New base class for tests around permissions (Svetlomir Balevski)</li>
+<li>New &quot;blueprint&quot; test case around permissions to make testing in this area more
+robust</li>
+<li>Refactor many views from function based to class based</li>
+<li>Update stale tests in <tt class="docutils literal">tcms/core/tests/</tt> and make sure they aren't ignored
+by the test runner</li>
+<li>Remove empty class <tt class="docutils literal">XMLRPCBaseCaseForm</tt></li>
+<li>Remove <tt class="docutils literal">XMLRPCNewCaseForm</tt>, duplicate of <tt class="docutils literal">NewCaseForm</tt></li>
+<li>Remove <tt class="docutils literal">rpc.forms.UpdateCaseForm</tt> in favor of <tt class="docutils literal">XMLRPCUpdateCaseForm</tt></li>
+<li>Update only English sources with new strings as a temporary workaround b/c
+Crowdin uses different formatting heuristics than gettext. This will minimize
+the number of .po format changes</li>
+<li>A few pylint fixes</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sq#">Albanian translation</a> - 97%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a> - 91%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified</a> - 71%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/el#">Greek translation</a> - 44%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/it#">Italian translation</a> - 97%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a> - 0%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/mk#">Macedonian translation</a> - 11%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian translation</a> - 97%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a> - 100%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/es-ES#">Spanish translation</a> - 96%</li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/tr#">Turkish translation</a> - 97%</li>
+</ul>
+</div>
+</div>
+<div class="section" id="acknowledgments">
+<h2>Acknowledgments</h2>
+<p>A special &quot;thank you&quot; goes to our friends from
+<a class="reference external" href="https://pyconbalkan.com/">PyCon Balkan</a> in Belgrade who allowed us to host
+an open source coding sprint in Belgrade during the conference!</p>
+<p>A second &quot;thank you&quot; goes to
+<a class="reference external" href="https://openlabs.cc/en/">Open Labs Hackerspace</a> who hosted a localization
+sprint in Tirana and contributed to several different languages!</p>
+<p>Thank you for being part of our community. Version 7.1 includes all of your
+contributions.</p>
+</div>
+<div class="section" id="website-updates">
+<h2>Website updates</h2>
+<p>We're using the opportunity to share that website is now serving via SSL courtesy
+of GitHub and Let's encrypt.</p>
+<p>Our main page has also been updated to showcase some of our customers:
+Better (Slovenia), Minds, Inc. (USA), Musala Soft (Bulgaria). If you would like to
+feature your corporate logo and tell us how you use Kiwi TCMS then
+drop us an email!</p>
+</div>
+<div class="section" id="upcoming-conferences">
+<h2>Upcoming conferences</h2>
+<p>The next two events we are going to participate are:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.openfest.org/">OpenFest, Nov 2-3, Sofia</a>
+where we will have an info booth</li>
+<li><a class="reference external" href="https://www.istacon.org/">ISTA Conference, Nov 14-15, Sofia</a>
+where you can meet with Alex Todorov and some of our contributors and
+customers</li>
+</ul>
+<p>If you are around come and say &quot;Happy testing&quot;!</p>
+</div>
+<div class="section" id="upcoming-fosdem-2020">
+<h2>Upcoming FOSDEM 2020</h2>
+<p>We are happy to announce that our team, together with SUSE and Linaro will be
+hosting the
+<a class="reference external" href="http://fosdem-testingautomation.github.io/">Testing and Automation Developer Room</a>
+at FOSDEM in Brussels next February.</p>
+<p>Call for papers is open until December 10th 2019. Anything related to
+software testing and open source is welcome. Apply from the link above.</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/" rel="bookmark" title="Permalink to Kiwi TCMS 7.0">
                 <h1 class="top-header">Kiwi TCMS 7.0</h1>
             </a>
@@ -2525,179 +2716,6 @@ Previously the summary column was a link to nowhere.</li>
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652">Issue #652</a> (Anton Sankov)</li>
 <li>Remove JavaScript that duplicates <tt class="docutils literal">requestOperationUponFilteredCases()</tt></li>
 <li>Remove <tt class="docutils literal">QuerySetIterationProxy</tt> class - not used anymore</li>
-</ul>
-</div>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:</p>
-<pre class="literal-block">
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-</pre>
-<p>Happy testing!</p>
-</div>
-
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/" rel="bookmark" title="Permalink to Kiwi TCMS 6.3">
-                <h1 class="top-header">Kiwi TCMS 6.3</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 04 December 2018
-            </p>
-        </div>
-
-        <div class="article">
-            <p>We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
-security update that includes new versions of Django and Patternfly,
-new database migrations, lots of improvements, bug fixes and internal
-refactoring. This version also introduces integration with GitLab issue
-tracker! You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  8135624fdca2    960.3 MB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-6-2-1">
-<h2>Changes since Kiwi TCMS 6.2.1</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Resolve medium severity XSS vulnerability which can be exploited when
-previewing malicious text in Simple MDE editor. See
-<a class="reference external" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19057">CVE-2018-19057</a>,
-<a class="reference external" href="https://snyk.io/vuln/SNYK-JS-SIMPLEMDE-72570">SNYK-JS-SIMPLEMDE-72570</a></li>
-<li>Use <tt class="docutils literal">mozilla/bleach</tt> before rendering Markdown to the user as a second layer
-of protection against the previously mentioned XSS vulnerability</li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.4/">Django 2.1.4</a></li>
-<li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.58.0</a></li>
-<li>Make docker container restartable (Maik Opitz, Adam Hall)</li>
-<li>Add GitLab issue tracker integration. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/176">Issue #176</a>
-(Filipe Arruda, Federal Institute of Pernambuco)</li>
-<li>Convert <tt class="docutils literal">Create new TestPlan</tt> page to Patternfly (Anton Sankov)</li>
-<li>Upon successful registration show the list of super-users in case new
-accounts must be activated manually. This can be the same or expanded
-version of the addresses in the <tt class="docutils literal">ADMIN</tt> setting. Include super-users
-in email notifications sent via <tt class="docutils literal">tcms.signals.notify_admins()</tt>.</li>
-<li>Don't include <tt class="docutils literal"><span class="pre">admin/js/*.js</span></tt> files in templates when not
-necessary. Results in faster page load. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/209">Issue #209</a></li>
-<li>Enable <tt class="docutils literal">nl2br</tt> Markdown extension which allows newline characters
-to be rendered as <tt class="docutils literal">&lt;br&gt;</tt> tags in HTML. Visually the rendered
-text will look closer to what you seen in the text editor. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/623">Issue #623</a></li>
-<li>Use auto-complete for adding components to TestCase</li>
-</ul>
-</div>
-<div class="section" id="removed-functionality">
-<h3>Removed functionality</h3>
-<ul class="simple">
-<li>Bulk-update of Category for selected TestCase(s) inside of
-TestPlan</li>
-<li>Bulk-update of Components for selected TestCase(s) inside of
-TestPlan</li>
-<li>Bulk-update of automated status for selected TestCase(s) inside of
-TestPlan</li>
-<li>Bulk-remove for TestCase Component tab</li>
-</ul>
-<p>These actions have always been a bit broken and didn't check the
-correct permission labels. You can still update items individually!</p>
-<ul class="simple">
-<li>Selection of Components when creating new TestCase. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/565">Issue #565</a>.
-Everywhere else Kiwi TCMS doesn't allow selection of many-to-many
-relationships when creating or editing objects. Tags, Bugs, Components,
-TestPlans can be added via dedicated tabs once the object has been saved.</li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Hide <tt class="docutils literal">KiwiUserAdmin.password</tt> field from super-user. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/610">Issue #610</a></li>
-<li>Don't show inactive Priority. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/637">Issue #637</a></li>
-<li>Don't traceback when adding new users via Admin. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/642">Issue #642</a></li>
-<li>Teach <tt class="docutils literal">TestRun.update()</tt> API method to process the <tt class="docutils literal">stop_date</tt>
-field. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/554">Issue #554</a> (Anton Sankov)</li>
-<li>Previously when reporting issues to Bugzilla, directly from a TestRun,
-Kiwi TCMS displayed the error <tt class="docutils literal">Enable reporting to this Issue Tracker by
-configuring its base_url</tt> although that has already been configured.
-This is now fixed. See
-<a class="reference external" href="https://stackoverflow.com/questions/53434949/">Stack Overflow #53434949</a></li>
-</ul>
-</div>
-<div class="section" id="database">
-<h3>Database</h3>
-<ul class="simple">
-<li>Remove <tt class="docutils literal">TestPlan.owner</tt> field, duplicates <tt class="docutils literal">TestPlan.author</tt></li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Remove <tt class="docutils literal">fmt_queries()</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/330">Issue #330</a> (Anton Sankov)</li>
-<li>Remove unused parameter from <tt class="docutils literal">plan_from_request_or_none()</tt>. Refers to
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/303">Issue #303</a> (Anton Sankov)</li>
-<li>Remove <tt class="docutils literal">ComponentActions()</tt> class. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/20">Issue #20</a></li>
-<li>Convert lots of AJAX calls to JSON-RPC</li>
-<li>Remove lots of unused Python, JavaScript and templates. Both after migration
-to JSON RPC and other leftovers</li>
-<li>Pylint fixes (Alexander Todorov, Anton Sankov)</li>
 </ul>
 </div>
 </div>

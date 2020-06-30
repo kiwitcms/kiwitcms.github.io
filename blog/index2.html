@@ -47,6 +47,101 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/" rel="bookmark" title="Permalink to Roadmap status report for 2019">
+                <h1 class="top-header">Roadmap status report for 2019</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on Thu 26 December 2019
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
+team has made towards achieving the goals on our
+<a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">2019 roadmap</a>.
+TL,DR: last year we've made lots of big and visible changes in Kiwi TCMS.
+This year less so. Progress has been slower than before and not so much
+visible. Community and team is growing. More contributors are welcome.</p>
+<h2>Complete the internal refactoring</h2>
+<p><em>Status: small progress, needs help</em></p>
+<p><a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> progress is:</p>
+<ul>
+<li>-60 code smells</li>
+<li>-55 duplications</li>
+<li>-50 other issues</li>
+<li>4.4% technical debt improvement</li>
+<li>-240 hrs remaining until issues are fixed</li>
+</ul>
+<p>The trend is showing less issues remaining
+but it has been a slow progress. As we fix the easier items the remaining ones
+become harder to deal with.</p>
+<p>We've done minor work related to fixing issues reported by pylint. Around
+150 of them still remain!</p>
+<p>We have not done any targeted work to resolve other issues reported by Scrutinizer,
+remove vendored-in JavaScript libraries, JavaScript refactoring or
+classification of issues in 3rd party dependencies.</p>
+<h2>Redesign the UI templates with the help of Patternfly</h2>
+<p><em>Status: 60% done, needs help</em></p>
+<p>There are 22 HTML templates remaining to be redesigned (from 59). That's mostly
+due to internal cleanup and some refactoring! Test plan and Test run pages are the
+two major templates that still need to be redesigned with Patternfly.</p>
+<h2>Modernize reporting aka Telemetry</h2>
+<p><em>Status: 60% done, in progress, behind schedule</em></p>
+<p>The specs for the new <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Telemetry</a> system
+have been defined after taking into account feedback on GitHub issues. Anton Sankov is
+the leading developer for this feature. So far we have 4 telemetry reports merged:
+testing break-down, status matrix, execution trends and flaky tests.</p>
+<p>There are lots of minor issues or missing functionality in these first iterations
+(compared to specification). Work continues on the other telemetry use-cases
+and related items.</p>
+<h2>Plugins for 3rd party test automation frameworks</h2>
+<p><em>Status: good, needs help</em></p>
+<p><em>UPDATE:</em> no change in last 6 months.</p>
+<p>If you'd like to see plugins for more test automation frameworks
+and/or file formats please checkout the
+<a href="https://kiwitcms.readthedocs.io/en/latest/automation-frameworks.html">documentation</a>
+for links and more info.</p>
+<h2>Redefine bug-tracker integration</h2>
+<p><em>Status: 66% complete, in progress, behind schedule</em></p>
+<p>We've been making slow progress on this milestone lately. For more info
+see
+<a href="https://github.com/kiwitcms/Kiwi/milestone/1">https://github.com/kiwitcms/Kiwi/milestone/1</a></p>
+<h2>GitHub flow integration</h2>
+<p><em>Status: done, awaiting deployment</em></p>
+<p>Our team spent some time making Kiwi TCMS the first open source TCMS available
+on the <a href="https://github.com/marketplace/kiwi-tcms">GitHub Marketplace</a>. At the end
+of this year we were able to create a small application that allows further
+integration and extending the testing workflow to the GitHub platform.</p>
+<p>This is waiting on a few more clarifications from GitHub before we deploy but
+for now it can be considered as done. Future functionality will be tracked
+and developed directly at
+<a href="https://github.com/kiwitcms/github-app/issues">https://github.com/kiwitcms/github-app/issues</a>.</p>
+<h2>Agile integration with Trello</h2>
+<p><em>Status: no progress, will drop</em></p>
+<p>This will be dropped from roadmap for the next year until we can get more interest
+from the community.</p>
+<h2>Improve engineering productivity</h2>
+<p><em>Status: no progress</em></p>
+<p>Looking for external help here. This will stay as a low priority item on our
+roadmap for 2020 until we can free more resources on the team.</p>
+<h2>Community</h2>
+<p><em>Status: great, on track, needs work</em></p>
+<p>This is our strongest area during this year. We have a strong presence in
+multiple communities, our event schedule is very busy and we are gaining more
+recognition every day! Core team hit several big bumps this year and is still
+recovering with a few more people onboarding.</p>
+<p>Kiwi TCMS suffers from the problem that many of our users can't be contributors
+or simply don't want to!</p>
+<p>In short: it is important for us to follow our mission and develop our core team
+so we can deliver on promises made in our roadmap! That requires a lot of time and
+effort which reduces short-term productivity.</p>
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/12/09/kiwi-tcms-72/" rel="bookmark" title="Permalink to Kiwi TCMS 7.2">
                 <h1 class="top-header">Kiwi TCMS 7.2</h1>
             </a>
@@ -2394,39 +2489,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 
         </div>
     </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/" rel="bookmark" title="Permalink to Taking the lead at OpenExpo Europe CfP votes">
-                <h1 class="top-header">Taking the lead at OpenExpo Europe CfP votes</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 13 March 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p><img src="/images/openexpo/vote_openexpo19.jpg"
-     alt="Vote for Kiwi TCMS at OpenExpo"
-     style="float: none"></p>
-<p>We are happy to announce that Anton Sankov and Alex Todorov are currently taking
-the lead at OpenExpo Europe's CfP votes!</p>
-<p>Going to OpenExpo will be huge boost for Kiwi TCMS so please help us make this happen!
-Voting is open until March 17th 2019! You can cast your vote via Facebook login
-but remember to confirm your email address!</p>
-<ul>
-<li>Vote for Alex'es
-  <a href="https://a.cstmapp.com/entries/29369/sort:votes/direction:desc">cyber security presentation</a></li>
-<li>Vote for Anton's
-  <a href="https://a.cstmapp.com/entries/30063/sort:votes/direction:desc">micro-services tech talk</a></li>
-<li>Vote for Alex'es
-  <a href="https://a.cstmapp.com/entries/30063/sort:votes/direction:desc">pylint plugins tech-talk</a>:
-  currently 3rd in the Open Source Tech Talks category</li>
-</ul>
-<p>Thank you &amp; happy testing!</p>
-        </div>
-    </section>
 
 <section id="pagination" class="col-12 secondary">
     <ul class="pagination">
@@ -2434,7 +2496,7 @@ but remember to confirm your email address!</p>
             <a href="/blog/index.html">&larr;Newest Posts </a>
         </li>
         <li>
-            Page 2 / 4
+            Page 2 / 5
         </li>
         <li>
             <a href="/blog/index3.html">Older Posts &rarr;</a>
