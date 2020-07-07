@@ -47,6 +47,80 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/" rel="bookmark" title="Permalink to Kiwi TCMS is migrating from OAuth to GitHub App">
+                <h1 class="top-header">Kiwi TCMS is migrating from OAuth to GitHub App</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sun 12 January 2020
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Hello testers, Kiwi TCMS is migrating from its OAuth backend
+to the so called "GitHub App" backend in order to enable further
+integration with GitHub's PR flow as stated previously in our
+<a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">yearly goals</a>.
+This blog post outlines the differences between the old and the new!</p>
+<p>The old OAuth application only had access to your username, name and email
+for authentication purposes. Its authorization screen looked like so:</p>
+<p><img src="/images/github/oauth_login.png"
+    alt="OAuth login screen"
+    style="float:none"></p>
+<p>GitHub Apps on the other hand are designed for more granular access and tighter
+integration with the GitHub platform. This type of application still allows you
+to perform 1-click login into
+<a href="https://public.tenant.kiwitcms.org">https://public.tenant.kiwitcms.org</a>. If this is your
+first time logging into Kiwi TCMS after the migration you will see the following screen:</p>
+<p><img src="/images/github/app_login.png"
+    alt="App login screen"
+    style="float:none"></p>
+<p>Notice how the heading, information section and action button are slightly different!
+The important section is <strong>Resources on your account</strong>! We still only need your
+name, username and email address! Existing Kiwi TCMS accounts (from before the migration)
+will continue to work and they will still have access to all of their data previously
+created. Authorization of this new GitHub app (e.g. login only) does not give it
+permissions to access your repositories and act on your behalf.</p>
+<p>To permit this GitHub App to access your repositories and/or act on your behalf
+you must <strong>Install</strong> it first. That is tell Kiwi TCMS GitHub integration code
+what kind of resources from your GitHub account it is allowed to access. You may
+install into your personal GitHub account or an organizational account! You may
+do this by following the <strong>Install &amp; Authorize</strong> button on our home page or
+directly from <a href="https://github.com/apps/kiwi-tcms">https://github.com/apps/kiwi-tcms</a>!
+The screen should look like this:</p>
+<p><img src="/images/github/app_installation.png"
+    alt="App installation screen"
+    style="float:none"></p>
+<p>Initially we ask for read-only access to a few resources so Kiwi TCMS can start
+receiving webhooks from GitHub and synchronize information about your repositories
+into our database. This is documented both on the app installation screen itself
+(required by GitHub) and on
+<a href="https://github.com/kiwitcms/github-app">https://github.com/kiwitcms/github-app</a>!</p>
+<p>Further ideas about integration between GitHub and Kiwi TCMS, including the original
+idea about status checks from <a href="https://github.com/kiwitcms/Kiwi/issues/700">Issue #700</a>,
+can be found at
+<a href="https://github.com/kiwitcms/github-app/issues">https://github.com/kiwitcms/github-app/issues</a>.</p>
+<h2>Help us grow</h2>
+<p>After this migration we're back to zero! The thousands of authorizations we've had
+on our legacy OAuth app can't be migrated to the new app. This also means our
+listing on GitHub Marketplace will be taken down and we have to qualify through the
+entire process from scratch.</p>
+<p>Please help us get back on track! Here's what we ask you to do (in this order):</p>
+<ul>
+<li>Go to <a href="https://public.tenant.kiwitcms.org">https://public.tenant.kiwitcms.org</a> and
+  click the GitHub login icon, follow through with the process;</li>
+<li>Go to <a href="https://github.com/apps/kiwi-tcms">https://github.com/apps/kiwi-tcms</a> and
+  click the <strong>Install</strong> button, select account &amp; repositories and complete the
+  process;</li>
+<li>Share this blog post with friends, co-workers and other testers who might be
+  interested to help!</li>
+</ul>
+<p>Thank you! Happy testing and happy new year!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/" rel="bookmark" title="Permalink to Roadmap status report for 2019">
                 <h1 class="top-header">Roadmap status report for 2019</h1>
             </a>
@@ -2272,191 +2346,6 @@ automated test suite and send them back to Kiwi TCMS.</p>
 Beta quality. They are available for early preview and feedback.</p>
 <p>Many thanks to <a class="reference external" href="https://github.com/apetkova">Aneta Petkova</a> who is the
 main contributor behind this plugin!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:</p>
-<pre class="literal-block">
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-</pre>
-<p>Happy testing!</p>
-</div>
-
-        </div>
-    </section>
-    <section class="col-12 secondary">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="bookmark" title="Permalink to Kiwi TCMS 6.6">
-                <h1 class="top-header">Kiwi TCMS 6.6</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 19 March 2019
-            </p>
-        </div>
-
-        <div class="article">
-            <p>We're happy to announce Kiwi TCMS version 6.6! This is a
-medium severity security update, improvement and bug-fix update.
-You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  c4734f98ca37    971.3 MB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-6-5-3">
-<h2>Changes since Kiwi TCMS 6.5.3</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Explicitly require marked v0.6.1 to fix medium severity ReDoS vulnerability. See
-<a class="reference external" href="https://snyk.io/vuln/SNYK-JS-MARKED-73637">SNYK-JS-MARKED-73637</a></li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update <tt class="docutils literal"><span class="pre">python-gitlab</span></tt> from 1.7.0 to 1.8.0</li>
-<li>Update <tt class="docutils literal"><span class="pre">django-contrib-comments</span></tt> from 1.9.0 to 1.9.1</li>
-<li>More strings marked as translatable (Christophe CHAUVET)</li>
-<li>When creating new TestCase you can now change notification settings.
-Previously this was only possible during editing</li>
-<li>Document import-export approaches. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/795">Issue #795</a></li>
-<li>Document available test automation plugins</li>
-<li>Improve documentation around Docker customization and SSL termination</li>
-<li>Add documentation example of reverse rroxy configuration for HAProxy (Nicolas Auvray)</li>
-<li><tt class="docutils literal">TestPlan.add_case()</tt> will now set the sortkey to highest in plan + 10 (Rik)</li>
-<li>Add <tt class="docutils literal">LinkOnly</tt> issue tracker. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/289">Issue #289</a></li>
-<li>Use the same HTML template for both TestCase new &amp; edit</li>
-<li>New API methods for adding, removing and listing attachments. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/446">Issue #446</a>:<ul>
-<li>TestPlan.add_attachment()</li>
-<li>TestCase.add_attachment()</li>
-<li>TestPlan.list_attachments()</li>
-<li>TestCase.list_attachments()</li>
-<li>Attachments.remove_attachment()</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="database-migrations">
-<h3>Database migrations</h3>
-<ul>
-<li><p class="first">Populate missing <tt class="docutils literal">TestCase.text</tt> history.
-In version 6.5 the <tt class="docutils literal">TestCase</tt> model was updated to store the text
-into a single field called <tt class="docutils literal">text</tt> instead of 4 separate fields.
-During that migration historical records were updated to have
-the new <tt class="docutils literal">text</tt> field but values were not properly assigned.</p>
-<p>The &quot;effect&quot; of this is that in TestCaseRun records you were not
-able to see the actual text b/c it was None.</p>
-<p>This change ammends <tt class="docutils literal">0006_merge_text_field_into_testcase_model</tt> for
-installations which have not yet migrated to 6.5 or later. We also
-provide the data-only migration <tt class="docutils literal">0009_populate_missing_text_history</tt>
-which will inspect the current state of the DB and copy the text to
-the last historical record.</p>
-</li>
-</ul>
-</div>
-<div class="section" id="removed-functionality">
-<h3>Removed functionality</h3>
-<ul>
-<li><p class="first">Remove legacy reports. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a></p>
-</li>
-<li><p class="first">Remove &quot;Save &amp; Continue&quot; functionality from TestCase edit page</p>
-</li>
-<li><p class="first">Renamed API methods:</p>
-<ul class="simple">
-<li><tt class="docutils literal">TestCaseRun.add_log()</tt>    -&gt; <tt class="docutils literal">TestCaseRun.add_link()</tt></li>
-<li><tt class="docutils literal">TestCaseRun.remove_log()</tt> -&gt; <tt class="docutils literal">TestCaseRun.remove_link()</tt></li>
-<li><tt class="docutils literal">TestCaseRun.get_logs()</tt>   -&gt; <tt class="docutils literal">TestCaseRun.get_links()</tt></li>
-</ul>
-<p>These methods work with URL links, which can be added or removed to
-test case runs.</p>
-</li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Remove hard-coded timestamp in TestCase page template, References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/765">Issue #765</a></li>
-<li>Fix handling of <tt class="docutils literal"><span class="pre">?from_plan</span></tt> URL parameter in TestCase page</li>
-<li>Make <tt class="docutils literal">TestCase.text</tt> occupy 100% width when rendered. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/798">Issue #798</a></li>
-<li>Enable <tt class="docutils literal">markdown.extensions.tables</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/816">Issue #816</a></li>
-<li>Handle form erros and default values for TestPlan new/edit. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/864">Issue #864</a></li>
-<li>Tests + fix for failing TestCase rendering in French</li>
-<li>Show color-coded statuses on dashboard page when seen with non-English
-language</li>
-<li>Refactor check for confirmed test cases when editting to work with
-translations</li>
-<li>Fix form values when filtering test cases inside TestPlan. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/674">Issue #674</a> (&#64;marion2016)</li>
-<li>Show delete icon for attachments. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/847">Issue #847</a></li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Remove unused <tt class="docutils literal">.current_user</tt> instance attribute</li>
-<li>Remove <tt class="docutils literal">EditCaseForm</tt> and use <tt class="docutils literal">NewCaseForm</tt> instead, References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/708">Issue #708</a>,
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/812">Issue #812</a></li>
-<li>Fix &quot;Select All&quot; checkbox. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/828">Issue #828</a> (Rady)</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-<li>Changed misspelled source string <tt class="docutils literal">Requirments</tt> -&gt; <tt class="docutils literal">Requirements</tt> (&#64;Prome88)</li>
-</ul>
-</div>
 </div>
 <div class="section" id="how-to-upgrade">
 <h2>How to upgrade</h2>

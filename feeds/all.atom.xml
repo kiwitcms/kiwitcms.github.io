@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-30T12:47:00+03:00</updated><entry><title>Django plugin for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/" rel="alternate"></link><published>2020-06-30T12:47:00+03:00</published><updated>2020-06-30T12:47:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-30:/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;We're happy to announce the initial release of
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-07-07T16:55:00+03:00</updated><entry><title>CfP: deployment, backup and upgrade best practices</title><link href="/blog/kiwi-tcms-team/2020/07/07/cfp-deployment-backup-and-upgrade-best-practices/" rel="alternate"></link><published>2020-07-07T16:55:00+03:00</published><updated>2020-07-07T16:55:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-07-07:/blog/kiwi-tcms-team/2020/07/07/cfp-deployment-backup-and-upgrade-best-practices/</id><summary type="html">&lt;p&gt;Kiwi TCMS is opening a call for proposals: &lt;strong&gt;Tell us how do you deploy, backup and upgrade
+your Kiwi TCMS containers? What environment do you use, how do you migrate data
+or ensure the system is always up and running? How do you go about testing if a
+newer version …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS is opening a call for proposals: &lt;strong&gt;Tell us how do you deploy, backup and upgrade
+your Kiwi TCMS containers? What environment do you use, how do you migrate data
+or ensure the system is always up and running? How do you go about testing if a
+newer version doesn't break the features that you use ? What best practices have
+you identified that can help others?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We are going to collect your feedback and update the existing documentation.&lt;/p&gt;
+&lt;p&gt;Please submit your responses here:
+&lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSe-kioT_e3UHwV5irwLroR2Jsk5oYM_Ls6acVeLVcBn7Kpt7Q/viewform"&gt;https://docs.google.com/forms/d/e/1FAIpQLSe-kioT_e3UHwV5irwLroR2Jsk5oYM_Ls6acVeLVcBn7Kpt7Q/viewform&lt;/a&gt;.
+All fields are optional, including your email address!&lt;/p&gt;
+&lt;p&gt;Thank you and happy testing!&lt;/p&gt;</content></entry><entry><title>Django plugin for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/" rel="alternate"></link><published>2020-06-30T12:47:00+03:00</published><updated>2020-06-30T12:47:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-30:/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;We're happy to announce the initial release of
 &lt;a class="reference external" href="https://github.com/kiwitcms/django-plugin"&gt;kiwitcms-django-plugin&lt;/a&gt;!
 This package allows you execute your Django test suite and report the
 results into Kiwi TCMS!
