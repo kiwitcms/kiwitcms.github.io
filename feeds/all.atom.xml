@@ -1,5 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-07-07T16:55:00+03:00</updated><entry><title>CfP: deployment, backup and upgrade best practices</title><link href="/blog/kiwi-tcms-team/2020/07/07/cfp-deployment-backup-and-upgrade-best-practices/" rel="alternate"></link><published>2020-07-07T16:55:00+03:00</published><updated>2020-07-07T16:55:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-07-07:/blog/kiwi-tcms-team/2020/07/07/cfp-deployment-backup-and-upgrade-best-practices/</id><summary type="html">&lt;p&gt;Kiwi TCMS is opening a call for proposals: &lt;strong&gt;Tell us how do you deploy, backup and upgrade
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-07-10T13:45:00+03:00</updated><entry><title>Kiwi TCMS 8.5</title><link href="/blog/kiwi-tcms-team/2020/07/10/kiwi-tcms-85/" rel="alternate"></link><published>2020-07-10T13:45:00+03:00</published><updated>2020-07-10T13:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-07-10:/blog/kiwi-tcms-team/2020/07/10/kiwi-tcms-85/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.5!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a medium sized release which includes many improvements,
+database migrations, translation updates and new tests.
+It is the third release to include contributions via our
+&lt;a class="reference external" href="https://kiwitcms.org/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.5!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a medium sized release which includes many improvements,
+database migrations, translation updates and new tests.
+It is the third release to include contributions via our
+&lt;a class="reference external" href="https://kiwitcms.org/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  4379e2438e43    636 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-8-4"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 8.4&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django from 3.0.7 to 3.0.8&lt;/li&gt;
+&lt;li&gt;Update django-colorfield from 0.3.0 to 0.3.2&lt;/li&gt;
+&lt;li&gt;Update django-modern-rpc from 0.12.0 to 0.12.1&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 2.10.0 to 2.11.0&lt;/li&gt;
+&lt;li&gt;Update mysqlclient from 1.4.6 to 2.0.1&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 2.2.0 to 2.4.0&lt;/li&gt;
+&lt;li&gt;Update python-bugzilla from 2.3.0 to 2.5.0&lt;/li&gt;
+&lt;li&gt;Add middleware to warn for unapplied migrations. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1696"&gt;Issue #1696&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Add &amp;quot;insert table&amp;quot; button to SimpleMDE toolbar. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1531"&gt;Issue #1531&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Implement &lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/"&gt;kiwitcms-django-plugin&lt;/a&gt;.
+Resolves &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/693"&gt;Issue #693&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Add missing permission check for &lt;tt class="docutils literal"&gt;TestExecution.add_link()&lt;/tt&gt; API method (Rosen Sasov)&lt;/li&gt;
+&lt;li&gt;Add missing permission check for &lt;tt class="docutils literal"&gt;TestExecution.remove_link()&lt;/tt&gt; API method (Rosen Sasov)&lt;/li&gt;
+&lt;li&gt;Admin interface will now appear translated&lt;/li&gt;
+&lt;li&gt;Propagate server side API errors to the browser. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/625"&gt;Issue #625&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1333"&gt;Issue #1333&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improvements for Status Matrix telemetry page:&lt;ul&gt;
+&lt;li&gt;Make the horizontal scroll bar at the bottom always visible&lt;/li&gt;
+&lt;li&gt;Make the header row always visible&lt;/li&gt;
+&lt;li&gt;Add button to show columns in reverse. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1682"&gt;Issue #1682&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make it possible to display TestExecutions from child TestPlans. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1683"&gt;Issue #1683&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update existing Bug tracker records to match the changes introduced with
+the new &lt;tt class="docutils literal"&gt;EXTERNAL_BUG_TRACKERS&lt;/tt&gt; setting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;EXTERNAL_BUG_TRACKERS&lt;/tt&gt; setting which is a list of dotted class paths
+representing external bug tracker integrations. Plugins and Kiwi TCMS admins
+can now more easily include customized integrations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-testing"&gt;
+&lt;h3&gt;Refactoring &amp;amp; testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add new linter to check for label arguments in form field classes. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/738"&gt;Issue #738&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Add new linter to check if all forms inherit from &lt;tt class="docutils literal"&gt;ModelForm&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1384"&gt;Issue #1384&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Enable pylint plugin &lt;tt class="docutils literal"&gt;pylint.extensions.docparams&lt;/tt&gt; and resolve errors. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1192"&gt;Issue #1192&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Migrate 'test-for-missing-migrations' from Travis CI to GitHub workflow. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1553"&gt;Issue #1553&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.bugs.api.add_tag()&lt;/tt&gt;. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1597"&gt;Issue #1597&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.bugs.api.remove_tag()&lt;/tt&gt;. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1597"&gt;Issue #1597&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;Add test for &lt;tt class="docutils literal"&gt;tcms.testplans.views.Edit&lt;/tt&gt;. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1617"&gt;Issue #1617&lt;/a&gt; (&amp;#64;cmbahadir)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;markdown2html()&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1659"&gt;Issue #1659&lt;/a&gt; (Mariyan Garvanski)&lt;/li&gt;
+&lt;li&gt;Add test for Cyrillic support with MariaDB. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1770"&gt;Issue #1770&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/id#"&gt;Indonesian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sw#"&gt;Swahili translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v8-5-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v8.5-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v8.5&lt;/li&gt;
+&lt;li&gt;Update django-ses from 0.8.14 to 1.0.1&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 1.1.1 to 1.2&lt;/li&gt;
+&lt;li&gt;Update social-auth-app-django from 3.4.0 to 4.0.0&lt;/li&gt;
+&lt;li&gt;Start tagging non-Enterprise images of &lt;cite&gt;kiwitcms/kiwi&lt;/cite&gt; - will be provided
+via separate private repository for enterprise customers. See
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more info see
+&lt;a class="reference external" href="https://github.com/MrSenko/kiwitcms-enterprise/#v85-mt-10-july-2020"&gt;https://github.com/MrSenko/kiwitcms-enterprise/#v85-mt-10-july-2020&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="vote-for-kiwi-tcms"&gt;
+&lt;h2&gt;Vote for Kiwi TCMS&lt;/h2&gt;
+&lt;p&gt;Our website has been nominated in the &lt;em&gt;2020 .eu Web Awards&lt;/em&gt; and
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/"&gt;we've promised&lt;/a&gt;
+to do everything in our power to greet future FOSDEM visitors with
+an open source billboard advertising at BRU airport. We need your help
+to do that!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Go to &lt;a class="reference external" href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;https://webawards.eurid.eu/?q=kiwitcms.eu&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Point your mouse to the photo of our website and click the Thumbs Up button;&lt;/li&gt;
+&lt;li&gt;No email or registration required!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="releases"></category></entry><entry><title>CfP: deployment, backup and upgrade best practices</title><link href="/blog/kiwi-tcms-team/2020/07/07/cfp-deployment-backup-and-upgrade-best-practices/" rel="alternate"></link><published>2020-07-07T16:55:00+03:00</published><updated>2020-07-07T16:55:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-07-07:/blog/kiwi-tcms-team/2020/07/07/cfp-deployment-backup-and-upgrade-best-practices/</id><summary type="html">&lt;p&gt;Kiwi TCMS is opening a call for proposals: &lt;strong&gt;Tell us how do you deploy, backup and upgrade
 your Kiwi TCMS containers? What environment do you use, how do you migrate data
 or ensure the system is always up and running? How do you go about testing if a
 newer version …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS is opening a call for proposals: &lt;strong&gt;Tell us how do you deploy, backup and upgrade

@@ -53,6 +53,73 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.50">
+                <h1 class="top-header">Kiwi TCMS version 3.50</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 25 January 2018
+            </p>
+        </div>
+
+        <div class="article">
+            <p>We're happy to announce Kiwi TCMS version 3.50
+and the corresponding tcms-api version 1.5.1! This is a bug-fix and
+enhancement release and we advise you to upgrade as soon as possible!</p>
+<h2>Changes since Kiwi TCMS 3.49</h2>
+<h3>Enhancements and bug fixes</h3>
+<ul>
+<li>Update documentation for XML-RPC and positional arguments, translations,
+  environment groups</li>
+<li>Enable translations. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/129">Issue #129</a></li>
+<li>Register models for DB translations. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/182">Issue #182</a></li>
+<li>New German translations (@xbln)</li>
+<li>Require django-attachments&gt;=1.3 and restore attachments count in tabs</li>
+<li>Fix missing tag names in TestPlan page</li>
+<li>Hide admin forms for some models not supposed to be edited by users. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/174">Issue #174</a></li>
+<li>Use django-grappelli for the admin templates: modern look and feel and
+  less template files overridden by Kiwi TCMS</li>
+<li>Load values for default property in TestRun 'Add Property' dialog. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/142">Issue #142</a></li>
+<li>Correctly find property ID when renaming environment properties. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/167">Issue #167</a></li>
+<li>Convert request body to string. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/177">Issue #177</a></li>
+</ul>
+<h3>Refactoring</h3>
+<ul>
+<li>Remove batch tag Add/Remove sub-menu in TestPlan view (Anton Sankov)</li>
+<li>Remove Edit tag button in Tag tab (Anton Sankov)</li>
+<li>Remove template functions. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/107">Issue #107</a></li>
+<li>Remove custom HttpJSONResponse classes</li>
+<li>Remove unused and duplicate code</li>
+</ul>
+<h2>tcms-api changes since 1.5.0</h2>
+<ul>
+<li>Fix order of TestCaseRun statuses. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/184">Issue #184</a></li>
+</ul>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span>cd Kiwi/
+docker-compose down
+make docker-image
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre></div>
+
+
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="bookmark" title="Permalink to Kiwi TCMS roadmap for 2018">
                 <h1 class="top-header">Kiwi TCMS roadmap for 2018</h1>
             </a>
