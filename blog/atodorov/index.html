@@ -53,6 +53,71 @@
         <!-- content -->
     <section class="col-12 secondary">
         <div class="header">
+            <a href="/blog/atodorov/2020/07/11/customize-the-information-used-for-1-click-bug-reports/" rel="bookmark" title="Permalink to Customize the information used for 1-click bug reports">
+                <h1 class="top-header">Customize the information used for 1-click bug reports</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on Sat 11 July 2020
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Kiwi TCMS integration with 3rd party bug trackers supports the
+<em>1-click bug report</em> feature.
+However you may want to change how the initial information is structured or
+even what exactly is written in the initial comment. This article
+shows how to do this.</p>
+<p>The default text used for 1-click bug reports gets compiled based on
+information present in the TestExecution - Product, Version, TestCase.text,
+etc. This is encapsulated in the
+<code>tcms.issuetracker.base.IssueTrackerType._report_comment()</code> method.
+You may extend the existing bug tracker integration code
+with your own customizations. In this example I've extended the
+<code>KiwiTCMS</code> bug tracker implementation but you can provide your own from
+scratch</p>
+<div class="highlight"><pre><span></span><span class="c1"># filename: mymodule.py</span>
+<span class="k">class</span> <span class="nc">ExtendedBugTracker</span><span class="p">(</span><span class="n">KiwiTCMS</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_report_comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">execution</span><span class="p">):</span>
+        <span class="n">comment</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_report_comment</span><span class="p">(</span><span class="n">execution</span><span class="p">)</span>
+
+        <span class="n">comment</span> <span class="o">+=</span> <span class="s2">&quot;----- ADDITIONAL INFORMATION -----</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="c1">#</span>
+        <span class="c1"># fetch more info from other sources</span>
+        <span class="c1">#</span>
+        <span class="n">comment</span> <span class="o">+=</span> <span class="s2">&quot;----- END ADDITIONAL INFORMATION -----</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">comment</span>
+</pre></div>
+
+
+<p>Then override the <code>EXTERNAL_BUG_TRACKERS</code> setting to include your customizations:</p>
+<div class="highlight"><pre><span></span><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
+to <em>mymodule.ExtendedBugTracker</em>.</p>
+<p><strong>IMPORTANT</strong></p>
+<ul>
+<li>Information how to change settings can be found
+  <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization">here</a></li>
+<li><code>mymodule.py</code> may live anywhere on the filesystem but Python must be
+  able to import it</li>
+<li>It is best to bundle all of your customizations into a Python package and
+  <code>pip3 install</code> it into your customized docker image</li>
+<li>API documentation for bug tracker integration can be found
+  <a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.issuetracker.html">here</a></li>
+<li>Rebuilding the docker image is outside the scope of this article. Have a look
+  at this
+  <a href="https://github.com/MrSenko/kiwitcms-enterprise/blob/master/Dockerfile">Dockerfile</a>
+  for inspiration</li>
+</ul>
+<p>Happy testing!</p>
+        </div>
+    </section>
+    <section class="col-12 secondary">
+        <div class="header">
             <a href="/blog/atodorov/2020/02/11/i-deleted-our-newsletter-from-mailchimp-please-re-subscribe/" rel="bookmark" title="Permalink to I deleted our newsletter from Mailchimp ! Please re-subscribe">
                 <h1 class="top-header">I deleted our newsletter from Mailchimp ! Please re-subscribe</h1>
             </a>
@@ -431,6 +496,15 @@ to <em>ExtendedBugTracker</em>.</p>
   <a href="https://github.com/MrSenko/kiwitcms-enterprise/blob/master/Dockerfile">Dockerfile</a>
   for inspiration</li>
 </ul>
+<p><strong>NOTE:</strong> starting with <a href="/blog/kiwi-tcms-team/2020/07/10/kiwi-tcms-85/">Kiwi TCMS v8.5</a>
+external bug tracker integration classes are listed in the <code>EXTERNAL_BUG_TRACKERS</code>
+setting. If you are using v8.5 or newer instead of
+importing <code>ExtendedBugTracker</code> in <code>tcms/issuetracker/types.py</code> you should
+override the list of available bug tracker integrations:</p>
+<div class="highlight"><pre><span></span><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
+</pre></div>
+
+
 <p>Happy testing!</p>
         </div>
     </section>

@@ -200,6 +200,15 @@ to <em>ExtendedBugTracker</em>.</p>
   <a href="https://github.com/MrSenko/kiwitcms-enterprise/blob/master/Dockerfile">Dockerfile</a>
   for inspiration</li>
 </ul>
+<p><strong>NOTE:</strong> starting with <a href="/blog/kiwi-tcms-team/2020/07/10/kiwi-tcms-85/">Kiwi TCMS v8.5</a>
+external bug tracker integration classes are listed in the <code>EXTERNAL_BUG_TRACKERS</code>
+setting. If you are using v8.5 or newer instead of
+importing <code>ExtendedBugTracker</code> in <code>tcms/issuetracker/types.py</code> you should
+override the list of available bug tracker integrations:</p>
+<div class="highlight"><pre><span></span><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
+</pre></div>
+
+
 <p>Happy testing!</p>
     </article>
 

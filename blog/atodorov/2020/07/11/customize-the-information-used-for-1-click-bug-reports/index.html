@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Customize the information used for 1-click bug reports</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="Kiwi TCMS integration with 3rd party bug trackers supports the 1-click bug report feature. However you may want to change how the..." >
+
+        <meta name="author" content="Alexander Todorov">
+
+        <meta name="tags" content="customization" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Customize the information used for 1-click bug reports">
+            <meta name="twitter:description" content="Kiwi TCMS integration with 3rd party bug trackers supports the 1-click bug report feature. However you may want to change how the...">
+        <meta name="twitter:card" content="summary_large_image">
+                <meta property="twitter:image" content="https://kiwitcms.org/images/customization.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/atodorov/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/atodorov/2020/07/11/customize-the-information-used-for-1-click-bug-reports/" />
+        <meta property="og:title" content="Customize the information used for 1-click bug reports" />
+        <meta property="article:published_time" content="2020-07-11 14:20:00+03:00">
+            <meta property="og:description" content="Kiwi TCMS integration with 3rd party bug trackers supports the 1-click bug report feature. However you may want to change how the...">
+
+                <meta property="og:image" content="https://kiwitcms.org/images/customization.png">
+        <!-- MailChimp Newsletter Form Styles -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <!-- Custom Styles -->
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
+        <!-- Other Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="/theme/fontawesome-free-5.6.3-web/css/all.min.css">
+        <!-- Mobile nav script -->
+        <script type="text/javascript" src="/theme/scripts/mobile-nav.js"></script>
+
+    </head>
+    <body class="" onload="setMobileNavBehaviour()">
+        <!-- Nav -->
+        <nav class="col-12 primary">
+            <a href="/">
+                <img src="/theme/images/kiwi_logo_h50.png" name="logo">
+            </a>
+            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <div id="mobile-mask">
+                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <ul class="topnav">
+                    <li><a href="/features/">Features</a></li>
+                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
+                    <li><a href="/community/">Community</a></li>
+                    <li><a href="/support/">Support</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/team/">Team</a></li>
+                    <li>
+                        <form action="https://google.com/search" method="get">
+                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
+                            <input class="search" name="q" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- content -->
+    <header class="col-12 header secondary">
+        <h1 class="top-header">Customize the information used for 1-click bug reports</h1>
+
+        <p class="post-meta">
+            Posted by
+                <a href="/blog/atodorov/">Alexander Todorov</a>
+            on Sat 11 July 2020
+                under
+                    <a href="/blog/tags/customization/">customization</a>
+        </p>
+    </header>
+
+    <article class="col-12 article secondary">
+        <p>Kiwi TCMS integration with 3rd party bug trackers supports the
+<em>1-click bug report</em> feature.
+However you may want to change how the initial information is structured or
+even what exactly is written in the initial comment. This article
+shows how to do this.</p>
+<p>The default text used for 1-click bug reports gets compiled based on
+information present in the TestExecution - Product, Version, TestCase.text,
+etc. This is encapsulated in the
+<code>tcms.issuetracker.base.IssueTrackerType._report_comment()</code> method.
+You may extend the existing bug tracker integration code
+with your own customizations. In this example I've extended the
+<code>KiwiTCMS</code> bug tracker implementation but you can provide your own from
+scratch</p>
+<div class="highlight"><pre><span></span><span class="c1"># filename: mymodule.py</span>
+<span class="k">class</span> <span class="nc">ExtendedBugTracker</span><span class="p">(</span><span class="n">KiwiTCMS</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_report_comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">execution</span><span class="p">):</span>
+        <span class="n">comment</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_report_comment</span><span class="p">(</span><span class="n">execution</span><span class="p">)</span>
+
+        <span class="n">comment</span> <span class="o">+=</span> <span class="s2">&quot;----- ADDITIONAL INFORMATION -----</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="c1">#</span>
+        <span class="c1"># fetch more info from other sources</span>
+        <span class="c1">#</span>
+        <span class="n">comment</span> <span class="o">+=</span> <span class="s2">&quot;----- END ADDITIONAL INFORMATION -----</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">comment</span>
+</pre></div>
+
+
+<p>Then override the <code>EXTERNAL_BUG_TRACKERS</code> setting to include your customizations:</p>
+<div class="highlight"><pre><span></span><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
+to <em>mymodule.ExtendedBugTracker</em>.</p>
+<p><strong>IMPORTANT</strong></p>
+<ul>
+<li>Information how to change settings can be found
+  <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization">here</a></li>
+<li><code>mymodule.py</code> may live anywhere on the filesystem but Python must be
+  able to import it</li>
+<li>It is best to bundle all of your customizations into a Python package and
+  <code>pip3 install</code> it into your customized docker image</li>
+<li>API documentation for bug tracker integration can be found
+  <a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.issuetracker.html">here</a></li>
+<li>Rebuilding the docker image is outside the scope of this article. Have a look
+  at this
+  <a href="https://github.com/MrSenko/kiwitcms-enterprise/blob/master/Dockerfile">Dockerfile</a>
+  for inspiration</li>
+</ul>
+<p>Happy testing!</p>
+    </article>
+
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox secondary"></div>
+
+        <!-- Newsletter Form Section -->
+        <section class="newsletter secondary col-12">
+            <div id="mc_embed_signup">
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="col-12 footer primary">
+            <div class="col-10 footer-copyright">
+                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="col-2">
+                <ul class="footer-sociallinks">
+                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
