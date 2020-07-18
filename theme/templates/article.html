@@ -86,13 +86,13 @@
         <p class="post-meta">
             Posted by
             {% for author in article.authors %}
-                <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                <a href="{{ _SITEURL }}/{{ author.url }}">{{ author }}</a>
             {% endfor %}
             on {{ article.locale_date }}
             {% if article.tags %}
                 under
                 {% for tag in article.tags %}
-                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>
+                    <a href="{{ _SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>
                     {% if not loop.last %},{% endif %}
                 {% endfor %}
             {% endif %}
@@ -109,12 +109,12 @@
         <div class="addthis_inline_share_toolbox secondary"></div>
     {% endif %}
 
-    {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
+    {% if DISQUS_SITENAME and _SITEURL and article.status != "draft" %}
     <section class="col-12 comments secondary">
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-                this.page.url = '{{ SITEURL }}/{{ article.url }}';
+                this.page.url = '{{ _SITEURL }}/{{ article.url }}';
                 this.page.identifier = '{{ article.url }}';
             };
             (function() { // DON'T EDIT BELOW THIS LINE
