@@ -5,9 +5,5 @@
 {% block page_body_class %}page {% if page.body_class %}{{ page.body_class }}{% endif %}{% endblock %}
 
 {% block content %}
-    <section class="col-12 secondary">
-        <div class="col-12">
-            {{ page.content }}
-        </div>
-    </section>
+    {{ page.content }}
 {% endblock content %}
