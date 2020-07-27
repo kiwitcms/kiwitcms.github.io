@@ -2,701 +2,725 @@
     <head>
         <title>the leading open source test management system</title>
         <meta name="save_as" content="index.html">
-        <meta name="extra_javascript" content="https://www.youtube.com/iframe_api scripts/video.js scripts/img-gallery-handler.js ">
+        <meta name="extra_javascript" content="https://www.youtube.com/iframe_api scripts/video.js scripts/img-gallery-handler.js">
+        <meta name="extra_css" content="/theme/style/tiny-slider.css">
     </head>
     <body>
-        <!-- Header -->
-        <!-- the opening tags are in page.html -->
-                <div class="w100 index-page-header">
-                    <div class="col-5">
-                        <h1 class="top-header">Kiwi TCMS</h1>
-                        <h2 class="top-subheader">the leading open source</h2>
-                        <h2 class="top-subheader">test management system</h2>
-
-                        <ul class="header-list">
-                            <li>For manual &amp; automated testing</li>
-                            <li>Internal + external bug trackers</li>
-                            <li>Plugable architecture</li>
-                            <li>Versatile API layer</li>
-                            <li>Made by testers</li>
-                        </ul>
-                        <div class="header-btns">
-                            <a href="https://github.com/apps/kiwi-tcms/" class="action-btn accent-important"
-                                title="Integrate Kiwi TCMS with your GitHub account">
-                                <i class="fab fa-github"></i>
-                                Authorize &amp; Login
-                            </a>
-
-                            <a href="https://webawards.eurid.eu/?q=kiwitcms.eu"
-                                class="action-btn accent-unimportant"
-                                title="Vote for us in 2020 .eu Web Awards">
-                                <i class="fa fa-thumbs-up"></i>
-                                Vote for Kiwi TCMS
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-7">
-                        <div class="header-img">
-                            <a href="#" title="Watch video" onclick="showVideo('n0wAAyISxLs')">
-                                <i class="fa fa-play fa-5x"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div id="demoVideo" class="modal" onclick="hideVideo()">
-                        <div class="modal-content">
-                            <iframe width="1120" height="700" src="https://www.youtube.com/embed/n0wAAyISxLs?hd=1&enablejsapi=1"
-                                    id="youtube-iframe" frameborder="0" allowfullscreen
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-                            </iframe>
-                        </div>
-                    </div>
-
-                </div>
+        <header>
+            <div class="lead">
+                <h1>The leading open source test management system</h1>
+                <ul>
+                    <li>For manual & automated testing</li>
+                    <li>Internal + external bug trackers</li>
+                    <li>Plugable architecture</li>
+                    <li>Versatile API layer</li>
+                    <li>Made by testers</li>
+                </ul>
+                <a class="btn big-btn" icon href="#">Get Started <i></i></a>
             </div>
-        </section>
-        <!-- About Section -->
-        <section class="col-12 about secondary">
-            <div class="about-intro primary">
-                <p>
-                    Our mission is to transform the testing process by making it more organized,
-                    transparent &amp; accountable for everyone on your team; to improve engineering productivity
-                    and participation in testing.
-                </p>
-            </div>
-            <div class="secondary">
-                <div class="col-3">
-                    <div class="about-panel-title">Everyday testing</div>
-                    <div class="about-panel-details">Use the dashboard to see pending work. Execute tests, mark results and report bugs.</div>
-                </div>
-                <div class="col-3">
-                    <div class="about-panel-title">Test management</div>
-                    <div class="about-panel-details">Create test plans and cases, track progress and assign work across multiple teams. Perform peer reviews.</div>
-                </div>
-                <div class="col-3">
-                    <div class="about-panel-title">Process organization</div>
-                    <div class="about-panel-details">
-                        <a href="https://github.com/kiwitcms/Kiwi/issues/703" style="border-bottom: dashed 0.1rem" title="pending">
-                        Workflow wizards guide you through requirements gathering, user story definition and test planning.
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="about-panel-title">Testing telemetry</div>
-                    <div class="about-panel-details">Gives you instant insight into your testing. All the vital info for planning and status reports before release!</div>
-                </div>
 
-                <div class="col-3">
-                    <div class="about-panel-title">Integration</div>
-                    <div class="about-panel-details">
-                        Integrated bug reporting with Bugzilla, JIRA, GitHub, GitLab
-                        & more. Additional workflow integration via
-                        <a href="https://github.com/kiwitcms/github-app/">GitHub App</a>.
-                    </div>
+            <div class="video">
+                <div class="backplate"></div>
+                <!-- width="700" height="400" -->
+                <img onclick="showVideo('n0wAAyISxLs')"
+                    src="/theme/images/pc_with_test_run_small.png"
+                    alt="Kiwi TCMS Demonstration">
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos"
+                    target="_blank"
+                    class="btn border-btn" icon>Check all videos <i></i>
+                </a>
+            </div>
+        </header>
+
+        <section id="features">
+            <div class="feature-list">
+                <div>
+                    <h3>Manual testing</h3>
+                    <p>
+                        Use the dashboard to see pending work. Execute tests, mark results and report bugs.
+                    </p>
                 </div>
-                <div class="col-3">
-                    <div class="about-panel-title">Test runner plugins</div>
-                    <div class="about-panel-details">
+                <div>
+                    <h3>Automated testing</h3>
+                    <p>
                         Use
                         <a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html">Kiwi TCMS plugins</a>
-                        for TAP, JUnit,
-                        <span style="border-bottom: dashed 0.1rem" title="in progress">
-                            TestNG, py.test and other</span>
-                        popular testing frameworks to collect automation results!</div>
+                        for popular testing frameworks to collect automation results!
+                    </p>
                 </div>
-                <div class="col-3">
-                    <div class="about-panel-title">External API</div>
-                    <div class="about-panel-details">Provides full access so you can get creative. Available via JSON and XML RPC with API client in Python.</div>
+                <div>
+                    <h3>Test management</h3>
+                    <p>
+                        Create test plans and cases, track progress and assign work across multiple teams.
+                    </p>
                 </div>
-                <div class="col-3">
-                    <div class="about-panel-title">Fast</div>
-                    <div class="about-panel-details">
-                        <a href="/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/">Performance baseline</a>
-                        at 7.5 req/sec or 130 msec/req which is comparable to giants like GitHub!
-                    </div>
+                <div>
+                    <h3>Testing telemetry</h3>
+                    <p>
+                        Instant insight into testing. Vital info for planning and status reports
+                        before release!
+                    </p>
                 </div>
 
-                <div class="col-3">
-                    <div class="about-panel-title">CentOS, Django &amp; Python</div>
-                    <div class="about-panel-details">Running the latest version of CentOS 8, Django 3 and Python 3!</div>
+                <div>
+                    <h3>Integration</h3>
+                    <p>
+                        <a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.issuetracker.html#module-tcms.issuetracker">
+                            1-click bug reporting
+                        </a> with 3rd party bug trackers.
+                        Additional integration via
+                        <a href="https://github.com/kiwitcms/github-app/">GitHub App</a>.
+                    </p>
                 </div>
-                <div class="col-3">
-                    <div class="about-panel-title">Clean &amp; modern UI</div>
-                    <div class="about-panel-details">User interface based on the great Patternfly library!</div>
+                <div>
+                    <h3>External API</h3>
+                    <p>
+                        Provides full access so you can get creative. Available via JSON-RPC and XML-RPC.
+                    </p>
                 </div>
-                <div class="col-3">
-                    <div class="about-panel-title">Container ready</div>
-                    <div class="about-panel-details">
+                <div>
+                    <h3>Container ready</h3>
+                    <p>
                         Easy to start with docker-compose up.
-                        100K+ downloads on <a href="https://hub.docker.com/r/kiwitcms/kiwi/">Docker Hub</a>.
-                    </div>
+                        140K+ downloads on <a href="https://hub.docker.com/r/kiwitcms/kiwi/">Docker Hub</a>.
+                    </p>
                 </div>
-                <div class="col-3">
-                    <div class="about-panel-title">GitHub Marketplace</div>
-                    <div class="about-panel-details">
+                <div>
+                    <h3>GitHub Marketplace</h3>
+                    <p>
                         Kiwi TCMS became the first open source TCMS system
                         on <a href="https://github.com/marketplace/kiwi-tcms">GitHub Marketplace</a>.
-                    </div>
+                    </p>
                 </div>
-            </div>
-            <!-- Call to action btns -->
-            <div class="col-3 action-btn-small-container">
-                <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html" class="action-btn-small accent-medium">
-                    <p><i class="fa fa-cloud-download-alt fa-5x"></i></p>
-                    <h3>Get Started</h3>
-                </a>
-                <a href="http://kiwitcms.readthedocs.io" class="action-btn-small accent-medium">
-                    <p><i class="fa fa-book fa-5x"></i></p>
-                    <h3>Documentation</h3>
-                </a>
-                <a href="{filename}community.markdown" class="action-btn-small accent-medium">
-                    <p><i class="fa fa-users fa-5x"></i></p>
-                    <h3>Community</h3>
-                </a>
-                <a href="{filename}support.markdown" class="action-btn-small accent-medium">
-                    <p><i class="fa fa-headphones fa-5x"></i></p>
-                    <h3>Support</h3>
-                </a>
+                <a href="{filename}features.html" class="btn border-btn" icon>Check all features <i></i></a>
             </div>
         </section>
 
-        <!-- subscription plans -->
-        <section class="col-12 secondary">
-            <div class="about-intro olive-green-bottom">
-            </div>
+        <section id="mission">
+            <p>
+                Our mission is to transform the testing process
+                by making it more organized, transparent & accountable
+                for everyone on your team; to improve engineering
+                productivity and participation in testing.
+            </p>
+        </section>
 
-            <div class="col-3 box" id="subscriptions">
-                <h4>Free as in beer</h4>
-
+        <section id="quick-links">
+            <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html">
                 <div>
-                    <ul>
-                        <li>
-                            Self-hosted on your server
-                        </li>
-
-                        <li>
-                            Only <code>latest</code> releases
-                        </li>
-
-                        <li>
-                            <a href="https://hub.docker.com/r/kiwitcms/kiwi/">docker pull kiwitcms/kiwi</a>
-                        </li>
-
-                        <li>
-                            Community <a href="{filename}support.markdown">support</a> only
-                        </li>
-
-                        <li>
-                            Response time is not guaranteed
-                        </li>
-
-                        <li>
-                            Priority based on <a href="/blog/tags/roadmap">roadmap</a>
-                        </li>
-                    </ul>
-
-                    <a href="https://opencollective.com/kiwitcms#section-contribute" class="action-btn accent-important">
-                        Donate via Open Collective
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-3 box primary">
-                <h4>Private Tenant</h4>
-
-                <div>
-                    <ul>
-                        <li>
-                            Unlimited users. 1x tenant
-                        </li>
-
-                        <li>
-                            Extra <a href="https://github.com/apps/kiwi-tcms">GitHub integration</a>
-                        </li>
-
-                        <li>
-                            Full access control
-                        </li>
-
-                        <li>
-                            <em>*.tenant.kiwitcms.org</em> domain
-                        </li>
-
-                        <li>
-                            PostgreSQL schema isolation
-                        </li>
-
-                        <li>
-                            Always the latest version
-                        </li>
-
-                        <li>
-                            9-17 UTC/Mon-Fri <a href="{filename}support.markdown">support</a>
-                        </li>
-
-                        <li>
-                            Email response within 72 hrs
-                        </li>
-
-                        <li>
-                            Devel engagement within 3 months aka
-                            <code>+1 priority</code>
-                        </li>
-
-                        <li>
-                            SSL enabled
-                        </li>
-                    </ul>
-
-                    <a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant"
-                      class="action-btn olive-green"><span class="olive-green">Subscribe for 32 $/mo</span></a>
-                </div>
-            </div>
-
-            <div class="col-4 box">
-                <h4>Enterprise Subscription</h4>
-
-                <div>
-                    <ul>
-                        <li>
-                            Unlimited users; unlimited tenants
-                        </li>
-
-                        <li>
-                            Versioned releases from private repos
-                        </li>
-
-                        <li>
-                            Access to <a href="https://hub.docker.com/repository/docker/mrsenko/kiwitcms-enterprise">mrsenko/kiwitcms-enterprise</a>
-                            <i class="fa fa-lock" title="Read-only access to private repository on Docker Hub"></i>
-                        </li>
-
-                        <li>
-                            Access to <a href="https://hub.docker.com/repository/docker/mrsenko/kiwitcms">mrsenko/kiwitcms</a>
-                            <i class="fa fa-lock" title="Read-only access to private repository on Docker Hub"></i>
-                        </li>
-
-                        <li>
-                            9-17 UTC/Mon-Fri <a href="{filename}support.markdown">support</a>
-                        </li>
-
-                        <li>
-                            Email response within 24 hrs
-                        </li>
-
-                        <li>
-                            Devel engagement within 1 month aka
-                            <code>+5 priority</code>
-                        </li>
-                    </ul>
-
-                    Hosting options:
-                    <ul>
-                        <li>
-                            On-premise self-hosting by your team or
-                        </li>
-
-                        <li>
-                            Managed hosting under <em>*.kiwitcms.org</em>:
-                            <ul>
-                                <li>
-                                    SSL certificate will be provided
-                                </li>
-
-                                <li>
-                                    Can override default settings
-                                </li>
-
-                                <li>
-                                    Superuser access in web app
-                                </li>
-
-                                <li>
-                                    Will upgrade upon request
-                                </li>
-
-                                <li>
-                                    Fully isolated instance
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    Available add-ons in
-                    <a href="https://github.com/mrsenko/kiwitcms-enterprise">kiwitcms-enterprise</a>:
-                    <ul>
-                        <li>
-                            Multi-tenant via <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenants</a>
-                        </li>
-
-                        <li>
-                            Extra GitHub integration via <a href="https://github.com/kiwitcms/github-app">kiwitcms-github-app</a>
-                            (needs config)
-                        </li>
-
-                        <li>
-                            Automatic error reports via Sentry
-                        </li>
-
-                        <li>
-                            Versioned static files; CDN ready
-                        </li>
-
-                        <li>
-                            Email backends (need config):
-                            <ul>
-                                <li>SMTP</li>
-                                <li>Amazon SES via <a href="https://github.com/django-ses/django-ses">django-ses</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            Authentication backends (need config):
-                            <ul>
-                                <li><a href="http://python-social-auth-docs.readthedocs.io/en/latest/backends/index.html#supported-backends">social_auth</a></li>
-                                <li><a href="https://github.com/kiwitcms/python-social-auth-kerberos/">kerberos</a></li>
-                                <li><a href="https://github.com/etianen/django-python3-ldap">LDAP</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
+                    <i class="las la-cloud-download-alt"></i>
+                    <h3>Get Started</h3>
                     <p>
-                        Additional services - 100 $/hr:
-                        <a href="{filename}support.markdown">ask here</a> or
-                        <a href="https://mrsenko.onfastspring.com/additional-services-for-kiwi-tcms">
-                            purchase add-on hours
-                        </a>
-                        !
+                        Learn how to deploy a production Kiwi TCMS instance as a Docker container.
                     </p>
-
-                    <a href="https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription"
-                      class="action-btn accent-important">Subscribe for 300 $/mo</a>
                 </div>
-            </div>
+            </a>
 
-            <div class="col-2 box">
-                <h4>OSS Program</h4>
-
+            <a href="http://kiwitcms.readthedocs.io">
                 <div>
-                    <ul>
-                        <li>
-                            For open source and partners
-                        </li>
-
-                        <li>
-                            1x Private Tenant
-                        </li>
-
-                        <li>
-                            Brand endorsement
-                        </li>
-
-                        <li>
-                            Feedback expected
-                        </li>
-
-                        <li>
-                            Manual approval
-                        </li>
-
-                        <li>
-                            0.0 $/mo
-                        </li>
-                    </ul>
-
-                    <a href="https://forms.gle/nsYd4hYZpGrWugQ97" class="action-btn accent-important">Request</a>
+                    <i class="las la-book"></i>
+                    <h3>Documentation</h3>
+                    <p>
+                        We strive to keep Kiwi TCMS well documented. Everything you need
+                        to know is here.
+                    </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="col-12">
-                <h3>More info about Kiwi TCMS subscriptions:</h3>
+            <a href="{filename}community.markdown">
+                <div>
+                    <i class="las la-users"></i>
+                    <h3>Community</h3>
+                    <p>Ask for help, get in touch, contribute, help us grow the community!</p>
+                </div>
+            </a>
 
-                <ul>
+            <a href="{filename}support.markdown">
+                <div>
+                    <i class="las la-headset"></i>
+                    <h3>Support</h3>
+                    <p>
+                        Engagement rules and working hours for community & commercial support.
+                    </p>
+                </div>
+            </a>
+        </section>
+
+        <section id="pricing">
+            <h1>Subscription plans</h1>
+
+            <div class="plan">
+                <h3>Free as in beer</h3>
+                <ul class="caret">
                     <li>
-                        Subscriptions are renewed automatically each month. You may cancel
-                        at any time if you are not happy with the service provided
+                        Self-hosted on your server
                     </li>
-
                     <li>
-                        Cancelled subscriptions remain active until the period they have been paid for -
-                        usually 1 month after the last billing transaction
+                        Only <code>latest</code> releases
                     </li>
-
                     <li>
-                        Professional support is independent of hosting! You may chose a Private Tenant subscription
-                        and still decide to host Kiwi TCMS internally
+                        <a href="https://hub.docker.com/r/kiwitcms/kiwi/">docker pull kiwitcms/kiwi</a>
                     </li>
-
                     <li>
-                        Subscriptions cover Kiwi TCMS,
-                        <a href="https://github.com/MrSenko/kiwitcms-enterprise/">Kiwi TCMS Enterprise</a> and
-                        all add-ons published under <a href="https://github.com/kiwitcms">https://github.com/kiwitcms/</a>
+                        Community <a href="{filename}support.markdown"">support</a> only
                     </li>
-
-
                     <li>
-                        All subscriptions are stackable giving you hosting/support flexibility
+                        Response time is not guaranteed
                     </li>
-
                     <li>
-                        <em>Devel engagement</em> means that our team will start
-                        working on GitHub issues within the specified time frame after you contact
-                        <a href="{filename}support.markdown">support</a> about said issues
-                    </li>
-
-                    <li>
-                        We will try our best to estimate how long a particular task will take,
-                        however <em>Devel engagement</em> is not a completion deadline
-                    </li>
-
-                    <li>
-                        Use add-on services for anything which isn't a support question, a bug,
-                        a feature request or related to managed hosting
-                    </li>
-
-                    <li>
-                        If it's not a system or repository that we control then it needs additional services.
-                        Don't hesitate to
-                        <a href="{filename}support.markdown">talk to us</a>!
+                        Priority based on <a href="/blog/tags/roadmap">roadmap</a>
                     </li>
                 </ul>
+                <a href="https://opencollective.com/kiwitcms#section-contribute">Donate via Open Collective</a>
             </div>
-        </section>
 
-        <!-- Screenshots Section -->
-        <section id="features" class="col-12 screenshots secondary">
-            <div class="col-12 screenshot-title primary">
-                <!-- note: init values are imgs[0] -->
-                <h3 id="heading">Create IEEE 829 or free text Test Plan</h3>
-                <p id="subtitle">This document describes what and how are you going to test</p>
+            <div class="plan prefered">
+                <h3>Private Tenant</h3>
+                <ul class="caret">
+                    <li>
+                        Unlimited users. 1x tenant
+                    </li>
+                    <li>
+                        Extra <a href="https://github.com/apps/kiwi-tcms">GitHub integration</a>
+                    </li>
+                    <li>
+                        Full access control
+                    </li>
+                    <li>
+                        <em>*.tenant.kiwitcms.org</em> domain
+                    </li>
+                    <li>
+                        PostgreSQL schema isolation
+                    </li>
+                    <li>
+                        Always the latest version
+                    </li>
+                    <li>
+                        9-17 UTC/Mon-Fri <a href="{filename}support.markdown">support</a>
+                    </li>
+                    <li>
+                        Email response within 72 hrs
+                    </li>
+                    <li>
+                        Devel engagement within 3 months aka <code>+1 priority</code>
+                    </li>
+                    <li>
+                        SSL enabled
+                    </li>
+                </ul>
+                <a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant">Subscribe for 32 $/mo</a>
             </div>
-            <div class="col-2 screenshot_switch_arrow accent-important-icon" id="prev">
-                <div class="arrow-left"><i class="fa fa-arrow-left fa-5x"></i></div>
+
+            <div class="plan">
+                <h3>Enterprise Subscription</h3>
+                <ul class="caret">
+                    <li>
+                        Unlimited users, unlimited tenants
+                    </li>
+                    <li>
+                        Versioned releases from private repos
+                    </li>
+                    <li>
+                        Access to <a href="https://hub.docker.com/repository/docker/mrsenko/kiwitcms-enterprise">mrsenko/kiwitcms-enterprise</a>
+                        <i class="fa fa-lock" title="Read-only access to private repository on Docker Hub"></i>
+                    </li>
+                    <li>
+                        Access to <a href="https://hub.docker.com/repository/docker/mrsenko/kiwitcms">mrsenko/kiwitcms</a>
+                        <i class="fa fa-lock" title="Read-only access to private repository on Docker Hub"></i>
+                    </li>
+                    <li>
+                        9-17 UTC/Mon-Fri <a href="{filename}support.markdown">support</a>
+                    </li>
+                    <li>
+                        Email response within 24 hrs
+                    </li>
+                    <li>
+                        Devel engagement within 1 month aka
+                        <code>+5 priority</code>
+                    </li>
+
+                    <details title="Click or tap for details">
+                        <summary>
+                            Hosting options
+                        </summary>
+
+                        <p>
+                            <ul>
+                                <li>
+                                    On-premise self-hosting by your team or
+                                </li>
+                                <li>
+                                    Managed hosting under <em>*.kiwitcms.org</em>:
+                                    <ul>
+                                        <li>
+                                            SSL certificate will be provided
+                                        </li>
+                                        <li>
+                                            Can override default settings
+                                        </li>
+                                        <li>
+                                            Superuser access in web app
+                                        </li>
+                                        <li>
+                                            Will upgrade upon request
+                                        </li>
+                                        <li>
+                                            Fully isolated instance
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </p>
+                    </details>
+
+                    <details title="Click or tap for details">
+                        <summary>
+                            Available add-ons in
+                            <a href="https://github.com/mrsenko/kiwitcms-enterprise">kiwitcms-enterprise</a>
+                        </summary>
+
+                        <p>
+                            <ul>
+                                <li>
+                                    Multi-tenant via <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenants</a>
+                                </li>
+                                <li>
+                                    Extra GitHub integration via <a href="https://github.com/kiwitcms/github-app">kiwitcms-github-app</a>
+                                    (needs config)
+                                </li>
+                                <li>
+                                    Automatic error reports via Sentry
+                                </li>
+                                <li>
+                                    Versioned static files; CDN ready
+                                </li>
+                                <li>
+                                    Email backends (need config):
+                                    <ul>
+                                        <li>SMTP</li>
+                                        <li>Amazon SES via <a href="https://github.com/django-ses/django-ses">django-ses</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Authentication backends (need config):
+                                    <ul>
+                                        <li><a href="http://python-social-auth-docs.readthedocs.io/en/latest/backends/index.html#supported-backends">social_auth</a></li>
+                                        <li><a href="https://github.com/kiwitcms/python-social-auth-kerberos/">kerberos</a></li>
+                                        <li><a href="https://github.com/etianen/django-python3-ldap">LDAP</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </p>
+                    </details>
+
+                    <details title="Click or tap for details">
+                        <summary>
+                            Additional services - 100 $/hr
+                        </summary>
+
+                        <p>
+                            <ul>
+                                <li>
+                                    Custom development
+                                </li>
+                                <li>
+                                    Import/export scripts
+                                </li>
+                                <li>
+                                    Migration; configuration and upgrades
+                                </li>
+                                <li>
+                                    Integration with 3rd party systems
+                                </li>
+                            </ul>
+
+                            <a href="{filename}support.markdown">Ask here</a> or
+                            <a href="https://mrsenko.onfastspring.com/additional-services-for-kiwi-tcms">
+                                purchase add-on hours
+                            </a>!
+                        </p>
+                    </details>
+                </ul>
+                <a href="https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription">Subscribe for 300 $/mo</a>
             </div>
-            <div class="col-8">
-                <div class="img-wrapper">
-                    <!-- note: init values are imgs[0] -->
-                    <div class="img shown" style="background-image: url('images/screenshots/001_create_test_plan.png')"></div>
-                    <div class="img hidden"></div>
+
+            <div class="plan">
+                <h3>OSS Program</h3>
+                <ul class="caret">
+                    <li>For open source and partners</li>
+                    <li>1x Private Tenant</li>
+                    <li>Brand endorsement</li>
+                    <li>Feedback expected</li>
+                    <li>Manual approval</li>
+                    <li>0.0 $/mo</li>
+                </ul>
+                <a href="https://forms.gle/nsYd4hYZpGrWugQ97">Request</a>
+            </div>
+
+            <div class="plans-modal" id="plans-modal">
+                <h3 onclick="toggle('plans-modal', 'show-modal')">Additional information about Kiwi TCMS subscriptions</h3>
+                <div>
+                    <ul class="caret">
+                        <li>
+                            Subscriptions are renewed automatically each month. You may cancel
+                            at any time if you are not happy with the service provided
+                        </li>
+
+                        <li>
+                            Cancelled subscriptions remain active until the period they have been paid for -
+                            usually 1 month after the last billing transaction
+                        </li>
+
+                        <li>
+                            Professional support is independent of hosting! You may chose a Private Tenant subscription
+                            and still decide to host Kiwi TCMS internally
+                        </li>
+
+                        <li>
+                            Subscriptions cover Kiwi TCMS,
+                            <a href="https://github.com/MrSenko/kiwitcms-enterprise/">Kiwi TCMS Enterprise</a> and
+                            all add-ons published under
+                            <a href="https://github.com/kiwitcms">https://github.com/kiwitcms/</a>
+                        </li>
+
+                        <li>
+                            All subscriptions are stackable giving you hosting/support flexibility
+                        </li>
+
+                        <li>
+                            <em>Devel engagement</em> means that our team will start
+                            working on GitHub issues within the specified time frame after you contact
+                            <a href="{filename}support.markdown">support</a> about said issues
+                        </li>
+
+                        <li>
+                            We will try our best to estimate how long a particular task will take,
+                            however <em>Devel engagement</em> is not a completion deadline
+                        </li>
+
+                        <li>
+                            Use add-on services for anything which isn't a support question, a bug,
+                            a feature request or related to managed hosting
+                        </li>
+
+                        <li>
+                            If it's not a system or repository that we control then it needs additional services.
+                            Don't hesitate to <a href="{filename}support.markdown">talk to us</a>!
+                        </li>
+                    </ul>
                 </div>
-                <!-- note: init values             vvvv -->
-                <p id="imgIndex" class="img-index">1 / 6</p>
-            </div>
-            <div class="col-2 screenshot_switch_arrow accent-important-icon" id="next">
-                <div class="arrow-right"><i class="fa fa-arrow-right fa-5x"></i></div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="col-12 about secondary">
-            <div class="about-intro olive-green">
+        <section id="screens">
+            <h1>
+                See it in action
+                <span>
+                    <i class="las la-angle-left" onclick="screensSlider.goTo('prev')"></i>
+                    <i class="las la-angle-right" onclick="screensSlider.goTo('next')"></i>
+                </span>
+            </h1>
+            <div class="slider screens-slider">
+                <div onclick="screensSlider.goTo(0)">
+                    <img src="images/screenshots/001_central_dashboard.png">
+                    <h3>Central dashboard to start your day</h3>
+                    <p>
+                        See all of your test executions and test plans in one place
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(1)">
+                    <img src="images/screenshots/002_testplan_00.png">
+                    <h3>Create IEEE 829 or free text test plan</h3>
+                    <p>
+                        This document contains your overall testing strategy
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(2)">
+                    <img src="images/screenshots/002_testplan_01.png">
+                    <h3>Test plan is a collection of test cases</h3>
+                    <p>
+                        Add, remove, review and approve test cases before you start testing
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(3)">
+                    <img src="images/screenshots/003_create_test_case.png">
+                    <h3>Create a test case</h3>
+                    <p>
+                        Use Given-When-Then or bullet points to describe the scenario
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(4)">
+                    <img src="images/screenshots/004_view_existing_test_cases.png">
+                    <h3>View existing test case</h3>
+                    <p>
+                        Intuitive access to all the important information
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(5)">
+                    <img src="images/screenshots/005_execute_tests_for_build.png">
+                    <h3>Execute test runs against a build</h3>
+                    <p>
+                        For each product build create test runs to collect execution details
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(6)">
+                    <img src="images/screenshots/007_bugtracker_github.png">
+                    <h3>Bug tracker integration</h3>
+                    <p>
+                        Link to existing bug reports or report new ones directly from Kiwi TCMS
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(7)">
+                    <img src="images/screenshots/007_bugtracker_jira.png">
+                    <h3>Easy 1-click bug report</h3>
+                    <p>
+                        Open bugs in 3rd party systems from test executions. Fully customizable
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(8)">
+                    <img src="images/screenshots/006_testing_breakdown_telemetry.png">
+                    <h3>Testing breakdown telemetry</h3>
+                    <p>
+                        Shows how existing test cases are distributed
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(9)">
+                    <img src="images/screenshots/007_status_matrix_telemetry.png">
+                    <h3>Status matrix telemetry</h3>
+                    <p>
+                        Detailed information about test execution status
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(11)">
+                    <img src="images/screenshots/008_execution_trends_telemetry.png">
+                    <h3>Execution trends telemetry</h3>
+                    <p>
+                        Information if product builds are getting better or worse
+                    </p>
+                </div>
+
+                <div onclick="screensSlider.goTo(12)">
+                    <img src="images/screenshots/009_test_case_health_telemetry.png">
+                    <h3>Test case health telemetry</h3>
+                    <p>
+                        Discover which test cases are the most common source of problems
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <blockquote>
+                <i class="las la-quote-left"></i>
                 <p>
-                    See what people who use Kiwi TCMS think!
+                    If you're a test and QA engineer, Kiwi TCMS is a gem open source TCMS
+                    for your team. IEEE 829 compatible, free and open source, great folks
+                    behind the project.
                 </p>
-            </div>
-            <div class="secondary">
-                <blockquote class="col-3">
-                    <p>
-                        If you're a test and QA engineer, Kiwi TCMS is a gem open source TCMS
-                        for your team. IEEE 829 compatible, free and open source, great folks
-                        behind the project.
-                    </p>
-                    <p>Marko Kažić, CEO, Zamphyr</p>
-                </blockquote>
+                <p class="author">
+                    <span>Marko Kažić</span> CEO, Zamphyr</p>
+            </blockquote>
 
-                <blockquote class="col-3">
-                    <p>
-                        We're using Kiwi TCMS to organize all of our testing.
-                        It is used by our QA team to document test scenarios and provide
-                        peer review to other test engineers.
-                    </p>
-                    <p>
-                        Maxim Krizhanovsky, VP Eng., Tradeo
-                    </p>
-                </blockquote>
+            <blockquote>
+                <i class="las la-quote-left"></i>
+                <p>
+                    We're using Kiwi TCMS to organize all of our testing.
+                    It is used by our QA team to document test scenarios and provide
+                    peer review to other test engineers.
+                </p>
+                <a href="#" class="author">
+                    <span>
+                        Maxim Krizhanovsky</span> VP Eng., Tradeo
+                </a>
+            </blockquote>
 
-                <blockquote class="col-3">
-                    <p>
-                        Kiwi TCMS provided us with an application which solved our pain
-                        about building, maintaining and running manual regression tests.
-                    </p>
-                    <p>
-                        <br>
-                        Primož Klemen, QA tester, Better
-                    </p>
-                </blockquote>
+            <blockquote>
+                <i class="las la-quote-left"></i>
+                <p>
+                    Kiwi TCMS provided us with an application which solved our pain
+                    about building, maintaining and running manual regression tests.
+                </p>
+                <p class="author">
+                    <span>Primož Klemen</span> QA tester, Better
+                </p>
+            </blockquote>
 
-                <blockquote class="col-3">
-                    <p>
-                        We created our own Kiwi TCMS image and
-                        pushed it to a private AWS Elastic Container Registry
-                        as we wanted to configure Amazon SES as the email backend.
+            <blockquote>
+                <i class="las la-quote-left"></i>
+                <p>
+                    We created our own Kiwi TCMS image and
+                    pushed it to a private AWS Elastic Container Registry
+                    as we wanted to configure Amazon SES as the email backend.
+                </p>
+                <p class="author">
+                    <span>Harley Thorne</span> DevOps, BookingLive
+                </p>
+            </blockquote>
+        </section>
+
+        <section id="trusted-by">
+            <h1>Trusted by</h1>
+
+            <a href="/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/">
+                <img src="/images/customers/better.png" alt="Better care" title="Better care">
+            </a>
+            <a target="_blank" href="https://www.bookinglive.com/kiwi-tcms-into-aws">
+                <img src="/images/customers/bookinglive.png" alt="BookingLive" title="BookingLive">
+            </a>
+            <img src="/images/customers/minds.png" alt="Minds.com" title="Minds.com Social Network">
+            <img src="/images/customers/musala.png" alt="Musala Soft" title="Musala Soft">
+            <img src="/images/customers/phplist.png" alt="phpList" title="phpList - free newsletter software">
+            <img src="/images/customers/sedc.png" alt="Seavus Education and Development Center"
+                title="Seavus Education and Development Center">
+            <img src="/images/customers/zamphyr.png" alt="Zamphyr" title="Zamphyr - free and common school of technology">
+        </section>
+
+        <section id="seen-at">
+            <h1>Seen at</h1>
+            <a target="_blank" href="https://github.com/marketplace/kiwi-tcms">
+                <img src="/images/conf/github.png" title="Github Marketplace">
+            </a>
+            <img src="/images/conf/bws.png" alt="Bulgaria Web Summit" title="Bulgaria web summit">
+            <img src="/images/conf/oscal.png" alt="Open Source Conference Albania">
+            <a target="_blank" href="https://www.youtube.com/watch?v=JMEeviPUl04">
+                <img src="/images/conf/pyconcz.png" alt="PyCon CZ" title="PyCon CZ">
+            </a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=r5sp0e7LsDc">
+                <img src="/images/conf/hackconf.png" alt="HackConf Sofia" title="HackConf Sofia">
+            </a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=sSJVstoGoG0">
+                <img src="/images/conf/piterpy.png" alt="PiterPy" title="PiterPy">
+            </a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=oATPURei6eQ">
+                <img src="/images/conf/openfest.png" alt="Open Fest Sofia" title="Open Fest Sofia">
+            </a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=9kOnf5YXquA">
+                <img src="/images/conf/fosdem.png" alt="FOSDEM Brussels" title="FOSDEM Brussels">
+            </a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=8neSwklzs7g">
+                <img src="/images/conf/openexpo.png" alt="OpenExpo" title="OpenExpo">
+            </a>
+            <img src="/images/conf/dev.bg.png" alt="Dev.bg community" title="Dev.bg community">
+            <img src="/images/conf/pyconblkn19.png" alt="PyCon Balkan, Belgrade" title="PyCon Balkan, Belgrade">
+            <a target="_blank" href="https://www.youtube.com/watch?v=lWX4fQrSVVg">
+                <img src="/images/conf/hackconf19.png" alt="HackConf Sofia" title="HackConf Sofia">
+            </a>
+            <img src="/images/conf/testcon.png" alt="TestCon Vilnius" title="TestCon Vilnius">
+            <a target="_blank" href="https://www.youtube.com/watch?v=p8N-xr72sD0">
+                <img src="/images/conf/testwarez19.png" alt="TestWarez" title="TestWarez">
+            </a>
+            <img src="/images/conf/qachallenge.png" alt="QA: Challenge Accepted" title="QA: Challenge Accepted">
+            <img src="/images/conf/fossasia.png" alt="FOSS ASIA Open Tech Summit" title="FOSS ASIA Open Tech Summit">
+            <img src="/images/conf/testinguy.png" alt="Testing Uruguay" title="Testing Uruguay">
+            <img src="/images/conf/wetest_athens.png" alt="WeTest.Athens" title="WeTest.Athens">
+        </section>
+
+        <section id="awards">
+            <h1>Awards</h1>
+
+            <a target="_blank" href="https://www.youtube.com/watch?v=7AuZp3nVIkc">
+                <img src="/images/conf/openawards19.png" alt="OpenAwards" title="OpenAwards">
+            </a>
+
+            <a href="/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/">
+                <img style="background-color: inherit" src="/images/conf/mozilla_award.png"
+                    alt="Mozilla Open Source Seed Award winner" title="Mozilla Open Source Seed Award winner">
+            </a>
+
+            <a href="https://webawards.eurid.eu/?q=kiwitcms.eu">
+                <img style="background-color: inherit" src="/images/conf/eu_awards_vote.png" alt=".eu Web Awards logo" title="Please vote for us in the 2020 .eu Web Awards!
+    Click this image, point your mouse to the photo of our website and click
+    the Thumbs Up button! No email or registration required!">
+            </a>
+        </section>
+
+        <section id="media">
+            <h1>Media <span><i class="las la-angle-left" onclick="mediaSlider.goTo('prev')"></i><i
+                        class="las la-angle-right" onclick="mediaSlider.goTo('next')"></i></span></h1>
+            <div class="slider media-slider">
+
+                <div onclick="mediaSlider.goTo(0)"><iframe src="https://www.youtube.com/embed/" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <h3>Title here 1</h3>
+                </div>
+
+                <!-- Video Model -->
+                <!-- onclick add video id as the first parameter  -->
+                <!-- add attribute video for the play icon -->
+                <!-- in the image link add video id for the correct cover image -->
+                <!-- change image alt for SEO -->
+
+                <div onclick="mediaSlider.goTo(1)">
+                    <a onclick="doVideo('jNi2nbnvjF8', true)" video>
+                        <img src="https://img.youtube.com/vi/jNi2nbnvjF8/mqdefault.jpg" alt="i'm an image">
+                    </a>
+                    <h3>Title here 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, pariatur.
                     </p>
-                    <p>
-                        Harley Thorne, DevOps, BookingLive
+                </div>
+
+                <div onclick="mediaSlider.goTo(2)"><img src="https://kiwitcms.eu/images/screenshots/002_testplan_00.png"
+                        alt="i'm an image">
+                    <h3>Title here 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, pariatur.
                     </p>
-                </blockquote>
+                </div>
+
+                <div onclick="mediaSlider.goTo(3)"><img src="Kiwi-TCMS-logo-header.png" alt="i'm an image">
+                    <h3>Title here 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, pariatur.
+                    </p>
+                </div>
+                <div onclick="mediaSlider.goTo(4)"><img src="https://kiwitcms.eu/images/screenshots/002_testplan_01.png"
+                        alt="i'm an image">
+                    <h3>Title here 5</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, pariatur.
+                    </p>
+                </div>
+                <div onclick="mediaSlider.goTo(5)"><img
+                        src="https://kiwitcms.eu/images/screenshots/001_central_dashboard.png" alt="i'm an image">
+                    <h3>Title here 6</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, pariatur.
+                    </p>
+                </div>
+                <div onclick="mediaSlider.goTo(6)"><img src="https://kiwitcms.eu/images/screenshots/002_testplan_00.png"
+                        alt="i'm an image">
+                    <h3>Title here 7</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, pariatur.
+                    </p>
+                </div>
+                <div onclick="mediaSlider.goTo(7)"><img
+                        src="https://kiwitcms.eu/images/screenshots/001_central_dashboard.png" alt="i'm an image">
+                    <h3>Title here 8</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, pariatur.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section class="col-12 about secondary">
-            <div class="about-intro olive-green-bottom">
-                <p>
-                    Used by ...
-                </p>
-            </div>
-
-            <div class="secondary" id="used-by">
-                <a href="/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/">
-                    <img style="background-color: inherit" src="/images/customers/better.png" alt="Better" title="Better care">
-                </a>
-
-                <a href="https://www.bookinglive.com/kiwi-tcms-into-aws">
-                    <img style="background-color: inherit" src="/images/customers/bookinglive.png" alt="BookingLive" title="BookingLive">
-                </a>
-
-                <img style="background-color: inherit" src="/images/customers/minds.png" alt="Minds.com" title="Minds.com Social Network">
-
-                <img style="background-color: inherit" src="/images/customers/musala.png" alt="Musala Soft" title="Musala Soft">
-
-                <img style="background-color: inherit" src="/images/customers/phplist.png" alt="phpList" title="phpList - free newsletter software">
-
-                <img style="background-color: inherit" src="/images/customers/sedc.png" alt="SEDC" title="Seavus Education and Development Center">
-
-                <img style="background-color: inherit" src="/images/customers/zamphyr.png" alt="Zamphyr" title="Zamphyr - free and common school of technology">
-            </div>
+        <section id="cta">
+            <h1>Are you ready to transform your testing?</h1>
+            <h3>Start using Kiwi TCMS today.</h3>
+            <a href="#" class="btn border-btn" icon>Get Started <i></i></a>
         </section>
 
-
-        <section class="col-12 about secondary">
-            <div class="about-intro olive-green-bottom">
-                <p>
-                    Seen at ...
-                </p>
-            </div>
-
-            <div class="secondary" id="seen-at">
-                <a href="https://github.com/marketplace/kiwi-tcms">
-                    <img style="background-color: inherit" src="/images/conf/github.png" alt="GitHub Marketplace" title="GitHub Marketplace">
-                </a>
-                <img style="background-color: inherit" src="/images/conf/bws.png" alt="BWS'18 logo" title="Bulgaria Web Summit">
-                <img style="background-color: inherit" src="/images/conf/oscal.png" alt="OSCAL logo" title="Open Source Conference Albania">
-
-                <div class="logo-layout" style="background-image: url('/images/conf/pyconcz.png')" title="PyCon CZ">
-                    <a class="play-button" href="#seen-at" title="Watch PyCon CZ video" onclick="showVideo('JMEeviPUl04')">
-                        <i class="fa fa-play fa-2x"></i>
-                    </a>
-                </div>
-
-                <div class="logo-layout" style="background-image: url('/images/conf/hackconf.png')" title="HackConf Sofia">
-                    <a class="play-button" href="#seen-at" title="Watch HackConf Sofia video" onclick="showVideo('r5sp0e7LsDc')">
-                        <i class="fa fa-play fa-2x"></i>
-                    </a>
-                </div>
-
-                <div class="logo-layout" style="background-image: url('/images/conf/piterpy.png')" title="PiterPy St. Petersburg">
-                    <a class="play-button" href="#seen-at" title="Watch PiterPy video" onclick="showVideo('sSJVstoGoG0')">
-                        <i class="fa fa-play fa-2x"></i>
-                    </a>
-                </div>
-
-                <img style="background-color: inherit" src="/images/conf/openfest.png" alt="OpenFest logo" title="Open Fest Sofia">
-
-                <div class="logo-layout" style="background-image: url('/images/conf/fosdem.png')" title="FOSDEM Brussels">
-                    <a class="play-button" href="#seen-at" title="Watch Fosdem video" onclick="showVideo('9kOnf5YXquA')">
-                        <i class="fa fa-play fa-2x"></i>
-                    </a>
-                </div>
-
-                <div class="logo-layout" style="background-image: url('/images/conf/openexpo.png')" title="OpenExpo Europe">
-                    <a class="play-button" href="#seen-at" title="Watch OpenExpo video" onclick="showVideo('8neSwklzs7g')">
-                        <i class="fa fa-play fa-2x"></i>
-                    </a>
-                </div>
-
-                <img style="background-color: inherit" src="/images/conf/dev.bg.png" alt="Dev.bg logo" title="Dev.bg community">
-                <img style="background-color: inherit" src="/images/conf/pyconblkn19.png" alt="PyCon Balkan logo" title="PyCon Balkan, Belgrade">
-                <img style="background-color: inherit" src="/images/conf/hackconf19.png" alt="HackConf logo" title="HackConf, Sofia">
-                <img style="background-color: inherit" src="/images/conf/testcon.png" alt="TestCon logo" title="TestCon Vilnius">
-
-                <div class="logo-layout" style="background-image: url('/images/conf/testwarez19.png')" title="TestWarez Poland">
-                    <a class="play-button" href="#seen-at" title="Watch TestWarez video" onclick="showVideo('p8N-xr72sD0')">
-                        <i class="fa fa-play fa-2x"></i>
-                    </a>
-                </div>
-
-                <img style="background-color: inherit" src="/images/conf/qachallenge.png" alt="QA: Challenge Accepted logo" title="QA: Challenge Accepted">
-                <img style="background-color: inherit" src="/images/conf/fossasia.png" alt="FOSS ASIA logo" title="FOSS ASIA Open Tech Summit">
-                <img style="background-color: inherit" src="/images/conf/testinguy.png" alt="TestingUY logo" title="Testing Uruguay">
-                <img style="background-color: inherit" src="/images/conf/wetest_athens.png" alt="WeTest.Athens logo" title="WeTest.Athens">
-
-            </div>
-        </section>
-
-        <section class="col-12 about secondary" id="awards">
-            <div class="about-intro olive-green-bottom">
-                <p>
-                    Awards &amp; media
-                </p>
-            </div>
-
-            <div class="secondary" id="media">
-                <div class="logo-layout" style="background-image: url('/images/conf/openawards19.png')" title="OpenAwards winner">
-                    <a class="play-button" href="#awards" title="Watch OpenAwards video" onclick="showVideo('7AuZp3nVIkc')">
-                        <i class="fa fa-play fa-2x"></i>
-                    </a>
-                </div>
-
-                <a href="/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/">
-                    <img style="background-color: inherit" src="/images/conf/mozilla_award.png" alt="Mozilla Open Source Seed Award winner" title="Mozilla Open Source Seed Award winner">
-                </a>
-
-                <a href="https://webawards.eurid.eu/?q=kiwitcms.eu">
-                    <img style="background-color: inherit" src="/images/conf/eu_awards_vote.png" alt=".eu Web Awards logo"
-                        title="Please vote for us in the 2020 .eu Web Awards!
-Click this image, point your mouse to the photo of our website and click
-the Thumbs Up button! No email or registration required!">
-                </a>
-
-                <p style="clear:both" class="left-pad-15">
-                    <br>
-                    <a href="#awards" onclick="showVideo('jNi2nbnvjF8')">
-                        <i class="fab fa-youtube"></i> Alex &amp; Zahari invite you to TestCon Moscow 2020
-                    </a>
-                    <br>
-
-                    <a href="#awards" onclick="showVideo('oATPURei6eQ')">
-                        <i class="fab fa-youtube"></i> LT with Lyubo (contributor), Zahari &amp; Alex, OpenFest 2019 (in Bulgarian)
-                    </a>
-                    <br>
-
-                    <!-- HackConf 2019 -->
-                    <a href="#awards" onclick="showVideo('RzpzKN03jvk')">
-                        <i class="fab fa-youtube"></i> Eddie Jaoude talks Kiwi TCMS with Anton &amp; Alex
-                    </a>
-                    <br>
-
-                    <a href="#awards" onclick="showVideo('6fCzrdpvYDg')">
-                        <i class="fab fa-youtube"></i> Eddie Jaoude talks open source mentoring with Rady &amp; Zahari
-                    </a>
-                    <br>
-
-                    <a href="#awards" onclick="showVideo('cMkoSWXP1AY')">
-                        <i class="fab fa-youtube"></i> Eddie Jaoude: "I think we should pick Alex to be our first victim ..."
-                    </a>
-                    <br>
-
-                    <a href="#awards" onclick="showVideo('lWX4fQrSVVg')">
-                        <i class="fab fa-youtube"></i> Anton Sankov live from HackConf 2019 (in Bulgarian)
-                    </a>
-                    <br>
-
-                    <a href="#awards" onclick="showVideo('H3GnnnuXO68')">
-                        <i class="fab fa-youtube"></i> LT: 10 years of Kiwi TCMS, FOSDEM 2019
-                    </a>
-                    <br>
-                </p>
-
-            <!--the closing div & section tags are in page.html-->
+        <aside id="vp-overlay" onclick="hideVideo()">
+            <i class="las la-times" title="Close" onclick="hideVideo()"></i>
+            <iframe id="vp-frame" src="https://www.youtube.com/embed/n0wAAyISxLs?hd=1&enablejsapi=1"
+                autoplay="true" frameborder="0" width="1120" height="700"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </aside>
     </body>
 </html>
