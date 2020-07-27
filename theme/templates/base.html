@@ -107,6 +107,8 @@
             </div>
         </footer>
 
+        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/scripts/toggle.js"></script>
+
         {% if page and page.extra_javascript %}
             {% for script in page.extra_javascript.split(' ') %}
             <script src="{{ script }}"></script>
