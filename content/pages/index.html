@@ -3,7 +3,6 @@
         <title>the leading open source test management system</title>
         <meta name="save_as" content="index.html">
         <meta name="extra_javascript" content="https://www.youtube.com/iframe_api scripts/video.js scripts/img-gallery-handler.js">
-        <meta name="extra_css" content="/theme/style/tiny-slider.css">
     </head>
     <body>
         <header>
@@ -416,104 +415,16 @@
             <h1>
                 See it in action
                 <span>
-                    <i class="las la-angle-left" onclick="screensSlider.goTo('prev')"></i>
-                    <i class="las la-angle-right" onclick="screensSlider.goTo('next')"></i>
+                    <i id="prev" class="las la-angle-left"></i><i id="next" class="las la-angle-right"></i>
                 </span>
             </h1>
+
             <div class="slider screens-slider">
-                <div onclick="screensSlider.goTo(0)">
-                    <img src="images/screenshots/001_central_dashboard.png">
-                    <h3>Central dashboard to start your day</h3>
-                    <p>
+                <div>
+                    <img class="shown" src="images/screenshots/001_central_dashboard.png">
+                    <h3 id="heading">Central dashboard to start your day</h3>
+                    <p id="subtitle">
                         See all of your test executions and test plans in one place
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(1)">
-                    <img src="images/screenshots/002_testplan_00.png">
-                    <h3>Create IEEE 829 or free text test plan</h3>
-                    <p>
-                        This document contains your overall testing strategy
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(2)">
-                    <img src="images/screenshots/002_testplan_01.png">
-                    <h3>Test plan is a collection of test cases</h3>
-                    <p>
-                        Add, remove, review and approve test cases before you start testing
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(3)">
-                    <img src="images/screenshots/003_create_test_case.png">
-                    <h3>Create a test case</h3>
-                    <p>
-                        Use Given-When-Then or bullet points to describe the scenario
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(4)">
-                    <img src="images/screenshots/004_view_existing_test_cases.png">
-                    <h3>View existing test case</h3>
-                    <p>
-                        Intuitive access to all the important information
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(5)">
-                    <img src="images/screenshots/005_execute_tests_for_build.png">
-                    <h3>Execute test runs against a build</h3>
-                    <p>
-                        For each product build create test runs to collect execution details
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(6)">
-                    <img src="images/screenshots/007_bugtracker_github.png">
-                    <h3>Bug tracker integration</h3>
-                    <p>
-                        Link to existing bug reports or report new ones directly from Kiwi TCMS
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(7)">
-                    <img src="images/screenshots/007_bugtracker_jira.png">
-                    <h3>Easy 1-click bug report</h3>
-                    <p>
-                        Open bugs in 3rd party systems from test executions. Fully customizable
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(8)">
-                    <img src="images/screenshots/006_testing_breakdown_telemetry.png">
-                    <h3>Testing breakdown telemetry</h3>
-                    <p>
-                        Shows how existing test cases are distributed
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(9)">
-                    <img src="images/screenshots/007_status_matrix_telemetry.png">
-                    <h3>Status matrix telemetry</h3>
-                    <p>
-                        Detailed information about test execution status
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(11)">
-                    <img src="images/screenshots/008_execution_trends_telemetry.png">
-                    <h3>Execution trends telemetry</h3>
-                    <p>
-                        Information if product builds are getting better or worse
-                    </p>
-                </div>
-
-                <div onclick="screensSlider.goTo(12)">
-                    <img src="images/screenshots/009_test_case_health_telemetry.png">
-                    <h3>Test case health telemetry</h3>
-                    <p>
-                        Discover which test cases are the most common source of problems
                     </p>
                 </div>
             </div>

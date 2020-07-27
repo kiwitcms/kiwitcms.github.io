@@ -52,20 +52,16 @@
 
     var nextBtn = document.getElementById('next'),
         prevBtn = document.getElementById('prev'),
-        shown = document.getElementsByClassName('shown')[0],
-        hidden =  document.getElementsByClassName('hidden')[0];
-
+        shown = document.getElementsByClassName('shown')[0];
 
     // updates/ what is shown in the containers
     function updateDisplay(idx) {
         var heading = document.getElementById('heading'),
-            subtitle = document.getElementById('subtitle'),
-            progress = document.getElementById('imgIndex');
+            subtitle = document.getElementById('subtitle');
 
-        shown.style.backgroundImage = 'url(' + imgs[idx].img + ')';
+        shown.src = imgs[idx].img;
         heading.textContent = imgs[idx].title;
         subtitle.textContent = imgs[idx].subtitle;
-        progress.textContent = (idx + 1) + '/' + imgs.length;
     }
 
     // roll images left and right by swapping the hidden/shown containers
@@ -80,17 +76,6 @@
             imgIndex = 0;
         }
 
-        // swap the shown/hidden containers
-        shown.classList.remove("shown");
-        shown.classList.add("hidden");
-
-        hidden.classList.remove("hidden");
-        hidden.classList.add("shown");
-
-        // also update the references held in the variables
-        shown = document.getElementsByClassName('shown')[0];
-        hidden = document.getElementsByClassName('hidden')[0];
-
         // show current image and texts
         updateDisplay(imgIndex);
         changeDirection(direction);
@@ -99,7 +84,6 @@
     // helps change the direction from which the containers
     // transition depending on which direction we want to go
     function changeDirection(direction) {
-        hidden.style.left = (105 * direction) + "%";
         shown.style.left = 0;
     }
 
