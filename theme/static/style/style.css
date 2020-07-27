@@ -586,13 +586,13 @@ details:focus, summary:focus{
 #screens h1 span i {
 	cursor: pointer;
 }
-#screens h3, #media h3 {
+#screens h3 {
 	font-family: "Rubik Bold", "Rubik", sans-serif;
 	font-weight: bold;
 	font-size: 25px;
 	margin: var(--x3-padding) 0;
 }
-#screens p, #media p {
+#screens p {
 	font-size: 20px;
 }
 
@@ -700,58 +700,8 @@ blockquote .author span {
 	max-width: 100%;
 }
 
-#seen-at, #media{
+#seen-at {
 	background:var(--light-gray);
-}
-
-/* S MEDIA extends SCREENS and Logo Sections */
-
-#media{
-	padding: var(--x3-padding) var(--unusable-padding);
-}
-#media iframe, #media img{
-	width: 100%;
-    grid-row: 1;
-    grid-column: 1;
-    cursor: pointer;
-    filter: var(--image-shadow);
-}
-#media h1 {
-	margin-bottom: var(--x3-padding);
-	display: flex;
-}
-#media h1 span {
-	margin-left: auto;
-	bottom: -10px;
-	position: relative;
-}
-#media h1 span i {
-	cursor: pointer;
-}
-#media .video{
-	display: grid;
-	align-items: center;
-	justify-items: center;
-}
-#media a{
-	text-decoration: none;
-	display: grid;
-}
-#media a[video]::after {
-	content: var(--la-play);
-    font-size: 64px;
-    font-family: "Line Awesome Free";
-    font-weight: 900;
-    grid-row: 1;
-    grid-column: 1;
-    z-index: 5;
-    background: var(--light-gray);
-    border-radius: 50px;
-    justify-self: center;
-    color: var(--dark-green);
-    cursor: pointer;
-    pointer-events: none;
-    align-self: center;
 }
 
 /* S CALL TO ACTION extends SCREENS*/
