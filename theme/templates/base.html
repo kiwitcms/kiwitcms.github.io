@@ -17,10 +17,14 @@
     <body class="{% block page_body_class %}{% endblock %}">
 
         <nav id="main-nav">
-            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            <a href="/">
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            </a>
             <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')"></i>
             <ul class="hidden-menu" id="hidden-menu">
-                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                <a href="/">
+                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
                 <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
                 {% include "main_menu_items.html" %}
             </ul>
