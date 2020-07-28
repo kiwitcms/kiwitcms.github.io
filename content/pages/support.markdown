@@ -1,6 +1,7 @@
 Title: Support
 url: support/
 save_as: support/index.html
+add_section: True
 
 # Support for Kiwi TCMS
 

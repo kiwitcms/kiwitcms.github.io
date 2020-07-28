@@ -5,5 +5,11 @@
 {% block page_body_class %}page {% if page.body_class %}{{ page.body_class }}{% endif %}{% endblock %}
 
 {% block content %}
-    {{ page.content }}
+    {% if page.add_section %}
+    <section>
+    {% endif %}
+        {{ page.content }}
+    {% if page.add_section %}
+    </section>
+    {% endif %}
 {% endblock content %}
