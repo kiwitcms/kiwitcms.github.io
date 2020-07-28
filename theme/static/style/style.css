@@ -73,7 +73,7 @@
 
 section,
 footer {
-	width: var(--usable-width);
+	width: var(--usable-area);
 	padding: var(--unusable-padding);
 	display: grid;
 }
@@ -144,7 +144,7 @@ ul.caret li, ul.caret details{
 	font-family: "Line Awesome Free";
 	font-weight: 900;
 	color: white;
-	vertical-align: top;
+	vertical-align: bottom;
 	font-style: normal;
 	margin-right: 10px;
 	transition: margin 0.1s linear;
@@ -192,7 +192,7 @@ ul.caret li, ul.caret details{
 
 /* HEADER */
 header {
-	width: var(--usable-width);
+	width: var(--usable-area);
 	/* height:calc(100vh -  2 * var(--unusable-padding)); */
 	padding: var(--unusable-padding);
 	padding-bottom: calc(var(--unusable-padding) * 2);
@@ -209,54 +209,55 @@ header {
 	background-position: bottom right;
 }
 
-/* HEADER > NAVIGATION */
-header nav {
+/* NAVIGATION */
+#main-nav {
 	position: fixed;
 	z-index: 20;
-	width: 86vw;
-	padding: var(--x3-padding) var(--unusable-padding);
+	width: var(--usable-area);
+	padding: var(--x3-padding) 0;
 	background: var(--white);
-	margin: calc(var(--unusable-padding) * -1);
+        margin: 0 var(--unusable-padding);
 	display: flex;
 }
-header nav ul.hidden-menu{
+#main-nav ul.hidden-menu{
 	display:none;
 }
-header nav img {
+#main-nav img {
 	margin: calc(var(--x3-padding) * -1) 0;
 	height: 60px;
 	padding: 16px 0;
 }
-header nav>i{
+#main-nav>i{
 	display:none!important;
 }
-header nav > ul {
+#main-nav> ul {
 	margin-left: auto;
 }
-header nav > ul li {
+#main-nav> ul li {
 	display: inline-block;
 	margin: 0 7px;
 	color: var(--black);
 }
-header nav > ul:not(.hidden-menu) li a {
+#main-nav> ul:not(.hidden-menu) li a:not(.btn) {
 	text-decoration: none;
 	padding: 38px 8px 35px;
 }
-header nav > ul li a{
+
+#main-nav> ul li a{
 	text-decoration: none;
 }
-header nav  > ul:not(.hidden-menu) li a.active {
+#main-nav > ul:not(.hidden-menu) li a.active {
 	border-bottom: var(--nav-border-bottom) solid var(--dark-green);
 	padding-bottom: 31px;
 	color: var(--dark-green);
 	font-weight: 500;
 }
-header nav  > ul.hidden-menu li a.active {
+#main-nav > ul.hidden-menu li a.active {
 	/* background-color:var(--trans-green); */
 	color: var(--dark-green);
 	font-weight: 500;
 }
-nav ul li a:hover:not(.btn) {
+#main-nav ul li a:hover:not(.btn) {
 	color: var(--dark-green);
 }
 

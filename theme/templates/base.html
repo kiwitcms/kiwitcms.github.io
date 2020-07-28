@@ -18,7 +18,6 @@
     </head>
     <body class="{% block page_body_class %}{% endblock %}">
 
-        <header>
             <nav id="main-nav">
                 <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
                 <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')"></i>
@@ -69,7 +68,6 @@
                     </li>
                 </ul>
             </nav>
-        </header>
 
         <!-- content -->
         {% block content %}{% endblock %}
