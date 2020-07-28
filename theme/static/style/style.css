@@ -259,17 +259,6 @@ header nav  > ul.hidden-menu li a.active {
 nav ul li a:hover:not(.btn) {
 	color: var(--dark-green);
 }
-/* HEADER > NAVIGATION .Minified */
-nav.minified {
-	padding: var(--x2-padding) var(--unusable-padding);
-}
-nav.minified img {
-	height: 40px;
-	margin: calc(var(--x2-padding) * -1) 0;
-}
-nav.minified > ul li a.active {
-	padding-bottom: 21px;
-}
 
 /* HEADER > LEAD */
 

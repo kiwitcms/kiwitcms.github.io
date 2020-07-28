@@ -97,7 +97,7 @@ header nav ul.hidden-menu.visible{
 }
 
     
-    header nav:not(.minified) img {
+    header nav img {
         height: 30px;
         padding: 33px 0;
     }
