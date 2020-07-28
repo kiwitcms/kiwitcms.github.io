@@ -16,56 +16,22 @@
     </head>
     <body class="{% block page_body_class %}{% endblock %}">
 
-            <nav id="main-nav">
+        <nav id="main-nav">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')"></i>
+            <ul class="hidden-menu" id="hidden-menu">
                 <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
-                <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')"></i>
-                <ul class="hidden-menu" id="hidden-menu">
-                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
-                    <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
-                    <li>
-                        <a href="{{ SITEURL }}/features/" class="active">Features</a>
-                    </li>
-                    <li>
-                        <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
-                    </li>
-                    <li>
-                        <a href="{{ SITEURL }}/community/">Community</a>
-                    </li>
-                    <li>
-                        <a href="{{ SITEURL }}/support/">Support</a>
-                    </li>
-                    <li>
-                        <a href="{{ SITEURL }}/blog/">Blog</a>
-                    </li>
-                    <li>
-                        <a href="{{ SITEURL }}/team/">Team</a>
-                    </li>
-                </ul>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+                {% include "main_menu_items.html" %}
+            </ul>
 
-                <ul>
-                    <li>
-                        <a href="{{ SITEURL }}/features/" class="active">Features</a>
-                    </li>
-                    <li>
-                        <a href="http://kiwitcms.readthedocs.io">Documentation</a>
-                    </li>
-                    <li>
-                        <a href="{{ SITEURL }}/community/">Community</a>
-                    </li>
-                    <li>
-                        <a href="{{ SITEURL }}/support/">Support</a>
-                    </li>
-                    <li>
-                        <a href="{{ SITEURL }}/blog/">Blog</a>
-                    </li>
-                    <li>
-                        <a href="{{ SITEURL }}/team/">Team</a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn" icon>Get Started <i></i></a>
-                    </li>
-                </ul>
-            </nav>
+            <ul>
+                {% include "main_menu_items.html" %}
+                <li>
+                    <a href="#" class="btn" icon>Get Started <i></i></a>
+                </li>
+            </ul>
+        </nav>
 
         <!-- content -->
         {% block content %}{% endblock %}
