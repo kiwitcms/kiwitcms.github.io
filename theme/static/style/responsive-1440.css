@@ -8,7 +8,7 @@
     
     /* HEADER > NAVIGATION */
 
-    header nav:not(.minified) img {
+    header nav img {
         height: 40px;
         padding: 26px 0;
     }
