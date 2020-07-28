@@ -1,0 +1,18 @@
+<li>
+    <a href="{{ SITEURL }}/features/" {% if page and page.title == 'Features matrix' %}class="active"{% endif %}>Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="{{ SITEURL }}/community/" {% if page and page.title == 'Community' %}class="active"{% endif %}>Community</a>
+</li>
+<li>
+    <a href="{{ SITEURL }}/support/" {% if page and page.title == 'Support' %}class="active"{% endif %}>Support</a>
+</li>
+<li>
+    <a href="{{ SITEURL }}/blog/" {% if not page %}class="active"{% endif %}>Blog</a>
+</li>
+<li>
+    <a href="{{ SITEURL }}/team/" {% if page and page.title == 'Meet the Kiwi TCMS team' %}class="active"{% endif %}>Team</a>
+</li>
