@@ -32,7 +32,22 @@
             <ul>
                 {% include "main_menu_items.html" %}
                 <li>
-                    {% include "get_started_btn.html" %}
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <a class="btn" icon>Get Started <i></i></a>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
