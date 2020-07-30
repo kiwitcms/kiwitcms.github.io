@@ -1,0 +1,274 @@
+/* Fonts from Google Fonts */
+/* Source Sans Pro & Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+/* I! Remove unused weights. */
+
+@import url('https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Rubik", sans-serif;
+	list-style: none;
+}
+
+:root{
+	/* Colors */
+	--dark-green:#3C8D2C;
+	--mid-green:#59A016;
+	--light-green:#78B500;
+	--trans-green:#3C8D2C80;
+	--white:#FFFFFF;
+	--light-gray:#F8F8F8;
+	--brown:#36302C;
+	--black:#222222;
+	/* Sizes */
+	--x1-padding:;
+	--x2-padding:;
+	--x3-padding:;
+	--sec-padding:;
+	/* Icons */
+	--la-play:"\f04b";
+	--la-check:"\f14a";
+	--la-arrow:"\f061";
+	--la-cl-down:;
+	--la-book:;
+	--la-team:;
+	--la-headset:;
+	--fa-caret:"\f0da";
+	--la-arrow-left:"\f104";
+	--la-arrow-right:"\f105";
+	--la-quote:;
+	--la-twitter:;
+	--la-github:;
+	--la-mail:;
+	/* Shadows */
+	--light-shadow:drop-shadow(0 4px 8px rgba(0,0,0,.2));
+}
+hr{
+	border:1px solid var(--trans-green);
+}
+header, section{
+	width:86vw;
+	padding:7vw;
+}
+header h1{
+	font-family: "Source Sans Pro Black", "Source Sans Pro", sans-serif;
+	font-size: 60px;
+	color:var(--dark-green);
+}
+header h3{
+	font-family: "Rubik Bold", "Rubik", sans-serif;
+	font-size: 25px;
+	color:var(--black);
+}
+header span{
+	font-family: "Rubik", sans-serif;
+	font-size: 20px;
+	color:var(--black);
+}
+section span{
+	font-family: "Rubik Bold", "Rubik", sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color:var(--trans-green);
+}
+
+/* Colors */
+.colors-grid{
+	margin-top:62px;
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.colors-grid div{
+	font-family: "Rubik", sans-serif;
+	font-size: 20px;
+	padding:30px;
+	filter:var(--light-shadow);
+}
+.colors-grid div:nth-child(1){
+	background:var(--dark-green);
+	color:var(--white);
+}
+.colors-grid div:nth-child(2){
+	background:var(--mid-green);
+	color:var(--white);
+}
+.colors-grid div:nth-child(3){
+	background:var(--light-green);
+	color:var(--white);
+}
+.colors-grid div:nth-child(4){
+	background:var(--trans-green);
+}
+.colors-grid div:nth-child(5){
+	background:var(--white);
+}
+.colors-grid div:nth-child(6){
+	background:var(--light-gray);
+}
+.colors-grid div:nth-child(7){
+	background:var(--brown);
+	color:var(--white);
+}
+.colors-grid div:nth-child(8){
+	background:var(--black);
+	color:var(--white);
+}
+
+#titles h1.header{
+	font-family: "Source Sans Pro Black", "Source Sans Pro", sans-serif;
+	font-size: 60px;
+	color:var(--dark-green);
+}
+
+#titles ul.check li:before{
+	content:var(--la-check);
+	font-family: 'Line Awesome Free';
+	font-weight: 900;
+	margin-right: 7px;
+	font-size:32px;
+}
+
+#titles ul.check li{
+	font-size: 30px;
+	margin-bottom: 3px;
+}
+
+#titles ul.caret li:before{
+	content:var(--fa-caret);
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	margin-right: 5px;
+}
+
+#titles ul.caret li{
+	font-size: 20px;
+	margin-bottom: 9px;
+}
+
+#titles h1.section{
+	font-family: "Source Sans Pro Bold", "Source Sans Pro", sans-serif;
+	font-style:oblique;
+	font-size: 60px;
+	color:var(--dark-green);
+}
+
+#titles h3{
+	font-family: "Rubik Bold", "Rubik", sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+}
+#titles h2{
+	color: white;
+	font-family: "Source Sans Pro Bold", "Source Sans Pro", sans-serif;
+	font-size: 40px;
+	font-style: oblique;
+
+	/* for context */
+
+	padding: 5px;
+	background: var(--dark-green);
+}
+
+#titles p, #titles a{
+	font-size: 20px;
+}
+
+/* CODE */
+code{
+	font-family: "JetBrains Mono", "Consolas", monospace;
+	color: var(--dark-green);
+	background-color: var(--light-gray);
+	padding: 2px 4px;
+	font-size:inherit;
+	border-radius:2px;
+	border:1px solid var(--trans-green);
+}
+.link-light-bg{
+	color: var(--dark-green);
+	/* for context */
+	padding:15px;
+	background: var(--light-gray);
+	display:inline-block;
+	margin-top:5px;
+}
+.link-dark-bg{
+	color: var(--light-green);
+	/* for context */
+	padding:15px;
+	background: var(--black);
+	display:inline-block;
+	margin-top:5px;
+}
+
+#buttons a{
+	/* for showcase */
+	display:inline-block;
+}
+.btn{
+	padding:9px 30px;
+	color:var(--white);
+	background: var(--dark-green);
+	font-size: 20px;
+	line-height: 32px;
+	text-decoration: none;
+}
+.btn[icon]{
+	padding:9px 20px 9px 30px;
+}
+
+.btn:hover{
+	background: var(--light-green);
+}
+
+.btn:hover i:after{
+	margin-left:55px;
+	margin-right:0px;
+}
+
+.big-btn{
+	padding:9px 30px;
+	color:var(--white);
+	background: var(--dark-green);
+	font-size: 30px;
+	line-height: 42px;
+	text-decoration: none;
+}
+.btn i:after{
+	content: var(--la-arrow);
+	    font-size: 32px;
+	    margin-left: 45px;
+	    font-family: 'Line Awesome Free';
+	    font-weight: 900;
+	    color: white;
+	    vertical-align: top;
+	    font-style: normal;
+	    margin-right: 10px;
+			transition: margin .1s linear;
+}
+.big-btn i:after{
+	    font-size: 45px;
+}
+.border-btn{
+background: var(--mid-green);
+border:2px solid white;
+}
+.border-btn i:after{
+	margin-left: 25px;
+}
+.border-btn:hover i:after{
+	margin-left: 35px;
+}
+.ghost-btn{
+background: transparent;
+border:2px solid white;
+}
+.ghost-btn:hover{
+	background:var(--white);
+	color:var(--black);
+}
+.ghost-btn:hover i:after{
+	color:var(--black);
+}
