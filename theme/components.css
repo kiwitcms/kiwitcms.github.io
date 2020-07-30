@@ -12,38 +12,47 @@
 	list-style: none;
 }
 
-:root{
+:root {
 	/* Colors */
-	--dark-green:#3C8D2C;
-	--mid-green:#59A016;
-	--light-green:#78B500;
-	--trans-green:#3C8D2C80;
-	--white:#FFFFFF;
-	--light-gray:#F8F8F8;
-	--brown:#36302C;
-	--black:#222222;
+	--dark-green: #3c8d2c;
+	--mid-green: #59a016;
+	--light-green: #78b500;
+	--trans-green: #3c8d2c80;
+	--white: #ffffff;
+	--light-gray: #f8f8f8;
+	--brown: #36302c;
+	--black: #222222;
 	/* Sizes */
-	--x1-padding:;
-	--x2-padding:;
-	--x3-padding:;
-	--sec-padding:;
+	--usable-area: 86vw;
+	--unusable-padding: 7vw;
+	--x1-padding: 10px;
+	--x2-padding: 20px;
+	--x3-padding: 30px;
+	--sec-padding: 70px;
+	--grid-gap: 30px;
+	--nav-border-bottom: 4px;
 	/* Icons */
-	--la-play:"\f04b";
-	--la-check:"\f14a";
-	--la-arrow:"\f061";
-	--la-cl-down:;
-	--la-book:;
-	--la-team:;
-	--la-headset:;
-	--fa-caret:"\f0da";
-	--la-arrow-left:"\f104";
-	--la-arrow-right:"\f105";
-	--la-quote:;
-	--la-twitter:;
-	--la-github:;
-	--la-mail:;
+	--la-play: "\f144";
+	--la-check: "\f14a";
+	--la-arrow: "\f061";
+	--la-cl-down: "\f381";
+	--la-book: "\f02d";
+	--la-team: "\f0c0";
+	--la-headset: "\f590";
+	--fa-caret: "\f0da";
+	--fa-caret-down: "\f0d7";
+	--la-arrow-left: "\f104";
+	--la-arrow-right: "\f105";
+	--la-quote: "\f10d";
+	--la-twitter: "\f081";
+	--la-github: "\f092";
+	--la-mail: "\f0e0";
+	--fa-info: "\f05a";
+	--la-close: "\f00d";
 	/* Shadows */
-	--light-shadow:drop-shadow(0 4px 8px rgba(0,0,0,.2));
+	--light-shadow: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+	--lower-shadow: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
+	--image-shadow: drop-shadow(3px 3px 15px rgba(0, 0, 0, 0.2));
 }
 hr{
 	border:1px solid var(--trans-green);
