@@ -110,6 +110,9 @@ ul.caret summary:before {
 	margin-right: 5px;
 }
 
+ul.caret details > ul > li:before {
+	content: var(--fa-angle-right);
+}
 ul.caret li,
 ul.caret details {
 	font-size: 20px;
@@ -207,9 +210,8 @@ header {
 	position: fixed;
 	z-index: 20;
 	width: var(--usable-area);
-	padding: var(--x3-padding) 0;
+	padding: var(--x3-padding) var(--unusable-padding);
 	background: var(--white);
-	margin: 0 var(--unusable-padding);
 	display: flex;
 }
 #main-nav ul.hidden-menu {
@@ -514,6 +516,13 @@ blockquote p.quote {
 #pricing details[open] summary:before {
 	content: var(--fa-caret-down);
 }
+#pricing details li {
+	padding-left: var(--x2-padding);
+}
+#pricing details li > ul > li {
+	padding-left: var(--x2-padding);
+	font-style: oblique;
+}
 details:focus,
 summary:focus {
 	outline: none;
@@ -582,8 +591,7 @@ summary:focus {
 }
 #screens img {
 	max-width: 100%;
-	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-	filter: var(--image-shadow);
+	filter: var(--lower-shadow);
 }
 .tns-outer {
 	margin: 0 calc(var(--unusable-padding) * -1);
@@ -666,7 +674,7 @@ blockquote .author span {
 }
 #trusted-by h1,
 #seen-at h1,
-#awards h1 {
+#awards h1{
 	grid-column: 1/7;
 	text-align: left;
 	margin-bottom: var(--x3-padding);
@@ -674,7 +682,10 @@ blockquote .author span {
 
 #trusted-by a img,
 #seen-at a img,
-#awards a img {
+#awards a img,
+#trusted-by img,
+#seen-at img,
+#awards img {
 	max-width: 100%;
 }
 

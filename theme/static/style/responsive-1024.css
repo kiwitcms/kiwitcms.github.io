@@ -48,7 +48,7 @@
         display: unset !important;
     }
     #main-nav .hidden-menu i,
-    #main-nav .hidden-menu img {
+    #main-nav .hidden-menu a:first-child{
         grid-row: 1;
         grid-column: 1;
     }
