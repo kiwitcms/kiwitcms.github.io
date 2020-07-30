@@ -523,6 +523,7 @@ blockquote p.quote {
 	font-style: oblique;
 }
 #pricing details li details:focus,
+details:focus,
 summary:focus {
 	outline: none;
 }

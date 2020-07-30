@@ -1,11 +1,4 @@
-/* @import "responsive-1440.css" screen and (max-width: 1679px) and (min-width:1440px);
-@import "responsive-1024.css" screen and (max-width: 1439px) and (min-width:1024px);
-@import "responsive-768.css" screen and (max-width: 1023px) and (min-width:768px);
-@import "responsive-425.css" screen and (max-width: 767px) and (min-width:425px);
-@import "responsive-micro.css" screen and (max-width: 424px); */
-
 @media screen and (max-width: 1679px) and (min-width: 1440px) {
-    
     /* HEADER > NAVIGATION */
 
     #main-nav img {
@@ -15,7 +8,7 @@
 
     /* QUICK LINKS */
     #quick-links div {
-        grid-template-columns:unset;
+        grid-template-columns: unset;
         grid-template-rows: max-content auto 1fr;
         grid-template-areas:
             "icon"
@@ -49,7 +42,7 @@
             "description"
             "author";
     }
-    blockquote i{
-        display:none!important;
+    blockquote i {
+        display: none !important;
     }
 }

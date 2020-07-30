@@ -1,0 +1,55 @@
+/* @import "responsive-1440.css" screen and (max-width: 1679px) and (min-width:1440px);
+@import "responsive-1024.css" screen and (max-width: 1439px) and (min-width:1024px);
+@import "responsive-768.css" screen and (max-width: 1023px) and (min-width:768px);
+@import "responsive-425.css" screen and (max-width: 767px) and (min-width:425px);
+@import "responsive-micro.css" screen and (max-width: 424px); */
+
+@media screen and (max-width: 1679px) and (min-width: 1440px) {
+    
+    /* HEADER > NAVIGATION */
+
+    header nav:not(.minified) img {
+        height: 40px;
+        padding: 26px 0;
+    }
+
+    /* QUICK LINKS */
+    #quick-links div {
+        grid-template-columns:unset;
+        grid-template-rows: max-content auto 1fr;
+        grid-template-areas:
+            "icon"
+            "title"
+            "description";
+    }
+
+    /* S PRICING */
+    #pricing .plans-modal {
+        grid-column: 1/4;
+    }
+
+    /* S SCREENS > SLIDER */
+
+    .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active {
+        width: calc((var(--usable-area)-11 * var(--grid-gap)) / 12 * 3) !important;
+        /* overwrite default */
+    }
+    .tns-slide-active + .tns-slide-active {
+        width: calc((var(--usable-area)-11 * var(--grid-gap)) / 12 * 7) !important;
+    }
+
+    /* S TESTIMONIALS */
+
+    blockquote {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "description"
+            "author";
+    }
+    blockquote i{
+        display:none!important;
+    }
+}

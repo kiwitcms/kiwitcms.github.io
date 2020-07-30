@@ -1,18 +1,11 @@
-/* @import "responsive-1440.css" screen and (max-width: 1679px) and (min-width:1440px);
-@import "responsive-1024.css" screen and (max-width: 1439px) and (min-width:1024px);
-@import "responsive-768.css" screen and (max-width: 1023px) and (min-width:768px);
-@import "responsive-425.css" screen and (max-width: 767px) and (min-width:425px);
-@import "responsive-micro.css" screen and (max-width: 424px); */
-
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     /* COMMON */
-    
 
     .big-btn i:after {
         font-size: inherit;
     }
     .big-btn {
-        padding: 9px var(--x3-padding);;
+        padding: 9px var(--x3-padding);
         font-size: 20px;
         line-height: 32px;
     }
@@ -23,11 +16,9 @@
     p {
         font-size: 17px;
     }
-    section > h1{
+    section > h1 {
         font-size: 40px;
     }
-
-
 
     /* HEADER */
     header {
@@ -44,54 +35,55 @@
         font-size: 21px;
     }
 
-    header{
+    header {
         grid-template-areas: "lead";
         grid-template-columns: 1fr;
     }
-    
-    header .video{
-        display:none;
+
+    header .video {
+        display: none;
     }
-    
+
     /* HEADER > NAVIGATION */
-    #main-nav > ul{
+    #main-nav > ul {
         margin-left: var(--x1-padding);
     }
-    #main-nav i{
+    #main-nav i {
         font-size: 36px;
         color: var(--dark-green);
         margin-left: auto;
     }
-    #main-nav>i{
-        display: unset!important;
+    #main-nav > i {
+        display: unset !important;
     }
-    #main-nav .hidden-menu i, #main-nav .hidden-menu img{
+    #main-nav .hidden-menu i,
+    #main-nav .hidden-menu img {
         grid-row: 1;
         grid-column: 1;
     }
     #main-nav > ul:not(.hidden-menu) li {
-        display:none;
+        display: none;
     }
-      #main-nav details ul{
-          font-size: 20px;
-      }
-#main-nav ul.hidden-menu{
-    position: fixed;
-    height: 100vh;
-    width: calc(100vw - var(--unusable-padding) * 2);
-    margin: 0;
-    left: 0;
-    padding: 0 var(--unusable-padding);
-    background: var(--white);
-    display:grid;
-    transition: top .2s linear;
-    top:-100%;
-    align-items: center;
-}
-#main-nav ul.hidden-menu.visible{
-    display:grid;
-    top: 0;
-}
+    #main-nav details ul {
+        font-size: 20px;
+    }
+    #main-nav ul.hidden-menu {
+        position: fixed;
+        height: 100vh;
+        width: calc(100vw - var(--unusable-padding) * 2);
+        margin: 0;
+        left: 0;
+        padding: 0 var(--unusable-padding);
+        background: var(--white);
+        display: grid;
+        transition: top 0.2s linear;
+        top: -100%;
+        align-items: center;
+    }
+    #main-nav ul.hidden-menu.visible {
+        display: grid;
+        top: 0;
+    }
 
     #main-nav img {
         height: 30px;
@@ -117,20 +109,21 @@
     .feature-list div:nth-child(5):before {
         content: none;
     }
-    .feature-list div:nth-child(5), .feature-list div:nth-child(6), .feature-list div:nth-child(7), .feature-list div:nth-child(8){
-        display:none;
+    .feature-list div:nth-child(5),
+    .feature-list div:nth-child(6),
+    .feature-list div:nth-child(7),
+    .feature-list div:nth-child(8) {
+        display: none;
     }
     .feature-list > a {
         grid-column: 1/2;
     }
 
-
-
     /* MISSION */
-    #mission{
+    #mission {
         padding: var(--unusable-padding);
     }
-    #mission p{
+    #mission p {
         font-size: 25px;
         grid-column: 1/7;
     }
@@ -138,25 +131,25 @@
     /* QUICK LINKS */
 
     #quick-links {
-        grid-template-columns:1fr;
-    }
-
-    
-
-    /* S PRICING */
-    #pricing{
         grid-template-columns: 1fr;
     }
-    #pricing h1{
+
+    /* S PRICING */
+    #pricing {
+        grid-template-columns: 1fr;
+    }
+    #pricing h1 {
         grid-column: 1/2;
     }
-    #pricing .plan h3, #pricing .plans-modal h3{
+    #pricing .plan h3,
+    #pricing .plans-modal h3 {
         font-size: 20px;
     }
-    #pricing .plan > a{
+    #pricing .plan > a {
         font-size: 20px;
     }
-    ul.caret li, ul.caret details{
+    ul.caret li,
+    ul.caret details {
         font-size: 17px;
     }
 
@@ -179,67 +172,67 @@
 
     /* S TESTIMONIALS */
 
-    #testimonials{
+    #testimonials {
         grid-template-columns: 1fr;
     }
-       /* S TESTIMONIALS */
+    /* S TESTIMONIALS */
 
-       blockquote {
+    blockquote {
         grid-template-columns: 1fr;
         grid-template-areas:
             "description"
             "author";
     }
-    blockquote i{
-        display:none!important;
+    blockquote i {
+        display: none !important;
     }
 
-    
-#trusted-by,
-#seen-at,
-#awards {
-    grid-template-columns: repeat(3, 1fr);
+    #trusted-by,
+    #seen-at,
+    #awards {
+        grid-template-columns: repeat(3, 1fr);
     }
     #trusted-by h1,
-#seen-at h1,
-#awards h1{
-    grid-column: 1/4;
-}
+    #seen-at h1,
+    #awards h1 {
+        grid-column: 1/4;
+    }
 
+    /* CTA */
 
-/* CTA */
-
-#cta{
-    grid-template-areas:"cta-title"
-    "cta-desc"
-    " cta-btn"
-}
-#cta a{
-    justify-self: start;
-    margin-top: var(--x2-padding);
-}
+    #cta {
+        grid-template-areas:
+            "cta-title"
+            "cta-desc"
+            " cta-btn";
+    }
+    #cta a {
+        justify-self: start;
+        margin-top: var(--x2-padding);
+    }
 
     /* FOOTER */
-    footer{
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "logo"
-        "legal"
-        "fl-tw"
-        "fl-gh"
-        "mail"
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "legal"
+            "fl-tw"
+            "fl-gh"
+            "mail";
     }
-    footer h3{
-        font-size:20px;
+    footer h3 {
+        font-size: 20px;
     }
-    footer a, footer p{
-        font-size:17px;
+    footer a,
+    footer p {
+        font-size: 17px;
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     #quick-links div {
-        grid-template-columns:unset;
+        grid-template-columns: unset;
         grid-template-rows: max-content auto 1fr;
         grid-template-areas:
             "icon"
