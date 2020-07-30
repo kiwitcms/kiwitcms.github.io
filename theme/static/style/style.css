@@ -56,6 +56,8 @@
 	--la-mail: "\f0e0";
 	--fa-info: "\f05a";
 	--la-close: "\f00d";
+	--fa-link: "\f0c1";
+	--fa-video: "\f04b";
 	/* Shadows */
 	--light-shadow: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 	--lower-shadow: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
@@ -710,6 +712,42 @@ blockquote .author span {
 #seen-at img,
 #awards img {
 	max-width: 100%;
+	justify-self: center;
+}
+
+#trusted-by a,
+#seen-at a,
+#awards a{
+	position: relative;
+}
+#trusted-by a:hover,
+#awards a:hover{
+	background-color:var(--light-gray);
+}
+
+#seen-at a:hover{
+	background-color:var(--white);
+}
+
+a[iclink]:after, a[icvideo]:after{
+	font-family: "Font Awesome 5 Free", "FontAwesome";
+    font-weight: 900;
+    background: var(--dark-green);
+    color: var(--white);
+    cursor: pointer;
+    padding: 7px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+a[iclink]:after{
+	content: var(--fa-link);
+}
+
+a[icvideo]:after {
+	content: var(--fa-video);
 }
 
 #seen-at {
