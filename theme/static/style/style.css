@@ -131,7 +131,7 @@ ul.caret details {
 .btn[icon] {
 	padding: 9px 20px 9px var(--x3-padding);
 }
-.btn:hover {
+.btn:hover, .drop-btn.drop-down .btn {
 	background: var(--light-green);
 }
 .btn i:after {
@@ -144,12 +144,16 @@ ul.caret details {
 	vertical-align: bottom;
 	font-style: normal;
 	margin-right: 10px;
-	transition: margin 0.1s linear;
+	transition: margin 0.1s linear, transform 0.05s linear;
+	display:inline-block;
 }
 
-.btn:hover i:after {
+.btn:hover i:after, .drop-btn.drop-down .btn i:after {
 	margin-left: 55px;
 	margin-right: 0px;
+}
+.drop-btn.drop-down .btn i:after {
+transform: rotate(90deg);
 }
 
 .big-btn {
@@ -171,7 +175,7 @@ ul.caret details {
 .border-btn i:after {
 	margin-left: 25px;
 }
-.border-btn:hover i:after {
+.border-btn:hover i:after, .drop-btn.drop-down .border-btn i:after {
 	margin-left: 35px;
 }
 
@@ -183,7 +187,7 @@ ul.caret details {
 	background: var(--white);
 	color: var(--black);
 }
-.ghost-btn:hover i:after {
+.ghost-btn:hover i:after, .drop-btn.drop-down .ghost-btn i:after {
 	color: var(--black);
 }
 
@@ -889,7 +893,8 @@ img.rounded {
 }
 
 .drop-btn{
-    display:inline;
+	display:inline;
+	position: relative;
 }
 .drop-cnt{
     display: none;
@@ -897,7 +902,8 @@ img.rounded {
     background-color: var(--light-green);
     min-width: 160px;
     filter: var(--light-shadow);
-    margin-top: 6px;
+	margin-top: 6px;
+	right: 0;
 }
 .drop-cnt a{
     color: var(--white);
