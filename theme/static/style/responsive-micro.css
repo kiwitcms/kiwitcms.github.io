@@ -2,7 +2,7 @@
     /* COMMON */
 
     .big-btn i:after {
-        font-size: inherit;
+        font-size: 32px;
     }
     .big-btn {
         padding: 9px var(--x3-padding);
