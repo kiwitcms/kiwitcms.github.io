@@ -109,9 +109,7 @@ ul.caret summary:before {
 	font-weight: 900;
 	margin-right: 5px;
 }
-ul.caret details > ul > li:before {
-	content: var(--fa-angle-right);
-}
+
 ul.caret li,
 ul.caret details {
 	font-size: 20px;
@@ -209,8 +207,9 @@ header {
 	position: fixed;
 	z-index: 20;
 	width: var(--usable-area);
-	padding: var(--x3-padding) var(--unusable-padding);
+	padding: var(--x3-padding) 0;
 	background: var(--white);
+	margin: 0 var(--unusable-padding);
 	display: flex;
 }
 #main-nav ul.hidden-menu {
@@ -515,14 +514,7 @@ blockquote p.quote {
 #pricing details[open] summary:before {
 	content: var(--fa-caret-down);
 }
-#pricing details li {
-	padding-left: var(--x2-padding);
-}
-#pricing details li > ul > li {
-	padding-left: var(--x2-padding);
-	font-style: oblique;
-}
-#pricing details li details:focus,
+details:focus,
 summary:focus {
 	outline: none;
 }
@@ -682,10 +674,7 @@ blockquote .author span {
 
 #trusted-by a img,
 #seen-at a img,
-#awards a img,
-#trusted-by img,
-#seen-at img,
-#awards img {
+#awards a img {
 	max-width: 100%;
 }
 
