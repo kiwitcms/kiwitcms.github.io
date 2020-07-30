@@ -20,10 +20,15 @@
                     onmouseleave="toggle('lead-drop','drop-down');"
                 >
                     <a class="btn big-btn" icon>Get Started <i></i></a>
+                    <!-- WARNING: this menu needs to be copied everywhere where we have this
+                        button b/c Pelican doesn't support includes from HTML content files:
+                        https://github.com/getpelican/pelican/issues/2783
+                    -->
                     <div class="drop-cnt">
-                        <a href="gh">with GitHub Marketplace</a>
-                        <a href="docker">with Docker</a>
-                        <a href="local">with local</a>
+                        <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                        <a href="#pricing">Explore subscriptions</a>
+                        <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                        <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
                     </div>
                 </div>
             </div>
@@ -580,7 +585,23 @@
         <section id="cta">
             <h1>Are you ready to transform your testing?</h1>
             <h3>Start using Kiwi TCMS today.</h3>
-            <a href="#" class="btn border-btn" icon>Get Started <i></i></a>
+
+            <div class="drop-btn" id="footer-drop"
+                onmouseenter="toggle('footer-drop','drop-down');"
+                onmouseleave="toggle('footer-drop','drop-down');"
+            >
+                <a class="btn border-btn" icon>Get Started <i></i></a>
+                <!-- WARNING: this menu needs to be copied everywhere where we have this
+                    button b/c Pelican doesn't support includes from HTML content files:
+                    https://github.com/getpelican/pelican/issues/2783
+                -->
+                <div class="drop-cnt">
+                    <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                    <a href="#pricing">Explore subscriptions</a>
+                    <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                    <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                </div>
+            </div>
         </section>
 
         <aside id="vp-overlay" onclick="hideVideo()">
