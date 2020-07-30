@@ -233,7 +233,7 @@ header {
 	margin: 0 7px;
 	color: var(--black);
 }
-#main-nav > ul:not(.hidden-menu) li a:not(.btn) {
+#main-nav > ul:not(.hidden-menu) li > a:not(.btn) {
 	text-decoration: none;
 	padding: 38px 8px 35px;
 }
@@ -241,17 +241,17 @@ header {
 #main-nav > ul li a {
 	text-decoration: none;
 }
-#main-nav > ul:not(.hidden-menu) li a.active {
+#main-nav > ul:not(.hidden-menu) li > a.active {
 	border-bottom: var(--nav-border-bottom) solid var(--dark-green);
 	padding-bottom: 31px;
 	color: var(--dark-green);
 	font-weight: 500;
 }
-#main-nav > ul.hidden-menu li a.active {
+#main-nav > ul.hidden-menu li > a.active {
 	color: var(--dark-green);
 	font-weight: 500;
 }
-#main-nav ul li a:hover:not(.btn) {
+#main-nav ul li > a:hover:not(.btn) {
 	color: var(--dark-green);
 }
 
@@ -714,7 +714,7 @@ blockquote .author span {
 	color: rgba(255, 255, 255, 0.7);
 	grid-area: cta-desc;
 }
-#cta a {
+#cta .drop-btn {
 	grid-area: cta-btn;
 	align-self: center;
 	justify-self: end;
