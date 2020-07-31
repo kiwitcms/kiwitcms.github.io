@@ -21,6 +21,6 @@ If community support is insufficient for your situation, consider commercial sup
 Private Tenant users or customers on a commercial subscription plan:
 
 - **Email:** `kiwitcms-@-mrsenko.com`
-- *Working hours*: 09-17 UTC/Mon-Fri
-- *Response time*: within 24hrs
+- *Working hours*: 09-17 UTC/Mon-Fri (Private Tenant subscribers), 09-21 UTC/Mon-Fri (Enterprise subscribers)
+- *Response time*: 24-72 hrs depending on subscription type
 - *Requests must include your email/GitHub username used in the subscription*
