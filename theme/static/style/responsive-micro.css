@@ -206,9 +206,12 @@
             "cta-desc"
             " cta-btn";
     }
-    #cta a {
+    #cta > div.drop-btn {
         justify-self: start;
         margin-top: var(--x2-padding);
+    }
+    div.drop-cnt{
+        right: unset;
     }
 
     /* FOOTER */
