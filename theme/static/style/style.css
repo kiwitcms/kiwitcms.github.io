@@ -216,7 +216,7 @@ header {
 	position: fixed;
 	z-index: 20;
 	width: var(--usable-area);
-	padding: var(--x3-padding) var(--unusable-padding);
+	padding: calc(var(--x3-padding) - 9px) var(--unusable-padding);
 	background: var(--white);
 	display: flex;
 }
@@ -225,6 +225,7 @@ header {
 }
 #main-nav img {
 	margin: calc(var(--x3-padding) * -1) 0;
+	margin-top: -21px;
 	height: 60px;
 	padding: 16px 0;
 }
