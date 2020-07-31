@@ -51,6 +51,8 @@
 	--la-quote: "\f10d";
 	--la-twitter: "\f081";
 	--la-github: "\f092";
+	--la-facebook: "\f082";
+	--la-youtube: "\f431";
 	--la-mail: "\f0e0";
 	--fa-info: "\f05a";
 	--la-close: "\f00d";
@@ -736,10 +738,10 @@ footer {
 	display: grid;
 	justify-items: start;
 	gap: var(--grid-gap);
-	grid-template-columns: 2fr 1fr 1fr;
+	grid-template-columns: 5fr 2fr 2fr 3fr;
 	grid-template-areas:
-		"logo fl-tw mail"
-		"legal fl-gh mail";
+		"logo fl-tw fl-yt mail"
+		"legal fl-gh fl-fb mail";
 }
 
 footer h3 {
@@ -775,6 +777,15 @@ footer .legal a:hover {
 footer .fl-tw {
 	grid-area: fl-tw;
 }
+footer .fl-gh {
+	grid-area: fl-gh;
+}
+footer .fl-yt {
+	grid-area: fl-yt;
+}
+footer .fl-fb {
+	grid-area: fl-fb;
+}
 footer .footer-block {
 	display: grid;
 	gap: var(--x1-padding);
@@ -805,6 +816,14 @@ footer .fl-gh i:before {
 	font-family: "Line Awesome Brands";
 	content: var(--la-github);
 }
+footer .fl-yt i:before {
+	font-family: "Line Awesome Brands";
+	content: var(--la-youtube);
+}
+footer .fl-fb i:before {
+	font-family: "Line Awesome Brands";
+	content: var(--la-facebook);
+}
 footer .mail i:before {
 	content: var(--la-mail);
 }
@@ -812,9 +831,6 @@ footer .mail a {
 	justify-self: start;
 }
 
-footer .fl-gh {
-	grid-area: fl-gh;
-}
 
 footer .mail {
 	grid-area: mail;
