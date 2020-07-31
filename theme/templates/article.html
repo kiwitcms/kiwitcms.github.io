@@ -77,7 +77,7 @@
 {% endblock %}
 
 {% block content %}
-    <header class="col-12 header secondary">
+    <section id="blog-article">
         <h1 class="top-header">{{ article.title }}</h1>
         {% if article.headline %}
         <h2 class="top-subheader">{{ article.headline }}</h2>
@@ -97,11 +97,12 @@
                 {% endfor %}
             {% endif %}
         </p>
-    </header>
+    
 
-    <article class="col-12 article secondary">
+    <article class="content">
         {{ article.content }}
     </article>
+</section>
 
     {% if ADDTHIS_PUBID %}
         <!-- Social Sharing Buttons -->
