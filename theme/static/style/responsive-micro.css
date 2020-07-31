@@ -239,7 +239,7 @@
     footer p {
         font-size: 17px;
     }
-    body.page section, #blog-list{
+    body.page section, #blog-list, #blog-article{
         background-image: none;
     }
     #blog-list article.blog-list h1{
@@ -251,7 +251,7 @@
     #blog-list article.blog-list h3{
         font-size:17px;
     }
-    #blog-list article.blog-list .content{
+    #blog-list article.blog-list .content, #blog-article article.content{
         font-size: 17px;
     }
 }
