@@ -19,6 +19,12 @@
     section > h1 {
         font-size: 40px;
     }
+    .member-bio > strong{
+        font-size: 20px;
+        }
+        .member-bio > em{
+            font-size: 17px;
+        }
 
     /* HEADER */
     header {

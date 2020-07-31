@@ -896,11 +896,22 @@ footer .mail {
 	color: #cc0000;
 }
 
+/* TEAM v1 */
+#team{
+    gap: var(--x3-padding);
+    padding-top: calc(var(--unusable-padding) * 2);
+    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
+    background-size: auto 500px, auto 500px;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
 img.rounded {
 	float: left;
 	margin-left: 0;
 	margin-right: 1.5rem;
-	border: solid 0.2em;
+	margin-bottom: 0.2rem;
+	border: solid 0.2em var(--black);
 	border-radius: 100%;
 }
 
@@ -953,4 +964,21 @@ div.drop-btn.drop-down div.drop-cnt, div.drop-btn:hover div.drop-cnt{
 }
 .drop-btn > .btn{
 	display:inline-block;
+}
+/* TEAM */
+.member-bio > strong{
+font-size: 25px;
+}
+.member-bio > em{
+	font-size: 20px;
+}
+
+.bio-link{
+	padding: 3px 5px;
+    display: inline-block;
+    background: var(--dark-green);
+    color: white;
+    font-size: 25px;
+    margin-top: var(--x1-padding);
+    margin-right: var(--x1-padding);
 }
