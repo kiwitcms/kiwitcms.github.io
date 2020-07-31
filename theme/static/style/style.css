@@ -1060,6 +1060,7 @@ font-size: 25px;
     white-space: -moz-pre-wrap;
     white-space: -o-pre-wrap;
 	word-wrap: break-word;
+	font-family: "Source Code Pro", monospace;
 }
 #blog-list article.blog-list .content a, #blog-article article.content a{
 	overflow-wrap: anywhere;
