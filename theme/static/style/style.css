@@ -981,7 +981,7 @@ font-size: 25px;
 
 
 /* INNER PAGE STYLES */
-body.page section{
+body.page section:first-child:not(#features){
     gap: var(--x3-padding);
     padding-top: 150px;
     background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
