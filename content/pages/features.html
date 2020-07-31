@@ -14,7 +14,7 @@
                     <tr>
                         <th></th>
                         <th>Kiwi TCMS</th>
-                        <th></th>
+                        <th>Kiwi TCMS Enterprise</th>
                     </tr>
 
                     <tr>
@@ -30,65 +30,147 @@
                                 <i class="las la-link"></i>
                             </a>
                         </th>
-                        <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <i class="las la-exclamation-circle" title="limited access to Admin panel"></i>
+                        </td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <i class="las la-exclamation-circle" title="limited access to Admin panel"></i>
+                            <i class="las la-exclamation-circle" title="no permission to create tenants"></i>
+                        </td>
                     </tr>
                     <tr>
                         <th>
                             &nbsp;&nbsp;&nbsp;&nbsp; Docker Hub
-
-                            <a href="https://hub.docker.com/r/kiwitcms/kiwi">
+                        </th>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <a href="https://hub.docker.com/r/kiwitcms/kiwi" title="public repository">
                                 <i class="las la-link"></i>
                             </a>
-                        </th>
-                        <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        </td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <i class="las la-lock" title="private repository"></i>
+                        </td>
                     </tr>
                     <tr>
                         <th>
                             &nbsp;&nbsp;&nbsp;&nbsp; GitHub integration
-
+                        </th>
+                        <td>
+                            <i class="las la-check yellow"></i>
+                            <a href="https://github.com/apps/kiwi-tcms">
+                                <i class="las la-exclamation-circle" title="for demo purposes on Public Tenant"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <i class="las la-check green"></i>
                             <a href="https://github.com/apps/kiwi-tcms">
                                 <i class="las la-link"></i>
                             </a>
-                        </th>
-                        <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        </td>
                     </tr>
                     <tr>
                         <th>
                             &nbsp;&nbsp;&nbsp;&nbsp; GitHub Marketplace
-
-                            <a href="https://github.com/marketplace/kiwi-tcms">
-                                <i class="las la-dollar-sign" title="includes support subscription"></i>
-                            </a>
                         </th>
-                        <td><i class="las la-check green"></i></td>
                         <td></td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <a href="https://github.com/marketplace/kiwi-tcms">
+                                <i class="las la-dollar-sign" title="includes Private Tenant subscription"></i>
+                            </a>
+                        </td>
                     </tr>
                     <tr>
                         <th>
-                            &nbsp;&nbsp;&nbsp;&nbsp; SaaS
-
-                            <a href="/#subscriptions">
-                                <i class="las la-dollar-sign" title="includes support subscription"></i>
-                            </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp; Support subscriptions
                         </th>
-                        <td><i class="las la-check green"></i></td>
                         <td></td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <a href="/#subscriptions">
+                                <i class="las la-dollar-sign" title="includes hosting options"></i>
+                            </a>
+                        </td>
                     </tr>
                     <tr>
                         <th>
                             &nbsp;&nbsp;&nbsp;&nbsp; Source code
-
+                        </th>
+                        <td>
+                            <i class="las la-check green"></i>
                             <a href="https://github.com/kiwitcms/Kiwi/">
                                 <i class="las la-link"></i>
                             </a>
-                        </th>
-                        <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        </td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <a href="https://github.com/MrSenko/kiwitcms-enterprise">
+                                <i class="las la-link"></i>
+                            </a>
+                        </td>
                     </tr>
 
+                    <tr>
+                        <th colspan="3">
+                            Authentication methods
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;&nbsp; Username &amp; password
+                        </th>
+                        <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;&nbsp; Kerberos
+
+                            <a href="https://github.com/kiwitcms/python-social-auth-kerberos/">
+                                <i class="las la-link"></i>
+                            </a>
+                        </th>
+                        <td></td>
+                        <td><i class="las la-check green"></i></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;&nbsp; LDAP
+
+                            <a href="https://github.com/etianen/django-python3-ldap">
+                                <i class="las la-link"></i>
+                            </a>
+                        </th>
+                        <td></td>
+                        <td><i class="las la-check green"></i></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;&nbsp; OAuth
+
+                            <a href="https://python-social-auth-docs.readthedocs.io/en/latest/backends/index.html#supported-backends">
+                                <i class="las la-link"></i>
+                            </a>
+                        </th>
+                        <td></td>
+                        <td><i class="las la-check green"></i></td>
+                    </tr>
+
+
+                    <tr>
+                        <th>
+                            Multi-tenant
+                            <a href="https://github.com/kiwitcms/tenants">
+                                <i class="las la-link"></i>
+                            </a>
+                        </th>
+                        <td></td>
+                        <td><i class="las la-check green"></i></td>
+                    </tr>
 
                     <tr>
                         <th colspan="3">
@@ -98,32 +180,32 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; attachments</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; cloning</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; emails</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; history</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; tags</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; test case review</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -134,27 +216,27 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; attachments</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; cloning</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; emails</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; history</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; tags</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -165,22 +247,22 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; cloning</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; emails</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; history</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; tags</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -191,34 +273,34 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; comments</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; execution status</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; history</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; report bug</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; hyperlinks</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
 
                     <tr>
                         <th>Internal bug tracker</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th colspan="3">
@@ -232,27 +314,34 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Bugzilla</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
-                        <th>&nbsp;&nbsp;&nbsp;&nbsp; GitHub</th>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp; GitHub Issues</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
+
                     <tr>
-                        <th>&nbsp;&nbsp;&nbsp;&nbsp; GitLab</th>
-                        <td><i class="las la-check green"></i></td>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp; GitHub Issues via GitHub App</th>
                         <td></td>
+                        <td><i class="las la-check green"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp; GitLab Issues</th>
+                        <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; JIRA</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
-                        <th>&nbsp;&nbsp;&nbsp;&nbsp; Kiwi TCMS</th>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp; Kiwi TCMS (integrated bug tracker)</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Mantis
@@ -261,12 +350,12 @@
                             </a>
                         </th>
                         <td><i class="las la-spinner"></i></td>
-                        <td></td>
+                        <td><i class="las la-spinner"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Redmine</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Trac
@@ -275,34 +364,34 @@
                             </a>
                         </th>
                         <td><i class="las la-spinner"></i></td>
-                        <td></td>
+                        <td><i class="las la-spinner"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; 1-click bug report</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; automatic bug update</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; show bug info from BT</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; customizable integration with BT</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
 
                     <tr>
                         <th>Manual testing</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
 
@@ -319,94 +408,48 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Django</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; JUnit 5</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; junit.xml</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; PHPUnit</th>
                         <td><i class="las la-spinner"></i></td>
-                        <td></td>
+                        <td><i class="las la-spinner"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; py.test</th>
                         <td><i class="las la-spinner"></i></td>
-                        <td></td>
+                        <td><i class="las la-spinner"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Robot Framework</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Test Anything Protocol</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; TestNG</th>
                         <td><i class="las la-spinner"></i></td>
-                        <td></td>
+                        <td><i class="las la-spinner"></i></td>
                     </tr>
 
                     <tr>
-                        <th>Reporting aka Telemetry</th>
+                        <th>Telemetry aka reports</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <th colspan="3">
-                            Authentication methods
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            &nbsp;&nbsp;&nbsp;&nbsp; Username &amp; password
-                        </th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>
-                            &nbsp;&nbsp;&nbsp;&nbsp; Kerberos
-
-                            <a href="https://github.com/kiwitcms/python-social-auth-kerberos/">
-                                <i class="las la-link"></i>
-                            </a>
-                        </th>
-                        <td><i class="las la-check yellow" title="via add-on, available in Kiwi TCMS Enterprise"></i></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>
-                            &nbsp;&nbsp;&nbsp;&nbsp; LDAP
-
-                            <a href="https://github.com/etianen/django-python3-ldap">
-                                <i class="las la-link"></i>
-                            </a>
-                        </th>
-                        <td><i class="las la-check yellow" title="via add-on, available in Kiwi TCMS Enterprise"></i></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>
-                            &nbsp;&nbsp;&nbsp;&nbsp; OAuth
-
-                            <a href="https://python-social-auth-docs.readthedocs.io/en/latest/backends/index.html#supported-backends">
-                                <i class="las la-link"></i>
-                            </a>
-                        </th>
-                        <td><i class="las la-check yellow" title="via add-on, available in Kiwi TCMS Enterprise"></i></td>
-                        <td></td>
                     </tr>
 
 
@@ -421,7 +464,7 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; MariaDB</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Microsoft SQL Server
@@ -430,34 +473,34 @@
                             </a>
                         </th>
                         <td><i class="las la-check yellow" title="via 3rd party add-on"></i></td>
-                        <td></td>
+                        <td><i class="las la-check yellow" title="via 3rd party add-on"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; MySQL</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Oracle</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; PostgreSQL</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; SQLite</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
 
                     <tr>
                         <th>API</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -468,18 +511,7 @@
                             </a>
                         </th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <th>
-                            Multi-tenant
-                            <a href="https://github.com/kiwitcms/tenants">
-                                <i class="las la-link"></i>
-                            </a>
-                        </th>
-                        <td><i class="las la-check yellow" title="via add-on, available in Kiwi TCMS Enterprise"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -491,13 +523,13 @@
                             </a>
                         </th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
                         <th>Responsive design</th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -508,7 +540,7 @@
                             </a>
                         </th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -519,10 +551,8 @@
                             </a>
                         </th>
                         <td><i class="las la-check green"></i></td>
-                        <td></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
-
-
                 </tbody>
             </table>
         </section>
