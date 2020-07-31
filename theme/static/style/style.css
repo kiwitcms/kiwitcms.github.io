@@ -112,7 +112,7 @@ ul.caret summary:before {
 	margin-right: 5px;
 }
 
-ul.caret details > ul > li:before {
+ul.caret details > ul > li:before{
 	content: var(--fa-angle-right);
 }
 ul.caret li,
@@ -529,7 +529,7 @@ blockquote p.quote {
 #pricing details li {
 	padding-left: var(--x2-padding);
 }
-#pricing details li > ul > li {
+#pricing details li > ul > li, body.page section ul > li > ul > li{
 	padding-left: var(--x2-padding);
 	font-style: oblique;
 }
@@ -991,3 +991,4 @@ body.page section p, body.page section li, body.page section pre{
 body.page section a:hover{
 	color:var(--dark-green);
 }
+
