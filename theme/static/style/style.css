@@ -87,7 +87,7 @@ code {
 	font-family: "Source Code Pro", monospace;
 	color: var(--dark-green);
 	background-color: var(--light-gray);
-	padding: 2px 4px;
+	padding: 0px 4px;
 	font-size: inherit;
 	border-radius: 2px;
 	border: 1px solid var(--trans-green);
@@ -898,15 +898,6 @@ footer .mail {
 }
 
 /* TEAM v1 */
-#team{
-    gap: var(--x3-padding);
-    padding-top: calc(var(--unusable-padding) * 2);
-    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
-    background-size: auto 500px, auto 500px;
-    background-position: top right;
-    background-repeat: no-repeat;
-}
-
 img.rounded {
 	float: left;
 	margin-left: 0;
@@ -982,4 +973,21 @@ font-size: 25px;
     font-size: 25px;
     margin-top: var(--x1-padding);
     margin-right: var(--x1-padding);
+}
+
+
+/* INNER PAGE STYLES */
+body.page section{
+    gap: var(--x3-padding);
+    padding-top: 150px;
+    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
+    background-size: auto 500px, auto 500px;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+body.page section p, body.page section li, body.page section pre{
+	font-size:20px;
+}
+body.page section a:hover{
+	color:var(--dark-green);
 }
