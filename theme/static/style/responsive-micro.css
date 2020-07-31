@@ -239,6 +239,9 @@
     footer p {
         font-size: 17px;
     }
+    body.page section{
+        background-image: none;
+    }
 }
 
 @media screen and (max-width: 500px) {
