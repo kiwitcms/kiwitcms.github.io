@@ -1039,6 +1039,7 @@ font-size: 25px;
 }
 #blog-list article.blog-list .content *{
 	margin-bottom:var(--x1-padding);
+	overflow-wrap: break-word;
 }
 #blog-list article.blog-list .content img{
 	max-width: 100%;
@@ -1047,7 +1048,11 @@ font-size: 25px;
 	white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -o-pre-wrap;
-    word-wrap: break-word;
+	word-wrap: break-word;
+}
+#blog-list article.blog-list .content a{
+	overflow-wrap: anywhere;
+	text-overflow: ellipsis;
 }
 #blog-list article.blog-list .content .section{
 	max-width: 100%;
