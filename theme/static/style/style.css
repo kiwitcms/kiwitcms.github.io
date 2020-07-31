@@ -66,7 +66,6 @@
 
 section,
 footer {
-	width: var(--usable-area);
 	padding: var(--unusable-padding);
 	display: grid;
 }
@@ -648,7 +647,7 @@ summary:focus {
 	padding: var(--x3-padding) var(--unusable-padding);
 }
 
-blockquote {
+body.page_home blockquote {
 	background: var(--white);
 	filter: var(--light-shadow);
 	padding: var(--x3-padding) var(--x3-padding) var(--x3-padding) var(--x2-padding);
@@ -915,10 +914,10 @@ body.page section p, body.page section li, body.page section pre{
 	font-size:20px;
 }
 
-body.page section a{
+body.page section a, section#blog-list a{
 	color:var(--dark-green);
 }
-body.page section a:hover{
+body.page section a:hover, section#blog-list a:hover{
 	color:var(--light-green);
 }
 
@@ -1002,7 +1001,63 @@ font-size: 25px;
 	background: var(--light-green);
     color: white;
 }
-
-
+/* BLOG > S BLOGLIST */
+#blog-list{
+	gap: var(--x3-padding);
+    padding-top: 150px;
+    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
+    background-size: auto 500px, auto 500px;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+#blog-list article.blog-list{
+	display: grid;
+	gap: var(--x3-padding);
+	max-width: 1000px;
+	width: 86vw;
+	border-bottom: 2px solid var(--trans-green);
+}
+#blog-list article.blog-list h1{
+	font-size:30px;
+}
+#blog-list article.blog-list h2{
+	font-size:25px;
+}
+#blog-list article.blog-list h3{
+	font-size:20px;
+}
+#blog-list article.blog-list .header h1{
+	color:var(--dark-green);
+}
+#blog-list article.blog-list .header .post-meta{
+	font-style: oblique;
+	opacity: .7;
+}
+#blog-list article.blog-list .content{
+	font-size:20px;
+	line-height: 1.6;
+}
+#blog-list article.blog-list .content *{
+	margin-bottom:var(--x1-padding);
+}
+#blog-list article.blog-list .content img{
+	max-width: 100%;
+}
+#blog-list article.blog-list .content pre{
+	white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+#blog-list article.blog-list .content .section{
+	max-width: 100%;
+	width: 86vw;
+}
+#blog-list article.blog-list .content ul li ul li{
+	padding-left:var(--x2-padding);
+}
+#blog-list article.blog-list .content ul li p {
+	display:inline;
+}
 
 
