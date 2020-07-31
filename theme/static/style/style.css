@@ -990,7 +990,10 @@ body.page section{
 body.page section p, body.page section li, body.page section pre{
 	font-size:20px;
 }
-body.page section a:hover{
+body.page section a{
 	color:var(--dark-green);
+}
+body.page section a:hover{
+	color:var(--light-green);
 }
 
