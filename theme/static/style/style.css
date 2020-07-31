@@ -902,6 +902,26 @@ footer .mail {
 	color: #cc0000;
 }
 
+/* INNER PAGE STYLES */
+body.page section{
+    gap: var(--x3-padding);
+    padding-top: 150px;
+    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
+    background-size: auto 500px, auto 500px;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+body.page section p, body.page section li, body.page section pre{
+	font-size:20px;
+}
+
+body.page section a{
+	color:var(--dark-green);
+}
+body.page section a:hover{
+	color:var(--light-green);
+}
+
 /* TEAM v1 */
 img.rounded {
 	float: left;
@@ -969,7 +989,7 @@ font-size: 25px;
 	font-size: 20px;
 }
 
-.bio-link{
+.member-bio a.bio-link{
 	padding: 3px 5px;
     display: inline-block;
     background: var(--dark-green);
@@ -978,22 +998,11 @@ font-size: 25px;
     margin-top: var(--x1-padding);
     margin-right: var(--x1-padding);
 }
-
-
-/* INNER PAGE STYLES */
-body.page section:first-child:not(#features){
-    gap: var(--x3-padding);
-    padding-top: 150px;
-    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
-    background-size: auto 500px, auto 500px;
-    background-position: top right;
-    background-repeat: no-repeat;
-}
-body.page section p, body.page section li, body.page section pre{
-	font-size:20px;
+.member-bio a.bio-link:hover{
+	background: var(--light-green);
+    color: white;
 }
 
-body.page section p a:hover{
-	color:var(--light-green);
-}
+
+
 
