@@ -232,10 +232,13 @@ header {
 #main-nav > ul {
 	margin-left: auto;
 }
-#main-nav > ul li {
+#main-nav > ul li{
 	display: inline-block;
 	margin: 0 7px;
 	color: var(--black);
+}
+#main-nav > ul li:last-child{
+	margin:0;
 }
 #main-nav > ul:not(.hidden-menu) li > a:not(.btn) {
 	text-decoration: none;
@@ -255,7 +258,7 @@ header {
 	color: var(--dark-green);
 	font-weight: 500;
 }
-#main-nav ul li > a:hover:not(.btn) {
+#main-nav ul li > a:hover {
 	color: var(--dark-green);
 }
 
@@ -892,33 +895,46 @@ img.rounded {
 	margin-bottom: 1.5rem;
 }
 
-.drop-btn{
+div.drop-btn:not(#nav-drop){
 	display:inline;
 	position: relative;
 }
-.drop-cnt{
-    display: none;
-    position: absolute;
-    background-color: var(--light-green);
-    min-width: 160px;
-    filter: var(--light-shadow);
-	margin-top: 6px;
-	right: 0;
+#nav-drop.drop-btn{
+	display:inline;
 }
-.drop-cnt a{
-    color: var(--white);
+
+div.drop-cnt > a{
+	color: var(--white);
+	background-color:var(--light-green);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-size:20px;
 }
-.drop-cnt a:hover{
-    background-color:var(--dark-green);
+div.drop-cnt > a:hover{
+	background-color:var(--dark-green);
+	color:var(--white);
 }
-.drop-btn.drop-down .drop-cnt{
+div.drop-cnt{
+    display: none;
+    position: absolute;
+    background-color: var(--light-green);
+    min-width: 160px;
+    filter: var(--light-shadow);
+	/* margin-top: 6px; */
+	right: 0;
+}
+#nav-drop.drop-btn.drop-down .drop-cnt{
+	right: var(--unusable-padding);
+}
+
+div.drop-btn.drop-down div.drop-cnt, div.drop-btn:hover div.drop-cnt{
 	display:block;
 	width: intrinsic;           /* Safari/WebKit uses a non-standard name */
 	width: -moz-max-content;    /* Firefox/Gecko */
 	width: -webkit-max-content; /* Chrome */
 	width: max-content;
+}
+.drop-btn > .btn{
+	display:inline-block;
 }
