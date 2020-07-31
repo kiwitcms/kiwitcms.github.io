@@ -198,8 +198,9 @@
         grid-template-areas:
             "logo ."
             "legal legal"
-            "fl-tw mail"
-            "fl-gh mail";
+            "fl-tw fl-yt"
+            "fl-gh fl-fb"
+            "mail mail"
     }
     footer h3 {
         font-size: 20px;

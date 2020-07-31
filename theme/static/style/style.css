@@ -239,7 +239,7 @@ header {
 	margin: 0 7px;
 	color: var(--black);
 }
-#main-nav > ul li:last-child{
+#main-nav > ul:not(.hidden-menu) li:last-child{
 	margin:0;
 }
 #main-nav > ul:not(.hidden-menu) li > a:not(.btn) {
