@@ -953,9 +953,9 @@ footer .mail {
 
 #vp-frame {
 	height: 700px;
-	max-height: 100vh;
+	max-height:calc(100vh - 2 * var(--x3-padding));
 	width: 1120px;
-	max-width: 100vw;
+	max-width: calc(100vw - 2 * var(--unusable-padding));
 	grid-area: video;
 }
 
