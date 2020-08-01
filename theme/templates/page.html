@@ -2,12 +2,14 @@
 
 {% block title %}{{ page.title }}{% endblock title %}
 
-{% block page_body_class %}page {% if page.body_class %}{{ page.body_class }}{% endif %}{% endblock %}
+{% block page_body_class %}{% if page.body_class %}{{ page.body_class }}{% else %}page{% endif %}{% endblock %}
 
 {% block content %}
-    <section class="col-12 secondary">
-        <div class="col-12">
-            {{ page.content }}
-        </div>
+    {% if page.add_section %}
+    <section>
+    {% endif %}
+        {{ page.content }}
+    {% if page.add_section %}
     </section>
+    {% endif %}
 {% endblock content %}

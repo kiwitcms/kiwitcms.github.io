@@ -2,8 +2,11 @@
 {% block title %}Blog{% endblock %}
 
 {% block content %}
+<section id="blog-list">
+    <h1>{% block headline %}Blog{% endblock %}</h1>
+
     {% for article in articles_page.object_list %}
-    <section class="col-12 secondary">
+    <article class="blog-list">
         <div class="header">
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                 <h1 class="top-header">{{ article.title }}</h1>
@@ -17,11 +20,12 @@
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             {{ article.content }}
         </div>
-    </section>
+    </article>
     {% endfor %}
 
     {% include "pagination.html" %}
+</section>
 {% endblock content %}

@@ -1,6 +1,8 @@
 Title: Legal information
 url: legal/
 save_as: legal/index.html
+add_section: True
+
 
 Legal information
 =================

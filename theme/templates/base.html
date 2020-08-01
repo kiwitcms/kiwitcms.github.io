@@ -7,70 +7,96 @@
         {% block meta %}{% endblock %}
         {% block twitter_card %}{% endblock %}
         {% block opengraph %}{% endblock %}
-        <!-- MailChimp Newsletter Form Styles -->
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/style.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/color-palette-light.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/responsive-1440.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/responsive-1024.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/responsive-768.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/responsive-micro.css" rel="stylesheet">
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/github.css" rel="stylesheet">
-        <!-- Other Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/fontawesome-free-5.6.3-web/css/all.min.css">
-        <!-- Mobile nav script -->
-        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/scripts/mobile-nav.js"></script>
-
     </head>
-    <body class="{% block page_body_class %}{% endblock %}" onload="setMobileNavBehaviour()">
-        <!-- Nav -->
-        <nav class="col-12 primary">
-            <a href="/">
-                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/kiwi_logo_h50.png" name="logo">
+    <body class="{% block page_body_class %}{% endblock %}">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
             </a>
-            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-            <div id="mobile-mask">
-                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
-                <ul class="topnav">
-                    <li><a href="{{ SITEURL }}/features/">Features</a></li>
-                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                    <li><a href="{{ SITEURL }}/community/">Community</a></li>
-                    <li><a href="{{ SITEURL }}/support/">Support</a></li>
-                    <li><a href="{{ SITEURL }}/blog/">Blog</a></li>
-                    <li><a href="{{ SITEURL }}/team/">Team</a></li>
-                    <li>
-                        <form action="https://google.com/search" method="get">
-                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
-                            <input class="search" name="q" placeholder="Search" type="text">
-                        </form>
-                    </li>
-                </ul>
-            </div>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+                {% include "main_menu_items.html" %}
+            </ul>
+
+            <ul>
+                {% include "main_menu_items.html" %}
+                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
+
         <!-- content -->
         {% block content %}{% endblock %}
-        <!-- Newsletter Form Section -->
-        <section class="newsletter secondary col-12">
-            <div id="mc_embed_signup">
-                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="col-12 footer primary">
-            <div class="col-10 footer-copyright">
+
+        <footer>
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
                 <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
                 <p><a href="{{ SITEURL }}/legal/">Legal information</a></p>
             </div>
-            <div class="col-2">
-                <ul class="footer-sociallinks">
-                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
-                </ul>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>
         </footer>
+
+        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/scripts/toggle.js"></script>
+
         {% if page and page.extra_javascript %}
             {% for script in page.extra_javascript.split(' ') %}
             <script src="{{ script }}"></script>
