@@ -1,19 +1,13 @@
 {% if DEFAULT_PAGINATION %}
 <section id="pagination">
-    <ul class="pagination">
         {% if articles_page.has_previous() %}
-        <li>
-            <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&larr;Newest Posts </a>
-        </li>
+            <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="btn" icon="reversed"><i reversed></i> Newer Posts </a>
         {% endif %}
-        <li>
+        <p>
             Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
-        </li>
+        </p>
         {% if articles_page.has_next() %}
-        <li>
-            <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Older Posts &rarr;</a>
-        </li>
+            <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="btn" icon>Older Posts <i></i></a>
         {% endif %}
-    </ul>
 </section>
 {% endif %}
