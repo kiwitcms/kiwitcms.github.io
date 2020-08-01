@@ -78,6 +78,15 @@ footer {
 	padding: var(--unusable-padding);
 	display: grid;
 }
+
+section#blog-article {
+    padding-bottom: calc(var(--unusable-padding) * 0.25);
+}
+section.after-content {
+    padding-bottom: 0;
+    padding-top:0;
+}
+
 h3 {
 	font-size: 25px;
 }

@@ -104,13 +104,15 @@
     </section>
 
     {% if ADDTHIS_PUBID %}
+    <section class="after-content">
         <!-- Social Sharing Buttons -->
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADDTHIS_PUBID }}"></script>
-        <div class="addthis_inline_share_toolbox secondary"></div>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
     {% endif %}
 
     {% if DISQUS_SITENAME and _SITEURL and article.status != "draft" %}
-    <section>
+    <section class="after-content">
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
