@@ -7,7 +7,7 @@
         <h1 class="top-header">Blog authors</h1>
     </header>
 
-    <section class="col-12 article secondary">
+    <section>
     {% for author, articles in authors|sort %}
         <a href="{{ SITEURL }}/{{ author.url }}" rel="bookmark">
             <h2 class="top-subheader">{{ author }} ({{ articles|count }})</h2>
