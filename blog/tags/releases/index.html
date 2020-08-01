@@ -4,48 +4,89 @@
         <meta charset="UTF-8">
         <title>Kiwi TCMS - Articles with tag releases</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <!-- MailChimp Newsletter Form Styles -->
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
-        <link href="/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
         <link href="/theme/style/github.css" rel="stylesheet">
-        <!-- Other Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="/theme/fontawesome-free-5.6.3-web/css/all.min.css">
-        <!-- Mobile nav script -->
-        <script type="text/javascript" src="/theme/scripts/mobile-nav.js"></script>
-
     </head>
-    <body class="" onload="setMobileNavBehaviour()">
-        <!-- Nav -->
-        <nav class="col-12 primary">
-            <a href="/">
-                <img src="/theme/images/kiwi_logo_h50.png" name="logo">
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
             </a>
-            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-            <div id="mobile-mask">
-                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
-                <ul class="topnav">
-                    <li><a href="/features/">Features</a></li>
-                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                    <li><a href="/community/">Community</a></li>
-                    <li><a href="/support/">Support</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/team/">Team</a></li>
-                    <li>
-                        <form action="https://google.com/search" method="get">
-                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
-                            <input class="search" name="q" placeholder="Search" type="text">
-                        </form>
-                    </li>
-                </ul>
-            </div>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
+
         <!-- content -->
-    <section class="col-12 secondary">
+<section id="blog-list">
+    <h1>Articles with tag releases</h1>
+
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/07/10/kiwi-tcms-85/" rel="bookmark" title="Permalink to Kiwi TCMS 8.5">
                 <h1 class="top-header">Kiwi TCMS 8.5</h1>
@@ -57,7 +98,7 @@
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 8.5!</p>
 <p><strong>IMPORTANT:</strong> this is a medium sized release which includes many improvements,
 database migrations, translation updates and new tests.
@@ -214,8 +255,8 @@ for more details!</p>
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/06/30/django-plugin-for-kiwi-tcms/" rel="bookmark" title="Permalink to Django plugin for Kiwi TCMS">
                 <h1 class="top-header">Django plugin for Kiwi TCMS</h1>
@@ -227,7 +268,7 @@ for more details!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce the initial release of
 <a class="reference external" href="https://github.com/kiwitcms/django-plugin">kiwitcms-django-plugin</a>!
 This package allows you execute your Django test suite and report the
@@ -257,8 +298,8 @@ Example results from the plugin's own test suite are reported in
 <p>Happy testing!</p>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/" rel="bookmark" title="Permalink to Versioned releases of Kiwi TCMS">
                 <h1 class="top-header">Versioned releases of Kiwi TCMS</h1>
@@ -270,7 +311,7 @@ Example results from the plugin's own test suite are reported in
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We are happy to announce that versioned releases of Kiwi TCMS container
 images are now available to customers with an active
 <a href="/#subscriptions">enterprise subscription</a>.</p>
@@ -290,8 +331,8 @@ This repository includes tagged versions of the same docker images coming from
 the <code>kiwitcms/kiwi</code> channel!
 Access is granted automatically to all existing enterprise subscribers!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/06/03/kiwi-tcms-84/" rel="bookmark" title="Permalink to Kiwi TCMS 8.4">
                 <h1 class="top-header">Kiwi TCMS 8.4</h1>
@@ -303,7 +344,7 @@ Access is granted automatically to all existing enterprise subscribers!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 8.4!</p>
 <p><strong>IMPORTANT:</strong> this is a medium sized release which includes
 minor security fixes, many improvements &amp; bug-fixes and translations
@@ -541,8 +582,8 @@ for more details!</p>
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/05/06/robot-framework-plugin-for-kiwi-tcms/" rel="bookmark" title="Permalink to Robot Framework plugin for Kiwi TCMS">
                 <h1 class="top-header">Robot Framework plugin for Kiwi TCMS</h1>
@@ -554,7 +595,7 @@ for more details!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce the initial release of
 <a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin">kiwitcms-robotframework-plugin</a>!
 This package allows you execute your Robot Framework test suite and report the
@@ -590,8 +631,8 @@ with <tt class="docutils literal">SeleniumLibrary</tt> in a combination with a d
 <p>Happy testing!</p>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/04/27/kiwi-tcms-83/" rel="bookmark" title="Permalink to Kiwi TCMS 8.3">
                 <h1 class="top-header">Kiwi TCMS 8.3</h1>
@@ -603,7 +644,7 @@ with <tt class="docutils literal">SeleniumLibrary</tt> in a combination with a d
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 8.3!</p>
 <p><strong>IMPORTANT:</strong> this is a small release which updates 3rd party libraries,
 provides several improvements, includes minor API updates and new translations.
@@ -728,8 +769,8 @@ for more details!</p>
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/04/03/kiwi-tcms-82/" rel="bookmark" title="Permalink to Kiwi TCMS 8.2">
                 <h1 class="top-header">Kiwi TCMS 8.2</h1>
@@ -741,7 +782,7 @@ for more details!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 8.2!</p>
 <p><strong>IMPORTANT:</strong>
 this is a small release which updates 3rd party libraries,
@@ -870,8 +911,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/" rel="bookmark" title="Permalink to Kiwi TCMS 8.1">
                 <h1 class="top-header">Kiwi TCMS 8.1</h1>
@@ -883,7 +924,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 8.1!</p>
 <p><strong>IMPORTANT:</strong>
 this is a small security and improvement release which
@@ -1052,8 +1093,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/02/12/kiwi-tcms-80/" rel="bookmark" title="Permalink to Kiwi TCMS 8.0">
                 <h1 class="top-header">Kiwi TCMS 8.0</h1>
@@ -1065,7 +1106,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 8.0!</p>
 <p><strong>IMPORTANT:</strong> this is a major release which includes important database and
 API changes, several improvements and bug fixes. Multiple API methods are now
@@ -1302,8 +1343,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/" rel="bookmark" title="Permalink to Kiwi TCMS 7.3">
                 <h1 class="top-header">Kiwi TCMS 7.3</h1>
@@ -1315,7 +1356,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 7.3!</p>
 <p><strong>IMPORTANT:</strong> this is a critical security update for
 <strong>CVE-2019-19844: Potential account hijack via password reset form!</strong></p>
@@ -1466,8 +1507,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/" rel="bookmark" title="Permalink to Kiwi TCMS is migrating from OAuth to GitHub App">
                 <h1 class="top-header">Kiwi TCMS is migrating from OAuth to GitHub App</h1>
@@ -1479,7 +1520,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello testers, Kiwi TCMS is migrating from its OAuth backend
 to the so called "GitHub App" backend in order to enable further
 integration with GitHub's PR flow as stated previously in our
@@ -1540,8 +1581,8 @@ entire process from scratch.</p>
 </ul>
 <p>Thank you! Happy testing and happy new year!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/12/09/kiwi-tcms-72/" rel="bookmark" title="Permalink to Kiwi TCMS 7.2">
                 <h1 class="top-header">Kiwi TCMS 7.2</h1>
@@ -1553,7 +1594,7 @@ entire process from scratch.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 7.2!
 This is an improvement &amp; bug fix release which includes
 new database migrations and API methods, internal refactoring and updated
@@ -1718,8 +1759,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/" rel="bookmark" title="Permalink to Kiwi TCMS 7.1">
                 <h1 class="top-header">Kiwi TCMS 7.1</h1>
@@ -1731,7 +1772,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 7.1!
 This is a small improvement update which includes
 database schema and API changes, several other improvements,
@@ -1909,8 +1950,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/09/24/kiwi-tcms-70/" rel="bookmark" title="Permalink to Kiwi TCMS 7.0">
                 <h1 class="top-header">Kiwi TCMS 7.0</h1>
@@ -1922,7 +1963,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 7.0!
 This is a major release which includes security updates,
 significant database schema and API changes, many improvements,
@@ -2230,8 +2271,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="bookmark" title="Permalink to Kiwi TCMS 6.11">
                 <h1 class="top-header">Kiwi TCMS 6.11</h1>
@@ -2243,7 +2284,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.11!
 This is a security and improvement release which updates
 many internal dependencies, adds 2 new Telemetry reports, updates
@@ -2392,8 +2433,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/" rel="bookmark" title="Permalink to Kiwi TCMS 6.10">
                 <h1 class="top-header">Kiwi TCMS 6.10</h1>
@@ -2405,7 +2446,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.10!
 This is a small security and improvement update.
 You can explore everything at
@@ -2513,8 +2554,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="bookmark" title="Permalink to Kiwi TCMS 6.9">
                 <h1 class="top-header">Kiwi TCMS 6.9</h1>
@@ -2526,7 +2567,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.9!
 This is a small improvement and bug-fix update which introduces
 our first telemetry report: testing breakdown. You can explore everything at
@@ -2632,8 +2673,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="bookmark" title="Permalink to Kiwi TCMS 6.8">
                 <h1 class="top-header">Kiwi TCMS 6.8</h1>
@@ -2645,7 +2686,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.8!
 This is a small improvement and bug-fix update.
 You can explore everything at
@@ -2755,8 +2796,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="bookmark" title="Permalink to Kiwi TCMS 6.7">
                 <h1 class="top-header">Kiwi TCMS 6.7</h1>
@@ -2768,7 +2809,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.7!
 This is a small improvement and bug-fix update.
 You can explore everything at
@@ -2888,8 +2929,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="bookmark" title="Permalink to Kiwi TCMS 6.6">
                 <h1 class="top-header">Kiwi TCMS 6.6</h1>
@@ -2901,7 +2942,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.6! This is a
 medium severity security update, improvement and bug-fix update.
 You can explore everything at
@@ -3073,40 +3114,57 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
+    </article>
 
-<section id="pagination" class="col-12 secondary">
-    <ul class="pagination">
-        <li>
+<section id="pagination">
+        <p>
             Page 1 / 3
-        </li>
-        <li>
-            <a href="/blog/tags/releases/index2.html">Older Posts &rarr;</a>
-        </li>
-    </ul>
+        </p>
+            <a href="/blog/tags/releases/index2.html" class="btn" icon>Older Posts <i></i></a>
 </section>
-        <!-- Newsletter Form Section -->
-        <section class="newsletter secondary col-12">
-            <div id="mc_embed_signup">
-                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="col-12 footer primary">
-            <div class="col-10 footer-copyright">
+</section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
                 <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
                 <p><a href="/legal/">Legal information</a></p>
             </div>
-            <div class="col-2">
-                <ul class="footer-sociallinks">
-                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
-                </ul>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>
         </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
 
 
             <!-- Google analytics -->

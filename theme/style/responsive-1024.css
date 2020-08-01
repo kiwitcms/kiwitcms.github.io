@@ -1,0 +1,171 @@
+@media screen and (max-width: 1439px) and (min-width: 1024px) {
+    /* COMMON */
+
+    .big-btn i:after {
+        font-size: 32px;
+    }
+    .big-btn {
+        padding: 9px var(--x3-padding);
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+    body.page section p, body.page section li, body.page section pre, p {
+        font-size: 17px;
+    }
+    section > h1 {
+        font-size: 40px;
+    }
+    .member-bio > strong{
+        font-size: 20px;
+        }
+        .member-bio > em{
+            font-size: 17px;
+        }
+
+    /* HEADER */
+    header {
+        padding: calc(var(--unusable-padding) * 2) var(--unusable-padding);
+    }
+    header .lead h1 {
+        font-size: 40px;
+    }
+    header .lead ul li {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+    header .lead ul li:before {
+        font-size: 21px;
+    }
+
+    /* NAVIGATION */
+    #main-nav > ul {
+        margin-left: var(--x1-padding);
+    }
+    #main-nav i {
+        font-size: 36px;
+        color: var(--dark-green);
+        margin-left: auto;
+    }
+    #main-nav > i {
+        display: unset !important;
+    }
+    #main-nav .hidden-menu i,
+    #main-nav .hidden-menu a:first-child{
+        grid-row: 1;
+        grid-column: 1;
+    }
+    #main-nav > ul:not(.hidden-menu) li:not(:last-child) {
+        display: none;
+    }
+    #main-nav details ul {
+        font-size: 20px;
+    }
+
+    #main-nav ul.hidden-menu {
+        position: fixed;
+        height: 100vh;
+        width: calc(100vw - var(--unusable-padding) * 2);
+        margin: 0;
+        left: 0;
+        padding: 0 var(--unusable-padding);
+        background: var(--white);
+        display: grid;
+        transition: top 0.2s linear;
+        top: -100%;
+        align-items: center;
+    }
+    #main-nav ul.hidden-menu.visible {
+        display: grid;
+        top: 0;
+    }
+
+    #main-nav img {
+        height: 40px;
+        padding: 26px 0;
+    }
+
+    /* MISSION */
+    #mission p {
+        font-size: 25px;
+    }
+
+    /* QUICK LINKS */
+
+    #quick-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* S PRICING */
+    #pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #pricing h1 {
+        grid-column: 1/3;
+    }
+    #pricing .plan h3,
+    #pricing .plans-modal h3 {
+        font-size: 20px;
+    }
+    #pricing .plan > a {
+        font-size: 20px;
+    }
+    ul.caret li,
+    ul.caret details {
+        font-size: 17px;
+    }
+
+    #pricing .plans-modal {
+        grid-column: 1/3;
+    }
+
+    /* S SCREENS > SLIDER */
+
+    .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active {
+        width: calc((var(--usable-area)-11 * var(--grid-gap)) / 12 * 3) !important;
+        /* overwrite default */
+    }
+    .tns-slide-active + .tns-slide-active {
+        width: calc((var(--usable-area)-11 * var(--grid-gap)) / 12 * 7) !important;
+    }
+
+    /* S TESTIMONIALS */
+
+    #testimonials {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FOOTER */
+    footer {
+        grid-template-columns: 2fr 1fr 2fr 2fr;
+        grid-template-areas:
+            "logo logo fl-tw fl-gh"
+            "legal legal fl-yt fl-fb"
+            "legal legal mail mail";
+    }
+    footer h3 {
+        font-size: 20px;
+    }
+    footer a,
+    footer p {
+        font-size: 17px;
+    }
+    #blog-list article.blog-list h1{
+        font-size:25px;
+    }
+    #blog-list article.blog-list h2{
+        font-size:20px;
+    }
+    #blog-list article.blog-list h3{
+        font-size:17px;
+    }
+    #blog-list article.blog-list .content, #blog-article article.content{
+        font-size: 17px;
+    }
+}

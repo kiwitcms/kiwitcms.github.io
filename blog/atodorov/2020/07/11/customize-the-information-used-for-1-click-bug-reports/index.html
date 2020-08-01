@@ -27,48 +27,86 @@
             <meta property="og:description" content="Kiwi TCMS integration with 3rd party bug trackers supports the 1-click bug report feature. However you may want to change how the...">
 
                 <meta property="og:image" content="https://kiwitcms.org/images/customization.png">
-        <!-- MailChimp Newsletter Form Styles -->
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
-        <link href="/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
         <link href="/theme/style/github.css" rel="stylesheet">
-        <!-- Other Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="/theme/fontawesome-free-5.6.3-web/css/all.min.css">
-        <!-- Mobile nav script -->
-        <script type="text/javascript" src="/theme/scripts/mobile-nav.js"></script>
-
     </head>
-    <body class="" onload="setMobileNavBehaviour()">
-        <!-- Nav -->
-        <nav class="col-12 primary">
-            <a href="/">
-                <img src="/theme/images/kiwi_logo_h50.png" name="logo">
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
             </a>
-            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-            <div id="mobile-mask">
-                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
-                <ul class="topnav">
-                    <li><a href="/features/">Features</a></li>
-                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                    <li><a href="/community/">Community</a></li>
-                    <li><a href="/support/">Support</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/team/">Team</a></li>
-                    <li>
-                        <form action="https://google.com/search" method="get">
-                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
-                            <input class="search" name="q" placeholder="Search" type="text">
-                        </form>
-                    </li>
-                </ul>
-            </div>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
+
         <!-- content -->
-    <header class="col-12 header secondary">
+    <section id="blog-article">
         <h1 class="top-header">Customize the information used for 1-click bug reports</h1>
 
         <p class="post-meta">
@@ -78,10 +116,9 @@
                 under
                     <a href="https://kiwitcms.org/blog/tags/customization/">customization</a>
         </p>
-    </header>
 
-    <article class="col-12 article secondary">
-        <p>Kiwi TCMS integration with 3rd party bug trackers supports the
+        <article class="content">
+            <p>Kiwi TCMS integration with 3rd party bug trackers supports the
 <em>1-click bug report</em> feature.
 However you may want to change how the initial information is structured or
 even what exactly is written in the initial comment. This article
@@ -94,7 +131,7 @@ You may extend the existing bug tracker integration code
 with your own customizations. In this example I've extended the
 <code>KiwiTCMS</code> bug tracker implementation but you can provide your own from
 scratch</p>
-<div class="highlight"><pre><span></span><span class="c1"># filename: mymodule.py</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># filename: mymodule.py</span>
 <span class="k">class</span> <span class="nc">ExtendedBugTracker</span><span class="p">(</span><span class="n">KiwiTCMS</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">_report_comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">execution</span><span class="p">):</span>
         <span class="n">comment</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_report_comment</span><span class="p">(</span><span class="n">execution</span><span class="p">)</span>
@@ -105,12 +142,12 @@ scratch</p>
         <span class="c1">#</span>
         <span class="n">comment</span> <span class="o">+=</span> <span class="s2">&quot;----- END ADDITIONAL INFORMATION -----</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="k">return</span> <span class="n">comment</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then override the <code>EXTERNAL_BUG_TRACKERS</code> setting to include your customizations:</p>
-<div class="highlight"><pre><span></span><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
@@ -131,13 +168,16 @@ to <em>mymodule.ExtendedBugTracker</em>.</p>
   for inspiration</li>
 </ul>
 <p>Happy testing!</p>
-    </article>
+        </article>
+    </section>
 
+    <section class="after-content">
         <!-- Social Sharing Buttons -->
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
-        <div class="addthis_inline_share_toolbox secondary"></div>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
 
-    <section class="col-12 comments secondary">
+    <section class="after-content">
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
@@ -153,28 +193,48 @@ to <em>mymodule.ExtendedBugTracker</em>.</p>
         </script>
         <noscript>Please enable JavaScript to view the comments</noscript>
     </section>
-        <!-- Newsletter Form Section -->
-        <section class="newsletter secondary col-12">
-            <div id="mc_embed_signup">
-                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="col-12 footer primary">
-            <div class="col-10 footer-copyright">
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
                 <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
                 <p><a href="/legal/">Legal information</a></p>
             </div>
-            <div class="col-2">
-                <ul class="footer-sociallinks">
-                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
-                </ul>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>
         </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
 
 
             <!-- Google analytics -->

@@ -27,48 +27,86 @@
             <meta property="og:description" content="In this blog post I will show more ways to customize Kiwi TCMS by adding logging capabilities to the API backend. Indeed this is a...">
 
                 <meta property="og:image" content="https://kiwitcms.org/images/customization.png">
-        <!-- MailChimp Newsletter Form Styles -->
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
-        <link href="/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
         <link href="/theme/style/github.css" rel="stylesheet">
-        <!-- Other Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="/theme/fontawesome-free-5.6.3-web/css/all.min.css">
-        <!-- Mobile nav script -->
-        <script type="text/javascript" src="/theme/scripts/mobile-nav.js"></script>
-
     </head>
-    <body class="" onload="setMobileNavBehaviour()">
-        <!-- Nav -->
-        <nav class="col-12 primary">
-            <a href="/">
-                <img src="/theme/images/kiwi_logo_h50.png" name="logo">
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
             </a>
-            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-            <div id="mobile-mask">
-                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
-                <ul class="topnav">
-                    <li><a href="/features/">Features</a></li>
-                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                    <li><a href="/community/">Community</a></li>
-                    <li><a href="/support/">Support</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/team/">Team</a></li>
-                    <li>
-                        <form action="https://google.com/search" method="get">
-                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
-                            <input class="search" name="q" placeholder="Search" type="text">
-                        </form>
-                    </li>
-                </ul>
-            </div>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
+
         <!-- content -->
-    <header class="col-12 header secondary">
+    <section id="blog-article">
         <h1 class="top-header">How to add API logging for Kiwi TCMS</h1>
 
         <p class="post-meta">
@@ -78,41 +116,40 @@
                 under
                     <a href="https://kiwitcms.org/blog/tags/customization/">customization</a>
         </p>
-    </header>
 
-    <article class="col-12 article secondary">
-        <p>In this blog post I will show more ways to customize Kiwi TCMS by adding
+        <article class="content">
+            <p>In this blog post I will show more ways to customize Kiwi TCMS by adding
 logging capabilities to the API backend. Indeed this is a feature that
 our team deemed not required for upstream and was removed in
 <a href="https://github.com/kiwitcms/Kiwi/pull/436">PR #436</a>.</p>
 <p>Start by creating the following directory structure:</p>
-<div class="highlight"><pre><span></span>    api_logging/
-        __init__.py
-        handlers.py
-        models.py
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">    api_logging/</span>
+<span class="err">        __init__.py</span>
+<span class="err">        handlers.py</span>
+<span class="err">        models.py</span>
+</code></pre></div>
 
 
 <p>This is a small Django application that will log every call to the API backend.
 Each file looks like this:</p>
-<div class="highlight"><pre><span></span>    <span class="c1"># models.py contains DB schema for your new table</span>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># models.py contains DB schema for your new table</span>
     <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 
     <span class="k">class</span> <span class="nc">ApiCallLog</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-        <span class="n">executed_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-        <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">executed_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                                  <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
         <span class="n">method</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
-        <span class="n">args</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then</p>
-<div class="highlight"><pre><span></span>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
     <span class="kn">from</span> <span class="nn">modernrpc</span> <span class="kn">import</span> <span class="n">handlers</span>
 
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
@@ -127,13 +164,13 @@ Each file looks like this:</p>
             <span class="c1"># create an anonymous user object for logging purposes</span>
             <span class="n">request_user</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_user_model</span><span class="p">()</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span>
                 <span class="n">username</span><span class="o">=</span><span class="s1">&#39;Anonymous&#39;</span><span class="p">,</span>
-                <span class="n">is_active</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">is_active</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">method_name</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">method_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">method_name</span> <span class="o">=</span> <span class="s1">&#39;--- method_name missing ---&#39;</span>
 
         <span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;API call:: user: {0}, method: {1}, args: {2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;API call:: user: </span><span class="si">{0}</span><span class="s1">, method: </span><span class="si">{1}</span><span class="s1">, args: </span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                 <span class="n">request_user</span><span class="p">,</span>
                 <span class="n">method_name</span><span class="p">,</span>
                 <span class="n">args</span><span class="p">))</span>
@@ -154,12 +191,12 @@ Each file looks like this:</p>
 
     <span class="k">class</span> <span class="nc">JSONRPCHandler</span><span class="p">(</span><span class="n">handlers</span><span class="o">.</span><span class="n">JSONRPCHandler</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">process_single_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">):</span>
-            <span class="n">method_name</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+            <span class="n">method_name</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
             <span class="n">params</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;params&#39;</span><span class="p">)</span>
 
             <span class="n">log_call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_single_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><strong>NOTE:</strong>
@@ -168,7 +205,7 @@ initial migration for Django. This could be easier if you place the above direct
 into existing Django application or craft the migration file by hand!</p>
 <p>The last thing you want to do is create a <code>local_settings.py</code> file which will override
 Kiwi TCMS defaults:</p>
-<div class="highlight"><pre><span></span>    <span class="c1"># local_settings.py</span>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># local_settings.py</span>
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 
     <span class="n">settings</span><span class="o">.</span><span class="n">INSTALLED_APPS</span> <span class="o">+=</span> <span class="p">[</span>
@@ -177,27 +214,30 @@ Kiwi TCMS defaults:</p>
 
     <span class="n">MODERNRPC_HANDLERS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;api_logging.handlers.XMLRPCHandler&#39;</span><span class="p">,</span>
                           <span class="s1">&#39;api_logging.handlers.JSONRPCHandler&#39;</span><span class="p">]</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then place everything in <code>Dockerfile</code> like so:</p>
-<div class="highlight"><pre><span></span>    FROM kiwitcms/kiwi
+<div class="highlight"><pre><span></span><code>    <span class="k">FROM</span> <span class="n">kiwitcms</span><span class="o">/</span><span class="n">kiwi</span>
 
-    COPY ./api_logging/ /venv/lib64/python3.6/site-packages/api_logging/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
-</pre></div>
+    <span class="k">COPY</span> <span class="p">.</span><span class="o">/</span><span class="n">api_logging</span><span class="o">/</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">api_logging</span><span class="o">/</span>
+    <span class="k">COPY</span> <span class="n">local_settings</span><span class="p">.</span><span class="n">py</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tcms</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span>
+</code></pre></div>
 
 
 <p>Kiwi TCMS will import your <code>local_settings.py</code> and enable the logging application.
 Now build your customized Docker image and use it for deployment!</p>
 <p>Happy testing!</p>
-    </article>
+        </article>
+    </section>
 
+    <section class="after-content">
         <!-- Social Sharing Buttons -->
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
-        <div class="addthis_inline_share_toolbox secondary"></div>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
 
-    <section class="col-12 comments secondary">
+    <section class="after-content">
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
@@ -213,28 +253,48 @@ Now build your customized Docker image and use it for deployment!</p>
         </script>
         <noscript>Please enable JavaScript to view the comments</noscript>
     </section>
-        <!-- Newsletter Form Section -->
-        <section class="newsletter secondary col-12">
-            <div id="mc_embed_signup">
-                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="col-12 footer primary">
-            <div class="col-10 footer-copyright">
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
                 <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
                 <p><a href="/legal/">Legal information</a></p>
             </div>
-            <div class="col-2">
-                <ul class="footer-sociallinks">
-                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
-                </ul>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>
         </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
 
 
             <!-- Google analytics -->

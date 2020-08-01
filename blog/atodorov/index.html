@@ -10,48 +10,89 @@
     <meta property="profile:first_name" content="Alexander">
     <meta property="profile:last_name" content="Todorov">
     <meta property="profile:username" content="atodorov">
-        <!-- MailChimp Newsletter Form Styles -->
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
-        <link href="/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
         <link href="/theme/style/github.css" rel="stylesheet">
-        <!-- Other Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="/theme/fontawesome-free-5.6.3-web/css/all.min.css">
-        <!-- Mobile nav script -->
-        <script type="text/javascript" src="/theme/scripts/mobile-nav.js"></script>
-
     </head>
-    <body class="" onload="setMobileNavBehaviour()">
-        <!-- Nav -->
-        <nav class="col-12 primary">
-            <a href="/">
-                <img src="/theme/images/kiwi_logo_h50.png" name="logo">
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
             </a>
-            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-            <div id="mobile-mask">
-                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
-                <ul class="topnav">
-                    <li><a href="/features/">Features</a></li>
-                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                    <li><a href="/community/">Community</a></li>
-                    <li><a href="/support/">Support</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/team/">Team</a></li>
-                    <li>
-                        <form action="https://google.com/search" method="get">
-                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
-                            <input class="search" name="q" placeholder="Search" type="text">
-                        </form>
-                    </li>
-                </ul>
-            </div>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
+
         <!-- content -->
-    <section class="col-12 secondary">
+<section id="blog-list">
+    <h1>Articles by Alexander Todorov</h1>
+
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2020/07/11/customize-the-information-used-for-1-click-bug-reports/" rel="bookmark" title="Permalink to Customize the information used for 1-click bug reports">
                 <h1 class="top-header">Customize the information used for 1-click bug reports</h1>
@@ -63,7 +104,7 @@
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Kiwi TCMS integration with 3rd party bug trackers supports the
 <em>1-click bug report</em> feature.
 However you may want to change how the initial information is structured or
@@ -77,7 +118,7 @@ You may extend the existing bug tracker integration code
 with your own customizations. In this example I've extended the
 <code>KiwiTCMS</code> bug tracker implementation but you can provide your own from
 scratch</p>
-<div class="highlight"><pre><span></span><span class="c1"># filename: mymodule.py</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># filename: mymodule.py</span>
 <span class="k">class</span> <span class="nc">ExtendedBugTracker</span><span class="p">(</span><span class="n">KiwiTCMS</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">_report_comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">execution</span><span class="p">):</span>
         <span class="n">comment</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_report_comment</span><span class="p">(</span><span class="n">execution</span><span class="p">)</span>
@@ -88,12 +129,12 @@ scratch</p>
         <span class="c1">#</span>
         <span class="n">comment</span> <span class="o">+=</span> <span class="s2">&quot;----- END ADDITIONAL INFORMATION -----</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="k">return</span> <span class="n">comment</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then override the <code>EXTERNAL_BUG_TRACKERS</code> setting to include your customizations:</p>
-<div class="highlight"><pre><span></span><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
@@ -115,8 +156,8 @@ to <em>mymodule.ExtendedBugTracker</em>.</p>
 </ul>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2020/02/11/i-deleted-our-newsletter-from-mailchimp-please-re-subscribe/" rel="bookmark" title="Permalink to I deleted our newsletter from Mailchimp ! Please re-subscribe">
                 <h1 class="top-header">I deleted our newsletter from Mailchimp ! Please re-subscribe</h1>
@@ -128,7 +169,7 @@ to <em>mymodule.ExtendedBugTracker</em>.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello testers,
 I have to admit that I made a rookie mistake and deleted the entire email database
 for the Kiwi TCMS
@@ -171,8 +212,8 @@ no way of telling which addresses were on the list in the first hand.</p>
 and I promise we're going to start backing up the newsletter database as well.</p>
 <p>Thank you!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2020/01/17/project-roadmap-2020/" rel="bookmark" title="Permalink to Project roadmap 2020">
                 <h1 class="top-header">Project roadmap 2020</h1>
@@ -184,7 +225,7 @@ and I promise we're going to start backing up the newsletter database as well.</
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello testers,
 the Kiwi TCMS team sat down together last week and talked about what we feel
 is important for us during the upcoming year. This blog post outlines our
@@ -193,10 +234,10 @@ roadmap for 2020!</p>
 <h1>Project sustainability</h1>
 <p>The big goal towards which we are striving is to turn Kiwi TCMS into a
 sustainable open source project. For now this means several key areas:</p>
-<div class="highlight"><pre><span></span>1) Team
-2) Technical
-3) Community
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">1) Team</span>
+<span class="err">2) Technical</span>
+<span class="err">3) Community</span>
+</code></pre></div>
 
 
 <h2>Team</h2>
@@ -268,8 +309,8 @@ areas will give them this opportunity! I expect they will show good progress on 
 tasks so we can write more about them on this blog.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/" rel="bookmark" title="Permalink to Roadmap status report for 2019">
                 <h1 class="top-header">Roadmap status report for 2019</h1>
@@ -281,7 +322,7 @@ tasks so we can write more about them on this blog.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
 <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">2019 roadmap</a>.
@@ -363,8 +404,8 @@ so we can deliver on promises made in our roadmap! That requires a lot of time a
 effort which reduces short-term productivity.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/11/11/how-to-override-bug-details-in-kiwi-tcms/" rel="bookmark" title="Permalink to How to override bug details in Kiwi TCMS">
                 <h1 class="top-header">How to override bug details in Kiwi TCMS</h1>
@@ -376,7 +417,7 @@ effort which reduces short-term productivity.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Starting with version 7.0 Kiwi TCMS pages displaying URLs to bugs also
 contain an info icon which shows additional information as tooltip. These
 are designed to provide more contextual information about the bug. By default
@@ -389,22 +430,22 @@ key is the bug URL! By default Kiwi TCMS uses local-memory caching which
 isn't accessible for external processes but can be reconfigured very easily.
 This example changes the <code>CACHES</code> setting to use a directory on the
 file system like so</p>
-<div class="highlight"><pre><span></span><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;django.core.cache.backends.filebased.FileBasedCache&#39;</span><span class="p">,</span>
         <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s1">&#39;/tmp/kiwi-cache&#39;</span><span class="p">,</span>
         <span class="s1">&#39;TIMEOUT&#39;</span><span class="p">:</span> <span class="mi">3600</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then you need to poll your 3rd party bug tracker (and/or other systems) and
 update the cache for each URL</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.core.cache</span> <span class="kn">import</span> <span class="n">cache</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.core.cache</span> <span class="kn">import</span> <span class="n">cache</span>
 <span class="kn">from</span> <span class="nn">tcms.core.contrib.linkreference.models</span> <span class="kn">import</span> <span class="n">LinkReference</span>
 
-<span class="k">for</span> <span class="n">reference</span> <span class="ow">in</span> <span class="n">LinkReference</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">is_defect</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">reference</span> <span class="ow">in</span> <span class="n">LinkReference</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">is_defect</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="c1"># possibly filter objects coming only from your own bug tracker</span>
     <span class="c1"># in case there are multiple trackers in use</span>
 
@@ -414,16 +455,16 @@ update the cache for each URL</p>
 
     <span class="c1"># store the information in Kiwi TCMS cache</span>
     <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">description</span><span class="p">})</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then execute the Python script above regularly. For example use the following
 as your cron script</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="nb">export</span> <span class="nv">VIRTUAL_ENV</span><span class="o">=</span>/venv
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/venv/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
 cat /path/to/cache_updater.py <span class="p">|</span> /Kiwi/manage.py shell
-</pre></div>
+</code></pre></div>
 
 
 <p><img src="/images/testcase_shows_bug_details_cache.png" alt="bug details from customized cache" style="float:none"></p>
@@ -453,7 +494,7 @@ you may opt-in to extend the existing bug tracker integration code which provide
 the information shown in the tooltip. In this example I've extended the
 <code>KiwiTCMS</code> bug tracker implementation but you can even provide your own from
 scratch</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExtendedBugTracker</span><span class="p">(</span><span class="n">KiwiTCMS</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExtendedBugTracker</span><span class="p">(</span><span class="n">KiwiTCMS</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">details</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">details</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
@@ -461,12 +502,12 @@ scratch</p>
         <span class="n">result</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;&lt;h1&gt;IMPORTANT&lt;/h1&gt;&#39;</span>
 
         <span class="k">return</span> <span class="n">result</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then import the new <code>ExtendedBugTracker</code> class inside
 <code>tcms/issuetracker/types.py</code> like so</p>
-<div class="highlight"><pre><span></span><span class="gh">index 9ad90ac..2c76621 100644</span>
+<div class="highlight"><pre><span></span><code><span class="gh">index 9ad90ac..2c76621 100644</span>
 <span class="gd">--- a/tcms/issuetracker/types.py</span>
 <span class="gi">+++ b/tcms/issuetracker/types.py</span>
 <span class="gu">@@ -17,6 +17,9 @@ from django.conf import settings</span>
@@ -474,7 +515,7 @@ scratch</p>
  from tcms.issuetracker.base import IssueTrackerType
  from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
 <span class="gi">+from tcms.issuetracker.kiwitcms import ExtendedBugTracker</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
@@ -501,14 +542,14 @@ external bug tracker integration classes are listed in the <code>EXTERNAL_BUG_TR
 setting. If you are using v8.5 or newer instead of
 importing <code>ExtendedBugTracker</code> in <code>tcms/issuetracker/types.py</code> you should
 override the list of available bug tracker integrations:</p>
-<div class="highlight"><pre><span></span><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/" rel="bookmark" title="Permalink to Mid-year roadmap status report">
                 <h1 class="top-header">Mid-year roadmap status report</h1>
@@ -520,7 +561,7 @@ override the list of available bug tracker integrations:</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
 <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">2019 mission and roadmap</a>.
@@ -646,8 +687,8 @@ yourself or propose a mutually beneficial scenario. We do try to keep the commun
 happy but more importantly follow our mission and develop our core team!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/06/24/kiwi-tcms-is-openawards-2019-best-tech-community-winner/" rel="bookmark" title="Permalink to Kiwi TCMS is OpenAwards 2019 Best Tech Community Winner">
                 <h1 class="top-header">Kiwi TCMS is OpenAwards 2019 Best Tech Community Winner</h1>
@@ -659,7 +700,7 @@ happy but more importantly follow our mission and develop our core team!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p><img src="/images/openexpo/award.jpg"
      alt="Image of the award"
      style="float: none"></p>
@@ -672,8 +713,8 @@ of the project. More news of how we are progressing with current roadmap will
 follow soon in a separate blog post.</p>
 <p>Thank you &amp; happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/" rel="bookmark" title="Permalink to Pylint workshop with Django Bulgaria user group">
                 <h1 class="top-header">Pylint workshop with Django Bulgaria user group</h1>
@@ -685,7 +726,7 @@ follow soon in a separate blog post.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>On Tuesday I hosted my pylint workshop during the regular
 <a href="https://www.facebook.com/events/295673718035353/">Django Bulgaria meetup</a>.
 This edition was the first which was practice based.</p>
@@ -713,8 +754,8 @@ few new issues with Kiwi TCMS so this is an area which our team is going to impr
 </ul>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/" rel="bookmark" title="Permalink to How to use Kiwi TCMS plugins, Pt. 1">
                 <h1 class="top-header">How to use Kiwi TCMS plugins, Pt. 1</h1>
@@ -726,7 +767,7 @@ few new issues with Kiwi TCMS so this is an area which our team is going to impr
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>In
 <a href="/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/">release notes for v6.5</a>
 we announced several plugins which will fetch test names and execution results
@@ -746,10 +787,10 @@ if tests are running in Travis CI or Jenkins. For example
 <a href="https://github.com/kiwitcms/plugin-demo/commit/d455fb42fb7c2aedadfd5f66de7d131109c03350">commit d455fb4</a>
 creates <a href="https://tcms.kiwitcms.org/runs/12/">TR-12</a> and
 <a href="https://tcms.kiwitcms.org/plan/10/">TP-10</a>!</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=d455fb42fb7c2aedadfd5f66de7d131109c03350
-Build=2
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=d455fb42fb7c2aedadfd5f66de7d131109c03350</span>
+<span class="err">Build=2</span>
+</code></pre></div>
 
 
 <p>Next we convert the README file from Markdown to reStructuredText which triggers
@@ -758,10 +799,10 @@ Build=2
 This build <strong>again</strong> creates a new TestRun and new TestPlan for it. Respectively
 <a href="https://tcms.kiwitcms.org/runs/14/">TR-14</a> and
 <a href="https://tcms.kiwitcms.org/plan/12/">TP-12</a>!</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=418b80b3bbb65a799f695dc59d488c76f560fa2b
-Build=3
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=418b80b3bbb65a799f695dc59d488c76f560fa2b</span>
+<span class="err">Build=3</span>
+</code></pre></div>
 
 
 <p><strong>Important:</strong> we can see that version is different which will affect how artifacts
@@ -777,10 +818,10 @@ the TAP plugin! Checkout the commit on GitHub to see how it is done!</p>
 Because this is the first time where Version == master the plugin creates
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a> and reports the results under
 <a href="https://tcms.kiwitcms.org/runs/16/">TR-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=4
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=4</span>
+</code></pre></div>
 
 
 <p>Right after that I realized we can make this configuration a bit more generic
@@ -793,10 +834,10 @@ branch! That is to say, the product is in active mode of development.</p>
 <p>Results are reported in
 <a href="https://tcms.kiwitcms.org/runs/18/">TR-18</a> which is again part of
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=5
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=5</span>
+</code></pre></div>
 
 
 <p><a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496229819">Travis Build #6</a> for
@@ -817,10 +858,10 @@ for investigation.</p>
 <a href="https://github.com/kiwitcms/plugin-demo/commit/bf75d0abe9695e3ee3b49b8944bab9db43bb25e6">commit bf75d0a</a>,
 <a href="https://tcms.kiwitcms.org/runs/22/">TR-22</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=bf75d0a
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=bf75d0a</span>
+</code></pre></div>
 
 
 <h2>Report results in pre-existing TestRun</h2>
@@ -855,10 +896,10 @@ distinguish between the two.</p>
 <a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496237911">commit 85ad939</a>,
 <a href="https://tcms.kiwitcms.org/runs/24/">TR-24</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=unspecified
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=unspecified</span>
+</code></pre></div>
 
 
 <p>Also check-out comments in TR executions to see when and who had executed the test case.</p>
@@ -877,10 +918,10 @@ pointing to an existing TestRun this TR will keep the results of the last test s
 removes <code>TCMS_RUN_ID</code>! Results are reported in
 <a href="https://tcms.kiwitcms.org/runs/25/">TR-25</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=c4f1ae5
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=c4f1ae5</span>
+</code></pre></div>
 
 
 <h2>Branch out for an LTS version</h2>
@@ -890,10 +931,10 @@ Build=c4f1ae5
 <a href="https://github.com/kiwitcms/plugin-demo/commit/9f1ef717e3fb248d65535ed66b5c4e61e6f85a6e">commit 9f1ef71</a>
 <a href="https://tcms.kiwitcms.org/runs/27/">TR-27</a>,
 <a href="https://tcms.kiwitcms.org/plan/16/">TP-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=lts-v0
-Build=9f1ef71
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=lts-v0</span>
+<span class="err">Build=9f1ef71</span>
+</code></pre></div>
 
 
 <p>Because this is the first time we are running tests for this product version
@@ -908,10 +949,10 @@ will come in the future!</p>
 <a href="https://github.com/kiwitcms/plugin-demo/commit/2d72754d3f911ef4e25287f203471f4466b95d12">commit 2d72754</a>,
 <a href="https://tcms.kiwitcms.org/runs/29/">TR-29</a> for
 <a href="https://tcms.kiwitcms.org/plan/16/">TP-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=lts-v0
-Build=2d72754
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=lts-v0</span>
+<span class="err">Build=2d72754</span>
+</code></pre></div>
 
 
 <p>TR-29 contains the new <a href="https://tcms.kiwitcms.org/case/58/">TC-58</a>!</p>
@@ -942,8 +983,8 @@ feature branches and pull requests and discuss possible organization scenarios.
 You are welcome to share your ideas in the comments below.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="bookmark" title="Permalink to Project mission and goals for 2019">
                 <h1 class="top-header">Project mission and goals for 2019</h1>
@@ -955,7 +996,7 @@ You are welcome to share your ideas in the comments below.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello testers, Kiwi TCMS has taken on a brave new
 mission! We would like to transform the testing process by making it more
 organized, transparent &amp; accountable for everyone on your team. Our goal
@@ -1189,8 +1230,8 @@ maybe consider
 <a href="https://opencollective.com/kiwitcms">sponsoring us via Open Collective</a>!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="bookmark" title="Permalink to Roadmap status report for 2018">
                 <h1 class="top-header">Roadmap status report for 2018</h1>
@@ -1202,7 +1243,7 @@ maybe consider
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals in our 2018
 <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>
@@ -1280,8 +1321,8 @@ HackConf Sofia, PiterPy St. Petersburg and OpenFest Sofia. We've also been
 approved for a project stand at FOSDEM 2019 so watch this blog for more news.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="bookmark" title="Permalink to Test runner plugin specification">
                 <h1 class="top-header">Test runner plugin specification</h1>
@@ -1293,7 +1334,7 @@ approved for a project stand at FOSDEM 2019 so watch this blog for more news.</p
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
 wish to create plugins for popular test runners that will record test results
 in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
@@ -1332,126 +1373,126 @@ client!</p>
 for inspiration!</p>
 <h2>Behavior Specification</h2>
 <p><em>Please use the comments section to discuss unclear behavior and missing scenarios!</em></p>
-<div class="highlight"><pre><span></span>    SUMMARY: Will use configuration file if it exists
-    GIVEN: the file ~/.tcms.conf exists
-    WHEN: plugin initializes
-    THEN: the plugin will log an info message, read the file and
-    THEN: configure TCMS_API_URL, TCMS_USERNAME, TCMS_PASSWORD
-          variables with the respective values
+<div class="highlight"><pre><span></span><code>    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">use</span> <span class="n">configuration</span> <span class="n">file</span> <span class="k">if</span> <span class="n">it</span> <span class="n">exists</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">the</span> <span class="n">file</span> <span class="o">~/</span><span class="p">.</span><span class="n">tcms</span><span class="p">.</span><span class="n">conf</span> <span class="n">exists</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">will</span> <span class="nb">log</span> <span class="n">an</span> <span class="n">info</span> <span class="n">message</span><span class="p">,</span> <span class="n">read</span> <span class="n">the</span> <span class="n">file</span> <span class="n">and</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">configure</span> <span class="n">TCMS_API_URL</span><span class="p">,</span> <span class="n">TCMS_USERNAME</span><span class="p">,</span> <span class="n">TCMS_PASSWORD</span>
+          <span class="n">variables</span> <span class="s">with</span> <span class="s">the</span> <span class="s">respective</span> <span class="s">values</span>
 
 
-    SUMMARY: Will use ENVIRONMENT if configuration file doesn&#39;t exist
-    GIVEN: the file ~/.tcms.conf does not exists
-    WHEN: plugin initializes
-    THEN: the plugin will read configuration from environment and configure
-          the following variables/class members:
-          TCMS_API_URL, TCMS_USERNAME and TCMS_PASSWORD
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">use</span> <span class="n">ENVIRONMENT</span> <span class="k">if</span> <span class="n">configuration</span> <span class="n">file</span> <span class="n">doesn</span><span class="o">&#39;</span><span class="n">t</span> <span class="n">exist</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">the</span> <span class="n">file</span> <span class="o">~/</span><span class="p">.</span><span class="n">tcms</span><span class="p">.</span><span class="n">conf</span> <span class="n">does</span> <span class="n">not</span> <span class="n">exists</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">read</span> <span class="n">configuration</span> <span class="n">from</span> <span class="n">environment</span> <span class="n">and</span> <span class="n">configure</span>
+          <span class="n">the</span> <span class="s">following</span> <span class="s">variables/class</span> <span class="s">members:</span>
+          <span class="n">TCMS_API_URL</span><span class="p">,</span> <span class="n">TCMS_USERNAME</span> <span class="n">and</span> <span class="n">TCMS_PASSWORD</span>
 
 
-    SUMMARY: Will exit if TCMS_API_URL not configured
-    GIVEN: TCMS_API_URL variable is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">exit</span> <span class="k">if</span> <span class="n">TCMS_API_URL</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_API_URL</span> <span class="n">variable</span> <span class="n">is</span> <span class="n">empty</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="nb">log</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span> <span class="n">framework</span> <span class="n">set</span> <span class="n">exist</span> <span class="n">status</span> <span class="mi">1</span>
 
 
-    SUMMARY: Will exit if TCMS_USERNAME not configured
-    GIVEN: TCMS_USERNAME is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">exit</span> <span class="k">if</span> <span class="n">TCMS_USERNAME</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_USERNAME</span> <span class="n">is</span> <span class="n">empty</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="nb">log</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span> <span class="n">framework</span> <span class="n">set</span> <span class="n">exist</span> <span class="n">status</span> <span class="mi">1</span>
 
 
-    SUMMARY: Will exit if TCMS_PASSWORD not configured
-    GIVEN: TCMS_PASSWORD is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">exit</span> <span class="k">if</span> <span class="n">TCMS_PASSWORD</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_PASSWORD</span> <span class="n">is</span> <span class="n">empty</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="nb">log</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span> <span class="n">framework</span> <span class="n">set</span> <span class="n">exist</span> <span class="n">status</span> <span class="mi">1</span>
 
 
-    SUMMARY: Will re-use existing TestPlan if configured
-    GIVEN: TCMS_RUN_ID environment variable is not empty
-    WHEN: plugin initializes
-    THEN:  this will be the Current_TestRun record to which the plugin is
-           going to add test execution results
-    AND: Current_TestPlan document in which the plugin will
-           search for test cases becomes Current_TestRun.plan
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">re</span><span class="o">-</span><span class="n">use</span> <span class="n">existing</span> <span class="n">TestPlan</span> <span class="k">if</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_RUN_ID</span> <span class="n">environment</span> <span class="n">variable</span> <span class="n">is</span> <span class="n">not</span> <span class="n">empty</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span>  <span class="n">this</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">Current_TestRun</span> <span class="n">record</span> <span class="n">to</span> <span class="n">which</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">is</span>
+           <span class="n">going</span> <span class="s">to</span> <span class="s">add</span> <span class="s">test</span> <span class="s">execution</span> <span class="s">results</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">Current_TestPlan</span> <span class="n">document</span> <span class="n">in</span> <span class="n">which</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">will</span>
+           <span class="n">search</span> <span class="s">for</span> <span class="s">test</span> <span class="s">cases</span> <span class="s">becomes</span> <span class="s">Current_TestRun.plan</span>
 
 
-    SUMMARY: Will create new TestPlan &amp; TestRun if TCMS_RUN_ID not configured
-    GIVEN: TCMS_RUN_ID environment variable is empty
-    THEN: plugin will create a new TestPlan in Kiwi TCMS with attributes:
-        name=&#39;Automated test plan for %(product)&#39;
-        product=&#39;%(product)&#39;
-        product_version=&#39;%(version)&#39;
-        type=&#39;Unit&#39;
-    WHERE: %(product) is a placeholder for TCMS_PRODUCT==TRAVIS_REPO_SLUG==JOB_NAME
-           %(version) is a placeholder for TCMS_PRODUCT_VERSION==TRAVIS_COMMIT==TRAVIS_PULL_REQUEST_SHA==GIT_COMMIT
-    THEN: plugin will crate a new TestRun in Kiwi TCMS with attributes:
-        summary=&#39;Automated test run ....&#39;
-        plan=Current TestPlan
-        build=&#39;%(build)&#39;
-        manager=TCMS_USERNAME
-    WHERE: %(build) is a placeholder for TCMS_BUILD==TRAVIS_BUILD_NUMBER==BUILD_NUMBER
-    Environment variables are specified in:
-    https://docs.travis-ci.com/user/environment-variables#default-environment-variables
-    https://wiki.jenkins.io/display/JENKINS/Building+a+software+project#Buildingasoftwareproject-belowJenkinsSetEnvironmentVariables
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">create</span> <span class="n">new</span> <span class="n">TestPlan</span> <span class="o">&amp;</span> <span class="n">TestRun</span> <span class="k">if</span> <span class="n">TCMS_RUN_ID</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_RUN_ID</span> <span class="n">environment</span> <span class="n">variable</span> <span class="n">is</span> <span class="n">empty</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">TestPlan</span> <span class="n">in</span> <span class="n">Kiwi</span> <span class="n">TCMS</span> <span class="n">with</span> <span class="n">attributes</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">=</span><span class="s">&#39;Automated test plan for %(product)&#39;</span>
+        <span class="n">product</span><span class="p">=</span><span class="s">&#39;%(product)&#39;</span>
+        <span class="n">product_version</span><span class="p">=</span><span class="s">&#39;%(version)&#39;</span>
+        <span class="n">type</span><span class="p">=</span><span class="s">&#39;Unit&#39;</span>
+    <span class="n">WHERE</span><span class="p">:</span> <span class="c">%(product) is a placeholder for TCMS_PRODUCT==TRAVIS_REPO_SLUG==JOB_NAME</span>
+           <span class="c">%(version) is a placeholder for TCMS_PRODUCT_VERSION==TRAVIS_COMMIT==TRAVIS_PULL_REQUEST_SHA==GIT_COMMIT</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">crate</span> <span class="n">a</span> <span class="n">new</span> <span class="n">TestRun</span> <span class="n">in</span> <span class="n">Kiwi</span> <span class="n">TCMS</span> <span class="n">with</span> <span class="n">attributes</span><span class="p">:</span>
+        <span class="n">summary</span><span class="p">=</span><span class="s">&#39;Automated test run ....&#39;</span>
+        <span class="n">plan</span><span class="p">=</span><span class="n">Current</span> <span class="n">TestPlan</span>
+        <span class="n">build</span><span class="p">=</span><span class="s">&#39;%(build)&#39;</span>
+        <span class="n">manager</span><span class="p">=</span><span class="n">TCMS_USERNAME</span>
+    <span class="n">WHERE</span><span class="p">:</span> <span class="c">%(build) is a placeholder for TCMS_BUILD==TRAVIS_BUILD_NUMBER==BUILD_NUMBER</span>
+    <span class="n">Environment</span> <span class="s">variables</span> <span class="s">are</span> <span class="s">specified</span> <span class="s">in:</span>
+    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">travis</span><span class="o">-</span><span class="n">ci</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">environment</span><span class="o">-</span><span class="n">variables</span>#<span class="n">default</span><span class="o">-</span><span class="n">environment</span><span class="o">-</span><span class="n">variables</span>
+    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">wiki</span><span class="p">.</span><span class="n">jenkins</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">display</span><span class="o">/</span><span class="n">JENKINS</span><span class="o">/</span><span class="n">Building</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="n">software</span><span class="o">+</span><span class="n">project</span>#<span class="n">Buildingasoftwareproject</span><span class="o">-</span><span class="n">belowJenkinsSetEnvironmentVariables</span>
 
-    SUMMARY: Will not create duplicate Product, Version &amp; Build if they already exist
-    GIVEN: TCMS_RUN_ID is not configured
-    AND: %(product) exists
-    AND: %(version) exists
-    AND: %(build) exists
-    WHEN: plugin tries to auto-create TestPlan and TestRun
-    THEN: plugin will re-use %(product), %(version) and %(build) from the database
-    AND: not try to auto-create them
-
-
-    SUMMARY: Will auto-create Product, Version &amp; Build if they don&#39;t exist
-    GIVEN: TCMS_RUN_ID is not configured
-    AND: %(product) doesn&#39;t exist
-    AND: %(version) doesn&#39;t exist
-    AND: %(build) doesn&#39;t exist
-    WHEN: plugin tries to auto-create TestPlan and TestRun
-    THEN: %(product), %(version) and %(build) be created automatically
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">not</span> <span class="n">create</span> <span class="n">duplicate</span> <span class="n">Product</span><span class="p">,</span> <span class="n">Version</span> <span class="o">&amp;</span> <span class="n">Build</span> <span class="k">if</span> <span class="n">they</span> <span class="n">already</span> <span class="n">exist</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_RUN_ID</span> <span class="n">is</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(product) exists</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(version) exists</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(build) exists</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">tries</span> <span class="n">to</span> <span class="n">auto</span><span class="o">-</span><span class="n">create</span> <span class="n">TestPlan</span> <span class="n">and</span> <span class="n">TestRun</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">re</span><span class="o">-</span><span class="n">use</span> <span class="c">%(product), %(version) and %(build) from the database</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">not</span> <span class="k">try</span> <span class="n">to</span> <span class="n">auto</span><span class="o">-</span><span class="n">create</span> <span class="n">them</span>
 
 
-    SUMMARY: Unit test names are added to TestPlan
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestPlan for a TestCase with the same name
-    AND: if test case doesn&#39;t exist in Current_TestPlan
-    THEN: it will be added to Current_TestPlan
-    hint: it is probably best to process all unit test results at the end!
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">auto</span><span class="o">-</span><span class="n">create</span> <span class="n">Product</span><span class="p">,</span> <span class="n">Version</span> <span class="o">&amp;</span> <span class="n">Build</span> <span class="k">if</span> <span class="n">they</span> <span class="n">don</span><span class="o">&#39;</span><span class="n">t</span> <span class="n">exist</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_RUN_ID</span> <span class="n">is</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(product) doesn&#39;t exist</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(version) doesn&#39;t exist</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(build) doesn&#39;t exist</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">tries</span> <span class="n">to</span> <span class="n">auto</span><span class="o">-</span><span class="n">create</span> <span class="n">TestPlan</span> <span class="n">and</span> <span class="n">TestRun</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="c">%(product), %(version) and %(build) be created automatically</span>
 
 
-    SUMMARY: Unit test names are added to TestRun
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
-          the current unit test name
-    hint: (or Current_TestCase object from previous scenario, depending on implementation)
-    AND: if such TestCaseRun doesn&#39;t exist in Current_TestRun
-    THEN: it will be added to Current_TestRun
-    hint: it is probably best to process all unit test results at the end!
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Unit</span> <span class="n">test</span> <span class="n">names</span> <span class="n">are</span> <span class="n">added</span> <span class="n">to</span> <span class="n">TestPlan</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">we</span> <span class="n">have</span> <span class="n">good</span> <span class="n">plugin</span> <span class="n">configuration</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">loops</span> <span class="n">over</span> <span class="n">unit</span> <span class="n">tests</span> <span class="n">emitted</span> <span class="n">by</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">check</span> <span class="n">Current_TestPlan</span> <span class="k">for</span> <span class="n">a</span> <span class="n">TestCase</span> <span class="n">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">name</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="k">if</span> <span class="n">test</span> <span class="k">case</span> <span class="n">doesn</span><span class="o">&#39;</span><span class="n">t</span> <span class="n">exist</span> <span class="n">in</span> <span class="n">Current_TestPlan</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">added</span> <span class="n">to</span> <span class="n">Current_TestPlan</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="n">it</span> <span class="n">is</span> <span class="n">probably</span> <span class="n">best</span> <span class="n">to</span> <span class="n">process</span> <span class="n">all</span> <span class="n">unit</span> <span class="n">test</span> <span class="n">results</span> <span class="n">at</span> <span class="n">the</span> <span class="k">end</span>!
 
 
-    SUMMARY: Current_TestRun is updated with unit test results
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
-          the current unit test name
-    hint: (or Current_TestCase object from previous scenario, depending on implementation)
-    AND: if TestCaseRun object exists in Current_TestRun
-    THEN: its status will be updated with the execution result coming from the test runner
-    hint: it is probably best to process all unit test results at the end!
-</pre></div>
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Unit</span> <span class="n">test</span> <span class="n">names</span> <span class="n">are</span> <span class="n">added</span> <span class="n">to</span> <span class="n">TestRun</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">we</span> <span class="n">have</span> <span class="n">good</span> <span class="n">plugin</span> <span class="n">configuration</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">loops</span> <span class="n">over</span> <span class="n">unit</span> <span class="n">tests</span> <span class="n">emitted</span> <span class="n">by</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">check</span> <span class="n">Current_TestRun</span> <span class="k">for</span> <span class="n">a</span> <span class="n">TestCaseRun</span> <span class="n">object</span> <span class="n">which</span> <span class="n">matches</span>
+          <span class="n">the</span> <span class="s">current</span> <span class="s">unit</span> <span class="s">test</span> <span class="s">name</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="p">(</span><span class="n">or</span> <span class="n">Current_TestCase</span> <span class="n">object</span> <span class="n">from</span> <span class="n">previous</span> <span class="n">scenario</span><span class="p">,</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">implementation</span><span class="p">)</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="k">if</span> <span class="n">such</span> <span class="n">TestCaseRun</span> <span class="n">doesn</span><span class="o">&#39;</span><span class="n">t</span> <span class="n">exist</span> <span class="n">in</span> <span class="n">Current_TestRun</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">added</span> <span class="n">to</span> <span class="n">Current_TestRun</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="n">it</span> <span class="n">is</span> <span class="n">probably</span> <span class="n">best</span> <span class="n">to</span> <span class="n">process</span> <span class="n">all</span> <span class="n">unit</span> <span class="n">test</span> <span class="n">results</span> <span class="n">at</span> <span class="n">the</span> <span class="k">end</span>!
+
+
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Current_TestRun</span> <span class="n">is</span> <span class="n">updated</span> <span class="n">with</span> <span class="n">unit</span> <span class="n">test</span> <span class="n">results</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">we</span> <span class="n">have</span> <span class="n">good</span> <span class="n">plugin</span> <span class="n">configuration</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">loops</span> <span class="n">over</span> <span class="n">unit</span> <span class="n">tests</span> <span class="n">emitted</span> <span class="n">by</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">check</span> <span class="n">Current_TestRun</span> <span class="k">for</span> <span class="n">a</span> <span class="n">TestCaseRun</span> <span class="n">object</span> <span class="n">which</span> <span class="n">matches</span>
+          <span class="n">the</span> <span class="s">current</span> <span class="s">unit</span> <span class="s">test</span> <span class="s">name</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="p">(</span><span class="n">or</span> <span class="n">Current_TestCase</span> <span class="n">object</span> <span class="n">from</span> <span class="n">previous</span> <span class="n">scenario</span><span class="p">,</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">implementation</span><span class="p">)</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="k">if</span> <span class="n">TestCaseRun</span> <span class="n">object</span> <span class="n">exists</span> <span class="n">in</span> <span class="n">Current_TestRun</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">its</span> <span class="n">status</span> <span class="n">will</span> <span class="n">be</span> <span class="n">updated</span> <span class="n">with</span> <span class="n">the</span> <span class="n">execution</span> <span class="n">result</span> <span class="n">coming</span> <span class="n">from</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="n">it</span> <span class="n">is</span> <span class="n">probably</span> <span class="n">best</span> <span class="n">to</span> <span class="n">process</span> <span class="n">all</span> <span class="n">unit</span> <span class="n">test</span> <span class="n">results</span> <span class="n">at</span> <span class="n">the</span> <span class="k">end</span>!
+</code></pre></div>
 
 
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="bookmark" title="Permalink to Kiwi TCMS API performance baseline">
                 <h1 class="top-header">Kiwi TCMS API performance baseline</h1>
@@ -1463,7 +1504,7 @@ for inspiration!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
 an experiment to establish a baseline.
 For API requests I got <strong>7.5 req/sec or 130 msec/req</strong> which is
@@ -1480,7 +1521,7 @@ adds test cases to test run (250 requests) and finally updates the statuses
 An example is available at <a href="https://public.tenant.kiwitcms.org/run/567/">TR #567</a>!</p>
 <p>On localhost, running the development server (<code>./manage.py runserver</code>) with an
 SQLite database I got:</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">time</span> python perf-script
+<div class="highlight"><pre><span></span><code>$ <span class="nb">time</span> python perf-script
 
 real    2m6.450s
 user    0m1.069s
@@ -1503,7 +1544,7 @@ $ <span class="nb">time</span> python perf-script
 real    2m9.197s
 user    0m1.050s
 sys     0m0.353s
-</pre></div>
+</code></pre></div>
 
 
 <p>This measures at 120 msec/req or 7.85 req/sec!</p>
@@ -1512,7 +1553,7 @@ sys     0m0.353s
 instance (via docker-compose) with the default <code>centos/mariadb</code> image!
 No extra settings or changes. I used the same computer over a WiFi
 connection and a pretty standard home-speed Internet connection. Times are:</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">time</span> python perf-script
+<div class="highlight"><pre><span></span><code>$ <span class="nb">time</span> python perf-script
 
 real    2m18.983s
 user    0m1.175s
@@ -1535,23 +1576,23 @@ $ <span class="nb">time</span> python perf-script
 real    2m21.521s
 user    0m1.154s
 sys     0m0.091s
-</pre></div>
+</code></pre></div>
 
 
 <p>This measures at 140 sec/req or 7.05 req/sec!</p>
 <p>Note: since I am using Python 3.6 I had to modify the file
 <code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
-<div class="highlight"><pre><span></span><span class="c1"># Used by http.client if no context is explicitly passed.</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Used by http.client if no context is explicitly passed.</span>
 <span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>The issue has been reported in
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/" rel="bookmark" title="Permalink to Kiwi TCMS team updates">
                 <h1 class="top-header">Kiwi TCMS team updates</h1>
@@ -1563,7 +1604,7 @@ sys     0m0.091s
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>I am happy to announce that <a href="/team/">our team</a> is steadily growing!
 As we work through our <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>,
 <a href="/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">status update here</a>, and
@@ -1636,8 +1677,8 @@ coming from Vratsa Software Community and were mentors at the recently held
 CodeWeek hackathon in their home city! I wish them fast learning and good luck!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to add API logging for Kiwi TCMS">
                 <h1 class="top-header">How to add API logging for Kiwi TCMS</h1>
@@ -1649,39 +1690,39 @@ CodeWeek hackathon in their home city! I wish them fast learning and good luck!<
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>In this blog post I will show more ways to customize Kiwi TCMS by adding
 logging capabilities to the API backend. Indeed this is a feature that
 our team deemed not required for upstream and was removed in
 <a href="https://github.com/kiwitcms/Kiwi/pull/436">PR #436</a>.</p>
 <p>Start by creating the following directory structure:</p>
-<div class="highlight"><pre><span></span>    api_logging/
-        __init__.py
-        handlers.py
-        models.py
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">    api_logging/</span>
+<span class="err">        __init__.py</span>
+<span class="err">        handlers.py</span>
+<span class="err">        models.py</span>
+</code></pre></div>
 
 
 <p>This is a small Django application that will log every call to the API backend.
 Each file looks like this:</p>
-<div class="highlight"><pre><span></span>    <span class="c1"># models.py contains DB schema for your new table</span>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># models.py contains DB schema for your new table</span>
     <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 
     <span class="k">class</span> <span class="nc">ApiCallLog</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-        <span class="n">executed_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-        <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">executed_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                                  <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
         <span class="n">method</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
-        <span class="n">args</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then</p>
-<div class="highlight"><pre><span></span>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
     <span class="kn">from</span> <span class="nn">modernrpc</span> <span class="kn">import</span> <span class="n">handlers</span>
 
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
@@ -1696,13 +1737,13 @@ Each file looks like this:</p>
             <span class="c1"># create an anonymous user object for logging purposes</span>
             <span class="n">request_user</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_user_model</span><span class="p">()</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span>
                 <span class="n">username</span><span class="o">=</span><span class="s1">&#39;Anonymous&#39;</span><span class="p">,</span>
-                <span class="n">is_active</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">is_active</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">method_name</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">method_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">method_name</span> <span class="o">=</span> <span class="s1">&#39;--- method_name missing ---&#39;</span>
 
         <span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;API call:: user: {0}, method: {1}, args: {2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;API call:: user: </span><span class="si">{0}</span><span class="s1">, method: </span><span class="si">{1}</span><span class="s1">, args: </span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                 <span class="n">request_user</span><span class="p">,</span>
                 <span class="n">method_name</span><span class="p">,</span>
                 <span class="n">args</span><span class="p">))</span>
@@ -1723,12 +1764,12 @@ Each file looks like this:</p>
 
     <span class="k">class</span> <span class="nc">JSONRPCHandler</span><span class="p">(</span><span class="n">handlers</span><span class="o">.</span><span class="n">JSONRPCHandler</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">process_single_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">):</span>
-            <span class="n">method_name</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+            <span class="n">method_name</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
             <span class="n">params</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;params&#39;</span><span class="p">)</span>
 
             <span class="n">log_call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_single_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><strong>NOTE:</strong>
@@ -1737,7 +1778,7 @@ initial migration for Django. This could be easier if you place the above direct
 into existing Django application or craft the migration file by hand!</p>
 <p>The last thing you want to do is create a <code>local_settings.py</code> file which will override
 Kiwi TCMS defaults:</p>
-<div class="highlight"><pre><span></span>    <span class="c1"># local_settings.py</span>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># local_settings.py</span>
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 
     <span class="n">settings</span><span class="o">.</span><span class="n">INSTALLED_APPS</span> <span class="o">+=</span> <span class="p">[</span>
@@ -1746,23 +1787,23 @@ Kiwi TCMS defaults:</p>
 
     <span class="n">MODERNRPC_HANDLERS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;api_logging.handlers.XMLRPCHandler&#39;</span><span class="p">,</span>
                           <span class="s1">&#39;api_logging.handlers.JSONRPCHandler&#39;</span><span class="p">]</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Then place everything in <code>Dockerfile</code> like so:</p>
-<div class="highlight"><pre><span></span>    FROM kiwitcms/kiwi
+<div class="highlight"><pre><span></span><code>    <span class="k">FROM</span> <span class="n">kiwitcms</span><span class="o">/</span><span class="n">kiwi</span>
 
-    COPY ./api_logging/ /venv/lib64/python3.6/site-packages/api_logging/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
-</pre></div>
+    <span class="k">COPY</span> <span class="p">.</span><span class="o">/</span><span class="n">api_logging</span><span class="o">/</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">api_logging</span><span class="o">/</span>
+    <span class="k">COPY</span> <span class="n">local_settings</span><span class="p">.</span><span class="n">py</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tcms</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span>
+</code></pre></div>
 
 
 <p>Kiwi TCMS will import your <code>local_settings.py</code> and enable the logging application.
 Now build your customized Docker image and use it for deployment!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to override templates for Kiwi TCMS">
                 <h1 class="top-header">How to override templates for Kiwi TCMS</h1>
@@ -1774,23 +1815,23 @@ Now build your customized Docker image and use it for deployment!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>This is the first publication in our customization series. It will show you
 how to override any template used by Kiwi TCMS. As an example we will override
 the email template that is used when registering new account. By default the
 email text looks like this:</p>
-<div class="highlight"><pre><span></span><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
+<div class="highlight"><pre><span></span><code><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
 <span class="x">    thank you for signing up for an </span><span class="cp">{{</span> <span class="nv">site_domain</span> <span class="cp">}}</span><span class="x"> account!</span>
 
 <span class="x">    To activate your account, click this link:</span>
 <span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span><span class="x"></span>
-</pre></div>
+</code></pre></div>
 
 
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
 runs a custom Docker image based on
 <code>kiwitcms/kiwi</code>. For this image the confirmation email looks like this</p>
-<div class="highlight"><pre><span></span><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
+<div class="highlight"><pre><span></span><code><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
 <span class="x">    thank you for signing up for our Kiwi TCMS demo!</span>
 
 <span class="x">    To activate your account, click this link:</span>
@@ -1805,7 +1846,7 @@ runs a custom Docker image based on
 <span class="x">    Happy testing!</span>
 <span class="x">    The Kiwi TCMS team</span>
 <span class="x">    http://kiwitcms.org</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>The file that we want to override is <code>tcms/templates/email/confirm_registration.txt</code>.</p>
@@ -1813,19 +1854,19 @@ runs a custom Docker image based on
 and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
 <p>Next you want to make this file available inside your docker image so your <code>Dockerfile</code>
 should look like this:</p>
-<div class="highlight"><pre><span></span>    FROM kiwitcms/kiwi
+<div class="highlight"><pre><span></span><code>    <span class="k">FROM</span> <span class="n">kiwitcms</span><span class="o">/</span><span class="n">kiwi</span>
 
-    COPY ./templates.d/ /venv/lib64/python3.6/site-packages/tcms/overridden_templates/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
-</pre></div>
+    <span class="k">COPY</span> <span class="p">.</span><span class="o">/</span><span class="n">templates</span><span class="p">.</span><span class="n">d</span><span class="o">/</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tcms</span><span class="o">/</span><span class="n">overridden_templates</span><span class="o">/</span>
+    <span class="k">COPY</span> <span class="n">local_settings</span><span class="p">.</span><span class="n">py</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tcms</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span>
+</code></pre></div>
 
 
 <p>where <code>local_settings.py</code> contains</p>
-<div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 
     <span class="n">settings</span><span class="o">.</span><span class="n">TEMPLATES</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;DIRS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">TCMS_ROOT_PATH</span><span class="p">,</span> <span class="s1">&#39;overridden_templates&#39;</span><span class="p">))</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>The following code states <em>instruct Django to look into <code>overridden_templates</code> first and
@@ -1836,8 +1877,8 @@ account that file names must match (Django searches templates by directory path)
 Now build your customized Docker image and use that for deployment!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to backup Docker volumes for Kiwi TCMS">
                 <h1 class="top-header">How to backup Docker volumes for Kiwi TCMS</h1>
@@ -1849,7 +1890,7 @@ Now build your customized Docker image and use that for deployment!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>When you start Kiwi TCMS by running <code>docker-compose up</code>
 (see <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose">here</a>)
 it will automatically create 2 volumes: <code>kiwi_db_data</code> and <code>kiwi_uploads</code>.
@@ -1858,18 +1899,18 @@ This blog post will outline how to backup these docker volumes.</p>
 <p>Kiwi TCMS is a Django application and the <code>manage.py</code> command provides an easy way
 to dump and load the database contents. To export all contents on your docker host
 execute:</p>
-<div class="highlight"><pre><span></span>docker exec -it kiwi_web /Kiwi/manage.py dumpdata --all --indent 2 &gt; database.json
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">docker exec -it kiwi_web /Kiwi/manage.py dumpdata --all --indent 2 &gt; database.json</span>
+</code></pre></div>
 
 
 <p>This will create a file named <code>database.json</code> in the current directory, outside of the
 running container!</p>
 <p>You can restore the database contents by using the following commands:</p>
-<div class="highlight"><pre><span></span># delete data from all tables
-docker exec -it kiwi_web /bin/bash -c &#39;/Kiwi/manage.py sqlflush | /Kiwi/manage.py dbshell&#39;
-# then reload the existing data
-cat database.json | docker exec -i kiwi_web /Kiwi/manage.py loaddata --format json -
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err"># delete data from all tables</span>
+<span class="err">docker exec -it kiwi_web /bin/bash -c &#39;/Kiwi/manage.py sqlflush | /Kiwi/manage.py dbshell&#39;</span>
+<span class="err"># then reload the existing data</span>
+<span class="err">cat database.json | docker exec -i kiwi_web /Kiwi/manage.py loaddata --format json -</span>
+</code></pre></div>
 
 
 <p><strong>NOTE:</strong> depending on your scenario you may want to remove the existing volume
@@ -1881,44 +1922,44 @@ versions <code>manage.py</code> will fail due to various issues.</p>
 <p>The <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenant</a> add-on depends on the
 PostgreSQL database. It will create multiple DB schemas, one per tenant. To backup
 all tenants use the following command:</p>
-<div class="highlight"><pre><span></span>docker exec -i kiwi_db /bin/bash -c &#39;pg_dump --dbname=kiwi -F c&#39; &gt; backup.bak
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">docker exec -i kiwi_db /bin/bash -c &#39;pg_dump --dbname=kiwi -F c&#39; &gt; backup.bak</span>
+</code></pre></div>
 
 
 <p>This will create a file in the PostgreSQL custom database dump format which
 contains all data and schema definitions. That is a binary file which can be read
 with the <code>pg_restore</code> command.</p>
 <p>To [drop and] restore the entire multi-tenant database:</p>
-<div class="highlight"><pre><span></span>docker exec -i kiwi_db /bin/bash -c &#39;psql -c &quot;DROP DATABASE IF EXISTS kiwi;&quot;&#39;
-cat backup.bak | docker exec -i kiwi_db /bin/bash -c &#39;pg_restore --dbname=template1 -vcC&#39;
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">docker exec -i kiwi_db /bin/bash -c &#39;psql -c &quot;DROP DATABASE IF EXISTS kiwi;&quot;&#39;</span>
+<span class="err">cat backup.bak | docker exec -i kiwi_db /bin/bash -c &#39;pg_restore --dbname=template1 -vcC&#39;</span>
+</code></pre></div>
 
 
 <p>To [drop and] restore an individual tenant:</p>
-<div class="highlight"><pre><span></span>docker exec -it kiwi_web /Kiwi/manage.py dbshell
+<div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">kiwi_web</span> <span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">dbshell</span>
 
-kiwi=&gt; DROP SCHEMA $tenant_name CASCADE;
-....
-DROP SCHEMA
-kiwi=&gt; CREATE SCHEMA $tenant_name;
-CREATE SCHEMA
-kiwi=&gt;Ctrl+D
+<span class="n">kiwi</span><span class="o">=&gt;</span> <span class="k">DROP</span> <span class="k">SCHEMA</span> <span class="err">$</span><span class="n">tenant_name</span> <span class="k">CASCADE</span><span class="p">;</span>
+<span class="p">....</span>
+<span class="k">DROP</span> <span class="k">SCHEMA</span>
+<span class="n">kiwi</span><span class="o">=&gt;</span> <span class="k">CREATE</span> <span class="k">SCHEMA</span> <span class="err">$</span><span class="n">tenant_name</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">SCHEMA</span>
+<span class="n">kiwi</span><span class="o">=&gt;</span><span class="n">Ctrl</span><span class="o">+</span><span class="n">D</span>
 
-cat backup.bak | docker exec -i kiwi_db /bin/bash -c &#39;pg_restore --dbname=kiwi -v --schema $tenant_name&#39;
-</pre></div>
+<span class="n">cat</span> <span class="n">backup</span><span class="p">.</span><span class="n">bak</span> <span class="o">|</span> <span class="n">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="n">i</span> <span class="n">kiwi_db</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="k">c</span> <span class="s1">&#39;pg_restore --dbname=kiwi -v --schema $tenant_name&#39;</span>
+</code></pre></div>
 
 
 <p><strong>WARNING:</strong> <code>sqlflush | dbshell</code> will not work when you have multiple DB schemas so you must use
 the PostgreSQL database shell to manipulate the contents of the database!</p>
 <h2>Backing up file uploads</h2>
 <p>Uploaded files can easily be backed up with:</p>
-<div class="highlight"><pre><span></span>docker exec -i kiwi_web /bin/tar -cP /Kiwi/uploads &gt; uploads.tar
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">docker exec -i kiwi_web /bin/tar -cP /Kiwi/uploads &gt; uploads.tar</span>
+</code></pre></div>
 
 
 <p>and then restored:</p>
-<div class="highlight"><pre><span></span>cat uploads.tar | docker exec -i kiwi_web /bin/tar -x
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">cat uploads.tar | docker exec -i kiwi_web /bin/tar -x</span>
+</code></pre></div>
 
 
 <p>You may also try the <code>rsync</code> command but be aware that it is not installed
@@ -1942,8 +1983,8 @@ and create these volumes as LVM2 block devices. Then use
 from the LVM Administrator Guide for Red Hat Enterprise Linux 7.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="bookmark" title="Permalink to Mid-year roadmap status report">
                 <h1 class="top-header">Mid-year roadmap status report</h1>
@@ -1955,7 +1996,7 @@ from the LVM Administrator Guide for Red Hat Enterprise Linux 7.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
 <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>.</p>
@@ -2021,37 +2062,56 @@ there are several active contributors (issues, translations).</p>
 We're planning to attend HackConf and OpenFest in Sofia by the end of the year.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
+    </article>
 
-<section id="pagination" class="col-12 secondary">
-    <ul class="pagination">
-        <li>
+<section id="pagination">
+        <p>
             Page 1 / 1
-        </li>
-    </ul>
+        </p>
 </section>
-        <!-- Newsletter Form Section -->
-        <section class="newsletter secondary col-12">
-            <div id="mc_embed_signup">
-                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="col-12 footer primary">
-            <div class="col-10 footer-copyright">
+</section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
                 <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
                 <p><a href="/legal/">Legal information</a></p>
             </div>
-            <div class="col-2">
-                <ul class="footer-sociallinks">
-                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
-                </ul>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>
         </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
 
 
             <!-- Google analytics -->

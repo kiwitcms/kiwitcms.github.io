@@ -4,48 +4,89 @@
         <meta charset="UTF-8">
         <title>Kiwi TCMS - Articles with tag community</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <!-- MailChimp Newsletter Form Styles -->
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
-        <link href="/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
         <link href="/theme/style/github.css" rel="stylesheet">
-        <!-- Other Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="/theme/fontawesome-free-5.6.3-web/css/all.min.css">
-        <!-- Mobile nav script -->
-        <script type="text/javascript" src="/theme/scripts/mobile-nav.js"></script>
-
     </head>
-    <body class="" onload="setMobileNavBehaviour()">
-        <!-- Nav -->
-        <nav class="col-12 primary">
-            <a href="/">
-                <img src="/theme/images/kiwi_logo_h50.png" name="logo">
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
             </a>
-            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-            <div id="mobile-mask">
-                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
-                <ul class="topnav">
-                    <li><a href="/features/">Features</a></li>
-                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                    <li><a href="/community/">Community</a></li>
-                    <li><a href="/support/">Support</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/team/">Team</a></li>
-                    <li>
-                        <form action="https://google.com/search" method="get">
-                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
-                            <input class="search" name="q" placeholder="Search" type="text">
-                        </form>
-                    </li>
-                </ul>
-            </div>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
+
         <!-- content -->
-    <section class="col-12 secondary">
+<section id="blog-list">
+    <h1>Articles with tag community</h1>
+
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/" rel="bookmark" title="Permalink to How to use Kiwi TCMS plugins, Pt. 1">
                 <h1 class="top-header">How to use Kiwi TCMS plugins, Pt. 1</h1>
@@ -57,7 +98,7 @@
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>In
 <a href="/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/">release notes for v6.5</a>
 we announced several plugins which will fetch test names and execution results
@@ -77,10 +118,10 @@ if tests are running in Travis CI or Jenkins. For example
 <a href="https://github.com/kiwitcms/plugin-demo/commit/d455fb42fb7c2aedadfd5f66de7d131109c03350">commit d455fb4</a>
 creates <a href="https://tcms.kiwitcms.org/runs/12/">TR-12</a> and
 <a href="https://tcms.kiwitcms.org/plan/10/">TP-10</a>!</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=d455fb42fb7c2aedadfd5f66de7d131109c03350
-Build=2
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=d455fb42fb7c2aedadfd5f66de7d131109c03350</span>
+<span class="err">Build=2</span>
+</code></pre></div>
 
 
 <p>Next we convert the README file from Markdown to reStructuredText which triggers
@@ -89,10 +130,10 @@ Build=2
 This build <strong>again</strong> creates a new TestRun and new TestPlan for it. Respectively
 <a href="https://tcms.kiwitcms.org/runs/14/">TR-14</a> and
 <a href="https://tcms.kiwitcms.org/plan/12/">TP-12</a>!</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=418b80b3bbb65a799f695dc59d488c76f560fa2b
-Build=3
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=418b80b3bbb65a799f695dc59d488c76f560fa2b</span>
+<span class="err">Build=3</span>
+</code></pre></div>
 
 
 <p><strong>Important:</strong> we can see that version is different which will affect how artifacts
@@ -108,10 +149,10 @@ the TAP plugin! Checkout the commit on GitHub to see how it is done!</p>
 Because this is the first time where Version == master the plugin creates
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a> and reports the results under
 <a href="https://tcms.kiwitcms.org/runs/16/">TR-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=4
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=4</span>
+</code></pre></div>
 
 
 <p>Right after that I realized we can make this configuration a bit more generic
@@ -124,10 +165,10 @@ branch! That is to say, the product is in active mode of development.</p>
 <p>Results are reported in
 <a href="https://tcms.kiwitcms.org/runs/18/">TR-18</a> which is again part of
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=5
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=5</span>
+</code></pre></div>
 
 
 <p><a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496229819">Travis Build #6</a> for
@@ -148,10 +189,10 @@ for investigation.</p>
 <a href="https://github.com/kiwitcms/plugin-demo/commit/bf75d0abe9695e3ee3b49b8944bab9db43bb25e6">commit bf75d0a</a>,
 <a href="https://tcms.kiwitcms.org/runs/22/">TR-22</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=bf75d0a
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=bf75d0a</span>
+</code></pre></div>
 
 
 <h2>Report results in pre-existing TestRun</h2>
@@ -186,10 +227,10 @@ distinguish between the two.</p>
 <a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496237911">commit 85ad939</a>,
 <a href="https://tcms.kiwitcms.org/runs/24/">TR-24</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=unspecified
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=unspecified</span>
+</code></pre></div>
 
 
 <p>Also check-out comments in TR executions to see when and who had executed the test case.</p>
@@ -208,10 +249,10 @@ pointing to an existing TestRun this TR will keep the results of the last test s
 removes <code>TCMS_RUN_ID</code>! Results are reported in
 <a href="https://tcms.kiwitcms.org/runs/25/">TR-25</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=c4f1ae5
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=c4f1ae5</span>
+</code></pre></div>
 
 
 <h2>Branch out for an LTS version</h2>
@@ -221,10 +262,10 @@ Build=c4f1ae5
 <a href="https://github.com/kiwitcms/plugin-demo/commit/9f1ef717e3fb248d65535ed66b5c4e61e6f85a6e">commit 9f1ef71</a>
 <a href="https://tcms.kiwitcms.org/runs/27/">TR-27</a>,
 <a href="https://tcms.kiwitcms.org/plan/16/">TP-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=lts-v0
-Build=9f1ef71
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=lts-v0</span>
+<span class="err">Build=9f1ef71</span>
+</code></pre></div>
 
 
 <p>Because this is the first time we are running tests for this product version
@@ -239,10 +280,10 @@ will come in the future!</p>
 <a href="https://github.com/kiwitcms/plugin-demo/commit/2d72754d3f911ef4e25287f203471f4466b95d12">commit 2d72754</a>,
 <a href="https://tcms.kiwitcms.org/runs/29/">TR-29</a> for
 <a href="https://tcms.kiwitcms.org/plan/16/">TP-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=lts-v0
-Build=2d72754
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=lts-v0</span>
+<span class="err">Build=2d72754</span>
+</code></pre></div>
 
 
 <p>TR-29 contains the new <a href="https://tcms.kiwitcms.org/case/58/">TC-58</a>!</p>
@@ -273,8 +314,8 @@ feature branches and pull requests and discuss possible organization scenarios.
 You are welcome to share your ideas in the comments below.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/" rel="bookmark" title="Permalink to Kiwi TCMS is going to FOSDEM 2019">
                 <h1 class="top-header">Kiwi TCMS is going to FOSDEM 2019</h1>
@@ -286,7 +327,7 @@ You are welcome to share your ideas in the comments below.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello testers, Kiwi TCMS is going to <a href="http://fosdem.org/">FOSDEM</a> this year.
 This is where you can find us:</p>
 <p><img src="/images/kiwi_sticker.jpg" style="float:left; margin-right: 25px;"
@@ -328,8 +369,8 @@ a small challenge and you can get your hands(errr, feet) on a pair of these:</p>
 </ul>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="bookmark" title="Permalink to Project mission and goals for 2019">
                 <h1 class="top-header">Project mission and goals for 2019</h1>
@@ -341,7 +382,7 @@ a small challenge and you can get your hands(errr, feet) on a pair of these:</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello testers, Kiwi TCMS has taken on a brave new
 mission! We would like to transform the testing process by making it more
 organized, transparent &amp; accountable for everyone on your team. Our goal
@@ -575,8 +616,8 @@ maybe consider
 <a href="https://opencollective.com/kiwitcms">sponsoring us via Open Collective</a>!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="bookmark" title="Permalink to Roadmap status report for 2018">
                 <h1 class="top-header">Roadmap status report for 2018</h1>
@@ -588,7 +629,7 @@ maybe consider
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals in our 2018
 <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>
@@ -666,8 +707,8 @@ HackConf Sofia, PiterPy St. Petersburg and OpenFest Sofia. We've also been
 approved for a project stand at FOSDEM 2019 so watch this blog for more news.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/10/12/kiwi-tcms-team-updates/" rel="bookmark" title="Permalink to Kiwi TCMS team updates">
                 <h1 class="top-header">Kiwi TCMS team updates</h1>
@@ -679,7 +720,7 @@ approved for a project stand at FOSDEM 2019 so watch this blog for more news.</p
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>I am happy to announce that <a href="/team/">our team</a> is steadily growing!
 As we work through our <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>,
 <a href="/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/">status update here</a>, and
@@ -752,8 +793,8 @@ coming from Vratsa Software Community and were mentors at the recently held
 CodeWeek hackathon in their home city! I wish them fast learning and good luck!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/10/11/kiwi-tcms-winter-conference-presence/" rel="bookmark" title="Permalink to Kiwi TCMS winter conference presence">
                 <h1 class="top-header">Kiwi TCMS winter conference presence</h1>
@@ -765,7 +806,7 @@ CodeWeek hackathon in their home city! I wish them fast learning and good luck!<
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We are happy to announce that <a href="http://www.openfest.org">OpenFest</a> - the biggest
 open source conference in Bulgaria has provided an info booth for our project.
 This year the event will be held on 3rd and 4th of November at Sofia Tech Park!</p>
@@ -814,8 +855,8 @@ us in Russia until the end of the year:</p>
 <p>Feel free to ping us at <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a> or look for the
 kiwi bird logo and come to say hi. Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/" rel="bookmark" title="Permalink to Happy birthday Kiwi TCMS">
                 <h1 class="top-header">Happy birthday Kiwi TCMS</h1>
@@ -827,11 +868,11 @@ kiwi bird logo and come to say hi. Happy testing!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p><img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"></p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="bookmark" title="Permalink to Mid-year roadmap status report">
                 <h1 class="top-header">Mid-year roadmap status report</h1>
@@ -843,7 +884,7 @@ kiwi bird logo and come to say hi. Happy testing!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals on our
 <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>.</p>
@@ -909,8 +950,8 @@ there are several active contributors (issues, translations).</p>
 We're planning to attend HackConf and OpenFest in Sofia by the end of the year.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/" rel="bookmark" title="Permalink to Kiwi TCMS conference presence">
                 <h1 class="top-header">Kiwi TCMS conference presence</h1>
@@ -922,7 +963,7 @@ We're planning to attend HackConf and OpenFest in Sofia by the end of the year.<
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Kiwi TCMS is going on a small conference tour. This is where you can find us
 in the next couple of months:</p>
 <ul>
@@ -939,8 +980,8 @@ to that you can catch-up with Alex Todorov, Kiwi's project lead at:
 <p>If you can ping us at <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a> or look for the
 kiwi bird logo and come to say hi!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="bookmark" title="Permalink to Kiwi TCMS roadmap for 2018">
                 <h1 class="top-header">Kiwi TCMS roadmap for 2018</h1>
@@ -952,7 +993,7 @@ kiwi bird logo and come to say hi!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello everyone. As you know Kiwi TCMS has been around for a while and it has
 gone through some big changes in the last year! It started as an abandoned
 Django 1.6 project with broken test suite and is now currently running on the
@@ -1053,40 +1094,57 @@ the above tasks with priority. This will also help us introduce bug fixes
 and new features more quickly!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
+    </article>
 
-<section id="pagination" class="col-12 secondary">
-    <ul class="pagination">
-        <li>
-            <a href="/blog/tags/community/index.html">&larr;Newest Posts </a>
-        </li>
-        <li>
+<section id="pagination">
+            <a href="/blog/tags/community/index.html" class="btn" icon="reversed"><i reversed></i> Newer Posts </a>
+        <p>
             Page 2 / 2
-        </li>
-    </ul>
+        </p>
 </section>
-        <!-- Newsletter Form Section -->
-        <section class="newsletter secondary col-12">
-            <div id="mc_embed_signup">
-                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="col-12 footer primary">
-            <div class="col-10 footer-copyright">
+</section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
                 <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
                 <p><a href="/legal/">Legal information</a></p>
             </div>
-            <div class="col-2">
-                <ul class="footer-sociallinks">
-                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
-                </ul>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>
         </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
 
 
             <!-- Google analytics -->

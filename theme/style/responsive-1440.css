@@ -1,0 +1,54 @@
+@media screen and (max-width: 1679px) and (min-width: 1440px) {
+    /* HEADER > NAVIGATION */
+
+    #main-nav img {
+        height: 40px;
+        padding: 26px 0;
+    }
+
+    /* QUICK LINKS */
+    #quick-links div {
+        grid-template-columns: unset;
+        grid-template-rows: max-content auto 1fr;
+        grid-template-areas:
+            "icon"
+            "title"
+            "description";
+    }
+
+    /* S PRICING */
+    #pricing {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #pricing h1 {
+        grid-column: 1/4;
+    }
+    #pricing .plans-modal {
+        grid-column: 2/4;
+    }
+
+    /* S SCREENS > SLIDER */
+
+    .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active,
+    .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active + .tns-slide-active {
+        width: calc((var(--usable-area)-11 * var(--grid-gap)) / 12 * 3) !important;
+        /* overwrite default */
+    }
+    .tns-slide-active + .tns-slide-active {
+        width: calc((var(--usable-area)-11 * var(--grid-gap)) / 12 * 7) !important;
+    }
+
+    /* S TESTIMONIALS */
+
+    body.page_home blockquote {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "description"
+            "author";
+    }
+    blockquote i {
+        display: none !important;
+    }
+}

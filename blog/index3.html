@@ -4,48 +4,89 @@
         <meta charset="UTF-8">
         <title>Kiwi TCMS - Blog</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <!-- MailChimp Newsletter Form Styles -->
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
-        <link href="/theme/style/color-palette-light.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
         <link href="/theme/style/github.css" rel="stylesheet">
-        <!-- Other Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="/theme/fontawesome-free-5.6.3-web/css/all.min.css">
-        <!-- Mobile nav script -->
-        <script type="text/javascript" src="/theme/scripts/mobile-nav.js"></script>
-
     </head>
-    <body class="" onload="setMobileNavBehaviour()">
-        <!-- Nav -->
-        <nav class="col-12 primary">
-            <a href="/">
-                <img src="/theme/images/kiwi_logo_h50.png" name="logo">
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
             </a>
-            <button class="open-menu accent-unimportant"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-            <div id="mobile-mask">
-                <button class="close-menu accent-unimportant"><i class="fa fa-times" aria-hidden="true"></i></button>
-                <ul class="topnav">
-                    <li><a href="/features/">Features</a></li>
-                    <li><a href="http://kiwitcms.readthedocs.io">Documentation</a></li>
-                    <li><a href="/community/">Community</a></li>
-                    <li><a href="/support/">Support</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/team/">Team</a></li>
-                    <li>
-                        <form action="https://google.com/search" method="get">
-                            <input name="sitesearch" value="https://kiwitcms.org" type="hidden">
-                            <input class="search" name="q" placeholder="Search" type="text">
-                        </form>
-                    </li>
-                </ul>
-            </div>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
+
         <!-- content -->
-    <section class="col-12 secondary">
+<section id="blog-list">
+    <h1>Blog</h1>
+
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="bookmark" title="Permalink to Kiwi TCMS 6.8">
                 <h1 class="top-header">Kiwi TCMS 6.8</h1>
@@ -57,7 +98,7 @@
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.8!
 This is a small improvement and bug-fix update.
 You can explore everything at
@@ -167,8 +208,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="bookmark" title="Permalink to Kiwi TCMS 6.7">
                 <h1 class="top-header">Kiwi TCMS 6.7</h1>
@@ -180,7 +221,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.7!
 This is a small improvement and bug-fix update.
 You can explore everything at
@@ -300,8 +341,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="bookmark" title="Permalink to Kiwi TCMS 6.6">
                 <h1 class="top-header">Kiwi TCMS 6.6</h1>
@@ -313,7 +354,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.6! This is a
 medium severity security update, improvement and bug-fix update.
 You can explore everything at
@@ -485,8 +526,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/" rel="bookmark" title="Permalink to Taking the lead at OpenExpo Europe CfP votes">
                 <h1 class="top-header">Taking the lead at OpenExpo Europe CfP votes</h1>
@@ -498,7 +539,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p><img src="/images/openexpo/vote_openexpo19.jpg"
      alt="Vote for Kiwi TCMS at OpenExpo"
      style="float: none"></p>
@@ -518,8 +559,8 @@ but remember to confirm your email address!</p>
 </ul>
 <p>Thank you &amp; happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="bookmark" title="Permalink to Legacy reports become Telemetry">
                 <h1 class="top-header">Legacy reports become Telemetry</h1>
@@ -531,7 +572,7 @@ but remember to confirm your email address!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>As we've <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">promised</a> Kiwi TCMS is
 starting work on improving the legacy reports functionality.
 After analyzing your feedback in
@@ -639,11 +680,11 @@ display the approximated calculation in the web UI. The most obvious place for t
 is the TestRun progress widget (under the progress bar) or the Test Run page
 (near the Started at/Finished at fields).</p>
 <p>Example text:</p>
-<div class="highlight"><pre><span></span>Started at: YYYY-MM-DD 10:38
-Status: Running
-Duration: 1.2 / 3 hrs
-Estimated completion at: 13:30
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Started at: YYYY-MM-DD 10:38</span>
+<span class="c">Status: Running</span>
+<span class="c">Duration: 1.2 / 3 hrs</span>
+<span class="err">Estimated completion at: 13:30</span>
+</code></pre></div>
 
 
 <p><strong>Unknown:</strong> where does baseline duration come from? Either from the most recent TestRun
@@ -735,8 +776,8 @@ for TestRuns in SEARCH -&gt; Test Runs the user will be able to select several
 rows and proceed to compare them as described above.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/" rel="bookmark" title="Permalink to Want to hack open source ?">
                 <h1 class="top-header">Want to hack open source ?</h1>
@@ -748,7 +789,7 @@ rows and proceed to compare them as described above.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p><img src="/images/team/hiring_banner.png" style="float:none;clear-both;margin:0;max-width: 100%"></p>
 <p>Have you ever wanted to be part of an open source team?
 Have you ever wanted to contribute back the open source community ?
@@ -842,8 +883,8 @@ make sure it is done!</p>
 <p>You can figure this out yourself.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/02/22/how-to-use-kiwi-tcms-plugins-pt-1/" rel="bookmark" title="Permalink to How to use Kiwi TCMS plugins, Pt. 1">
                 <h1 class="top-header">How to use Kiwi TCMS plugins, Pt. 1</h1>
@@ -855,7 +896,7 @@ make sure it is done!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>In
 <a href="/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/">release notes for v6.5</a>
 we announced several plugins which will fetch test names and execution results
@@ -875,10 +916,10 @@ if tests are running in Travis CI or Jenkins. For example
 <a href="https://github.com/kiwitcms/plugin-demo/commit/d455fb42fb7c2aedadfd5f66de7d131109c03350">commit d455fb4</a>
 creates <a href="https://tcms.kiwitcms.org/runs/12/">TR-12</a> and
 <a href="https://tcms.kiwitcms.org/plan/10/">TP-10</a>!</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=d455fb42fb7c2aedadfd5f66de7d131109c03350
-Build=2
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=d455fb42fb7c2aedadfd5f66de7d131109c03350</span>
+<span class="err">Build=2</span>
+</code></pre></div>
 
 
 <p>Next we convert the README file from Markdown to reStructuredText which triggers
@@ -887,10 +928,10 @@ Build=2
 This build <strong>again</strong> creates a new TestRun and new TestPlan for it. Respectively
 <a href="https://tcms.kiwitcms.org/runs/14/">TR-14</a> and
 <a href="https://tcms.kiwitcms.org/plan/12/">TP-12</a>!</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=418b80b3bbb65a799f695dc59d488c76f560fa2b
-Build=3
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=418b80b3bbb65a799f695dc59d488c76f560fa2b</span>
+<span class="err">Build=3</span>
+</code></pre></div>
 
 
 <p><strong>Important:</strong> we can see that version is different which will affect how artifacts
@@ -906,10 +947,10 @@ the TAP plugin! Checkout the commit on GitHub to see how it is done!</p>
 Because this is the first time where Version == master the plugin creates
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a> and reports the results under
 <a href="https://tcms.kiwitcms.org/runs/16/">TR-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=4
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=4</span>
+</code></pre></div>
 
 
 <p>Right after that I realized we can make this configuration a bit more generic
@@ -922,10 +963,10 @@ branch! That is to say, the product is in active mode of development.</p>
 <p>Results are reported in
 <a href="https://tcms.kiwitcms.org/runs/18/">TR-18</a> which is again part of
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=5
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=5</span>
+</code></pre></div>
 
 
 <p><a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496229819">Travis Build #6</a> for
@@ -946,10 +987,10 @@ for investigation.</p>
 <a href="https://github.com/kiwitcms/plugin-demo/commit/bf75d0abe9695e3ee3b49b8944bab9db43bb25e6">commit bf75d0a</a>,
 <a href="https://tcms.kiwitcms.org/runs/22/">TR-22</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=bf75d0a
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=bf75d0a</span>
+</code></pre></div>
 
 
 <h2>Report results in pre-existing TestRun</h2>
@@ -984,10 +1025,10 @@ distinguish between the two.</p>
 <a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496237911">commit 85ad939</a>,
 <a href="https://tcms.kiwitcms.org/runs/24/">TR-24</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=unspecified
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=unspecified</span>
+</code></pre></div>
 
 
 <p>Also check-out comments in TR executions to see when and who had executed the test case.</p>
@@ -1006,10 +1047,10 @@ pointing to an existing TestRun this TR will keep the results of the last test s
 removes <code>TCMS_RUN_ID</code>! Results are reported in
 <a href="https://tcms.kiwitcms.org/runs/25/">TR-25</a>,
 <a href="https://tcms.kiwitcms.org/plan/14/">TP-14</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=master
-Build=c4f1ae5
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=master</span>
+<span class="err">Build=c4f1ae5</span>
+</code></pre></div>
 
 
 <h2>Branch out for an LTS version</h2>
@@ -1019,10 +1060,10 @@ Build=c4f1ae5
 <a href="https://github.com/kiwitcms/plugin-demo/commit/9f1ef717e3fb248d65535ed66b5c4e61e6f85a6e">commit 9f1ef71</a>
 <a href="https://tcms.kiwitcms.org/runs/27/">TR-27</a>,
 <a href="https://tcms.kiwitcms.org/plan/16/">TP-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=lts-v0
-Build=9f1ef71
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=lts-v0</span>
+<span class="err">Build=9f1ef71</span>
+</code></pre></div>
 
 
 <p>Because this is the first time we are running tests for this product version
@@ -1037,10 +1078,10 @@ will come in the future!</p>
 <a href="https://github.com/kiwitcms/plugin-demo/commit/2d72754d3f911ef4e25287f203471f4466b95d12">commit 2d72754</a>,
 <a href="https://tcms.kiwitcms.org/runs/29/">TR-29</a> for
 <a href="https://tcms.kiwitcms.org/plan/16/">TP-16</a>.</p>
-<div class="highlight"><pre><span></span>Product=kiwitcms/plugin-demo
-Version=lts-v0
-Build=2d72754
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Product=kiwitcms/plugin-demo</span>
+<span class="err">Version=lts-v0</span>
+<span class="err">Build=2d72754</span>
+</code></pre></div>
 
 
 <p>TR-29 contains the new <a href="https://tcms.kiwitcms.org/case/58/">TC-58</a>!</p>
@@ -1071,8 +1112,8 @@ feature branches and pull requests and discuss possible organization scenarios.
 You are welcome to share your ideas in the comments below.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/" rel="bookmark" title="Permalink to Kiwi TCMS 6.5.3">
                 <h1 class="top-header">Kiwi TCMS 6.5.3</h1>
@@ -1084,7 +1125,7 @@ You are welcome to share your ideas in the comments below.</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.5.3! This is a
 security, improvement and bug-fix update that includes new
 versions of Django, includes several database migrations and fixes several bugs.
@@ -1202,8 +1243,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/" rel="bookmark" title="Permalink to Kiwi TCMS 6.5">
                 <h1 class="top-header">Kiwi TCMS 6.5</h1>
@@ -1215,7 +1256,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.5! This is a minor security,
 improvement and bug-fix update that includes new
 versions of Django and other dependencies, removes some database fields,
@@ -1414,8 +1455,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/" rel="bookmark" title="Permalink to Kiwi TCMS is going to FOSDEM 2019">
                 <h1 class="top-header">Kiwi TCMS is going to FOSDEM 2019</h1>
@@ -1427,7 +1468,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello testers, Kiwi TCMS is going to <a href="http://fosdem.org/">FOSDEM</a> this year.
 This is where you can find us:</p>
 <p><img src="/images/kiwi_sticker.jpg" style="float:left; margin-right: 25px;"
@@ -1469,8 +1510,8 @@ a small challenge and you can get your hands(errr, feet) on a pair of these:</p>
 </ul>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="bookmark" title="Permalink to Project mission and goals for 2019">
                 <h1 class="top-header">Project mission and goals for 2019</h1>
@@ -1482,7 +1523,7 @@ a small challenge and you can get your hands(errr, feet) on a pair of these:</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello testers, Kiwi TCMS has taken on a brave new
 mission! We would like to transform the testing process by making it more
 organized, transparent &amp; accountable for everyone on your team. Our goal
@@ -1716,8 +1757,8 @@ maybe consider
 <a href="https://opencollective.com/kiwitcms">sponsoring us via Open Collective</a>!</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/01/07/kiwi-tcms-64/" rel="bookmark" title="Permalink to Kiwi TCMS 6.4">
                 <h1 class="top-header">Kiwi TCMS 6.4</h1>
@@ -1729,7 +1770,7 @@ maybe consider
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.4! This is a security,
 improvement and bug-fix update that includes new versions of Django,
 Patternfly and other dependencies. You can explore everything at
@@ -1867,8 +1908,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/12/17/roadmap-status-report-for-2018/" rel="bookmark" title="Permalink to Roadmap status report for 2018">
                 <h1 class="top-header">Roadmap status report for 2018</h1>
@@ -1880,7 +1921,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
 team has made towards achieving the goals in our 2018
 <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>
@@ -1958,8 +1999,8 @@ HackConf Sofia, PiterPy St. Petersburg and OpenFest Sofia. We've also been
 approved for a project stand at FOSDEM 2019 so watch this blog for more news.</p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/" rel="bookmark" title="Permalink to Kiwi TCMS 6.3">
                 <h1 class="top-header">Kiwi TCMS 6.3</h1>
@@ -1971,7 +2012,7 @@ approved for a project stand at FOSDEM 2019 so watch this blog for more news.</p
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
 security update that includes new versions of Django and Patternfly,
 new database migrations, lots of improvements, bug fixes and internal
@@ -2131,8 +2172,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/" rel="bookmark" title="Permalink to Kiwi TCMS 6.2.1">
                 <h1 class="top-header">Kiwi TCMS 6.2.1</h1>
@@ -2144,7 +2185,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.2.1! This is a small release
 that includes some improvements and bug-fixes. You can explore everything at
 <a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
@@ -2245,8 +2286,8 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/11/05/test-runner-plugin-specification/" rel="bookmark" title="Permalink to Test runner plugin specification">
                 <h1 class="top-header">Test runner plugin specification</h1>
@@ -2258,7 +2299,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>Happy Monday testers! Kiwi TCMS needs your help! We are looking for developers who
 wish to create plugins for popular test runners that will record test results
 in Kiwi TCMS! Initially we are looking for plugins for Python's unittest,
@@ -2297,126 +2338,126 @@ client!</p>
 for inspiration!</p>
 <h2>Behavior Specification</h2>
 <p><em>Please use the comments section to discuss unclear behavior and missing scenarios!</em></p>
-<div class="highlight"><pre><span></span>    SUMMARY: Will use configuration file if it exists
-    GIVEN: the file ~/.tcms.conf exists
-    WHEN: plugin initializes
-    THEN: the plugin will log an info message, read the file and
-    THEN: configure TCMS_API_URL, TCMS_USERNAME, TCMS_PASSWORD
-          variables with the respective values
+<div class="highlight"><pre><span></span><code>    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">use</span> <span class="n">configuration</span> <span class="n">file</span> <span class="k">if</span> <span class="n">it</span> <span class="n">exists</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">the</span> <span class="n">file</span> <span class="o">~/</span><span class="p">.</span><span class="n">tcms</span><span class="p">.</span><span class="n">conf</span> <span class="n">exists</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">will</span> <span class="nb">log</span> <span class="n">an</span> <span class="n">info</span> <span class="n">message</span><span class="p">,</span> <span class="n">read</span> <span class="n">the</span> <span class="n">file</span> <span class="n">and</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">configure</span> <span class="n">TCMS_API_URL</span><span class="p">,</span> <span class="n">TCMS_USERNAME</span><span class="p">,</span> <span class="n">TCMS_PASSWORD</span>
+          <span class="n">variables</span> <span class="s">with</span> <span class="s">the</span> <span class="s">respective</span> <span class="s">values</span>
 
 
-    SUMMARY: Will use ENVIRONMENT if configuration file doesn&#39;t exist
-    GIVEN: the file ~/.tcms.conf does not exists
-    WHEN: plugin initializes
-    THEN: the plugin will read configuration from environment and configure
-          the following variables/class members:
-          TCMS_API_URL, TCMS_USERNAME and TCMS_PASSWORD
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">use</span> <span class="n">ENVIRONMENT</span> <span class="k">if</span> <span class="n">configuration</span> <span class="n">file</span> <span class="n">doesn</span><span class="o">&#39;</span><span class="n">t</span> <span class="n">exist</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">the</span> <span class="n">file</span> <span class="o">~/</span><span class="p">.</span><span class="n">tcms</span><span class="p">.</span><span class="n">conf</span> <span class="n">does</span> <span class="n">not</span> <span class="n">exists</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">read</span> <span class="n">configuration</span> <span class="n">from</span> <span class="n">environment</span> <span class="n">and</span> <span class="n">configure</span>
+          <span class="n">the</span> <span class="s">following</span> <span class="s">variables/class</span> <span class="s">members:</span>
+          <span class="n">TCMS_API_URL</span><span class="p">,</span> <span class="n">TCMS_USERNAME</span> <span class="n">and</span> <span class="n">TCMS_PASSWORD</span>
 
 
-    SUMMARY: Will exit if TCMS_API_URL not configured
-    GIVEN: TCMS_API_URL variable is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">exit</span> <span class="k">if</span> <span class="n">TCMS_API_URL</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_API_URL</span> <span class="n">variable</span> <span class="n">is</span> <span class="n">empty</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="nb">log</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span> <span class="n">framework</span> <span class="n">set</span> <span class="n">exist</span> <span class="n">status</span> <span class="mi">1</span>
 
 
-    SUMMARY: Will exit if TCMS_USERNAME not configured
-    GIVEN: TCMS_USERNAME is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">exit</span> <span class="k">if</span> <span class="n">TCMS_USERNAME</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_USERNAME</span> <span class="n">is</span> <span class="n">empty</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="nb">log</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span> <span class="n">framework</span> <span class="n">set</span> <span class="n">exist</span> <span class="n">status</span> <span class="mi">1</span>
 
 
-    SUMMARY: Will exit if TCMS_PASSWORD not configured
-    GIVEN: TCMS_PASSWORD is empty
-    WHEN: plugin initializes
-    THEN: log a warning message and exit
-    AND: depending on the test runner framework set exist status 1
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">exit</span> <span class="k">if</span> <span class="n">TCMS_PASSWORD</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_PASSWORD</span> <span class="n">is</span> <span class="n">empty</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="nb">log</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span> <span class="n">framework</span> <span class="n">set</span> <span class="n">exist</span> <span class="n">status</span> <span class="mi">1</span>
 
 
-    SUMMARY: Will re-use existing TestPlan if configured
-    GIVEN: TCMS_RUN_ID environment variable is not empty
-    WHEN: plugin initializes
-    THEN:  this will be the Current_TestRun record to which the plugin is
-           going to add test execution results
-    AND: Current_TestPlan document in which the plugin will
-           search for test cases becomes Current_TestRun.plan
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">re</span><span class="o">-</span><span class="n">use</span> <span class="n">existing</span> <span class="n">TestPlan</span> <span class="k">if</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_RUN_ID</span> <span class="n">environment</span> <span class="n">variable</span> <span class="n">is</span> <span class="n">not</span> <span class="n">empty</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">initializes</span>
+    <span class="n">THEN</span><span class="p">:</span>  <span class="n">this</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">Current_TestRun</span> <span class="n">record</span> <span class="n">to</span> <span class="n">which</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">is</span>
+           <span class="n">going</span> <span class="s">to</span> <span class="s">add</span> <span class="s">test</span> <span class="s">execution</span> <span class="s">results</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">Current_TestPlan</span> <span class="n">document</span> <span class="n">in</span> <span class="n">which</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">will</span>
+           <span class="n">search</span> <span class="s">for</span> <span class="s">test</span> <span class="s">cases</span> <span class="s">becomes</span> <span class="s">Current_TestRun.plan</span>
 
 
-    SUMMARY: Will create new TestPlan &amp; TestRun if TCMS_RUN_ID not configured
-    GIVEN: TCMS_RUN_ID environment variable is empty
-    THEN: plugin will create a new TestPlan in Kiwi TCMS with attributes:
-        name=&#39;Automated test plan for %(product)&#39;
-        product=&#39;%(product)&#39;
-        product_version=&#39;%(version)&#39;
-        type=&#39;Unit&#39;
-    WHERE: %(product) is a placeholder for TCMS_PRODUCT==TRAVIS_REPO_SLUG==JOB_NAME
-           %(version) is a placeholder for TCMS_PRODUCT_VERSION==TRAVIS_COMMIT==TRAVIS_PULL_REQUEST_SHA==GIT_COMMIT
-    THEN: plugin will crate a new TestRun in Kiwi TCMS with attributes:
-        summary=&#39;Automated test run ....&#39;
-        plan=Current TestPlan
-        build=&#39;%(build)&#39;
-        manager=TCMS_USERNAME
-    WHERE: %(build) is a placeholder for TCMS_BUILD==TRAVIS_BUILD_NUMBER==BUILD_NUMBER
-    Environment variables are specified in:
-    https://docs.travis-ci.com/user/environment-variables#default-environment-variables
-    https://wiki.jenkins.io/display/JENKINS/Building+a+software+project#Buildingasoftwareproject-belowJenkinsSetEnvironmentVariables
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">create</span> <span class="n">new</span> <span class="n">TestPlan</span> <span class="o">&amp;</span> <span class="n">TestRun</span> <span class="k">if</span> <span class="n">TCMS_RUN_ID</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_RUN_ID</span> <span class="n">environment</span> <span class="n">variable</span> <span class="n">is</span> <span class="n">empty</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">TestPlan</span> <span class="n">in</span> <span class="n">Kiwi</span> <span class="n">TCMS</span> <span class="n">with</span> <span class="n">attributes</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">=</span><span class="s">&#39;Automated test plan for %(product)&#39;</span>
+        <span class="n">product</span><span class="p">=</span><span class="s">&#39;%(product)&#39;</span>
+        <span class="n">product_version</span><span class="p">=</span><span class="s">&#39;%(version)&#39;</span>
+        <span class="n">type</span><span class="p">=</span><span class="s">&#39;Unit&#39;</span>
+    <span class="n">WHERE</span><span class="p">:</span> <span class="c">%(product) is a placeholder for TCMS_PRODUCT==TRAVIS_REPO_SLUG==JOB_NAME</span>
+           <span class="c">%(version) is a placeholder for TCMS_PRODUCT_VERSION==TRAVIS_COMMIT==TRAVIS_PULL_REQUEST_SHA==GIT_COMMIT</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">crate</span> <span class="n">a</span> <span class="n">new</span> <span class="n">TestRun</span> <span class="n">in</span> <span class="n">Kiwi</span> <span class="n">TCMS</span> <span class="n">with</span> <span class="n">attributes</span><span class="p">:</span>
+        <span class="n">summary</span><span class="p">=</span><span class="s">&#39;Automated test run ....&#39;</span>
+        <span class="n">plan</span><span class="p">=</span><span class="n">Current</span> <span class="n">TestPlan</span>
+        <span class="n">build</span><span class="p">=</span><span class="s">&#39;%(build)&#39;</span>
+        <span class="n">manager</span><span class="p">=</span><span class="n">TCMS_USERNAME</span>
+    <span class="n">WHERE</span><span class="p">:</span> <span class="c">%(build) is a placeholder for TCMS_BUILD==TRAVIS_BUILD_NUMBER==BUILD_NUMBER</span>
+    <span class="n">Environment</span> <span class="s">variables</span> <span class="s">are</span> <span class="s">specified</span> <span class="s">in:</span>
+    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">travis</span><span class="o">-</span><span class="n">ci</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">environment</span><span class="o">-</span><span class="n">variables</span>#<span class="n">default</span><span class="o">-</span><span class="n">environment</span><span class="o">-</span><span class="n">variables</span>
+    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">wiki</span><span class="p">.</span><span class="n">jenkins</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">display</span><span class="o">/</span><span class="n">JENKINS</span><span class="o">/</span><span class="n">Building</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="n">software</span><span class="o">+</span><span class="n">project</span>#<span class="n">Buildingasoftwareproject</span><span class="o">-</span><span class="n">belowJenkinsSetEnvironmentVariables</span>
 
-    SUMMARY: Will not create duplicate Product, Version &amp; Build if they already exist
-    GIVEN: TCMS_RUN_ID is not configured
-    AND: %(product) exists
-    AND: %(version) exists
-    AND: %(build) exists
-    WHEN: plugin tries to auto-create TestPlan and TestRun
-    THEN: plugin will re-use %(product), %(version) and %(build) from the database
-    AND: not try to auto-create them
-
-
-    SUMMARY: Will auto-create Product, Version &amp; Build if they don&#39;t exist
-    GIVEN: TCMS_RUN_ID is not configured
-    AND: %(product) doesn&#39;t exist
-    AND: %(version) doesn&#39;t exist
-    AND: %(build) doesn&#39;t exist
-    WHEN: plugin tries to auto-create TestPlan and TestRun
-    THEN: %(product), %(version) and %(build) be created automatically
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">not</span> <span class="n">create</span> <span class="n">duplicate</span> <span class="n">Product</span><span class="p">,</span> <span class="n">Version</span> <span class="o">&amp;</span> <span class="n">Build</span> <span class="k">if</span> <span class="n">they</span> <span class="n">already</span> <span class="n">exist</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_RUN_ID</span> <span class="n">is</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(product) exists</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(version) exists</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(build) exists</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">tries</span> <span class="n">to</span> <span class="n">auto</span><span class="o">-</span><span class="n">create</span> <span class="n">TestPlan</span> <span class="n">and</span> <span class="n">TestRun</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">re</span><span class="o">-</span><span class="n">use</span> <span class="c">%(product), %(version) and %(build) from the database</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="n">not</span> <span class="k">try</span> <span class="n">to</span> <span class="n">auto</span><span class="o">-</span><span class="n">create</span> <span class="n">them</span>
 
 
-    SUMMARY: Unit test names are added to TestPlan
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestPlan for a TestCase with the same name
-    AND: if test case doesn&#39;t exist in Current_TestPlan
-    THEN: it will be added to Current_TestPlan
-    hint: it is probably best to process all unit test results at the end!
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Will</span> <span class="n">auto</span><span class="o">-</span><span class="n">create</span> <span class="n">Product</span><span class="p">,</span> <span class="n">Version</span> <span class="o">&amp;</span> <span class="n">Build</span> <span class="k">if</span> <span class="n">they</span> <span class="n">don</span><span class="o">&#39;</span><span class="n">t</span> <span class="n">exist</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">TCMS_RUN_ID</span> <span class="n">is</span> <span class="n">not</span> <span class="n">configured</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(product) doesn&#39;t exist</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(version) doesn&#39;t exist</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="c">%(build) doesn&#39;t exist</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">tries</span> <span class="n">to</span> <span class="n">auto</span><span class="o">-</span><span class="n">create</span> <span class="n">TestPlan</span> <span class="n">and</span> <span class="n">TestRun</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="c">%(product), %(version) and %(build) be created automatically</span>
 
 
-    SUMMARY: Unit test names are added to TestRun
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
-          the current unit test name
-    hint: (or Current_TestCase object from previous scenario, depending on implementation)
-    AND: if such TestCaseRun doesn&#39;t exist in Current_TestRun
-    THEN: it will be added to Current_TestRun
-    hint: it is probably best to process all unit test results at the end!
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Unit</span> <span class="n">test</span> <span class="n">names</span> <span class="n">are</span> <span class="n">added</span> <span class="n">to</span> <span class="n">TestPlan</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">we</span> <span class="n">have</span> <span class="n">good</span> <span class="n">plugin</span> <span class="n">configuration</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">loops</span> <span class="n">over</span> <span class="n">unit</span> <span class="n">tests</span> <span class="n">emitted</span> <span class="n">by</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">check</span> <span class="n">Current_TestPlan</span> <span class="k">for</span> <span class="n">a</span> <span class="n">TestCase</span> <span class="n">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">name</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="k">if</span> <span class="n">test</span> <span class="k">case</span> <span class="n">doesn</span><span class="o">&#39;</span><span class="n">t</span> <span class="n">exist</span> <span class="n">in</span> <span class="n">Current_TestPlan</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">added</span> <span class="n">to</span> <span class="n">Current_TestPlan</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="n">it</span> <span class="n">is</span> <span class="n">probably</span> <span class="n">best</span> <span class="n">to</span> <span class="n">process</span> <span class="n">all</span> <span class="n">unit</span> <span class="n">test</span> <span class="n">results</span> <span class="n">at</span> <span class="n">the</span> <span class="k">end</span>!
 
 
-    SUMMARY: Current_TestRun is updated with unit test results
-    GIVEN: we have good plugin configuration
-    WHEN: plugin loops over unit tests emitted by the test runner
-    THEN: plugin will check Current_TestRun for a TestCaseRun object which matches
-          the current unit test name
-    hint: (or Current_TestCase object from previous scenario, depending on implementation)
-    AND: if TestCaseRun object exists in Current_TestRun
-    THEN: its status will be updated with the execution result coming from the test runner
-    hint: it is probably best to process all unit test results at the end!
-</pre></div>
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Unit</span> <span class="n">test</span> <span class="n">names</span> <span class="n">are</span> <span class="n">added</span> <span class="n">to</span> <span class="n">TestRun</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">we</span> <span class="n">have</span> <span class="n">good</span> <span class="n">plugin</span> <span class="n">configuration</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">loops</span> <span class="n">over</span> <span class="n">unit</span> <span class="n">tests</span> <span class="n">emitted</span> <span class="n">by</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">check</span> <span class="n">Current_TestRun</span> <span class="k">for</span> <span class="n">a</span> <span class="n">TestCaseRun</span> <span class="n">object</span> <span class="n">which</span> <span class="n">matches</span>
+          <span class="n">the</span> <span class="s">current</span> <span class="s">unit</span> <span class="s">test</span> <span class="s">name</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="p">(</span><span class="n">or</span> <span class="n">Current_TestCase</span> <span class="n">object</span> <span class="n">from</span> <span class="n">previous</span> <span class="n">scenario</span><span class="p">,</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">implementation</span><span class="p">)</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="k">if</span> <span class="n">such</span> <span class="n">TestCaseRun</span> <span class="n">doesn</span><span class="o">&#39;</span><span class="n">t</span> <span class="n">exist</span> <span class="n">in</span> <span class="n">Current_TestRun</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">added</span> <span class="n">to</span> <span class="n">Current_TestRun</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="n">it</span> <span class="n">is</span> <span class="n">probably</span> <span class="n">best</span> <span class="n">to</span> <span class="n">process</span> <span class="n">all</span> <span class="n">unit</span> <span class="n">test</span> <span class="n">results</span> <span class="n">at</span> <span class="n">the</span> <span class="k">end</span>!
+
+
+    <span class="n">SUMMARY</span><span class="p">:</span> <span class="n">Current_TestRun</span> <span class="n">is</span> <span class="n">updated</span> <span class="n">with</span> <span class="n">unit</span> <span class="n">test</span> <span class="n">results</span>
+    <span class="n">GIVEN</span><span class="p">:</span> <span class="n">we</span> <span class="n">have</span> <span class="n">good</span> <span class="n">plugin</span> <span class="n">configuration</span>
+    <span class="n">WHEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">loops</span> <span class="n">over</span> <span class="n">unit</span> <span class="n">tests</span> <span class="n">emitted</span> <span class="n">by</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">plugin</span> <span class="n">will</span> <span class="n">check</span> <span class="n">Current_TestRun</span> <span class="k">for</span> <span class="n">a</span> <span class="n">TestCaseRun</span> <span class="n">object</span> <span class="n">which</span> <span class="n">matches</span>
+          <span class="n">the</span> <span class="s">current</span> <span class="s">unit</span> <span class="s">test</span> <span class="s">name</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="p">(</span><span class="n">or</span> <span class="n">Current_TestCase</span> <span class="n">object</span> <span class="n">from</span> <span class="n">previous</span> <span class="n">scenario</span><span class="p">,</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">implementation</span><span class="p">)</span>
+    <span class="n">AND</span><span class="p">:</span> <span class="k">if</span> <span class="n">TestCaseRun</span> <span class="n">object</span> <span class="n">exists</span> <span class="n">in</span> <span class="n">Current_TestRun</span>
+    <span class="n">THEN</span><span class="p">:</span> <span class="n">its</span> <span class="n">status</span> <span class="n">will</span> <span class="n">be</span> <span class="n">updated</span> <span class="n">with</span> <span class="n">the</span> <span class="n">execution</span> <span class="n">result</span> <span class="n">coming</span> <span class="n">from</span> <span class="n">the</span> <span class="n">test</span> <span class="n">runner</span>
+    <span class="n">hint</span><span class="p">:</span> <span class="n">it</span> <span class="n">is</span> <span class="n">probably</span> <span class="n">best</span> <span class="n">to</span> <span class="n">process</span> <span class="n">all</span> <span class="n">unit</span> <span class="n">test</span> <span class="n">results</span> <span class="n">at</span> <span class="n">the</span> <span class="k">end</span>!
+</code></pre></div>
 
 
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="bookmark" title="Permalink to Kiwi TCMS 6.2">
                 <h1 class="top-header">Kiwi TCMS 6.2</h1>
@@ -2428,7 +2469,7 @@ for inspiration!</p>
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.2! This is a small release
 that removes squashed migrations from previous releases and includes a few
 improvements. You can explore everything at
@@ -2543,8 +2584,8 @@ Test runs should only be able to select product builds (after
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/10/29/kiwi-tcms-611/" rel="bookmark" title="Permalink to Kiwi TCMS 6.1.1">
                 <h1 class="top-header">Kiwi TCMS 6.1.1</h1>
@@ -2556,7 +2597,7 @@ Test runs should only be able to select product builds (after
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.1.1! This release
 squashes database migrations and removes
 older migrations that have been squashed in previous releases, a few
@@ -2658,8 +2699,8 @@ Test runs should only be able to select product builds (after
 </div>
 
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="bookmark" title="Permalink to Kiwi TCMS API performance baseline">
                 <h1 class="top-header">Kiwi TCMS API performance baseline</h1>
@@ -2671,7 +2712,7 @@ Test runs should only be able to select product builds (after
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
 an experiment to establish a baseline.
 For API requests I got <strong>7.5 req/sec or 130 msec/req</strong> which is
@@ -2688,7 +2729,7 @@ adds test cases to test run (250 requests) and finally updates the statuses
 An example is available at <a href="https://public.tenant.kiwitcms.org/run/567/">TR #567</a>!</p>
 <p>On localhost, running the development server (<code>./manage.py runserver</code>) with an
 SQLite database I got:</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">time</span> python perf-script
+<div class="highlight"><pre><span></span><code>$ <span class="nb">time</span> python perf-script
 
 real    2m6.450s
 user    0m1.069s
@@ -2711,7 +2752,7 @@ $ <span class="nb">time</span> python perf-script
 real    2m9.197s
 user    0m1.050s
 sys     0m0.353s
-</pre></div>
+</code></pre></div>
 
 
 <p>This measures at 120 msec/req or 7.85 req/sec!</p>
@@ -2720,7 +2761,7 @@ sys     0m0.353s
 instance (via docker-compose) with the default <code>centos/mariadb</code> image!
 No extra settings or changes. I used the same computer over a WiFi
 connection and a pretty standard home-speed Internet connection. Times are:</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">time</span> python perf-script
+<div class="highlight"><pre><span></span><code>$ <span class="nb">time</span> python perf-script
 
 real    2m18.983s
 user    0m1.175s
@@ -2743,23 +2784,23 @@ $ <span class="nb">time</span> python perf-script
 real    2m21.521s
 user    0m1.154s
 sys     0m0.091s
-</pre></div>
+</code></pre></div>
 
 
 <p>This measures at 140 sec/req or 7.05 req/sec!</p>
 <p>Note: since I am using Python 3.6 I had to modify the file
 <code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
-<div class="highlight"><pre><span></span><span class="c1"># Used by http.client if no context is explicitly passed.</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Used by http.client if no context is explicitly passed.</span>
 <span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>The issue has been reported in
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
 <p>Happy testing!</p>
         </div>
-    </section>
-    <section class="col-12 secondary">
+    </article>
+    <article class="blog-list">
         <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="bookmark" title="Permalink to Kiwi TCMS 6.1">
                 <h1 class="top-header">Kiwi TCMS 6.1</h1>
@@ -2771,7 +2812,7 @@ sys     0m0.091s
             </p>
         </div>
 
-        <div class="article">
+        <div class="content">
             <p>We're happy to announce Kiwi TCMS version 6.1! This release
 introduces new database migrations,
 internal updates and bug fixes. It is a small release designed
@@ -2886,43 +2927,58 @@ Test runs should only be able to select product builds (after
 </div>
 
         </div>
-    </section>
+    </article>
 
-<section id="pagination" class="col-12 secondary">
-    <ul class="pagination">
-        <li>
-            <a href="/blog/index2.html">&larr;Newest Posts </a>
-        </li>
-        <li>
+<section id="pagination">
+            <a href="/blog/index2.html" class="btn" icon="reversed"><i reversed></i> Newer Posts </a>
+        <p>
             Page 3 / 5
-        </li>
-        <li>
-            <a href="/blog/index4.html">Older Posts &rarr;</a>
-        </li>
-    </ul>
+        </p>
+            <a href="/blog/index4.html" class="btn" icon>Older Posts <i></i></a>
 </section>
-        <!-- Newsletter Form Section -->
-        <section class="newsletter secondary col-12">
-            <div id="mc_embed_signup">
-                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Project news only, GDPR compliant. Subscribe here!</a>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="col-12 footer primary">
-            <div class="col-10 footer-copyright">
+</section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
                 <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
                 <p><a href="/legal/">Legal information</a></p>
             </div>
-            <div class="col-2">
-                <ul class="footer-sociallinks">
-                    <li><a href="https://twitter.com/KiwiTCMS"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/kiwitcms/Kiwi"><i class="fab fa-github"></i></a></li>
-                </ul>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>
         </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
 
 
             <!-- Google analytics -->
