@@ -92,6 +92,15 @@ code {
 	border: 1px solid var(--trans-green);
 }
 
+pre > code {
+    border: none;
+    padding: 0;
+}
+
+pre > code > span {
+    font-family: "Source Code Pro", monospace;
+}
+
 ::-moz-selection {
 	color: var(--white);
 	background: var(--dark-green);
