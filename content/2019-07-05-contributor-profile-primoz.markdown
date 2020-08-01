@@ -22,18 +22,12 @@ This is our community and these are their stories.
         <a href="https://stackoverflow.com/questions/tagged/kiwi-tcms">StackOverflow</a> as well.
     </p>
 
-    <a href="https://github.com/Prome88">
-        <span class="icon fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-        </span>
+    <a href="https://github.com/Prome88" class="bio-link">
+        <i class="lab la-github"></i>
     </a>
 
-    <a href="https://www.linkedin.com/in/primozklemen/">
-        <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-        </span>
+    <a href="https://www.linkedin.com/in/primozklemen/" class="bio-link">
+        <i class="lab la-linkedin"></i>
     </a>
 </div>
 
