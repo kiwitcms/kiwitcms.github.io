@@ -984,14 +984,14 @@ body.page section p, body.page section li, body.page section pre{
 	font-size:20px;
 }
 
-body.page section a:not(.btn),
-section#blog-list a:not(.btn),
-section#blog-article a:not(.btn){
+body.page section a:not(.btn):not(.bio-link),
+section#blog-list a:not(.btn):not(.bio-link),
+section#blog-article a:not(.btn):not(.bio-link){
 	color:var(--dark-green);
 }
-body.page section a:not(.btn):hover,
-section#blog-list a:not(.btn):hover,
-section#blog-article a:not(.btn):hover{
+body.page section a:not(.btn):not(.bio-link):hover,
+section#blog-list a:not(.btn):not(.bio-link):hover,
+section#blog-article a:not(.btn):not(.bio-link):hover{
 	color:var(--light-green);
 }
 
