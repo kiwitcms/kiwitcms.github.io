@@ -1130,7 +1130,11 @@ font-size: 25px;
 	font-size: 30px;
 	color:var(--dark-green);
 }
-#blog-article h1, #blog-article h2, #blog-article h3, #blog-article h4, #blog-article h5{
+#blog-list .content h1, #blog-article h1,
+#blog-list .content h2, #blog-article h2,
+#blog-list .content h3, #blog-article h3,
+#blog-list .content h4, #blog-article h4,
+#blog-list .content h5, #blog-article h5{
 	margin-top: var(--x2-padding);
 }
 #blog-article article.content{
