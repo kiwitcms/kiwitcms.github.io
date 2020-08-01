@@ -17,10 +17,16 @@
     }
 
     /* S PRICING */
-    #pricing .plans-modal {
+    #pricing {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #pricing h1 {
         grid-column: 1/4;
     }
-
+    #pricing .plans-modal {
+        grid-column: 2/4;
+    }
+    
     /* S SCREENS > SLIDER */
 
     .tns-slide-active,
