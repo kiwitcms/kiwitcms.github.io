@@ -540,10 +540,12 @@ blockquote p.quote {
 #pricing .plans-modal > a:hover {
 	background: var(--light-green);
 }
+#features a:not(.btn),
 #pricing .plan ul a,
 #pricing .plans-modal ul a {
 	color: var(--dark-green);
 }
+#features a:not(.btn):hover,
 #pricing .plan ul a:hover,
 #pricing .plans-modal ul a:hover {
 	color: var(--light-green);
