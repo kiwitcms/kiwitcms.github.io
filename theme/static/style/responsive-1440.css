@@ -26,7 +26,7 @@
     #pricing .plans-modal {
         grid-column: 2/4;
     }
-    
+
     /* S SCREENS > SLIDER */
 
     .tns-slide-active,
@@ -42,7 +42,7 @@
 
     /* S TESTIMONIALS */
 
-    blockquote {
+    body.page_home blockquote {
         grid-template-columns: 1fr;
         grid-template-areas:
             "description"
