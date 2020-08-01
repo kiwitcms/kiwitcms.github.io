@@ -108,7 +108,10 @@ pre > code {
 
 /* pre > code > span { */
 pre, pre span, pre code span{
-    font-family: "Source Code Pro", monospace;
+	font-family: "Source Code Pro", monospace;
+}
+pre, pre *{
+	line-height: normal;
 }
 
 ::-moz-selection {
