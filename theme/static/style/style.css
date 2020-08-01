@@ -66,6 +66,12 @@
 }
 
 /* COMMON */
+body{
+    display: flex;
+    flex-direction: column;
+    place-content: start space-between;
+    height: 100vh;
+}
 
 section,
 footer {
