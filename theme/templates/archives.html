@@ -3,11 +3,9 @@
 {% block title %}Archives{% endblock %}
 
 {% block content %}
-    <header>
-        <h1 class="top-header">Archives</h1>
-    </header>
 
-    <section>
+    <section id="blog-list">
+        <h1 class="top-header">Archives</h1>
         {% for article in dates %}
             <h2 class="top-subheader">{{ article.locale_date }}</h2>
             <p>
