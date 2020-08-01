@@ -99,7 +99,8 @@ pre > code {
     padding: 0;
 }
 
-pre > code > span {
+/* pre > code > span { */
+pre, pre span, pre code span{
     font-family: "Source Code Pro", monospace;
 }
 
@@ -1128,6 +1129,9 @@ font-size: 25px;
 #blog-article h2.top-subheader{
 	font-size: 30px;
 	color:var(--dark-green);
+}
+#blog-article h1, #blog-article h2, #blog-article h3, #blog-article h4, #blog-article h5{
+	margin-top: var(--x2-padding);
 }
 #blog-article article.content{
 	margin-top:var(--x3-padding);
