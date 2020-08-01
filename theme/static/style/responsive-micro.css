@@ -183,7 +183,7 @@
     }
     /* S TESTIMONIALS */
 
-    blockquote {
+    body.page_home blockquote {
         grid-template-columns: 1fr;
         grid-template-areas:
             "description"
