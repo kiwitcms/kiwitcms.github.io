@@ -3,11 +3,11 @@
 {% block title %}Archives{% endblock %}
 
 {% block content %}
-    <header class="col-12 header secondary">
+    <header>
         <h1 class="top-header">Archives</h1>
     </header>
 
-    <section class="col-12 article secondary">
+    <section>
         {% for article in dates %}
             <h2 class="top-subheader">{{ article.locale_date }}</h2>
             <p>

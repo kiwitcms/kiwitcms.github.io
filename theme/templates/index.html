@@ -3,7 +3,8 @@
 
 {% block content %}
 <section id="blog-list">
-<h1>Blog</h1>
+    <h1>{% block headline %}Blog{% endblock %}</h1>
+
     {% for article in articles_page.object_list %}
     <article class="blog-list">
         <div class="header">
