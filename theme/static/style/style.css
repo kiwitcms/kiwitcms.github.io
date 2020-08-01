@@ -39,6 +39,7 @@
 	--la-play: "\f144";
 	--la-check: "\f14a";
 	--la-arrow: "\f061";
+	--la-arrow-rev: "\f060";
 	--la-cl-down: "\f381";
 	--la-book: "\f02d";
 	--la-team: "\f0c0";
@@ -145,6 +146,9 @@ ul.caret details {
 .btn[icon] {
 	padding: 9px 20px 9px var(--x3-padding);
 }
+.btn[icon="reversed"] {
+	padding: 9px var(--x3-padding) 9px 20px;
+}
 .btn:hover, .drop-btn.drop-down .btn {
 	background: var(--light-green);
 }
@@ -161,10 +165,19 @@ ul.caret details {
 	transition: margin 0.1s linear, transform 0.05s linear;
 	display:inline-block;
 }
+.btn i[reversed]:after {
+	margin-right: 45px;
+	margin-left: 10px;
+	content: var(--la-arrow-rev);
+}
 
 .btn:hover i:after, .drop-btn.drop-down .btn i:after {
 	margin-left: 55px;
 	margin-right: 0px;
+}
+.btn:hover i[reversed]:after{
+	margin-right: 55px;
+	margin-left: 0px;
 }
 .drop-btn.drop-down .btn i:after {
 transform: rotate(90deg);
@@ -962,14 +975,14 @@ body.page section p, body.page section li, body.page section pre{
 	font-size:20px;
 }
 
-body.page section a,
-section#blog-list a,
-section#blog-article a{
+body.page section a:not(.btn),
+section#blog-list a:not(.btn),
+section#blog-article a:not(.btn){
 	color:var(--dark-green);
 }
-body.page section a:hover,
-section#blog-list a:hover,
-section#blog-article a:hover{
+body.page section a:not(.btn):hover,
+section#blog-list a:not(.btn):hover,
+section#blog-article a:not(.btn):hover{
 	color:var(--light-green);
 }
 
@@ -1140,5 +1153,10 @@ font-size: 25px;
 #blog-article article.content{
 	margin-top:var(--x3-padding);
 }
-
+#pagination{
+	padding: var(--x3-padding) 0 0;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
