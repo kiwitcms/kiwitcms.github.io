@@ -27,25 +27,16 @@ This is our community and these are their stories.
         QA specialists.
     </p>
 
-    <a href="https://twitter.com/anetavp">
-        <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-        </span>
+    <a href="https://twitter.com/anetavp" class="bio-link">
+        <i class="lab la-twitter"></i>
     </a>
 
-    <a href="https://github.com/apetkova">
-        <span class="icon fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-        </span>
+    <a href="https://github.com/apetkova" class="bio-link">
+        <i class="lab la-github"></i>
     </a>
 
-    <a href="https://bg.linkedin.com/in/apetkova">
-        <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-        </span>
+    <a href="https://bg.linkedin.com/in/apetkova" class="bio-link">
+        <i class="lab la-linkedin"></i>
     </a>
 </div>
 
