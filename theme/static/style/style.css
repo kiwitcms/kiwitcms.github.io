@@ -551,6 +551,9 @@ blockquote p.quote {
 #pricing .plans-modal ul a:hover {
 	color: var(--light-green);
 }
+summary, #plans-modal h3{
+	cursor: pointer;
+}
 
 /* S PRICING > Details */
 #pricing summary::-webkit-details-marker{
