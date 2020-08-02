@@ -87,39 +87,6 @@
         shown.style.left = 0;
     }
 
-    // swipe detection in pure JavaScript
-    // http://www.javascriptkit.com/javatutors/touchevents2.shtml
-    function swipedetect(touchsurface, callback){
-        var startX,
-            startTime,
-            threshold = 150, //required min distance traveled to be considered swipe
-            allowedTime = 300, // maximum time allowed to travel that distance
-            handleswipe = callback || function(swipedir){};
-
-        touchsurface.addEventListener('touchstart', function(e){
-            startX = e.changedTouches[0].pageX;
-            startTime = new Date().getTime();
-            e.preventDefault();
-        }, false);
-
-        touchsurface.addEventListener('touchmove', function(e){
-            // prevent scrolling when inside DIV
-            e.preventDefault();
-        }, false);
-
-        touchsurface.addEventListener('touchend', function(e){
-            var distX = e.changedTouches[0].pageX - startX,
-                elapsedTime = new Date().getTime() - startTime;
-                swipedir = 0;
-            if ((elapsedTime <= allowedTime) && (Math.abs(distX) >= threshold)) {
-                // direction indices are reversed compared to when clicking the buttons
-                swipedir = (distX < 0) ? 1 : -1;
-                handleswipe(swipedir);
-            }
-            e.preventDefault();
-        }, false);
-    }
-
     // initialization and callbacks
     updateDisplay(0);
     nextBtn.addEventListener('mouseover', function(){ changeDirection(1) });
@@ -127,9 +94,3 @@
 
     nextBtn.addEventListener('click', function(){ rollImage(1); });
     prevBtn.addEventListener('click', function(){ rollImage(-1); });
-
-    // sets up a touch-gesture event listener
-    swipedetect(document.getElementsByClassName('img-wrapper')[0], function(direction){
-        changeDirection(direction);
-        setTimeout(function() { rollImage(direction); }, 50);
-    });
