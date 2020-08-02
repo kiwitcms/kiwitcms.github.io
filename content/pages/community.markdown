@@ -20,7 +20,7 @@ We welcome community contributions! Please see the [contribution page](http://ki
 
 To make Kiwi TCMS a welcoming and harassment-free experience for everyone, we follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
 
-# Acknowledgements
+# Credits
 
 Kiwi TCMS was initially started by [Red Hat, Inc.](https://www.redhat.com/en) under the name Nitrate.
 It was intended as a replacement for Mozilla's Testopia and has grown on its own
