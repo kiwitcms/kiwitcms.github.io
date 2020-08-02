@@ -110,6 +110,14 @@ code {
 	font-size: inherit;
 	border-radius: 2px;
 	border: 1px solid var(--trans-green);
+	overflow: scroll;
+    width: fit-content;
+    max-width: 86vw;
+    display: inline-grid;
+    overflow-wrap: normal!important;
+}
+p > code{
+	margin-bottom:0;
 }
 
 pre > code {
@@ -557,12 +565,18 @@ summary, #plans-modal h3{
 }
 
 /* S PRICING > Details */
-#pricing summary::-webkit-details-marker{
+summary::-webkit-details-marker{
 	display: none;
 }
-#pricing summary::marker{
+summary::marker{
 	display:none;
 }
+::-webkit-details-marker { display:none; }
+
+summary{
+	list-style-image: none;
+}
+
 
 #pricing summary:after {
 	height: 20px;
@@ -1136,17 +1150,18 @@ font-size: 25px;
 }
 #blog-list article.blog-list .content *, #blog-article article.content *{
 	margin-bottom:var(--x1-padding);
+	max-width: 86vw;
 	overflow-wrap: break-word;
 }
 #blog-list article.blog-list .content img, #blog-article article.content img{
 	max-width: 100%;
 }
 #blog-list article.blog-list .content pre, #blog-article article.content pre{
-	white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
-	word-wrap: break-word;
 	font-family: "Source Code Pro", monospace;
+	overflow: scroll;
+    width: fit-content;
+    max-width: 86vw;
+    background: var(--light-gray);
 }
 #blog-list article.blog-list .content a, #blog-article article.content a{
 	overflow-wrap: anywhere;
