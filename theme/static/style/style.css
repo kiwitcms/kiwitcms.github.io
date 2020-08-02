@@ -454,6 +454,8 @@ header .video a {
 	background: var(--white);
 	filter: var(--light-shadow);
 	padding: 30px;
+	display: flex;
+    flex-direction: column;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
