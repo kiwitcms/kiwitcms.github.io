@@ -113,7 +113,7 @@
         width: 100vw;
         height: calc(var(--unusable-padding) * 2);
         background-color: var(--dark-green);
-        margin: calc(var(--x3-padding) * -1 - 1px) calc(var(--unusable-padding) * -1 - var(--x3-padding) - 2px);
+        margin: calc(var(--x3-padding) * -1 - 1px) calc(var(--unusable-padding) * -1 - var(--x3-padding) - 1px);
         z-index: -100;
     }
     .feature-list div:nth-child(5):before {
