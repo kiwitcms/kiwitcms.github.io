@@ -559,11 +559,17 @@ summary, #plans-modal h3{
 }
 
 /* S PRICING > Details */
-#pricing summary::-webkit-details-marker{
+summary::-webkit-details-marker{
 	display: none;
 }
-#pricing summary::marker{
+summary::marker{
 	display:none;
+}
+
+::-webkit-details-marker { display:none; }
+
+summary{
+    list-style-image: none;
 }
 
 #pricing summary:after {
