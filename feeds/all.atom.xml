@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-07-11T14:20:00+03:00</updated><entry><title>Customize the information used for 1-click bug reports</title><link href="/blog/atodorov/2020/07/11/customize-the-information-used-for-1-click-bug-reports/" rel="alternate"></link><published>2020-07-11T14:20:00+03:00</published><updated>2020-07-11T14:20:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2020-07-11:/blog/atodorov/2020/07/11/customize-the-information-used-for-1-click-bug-reports/</id><summary type="html">&lt;p&gt;Kiwi TCMS integration with 3rd party bug trackers supports the
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-08-06T15:40:00+03:00</updated><entry><title>Kiwi TCMS Enterprise v8.5.2-mt</title><link href="/blog/kiwi-tcms-team/2020/08/06/kiwi-tcms-enterprise-v852-mt/" rel="alternate"></link><published>2020-08-06T15:40:00+03:00</published><updated>2020-08-06T15:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-06:/blog/kiwi-tcms-team/2020/08/06/kiwi-tcms-enterprise-v852-mt/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS Enterprise version 8.5.2-mt
+and extended support hours for subscribers in America.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; this is only available to customers with an active
+&lt;a class="reference external" href="/#pricing"&gt;Enterprise subscription&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+mrsenko/kiwitcms-enterprise   8.5.2-mt      633291dd5219    887MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v8-5-1-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v8.5.1-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on …&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS Enterprise version 8.5.2-mt
+and extended support hours for subscribers in America.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; this is only available to customers with an active
+&lt;a class="reference external" href="/#pricing"&gt;Enterprise subscription&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+mrsenko/kiwitcms-enterprise   8.5.2-mt      633291dd5219    887MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v8-5-1-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v8.5.1-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v8.5&lt;/li&gt;
+&lt;li&gt;Update django-ses from 1.0.1 to 1.0.2&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-github-app from 1.0 to 1.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This release includes improvements and bug-fixes for
+&lt;a class="reference external" href="https://github.com/kiwitcms/github-app#v11-05-aug-2020"&gt;kiwitcms-github-app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;An important change is how issues reported via our &lt;em&gt;1-click bug report&lt;/em&gt; feature
+are presented on GitHub. For public repositories issues reported via
+&lt;a class="reference external" href="https://github.com/apps/kiwi-tcms"&gt;Kiwi TCMS + GitHub App integration&lt;/a&gt;
+will be opened by &lt;em&gt;&amp;#64;kiwitcms-bot with Kiwi TCMS&lt;/em&gt; as shown below:&lt;/p&gt;
+&lt;img alt="" src="/images/kiwitcms-bot-gh-issue-reporter.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="extended-support-hours"&gt;
+&lt;h2&gt;Extended support hours&lt;/h2&gt;
+&lt;p&gt;Working hours have been updated as follows:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;09-21 UTC/Mon-Fri with response within 24 hours for Enterprise subscribers&lt;/li&gt;
+&lt;li&gt;09-17 UTC/Mon-Fri with response within 72 hours for Private Tenant subscribers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Customize the information used for 1-click bug reports</title><link href="/blog/atodorov/2020/07/11/customize-the-information-used-for-1-click-bug-reports/" rel="alternate"></link><published>2020-07-11T14:20:00+03:00</published><updated>2020-07-11T14:20:00+03:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2020-07-11:/blog/atodorov/2020/07/11/customize-the-information-used-for-1-click-bug-reports/</id><summary type="html">&lt;p&gt;Kiwi TCMS integration with 3rd party bug trackers supports the
 &lt;em&gt;1-click bug report&lt;/em&gt; feature.
 However you may want to change how the initial information is structured or
 even what exactly is written in the initial comment. This article
