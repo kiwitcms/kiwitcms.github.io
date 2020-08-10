@@ -9,6 +9,10 @@ tags: community
 We are happy to announce that [QGIS](https://qgis.org) has chosen Kiwi TCMS
 for the basis of their *Quality Assurance methodology and infrastructure*
 improvement program!
+Kiwi TCMS will play a central role in storing test case definitions,
+organizing test cycles, and assigning and tracking test executions by testers
+from the QGIS community.
+
 
 <div class="member-bio" style="margin-top: 2vh">
     <img src="/images/customers/qgis-color.png" style="float:left; margin-right: 1vw">
@@ -26,7 +30,7 @@ The proposal
 highest voted proposal in the
 [2020 QGIS Grant Program](http://blog.qgis.org/2020/07/10/qgis-grant-programme-2020-results/)
 and has been awarded a budget of 5000€!
-This grant will allow QGIS contributors to spend significantly more time setting up the
+This grant will allow the proponents to spend significantly more time setting up the
 infrastructure and planning a methodology for manual testing.
 
 
