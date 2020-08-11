@@ -88,6 +88,47 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/atodorov/2019/05/25/pylint-workshop-with-django-bulgaria-user-group/" rel="bookmark" title="Permalink to Pylint workshop with Django Bulgaria user group">
+                <h1 class="top-header">Pylint workshop with Django Bulgaria user group</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on Sat 25 May 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>On Tuesday I hosted my pylint workshop during the regular
+<a href="https://www.facebook.com/events/295673718035353/">Django Bulgaria meetup</a>.
+This edition was the first which was practice based.</p>
+<p>Attendance numbers were low but participation was very good. We managed to
+create 4 new checkers for Kiwi TCMS:</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/pull/949">PR #949 - AutoField checker</a></li>
+<li><a href="https://github.com/kiwitcms/Kiwi/pull/950">PR #950 - OneToOneField checker</a></li>
+<li><a href="https://github.com/kiwitcms/Kiwi/pull/951">PR #951 - discover directories without __init__.py</a></li>
+<li><a href="https://github.com/kiwitcms/Kiwi/pull/952">PR #952 - empty class checker</a></li>
+<li><a href="https://github.com/kiwitcms/Kiwi/pull/955">PR #955 - function based view checker</a></li>
+</ul>
+<p>Many thanks to all contributors. These new checkers have discovered quite a
+few new issues with Kiwi TCMS so this is an area which our team is going to improve.</p>
+<p>Those who missed the workshop will be able to catch up one of the next editions:</p>
+<ul>
+<li>26-29 August, GUADEC, Thessaloniki - TBC (presentation)</li>
+<li>end of September, Python meetup, Zagreb - TBA</li>
+<li>03-05 October, PyCon Balkan, Belgrade - TBC</li>
+<li>11-13 October, HackConf, Sofia</li>
+<li>15-17 October, TestCon Europe, Vilnius - TBC (backup presentation)</li>
+<li>23-25 October, Testwarez, Ossa, Poland - TBC (presentation)</li>
+<li>14-15 November, Software Engineering Conference Russia, Saint-Petersburg - TBC</li>
+<li>20-22 November, ConTEST, New York - TBC (workshop and/or presentation)</li>
+</ul>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="bookmark" title="Permalink to Kiwi TCMS 6.9">
                 <h1 class="top-header">Kiwi TCMS 6.9</h1>
             </a>
@@ -2817,106 +2858,6 @@ Test runs should only be able to select product builds (after
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="bookmark" title="Permalink to Kiwi TCMS API performance baseline">
-                <h1 class="top-header">Kiwi TCMS API performance baseline</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/atodorov/">Alexander Todorov</a>
-                on Fri 26 October 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
-an experiment to establish a baseline.
-For API requests I got <strong>7.5 req/sec or 130 msec/req</strong> which is
-1.5x <a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/">slower than GitHub</a>!</p>
-<p>I used <code>perf-script</code>
-(<a href="https://github.com/kiwitcms/api-scripts/blob/master/perf-script">see here</a>)
-to measure that. The script takes the first 250 test cases from our test suite
-and on every execution creates a new TestPlan (1 API request), then creates
-new test cases (250 requests), adds cases to test plan (250 requests),
-creates new product build (1 API request), creates new TestRun (1 API request),
-adds test cases to test run (250 requests) and finally updates the statuses
-(250 requests).</p>
-<p>A total of 1003 API requests are sent to Kiwi TCMS every time you start this script!
-An example is available at <a href="https://public.tenant.kiwitcms.org/run/567/">TR #567</a>!</p>
-<p>On localhost, running the development server (<code>./manage.py runserver</code>) with an
-SQLite database I got:</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">time</span> python perf-script
-
-real    2m6.450s
-user    0m1.069s
-sys     0m0.331s
-
-$ <span class="nb">time</span> python perf-script
-
-real    2m7.472s
-user    0m1.057s
-sys     0m0.342s
-
-$ <span class="nb">time</span> python perf-script
-
-real    2m9.368s
-user    0m1.072s
-sys     0m0.351s
-
-$ <span class="nb">time</span> python perf-script
-
-real    2m9.197s
-user    0m1.050s
-sys     0m0.353s
-</code></pre></div>
-
-
-<p>This measures at 120 msec/req or 7.85 req/sec!</p>
-<p><a href="https://public.tenant.kiwitcms.org/login/github-app/">public.tenant.kiwitcms.org</a> is running on an
-<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware">AWS t2.micro</a>
-instance (via docker-compose) with the default <code>centos/mariadb</code> image!
-No extra settings or changes. I used the same computer over a WiFi
-connection and a pretty standard home-speed Internet connection. Times are:</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">time</span> python perf-script
-
-real    2m18.983s
-user    0m1.175s
-sys     0m0.095s
-
-$ <span class="nb">time</span> python perf-script
-
-real    2m25.937s
-user    0m1.156s
-sys     0m0.108s
-
-$ <span class="nb">time</span> python perf-script
-
-real    2m24.120s
-user    0m1.102s
-sys     0m0.098s
-
-$ <span class="nb">time</span> python perf-script
-
-real    2m21.521s
-user    0m1.154s
-sys     0m0.091s
-</code></pre></div>
-
-
-<p>This measures at 140 sec/req or 7.05 req/sec!</p>
-<p>Note: since I am using Python 3.6 I had to modify the file
-<code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Used by http.client if no context is explicitly passed.</span>
-<span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
-</code></pre></div>
-
-
-<p>The issue has been reported in
-<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
-<p>Happy testing!</p>
         </div>
     </article>
 
