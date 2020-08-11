@@ -67,9 +67,9 @@
 
 /* COMMON */
 body{
-	display: flex;
-	flex-direction: column;
-	place-content: start space-between;
+    display: flex;
+    flex-direction: column;
+    place-content: start space-between;
 	height: 100vh;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
@@ -82,11 +82,11 @@ footer {
 }
 
 section#blog-article {
-	padding-bottom: calc(var(--unusable-padding) * 0.25);
+    padding-bottom: calc(var(--unusable-padding) * 0.25);
 }
 section.after-content {
-	padding-bottom: 0;
-	padding-top:0;
+    padding-bottom: 0;
+    padding-top:0;
 }
 
 h3 {
@@ -121,8 +121,8 @@ p > code{
 }
 
 pre > code {
-	border: none;
-	padding: 0;
+    border: none;
+    padding: 0;
 	display:inline;
 }
 
@@ -469,7 +469,7 @@ header .video a {
 	filter: var(--light-shadow);
 	padding: 30px;
 	display: flex;
-	flex-direction: column;
+    flex-direction: column;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
@@ -791,16 +791,16 @@ blockquote .author span {
 }
 
 a[iclink]:after, a[icvideo]:after{
-	font-family: "Font Awesome 5 Free", "FontAwesome";
-	font-weight: 900;
-	background: var(--dark-green);
-	color: var(--white);
-	cursor: pointer;
-	padding: 7px;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-	pointer-events: none;
+    font-family: "Font Awesome 5 Free", "FontAwesome";
+    font-weight: 900;
+    background: var(--dark-green);
+    color: var(--white);
+    cursor: pointer;
+    padding: 7px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
 }
 
 a[iclink]:after{
@@ -1011,12 +1011,12 @@ footer .mail {
 
 /* INNER PAGE STYLES */
 body.page section{
-	gap: var(--x3-padding);
-	padding-top: 150px;
-	background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
-	background-size: auto 500px, auto 500px;
-	background-position: top right;
-	background-repeat: no-repeat;
+    gap: var(--x3-padding);
+    padding-top: 150px;
+    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
+    background-size: auto 500px, auto 500px;
+    background-position: top right;
+    background-repeat: no-repeat;
 }
 body.page section p, body.page section li, body.page section pre{
 	font-size:20px;
@@ -1058,23 +1058,23 @@ div.drop-btn:not(#nav-drop){
 }
 
 div.drop-cnt > a{
-	color: var(--white);
-	background-color:var(--light-green);
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	font-size:20px;
+    color: var(--white);
+    background-color:var(--light-green);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size:20px;
 }
 div.drop-cnt > a:hover{
 	background-color:var(--dark-green);
 	color:var(--white);
 }
 div.drop-cnt{
-	display: none;
-	position: absolute;
-	background-color: var(--light-green);
-	min-width: 160px;
-	filter: var(--light-shadow);
+    display: none;
+    position: absolute;
+    background-color: var(--light-green);
+    min-width: 160px;
+    filter: var(--light-shadow);
 	/* margin-top: 6px; */
 	right: 0;
 }
@@ -1101,26 +1101,26 @@ font-size: 25px;
 }
 
 .member-bio a.bio-link{
-	padding: 3px 5px;
-	display: inline-block;
-	background: var(--dark-green);
-	color: white;
-	font-size: 25px;
-	margin-top: var(--x1-padding);
-	margin-right: var(--x1-padding);
+    padding: 3px 5px;
+    display: inline-block;
+    background: var(--dark-green);
+    color: white;
+    font-size: 25px;
+    margin-top: var(--x1-padding);
+    margin-right: var(--x1-padding);
 }
 .member-bio a.bio-link:hover{
 	background: var(--light-green);
-	color: white;
+    color: white;
 }
 /* BLOG > S BLOGLIST */
 #blog-list, #blog-article{
-	gap: var(--x3-padding);
-	padding-top: 150px;
-	background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
-	background-size: auto 500px, auto 500px;
-	background-position: top right;
-	background-repeat: no-repeat;
+    gap: var(--x3-padding);
+    padding-top: 150px;
+    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
+    background-size: auto 500px, auto 500px;
+    background-position: top right;
+    background-repeat: no-repeat;
 }
 #blog-list article.blog-list, #blog-article article.content{
 	display: grid;
@@ -1203,7 +1203,7 @@ font-size: 25px;
 }
 #pagination{
 	padding: var(--x3-padding) 0 0;
-	display: flex;
+    display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
