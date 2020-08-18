@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Authors</title>
+        <title>Kiwi TCMS - Container information</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
@@ -12,7 +12,7 @@
         <link href="/theme/style/responsive-micro.css" rel="stylesheet">
         <link href="/theme/style/github.css" rel="stylesheet">
     </head>
-    <body class="">
+    <body class="page">
 
         <nav id="main-nav">
             <a href="/" style="display:inherit;">
@@ -37,7 +37,7 @@
     <a href="/support/" >Support</a>
 </li>
 <li>
-    <a href="/blog/" class="active">Blog</a>
+    <a href="/blog/" >Blog</a>
 </li>
 <li>
     <a href="/team/" >Team</a>
@@ -57,7 +57,7 @@
     <a href="/support/" >Support</a>
 </li>
 <li>
-    <a href="/blog/" class="active">Blog</a>
+    <a href="/blog/" >Blog</a>
 </li>
 <li>
     <a href="/team/" >Team</a>
@@ -83,15 +83,27 @@
         </nav>
 
         <!-- content -->
-
-    <section id="blog-list">
-        <h1 class="top-header">Blog authors</h1>
-        <a href="/blog/atodorov/" rel="bookmark">
-            <h2 class="top-subheader">Alexander Todorov (18)</h2>
-        </a>
-        <a href="/blog/kiwi-tcms-team/" rel="bookmark">
-            <h2 class="top-subheader">Kiwi TCMS Team (69)</h2>
-        </a>
+    <section>
+        <h1>Upstream containers</h1>
+<p>The official upstream Kiwi TCMS container image is publicly available via
+<a href="https://hub.docker.com/r/kiwitcms/kiwi">Docker Hub</a> and
+<a href="https://quay.io/repository/kiwitcms/kiwi">Red Hat Quay.io</a>. It is
+free of charge and anyone can download and use it via the <code>docker pull</code>
+command!</p>
+<p><strong>Warning:</strong> after November 1st 2020 older versions will not be available from
+Docker Hub, only from Quay.io! The reason is that Docker is enforcing a
+<a href="https://www.docker.com/pricing/retentionfaq">6 month image retention limit</a>!</p>
+<h1>Private containers for subscribers</h1>
+<p>Subscribers enjoy the benefit of having read-only access to tagged versions of the
+upstream Kiwi TCMS container images as well as access to tagged versions of
+Kiwi TCMS Enterprise container images! These containers are available as:</p>
+<ul>
+<li><code>quay.io/kiwitcms/version</code></li>
+<li><code>quay.io/kiwitcms/enterprise</code></li>
+</ul>
+<p><strong>Important:</strong> you need to register an account at <a href="https://quay.io/signin/">Quay.io</a>
+(it's free) and let us know your username or email. It is best this to be the
+sys-admin account which will be used to deploy these containers when hosting on-premise!</p>
     </section>
 
         <footer>

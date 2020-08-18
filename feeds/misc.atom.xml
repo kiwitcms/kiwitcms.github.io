@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-08-11T14:00:00+03:00</updated><entry><title>QGIS has chosen Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/08/11/qgis-has-chosen-kiwi-tcms/" rel="alternate"></link><published>2020-08-11T14:00:00+03:00</published><updated>2020-08-11T14:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-11:/blog/kiwi-tcms-team/2020/08/11/qgis-has-chosen-kiwi-tcms/</id><summary type="html">&lt;p&gt;We are happy to announce that &lt;a href="https://qgis.org"&gt;QGIS&lt;/a&gt; has chosen Kiwi TCMS
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-08-18T12:23:00+03:00</updated><entry><title>Kiwi TCMS container images now available via Red Hat Quay.io</title><link href="/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/" rel="alternate"></link><published>2020-08-18T12:23:00+03:00</published><updated>2020-08-18T12:23:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-18:/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/</id><summary type="html">&lt;p&gt;Hello testers, we have very important news around how container images
+for Kiwi TCMS will be distributed! Recently Docker. has announced
+several changes in their storage plans which makes it less viable for
+our team to continue using their services in full!&lt;/p&gt;
+&lt;h2&gt;Information about official upstream container images&lt;/h2&gt;
+&lt;p&gt;The official …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers, we have very important news around how container images
+for Kiwi TCMS will be distributed! Recently Docker. has announced
+several changes in their storage plans which makes it less viable for
+our team to continue using their services in full!&lt;/p&gt;
+&lt;h2&gt;Information about official upstream container images&lt;/h2&gt;
+&lt;p&gt;The official upstream Kiwi TCMS container image will continue to be
+publicly available via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi"&gt;Docker Hub&lt;/a&gt;
+as before. In addition all existing and new images will be available via
+&lt;a href="https://quay.io/repository/kiwitcms/kiwi"&gt;Quay.io&lt;/a&gt;.
+These images are available as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://hub.docker.com/r/kiwitcms/kiwi"&gt;kiwitcms/kiwi&lt;/a&gt; (Docker Hub)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://quay.io/repository/kiwitcms/kiwi"&gt;quay.io/kiwitcms/kiwi&lt;/a&gt; (Quay.io)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Content is exactly the same between the two registries and you may use
+the one which you like best!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; after November 1st 2020 older versions will not be available from
+Docker Hub, only from Quay.io! The reason is that Docker is enforcing a
+&lt;a href="https://www.docker.com/pricing/retentionfaq"&gt;6 month image retention limit&lt;/a&gt;
+for free plans!&lt;/p&gt;
+&lt;h2&gt;Information about private containers for subscribers&lt;/h2&gt;
+&lt;p&gt;Subscribers enjoy the benefit of having read-only access to tagged versions of the
+upstream Kiwi TCMS container images as well as access to tagged versions of
+Kiwi TCMS Enterprise container images! Previously these containers were distributed
+via Docker Hub and are now available via Quay.io:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mrsenko/kiwitcms&lt;/code&gt; -&amp;gt; &lt;code&gt;quay.io/kiwitcms/version&lt;/code&gt; (version tagged upstream images)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mrsenko/kiwitcms-enterprise&lt;/code&gt; -&amp;gt; &lt;code&gt;quay.io/kiwitcms/enterprise&lt;/code&gt; (enterprise images)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; existing subscribers have been notified and granted access
+to the new repositories on Quay.io. We advise you to update your
+&lt;code&gt;docker-compose.yml&lt;/code&gt; files and start using the new images at your earliest convenience!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; existing subscribers will continue having access to private
+repositories on Docker Hub until December 31st 2020! Private repositories on
+Docker Hub will become unavailable after January 31st, 2021 when Docker's new
+storage plans will be forced into effect!&lt;/p&gt;
+&lt;h2&gt;Why did we chose Quay.io&lt;/h2&gt;
+&lt;p&gt;There are multiple container registry services available! We think Quay.io
+delivers the best price/quality ratio for our own use-case. In particular
+we like the billing model around number of private repositories instead the
+one around the number of users in your organization. That's very similar
+to how we provide access to Kiwi TCMS via our own subscriptions!&lt;/p&gt;
+&lt;p&gt;Also it just looks cool if you employ your imagination, especially
+for non-native English speakers: quay -&amp;gt; qu-ai -&amp;gt; QA!&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry><entry><title>QGIS has chosen Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/08/11/qgis-has-chosen-kiwi-tcms/" rel="alternate"></link><published>2020-08-11T14:00:00+03:00</published><updated>2020-08-11T14:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-11:/blog/kiwi-tcms-team/2020/08/11/qgis-has-chosen-kiwi-tcms/</id><summary type="html">&lt;p&gt;We are happy to announce that &lt;a href="https://qgis.org"&gt;QGIS&lt;/a&gt; has chosen Kiwi TCMS
 for the basis of their &lt;em&gt;Quality Assurance methodology and infrastructure&lt;/em&gt;
 improvement program!
 Kiwi TCMS will play a central role in storing test case definitions,
