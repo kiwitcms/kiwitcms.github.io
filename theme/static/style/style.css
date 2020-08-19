@@ -110,11 +110,20 @@ code {
 	font-size: inherit;
 	border-radius: 2px;
 	border: 1px solid var(--trans-green);
+	overflow: scroll;
+	width: fit-content;
+	max-width: 86vw;
+	display: inline-grid;
+	overflow-wrap: normal!important;
+}
+p > code{
+	margin-bottom:0!important;
 }
 
 pre > code {
     border: none;
     padding: 0;
+	display:inline;
 }
 
 /* pre > code > span { */
@@ -451,6 +460,11 @@ header .video a {
 	padding: var(--x3-padding) var(--unusable-padding);
 }
 
+#quick-links div > *{
+	float:left;
+	grid-column: 1 / 2;
+}
+
 #quick-links div {
 	background: var(--white);
 	filter: var(--light-shadow);
@@ -565,12 +579,18 @@ summary, #plans-modal h3{
 }
 
 /* S PRICING > Details */
-#pricing summary::-webkit-details-marker{
+summary::-webkit-details-marker{
 	display: none;
 }
-#pricing summary::marker{
+summary::marker{
 	display:none;
 }
+::-webkit-details-marker { display:none; }
+
+summary{
+	list-style-image: none;
+}
+
 
 #pricing summary:after {
 	height: 20px;
@@ -777,7 +797,7 @@ blockquote .author span {
 }
 
 a[iclink]:after, a[icvideo]:after{
-	font-family: "Font Awesome 5 Free", "FontAwesome";
+    font-family: "Font Awesome 5 Free", "FontAwesome";
     font-weight: 900;
     background: var(--dark-green);
     color: var(--white);
@@ -1044,8 +1064,8 @@ div.drop-btn:not(#nav-drop){
 }
 
 div.drop-cnt > a{
-	color: var(--white);
-	background-color:var(--light-green);
+    color: var(--white);
+    background-color:var(--light-green);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -1087,7 +1107,7 @@ font-size: 25px;
 }
 
 .member-bio a.bio-link{
-	padding: 3px 5px;
+    padding: 3px 5px;
     display: inline-block;
     background: var(--dark-green);
     color: white;
@@ -1101,7 +1121,7 @@ font-size: 25px;
 }
 /* BLOG > S BLOGLIST */
 #blog-list, #blog-article{
-	gap: var(--x3-padding);
+    gap: var(--x3-padding);
     padding-top: 150px;
     background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
     background-size: auto 500px, auto 500px;
@@ -1144,17 +1164,18 @@ font-size: 25px;
 }
 #blog-list article.blog-list .content *, #blog-article article.content *{
 	margin-bottom:var(--x1-padding);
+	max-width: 86vw;
 	overflow-wrap: break-word;
 }
 #blog-list article.blog-list .content img, #blog-article article.content img{
 	max-width: 100%;
 }
 #blog-list article.blog-list .content pre, #blog-article article.content pre{
-	white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
-	word-wrap: break-word;
 	font-family: "Source Code Pro", monospace;
+	overflow: scroll;
+	width: fit-content;
+	max-width: 86vw;
+	background: var(--light-gray);
 }
 #blog-list article.blog-list .content a, #blog-article article.content a{
 	overflow-wrap: anywhere;
@@ -1192,4 +1213,4 @@ font-size: 25px;
 	justify-content: space-between;
 	align-items: center;
 }
-
+	
