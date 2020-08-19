@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-08-18T12:23:00+03:00</updated><entry><title>Kiwi TCMS container images now available via Red Hat Quay.io</title><link href="/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/" rel="alternate"></link><published>2020-08-18T12:23:00+03:00</published><updated>2020-08-18T12:23:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-18:/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/</id><summary type="html">&lt;p&gt;Hello testers, we have very important news around how container images
-for Kiwi TCMS will be distributed! Recently Docker. has announced
+for Kiwi TCMS will be distributed! Recently Docker has announced
 several changes in their storage plans which makes it less viable for
 our team to continue using their services in full!&lt;/p&gt;
 &lt;h2&gt;Information about official upstream container images&lt;/h2&gt;
 &lt;p&gt;The official …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers, we have very important news around how container images
-for Kiwi TCMS will be distributed! Recently Docker. has announced
+for Kiwi TCMS will be distributed! Recently Docker has announced
 several changes in their storage plans which makes it less viable for
 our team to continue using their services in full!&lt;/p&gt;
 &lt;h2&gt;Information about official upstream container images&lt;/h2&gt;
