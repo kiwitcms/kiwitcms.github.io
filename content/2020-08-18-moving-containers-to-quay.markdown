@@ -7,7 +7,7 @@ twitter_image: images/backup.png
 tags: releases
 
 Hello testers, we have very important news around how container images
-for Kiwi TCMS will be distributed! Recently Docker. has announced
+for Kiwi TCMS will be distributed! Recently Docker has announced
 several changes in their storage plans which makes it less viable for
 our team to continue using their services in full!
 
