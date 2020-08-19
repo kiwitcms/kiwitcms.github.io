@@ -236,7 +236,7 @@ transform: rotate(90deg);
 }
 
 .ghost-btn {
-	background: transparent;
+	background: rgba(255, 255, 255, 0);
 	border: 2px solid white;
 }
 .ghost-btn:hover {
@@ -258,7 +258,7 @@ header {
 	grid-template-areas: "lead video";
 	align-items: center;
 	column-gap: var(--grid-gap);
-	background-image: linear-gradient(to top, var(--white) 0%, transparent 5%), url("/theme/images/header-pattern.png");
+	background-image: linear-gradient(to top, var(--white) 0%, rgba(255, 255, 255, 0) 5%), url("/theme/images/header-pattern.png");
 	background-size: cover, contain;
 	background-attachment: scroll, fixed;
 	background-repeat: no-repeat;
@@ -400,7 +400,7 @@ header .video a {
 /* S FEATURES */
 
 #features {
-	background-image: linear-gradient(to top, var(--dark-green), var(--dark-green) 50%, transparent 50%, transparent);
+	background-image: linear-gradient(to top, var(--dark-green), var(--dark-green) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
 	padding-top: 0;
 	margin-top: calc(var(--unusable-padding) * -1 - 10px);
 }
@@ -1013,7 +1013,7 @@ footer .mail {
 body.page section{
     gap: var(--x3-padding);
     padding-top: 150px;
-    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
+    background-image: linear-gradient(to top, var(--white), rgba(255, 255, 255, 0)), url(/theme/images/pattern-v2.png);
     background-size: auto 500px, auto 500px;
     background-position: top right;
     background-repeat: no-repeat;
@@ -1117,8 +1117,8 @@ font-size: 25px;
 #blog-list, #blog-article{
 	gap: var(--x3-padding);
     padding-top: 150px;
-    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
-    background-size: auto 500px, auto 500px;
+    background-image: linear-gradient(to top, var(--white), rgba(255, 255, 255, 0)), url(/theme/images/pattern-v2.png);
+    background-size: 1000px 500px, auto 500px;
     background-position: top right;
     background-repeat: no-repeat;
 }
