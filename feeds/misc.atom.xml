@@ -1,5 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-08-18T12:23:00+03:00</updated><entry><title>Kiwi TCMS container images now available via Red Hat Quay.io</title><link href="/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/" rel="alternate"></link><published>2020-08-18T12:23:00+03:00</published><updated>2020-08-18T12:23:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-18:/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/</id><summary type="html">&lt;p&gt;Hello testers, we have very important news around how container images
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-08-23T16:00:00+03:00</updated><entry><title>Kiwi TCMS 8.6</title><link href="/blog/kiwi-tcms-team/2020/08/23/kiwi-tcms-86/" rel="alternate"></link><published>2020-08-23T16:00:00+03:00</published><updated>2020-08-23T16:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-23:/blog/kiwi-tcms-team/2020/08/23/kiwi-tcms-86/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.6!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a high severity security update which includes
+improvements, bug fixes, database migrations, API changes, translation updates and
+new tests. It is the fourth release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+You can explore everything at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.6!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a high severity security update which includes
+improvements, bug fixes, database migrations, API changes, translation updates and
+new tests. It is the fourth release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  f2c21b370cd9    639 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-8-5"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 8.5&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A high severity vulnerability which allows unprivileged data access
+via JSON-RPC endpoints has been fixed:&lt;ul&gt;
+&lt;li&gt;Affects all previous versions of Kiwi TCMS&lt;/li&gt;
+&lt;li&gt;Instances on public networks, such as Amazon EC2, are at higher risk&lt;/li&gt;
+&lt;li&gt;Instances on private networks are still vulnerable to anyone who can
+access the same network&lt;/li&gt;
+&lt;li&gt;This vulnerability has been disclosed by Michael Longmire (ShastaQA)
+and Stone Pack (ShastaQA)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Update marked from 0.8.2 to 1.1.1 for a medium severity vulnerability, see
+&lt;a class="reference external" href="https://snyk.io/vuln/SNYK-JS-MARKED-584281"&gt;SNYK-JS-MARKED-584281&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django from 3.0.8 to 3.0.9&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-attachments from 1.5 to 1.6&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update prismjs from 1.20.0 to 1.21.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update pygithub from 1.51 to 1.53&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Replace deprecated bleach-whitelist with bleach-allowlist&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Make django-extensions a production dependency because it provides
+many useful manage.py commands&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Enable syntax highlight for code blocks&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove file attachments when related objects are deleted&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add image and file upload buttons to text editor. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/977"&gt;Issue #977&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Require &lt;tt class="docutils literal"&gt;auth.view_user&lt;/tt&gt; permission when trying to view user profiles.
+Fixes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1685"&gt;Issue #1685&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Multiple pages now explicitly require view permissions before displaying read-only
+information. This gives administrators a finer grained control:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/bugs/&amp;lt;id&amp;gt;/&lt;/span&gt;&lt;/tt&gt;    -&amp;gt; &lt;tt class="docutils literal"&gt;bugs.view_bug&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;/bugs/search/&lt;/tt&gt;  -&amp;gt; &lt;tt class="docutils literal"&gt;bugs.view_bug&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;/cases/search/&lt;/tt&gt; -&amp;gt; &lt;tt class="docutils literal"&gt;testcases.view_testcase&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/case/&amp;lt;id&amp;gt;/&lt;/span&gt;&lt;/tt&gt;    -&amp;gt; &lt;tt class="docutils literal"&gt;testcases.view_testcase&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;/plans/search/&lt;/tt&gt; -&amp;gt; &lt;tt class="docutils literal"&gt;testplans.view_testplan&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/plan/&amp;lt;id&amp;gt;/*&lt;/span&gt;&lt;/tt&gt;   -&amp;gt; &lt;tt class="docutils literal"&gt;testplans.view_testplan&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;/runs/search/&lt;/tt&gt;  -&amp;gt; &lt;tt class="docutils literal"&gt;testruns.view_testrun&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/runs/&amp;lt;id&amp;gt;/&lt;/span&gt;&lt;/tt&gt;    -&amp;gt; &lt;tt class="docutils literal"&gt;testruns.view_testrun&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Previously these pages only required the user to be logged in&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+The &lt;tt class="docutils literal"&gt;auth.view_user&lt;/tt&gt; permission is not granted by default because the
+profile page contains personal information like names and email address.
+Administrators can grant this permission on a group or individual basis
+if they are OK with sharing this information.&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Migrations which manipulate data (contain &lt;tt class="docutils literal"&gt;RunPython&lt;/tt&gt;) can now be
+rollbacked. See &lt;tt class="docutils literal"&gt;./manage.py migrate &lt;span class="pre"&gt;--plan&lt;/span&gt;&lt;/tt&gt; for the order in which
+migrations are applied (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Increase &lt;tt class="docutils literal"&gt;Product.name&lt;/tt&gt; size from 64 to 255 characters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove method &lt;tt class="docutils literal"&gt;TestExecution.create()&lt;/tt&gt; in favor of &lt;tt class="docutils literal"&gt;TestRun.add_case()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Add method &lt;tt class="docutils literal"&gt;User.add_attachment()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Multiple API methods now explicitly require view permissions before returning
+read-only information. This is in-sync with the per-page changes listed above:&lt;ul&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Bug.filter()&lt;/tt&gt;                   -&amp;gt; &lt;tt class="docutils literal"&gt;bugs.view_bug&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Bug.report()&lt;/tt&gt;                   -&amp;gt; &lt;tt class="docutils literal"&gt;testruns.view_testexecution&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Build.filter()&lt;/tt&gt;                 -&amp;gt; &lt;tt class="docutils literal"&gt;management.view_build&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Category.filter()&lt;/tt&gt;              -&amp;gt; &lt;tt class="docutils literal"&gt;testcases.view_category&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Classification.filter()&lt;/tt&gt;        -&amp;gt; &lt;tt class="docutils literal"&gt;management.view_classification&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Component.filter()&lt;/tt&gt;             -&amp;gt; &lt;tt class="docutils literal"&gt;management.view_component&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;PlanType.filter()&lt;/tt&gt;              -&amp;gt; &lt;tt class="docutils literal"&gt;testplans.view_plantype&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Priority.filter()&lt;/tt&gt;              -&amp;gt; &lt;tt class="docutils literal"&gt;management.view_priority&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Product.filter()&lt;/tt&gt;               -&amp;gt; &lt;tt class="docutils literal"&gt;management.view_product&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Tag.filter()&lt;/tt&gt;                   -&amp;gt; &lt;tt class="docutils literal"&gt;management.view_tag&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCase.get_components()&lt;/tt&gt;      -&amp;gt; &lt;tt class="docutils literal"&gt;testcases.view_testcase&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCase.get_notification_cc()&lt;/tt&gt; -&amp;gt; &lt;tt class="docutils literal"&gt;testcases.view_testcase&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCase.filter()&lt;/tt&gt;              -&amp;gt; &lt;tt class="docutils literal"&gt;testcases.view_testcase&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCaseStatus.filter()&lt;/tt&gt;        -&amp;gt; &lt;tt class="docutils literal"&gt;testcases.view_testcasestatus&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestExecution.filter()&lt;/tt&gt;         -&amp;gt; &lt;tt class="docutils literal"&gt;testruns.view_testexecution&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestExecution.get_links()&lt;/tt&gt;      -&amp;gt; &lt;tt class="docutils literal"&gt;linkreference.view_linkreference&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestExecutionStatus.filter()&lt;/tt&gt;   -&amp;gt; &lt;tt class="docutils literal"&gt;testruns.view_testexecutionstatus&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestPlan.filter()&lt;/tt&gt;              -&amp;gt; &lt;tt class="docutils literal"&gt;testplans.view_testplan&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestRun.get_cases()&lt;/tt&gt;            -&amp;gt; &lt;tt class="docutils literal"&gt;testruns.view_testrun&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt;               -&amp;gt; &lt;tt class="docutils literal"&gt;testruns.view_testrun&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;User.filter()&lt;/tt&gt;                  -&amp;gt; &lt;tt class="docutils literal"&gt;auth.view_user&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Version.filter()&lt;/tt&gt;               -&amp;gt; &lt;tt class="docutils literal"&gt;management.view_version&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update documentation to reflect that test cases cannot be rearranged from
+within a TestRun but only from a TestPlan. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1805"&gt;Issue #1805&lt;/a&gt; (&amp;#64;Prome88)&lt;/li&gt;
+&lt;li&gt;Incorrect code formatting for HTML &amp;lt;pre&amp;gt; tags. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1300"&gt;Issue #1300&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix a bug with the history handler when importing objects with ID field set.
+Resolves a crash when trying to restore backup data&lt;/li&gt;
+&lt;li&gt;Delete comments when Bug is removed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-testing"&gt;
+&lt;h3&gt;Refactoring &amp;amp; testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add linter to warn about missing backwards migrations callable in &lt;tt class="docutils literal"&gt;RunPython&lt;/tt&gt;
+and fix all pylint offenses. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1774"&gt;Issue #1774&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Teach linter to check API for &lt;tt class="docutils literal"&gt;&amp;#64;permissions_required&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1089"&gt;Issue #1089&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refactor &lt;tt class="docutils literal"&gt;NewExecutionForm&lt;/tt&gt; to use ModelForm (Rosen Sasov)&lt;/li&gt;
+&lt;li&gt;Refactor &lt;tt class="docutils literal"&gt;UpdateExecutionForm&lt;/tt&gt; to use ModelForm (Rosen Sasov)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.bugs.api&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1597"&gt;Issue #1597&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.bugs.views.New&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1598"&gt;Issue #1598&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.testplan&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1627"&gt;Issue #1627&lt;/a&gt; (&amp;#64;lcmtwn)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;percentage()&lt;/tt&gt; function References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1602"&gt;Issue #1602&lt;/a&gt; (Mariyan Garvanski)&lt;/li&gt;
+&lt;li&gt;Add the &lt;tt class="docutils literal"&gt;migrations_order&lt;/tt&gt; command to help test rollbacks&lt;/li&gt;
+&lt;li&gt;Adjust code for deprecation warnings from Django 3.1&lt;/li&gt;
+&lt;li&gt;Use Python 3 style &lt;tt class="docutils literal"&gt;super()&lt;/tt&gt; without arguments&lt;/li&gt;
+&lt;li&gt;Update login page to match our new website design&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/cs#"&gt;Czech translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#"&gt;Portuguese, Brazilian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v8-6-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v8.6-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v8.6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more info see
+&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise/#v86-mt-23-aug-2020"&gt;https://github.com/kiwitcms/enterprise/#v86-mt-23-aug-2020&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS container images now available via Red Hat Quay.io</title><link href="/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/" rel="alternate"></link><published>2020-08-18T12:23:00+03:00</published><updated>2020-08-18T12:23:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-18:/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/</id><summary type="html">&lt;p&gt;Hello testers, we have very important news around how container images
 for Kiwi TCMS will be distributed! Recently Docker has announced
 several changes in their storage plans which makes it less viable for
 our team to continue using their services in full!&lt;/p&gt;
