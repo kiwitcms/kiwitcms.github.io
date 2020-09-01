@@ -12,7 +12,7 @@ tags: community
     alt="Click here to vote for Kiwi TCMS">
 
 Kiwi TCMS is happy to announce that our website <https://kiwitcms.eu> is a finalist
-in the [2020 .eu Web Awards](https://webawards.eurid.eu/#nominees)
+in the [2020 .eu Web Awards](https://eurid.eu/en/news/2020-wa-finalists/)
 in the *Leaders* category! Big Thank You to everyone who voted for us!
 
 Our team is also very happy that we are not the only open source finalist.
