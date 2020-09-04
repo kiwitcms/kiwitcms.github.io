@@ -94,6 +94,151 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2018/06/24/kiwi-tcms-42/" rel="bookmark" title="Permalink to Kiwi TCMS 4.2">
+                <h1 class="top-header">Kiwi TCMS 4.2</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sun 24 June 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS and tcms-api version 4.2!
+This is a security, bug-fix and enhancement update which upgrades to the latest
+Django version under Python 3.6.
+We've pushed new <code>kiwitcms/kiwi:latest</code> docker image to Docker Hub and updated the
+demo instance at <a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>This version also includes GDPR related changes which affect our project. Read below
+for the details.</p>
+<h2>Changes since Kiwi TCMS 4.1.4</h2>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations</p>
+<h3>Security</h3>
+<ul>
+<li>Enable testing with Badit. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/237">Issue #237</a></li>
+<li>Enable testing with
+  <a href="https://scan.coverity.com/projects/kiwitcms-kiwi">Coverity Scan</a></li>
+<li>Enable testing with
+  <a href="https://pyup.io/repos/github/kiwitcms/Kiwi/">pyup.io</a></li>
+<li>Enable testing with
+  <a href="https://snyk.io/test/github/kiwitcms/Kiwi">Snyk</a></li>
+<li>Use SHA256 instead of MD5 and SHA1</li>
+<li>Use the <code>secrets</code> module for activation keys</li>
+<li>Remove unnecessary AJAX view that had remote code execution vulnerability</li>
+<li>Don't use hard-coded temporary directories</li>
+<li>Upgrade to
+  <a href="https://github.com/patternfly/patternfly/releases/tag/v3.36.0">Patternfly 3.36.0</a>
+  which fixes the following vulnerabilities:<ul>
+<li><a href="https://snyk.io/vuln/npm:moment:20161019">https://snyk.io/vuln/npm:moment:20161019</a></li>
+<li><a href="https://snyk.io/vuln/npm:moment:20170905">https://snyk.io/vuln/npm:moment:20170905</a></li>
+</ul>
+</li>
+</ul>
+<h3>Settings</h3>
+<ul>
+<li><code>BUGZILLA_AUTH_CACHE_DIR</code> is a new setting that may be specified to control
+  where Bugzilla auth cookies are saved! It is not specified by default and
+  Kiwi TCMS uses a temporary directory each time we try to login into Bugzilla!</li>
+</ul>
+<h3>Enhancements</h3>
+<ul>
+<li>Upgrade to Python 3.6. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/91">Issue #91</a></li>
+<li>Upgrade to <a href="https://docs.djangoproject.com/en/2.0/releases/2.0.6/">Django 2.0.6</a></li>
+<li>Fix around 100 pylint issues (Anton Sankov)</li>
+<li>Update email confirmation template for newly registered users and make the
+  text translatable</li>
+<li>Display <code>Last login</code> column in User admin page</li>
+<li>Add tests for <code>tcms.management.views</code> (Anton Sankov)</li>
+<li>Remove unused CSS selectors</li>
+<li>Remove unnecessary <code>templates/comments/comments.html</code></li>
+</ul>
+<h3>Bug fixes</h3>
+<ul>
+<li>Remove unused deferred field <code>product_version</code>. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523948048/">Sentry KIWI-TCMS-1C</a></li>
+<li>Rename left-over <code>get_url()</code> to <code>get_full_url()</code>. Fixes
+  <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523855781/">Sentry KIWI-TCMS-1B</a></li>
+<li>Fix empty TestPlan url and Product fields in TestRun email notification. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/353">Issue #353</a> (Matt Porter, Konsulko Group)</li>
+</ul>
+<h3>Translations</h3>
+<ul>
+<li>Updated translations for Chinese Simplified</li>
+<li>Updated translations for Chinese Traditional</li>
+<li>New language and translations for Slovenian</li>
+</ul>
+<h3>Documentation</h3>
+<ul>
+<li>Added <code>git clone</code> command to documentation. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/344">Issue #344</a> (Anton Sankov)</li>
+</ul>
+<h3>Models and database migrations</h3>
+<ul>
+<li>Increase checksum fields size to hold the new checksum values</li>
+<li>Increase <code>activation_key</code> field size to 64 chars</li>
+</ul>
+<h3>GDPR related</h3>
+<ul>
+<li>Allow users to delete their accounts. Link is present on <code>My profile</code> page.
+  This will also delete any related objects using cascade delete</li>
+<li>Try not to be so obvious when it comes to displaying email addresses across
+  the web interface. Instead show username and link to profile</li>
+</ul>
+<p>In addition the following changes were deployed to our infrastructure:</p>
+<ul>
+<li>On our website the <code>Subscribe to our newsletter</code> is now a link, instead of
+  embedded form because embedded forms can't display GDPR compliance fields.
+  If you wish to receive email from Kiwi TCMS you need to select the <code>Email</code>
+  checkbox when signing up for the newsletter.</li>
+<li>Double opt-in is now enabled when subscribing to our newsletter</li>
+<li>All newsletter addresses that have been unsubscribed have been deleted</li>
+<li>Upon registration for <a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
+  you are no longer subscribed
+  to the newsletter. Now we send a welcome email with a link to the newsletter
+  so you can subscribe if you want</li>
+<li><a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
+  now runs a cron job which deletes inactive accounts
+  and all of their related data. The cron job runs weekly</li>
+</ul>
+<p>We're trying to be respectful to your private data and not expose that to any
+3rd parties or use it for means other than making Kiwi TCMS better open source
+software. If you spot areas for improvement please
+<a href="https://github.com/kiwitcms/Kiwi/issues/new">report an issue</a> so we can take
+a look at it!</p>
+<h2>tcms-api changes since 4.0.0</h2>
+<ul>
+<li>Remove coloring. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/185">Issue #185</a></li>
+<li>Fix using the API client against <code>https://</code> URLs (Adam Łoszyn, Samsung)</li>
+</ul>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span><code><span class="err">cd Kiwi/</span>
+<span class="err">git pull</span>
+<span class="err">docker-compose down</span>
+<span class="err">docker pull kiwitcms/kiwi</span>
+<span class="err">docker pull centos/mariadb</span>
+<span class="err">docker-compose up -d</span>
+<span class="err">docker exec -it kiwi_web /Kiwi/manage.py migrate</span>
+</code></pre></div>
+
+
+<h2>Help us make Kiwi TCMS better</h2>
+<p>According to <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
+Kiwi TCMS team is investing a great deal of our time to make the code base more
+maintainable! For the past few releases we've been balancing code refactoring
+with bug-fixing and minor enhancements and we have lots of ideas down the line.</p>
+<p>We want to hear your voice! Tell us how you use Kiwi TCMS inside your organization.
+We want to know what works for you and what doesn't so we can make it better. Feel
+free to comment below, file GitHub issues or send us an email.</p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/04/11/kiwi-tcms-conference-presence/" rel="bookmark" title="Permalink to Kiwi TCMS conference presence">
                 <h1 class="top-header">Kiwi TCMS conference presence</h1>
             </a>

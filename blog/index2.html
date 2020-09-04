@@ -88,6 +88,188 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/" rel="bookmark" title="Permalink to Kiwi TCMS 8.1">
+                <h1 class="top-header">Kiwi TCMS 8.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 04 March 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 8.1!</p>
+<p><strong>IMPORTANT:</strong>
+this is a small security and improvement release which
+also includes several bug fixes, internal refactoring and updated translations.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  fbb363af2d90    557 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-8-0">
+<h2>Changes since Kiwi TCMS 8.0</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul>
+<li><p class="first">JSON-RPC handler will now HTML escape all strings. This prevents XSS attacks
+via tags, components or anything else which is loaded on the web page via RPC
+and then shown as string. Even if someone saves <tt class="docutils literal"><span class="pre">&lt;script&gt;alert(123);&lt;/script&gt;</span></tt>
+in the database the returned result will be HTML escaped and will not be executed
+as JavaScript!</p>
+<p><strong>Notes:</strong></p>
+<blockquote>
+<p>This is easy to exploit but people able to do so should have accounts in
+your Kiwi TCMS installation and write privileges on their accounts. If they
+do this means they can cause a lot more damage much more easily!</p>
+</blockquote>
+</li>
+<li><p class="first">Update Django from 3.0.3 to 3.0.4 - fixes security issue CVE-2020-9402:
+Potential SQL injection via <tt class="docutils literal">tolerance</tt> parameter in GIS functions and aggregates
+on Oracle which we believe does not affect Kiwi TCMS</p>
+</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul>
+<li><p class="first">Update bleach from 3.1.0 to 3.1.1</p>
+</li>
+<li><p class="first">Update django-colorfield from 0.1.15 to 0.2.1</p>
+</li>
+<li><p class="first">Update markdown from 3.2 to 3.2.1</p>
+</li>
+<li><p class="first">On bug creation send email to assignee. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1154">Issue #1154</a> (Mfon Eti-mfon)</p>
+</li>
+<li><p class="first">Make it possible to provide override settings in a directory. Kiwi TCMS will
+respect:</p>
+<ul class="simple">
+<li><tt class="docutils literal">local_settings.py</tt></li>
+<li><tt class="docutils literal"><span class="pre">local_settings_dir/*.py</span></tt></li>
+</ul>
+<p>For more information see
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization">https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization</a></p>
+</li>
+<li><p class="first">Allow adding TestPlan to TestCase via UI. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1021">Issue #1021</a></p>
+</li>
+<li><p class="first">Add visual representation of failures in TestCase health telemetry</p>
+</li>
+<li><p class="first">Add helper text to TestExecutionStatus admin</p>
+</li>
+<li><p class="first">Add link to discussion forum in Help menu</p>
+</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li><tt class="docutils literal">TestCase.create()</tt> method no longer accepts <tt class="docutils literal">product</tt> or <tt class="docutils literal">product_id</tt>
+fields which have previously been deprecated</li>
+<li>API methods which receive True/False values will no longer parse yes,no,1,0 values.
+The only accepted values are boolean constants defined in the calling programming
+language which are then transmitted via XML-RPC or JSON-RPC and converted to
+native boolean on the backend</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>The number of search results shown per page can now be controlled via
+<tt class="docutils literal">DEFAULT_PAGE_SIZE</tt> setting, which is 100 by default. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1210">Issue #1210</a> (Ivailo Karabojkov)</li>
+<li>Use comma separated display of components in bug reports. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1157">Issue #1157</a> (Ivailo Karabojkov)</li>
+<li>Update selector for 'Select All' test executions in TestRun page. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1404">Issue #1404</a></li>
+<li>Fix crash when sorting test cases in TestPlan page. Fixes
+<a class="reference external" href="https://sentry.io/organizations/open-technologies-bulgaria-ltd/issues/1519809326/">Sentry #KIWI-TCMS-A6</a></li>
+<li>Fix a <tt class="docutils literal"><span class="pre">TC-undefined</span></tt> displayed in TestCase health telemetry</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Add test for <tt class="docutils literal">TestRunAdmin.change_view()</tt> (Mariyan Garvanski)</li>
+<li>Remove unused <tt class="docutils literal">showCaseRunsWithSelectedStatus</tt></li>
+<li>Internal JavaScript updates</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="github-marketplace-listing-deprecation">
+<h2>GitHub Marketplace listing deprecation</h2>
+<p>As we've stated previously Kiwi TCMS has migrated to a new GitHub backend and
+OAuth tokens for the previous backend have been revoked and the
+existing listing on GitHub Marketplace is deprecated. It is a non-functioning
+app at the moment!</p>
+<p>It is not possible for us to cancel Marketplace subscriptions programatically,
+that is GitHub does not provide such API. Active subscribers please follow these
+3 steps to help us clean up stale information:</p>
+<ul class="simple">
+<li>Go to <a class="reference external" href="https://github.com/marketplace/kiwi-tcms">https://github.com/marketplace/kiwi-tcms</a></li>
+<li>From &quot;Edit your plan&quot; button at the top select your GitHub account</li>
+<li>Then click &quot;Cancel this plan&quot; link which is at the left-hand side
+at the bottom of the description box!</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb-103-centos7
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/02/17/catch-up-with-kiwi-tcms-in-sofia-singapore-kiev-moscow/" rel="bookmark" title="Permalink to Catch-up with Kiwi TCMS in Sofia, Singapore, Kiev & Moscow">
                 <h1 class="top-header">Catch-up with Kiwi TCMS in Sofia, Singapore, Kiev & Moscow</h1>
             </a>
@@ -2365,145 +2547,6 @@ using the knowledge gathered by following and/or contributing to open source.
 I'm going to continue contributing to Kiwi TCMS and
 Captura and if time allows maybe involve myself with some other interesting projects.</p>
 <p><em>Thank you, Primož! Happy testing!</em></p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/atodorov/2019/06/28/mid-year-roadmap-status-report/" rel="bookmark" title="Permalink to Mid-year roadmap status report">
-                <h1 class="top-header">Mid-year roadmap status report</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/atodorov/">Alexander Todorov</a>
-                on Fri 28 June 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
-team has made towards achieving the goals on our
-<a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">2019 mission and roadmap</a>.
-TL,DR: Kiwi TCMS has made progress since January, it's been tough and may not have been
-very visible. I feel like we've been behind schedule till now! The greatest
-positive thing has been community and team development!</p>
-<h2>Complete the internal refactoring</h2>
-<p><em>Status: minimal progress, needs help</em></p>
-<p><a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> progress is:</p>
-<ul>
-<li>-30 code smells</li>
-<li>-40 duplications</li>
-<li>-30 other issues</li>
-<li>4% technical debt improvement</li>
-<li>-200 hrs remaining until issues are fixed</li>
-</ul>
-<p>This is mostly the result of code reviews and minor fixes, not targeted work.</p>
-<p>We have not done any targeted work to resolve other issues reported by Scrutinizer,
-Pylint, remove vendored-in JavaScript libraries, JavaScript refactoring or
-classification of issues in 3rd party dependencies.</p>
-<p>There are new people onboarding in the team right now and our plan is for
-them to start grinding at these issues very soon!</p>
-<h2>Redesign the UI templates with the help of Patternfly</h2>
-<p><em>Status: 50% done, needs help</em></p>
-<p>There are 27 HTML templates remaining to be redesigned (from 59). That's mostly
-due to internal cleanup than targeted refactoring. More work on this item
-will probably follow towards the end of the year after we get more priority items out of
-the way and get more of the new team members rolling!</p>
-<h2>Modernize reporting aka Telemetry</h2>
-<p><em>Status: in progress, a bit behind schedule</em></p>
-<p>The specs for the new <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Telemetry</a> system
-have been defined after taking into account feedback on GitHub issues. Anton Sankov is
-the leading developer for this feature. So far we have 2 telemetry reports merged:
-testing break-down and status matrix. The next one will be execution trends.</p>
-<p>There are lots of minor issues or missing functionality in these first iterations
-(compared to specification). Our plan is to have the major use-cases satisfied first
-and then work to refine all of the existing telemetry pages.</p>
-<h2>Plugins for 3rd party test automation frameworks</h2>
-<p><em>Status: good, needs help</em></p>
-<p>Until now we have released TAP, junit.xml and native JUnit 5 plugins. There's also
-a PHPUnit plugin which is more or less complete but unreleased yet. Both JUnit 5
-and PHPUnit plugins are developed by external contributors!</p>
-<p>We often get asked for plugins for languages and frameworks we don't use or don't
-even know! Given that our expertise is mostly in Python we will gladly accept your
-pull requests if you decide to maintain or contribute to one of the plugins. This
-will also help us get insight into what automation frameworks people are using
-and how exactly you structure a test automation workflow around Kiwi TCMS.</p>
-<p>Checkout the
-<a href="https://kiwitcms.readthedocs.io/en/latest/plugins.html">documentation</a> for links
-and more info.</p>
-<h2>Redefine bug-tracker integration</h2>
-<p><em>Status: no progress</em></p>
-<p>Last week, right after OpenExpo, we did a check-up session and this was one of the
-areas identified with zero amount of progress. I have a strong preference to work
-on this feature myself but have not been able to due to various other items that
-need my attention.</p>
-<p>The short version is that I'd prefer to remove all issue tracker specific code
-and allow the tester to add arbitrary URLs to link to existing bugs. How to do
-integration (even as simple as publishing a comment in the bug tracker) over
-a generic interface still eludes me. In the next few weeks I will kick-off this
-topic with a separate blog post/issue for everyone to comment on.</p>
-<h2>GitHub flow integration</h2>
-<p><em>Status: no progress</em></p>
-<p>Our team spent some time making Kiwi TCMS the first open source TCMS available
-on the <a href="https://github.com/marketplace/kiwi-tcms">GitHub Marketplace</a>. We will
-continue this integration effort and flow integration will emerge from that.
-There's also many things that need to be done to satisfy GitHub's .</p>
-<h2>Agile integration with Trello</h2>
-<p><em>Status: no progress</em></p>
-<h2>Improve engineering productivity</h2>
-<p><em>Status: no progress</em></p>
-<p>Our mission is to transform testing in your organization by providing
-the tools for that via Kiwi TCMS. It is astonishing that so far nobody has provided
-any kind of feedback in <a href="https://github.com/kiwitcms/Kiwi/issues/703">Issue #703</a>
-wrt improving productivity in their teams!</p>
-<p>We have some ideas which have been blocked by lack of resources on the team and
-refactoring tasks. Because we've adopted this as our mission this is an important
-item for us and we'll continue working on it as resources allow.
-Progress is to be expected towards the end of the year.</p>
-<h2>Community</h2>
-<p><em>Status: great, on track, needs work</em></p>
-<p>This is our strongest area during the year so far. We have a strong presence in
-several communities, our event schedule is busy enough and we are gaining more
-recognition every day!</p>
-<ul>
-<li>Hosted project stand at 3/5 conferences with 2 more on-track</li>
-<li>Won the OpenAward for <a href="2019-06-24-openawards-winner.markdown">Best Tech Community</a></li>
-<li>Hosted several presentations and workshops with few more on track</li>
-<li>Found new talent to join the core team: 2 just ready to start contributing, 5 more in training</li>
-<li>1 more senior engineer as a mentor. We also have a few independent wanna-be contributors
-  and will be hosting qualification interviews for marketing assistant very soon</li>
-<li>There are contributions and pull requests coming from users of Kiwi TCMS as well.
-  We'd like to see more of course.</li>
-<li>There are a couple of open source projects and companies using Kiwi TCMS who
-  are friendly towards the project. We are working with them to get a public
-  endorsement on the website and engage in more technical work together. Of course
-  everyone has limited resources and is very busy :-(</li>
-<li>Sponsors on <a href="https://opencollective.com/kiwitcms#contributors">OpenCollect</a> are just
-  a few but we didn't have any previously so this is a good sign.</li>
-</ul>
-<p>This is the moment to mention that not all is honey and roses in open source land.
-Kiwi TCMS suffers from the problem that many of our users can't be contributors
-or simply don't want to!</p>
-<p>Manual testers can't program. This is a fact and a good sized chunk of our user base
-actually performs manual testing. Those that can write automation and probably
-code decently well may not be familiar with Python and Django. At least in Bulgaria
-these two aren't very popular, definitely not among testers. That is to say this part
-of the user-base simply doesn't have the necessary skills to contribute and the majority
-of what we need is code contribution!</p>
-<p>Another (fairly big IMO) group of users are coming from proprietary companies who
-view open source and Kiwi TCMS as a zero cost option. Something that they take free
-of charge and use it without ever contributing back. They don't understand nor really
-care about the open source culture.</p>
-<p>To make things worse we receive requests every single day via
-our private email addresses or questions via IM despite our website clearly stating
-community engagement rules. On a few occasions we have received very rude comments
-of the sort "our company demands you fix this", "is this going to be ready this year"
-(context implying entitlement), etc. To make things more ridiculous we've even received
-support requests (via contact form) from companies and start-up
-who get their return address wrong so we can't get in touch directly!</p>
-<p>In short: don't demand anything from us unless you are ready to pay for it, work for it
-yourself or propose a mutually beneficial scenario. We do try to keep the community
-happy but more importantly follow our mission and develop our core team!</p>
-<p>Happy testing!</p>
         </div>
     </article>
 
