@@ -1,7 +1,7 @@
 Title: Progress update on open source hardware for black-box testing
 Headline: in cooperation with Pionir
 date: 2020-10-10 16:35
-comments: false
+comments: true
 og_image: images/black-boxes/salience_bias.png
 twitter_image: images/black-boxes/salience_bias.png
 tags: community
