@@ -4,7 +4,7 @@ date: 2020-10-10 16:35
 comments: true
 og_image: images/black-boxes/salience_bias.png
 twitter_image: images/black-boxes/salience_bias.png
-tags: community
+tags: community, bounty-program
 
 
 Hello testers, as you know our
