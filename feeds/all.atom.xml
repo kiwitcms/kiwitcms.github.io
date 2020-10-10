@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-09-16T16:30:00+03:00</updated><entry><title>Kiwi TCMS 8.7</title><link href="/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/" rel="alternate"></link><published>2020-09-16T16:30:00+03:00</published><updated>2020-09-16T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-09-16:/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.7!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-10-10T16:35:00+03:00</updated><entry><title>Progress update on open source hardware for black-box testing</title><link href="/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/" rel="alternate"></link><published>2020-10-10T16:35:00+03:00</published><updated>2020-10-10T16:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-10:/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/</id><summary type="html">&lt;p&gt;Hello testers, as you know our
+&lt;a href="/blog/kiwi-tcms-team/2020/05/26/kiwi-tcms-is-partnering-up-with-pionir/"&gt;friends at Pionir&lt;/a&gt;
+are working on physical hardware which can be used for interactive training and
+explanation of the Black-box testing technique. The inspiration
+comes from &lt;a href="http://blackboxpuzzles.workroomprds.com/"&gt;James Lyndsay’s Black Box Puzzles&lt;/a&gt; and
+&lt;a href="http://blog.brainforit.com/2017/02/06/black-boxes-for-black-box-testing/"&gt;Claudiu Draghia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We have the source code of 3 boxes already …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers, as you know our
+&lt;a href="/blog/kiwi-tcms-team/2020/05/26/kiwi-tcms-is-partnering-up-with-pionir/"&gt;friends at Pionir&lt;/a&gt;
+are working on physical hardware which can be used for interactive training and
+explanation of the Black-box testing technique. The inspiration
+comes from &lt;a href="http://blackboxpuzzles.workroomprds.com/"&gt;James Lyndsay’s Black Box Puzzles&lt;/a&gt; and
+&lt;a href="http://blog.brainforit.com/2017/02/06/black-boxes-for-black-box-testing/"&gt;Claudiu Draghia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We have the source code of 3 boxes already published at
+&lt;a href="https://github.com/kiwitcms/black-boxes"&gt;https://github.com/kiwitcms/black-boxes&lt;/a&gt; but still missing bill of materials,
+design files for 3D printing and some basic instructions how to put everything
+together. There was a delay in delivery of some components but most of the work
+is close to completion. You may subscribe to
+&lt;a href="https://github.com/kiwitcms/black-boxes/issues"&gt;issues for each box&lt;/a&gt; to follow
+the progress! Here are some images &amp;amp; videos from the development process.&lt;/p&gt;
+&lt;h2&gt;Wason 2-4-6 box&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Wason 246 box" src="/images/black-boxes/wason_246.png"&gt;&lt;/p&gt;
+&lt;iframe width="1000" height="562"
+        src="https://www.youtube.com/embed/UGfgcTS66KY"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;h2&gt;Peltzman effect box&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Peltzman effect box" src="/images/black-boxes/peltzman_effect.png"&gt;&lt;/p&gt;
+&lt;iframe width="1000" height="562"
+        src="https://www.youtube.com/embed/9wAr--X4YGM"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;h2&gt;Salience bias box&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Salience bias box" src="/images/black-boxes/salience_bias.png"&gt;&lt;/p&gt;
+&lt;iframe width="1000" height="562"
+        src="https://www.youtube.com/embed/pgADatxcZBg"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;According to Pionir's own words:
+&lt;em&gt;We are testing the salience box and trying to cause emotional effect of an element.
+Vuk made a mistake and now he can't turn it off :D. How's that for dogfooding?&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Help us do more&lt;/h2&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports the various communities
+around us please &lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;nominate us as GitHub Stars&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>Kiwi TCMS 8.7</title><link href="/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/" rel="alternate"></link><published>2020-09-16T16:30:00+03:00</published><updated>2020-09-16T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-09-16:/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.7!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a medium sized release which includes
 improvements, API changes, bug fixes, translation updates and
 new tests. It is the fifth release to include contributions via our
