@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-10-10T16:35:00+03:00</updated><entry><title>Progress update on open source hardware for black-box testing</title><link href="/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/" rel="alternate"></link><published>2020-10-10T16:35:00+03:00</published><updated>2020-10-10T16:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-10:/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/</id><summary type="html">&lt;p&gt;Hello testers, as you know our
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-10-13T12:50:00+03:00</updated><entry><title>Kiwi TCMS is partnering with MHL Fellowship program</title><link href="/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mhl-fellowship-program/" rel="alternate"></link><published>2020-10-13T12:50:00+03:00</published><updated>2020-10-13T12:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-13:/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mhl-fellowship-program/</id><summary type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with the
+&lt;a href="https://fellowship.mlh.io/programs/open-source"&gt;MLH Fellowship&lt;/a&gt;
+open source program which is a 12 week internship alternative for
+students interested in becoming software engineers.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mlh.io"&gt;Major League Hacking (MLH)&lt;/a&gt; is a mission-driven B-Corp focused
+on empowering our next generation of technologists. Every …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with the
+&lt;a href="https://fellowship.mlh.io/programs/open-source"&gt;MLH Fellowship&lt;/a&gt;
+open source program which is a 12 week internship alternative for
+students interested in becoming software engineers.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mlh.io"&gt;Major League Hacking (MLH)&lt;/a&gt; is a mission-driven B-Corp focused
+on empowering our next generation of technologists. Every year, more than
+100,000 developers, designers, and makers join the MLH community to gain
+hands-on experience and build their professional networks.
+They are headquartered in the Greater New York Area, USA but operate world-wide.&lt;/p&gt;
+&lt;h2&gt;Fellowship program&lt;/h2&gt;
+&lt;p&gt;The Fall 2020 cohort runs between October 5 - December 21 and we're already
+into the Contributing phase of the program.
+Fellow students will be working on
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues"&gt;open issues&lt;/a&gt; from our backlog with
+a focus on tasks from our
+&lt;a href="https://github.com/kiwitcms/Kiwi/milestone/4"&gt;open source bounty program&lt;/a&gt;
+but they can really work on any open task!&lt;/p&gt;
+&lt;p&gt;Once a pull request has been made it will undergo first round code review
+by &lt;a href="https://github.com/flosincapite"&gt;&lt;em&gt;Cory Massaro&lt;/em&gt;&lt;/a&gt;
+who is the dedicated MLH Python mentor. Once Cory gives the +1
+each pull request will be reviewed by a member of the Kiwi TCMS core team like usual.&lt;/p&gt;
+&lt;p&gt;To minimize the risk of conflicts between contributors we are going to apply
+the following rules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each MLH fellow would add a comment on the issue they are
+  interested in (applies to other contributors too);&lt;/li&gt;
+&lt;li&gt;The issue will be assigned to them (new);&lt;/li&gt;
+&lt;li&gt;The issue will be labeled with the
+  &lt;a href="https://github.com/kiwitcms/Kiwi/issues?q=is%3Aopen+is%3Aissue+label%3A%22MLH+Fellowship%22"&gt;&lt;strong&gt;MLH Fellowship&lt;/strong&gt;&lt;/a&gt;
+  label (new);&lt;/li&gt;
+&lt;li&gt;The following comment will be added:
+    &lt;em&gt;This issue/bounty has been assigned to an MLH fellow who is currently
+    working on it. Pull requests towards the same issue from other contributors
+    will not be considered at this time. Please pick something else to work on!&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Upon successful completion of tasks all MLH fellows will be eligible to claim their
+bounties via &lt;a href="https://opencollective.com/kiwitcms"&gt;our Open Collective page&lt;/a&gt;. This is
+the same process other contributors go through, there is no difference.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS commits 2 core-team members who will serve office hours
+on the &lt;a href="https://discord.gg/w7F55kn"&gt;MLH Fellowship Discord&lt;/a&gt; server for
+couple of hours per week in order to answer questions and keep the ball rolling.
+We also commit to having bi-weekly meetings with MLH mentor(s) during the
+duration of the program.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS would also like to thank our friend
+&lt;a href="https://twitter.com/eddiejaoude"&gt;Eddie Jaoude&lt;/a&gt; for putting us in touch with MLH
+and helping bring this partnership to reality. Thank you Eddie!&lt;/p&gt;
+&lt;h2&gt;Help us do more&lt;/h2&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#pricing"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="community"></category><category term="bounty-program"></category></entry><entry><title>Progress update on open source hardware for black-box testing</title><link href="/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/" rel="alternate"></link><published>2020-10-10T16:35:00+03:00</published><updated>2020-10-10T16:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-10:/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/</id><summary type="html">&lt;p&gt;Hello testers, as you know our
 &lt;a href="/blog/kiwi-tcms-team/2020/05/26/kiwi-tcms-is-partnering-up-with-pionir/"&gt;friends at Pionir&lt;/a&gt;
 are working on physical hardware which can be used for interactive training and
 explanation of the Black-box testing technique. The inspiration
