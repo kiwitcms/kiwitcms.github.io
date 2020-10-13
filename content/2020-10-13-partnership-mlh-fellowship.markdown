@@ -1,4 +1,4 @@
-Title: Kiwi TCMS is partnering with MHL Fellowship program
+Title: Kiwi TCMS is partnering with MLH Fellowship program
 Headline: for 12 weeks of open source hacking
 date: 2020-10-13 12:50
 comments: true
