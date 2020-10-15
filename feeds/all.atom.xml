@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-10-13T12:50:00+03:00</updated><entry><title>Kiwi TCMS is partnering with MLH Fellowship program</title><link href="/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/" rel="alternate"></link><published>2020-10-13T12:50:00+03:00</published><updated>2020-10-13T12:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-13:/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/</id><summary type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with the
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-10-15T15:51:00+03:00</updated><entry><title>Kiwi TCMS is partnering with Vola Software</title><link href="/blog/kiwi-tcms-team/2020/10/15/kiwi-tcms-is-partnering-with-vola-software/" rel="alternate"></link><published>2020-10-15T15:51:00+03:00</published><updated>2020-10-15T15:51:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-15:/blog/kiwi-tcms-team/2020/10/15/kiwi-tcms-is-partnering-with-vola-software/</id><summary type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with
+&lt;a href="https://volasoftware.com/"&gt;Vola Software&lt;/a&gt; to provide 2 interns with
+opportunities for hacking open source and bootstrapping their careers!&lt;/p&gt;
+&lt;p&gt;Vola Software is a custom software development company
+in one of the poorest regions of the European Union and a long-time …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with
+&lt;a href="https://volasoftware.com/"&gt;Vola Software&lt;/a&gt; to provide 2 interns with
+opportunities for hacking open source and bootstrapping their careers!&lt;/p&gt;
+&lt;p&gt;Vola Software is a custom software development company
+in one of the poorest regions of the European Union and a long-time contributor
+to their local ecosystem via
+&lt;a href="https://school.vratsasoftware.com/"&gt;Vratsa Software Community&lt;/a&gt;.
+They are located in Vratsa, Bulgaria.&lt;/p&gt;
+&lt;h2&gt;Internship program&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/Allexander203"&gt;Alexander Tsvetanov&lt;/a&gt; and
+&lt;a href="https://github.com/vladi1337"&gt;Vladislav Ankov&lt;/a&gt; are joining the Kiwi TCMS team
+for a 10 month adventure until the end of July 2021 with the opportunity
+to continue for another year afterwards!&lt;/p&gt;
+&lt;p&gt;Both Sasho and Vladi are students in the Professional Technical Gymnasium
+in Vratsa and are required to work part-time as junior software developers during the
+last 2 years of their education. Given that they have very limited practical
+experience and the additional red tape around hiring youngsters many software
+companies directly avoid such kind of relationship. This creates a catch-22
+circle for both employers who are looking to hire somewhat experienced young people
+and youngsters who are looking to advance their practical skills.&lt;/p&gt;
+&lt;p&gt;Here's where Kiwi TCMS steps-in! What better way to improve practical knowledge
+than contributing to an actively used and actively maintained open source software!
+We are nearing the 200K downloads mark on Docker Hub so changes made by
+Sasho and Vladi will be visible to a very big pool of our users and customers!&lt;/p&gt;
+&lt;p&gt;Both have already started their open source adventure last week and are currently
+going through some training. However they were faced with real problems which
+resulted in
+&lt;a href="https://github.com/python-bugzilla/python-bugzilla/issues/134"&gt;bug discovery&lt;/a&gt;
+and a
+&lt;a href="https://github.com/python-bugzilla/python-bugzilla/pull/135"&gt;pull request&lt;/a&gt; for
+&lt;strong&gt;python-bugzilla&lt;/strong&gt; underlined by a
+&lt;a href="https://bugs.python.org/issue41965"&gt;20 years old issue in Python&lt;/a&gt;.
+How's that for a start ?&lt;/p&gt;
+&lt;h2&gt;Administrative&lt;/h2&gt;
+&lt;p&gt;Vola Software is the direct employer for Sasho and Vladi because they have the
+necessary permits and experience required for hiring youngsters. Kiwi TCMS is
+the direct technical mentor and will be acting as a customer to Vola Software!&lt;/p&gt;
+&lt;p&gt;Vola Software will be paying a minimal salary to our interns as required by law.
+Kiwi TCMS will reimburse the full amount while Vola Software
+will be covering their accounting and administrative expenses.
+Both Sasho and Vladi will also be eligible for our
+&lt;a href="/blog/tags/bounty-program/"&gt;open source bounty-program&lt;/a&gt; as an extra stimulation!&lt;/p&gt;
+&lt;p&gt;All expenses will be fully transparent and visible via
+&lt;a href="https://opencollective.com/kiwitcms/expenses/"&gt;our Open Collective page&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;Help us do more&lt;/h2&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#pricing"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="community"></category><category term="bounty-program"></category></entry><entry><title>Kiwi TCMS is partnering with MLH Fellowship program</title><link href="/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/" rel="alternate"></link><published>2020-10-13T12:50:00+03:00</published><updated>2020-10-13T12:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-13:/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/</id><summary type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with the
 &lt;a href="https://fellowship.mlh.io/programs/open-source"&gt;MLH Fellowship&lt;/a&gt;
 open source program which is a 12 week internship alternative for
 students interested in becoming software engineers.&lt;/p&gt;
@@ -112,7 +169,7 @@ Vuk made a mistake and now he can't turn it off :D. How's that for dogfooding?&l
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS supports the various communities
 around us please &lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;nominate us as GitHub Stars&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>Kiwi TCMS 8.7</title><link href="/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/" rel="alternate"></link><published>2020-09-16T16:30:00+03:00</published><updated>2020-09-16T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-09-16:/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.7!&lt;/p&gt;
+Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="community"></category><category term="bounty-program"></category></entry><entry><title>Kiwi TCMS 8.7</title><link href="/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/" rel="alternate"></link><published>2020-09-16T16:30:00+03:00</published><updated>2020-09-16T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-09-16:/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.7!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a medium sized release which includes
 improvements, API changes, bug fixes, translation updates and
 new tests. It is the fifth release to include contributions via our
