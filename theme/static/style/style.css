@@ -1193,3 +1193,9 @@ font-size: 25px;
 	align-items: center;
 }
 
+article blockquote{
+    font-style: oblique;
+    padding: var(--x2-padding);
+    border-left: var(--x1-padding) solid var(--light-green);
+    background-color: var(--light-gray);
+}
