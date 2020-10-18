@@ -94,6 +94,127 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/06/18/kiwi-tcms-610/" rel="bookmark" title="Permalink to Kiwi TCMS 6.10">
+                <h1 class="top-header">Kiwi TCMS 6.10</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 18 June 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 6.10!
+This is a small security and improvement update.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  bbb581d60ed1    1.005 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-9">
+<h2>Changes since Kiwi TCMS 6.9</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 2.2.1 to 2.2.2 for medium severity
+CVE-2019-12308 (XSS), CVE-2019-11358 (jQuery).
+<a class="reference external" href="https://docs.djangoproject.com/en/2.2/releases/2.2.2/">More info</a></li>
+<li>Add missing permission checks for menus in Test run page UI template.
+Permission check added for TestExecution status and comment menu.
+References <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/716">Issue #716</a></li>
+<li>Re-enable static analysis with <tt class="docutils literal">bandit</tt> and <tt class="docutils literal">Coverity Scan</tt> in
+Travis CI (Svetlomir Balevski)</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update psycopg2 from 2.8.2 to 2.8.3</li>
+<li>Update markdown from 3.1 to 3.1.1</li>
+<li>Update patternfly to version 3.59.2</li>
+<li>Override <tt class="docutils literal">PasswordResetForm</tt> because <tt class="docutils literal">Site.objects.get_current()</tt>
+didn't produce correct results when working with <tt class="docutils literal"><span class="pre">kiwitcms-tenants</span></tt></li>
+<li>Show column <tt class="docutils literal">is_active</tt> in user admin page</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Add test for <tt class="docutils literal">email_case_deletion()</tt> (Rik)</li>
+<li>New linter to warn about usage of <tt class="docutils literal">AutoField</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/737">Issue #737</a> (Ivo Donchev, HackSoft)</li>
+<li>New linter to discover empty classed. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/739">Issue #739</a> (Daniel Goshev)</li>
+<li>New linter to warn about usage of <tt class="docutils literal">OneToOneField</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/735">Issue #735</a> (George Goranov)</li>
+<li>New linter to warn about usage of function based views. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/734">Issue #734</a> (Yavor Lulchev, Uber)</li>
+<li>New linter to discover Python files in directories without <tt class="docutils literal">__init__.py</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/790">Issue #790</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="join-us-at-openexpo-in-madrid">
+<h2>Join us at OpenExpo in Madrid</h2>
+<p>Kiwi TCMS is exhibitor at <a class="reference external" href="https://openexpoeurope.com/">OpenExpo Europe</a>
+on June 20th in Madrid. We will be hosting an info booth and 2 technical
+presentations delivered by
+<a class="reference external" href="https://openexpoeurope.com/speaker/anton-sankov/">Anton Sankov</a> and
+<a class="reference external" href="https://openexpoeurope.com/speaker/alexander-todorov/">Alex Todorov</a>.</p>
+<p>Kiwi TCMS is also the leading finalist in the
+<a class="reference external" href="https://a.cstmapp.com/entries/31129/sort:votes/direction:desc">Best Tech Community</a>
+category at Open Awards 2019!</p>
+<p>Use <strong>OE19SPEAKERINVITE</strong> 100% discount code! Get your ticket
+<a class="reference external" href="https://www.eventbrite.es/e/openexpo-europe-2019-the-leading-enterprise-it-open-innovation-summit-tickets-56499351080?discount=OE19SPEAKERINVITE#tickets">here</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/" rel="bookmark" title="Permalink to Kiwi TCMS needs your help winning OpenAwards 2019">
                 <h1 class="top-header">Kiwi TCMS needs your help winning OpenAwards 2019</h1>
             </a>
@@ -2448,22 +2569,6 @@ Test runs should only be able to select product builds (after
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/" rel="bookmark" title="Permalink to Happy birthday Kiwi TCMS">
-                <h1 class="top-header">Happy birthday Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 13 September 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"></p>
         </div>
     </article>
 

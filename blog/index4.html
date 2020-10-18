@@ -88,6 +88,61 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/01/17/kiwi-tcms-is-going-to-fosdem-2019/" rel="bookmark" title="Permalink to Kiwi TCMS is going to FOSDEM 2019">
+                <h1 class="top-header">Kiwi TCMS is going to FOSDEM 2019</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 17 January 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello testers, Kiwi TCMS is going to <a href="http://fosdem.org/">FOSDEM</a> this year.
+This is where you can find us:</p>
+<p><img src="/images/kiwi_sticker.jpg" style="float:left; margin-right: 25px;"
+     alt="Kiwi TCMS sticker" title="Kiwi TCMS sticker"></p>
+<ul>
+<li>Fri Feb 1st: <a href="https://fosdem.org/2019/beerevent/">after 18:00 @ Delirium Café</a> -
+  we are taking part of the FOSDEM Beer Event where all participants are invited.
+  <code>Shout out with #KiwiTCMS</code> on Twitter if you can't find us in the crowd</li>
+<li>Both days: <a href="https://fosdem.org/2019/stands/">Building K, Level 2, Stand 10</a>.
+  We will be together with our friends from ReportPortal and SystemTestPortal at
+  the Open Source Test Management stand</li>
+<li>Sat Feb 2nd:
+  <a href="https://fosdem.org/2019/schedule/track/lightning_talks/">18:00 @ Room H.2215 (Lightning Talks)</a> -
+  <a href="https://fosdem.org/2019/schedule/event/test_case_management/">10 years of open source test case management <em>with Kiwi TCMS</em></a>
+  lightning talk</li>
+<li>Sun Feb 3rd:
+  <a href="https://fosdem.org/2019/schedule/track/python/">10:00 @ UD2.120 (Python devroom)</a> -
+  <a href="https://fosdem.org/2019/schedule/event/python_write_pylint_plugins/">How to write pylint plugins</a>
+  presentation with examples of plugins which our team uses to make Kiwi TCMS better</li>
+</ul>
+<p>We would like to meet with all of you and talk about test management and
+test process organization. In case you are stuck for crazy ideas checkout
+<a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">our project mission</a> for inspiration.</p>
+<h2>Be part of the community</h2>
+<p>We are turning 10 years old and we have presents for you! You will have to perform
+a small challenge and you can get your hands(errr, feet) on a pair of these:</p>
+<p><img src="/images/kiwi_socks.jpg" style="float:none"
+     alt="Kiwi TCMS socks" title="Kiwi TCMS socks"></p>
+<p>Here's what else you can do to help us:</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Become a stargazer</a> by clicking the
+  <code>Star</code> button on our GitHub repository</li>
+<li><a href="https://twitter.com/KiwiTCMS">Follow @KiwiTCMS on Twitter</a></li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a> -
+  we are GDPR compliant and we don't spam, we promise!</li>
+<li>Send us testimonials and feedback about using Kiwi TCMS.
+  We will be happy to publish them on our website</li>
+<li><a href="https://opencollective.com/kiwitcms">Become a sponsor</a>!</li>
+</ul>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="bookmark" title="Permalink to Project mission and goals for 2019">
                 <h1 class="top-header">Project mission and goals for 2019</h1>
             </a>
@@ -2398,112 +2453,6 @@ free to comment below, file GitHub issues or send us an email.</p>
 <p>Happy testing!</p>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to backup Docker volumes for Kiwi TCMS">
-                <h1 class="top-header">How to backup Docker volumes for Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/atodorov/">Alexander Todorov</a>
-                on Mon 30 July 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>When you start Kiwi TCMS by running <code>docker-compose up</code>
-(see <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose">here</a>)
-it will automatically create 2 volumes: <code>kiwi_db_data</code> and <code>kiwi_uploads</code>.
-This blog post will outline how to backup these docker volumes.</p>
-<h2>Backing up the database</h2>
-<p>Kiwi TCMS is a Django application and the <code>manage.py</code> command provides an easy way
-to dump and load the database contents. To export all contents on your docker host
-execute:</p>
-<div class="highlight"><pre><span></span><code><span class="err">docker exec -it kiwi_web /Kiwi/manage.py dumpdata --all --indent 2 &gt; database.json</span>
-</code></pre></div>
-
-
-<p>This will create a file named <code>database.json</code> in the current directory, outside of the
-running container!</p>
-<p>You can restore the database contents by using the following commands:</p>
-<div class="highlight"><pre><span></span><code><span class="err"># delete data from all tables</span>
-<span class="err">docker exec -it kiwi_web /bin/bash -c &#39;/Kiwi/manage.py sqlflush | /Kiwi/manage.py dbshell&#39;</span>
-<span class="err"># then reload the existing data</span>
-<span class="err">cat database.json | docker exec -i kiwi_web /Kiwi/manage.py loaddata --format json -</span>
-</code></pre></div>
-
-
-<p><strong>NOTE:</strong> depending on your scenario you may want to remove the existing volume
-(<code>docker-compose down &amp;&amp; docker volume rm kiwi_db_data</code>) and re-create the
-DB schema (<code>/Kiwi/manage.py migrate</code>) before restoring the contents!</p>
-<p><strong>WARNING</strong>: the above steps are applicable to Kiwi TCMS 5.1 or above. On earlier
-versions <code>manage.py</code> will fail due to various issues.</p>
-<h2>Backing up multi-tenant database</h2>
-<p>The <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenant</a> add-on depends on the
-PostgreSQL database. It will create multiple DB schemas, one per tenant. To backup
-all tenants use the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="err">docker exec -i kiwi_db /bin/bash -c &#39;pg_dump --dbname=kiwi -F c&#39; &gt; backup.bak</span>
-</code></pre></div>
-
-
-<p>This will create a file in the PostgreSQL custom database dump format which
-contains all data and schema definitions. That is a binary file which can be read
-with the <code>pg_restore</code> command.</p>
-<p>To [drop and] restore the entire multi-tenant database:</p>
-<div class="highlight"><pre><span></span><code><span class="err">docker exec -i kiwi_db /bin/bash -c &#39;psql -c &quot;DROP DATABASE IF EXISTS kiwi;&quot;&#39;</span>
-<span class="err">cat backup.bak | docker exec -i kiwi_db /bin/bash -c &#39;pg_restore --dbname=template1 -vcC&#39;</span>
-</code></pre></div>
-
-
-<p>To [drop and] restore an individual tenant:</p>
-<div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">kiwi_web</span> <span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">dbshell</span>
-
-<span class="n">kiwi</span><span class="o">=&gt;</span> <span class="k">DROP</span> <span class="k">SCHEMA</span> <span class="err">$</span><span class="n">tenant_name</span> <span class="k">CASCADE</span><span class="p">;</span>
-<span class="p">....</span>
-<span class="k">DROP</span> <span class="k">SCHEMA</span>
-<span class="n">kiwi</span><span class="o">=&gt;</span> <span class="k">CREATE</span> <span class="k">SCHEMA</span> <span class="err">$</span><span class="n">tenant_name</span><span class="p">;</span>
-<span class="k">CREATE</span> <span class="k">SCHEMA</span>
-<span class="n">kiwi</span><span class="o">=&gt;</span><span class="n">Ctrl</span><span class="o">+</span><span class="n">D</span>
-
-<span class="n">cat</span> <span class="n">backup</span><span class="p">.</span><span class="n">bak</span> <span class="o">|</span> <span class="n">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="n">i</span> <span class="n">kiwi_db</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="k">c</span> <span class="s1">&#39;pg_restore --dbname=kiwi -v --schema $tenant_name&#39;</span>
-</code></pre></div>
-
-
-<p><strong>WARNING:</strong> <code>sqlflush | dbshell</code> will not work when you have multiple DB schemas so you must use
-the PostgreSQL database shell to manipulate the contents of the database!</p>
-<h2>Backing up file uploads</h2>
-<p>Uploaded files can easily be backed up with:</p>
-<div class="highlight"><pre><span></span><code><span class="err">docker exec -i kiwi_web /bin/tar -cP /Kiwi/uploads &gt; uploads.tar</span>
-</code></pre></div>
-
-
-<p>and then restored:</p>
-<div class="highlight"><pre><span></span><code><span class="err">cat uploads.tar | docker exec -i kiwi_web /bin/tar -x</span>
-</code></pre></div>
-
-
-<p>You may also try the <code>rsync</code> command but be aware that it is not installed
-by default!</p>
-<p>The same approach may be used to backup <code>/var/lib/mysql/</code> from the <code>kiwi_db</code>
-container.</p>
-<h2>Backing up multi-tenant uploads</h2>
-<p>By default multi-tenant file uploads are stored under <code>/Kiwi/uploads/tenant/$tenant_name</code>.
-You can archive all contents with the same procedure above. If you wish to restore
-files per tenant you will have to upload the <code>$tenant_name</code> directory into the
-docker volume.</p>
-<h2>Alternatives</h2>
-<p>By default both docker volumes created for Kiwi TCMS use the <code>local</code> driver
-and are available under <code>/var/lib/docker/volumes/&lt;volume_name&gt;</code> on the host
-running your containers. You can try backing them up from there as well.</p>
-<p>Another alternative is to use the
-<a href="https://www.projectatomic.io/blog/2016/05/docker-lvm-plugin/">docker-lvm-plugin</a>
-and create these volumes as LVM2 block devices. Then use
-<code>lvcreate -s</code> command to create a snapshot volume. For more information see
-<a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/logical_volume_manager_administration/index#snapshot_volumes">chapter 2.3.5. Snapshot Volumes</a>
-from the LVM Administrator Guide for Red Hat Enterprise Linux 7.</p>
-<p>Happy testing!</p>
         </div>
     </article>
 
