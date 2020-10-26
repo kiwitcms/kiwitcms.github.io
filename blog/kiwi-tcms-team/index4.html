@@ -94,6 +94,139 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2018/10/04/kiwi-tcms-60/" rel="bookmark" title="Permalink to Kiwi TCMS 6.0">
+                <h1 class="top-header">Kiwi TCMS 6.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 04 October 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 6.0! This release
+introduces new database migrations, removal of
+environment properties in favor of tags, internal updates and bug fixes.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>.</p>
+<p>This release removes squashed migrations. Direct upgrades from versions
+&lt; 5.3.1 to 6.0 will break without an intermediate upgrade to 5.3.1!</p>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  cd087297f349    991.3 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-5-3-1">
+<h2>Changes since Kiwi TCMS 5.3.1</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.2/">Django 2.1.2</a>
+due to high severity security issue</li>
+<li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.54.8</a></li>
+<li><tt class="docutils literal">Tag</tt> objects are now shown in Admin panel</li>
+<li>Add autocomplete when adding tags to <tt class="docutils literal">TestRun</tt> via UI</li>
+</ul>
+</div>
+<div class="section" id="removed-functionality">
+<h3>Removed functionality</h3>
+<ul class="simple">
+<li>TestCase new and edit views no longer allow editing of tags. Tags can be
+added/removed from the Tags tab which also makes sure to properly account
+for permissions</li>
+<li>Remove <tt class="docutils literal">EnvGroup</tt>, <tt class="docutils literal">EnvProperty</tt> and <tt class="docutils literal">EnvValue</tt> models in favor of tags.
+Existing values and properties are converted into tags and automatically added
+to test runs!</li>
+<li>Convert squashed database migrations to regular ones and remove older migrations.
+<strong>WARNING:</strong> upgrade from versions &lt;= 5.3.1 to 6.0 will break without an intermediate
+upgrade to <tt class="docutils literal">kiwitcms/kiwi:5.3.1 a420465852be</tt>.</li>
+<li>Remove deprecated <tt class="docutils literal">TestCase.estimated_time</tt> and <tt class="docutils literal">TestRun.estimated_time</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/514">Issue #514</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="backend-api">
+<h2>Backend API</h2>
+<ul class="simple">
+<li>No longer use <tt class="docutils literal">product_version</tt> for <tt class="docutils literal">TestRun.create</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/522">Issue #522</a><ul>
+<li>'product' is no longer required</li>
+<li>'product_version' is no longer required</li>
+<li>'manager' and 'default_tester' can be usernames or IDs</li>
+</ul>
+</li>
+<li><tt class="docutils literal">TestCase.create</tt> no longer accepts 'tag' values</li>
+<li><tt class="docutils literal">TestRun.add_tag</tt> and <tt class="docutils literal">TestRun.remove_tag</tt> now return list of tags.
+Previously these methods returned <tt class="docutils literal">None</tt>!
+This is the list of tags assigned to the TestRun that is being modified!</li>
+</ul>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix mismatched HTML tag in <tt class="docutils literal">plan/get.html</tt> template (Oleg Kainov)</li>
+<li>Don't use <tt class="docutils literal">|slugify</tt> filter in templates which breaks HTML links with non-ASCII
+TestPlan names. Fixes
+<a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/676626096/">Sentry KIWI-TCMS-38</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Fix pylint errors (Ivaylo Ivanov, Anton Sankov)</li>
+<li>Use existing JSON-RPC methods to add/remove tags via webUI and remove specialized
+backend methods that handled these requests. Also make sure to obey respective
+permissions</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+</div>
+<div class="section" id="subscription-based-online-service">
+<h2>Subscription based online service</h2>
+<p>We are planning to convert
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> into
+a subscription based service for people who don't want to bother installing
+Kiwi TCMS on their own systems and just want to use it for test collaboration
+with their team.</p>
+<p>The income from this service will go towards covering operating costs and
+supporting the
+<a class="reference external" href="https://github.com/orgs/kiwitcms/people">development team</a>. Watch this
+blog for further announcements about this. Meanwhile you may share your
+thoughts via
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+</div>
+<div class="section" id="plans-to-remove-deprecated-functionality">
+<h2>Plans to remove deprecated functionality</h2>
+<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
+<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
+to select a product version different than the one selected in the Test Plan.
+Test runs should only be able to select product builds (after
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/09/13/happy-birthday-kiwi-tcms/" rel="bookmark" title="Permalink to Happy birthday Kiwi TCMS">
                 <h1 class="top-header">Happy birthday Kiwi TCMS</h1>
             </a>

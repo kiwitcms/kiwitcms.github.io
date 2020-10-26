@@ -94,6 +94,144 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/04/27/kiwi-tcms-83/" rel="bookmark" title="Permalink to Kiwi TCMS 8.3">
+                <h1 class="top-header">Kiwi TCMS 8.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Mon 27 April 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 8.3!</p>
+<p><strong>IMPORTANT:</strong> this is a small release which updates 3rd party libraries,
+provides several improvements, includes minor API updates and new translations.
+It is the first release to include contributions via our
+<a class="reference external" href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/">open source bounty program</a>.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  c5dbd9a7ded6    562 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-8-2">
+<h2>Changes since Kiwi TCMS 8.2</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update django-colorfield from 0.2.2 to 0.3.0</li>
+<li>Update django-simple-history from 2.8.0 to 2.9.0</li>
+<li>Update prismjs from 1.19.0 to 1.20.0</li>
+<li>Update psycopg2 from 2.8.4 to 2.8.5</li>
+<li>Update pygithub from 1.47 to 1.50</li>
+<li>Update python-gitlab from 2.1.2 to 2.2.0</li>
+<li>It is now possible to reopen closed bugs - Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1152">Issue #1152</a> (&#64;cmbahadir)</li>
+<li>Visual improvements for Status matrix telemetry:<ul>
+<li>columns now link to test runs</li>
+<li>tool-tips show test run summary</li>
+</ul>
+</li>
+<li>Show TOTAL in tool-tip for Execution trends telemetry</li>
+<li>Self-signed SSL certificate is now built more frequently and is valid
+for 10 years</li>
+<li>Improved documentation around self-signed certificates</li>
+<li>Improved documentation around e-mail backend configuration. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1070">Issue #1070</a>
+(&#64;Schwarzkrieger)</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Methods <tt class="docutils literal">TestPlan.create</tt>, <tt class="docutils literal">TestPlan.update</tt> and <tt class="docutils literal">TestRun.update</tt>
+now use Django's ModelForm to properly validate input data against the model</li>
+<li>Method <tt class="docutils literal">TestCase.update</tt> now also accepts username and email values for
+fields <tt class="docutils literal">author</tt>, <tt class="docutils literal">default_tester</tt> and <tt class="docutils literal">reviewer</tt></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Migrate bandit test job to GitHub workflows, Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1550">Issue #1550</a> (&#64;lcmtwn)</li>
+<li>Migrate doc8 test job to GitHub workflows. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1551">Issue #1551</a> (&#64;Prome88)</li>
+<li>Add 2 more tests (Mariyan Garvanski)</li>
+<li>Convert TP edit page to class based view</li>
+<li>Convert forms to ModelForm</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#">Portuguese, Brazilian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/vi#">Vietnamese translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v8-3-mt">
+<h2>Kiwi TCMS Enterprise v8.3-mt</h2>
+<p>Includes internal refactoring and upgrades around Tenant schema names/domain names
+validation and better visual hints when creating tenants. For a list of changes see
+<a class="reference external" href="https://github.com/MrSenko/kiwitcms-enterprise/#v83-mt-27-apr-2020">https://github.com/MrSenko/kiwitcms-enterprise/#v83-mt-27-apr-2020</a></p>
+</div>
+<div class="section" id="vote-for-kiwi-tcms">
+<h2>Vote for Kiwi TCMS</h2>
+<p>Our website has been nominated in the <em>2020 .eu Web Awards</em> and
+<a class="reference external" href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/">we've promised</a>
+to do everything in our power to greet future FOSDEM visitors with
+an open source billboard advertising at BRU airport. We need your help
+to do that!</p>
+<ul class="simple">
+<li>Go to <a class="reference external" href="https://webawards.eurid.eu/?q=kiwitcms.eu">https://webawards.eurid.eu/?q=kiwitcms.eu</a>;</li>
+<li>Point your mouse to the photo of our website and click the Thumbs Up &amp;#128077; button;</li>
+<li>No email or registration required!</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+# !!! docker tag to keep older image version on the machine
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb-103-centos7
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Refer to
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
+for more details!</p>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/04/17/kiwi-tcms-open-source-bounty-program-round-01/" rel="bookmark" title="Permalink to Kiwi TCMS open source bounty program, Round 01">
                 <h1 class="top-header">Kiwi TCMS open source bounty program, Round 01</h1>
             </a>
@@ -2510,94 +2648,6 @@ by the amount of things to learn. I feel there is so much I want to experiment w
 I am not really planning anything related to open source - it has never been a goal for me -
 but when I come across a project I feel strongly about, I'd probably be tempted to contribute.</p>
 <p><em>Thank you, Aneta! Happy testing!</em></p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/07/05/contributor-profile-primoz-klemen/" rel="bookmark" title="Permalink to Contributor profile: Primož Klemen">
-                <h1 class="top-header">Contributor profile: Primož Klemen</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 05 July 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p>In this new <a href="/blog/tags/community/">series</a> we are going to introduce the contributors behind Kiwi TCMS.
-This is our community and these are their stories.</p>
-<div class="member-bio">
-    <img class="rounded" src="/images/contributors/primoz.jpg" height="150" width="150">
-    <strong>Primož Klemen</strong> -
-    <em>QA tester, full time dad, Manchester United F.C. supporter</em>
-
-    <p>
-        Primož is an early adopter and our Slovenian translator. He's been actively engaging
-        in GitHub issues, posted pull requests for improving documentation and follows us on
-        <a href="https://stackoverflow.com/questions/tagged/kiwi-tcms">StackOverflow</a> as well.
-    </p>
-
-    <a href="https://github.com/Prome88" class="bio-link">
-        <i class="lab la-github"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/in/primozklemen/" class="bio-link">
-        <i class="lab la-linkedin"></i>
-    </a>
-</div>
-
-<h2>What is your professional background</h2>
-<p>I've started working in IT as tech support for the 2nd largest Slovenian ISP at the time.
-Then I've been at leading software provider for fintech in the Balkans region in the same
-role and gradually transitioned into QA role. Currently, I'm working as a QA tester for
-<a href="http://better.care">Better (by Marand)</a> and ensure, with help of my colleagues of course,
-proper quality of administration application for health care sector.</p>
-<h2>When did you use open source for the first time</h2>
-<p>If I recall correctly that would be some 14 years ago when I ditched dreaded
-Internet Explorer in favor of Mozilla Firefox browser. The whole Internet got better in
-a matter of seconds.</p>
-<h2>What are your contributions to Kiwi TCMS</h2>
-<p>I mainly contribute via translating the application into my native language, Slovenian.
-Currently there are
-<a href="https://crowdin.com/project/kiwitcms">7 languages available</a> for Kiwi TCMS so you are
-more than welcome to join and add another one.
-<a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html#translation">Translating via Crowdin</a>
-is very simple and requires no additional technical skills. I've also dabbled into project
-documentation and proposed a few updates to it. I'm also the culprit for some
-<a href="https://github.com/kiwitcms/Kiwi/issues/Prome88">32 issues</a> and counting,
-the majority of them being proposals for future application enhancements and few UX/UI bugs
-(déformation professionnelle :-)).</p>
-<h2>Why did you decide to contribute to Kiwi TCMS</h2>
-<blockquote>
-<p>The guys and gals from the Kiwi TCMS team provided us with an application which solved
-our pain about building, maintaining and running manual regression tests.</p>
-</blockquote>
-<p>They did all of that for free in their spare time! So I've decided to give something back to
-the whole community. This was indeed my first
-contribution to the open source world but not the last. Since then I've also
-contributed to other projects which I use on a regular basis.</p>
-<blockquote>
-<p>In hindsight, Kiwi TCMS converted me from an open source user to open source contributor!</p>
-</blockquote>
-<h2>Was there something which was hard for you during the contribution process</h2>
-<p>Contributing to the project, as a non-developer, is very easy and intuitive by
-either opening issues on GitHub or translating via Crowdin or even committing
-updated documentation to git repository through GitHub Desktop client.
-All of the aforementioned was new to me and I've learned in depth how to use
-these tools. I've also had the pleasure to familiarize myself with project documentation
-- Sphinx and reStructuredText are my two new best friends.</p>
-<h2>Which is the best part of contributing to Kiwi TCMS</h2>
-<p>Being able to actively improve an application that we use on a daily basis in our
-development process. Getting to know more people from all around the globe and see their
-insights about software quality assurance thus learning something new every day.</p>
-<h2>What is next for you in professional and open source plan</h2>
-<p>Professionally I'm 100% committed to <a href="http://better.care">Better (by Marand)</a> and helping us achieve
-the best standard of quality for health care applications which also incorporates
-using the knowledge gathered by following and/or contributing to open source.
-I'm going to continue contributing to Kiwi TCMS and
-Captura and if time allows maybe involve myself with some other interesting projects.</p>
-<p><em>Thank you, Primož! Happy testing!</em></p>
         </div>
     </article>
 
