@@ -1,5 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-10-26T14:00:00+02:00</updated><entry><title>Kiwi TCMS celebrates 200K+ downloads</title><link href="/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/" rel="alternate"></link><published>2020-10-26T14:00:00+02:00</published><updated>2020-10-26T14:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-26:/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;200K banner&amp;quot;" src="/images/200K/banner.png" title="200K banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-11-09T12:10:00+02:00</updated><entry><title>Kiwi TCMS 8.8</title><link href="/blog/kiwi-tcms-team/2020/11/09/kiwi-tcms-88/" rel="alternate"></link><published>2020-11-09T12:10:00+02:00</published><updated>2020-11-09T12:10:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-11-09:/blog/kiwi-tcms-team/2020/11/09/kiwi-tcms-88/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.8!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release includes many improvements,
+API changes, bug fixes, translation updates, new tests and internal refactoring.
+It is the sixth release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.8!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release includes many improvements,
+API changes, bug fixes, translation updates, new tests and internal refactoring.
+It is the sixth release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;This is also the first release after
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/"&gt;Kiwi TCMS reached 200K pulls&lt;/a&gt;
+on Docker Hub!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  4b31ecf8ab5b    654 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-8-7"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 8.7&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update bleach from 3.1.5 to 3.2.1&lt;/li&gt;
+&lt;li&gt;Update django-extensions from 3.0.8 to 3.0.9&lt;/li&gt;
+&lt;li&gt;Update django from 3.1.1 to 3.1.3&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 2.11.0 to 2.12.0&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.2.2 to 3.3.3&lt;/li&gt;
+&lt;li&gt;Update pygments from 2.7.0 to 2.7.2&lt;/li&gt;
+&lt;li&gt;Update python-bugzilla from 2.5.0 to 3.0.1&lt;/li&gt;
+&lt;li&gt;Update node_modules/marked from 1.1.1 to 1.2.3&lt;/li&gt;
+&lt;li&gt;Update node_modules/prismjs from 1.21.0 to 1.22.0&lt;/li&gt;
+&lt;li&gt;Add management command &lt;tt class="docutils literal"&gt;refresh_permission&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1137"&gt;Issue #1137&lt;/a&gt; (Ivajlo Karabojkov)&lt;/li&gt;
+&lt;li&gt;Add bug tracker integration for Azure Boards. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1979"&gt;Issue #1979&lt;/a&gt; (&amp;#64;cmbahadir)&lt;/li&gt;
+&lt;li&gt;Add autosave configuration to web editor. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1958"&gt;Issue #1958&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;Change ON/OFF buttons messages to Yes/No for several buttons (Alexander Tsvetanov)&lt;/li&gt;
+&lt;li&gt;Add support for object-level permissions for TestCase,
+TestPlan, TestRun and Bug objects via &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-guardian&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Complete redesign of Test Plan page to match the rest of Kiwi TCMS:&lt;ul&gt;
+&lt;li&gt;modern look and feel using the PatternFly UI library&lt;/li&gt;
+&lt;li&gt;remove unused legacy code &amp;amp; HTML templates&lt;/li&gt;
+&lt;li&gt;closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/663"&gt;Issue #663&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1977"&gt;Issue #1977&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Enable Markdown support for strike-through text&lt;/li&gt;
+&lt;li&gt;Always pull latest RPMs when building container images&lt;/li&gt;
+&lt;li&gt;Update documentation and images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;AUTHENTICATION_BACKENDS&lt;/tt&gt; setting is now explicitly specified because of
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-guardian&lt;/span&gt;&lt;/tt&gt;. Take care to include the default backends if you
+override this setting. See &lt;tt class="docutils literal"&gt;tcms/settings/common.py&lt;/tt&gt; for more information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add index to &lt;tt class="docutils literal"&gt;TestCase.summary&lt;/tt&gt; field&lt;/li&gt;
+&lt;li&gt;Additional migrations from &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-guardian&lt;/span&gt;&lt;/tt&gt; around object-level permissions&lt;/li&gt;
+&lt;li&gt;New &lt;tt class="docutils literal"&gt;AnonymousUser&lt;/tt&gt; record added by &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-guardian&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Start using &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-tree-queries&lt;/span&gt;&lt;/tt&gt; which improves how tree based structures
+are stored in the database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;important:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+Requires PostgreSQL, sqlite3 &amp;gt;= 3.8.3, MariaDB &amp;gt;= 10.2.2 or
+MySQL &amp;gt;= 8.0 (if running without &lt;tt class="docutils literal"&gt;ONLY_FULL_GROUP_BY&lt;/tt&gt;).&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;warning:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+Supports only trees with max. 50 levels on MySQL/MariaDB, since those databases
+do not support arrays and require us to provide a maximum length upfront.
+This means up to 50 levels of nested child-parent test plans!&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestExecution.update()&lt;/tt&gt; will now modify field &lt;tt class="docutils literal"&gt;close_date&lt;/tt&gt;
+depending on test execution status. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1820"&gt;Issue #1820&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestCase.add_comment()&lt;/tt&gt; now returns the created comment&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestExecution.add_comment()&lt;/tt&gt; now returns the created comment&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestPlan.add_case()&lt;/tt&gt; now returns the newly added test case&lt;/li&gt;
+&lt;li&gt;Add method &lt;tt class="docutils literal"&gt;TestCase.sortkeys()&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/444"&gt;Issue #444&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add method &lt;tt class="docutils literal"&gt;Markdown.render()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Add method &lt;tt class="docutils literal"&gt;TestCase.comments()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Add method &lt;tt class="docutils literal"&gt;TestPlan.tree()&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix url formatting. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1806"&gt;Issue #1806&lt;/a&gt; (Rosen Sasov)&lt;/li&gt;
+&lt;li&gt;When deleting TestExecutionStatus check that there will be at least 1 left
+before deleting! Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1978"&gt;Issue #1978&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update typeahead definitions for test case components, tags and
+for adding test plans to test cases. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/882"&gt;Issue #882&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add option to filter by reviewer in Test Plan page. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/564"&gt;Issue #564&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pass the number of disabled test cases to HTML template when
+creating a new test run. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/718"&gt;Issue #718&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-testing"&gt;
+&lt;h3&gt;Refactoring &amp;amp; testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New linter to warn against &lt;tt class="docutils literal"&gt;GenericForeignKey&lt;/tt&gt; fields in models. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1303"&gt;Issue #1303&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;assign_default_group_permissions()&lt;/tt&gt; (Ivajlo Karabojkov)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;TestExecutionStatusAdmin&lt;/tt&gt;. Refs
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1618"&gt;Issue #1618&lt;/a&gt; (Mariyan Garvanski)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.bugs.views.Search&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1601"&gt;Issue #1601&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.testrun&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1628"&gt;Issue #1628&lt;/a&gt; (&amp;#64;lcmtwn)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.classification&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1621"&gt;Issue #1621&lt;/a&gt; (Abhishek Chaurasia)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.priority&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1622"&gt;Issue #1622&lt;/a&gt; (Abhishek Chaurasia)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.testcasestatus&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1624"&gt;Issue #1624&lt;/a&gt; (Abhishek Chaurasia)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.attachment&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1619"&gt;Issue #1619&lt;/a&gt; (&amp;#64;awalvie)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.testexecution.remove_comment&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1625"&gt;Issue #1625&lt;/a&gt; (&amp;#64;awalvie)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.testexecutionstatus&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1626"&gt;Issue #1626&lt;/a&gt; (&amp;#64;awalvie)&lt;/li&gt;
+&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;TestRun.add_case_run()&lt;/tt&gt; method and rename it to
+&lt;tt class="docutils literal"&gt;TestRun.create_execution()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;libkrb5-dev&lt;/span&gt;&lt;/tt&gt; is not needed anymore in CI with newer &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;tcms-api&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Use Fedora 32 to build Bugzilla docker image in CI&lt;/li&gt;
+&lt;li&gt;Update signature for overriden class to match Django 3.1&lt;/li&gt;
+&lt;li&gt;Move SimpleMDE initialization to simplemde_security_overide.js&lt;/li&gt;
+&lt;li&gt;Move &lt;tt class="docutils literal"&gt;post_save.send()&lt;/tt&gt; from &lt;tt class="docutils literal"&gt;bugs.views&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;comments.add_comment()&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/cs#"&gt;Czech translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/it#"&gt;Italian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v8-8-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v8.8-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v8.7&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-github-app from 1.2 to 1.2.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more info see
+&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise#v88-mt-07-nov-2020"&gt;https://github.com/kiwitcms/enterprise#v88-mt-07-nov-2020&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#pricing"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS celebrates 200K+ downloads</title><link href="/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/" rel="alternate"></link><published>2020-10-26T14:00:00+02:00</published><updated>2020-10-26T14:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-26:/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;200K banner&amp;quot;" src="/images/200K/banner.png" title="200K banner"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
 200000 times via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;!
 You can check the real-time stats
