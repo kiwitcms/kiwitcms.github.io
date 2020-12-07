@@ -1,5 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-12-02T14:55:00+02:00</updated><entry><title>Call for participation: Testing and Automation devroom, FOSDEM'21</title><link href="/blog/kiwi-tcms-team/2020/12/02/call-for-participation-testing-and-automation-devroom-fosdem21/" rel="alternate"></link><published>2020-12-02T14:55:00+02:00</published><updated>2020-12-02T14:55:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-12-02:/blog/kiwi-tcms-team/2020/12/02/call-for-participation-testing-and-automation-devroom-fosdem21/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2021/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-12-07T16:25:00+02:00</updated><entry><title>Kiwi TCMS 8.9</title><link href="/blog/kiwi-tcms-team/2020/12/07/kiwi-tcms-89/" rel="alternate"></link><published>2020-12-07T16:25:00+02:00</published><updated>2020-12-07T16:25:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-12-07:/blog/kiwi-tcms-team/2020/12/07/kiwi-tcms-89/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.9!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release includes many improvements,
+API changes, bug fixes, translation updates,
+new tests and internal refactoring.
+It is the seventh release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.9!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release includes many improvements,
+API changes, bug fixes, translation updates,
+new tests and internal refactoring.
+It is the seventh release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!
+This is also the second release after
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/"&gt;Kiwi TCMS reached 200K pulls&lt;/a&gt;
+on Docker Hub!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Docker images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  9bcfea3a532e    652 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-8-8"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 8.8&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django from 3.1.3 to 3.1.4&lt;/li&gt;
+&lt;li&gt;Update django-extensions from 3.0.9 to 3.1.0&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 2.14.2 to 2.14.3&lt;/li&gt;
+&lt;li&gt;Update pygments from 2.7.2 to 2.7.3&lt;/li&gt;
+&lt;li&gt;Update python-bugzilla from 3.0.1 to 3.0.2&lt;/li&gt;
+&lt;li&gt;Update node_modules/marked from 1.2.3 to 1.2.5&lt;/li&gt;
+&lt;li&gt;Update node_modules/html5sortable from 0.9.18 to 0.10.0&lt;/li&gt;
+&lt;li&gt;New &lt;tt class="docutils literal"&gt;manage.py initial_setup&lt;/tt&gt; command for one-stop initial setup
+(Ivajlo Karabojkov)&lt;/li&gt;
+&lt;li&gt;Bug tracker integration with BitBucket (bitbucket.org). Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1916"&gt;Issue #1916&lt;/a&gt; (&amp;#64;cmbahadir)&lt;/li&gt;
+&lt;li&gt;Complete redesign and refactoring of Test Run page:&lt;ul&gt;
+&lt;li&gt;Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/189"&gt;Issue #189&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/241"&gt;Issue #241&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/212"&gt;Issue #212&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/431"&gt;Issue #431&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1382"&gt;Issue #1382&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add filter by component &amp;amp; tag. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/833"&gt;Issue #833&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Don't limit the user to test cases from the parent test plan like before.
+Testers can add any test case for execution inside a test run,
+even mix &amp;amp; match test cases between products. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1934"&gt;Issue #1934&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add attachments to Test Run page. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/872"&gt;Issue #872&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refresh execution row after reporting a bug. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/479"&gt;Issue #479&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCaseStatus&lt;/tt&gt; can now be customized. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1932"&gt;Issue #1932&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update documentation &amp;amp; screenshots&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Setting &lt;tt class="docutils literal"&gt;ANONYMOUS_USER_NAME&lt;/tt&gt; is now explicitly defined due to upstream bug
+in django-guardian (Abhishek Chaurasia)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New migrations for customizeable &lt;tt class="docutils literal"&gt;TestCaseStatus&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestExecution.history()&lt;/tt&gt; method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestCase.history()&lt;/tt&gt; method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestRun.add_cc()&lt;/tt&gt; method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestRun.remove_cc()&lt;/tt&gt; method&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestExecution.update()&lt;/tt&gt; will use build from parent test run if a
+&lt;tt class="docutils literal"&gt;build&lt;/tt&gt; field isn't explicitly specified in the arguments&lt;/li&gt;
+&lt;li&gt;Update method &lt;tt class="docutils literal"&gt;TestRun.add_case()&lt;/tt&gt;&lt;ul&gt;
+&lt;li&gt;will return existing TestExecution if available&lt;/li&gt;
+&lt;li&gt;will raise if test case status is not confirmed&lt;/li&gt;
+&lt;li&gt;will always create new test executions with the highest sortkey&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fixed miscellaneous bugs in &lt;tt class="docutils literal"&gt;tcms.rpc.testcase&lt;/tt&gt; (Gagan Deep)&lt;/li&gt;
+&lt;li&gt;Disable name change in admin for the default groups. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1313"&gt;Issue #1313&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-testing"&gt;
+&lt;h3&gt;Refactoring &amp;amp; testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add automated tests for &lt;tt class="docutils literal"&gt;tcms.core.views.server_error&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1606"&gt;Issue #1606&lt;/a&gt;
+(Abhishek Chaurasia)&lt;/li&gt;
+&lt;li&gt;Add automated tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.auth&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1620"&gt;Issue #1620&lt;/a&gt;
+(Abhishek Chaurasia)&lt;/li&gt;
+&lt;li&gt;Add automated test for &lt;tt class="docutils literal"&gt;AnonymousViewBackend.has_perm&lt;/tt&gt; method. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1905"&gt;Issue #1905&lt;/a&gt;
+(Abhishek Chaurasia)&lt;/li&gt;
+&lt;li&gt;Add automated tests for &lt;tt class="docutils literal"&gt;tcms.core.utils.maito&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1603"&gt;Issue #1603&lt;/a&gt; (Gagan Deep)&lt;/li&gt;
+&lt;li&gt;Add automated tests for &lt;tt class="docutils literal"&gt;tcms.utils.github&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1612"&gt;Issue #1612&lt;/a&gt; (Gagan Deep)&lt;/li&gt;
+&lt;li&gt;Add automated tests for &lt;tt class="docutils literal"&gt;tcms.rpc.api.testscase&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1623"&gt;Issue #1623&lt;/a&gt; (Gagan Deep)&lt;/li&gt;
+&lt;li&gt;Add automated tests for &lt;tt class="docutils literal"&gt;tcms.testcases.views.NewCaseView&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1614"&gt;Issue #1614&lt;/a&gt; (&amp;#64;rish07)&lt;/li&gt;
+&lt;li&gt;Add automated tests for &lt;tt class="docutils literal"&gt;tcms.testplans.views.NewTestPlanView.&lt;/tt&gt; Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1616"&gt;Issue #1616&lt;/a&gt; (&amp;#64;awalvie)&lt;/li&gt;
+&lt;li&gt;Separate two functions one from another (Alexander Tsvetanov)&lt;/li&gt;
+&lt;li&gt;Disable pylint checks (Alexander Tsvetanov)&lt;/li&gt;
+&lt;li&gt;Upgrade to MySQL 8 in Travis CI&lt;/li&gt;
+&lt;li&gt;Remove unused setup in Travis CI&lt;/li&gt;
+&lt;li&gt;Be more robust when keeping internal state for TestPlan page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/cs#"&gt;Czech translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/id#"&gt;Indonesian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#"&gt;Russian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v8-9-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v8.9-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v8.9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more info see
+&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise#v89-mt-07-dec-2020"&gt;https://github.com/kiwitcms/enterprise#v89-mt-07-dec-2020&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#pricing"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Call for participation: Testing and Automation devroom, FOSDEM'21</title><link href="/blog/kiwi-tcms-team/2020/12/02/call-for-participation-testing-and-automation-devroom-fosdem21/" rel="alternate"></link><published>2020-12-02T14:55:00+02:00</published><updated>2020-12-02T14:55:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-12-02:/blog/kiwi-tcms-team/2020/12/02/call-for-participation-testing-and-automation-devroom-fosdem21/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2021/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
 &lt;p&gt;Attention open source testers: Testing and Automation devroom at FOSDEM'21
 is happening next year! Call for participation is now open.
 Checkout
