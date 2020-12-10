@@ -28,6 +28,11 @@ Project infrastructure, development and support services provided by:
 Privacy policy
 ==============
 
+Public Tenant data is shared between all public accounts and is intended for
+demonstrational purposes. Everyone has the same read/write/delete access to
+everything except other user's profiles!
+There are no guarantees or SLA for Public Tenant.
+
 Public Tenant accounts and all of their data are removed after 90 days of
 inactivity. This applies to users who have not logged in during that period
 and users who never confirmed their accounts!
