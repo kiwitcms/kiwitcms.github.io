@@ -1,5 +1,5 @@
 Title: Excellence in Innovation 2020 award for Kiwi TCMS
-Headline: finalist in "Innovative Enterprise of the Year"
+Headline: finalist in Innovative Enterprise of the Year
 date: 2020-12-26 17:17
 comments: true
 og_image: images/banners/excellence_in_innovation_2020.png
