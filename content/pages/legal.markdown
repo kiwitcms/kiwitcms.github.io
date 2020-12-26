@@ -22,8 +22,8 @@ Project infrastructure, development and support services provided by:
 * VAT number: BG200601818
 * Domain names: [kiwitcms.eu](http://kiwitcms.eu),
                 [kiwitcms.org](http://kiwitcms.org),
-                [mrsenko.com](http://mrsenko.com/legal/)
-
+                [mrsenko.com](http://mrsenko.com/),
+                [otb.bg](http://otb.bg)
 
 Privacy policy
 ==============
