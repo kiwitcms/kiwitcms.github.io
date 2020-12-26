@@ -88,6 +88,131 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to add API logging for Kiwi TCMS">
+                <h1 class="top-header">How to add API logging for Kiwi TCMS</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on Fri 07 September 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>In this blog post I will show more ways to customize Kiwi TCMS by adding
+logging capabilities to the API backend. Indeed this is a feature that
+our team deemed not required for upstream and was removed in
+<a href="https://github.com/kiwitcms/Kiwi/pull/436">PR #436</a>.</p>
+<p>Start by creating the following directory structure:</p>
+<div class="highlight"><pre><span></span><code><span class="err">    api_logging/</span>
+<span class="err">        __init__.py</span>
+<span class="err">        handlers.py</span>
+<span class="err">        models.py</span>
+</code></pre></div>
+
+
+<p>This is a small Django application that will log every call to the API backend.
+Each file looks like this:</p>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># models.py contains DB schema for your new table</span>
+    <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+    <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+
+    <span class="k">class</span> <span class="nc">ApiCallLog</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+        <span class="n">executed_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                 <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+        <span class="n">method</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Then</p>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
+    <span class="kn">from</span> <span class="nn">modernrpc</span> <span class="kn">import</span> <span class="n">handlers</span>
+
+    <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+    <span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">get_user_model</span>
+
+    <span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">ApiCallLog</span>
+
+    <span class="k">def</span> <span class="nf">log_call</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Log an RPC call to the database or stdout in DEBUG mode. &quot;&quot;&quot;</span>
+        <span class="n">request_user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">request_user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+            <span class="c1"># create an anonymous user object for logging purposes</span>
+            <span class="n">request_user</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_user_model</span><span class="p">()</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span>
+                <span class="n">username</span><span class="o">=</span><span class="s1">&#39;Anonymous&#39;</span><span class="p">,</span>
+                <span class="n">is_active</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">method_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">method_name</span> <span class="o">=</span> <span class="s1">&#39;--- method_name missing ---&#39;</span>
+
+        <span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;API call:: user: </span><span class="si">{0}</span><span class="s1">, method: </span><span class="si">{1}</span><span class="s1">, args: </span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">request_user</span><span class="p">,</span>
+                <span class="n">method_name</span><span class="p">,</span>
+                <span class="n">args</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ApiCallLog</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="n">user</span><span class="o">=</span><span class="n">request_user</span><span class="p">,</span>
+                <span class="n">method</span><span class="o">=</span><span class="n">method_name</span><span class="p">,</span>
+                <span class="n">args</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
+
+    <span class="k">class</span> <span class="nc">XMLRPCHandler</span><span class="p">(</span><span class="n">handlers</span><span class="o">.</span><span class="n">XMLRPCHandler</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">process_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">encoding</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">or</span> <span class="s1">&#39;utf-8&#39;</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span>
+            <span class="n">params</span><span class="p">,</span> <span class="n">method_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="n">log_call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_request</span><span class="p">()</span>
+
+    <span class="k">class</span> <span class="nc">JSONRPCHandler</span><span class="p">(</span><span class="n">handlers</span><span class="o">.</span><span class="n">JSONRPCHandler</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">process_single_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">):</span>
+            <span class="n">method_name</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;params&#39;</span><span class="p">)</span>
+
+            <span class="n">log_call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_single_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p><strong>NOTE:</strong>
+You will have to execute <code>./manage.py makemigrations api_logging</code> to create the
+initial migration for Django. This could be easier if you place the above directory
+into existing Django application or craft the migration file by hand!</p>
+<p>The last thing you want to do is create a <code>local_settings.py</code> file which will override
+Kiwi TCMS defaults:</p>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># local_settings.py</span>
+    <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+
+    <span class="n">settings</span><span class="o">.</span><span class="n">INSTALLED_APPS</span> <span class="o">+=</span> <span class="p">[</span>
+        <span class="s1">&#39;api_logging&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">MODERNRPC_HANDLERS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;api_logging.handlers.XMLRPCHandler&#39;</span><span class="p">,</span>
+                          <span class="s1">&#39;api_logging.handlers.JSONRPCHandler&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p>Then place everything in <code>Dockerfile</code> like so:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">FROM</span> <span class="n">kiwitcms</span><span class="o">/</span><span class="n">kiwi</span>
+
+    <span class="k">COPY</span> <span class="p">.</span><span class="o">/</span><span class="n">api_logging</span><span class="o">/</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">api_logging</span><span class="o">/</span>
+    <span class="k">COPY</span> <span class="n">local_settings</span><span class="p">.</span><span class="n">py</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tcms</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span>
+</code></pre></div>
+
+
+<p>Kiwi TCMS will import your <code>local_settings.py</code> and enable the logging application.
+Now build your customized Docker image and use it for deployment!</p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/09/04/kiwi-tcms-531/" rel="bookmark" title="Permalink to Kiwi TCMS 5.3.1">
                 <h1 class="top-header">Kiwi TCMS 5.3.1</h1>
             </a>
