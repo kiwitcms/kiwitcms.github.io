@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-12-26T17:17:00+02:00</updated><entry><title>Excellence in Innovation 2020 award for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/12/26/excellence-in-innovation-2020-award-for-kiwi-tcms/" rel="alternate"></link><published>2020-12-26T17:17:00+02:00</published><updated>2020-12-26T17:17:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-12-26:/blog/kiwi-tcms-team/2020/12/26/excellence-in-innovation-2020-award-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Virtual show screen&amp;quot;" src="/images/finalists_innovationbg.png" title="Virtual show screen"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-12-31T14:07:00+02:00</updated><entry><title>Roadmap status report for 2020</title><link href="/blog/atodorov/2020/12/31/roadmap-status-report-for-2020/" rel="alternate"></link><published>2020-12-31T14:07:00+02:00</published><updated>2020-12-31T14:07:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2020-12-31:/blog/atodorov/2020/12/31/roadmap-status-report-for-2020/</id><summary type="html">&lt;p&gt;Another year rolls out and despite all difficulties it is by far the
+strongest one for Kiwi TCMS!&lt;/p&gt;
+&lt;h2&gt;Stats&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2 physical events and a few virtual ones&lt;/li&gt;
+&lt;li&gt;12 releases&lt;/li&gt;
+&lt;li&gt;24 language translations&lt;/li&gt;
+&lt;li&gt;683 PRs, most of them closed &amp;amp; merged&lt;/li&gt;
+&lt;li&gt;Reached Issue/PR number 2000&lt;/li&gt;
+&lt;li&gt;Reached 5000 commits&lt;/li&gt;
+&lt;li&gt;Reached 8000 registrations …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Another year rolls out and despite all difficulties it is by far the
+strongest one for Kiwi TCMS!&lt;/p&gt;
+&lt;h2&gt;Stats&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2 physical events and a few virtual ones&lt;/li&gt;
+&lt;li&gt;12 releases&lt;/li&gt;
+&lt;li&gt;24 language translations&lt;/li&gt;
+&lt;li&gt;683 PRs, most of them closed &amp;amp; merged&lt;/li&gt;
+&lt;li&gt;Reached Issue/PR number 2000&lt;/li&gt;
+&lt;li&gt;Reached 5000 commits&lt;/li&gt;
+&lt;li&gt;Reached 8000 registrations via &lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reached 270K downloads via Docker Hub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Status update&lt;/h2&gt;
+&lt;p&gt;From the &lt;a href="/blog/atodorov/2020/01/17/project-roadmap-2020/"&gt;2020 roadmap&lt;/a&gt; we've
+established 3 main areas to work on. Their completeness scores are:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;1) Team - 30%&lt;/span&gt;
+&lt;span class="err"&gt;2) Technical - 70%&lt;/span&gt;
+&lt;span class="err"&gt;3) Community - 100%&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Average score is 65% completion!&lt;/p&gt;
+&lt;h2&gt;Team&lt;/h2&gt;
+&lt;p&gt;Overall the team has stalled its growth and improvement. Contributors which
+started onboarding a year ago are still under-productive and do not meet
+our criteria to become core-team members.
+The average team productivity is far beyond the goal of 1PR/week/person.
+This is largely due to contributors not being active on their items,
+very long periods between pull requests and longer than average time
+for closing pull requests.&lt;/p&gt;
+&lt;p&gt;The only positive side in this area is that core-team has improved its internal
+processes, is meeting regularly, discusses issues with
+members when they arise and relatively quickly spots problems and acts
+on them.&lt;/p&gt;
+&lt;h2&gt;Technical&lt;/h2&gt;
+&lt;p&gt;The dominating effort this year was refactoring the remaining legacy UI
+and converting everything to PatternFly. The effect of this is
+reduced code complexity and improved CodeClimate score/technical debt,
+removed vendored-in JavaScript dependencies and lots of unused code
+in favor of using the existing API.&lt;/p&gt;
+&lt;p&gt;Additional work has been done on closing bugs, implementing some features,
+integration with new bug tracking systems and improvements around the
+telemetry feature.&lt;/p&gt;
+&lt;p&gt;However there is still a lot of work to be done until all telemetry
+pages are complete. There are also around 30 pylint issues remaining
+which require internal refactoring and more legacy code cleanup. It's
+getting there but it's also getting harder.&lt;/p&gt;
+&lt;h2&gt;Community&lt;/h2&gt;
+&lt;p&gt;This area turned out to be our strongest one this year. We started
+very strong at FOSDEM 2020 and collaborated with multiple communities on
+plugins, code &amp;amp; translation contributions, adoption of Kiwi TCMS and
+general partnerships around open source.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS got a substantial grant from the Mozilla foundation which
+helped bootstrap our open source bounty program and internship
+program.&lt;/p&gt;
+&lt;p&gt;In May we reached 100K downloads on Docker Hub then in October we've
+surpassed 200K. Next month we'll reach 300K!&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;2020 was definitely a year full with uncertainties and hardship.
+It was not what we were used to and there were many ideas and
+lead projects that looked very promising in the beginning of the
+year but didn't materialize for a multitude of reasons.&lt;/p&gt;
+&lt;p&gt;Overall Kiwi TCMS, its team and its community did very well and I am
+confident that next year we can achieve more together!&lt;/p&gt;
+&lt;p&gt;Happy Testing and Happy New Year!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#pricing"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category><category term="roadmap"></category></entry><entry><title>Excellence in Innovation 2020 award for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/12/26/excellence-in-innovation-2020-award-for-kiwi-tcms/" rel="alternate"></link><published>2020-12-26T17:17:00+02:00</published><updated>2020-12-26T17:17:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-12-26:/blog/kiwi-tcms-team/2020/12/26/excellence-in-innovation-2020-award-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Virtual show screen&amp;quot;" src="/images/finalists_innovationbg.png" title="Virtual show screen"&gt;&lt;/p&gt;
 &lt;p&gt;Dear testers, we are happy to share that Kiwi TCMS has been distinguished
 with the &lt;em&gt;Excellence in Innovation 2020&lt;/em&gt; award by
 &lt;a href="http://www.arcfund.net/"&gt;Applied Research and Communications Fund&lt;/a&gt; in Bulgaria.
