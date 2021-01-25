@@ -224,14 +224,20 @@ of one another.
 
 
 Web hooks
--------------------
+---------
 
-Web hooks feature aims to improve the integrations capabilities of Kiwi TCMS.
-This will allow users to configure custom URL to which the system will send
-HTTP POST requests on certain events.   
+Kiwi TCMS should be able to better integrate with 3rd party systems.
+This feature will allow users to configure custom URL to which Kiwi TCMS will send
+HTTP POST requests on certain events. It looks like we can base the implementation
+on top of [django-rest-hooks](https://github.com/zapier/django-rest-hooks) and
+pair it up with [RestrictedPython](https://restrictedpython.readthedocs.io/)
+for further flexibility.
 
-[Issue #1080](https://github.com/kiwitcms/Kiwi/issues/1080),
-[Issue #913](https://github.com/kiwitcms/Kiwi/issues/914).
+This feature is being tracked in
+[Issue #1080](https://github.com/kiwitcms/Kiwi/issues/1080) and
+[Issue #913](https://github.com/kiwitcms/Kiwi/issues/914) but needs a more
+detailed definition.
+
 
 Anything else
 -------------
