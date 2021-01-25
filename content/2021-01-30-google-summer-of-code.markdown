@@ -223,6 +223,16 @@ database and afterwards the features are similar but relatively independent
 of one another.
 
 
+Web hooks
+-------------------
+
+Web hooks feature aims to improve the integrations capabilities of Kiwi TCMS.
+This will allow users to configure custom URL to which the system will send
+HTTP POST requests on certain events.   
+
+[Issue #1080](https://github.com/kiwitcms/Kiwi/issues/1080),
+[Issue #913](https://github.com/kiwitcms/Kiwi/issues/914).
+
 Anything else
 -------------
 
