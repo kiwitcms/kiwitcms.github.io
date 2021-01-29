@@ -88,6 +88,83 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/atodorov/2021/01/29/project-roadmap-2021/" rel="bookmark" title="Permalink to Project roadmap 2021">
+                <h1 class="top-header">Project roadmap 2021</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on Fri 29 January 2021
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello testers,
+this blog post outlines Kiwi TCMS roadmap for 2021 and what we feel is
+important to us!</p>
+<p><img style="background-color: inherit" src="/images/roadmap2021.png" alt="roadmap image 2021"></p>
+<h1>Project sustainability</h1>
+<p>The big goal towards which we are striving is to turn Kiwi TCMS into a
+sustainable open source project. For now this means three key areas:</p>
+<div class="highlight"><pre><span></span><code><span class="err">1) Team</span>
+<span class="err">2) Technical</span>
+<span class="err">3) Community &amp; Adoption</span>
+</code></pre></div>
+
+
+<h2>Team</h2>
+<p>Right now we have a core team with 3 members, 3 more members on-boarding
+and 2 interns. In the past year we weren't successful into turning more
+people into core-team members.
+I have seen several problems and core-team will significantly reconsider
+how we approach &amp; recruit people to join the team, how we on-board and help
+them so that they can become productive and fully fledged team members.</p>
+<p>Long term focus is improving and strengthening core-team which also implies
+a level of responsibility and performance criteria which core-team members
+must meet.</p>
+<p><strong>Goal:</strong> 1 PR/week/person as broad measure of individual performance so that
+we can operate with a predictable capacity.</p>
+<p><strong>Goal:</strong> (re)structure internal team processes around candidates and newcomers!
+Note: These are not public at the moment.</p>
+<h2>Technical</h2>
+<p>The areas shown on the picture above will receive more priority.</p>
+<p><strong>Goal:</strong> complete remaining <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Telemetry features</a>.</p>
+<p><strong>Goal:</strong> complete remaining refactoring with major focus in pylint issues, migration to
+Patternfly v4 and eslint issues.</p>
+<p><strong>Goal:</strong> improve SSL configuration with strong bias towards Let's Encrypt being
+configured by default.</p>
+<p><strong>Goal:</strong> provide support for web hooks so that Kiwi TCMS can be integrated more
+easily/flexibly with 3rd party systems. We're aiming for Kiwi TCMS to be able to
+POST webhooks to external URLs and inform them about events in the system.</p>
+<h2>Community &amp; Adoption</h2>
+<p>Last year Kiwi TCMS had massive success despite not visiting many events. The
+open source community spirit is important to us both in terms of technical
+collaborations and in terms of features &amp; exposure which drives further adoption
+of Kiwi TCMS downstream.</p>
+<p><strong>Goal:</strong> complete
+<a href="https://github.com/kiwitcms/Kiwi/milestone/1">bug-tracker integration milestone</a>.</p>
+<p><strong>Goal:</strong> extended GitHub integration via GitHub actions which will report results
+into our database. We do have other ideas as stretch goals.</p>
+<p><strong>Goal:</strong> similar to GitHub actions we're looking towards GitLab pipelines and
+similar integration with GitLab.</p>
+<p><strong>Goal:</strong> continue our collaboration with Major League Hacking Fellowship program.</p>
+<p><strong>Goal:</strong> apply for the Google Summer of Code program and work with students if selected.</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/">Nominate Kiwi TCMS as GitHub Stars</a>;</li>
+<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#pricing">Become a customer</a> and we'll share our profits with the community</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/atodorov/2020/12/31/roadmap-status-report-for-2020/" rel="bookmark" title="Permalink to Roadmap status report for 2020">
                 <h1 class="top-header">Roadmap status report for 2020</h1>
             </a>
@@ -1361,101 +1438,6 @@ them to completion. Many of the still on-boarding people have expressed desire t
 improve their Python &amp; Django skills. Working to resolve issues in the above specific
 areas will give them this opportunity! I expect they will show good progress on their respective
 tasks so we can write more about them on this blog.</p>
-<p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/atodorov/2019/12/26/roadmap-status-report-for-2019/" rel="bookmark" title="Permalink to Roadmap status report for 2019">
-                <h1 class="top-header">Roadmap status report for 2019</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/atodorov/">Alexander Todorov</a>
-                on Thu 26 December 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Hello everyone, in this article I will outline the progress that the Kiwi TCMS
-team has made towards achieving the goals on our
-<a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">2019 roadmap</a>.
-TL,DR: last year we've made lots of big and visible changes in Kiwi TCMS.
-This year less so. Progress has been slower than before and not so much
-visible. Community and team is growing. More contributors are welcome.</p>
-<h2>Complete the internal refactoring</h2>
-<p><em>Status: small progress, needs help</em></p>
-<p><a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> progress is:</p>
-<ul>
-<li>-60 code smells</li>
-<li>-55 duplications</li>
-<li>-50 other issues</li>
-<li>4.4% technical debt improvement</li>
-<li>-240 hrs remaining until issues are fixed</li>
-</ul>
-<p>The trend is showing less issues remaining
-but it has been a slow progress. As we fix the easier items the remaining ones
-become harder to deal with.</p>
-<p>We've done minor work related to fixing issues reported by pylint. Around
-150 of them still remain!</p>
-<p>We have not done any targeted work to resolve other issues reported by Scrutinizer,
-remove vendored-in JavaScript libraries, JavaScript refactoring or
-classification of issues in 3rd party dependencies.</p>
-<h2>Redesign the UI templates with the help of Patternfly</h2>
-<p><em>Status: 60% done, needs help</em></p>
-<p>There are 22 HTML templates remaining to be redesigned (from 59). That's mostly
-due to internal cleanup and some refactoring! Test plan and Test run pages are the
-two major templates that still need to be redesigned with Patternfly.</p>
-<h2>Modernize reporting aka Telemetry</h2>
-<p><em>Status: 60% done, in progress, behind schedule</em></p>
-<p>The specs for the new <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Telemetry</a> system
-have been defined after taking into account feedback on GitHub issues. Anton Sankov is
-the leading developer for this feature. So far we have 4 telemetry reports merged:
-testing break-down, status matrix, execution trends and flaky tests.</p>
-<p>There are lots of minor issues or missing functionality in these first iterations
-(compared to specification). Work continues on the other telemetry use-cases
-and related items.</p>
-<h2>Plugins for 3rd party test automation frameworks</h2>
-<p><em>Status: good, needs help</em></p>
-<p><em>UPDATE:</em> no change in last 6 months.</p>
-<p>If you'd like to see plugins for more test automation frameworks
-and/or file formats please checkout the
-<a href="https://kiwitcms.readthedocs.io/en/latest/automation-frameworks.html">documentation</a>
-for links and more info.</p>
-<h2>Redefine bug-tracker integration</h2>
-<p><em>Status: 66% complete, in progress, behind schedule</em></p>
-<p>We've been making slow progress on this milestone lately. For more info
-see
-<a href="https://github.com/kiwitcms/Kiwi/milestone/1">https://github.com/kiwitcms/Kiwi/milestone/1</a></p>
-<h2>GitHub flow integration</h2>
-<p><em>Status: done, awaiting deployment</em></p>
-<p>Our team spent some time making Kiwi TCMS the first open source TCMS available
-on the <a href="https://github.com/marketplace/kiwi-tcms">GitHub Marketplace</a>. At the end
-of this year we were able to create a small application that allows further
-integration and extending the testing workflow to the GitHub platform.</p>
-<p>This is waiting on a few more clarifications from GitHub before we deploy but
-for now it can be considered as done. Future functionality will be tracked
-and developed directly at
-<a href="https://github.com/kiwitcms/github-app/issues">https://github.com/kiwitcms/github-app/issues</a>.</p>
-<h2>Agile integration with Trello</h2>
-<p><em>Status: no progress, will drop</em></p>
-<p>This will be dropped from roadmap for the next year until we can get more interest
-from the community.</p>
-<h2>Improve engineering productivity</h2>
-<p><em>Status: no progress</em></p>
-<p>Looking for external help here. This will stay as a low priority item on our
-roadmap for 2020 until we can free more resources on the team.</p>
-<h2>Community</h2>
-<p><em>Status: great, on track, needs work</em></p>
-<p>This is our strongest area during this year. We have a strong presence in
-multiple communities, our event schedule is very busy and we are gaining more
-recognition every day! Core team hit several big bumps this year and is still
-recovering with a few more people onboarding.</p>
-<p>Kiwi TCMS suffers from the problem that many of our users can't be contributors
-or simply don't want to!</p>
-<p>In short: it is important for us to follow our mission and develop our core team
-so we can deliver on promises made in our roadmap! That requires a lot of time and
-effort which reduces short-term productivity.</p>
 <p>Happy testing!</p>
         </div>
     </article>
