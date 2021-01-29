@@ -1,0 +1,98 @@
+Title: Project roadmap 2021
+headline: team, technical & community towards sustainability
+date: 2021-01-29 15:40
+comments: true
+og_image: images/roadmap.jpg
+twitter_image: images/roadmap.jpg
+author: Alexander Todorov
+tags: community, roadmap
+
+Hello testers,
+this blog post outlines Kiwi TCMS roadmap for 2021 and what we feel is
+important to us!
+
+<img style="background-color: inherit" src="/images/roadmap2021.png" alt="roadmap image 2021">
+
+
+Project sustainability
+======================
+
+The big goal towards which we are striving is to turn Kiwi TCMS into a
+sustainable open source project. For now this means three key areas:
+
+    1) Team
+    2) Technical
+    3) Community & Adoption
+
+Team
+----
+
+Right now we have a core team with 3 members, 3 more members on-boarding
+and 2 interns. In the past year we weren't successful into turning more
+people into core-team members.
+I have seen several problems and core-team will significantly reconsider
+how we approach & recruit people to join the team, how we on-board and help
+them so that they can become productive and fully fledged team members.
+
+Long term focus is improving and strengthening core-team which also implies
+a level of responsibility and performance criteria which core-team members
+must meet.
+
+**Goal:** 1 PR/week/person as broad measure of individual performance so that
+we can operate with a predictable capacity.
+
+**Goal:** (re)structure internal team processes around candidates and newcomers!
+Note: These are not public at the moment.
+
+
+Technical
+---------
+
+The areas shown on the picture above will receive more priority.
+
+**Goal:** complete remaining [Telemetry features]({filename}2019-03-03-telemetry.markdown).
+
+**Goal:** complete remaining refactoring with major focus in pylint issues, migration to
+Patternfly v4 and eslint issues.
+
+**Goal:** improve SSL configuration with strong bias towards Let's Encrypt being
+configured by default.
+
+**Goal:** provide support for web hooks so that Kiwi TCMS can be integrated more
+easily/flexibly with 3rd party systems. We're aiming for Kiwi TCMS to be able to
+POST webhooks to external URLs and inform them about events in the system.
+
+Community & Adoption
+--------------------
+
+Last year Kiwi TCMS had massive success despite not visiting many events. The
+open source community spirit is important to us both in terms of technical
+collaborations and in terms of features & exposure which drives further adoption
+of Kiwi TCMS downstream.
+
+**Goal:** complete
+[bug-tracker integration milestone](https://github.com/kiwitcms/Kiwi/milestone/1).
+
+
+**Goal:** extended GitHub integration via GitHub actions which will report results
+into our database. We do have other ideas as stretch goals.
+
+**Goal:** similar to GitHub actions we're looking towards GitLab pipelines and
+similar integration with GitLab.
+
+**Goal:** continue our collaboration with Major League Hacking Fellowship program.
+
+**Goal:** apply for the Google Summer of Code program and work with students if selected.
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!
+
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Nominate Kiwi TCMS as GitHub Stars]({filename}2020-09-04-nominate-github-star.markdown);
+- [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
+- [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
+  and follow all project news;
+- [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;
+- [Become a customer](/#pricing) and we'll share our profits with the community
