@@ -1,5 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-01-29T15:40:00+02:00</updated><entry><title>Project roadmap 2021</title><link href="/blog/atodorov/2021/01/29/project-roadmap-2021/" rel="alternate"></link><published>2021-01-29T15:40:00+02:00</published><updated>2021-01-29T15:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2021-01-29:/blog/atodorov/2021/01/29/project-roadmap-2021/</id><summary type="html">&lt;p&gt;Hello testers,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-01-30T13:40:00+02:00</updated><entry><title>Kiwi TCMS has applied for GSoC 2021</title><link href="/blog/kiwi-tcms-team/2021/01/30/kiwi-tcms-has-applied-for-gsoc-2021/" rel="alternate"></link><published>2021-01-30T13:40:00+02:00</published><updated>2021-01-30T13:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-01-30:/blog/kiwi-tcms-team/2021/01/30/kiwi-tcms-has-applied-for-gsoc-2021/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;GSoC banner&amp;quot;" src="/images/gsoc/2021/banner.png" title="GSoC banner"&gt;&lt;/p&gt;
+&lt;p&gt;Dear open source hackers, we are happy to share that Kiwi TCMS has
+applied to
+&lt;a href="https://summerofcode.withgoogle.com/"&gt;Google Summer of Code 2021&lt;/a&gt;
+as a mentoring organization!&lt;/p&gt;
+&lt;p&gt;While we're very early in the program
+&lt;a href="https://summerofcode.withgoogle.com/how-it-works/#timeline"&gt;timeline&lt;/a&gt;
+and we still don't know whether Kiwi TCMS will be accepted or not we'd
+like to use this …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;GSoC banner&amp;quot;" src="/images/gsoc/2021/banner.png" title="GSoC banner"&gt;&lt;/p&gt;
+&lt;p&gt;Dear open source hackers, we are happy to share that Kiwi TCMS has
+applied to
+&lt;a href="https://summerofcode.withgoogle.com/"&gt;Google Summer of Code 2021&lt;/a&gt;
+as a mentoring organization!&lt;/p&gt;
+&lt;p&gt;While we're very early in the program
+&lt;a href="https://summerofcode.withgoogle.com/how-it-works/#timeline"&gt;timeline&lt;/a&gt;
+and we still don't know whether Kiwi TCMS will be accepted or not we'd
+like to use this opportunity and outline several areas which are good
+candidates for GSoC fellows to work on. Some of the tasks are also
+eligible for our &lt;a href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
+The majority of them require some knowledge of Python and Django.&lt;/p&gt;
+&lt;h2&gt;Let's Encrypt SSL integration&lt;/h2&gt;
+&lt;p&gt;By default Kiwi TCMS' container image comes with a self-signed SSL certificate!
+This is irritating because all modern browsers issue warnings for that and
+the majority of deployments do not have the infrastructure to distribute
+the self-signing Certificate Authority certificate files, e.g. make the browser
+trust the provided certificate.&lt;/p&gt;
+&lt;p&gt;This issue is compounded by the fact that production SSL certificates,
+issues by a well-known authority must be introduced from the outside. While
+this is
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#ssl-configuration"&gt;documented&lt;/a&gt;
+there are fair amount of testers who do not have sufficient proficiency
+with Docker to do so.&lt;/p&gt;
+&lt;p&gt;The result is that we see many Kiwi TCMS deployments in the wild which
+completely disable HTTPS and users struggling to configure their SSL
+certificates.&lt;/p&gt;
+&lt;p&gt;An integration with &lt;a href="https://letsencrypt.org/"&gt;Let's Encrypt&lt;/a&gt; would be
+a good choice. We've tried a proof of concept but had troubles running
+their official client on our container image.&lt;/p&gt;
+&lt;p&gt;The challenge will be
+to use a Let's Encrypt client that is supported on the CentOS Linux
+distribution (that's what we use) or a frequently maintained
+distribution independent package. Another challenge will be that the
+ACME protocol used needs to be able to talk back to the system
+asking for a new certificate. In most cases Kiwi TCMS will be deployed
+behind a firewall and initial certificate request/renewal requests may be
+able to go one way only.&lt;/p&gt;
+&lt;h2&gt;Securing 3rd party dependencies&lt;/h2&gt;
+&lt;p&gt;Kiwi TCMS itself uses services and tools like Snyk, npm audit, Coverity and Bandit
+against our own and against 3rd party source code. On the other hand
+some of our components (e.g. PatternFly) do not perform any kind of
+security testing. The starting point to unravel this is
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/871"&gt;Issue #871&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As a minimum all issues reported by bandit &amp;amp; coverity against 3rd party
+dependencies must be sorted out:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Figure out if we execute our tools in the appropriate way as to not
+  report unnecessary issues&lt;/li&gt;
+&lt;li&gt;Dissect all of the issues, especially
+  &lt;a href="https://github.com/kiwitcms/Kiwi/runs/1608837125?check_suite_focus=true"&gt;ones from Bandit&lt;/a&gt;,
+  report them to their upstream community, discuss and decide how to fix or
+  ignore the issue and send a pull request to upstream&lt;/li&gt;
+&lt;li&gt;Figure out how to keep track/dashboard whether or not all of our runtime
+  dependencies are using the same tools as we are (they are either open source
+  or free to use for open source projects) since they seem to be good tools&lt;/li&gt;
+&lt;li&gt;Work with any upstream (2nd, 3rd, 4th, etc level dependencies) communities
+  to adopt said tools and fix issues as they are discovered&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of this will ultimately benefit a broader community than Kiwi TCMS alone.&lt;/p&gt;
+&lt;h2&gt;Integration with GitHub Actions and GitLab pipelines&lt;/h2&gt;
+&lt;p&gt;As part of our continuing integration with GitHub we need to have an action
+which would report the results to Kiwi TCMS similar to how our
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html"&gt;automation framework plugins&lt;/a&gt;
+do!&lt;/p&gt;
+&lt;p&gt;You should start with GitHub because this is what Kiwi TCMS uses and we can
+immediately eat our own dog food. Originally proposed in
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/817"&gt;Issue #817&lt;/a&gt; then moved to
+&lt;a href="https://github.com/kiwitcms/github-app/issues/10"&gt;github-app #10&lt;/a&gt; with a
+slightly different focus.&lt;/p&gt;
+&lt;p&gt;Next (or in parallel) would be similar
+functionality for GitLab pipelines, proposed in
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1421"&gt;Issue #1421&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Java hacking&lt;/h2&gt;
+&lt;p&gt;Kiwi TCMS does have a native
+&lt;a href="https://github.com/kiwitcms/junit-plugin"&gt;junit-plugin&lt;/a&gt; but we are no
+experts in Java. In the testing world however Java is a very popular
+language and we need help building on top of the existing library and
+developing several other tools:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/692"&gt;Issue #692&lt;/a&gt; - TestNG plugin&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1072"&gt;Issue #1072&lt;/a&gt; - Jenkins plugin,
+  probably similar in scope to the proposed GitHub/GitLab integration above&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1512"&gt;Issue #1512&lt;/a&gt; - extension for the
+  existing junit-plugin. Similar extension will likely be necessary for the
+  TestNG plugin as well&lt;/li&gt;
+&lt;li&gt;Integration with Katalon Studio proposed at
+  &lt;a href="https://forum.katalon.com/t/kiwi-tcms-integration/39817"&gt;https://forum.katalon.com/t/kiwi-tcms-integration/39817&lt;/a&gt;. There isn't much info to
+  begin with so if you have working experience with Katalon Studio it would be
+  a plus&lt;/li&gt;
+&lt;li&gt;Fixing assorted
+  &lt;a href="https://github.com/kiwitcms/junit-plugin/issues"&gt;issues in our junit plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Help upgrade to junit-jupiter v5.7.0, looks like API has changed and our
+  plugin doesn't automatically discover the tests.
+  See &lt;a href="https://github.com/kiwitcms/junit-plugin/pulls"&gt;https://github.com/kiwitcms/junit-plugin/pulls&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;C# and Objective-C hacking&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/2020"&gt;Issue #2020&lt;/a&gt; - reporting plugin for
+  NUnit, similar to other existing
+  &lt;a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html"&gt;automation framework plugins&lt;/a&gt;.
+  We're not sure how popular NUnit vs other test runners in the C# world is but
+  it could be a good basis for developing future plugins. The challenge here
+  is mostly for us since we're a Linux based team&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1316"&gt;Issue #1316&lt;/a&gt; - reporting plugin
+  for &lt;em&gt;Kiwi-bdd&lt;/em&gt; a simple BDD for iOS. Again the challenge here would be
+  on us since we don't have experience building and testing applications on iOS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Migration to Patternfly v4, possibly with React JS&lt;/h2&gt;
+&lt;p&gt;The visual component library that Kiwi TCMS uses is called
+&lt;a href="https://www.patternfly.org"&gt;PatternFly&lt;/a&gt;. First it is a standard describing
+visual design, widget behavior and development hints for enterprise
+applications. Then it provides an actual implementation of their standards.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS is built with PatternFly v3 using raw HTML + CSS. This approach
+allowed us to get started quickly and gradually migrate from our legacy UI.
+It also works very well with Django which is structured around rendering HTML
+templates.&lt;/p&gt;
+&lt;p&gt;A major task is switching over to PatternFly v4 where there could be some
+differences in component syntax.&lt;/p&gt;
+&lt;p&gt;Since Kiwi TCMS v8.8 and v8.9 we have completely redesigned the
+TestPlan and TestRun pages. As they are the ones with the most possible
+interactivity and functionality we have hit the need to keep internal state
+on the front-end. This is rather cumbersome to manage by hand and calls
+for a more modern solution using React. There is PatternFly implementation
+as React components too.&lt;/p&gt;
+&lt;p&gt;The starting point is
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1323"&gt;Issue #1323&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The volume of work is a challenge because all pages need to be migrated
+and we're not sure if this can be done and released in steps or all pages
+should be migrated and released together. In other words we don't know if
+shipping UI based on both PatternFly v3 and v4 will work.&lt;/p&gt;
+&lt;p&gt;The next challenge is refactoring the TestRun and TestPlan pages with
+React, keeping all existing functionality intact. A challenge here will
+also be the transactional nature of Django where it receives a browser request
+and sends a response, usually rendered HTML content! Lots of functionality
+happens both on the backend as well as in the HTML templates themselves -
+for example translations and permission checks.&lt;/p&gt;
+&lt;h2&gt;JavaScript hacking&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1281"&gt;Issue #1281&lt;/a&gt; - start using ESLint
+  against our code base and clean-up all related issues&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1910"&gt;Issue #1910&lt;/a&gt; - replace SimpleMDE
+  with EasyMDE. Ideally we would like to depend on other active open source
+  libraries and the rich text editor what we use looks like it needs replacement.
+  We've got a few extra features hooked into the editor like syntax highlighting
+  with dynamic loading of language definitions, support for inline attachments and
+  a security override. All of these need to be kept in place.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1919"&gt;Issue #1919&lt;/a&gt; - reconsider using
+  MomentJS. Well it looks like its original authors encourage everyone to
+  actually stop using it and we should consider doing so as well. As it stands
+  MomentJS is not widely used inside Kiwi TCMS except for timezone conversions
+  in the browser. Should be relatively easy to replace, preferably with a vanilla
+  JavaScript implementation. Either way we first need to know what actually
+  has to be done.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Remaining telemetry&lt;/h2&gt;
+&lt;p&gt;&lt;a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/"&gt;Testing Telemetry&lt;/a&gt; is one of our cool
+features and since we've started to redesign the legacy report feature testers
+are very happy with it. There are still some bits and pieces that are missing:
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/616"&gt;Issue #616&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1923"&gt;Issue #1923&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1924"&gt;Issue #1924&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1925"&gt;Issue #1925&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1926"&gt;Issue #1926&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1927"&gt;Issue #1927&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1928"&gt;Issue #1928&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1929"&gt;Issue #1929&lt;/a&gt;,
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1940"&gt;Issue #1940&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;These generally depend on having the ability to record execution times in our
+database and afterwards the features are similar but relatively independent
+of one another.&lt;/p&gt;
+&lt;h2&gt;Web hooks&lt;/h2&gt;
+&lt;p&gt;Kiwi TCMS should be able to better integrate with 3rd party systems.
+This feature will allow users to configure custom URL to which Kiwi TCMS will send
+HTTP POST requests on certain events. It looks like we can base the implementation
+on top of &lt;a href="https://github.com/zapier/django-rest-hooks"&gt;django-rest-hooks&lt;/a&gt; and
+pair it up with &lt;a href="https://restrictedpython.readthedocs.io/"&gt;RestrictedPython&lt;/a&gt;
+for further flexibility.&lt;/p&gt;
+&lt;p&gt;This feature is being tracked in
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1080"&gt;Issue #1080&lt;/a&gt; and
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues/914"&gt;Issue #913&lt;/a&gt; but needs a more
+detailed definition.&lt;/p&gt;
+&lt;h2&gt;Anything else&lt;/h2&gt;
+&lt;p&gt;All of the proposals above are items which we have in our backlog and
+need help with. However participation in the Google Summer of Code program
+is not limited only to them. You are free to propose any other ideas/projects
+on which you would like to work during the summer. We would be happy to
+accept your contributions if we make it into the program.&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#pricing"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>Project roadmap 2021</title><link href="/blog/atodorov/2021/01/29/project-roadmap-2021/" rel="alternate"></link><published>2021-01-29T15:40:00+02:00</published><updated>2021-01-29T15:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2021-01-29:/blog/atodorov/2021/01/29/project-roadmap-2021/</id><summary type="html">&lt;p&gt;Hello testers,
 this blog post outlines Kiwi TCMS roadmap for 2021 and what we feel is
 important to us!&lt;/p&gt;
 &lt;p&gt;&lt;img style="background-color: inherit" src="/images/roadmap2021.png" alt="roadmap image 2021"&gt;&lt;/p&gt;

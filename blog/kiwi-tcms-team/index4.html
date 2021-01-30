@@ -94,6 +94,179 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2018/12/04/kiwi-tcms-63/" rel="bookmark" title="Permalink to Kiwi TCMS 6.3">
+                <h1 class="top-header">Kiwi TCMS 6.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 04 December 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 6.3! This is a medium severity
+security update that includes new versions of Django and Patternfly,
+new database migrations, lots of improvements, bug fixes and internal
+refactoring. This version also introduces integration with GitLab issue
+tracker! You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  8135624fdca2    960.3 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-2-1">
+<h2>Changes since Kiwi TCMS 6.2.1</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Resolve medium severity XSS vulnerability which can be exploited when
+previewing malicious text in Simple MDE editor. See
+<a class="reference external" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19057">CVE-2018-19057</a>,
+<a class="reference external" href="https://snyk.io/vuln/SNYK-JS-SIMPLEMDE-72570">SNYK-JS-SIMPLEMDE-72570</a></li>
+<li>Use <tt class="docutils literal">mozilla/bleach</tt> before rendering Markdown to the user as a second layer
+of protection against the previously mentioned XSS vulnerability</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.4/">Django 2.1.4</a></li>
+<li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.58.0</a></li>
+<li>Make docker container restartable (Maik Opitz, Adam Hall)</li>
+<li>Add GitLab issue tracker integration. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/176">Issue #176</a>
+(Filipe Arruda, Federal Institute of Pernambuco)</li>
+<li>Convert <tt class="docutils literal">Create new TestPlan</tt> page to Patternfly (Anton Sankov)</li>
+<li>Upon successful registration show the list of super-users in case new
+accounts must be activated manually. This can be the same or expanded
+version of the addresses in the <tt class="docutils literal">ADMIN</tt> setting. Include super-users
+in email notifications sent via <tt class="docutils literal">tcms.signals.notify_admins()</tt>.</li>
+<li>Don't include <tt class="docutils literal"><span class="pre">admin/js/*.js</span></tt> files in templates when not
+necessary. Results in faster page load. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/209">Issue #209</a></li>
+<li>Enable <tt class="docutils literal">nl2br</tt> Markdown extension which allows newline characters
+to be rendered as <tt class="docutils literal">&lt;br&gt;</tt> tags in HTML. Visually the rendered
+text will look closer to what you seen in the text editor. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/623">Issue #623</a></li>
+<li>Use auto-complete for adding components to TestCase</li>
+</ul>
+</div>
+<div class="section" id="removed-functionality">
+<h3>Removed functionality</h3>
+<ul class="simple">
+<li>Bulk-update of Category for selected TestCase(s) inside of
+TestPlan</li>
+<li>Bulk-update of Components for selected TestCase(s) inside of
+TestPlan</li>
+<li>Bulk-update of automated status for selected TestCase(s) inside of
+TestPlan</li>
+<li>Bulk-remove for TestCase Component tab</li>
+</ul>
+<p>These actions have always been a bit broken and didn't check the
+correct permission labels. You can still update items individually!</p>
+<ul class="simple">
+<li>Selection of Components when creating new TestCase. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/565">Issue #565</a>.
+Everywhere else Kiwi TCMS doesn't allow selection of many-to-many
+relationships when creating or editing objects. Tags, Bugs, Components,
+TestPlans can be added via dedicated tabs once the object has been saved.</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Hide <tt class="docutils literal">KiwiUserAdmin.password</tt> field from super-user. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/610">Issue #610</a></li>
+<li>Don't show inactive Priority. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/637">Issue #637</a></li>
+<li>Don't traceback when adding new users via Admin. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/642">Issue #642</a></li>
+<li>Teach <tt class="docutils literal">TestRun.update()</tt> API method to process the <tt class="docutils literal">stop_date</tt>
+field. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/554">Issue #554</a> (Anton Sankov)</li>
+<li>Previously when reporting issues to Bugzilla, directly from a TestRun,
+Kiwi TCMS displayed the error <tt class="docutils literal">Enable reporting to this Issue Tracker by
+configuring its base_url</tt> although that has already been configured.
+This is now fixed. See
+<a class="reference external" href="https://stackoverflow.com/questions/53434949/">Stack Overflow #53434949</a></li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">TestPlan.owner</tt> field, duplicates <tt class="docutils literal">TestPlan.author</tt></li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">fmt_queries()</tt>. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/330">Issue #330</a> (Anton Sankov)</li>
+<li>Remove unused parameter from <tt class="docutils literal">plan_from_request_or_none()</tt>. Refers to
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/303">Issue #303</a> (Anton Sankov)</li>
+<li>Remove <tt class="docutils literal">ComponentActions()</tt> class. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/20">Issue #20</a></li>
+<li>Convert lots of AJAX calls to JSON-RPC</li>
+<li>Remove lots of unused Python, JavaScript and templates. Both after migration
+to JSON RPC and other leftovers</li>
+<li>Pylint fixes (Alexander Todorov, Anton Sankov)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/11/12/kiwi-tcms-621/" rel="bookmark" title="Permalink to Kiwi TCMS 6.2.1">
                 <h1 class="top-header">Kiwi TCMS 6.2.1</h1>
             </a>
@@ -2245,124 +2418,6 @@ of work to be done and the team is still very small!</p>
 <p>Team wise we'd like to get the existing team members up to speed and tackle
 the above tasks with priority. This will also help us introduce bug fixes
 and new features more quickly!</p>
-<p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/01/02/kiwi-tcms-version-349/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.49">
-                <h1 class="top-header">Kiwi TCMS version 3.49</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 02 January 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Happy New Year to everyone. We're happy to announce Kiwi TCMS version 3.49
-and the corresponding tcms-api version 1.5.0! This release includes a fair
-amount of bug fixes and many changes related to Kiwi's RPC layer!</p>
-<p>Most importantly Kiwi is updated to Django 2.0.1, the API client no longer
-supports Python 2 and many RPC methods have been removed or updated.
-<a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
-has also been updated so you can explore the new version.</p>
-<h2>Changes since Kiwi TCMS 3.48</h2>
-<h3>Enhancements and bug fixes</h3>
-<ul>
-<li>Upgrade to Django 2.0.1</li>
-<li>Don't log passwords sent via RPC</li>
-<li>Log XML-RPC requests from anonymous users. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/126">Issue #126</a></li>
-<li>Order <code>TCMSEnvValue</code> records by property name and value. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/155">Issue #155</a></li>
-<li>flake8 fixes (Anton Sankov)</li>
-<li>Start building source code documentation from Python doc strings</li>
-<li>Properly urlencode emails in personal menu links</li>
-<li>Remove test case import via XML files</li>
-<li>Use django-attachments for user uploaded files. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/160">Issue #160</a>
-  As part of this change we no longer copy Plan and Case attachments when
-  cloning these objects.</li>
-</ul>
-<p>NOTE: Since django-attachments introduces new permission objects
-  you will have to adjust default permissions for existing users!
-  In order for them to be able to upload/delete their own files they
-  need to have <code>attachments.add_attachment</code> and <code>atachments.delete_attachment</code>
-  permissions.</p>
-<p>These same permissions are added by default to the 'Tester' group.
-  If you are running an existing installation registering a new user
-  with Kiwi TCMS will update the default permissions for this group!</p>
-<h3>Refactoring</h3>
-<ul>
-<li>Remove unused class EditCaseNotifyThread (Chenxiong Qi)</li>
-<li>Remove model TestPlanActivity  (Chenxiong Qi)</li>
-<li>Remove many unused models and classes</li>
-<li>Execute tests via <code>manage.py test</code> and drop py.test dependency</li>
-<li>Remove useless <code>TestTag.string_to_list</code> method. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/106">Issue #106</a></li>
-<li>Use <code>settings.AUTH_USER_MODEL</code> in ForeignKey definitions. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/143">Issue #143</a></li>
-</ul>
-<h4>Settings</h4>
-<ul>
-<li>Rename <code>EMAIL_FROM</code> to <code>DEFAULT_FROM_EMAIL</code>. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/128">Issue #128</a></li>
-<li>Rename <code>FILE_UPLOAD_DIR</code> to <code>MEDIA_ROOT</code></li>
-<li>Rename <code>MAX_UPLOAD_SIZE</code> to <code>FILE_UPLOAD_MAX_SIZE</code></li>
-<li>New setting <code>DELETE_ATTACHMENTS_FROM_DISK</code></li>
-<li>Remove unused <code>XMLRPC_TEMPLATE</code> and <code>TESTOPIA_XML_VERSION</code></li>
-</ul>
-<h3>Server side API</h3>
-<ul>
-<li>Migrate to <code>django-modern-rpc</code> and remove home-grown XML-RPC handling code.
-  As part of this change the XML-RPC endpoint has been changed to <code>/xml-rpc/</code>.
-  There's also a new JSON-RPC endpoint at <code>/json-rpc/</code>!</li>
-<li><code>Auth.login</code> method now accepts positional parameters <code>username, password</code>
-  instead of dict</li>
-<li><code>TestCaseRun.get</code> method now accepts a query dict as parameter</li>
-<li><code>TestCaseRun.get_bugs</code> method now accepts a query dict as parameter</li>
-<li>Remove <code>Build.lookup_id_by_name</code>, <code>Build.lookup_name_by_id</code> RPC methods</li>
-<li>Remove <code>Product.lookup_name_by_id</code>, <code>Product.lookup_id_by_name</code> RPC methods</li>
-<li>Remove <code>Product.get_components</code>, use <code>Product.filter_components</code> instead</li>
-<li>Remove <code>Product.get_plans</code>, use <code>TestPlan.filter</code> instead</li>
-<li>Remove <code>Product.get_runs</code>, use <code>TestRun.filter</code> instead</li>
-<li>Remove <code>Product.get_tag</code>, use <code>Tag.get_tags</code> instead</li>
-<li>Remove <code>Product.get_versions</code>, use <code>Product.filter_versions</code> instead</li>
-<li>Remove <code>TestCaseRun.filter_count</code>, use <code>TestCaseRun.filter</code> instead</li>
-<li>Remove <code>TestCaseRun.get_s</code>, use <code>TestCaseRun.get</code> instead</li>
-<li>Remove <code>TestCaseRun.get_bugs_s</code>, use <code>TestCaseRun.get_bugs</code> instead</li>
-<li>Remove <code>TestCaseRun.get_case_run_status</code>, use
-  <code>TestCaseRun.get_case_run_status_by_name</code> instead</li>
-<li>Remove <code>TestCaseRun.get_completion_time</code>, <code>TestCaseRun.get_completion_time_s</code>
-  RPC methods. Instead calculate them on the client side</li>
-<li>Rename <code>TestCaseRun.check_case_run_status</code> to <code>TestCaseRun.get_case_run_status_by_name</code></li>
-<li><code>TestCaseRun.detach_log</code> will not raise exceptions when deleting logs from
-  non-existing TestCaseRun objects.</li>
-<li>Remove <code>User.get_me</code>, instead use <code>User.get</code> without parameters</li>
-<li>Remove <code>Version.</code> and <code>Testopia.</code> RPC modules</li>
-<li>Update documentation for RPC methods in <code>Auth</code>, <code>Build</code> and <code>Env</code> namespaces.
-  Unformatted documentation is also available for the rest of the RPC methods</li>
-</ul>
-<h2>tcms-api changes since 1.4.0</h2>
-<ul>
-<li>Update endpoint configuration, compatible with Kiwi TCMS 3.49</li>
-<li>Drop support for Python 2</li>
-<li>Remove the internal <code>do_command</code> method which eliminates use of <code>eval()</code></li>
-<li>Remove <code>TCMSXmlrpc.get_me()</code> and <code>TCMSXmlrpc.build_get()</code> methods</li>
-</ul>
-<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="err">cd Kiwi/</span>
-<span class="err">docker-compose down</span>
-<span class="err">make docker-image</span>
-<span class="err">docker-compose up -d</span>
-<span class="err">docker exec -it kiwi_web /Kiwi/manage.py migrate</span>
-</code></pre></div>
-
-
 <p>Happy testing!</p>
         </div>
     </article>

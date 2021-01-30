@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS has applied for GSoC 2021</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="here are some project ideas" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="tags" content="community" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS has applied for GSoC 2021">
+            <meta name="twitter:description" content="here are some project ideas">
+        <meta name="twitter:card" content="summary_large_image">
+                <meta property="twitter:image" content="https://kiwitcms.org/images/gsoc/2021/banner.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2021/01/30/kiwi-tcms-has-applied-for-gsoc-2021/" />
+        <meta property="og:title" content="Kiwi TCMS has applied for GSoC 2021" />
+        <meta property="article:published_time" content="2021-01-30 13:40:00+02:00">
+            <meta property="og:description" content="here are some project ideas">
+
+                <meta property="og:image" content="https://kiwitcms.org/images/gsoc/2021/banner.png">
+        <!-- Custom Styles -->
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
+    </head>
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            </a>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#pricing">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- content -->
+    <section id="blog-article">
+        <h1 class="top-header">Kiwi TCMS has applied for GSoC 2021</h1>
+        <h2 class="top-subheader">here are some project ideas</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Sat 30 January 2021
+                under
+                    <a href="https://kiwitcms.org/blog/tags/community/">community</a>
+        </p>
+
+        <article class="content">
+            <p><img alt="&quot;GSoC banner&quot;" src="/images/gsoc/2021/banner.png" title="GSoC banner"></p>
+<p>Dear open source hackers, we are happy to share that Kiwi TCMS has
+applied to
+<a href="https://summerofcode.withgoogle.com/">Google Summer of Code 2021</a>
+as a mentoring organization!</p>
+<p>While we're very early in the program
+<a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">timeline</a>
+and we still don't know whether Kiwi TCMS will be accepted or not we'd
+like to use this opportunity and outline several areas which are good
+candidates for GSoC fellows to work on. Some of the tasks are also
+eligible for our <a href="/blog/tags/bounty-program/">open source bounty program</a>.
+The majority of them require some knowledge of Python and Django.</p>
+<h2>Let's Encrypt SSL integration</h2>
+<p>By default Kiwi TCMS' container image comes with a self-signed SSL certificate!
+This is irritating because all modern browsers issue warnings for that and
+the majority of deployments do not have the infrastructure to distribute
+the self-signing Certificate Authority certificate files, e.g. make the browser
+trust the provided certificate.</p>
+<p>This issue is compounded by the fact that production SSL certificates,
+issues by a well-known authority must be introduced from the outside. While
+this is
+<a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#ssl-configuration">documented</a>
+there are fair amount of testers who do not have sufficient proficiency
+with Docker to do so.</p>
+<p>The result is that we see many Kiwi TCMS deployments in the wild which
+completely disable HTTPS and users struggling to configure their SSL
+certificates.</p>
+<p>An integration with <a href="https://letsencrypt.org/">Let's Encrypt</a> would be
+a good choice. We've tried a proof of concept but had troubles running
+their official client on our container image.</p>
+<p>The challenge will be
+to use a Let's Encrypt client that is supported on the CentOS Linux
+distribution (that's what we use) or a frequently maintained
+distribution independent package. Another challenge will be that the
+ACME protocol used needs to be able to talk back to the system
+asking for a new certificate. In most cases Kiwi TCMS will be deployed
+behind a firewall and initial certificate request/renewal requests may be
+able to go one way only.</p>
+<h2>Securing 3rd party dependencies</h2>
+<p>Kiwi TCMS itself uses services and tools like Snyk, npm audit, Coverity and Bandit
+against our own and against 3rd party source code. On the other hand
+some of our components (e.g. PatternFly) do not perform any kind of
+security testing. The starting point to unravel this is
+<a href="https://github.com/kiwitcms/Kiwi/issues/871">Issue #871</a>.</p>
+<p>As a minimum all issues reported by bandit &amp; coverity against 3rd party
+dependencies must be sorted out:</p>
+<ul>
+<li>Figure out if we execute our tools in the appropriate way as to not
+  report unnecessary issues</li>
+<li>Dissect all of the issues, especially
+  <a href="https://github.com/kiwitcms/Kiwi/runs/1608837125?check_suite_focus=true">ones from Bandit</a>,
+  report them to their upstream community, discuss and decide how to fix or
+  ignore the issue and send a pull request to upstream</li>
+<li>Figure out how to keep track/dashboard whether or not all of our runtime
+  dependencies are using the same tools as we are (they are either open source
+  or free to use for open source projects) since they seem to be good tools</li>
+<li>Work with any upstream (2nd, 3rd, 4th, etc level dependencies) communities
+  to adopt said tools and fix issues as they are discovered</li>
+</ul>
+<p>All of this will ultimately benefit a broader community than Kiwi TCMS alone.</p>
+<h2>Integration with GitHub Actions and GitLab pipelines</h2>
+<p>As part of our continuing integration with GitHub we need to have an action
+which would report the results to Kiwi TCMS similar to how our
+<a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html">automation framework plugins</a>
+do!</p>
+<p>You should start with GitHub because this is what Kiwi TCMS uses and we can
+immediately eat our own dog food. Originally proposed in
+<a href="https://github.com/kiwitcms/Kiwi/issues/817">Issue #817</a> then moved to
+<a href="https://github.com/kiwitcms/github-app/issues/10">github-app #10</a> with a
+slightly different focus.</p>
+<p>Next (or in parallel) would be similar
+functionality for GitLab pipelines, proposed in
+<a href="https://github.com/kiwitcms/Kiwi/issues/1421">Issue #1421</a></p>
+<h2>Java hacking</h2>
+<p>Kiwi TCMS does have a native
+<a href="https://github.com/kiwitcms/junit-plugin">junit-plugin</a> but we are no
+experts in Java. In the testing world however Java is a very popular
+language and we need help building on top of the existing library and
+developing several other tools:</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/issues/692">Issue #692</a> - TestNG plugin</li>
+<li><a href="https://github.com/kiwitcms/Kiwi/issues/1072">Issue #1072</a> - Jenkins plugin,
+  probably similar in scope to the proposed GitHub/GitLab integration above</li>
+<li><a href="https://github.com/kiwitcms/Kiwi/issues/1512">Issue #1512</a> - extension for the
+  existing junit-plugin. Similar extension will likely be necessary for the
+  TestNG plugin as well</li>
+<li>Integration with Katalon Studio proposed at
+  <a href="https://forum.katalon.com/t/kiwi-tcms-integration/39817">https://forum.katalon.com/t/kiwi-tcms-integration/39817</a>. There isn't much info to
+  begin with so if you have working experience with Katalon Studio it would be
+  a plus</li>
+<li>Fixing assorted
+  <a href="https://github.com/kiwitcms/junit-plugin/issues">issues in our junit plugin</a></li>
+<li>Help upgrade to junit-jupiter v5.7.0, looks like API has changed and our
+  plugin doesn't automatically discover the tests.
+  See <a href="https://github.com/kiwitcms/junit-plugin/pulls">https://github.com/kiwitcms/junit-plugin/pulls</a></li>
+</ul>
+<h2>C# and Objective-C hacking</h2>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/issues/2020">Issue #2020</a> - reporting plugin for
+  NUnit, similar to other existing
+  <a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html">automation framework plugins</a>.
+  We're not sure how popular NUnit vs other test runners in the C# world is but
+  it could be a good basis for developing future plugins. The challenge here
+  is mostly for us since we're a Linux based team</li>
+<li><a href="https://github.com/kiwitcms/Kiwi/issues/1316">Issue #1316</a> - reporting plugin
+  for <em>Kiwi-bdd</em> a simple BDD for iOS. Again the challenge here would be
+  on us since we don't have experience building and testing applications on iOS</li>
+</ul>
+<h2>Migration to Patternfly v4, possibly with React JS</h2>
+<p>The visual component library that Kiwi TCMS uses is called
+<a href="https://www.patternfly.org">PatternFly</a>. First it is a standard describing
+visual design, widget behavior and development hints for enterprise
+applications. Then it provides an actual implementation of their standards.</p>
+<p>Kiwi TCMS is built with PatternFly v3 using raw HTML + CSS. This approach
+allowed us to get started quickly and gradually migrate from our legacy UI.
+It also works very well with Django which is structured around rendering HTML
+templates.</p>
+<p>A major task is switching over to PatternFly v4 where there could be some
+differences in component syntax.</p>
+<p>Since Kiwi TCMS v8.8 and v8.9 we have completely redesigned the
+TestPlan and TestRun pages. As they are the ones with the most possible
+interactivity and functionality we have hit the need to keep internal state
+on the front-end. This is rather cumbersome to manage by hand and calls
+for a more modern solution using React. There is PatternFly implementation
+as React components too.</p>
+<p>The starting point is
+<a href="https://github.com/kiwitcms/Kiwi/issues/1323">Issue #1323</a>.</p>
+<p>The volume of work is a challenge because all pages need to be migrated
+and we're not sure if this can be done and released in steps or all pages
+should be migrated and released together. In other words we don't know if
+shipping UI based on both PatternFly v3 and v4 will work.</p>
+<p>The next challenge is refactoring the TestRun and TestPlan pages with
+React, keeping all existing functionality intact. A challenge here will
+also be the transactional nature of Django where it receives a browser request
+and sends a response, usually rendered HTML content! Lots of functionality
+happens both on the backend as well as in the HTML templates themselves -
+for example translations and permission checks.</p>
+<h2>JavaScript hacking</h2>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/issues/1281">Issue #1281</a> - start using ESLint
+  against our code base and clean-up all related issues</li>
+<li><a href="https://github.com/kiwitcms/Kiwi/issues/1910">Issue #1910</a> - replace SimpleMDE
+  with EasyMDE. Ideally we would like to depend on other active open source
+  libraries and the rich text editor what we use looks like it needs replacement.
+  We've got a few extra features hooked into the editor like syntax highlighting
+  with dynamic loading of language definitions, support for inline attachments and
+  a security override. All of these need to be kept in place.</li>
+<li><a href="https://github.com/kiwitcms/Kiwi/issues/1919">Issue #1919</a> - reconsider using
+  MomentJS. Well it looks like its original authors encourage everyone to
+  actually stop using it and we should consider doing so as well. As it stands
+  MomentJS is not widely used inside Kiwi TCMS except for timezone conversions
+  in the browser. Should be relatively easy to replace, preferably with a vanilla
+  JavaScript implementation. Either way we first need to know what actually
+  has to be done.</li>
+</ul>
+<h2>Remaining telemetry</h2>
+<p><a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Testing Telemetry</a> is one of our cool
+features and since we've started to redesign the legacy report feature testers
+are very happy with it. There are still some bits and pieces that are missing:
+<a href="https://github.com/kiwitcms/Kiwi/issues/616">Issue #616</a>,
+<a href="https://github.com/kiwitcms/Kiwi/issues/1923">Issue #1923</a>,
+<a href="https://github.com/kiwitcms/Kiwi/issues/1924">Issue #1924</a>,
+<a href="https://github.com/kiwitcms/Kiwi/issues/1925">Issue #1925</a>,
+<a href="https://github.com/kiwitcms/Kiwi/issues/1926">Issue #1926</a>,
+<a href="https://github.com/kiwitcms/Kiwi/issues/1927">Issue #1927</a>,
+<a href="https://github.com/kiwitcms/Kiwi/issues/1928">Issue #1928</a>,
+<a href="https://github.com/kiwitcms/Kiwi/issues/1929">Issue #1929</a>,
+<a href="https://github.com/kiwitcms/Kiwi/issues/1940">Issue #1940</a>.</p>
+<p>These generally depend on having the ability to record execution times in our
+database and afterwards the features are similar but relatively independent
+of one another.</p>
+<h2>Web hooks</h2>
+<p>Kiwi TCMS should be able to better integrate with 3rd party systems.
+This feature will allow users to configure custom URL to which Kiwi TCMS will send
+HTTP POST requests on certain events. It looks like we can base the implementation
+on top of <a href="https://github.com/zapier/django-rest-hooks">django-rest-hooks</a> and
+pair it up with <a href="https://restrictedpython.readthedocs.io/">RestrictedPython</a>
+for further flexibility.</p>
+<p>This feature is being tracked in
+<a href="https://github.com/kiwitcms/Kiwi/issues/1080">Issue #1080</a> and
+<a href="https://github.com/kiwitcms/Kiwi/issues/914">Issue #913</a> but needs a more
+detailed definition.</p>
+<h2>Anything else</h2>
+<p>All of the proposals above are items which we have in our backlog and
+need help with. However participation in the Google Summer of Code program
+is not limited only to them. You are free to propose any other ideas/projects
+on which you would like to work during the summer. We would be happy to
+accept your contributions if we make it into the program.</p>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/">Nominate Kiwi TCMS as GitHub Stars</a>;</li>
+<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#pricing">Become a customer</a> and we'll share our profits with the community</li>
+</ul>
+        </article>
+    </section>
+
+    <section class="after-content">
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
+
+    <section class="after-content">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2021/01/30/kiwi-tcms-has-applied-for-gsoc-2021/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2021/01/30/kiwi-tcms-has-applied-for-gsoc-2021/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
+                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
+
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
