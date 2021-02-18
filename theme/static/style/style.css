@@ -169,8 +169,7 @@ ul.caret details {
 .btn[icon="reversed"] {
 	padding: 9px var(--x3-padding) 9px 20px;
 }
-.btn:hover, .drop-btn.drop-down .btn,
-#private-tenant-drop:hover {
+.btn:hover, .drop-btn.drop-down .btn {
 	background: var(--light-green);
 }
 .btn i:after {
@@ -530,8 +529,7 @@ blockquote p.quote {
 	color: var(--white);
 }
 
-#pricing .plan > a,
-#private-tenant-drop {
+#pricing .plan > a {
 	display: block;
 	text-align: center;
 	font-size: 20px;
@@ -542,10 +540,6 @@ blockquote p.quote {
 	font-weight: 500;
 	text-decoration: none;
 }
-#private-tenant-drop .drop-cnt > a {
-    text-align: left;
-}
-
 #pricing .plan > a:hover,
 #pricing .plans-modal > a:hover {
 	background: var(--light-green);
