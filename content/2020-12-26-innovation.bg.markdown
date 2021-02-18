@@ -41,4 +41,4 @@ please help us!
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
   and follow all project news;
 - [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;
-- [Become a customer](/#pricing) and we'll share our profits with the community
+- [Become a customer](/#subscriptions) and we'll share our profits with the community

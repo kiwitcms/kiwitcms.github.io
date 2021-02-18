@@ -11,7 +11,7 @@ We're happy to announce Kiwi TCMS Enterprise version 8.5.2-mt
 and extended support hours for subscribers in America.
 
 **Note:** this is only available to customers with an active
-`Enterprise subscription </#pricing>`_!
+`Enterprise subscription </#subscriptions>`_!
 
 Docker images::
 

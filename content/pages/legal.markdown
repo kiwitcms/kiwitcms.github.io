@@ -38,9 +38,7 @@ inactivity. This applies to users who have not logged in during that period
 and users who never confirmed their accounts!
 
 FREE Public Tenant and Private Tenant accounts and all of their data
-are removed within 30 days of cancelling their GitHub Marketplace subscription,
-as per
-[GitHub Marketplace requirements](https://developer.github.com/marketplace/integrating-with-the-github-marketplace-api/cancelling-plans/).
+are removed within 30 days of cancelling their subscription.
 
 
 Account info is not shared with 3rd parties!

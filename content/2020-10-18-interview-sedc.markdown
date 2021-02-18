@@ -109,7 +109,7 @@ please help us!
   project news only, GDPR compliant
 - [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
 - [Nominate Kiwi TCMS as GitHub Stars]({filename}2020-09-04-nominate-github-star.markdown);
-- [Become a customer](/#pricing) and we'll share our profits with the community
+- [Become a customer](/#subscriptions) and we'll share our profits with the community
 
 <br>
 Thanks for reading and happy testing!
