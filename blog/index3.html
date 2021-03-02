@@ -88,6 +88,31 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/" rel="bookmark" title="Permalink to GitHub OAuth tokens have been revoked">
+                <h1 class="top-header">GitHub OAuth tokens have been revoked</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 04 February 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello testers as we've
+<a href="/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/">stated previously</a>
+Kiwi TCMS has migrated to a new GitHub backend. The previous OAuth
+application with ID <code>e45b09369720518e1fc3</code> has been deprecated.</p>
+<p>OAuth tokens for this application have been revoked and you should have
+received an email notification from GitHub about this.</p>
+<p>If you still have an active Marketplace listing we kindly ask you to
+cancel it until we're able to deploy the improved integration on
+GitHub Marketplace again.</p>
+<p>Thank you!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/atodorov/2020/01/17/project-roadmap-2020/" rel="bookmark" title="Permalink to Project roadmap 2020">
                 <h1 class="top-header">Project roadmap 2020</h1>
             </a>
@@ -2297,125 +2322,6 @@ few new issues with Kiwi TCMS so this is an area which our team is going to impr
 <li>20-22 November, ConTEST, New York - TBC (workshop and/or presentation)</li>
 </ul>
 <p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="bookmark" title="Permalink to Kiwi TCMS 6.9">
-                <h1 class="top-header">Kiwi TCMS 6.9</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 16 May 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 6.9!
-This is a small improvement and bug-fix update which introduces
-our first telemetry report: testing breakdown. You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  a01eaeddf213    1.001 GB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-6-8">
-<h2>Changes since Kiwi TCMS 6.8</h2>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update mysqlclient from 1.4.2 to 1.4.2.post1</li>
-<li>Ship with prism.js so it can be used for syntax highlighting</li>
-<li>Add Testing Breakdown telemetry</li>
-<li>Mark more strings for translations</li>
-<li>Add <tt class="docutils literal">delete_user()</tt> function which can delete data across
-Postgre schemas (if kiwitcms-tenants add-on is installed)</li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li>Remove deprecated <tt class="docutils literal">TestCaseRun.</tt> API methods. Use the new
-<tt class="docutils literal">TestExecution.</tt> methods introduced in v6.7. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/889/">Issue #889</a></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Fix typos in documentation (&#64;Prome88)</li>
-<li>Fix <tt class="docutils literal">TemplateParseError</tt> in email templates when removing test cases.
-On-delete email notification is now sent properly</li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Add more tests around TestRun/TestExecution menu permissions</li>
-<li>Minor pylint fixes</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="join-us-at-openexpo-in-madrid">
-<h2>Join us at OpenExpo in Madrid</h2>
-<p>Kiwi TCMS is exhibitor at <a class="reference external" href="https://openexpoeurope.com/">OpenExpo Europe</a>
-on June 20th in Madrid. We will be hosting an info booth and 2 technical
-presentations delivered by Anton Sankov and Alex Todorov.</p>
-<p>Next week we are going to announce 100% discount tickets
-for our guests at the conference. If you are interested in coming
-<a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">subscribe to our newsletter</a>
-and don't miss the announcement!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:</p>
-<pre class="literal-block">
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-</pre>
-<p>Happy testing!</p>
-</div>
-
         </div>
     </article>
 
