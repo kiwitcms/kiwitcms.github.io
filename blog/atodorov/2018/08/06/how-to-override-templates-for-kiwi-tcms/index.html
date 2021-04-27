@@ -112,7 +112,7 @@
         <p class="post-meta">
             Posted by
                 <a href="https://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-            on Mon 06 August 2018
+            on пн 06 август 2018
                 under
                     <a href="https://kiwitcms.org/blog/tags/customization/">customization</a>
         </p>
@@ -156,10 +156,10 @@ runs a custom Docker image based on
 and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
 <p>Next you want to make this file available inside your docker image so your <code>Dockerfile</code>
 should look like this:</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">FROM</span> <span class="n">kiwitcms</span><span class="o">/</span><span class="n">kiwi</span>
+<div class="highlight"><pre><span></span><code>    FROM kiwitcms/kiwi
 
-    <span class="k">COPY</span> <span class="p">.</span><span class="o">/</span><span class="n">templates</span><span class="p">.</span><span class="n">d</span><span class="o">/</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tcms</span><span class="o">/</span><span class="n">overridden_templates</span><span class="o">/</span>
-    <span class="k">COPY</span> <span class="n">local_settings</span><span class="p">.</span><span class="n">py</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tcms</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span>
+    COPY ./templates.d/ /venv/lib64/python3.6/site-packages/tcms/overridden_templates/
+    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
 </code></pre></div>
 
 

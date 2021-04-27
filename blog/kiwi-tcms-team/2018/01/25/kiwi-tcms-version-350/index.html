@@ -113,7 +113,7 @@
         <p class="post-meta">
             Posted by
                 <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-            on Thu 25 January 2018
+            on чт 25 януари 2018
                 under
                     <a href="https://kiwitcms.org/blog/tags/releases/">releases</a>
         </p>
@@ -162,11 +162,11 @@ enhancement release and we advise you to upgrade as soon as possible!</p>
 <p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
 <h2>How to upgrade</h2>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="err">cd Kiwi/</span>
-<span class="err">docker-compose down</span>
-<span class="err">make docker-image</span>
-<span class="err">docker-compose up -d</span>
-<span class="err">docker exec -it kiwi_web /Kiwi/manage.py migrate</span>
+<div class="highlight"><pre><span></span><code><span class="nv">cd</span> <span class="nv">Kiwi</span><span class="o">/</span>
+<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">down</span>
+<span class="nv">make</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">image</span>
+<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">up</span> <span class="o">-</span><span class="nv">d</span>
+<span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">it</span> <span class="nv">kiwi_web</span> <span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span> <span class="nv">migrate</span>
 </code></pre></div>
 
 

@@ -112,7 +112,7 @@
         <p class="post-meta">
             Posted by
                 <a href="https://kiwitcms.org/blog/atodorov/">Alexander Todorov</a>
-            on Fri 07 September 2018
+            on пт 07 септември 2018
                 under
                     <a href="https://kiwitcms.org/blog/tags/customization/">customization</a>
         </p>
@@ -123,10 +123,10 @@ logging capabilities to the API backend. Indeed this is a feature that
 our team deemed not required for upstream and was removed in
 <a href="https://github.com/kiwitcms/Kiwi/pull/436">PR #436</a>.</p>
 <p>Start by creating the following directory structure:</p>
-<div class="highlight"><pre><span></span><code><span class="err">    api_logging/</span>
-<span class="err">        __init__.py</span>
-<span class="err">        handlers.py</span>
-<span class="err">        models.py</span>
+<div class="highlight"><pre><span></span><code>    api_logging/
+        __init__.py
+        handlers.py
+        models.py
 </code></pre></div>
 
 
@@ -218,10 +218,10 @@ Kiwi TCMS defaults:</p>
 
 
 <p>Then place everything in <code>Dockerfile</code> like so:</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">FROM</span> <span class="n">kiwitcms</span><span class="o">/</span><span class="n">kiwi</span>
+<div class="highlight"><pre><span></span><code>    FROM kiwitcms/kiwi
 
-    <span class="k">COPY</span> <span class="p">.</span><span class="o">/</span><span class="n">api_logging</span><span class="o">/</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">api_logging</span><span class="o">/</span>
-    <span class="k">COPY</span> <span class="n">local_settings</span><span class="p">.</span><span class="n">py</span> <span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tcms</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span>
+    COPY ./api_logging/ /venv/lib64/python3.6/site-packages/api_logging/
+    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
 </code></pre></div>
 
 
