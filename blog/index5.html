@@ -88,6 +88,106 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/atodorov/2018/10/26/kiwi-tcms-api-performance-baseline/" rel="bookmark" title="Permalink to Kiwi TCMS API performance baseline">
+                <h1 class="top-header">Kiwi TCMS API performance baseline</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on пт 26 октомври 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>A friend from Red Hat sent me an email asking about Kiwi TCMS performance so I did
+an experiment to establish a baseline.
+For API requests I got <strong>7.5 req/sec or 130 msec/req</strong> which is
+1.5x <a href="https://blog.github.com/2012-09-05-how-we-keep-github-fast/">slower than GitHub</a>!</p>
+<p>I used <code>perf-script</code>
+(<a href="https://github.com/kiwitcms/api-scripts/blob/master/perf-script">see here</a>)
+to measure that. The script takes the first 250 test cases from our test suite
+and on every execution creates a new TestPlan (1 API request), then creates
+new test cases (250 requests), adds cases to test plan (250 requests),
+creates new product build (1 API request), creates new TestRun (1 API request),
+adds test cases to test run (250 requests) and finally updates the statuses
+(250 requests).</p>
+<p>A total of 1003 API requests are sent to Kiwi TCMS every time you start this script!
+An example is available at <a href="https://public.tenant.kiwitcms.org/run/567/">TR #567</a>!</p>
+<p>On localhost, running the development server (<code>./manage.py runserver</code>) with an
+SQLite database I got:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">time</span> python perf-script
+
+real    2m6.450s
+user    0m1.069s
+sys     0m0.331s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m7.472s
+user    0m1.057s
+sys     0m0.342s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m9.368s
+user    0m1.072s
+sys     0m0.351s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m9.197s
+user    0m1.050s
+sys     0m0.353s
+</code></pre></div>
+
+
+<p>This measures at 120 msec/req or 7.85 req/sec!</p>
+<p><a href="https://public.tenant.kiwitcms.org/login/github-app/">public.tenant.kiwitcms.org</a> is running on an
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware">AWS t2.micro</a>
+instance (via docker-compose) with the default <code>centos/mariadb</code> image!
+No extra settings or changes. I used the same computer over a WiFi
+connection and a pretty standard home-speed Internet connection. Times are:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">time</span> python perf-script
+
+real    2m18.983s
+user    0m1.175s
+sys     0m0.095s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m25.937s
+user    0m1.156s
+sys     0m0.108s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m24.120s
+user    0m1.102s
+sys     0m0.098s
+
+$ <span class="nb">time</span> python perf-script
+
+real    2m21.521s
+user    0m1.154s
+sys     0m0.091s
+</code></pre></div>
+
+
+<p>This measures at 140 sec/req or 7.05 req/sec!</p>
+<p>Note: since I am using Python 3.6 I had to modify the file
+<code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Used by http.client if no context is explicitly passed.</span>
+<span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
+</code></pre></div>
+
+
+<p>The issue has been reported in
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="bookmark" title="Permalink to Kiwi TCMS 6.1">
                 <h1 class="top-header">Kiwi TCMS 6.1</h1>
             </a>
@@ -2167,73 +2267,6 @@ older releases due to the massive ammount of changes in the RPC layer.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">cd</span> <span class="nv">Kiwi</span><span class="o">/</span>
 <span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">down</span>
 <span class="nv">docker</span> <span class="nv">pull</span> <span class="nv">kiwitcms</span><span class="o">/</span><span class="nv">kiwi</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">up</span> <span class="o">-</span><span class="nv">d</span>
-<span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">it</span> <span class="nv">kiwi_web</span> <span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span> <span class="nv">migrate</span>
-</code></pre></div>
-
-
-<p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.50">
-                <h1 class="top-header">Kiwi TCMS version 3.50</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on чт 25 януари 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 3.50
-and the corresponding tcms-api version 1.5.1! This is a bug-fix and
-enhancement release and we advise you to upgrade as soon as possible!</p>
-<h2>Changes since Kiwi TCMS 3.49</h2>
-<h3>Enhancements and bug fixes</h3>
-<ul>
-<li>Update documentation for XML-RPC and positional arguments, translations,
-  environment groups</li>
-<li>Enable translations. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/129">Issue #129</a></li>
-<li>Register models for DB translations. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/182">Issue #182</a></li>
-<li>New German translations (@xbln)</li>
-<li>Require django-attachments&gt;=1.3 and restore attachments count in tabs</li>
-<li>Fix missing tag names in TestPlan page</li>
-<li>Hide admin forms for some models not supposed to be edited by users. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/174">Issue #174</a></li>
-<li>Use django-grappelli for the admin templates: modern look and feel and
-  less template files overridden by Kiwi TCMS</li>
-<li>Load values for default property in TestRun 'Add Property' dialog. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/142">Issue #142</a></li>
-<li>Correctly find property ID when renaming environment properties. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/167">Issue #167</a></li>
-<li>Convert request body to string. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/177">Issue #177</a></li>
-</ul>
-<h3>Refactoring</h3>
-<ul>
-<li>Remove batch tag Add/Remove sub-menu in TestPlan view (Anton Sankov)</li>
-<li>Remove Edit tag button in Tag tab (Anton Sankov)</li>
-<li>Remove template functions. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/107">Issue #107</a></li>
-<li>Remove custom HttpJSONResponse classes</li>
-<li>Remove unused and duplicate code</li>
-</ul>
-<h2>tcms-api changes since 1.5.0</h2>
-<ul>
-<li>Fix order of TestCaseRun statuses. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/184">Issue #184</a></li>
-</ul>
-<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cd</span> <span class="nv">Kiwi</span><span class="o">/</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">down</span>
-<span class="nv">make</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">image</span>
 <span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">up</span> <span class="o">-</span><span class="nv">d</span>
 <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">it</span> <span class="nv">kiwi_web</span> <span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span> <span class="nv">migrate</span>
 </code></pre></div>
