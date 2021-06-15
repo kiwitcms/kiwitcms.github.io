@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-05-18T15:00:00+03:00</updated><entry><title>Kiwi TCMS 10.1</title><link href="/blog/kiwi-tcms-team/2021/05/18/kiwi-tcms-101/" rel="alternate"></link><published>2021-05-18T15:00:00+03:00</published><updated>2021-05-18T15:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-05-18:/blog/kiwi-tcms-team/2021/05/18/kiwi-tcms-101/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.1!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-06-15T14:45:00+03:00</updated><entry><title>Thank you for downloading Kiwi TCMS 500000 times</title><link href="/blog/kiwi-tcms-team/2021/06/15/thank-you-for-downloading-kiwi-tcms-500000-times/" rel="alternate"></link><published>2021-06-15T14:45:00+03:00</published><updated>2021-06-15T14:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-06-15:/blog/kiwi-tcms-team/2021/06/15/thank-you-for-downloading-kiwi-tcms-500000-times/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;500K banner&amp;quot;" src="/images/500K/banner.png" title="500K banner"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
+500000 times via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;!
+You can check the real-time stats
+&lt;a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thank you very much and Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;500K banner&amp;quot;" src="/images/500K/banner.png" title="500K banner"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
+500000 times via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;!
+You can check the real-time stats
+&lt;a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thank you very much and Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>Kiwi TCMS 10.1</title><link href="/blog/kiwi-tcms-team/2021/05/18/kiwi-tcms-101/" rel="alternate"></link><published>2021-05-18T15:00:00+03:00</published><updated>2021-05-18T15:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-05-18:/blog/kiwi-tcms-team/2021/05/18/kiwi-tcms-101/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.1!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release includes many improvements &amp;amp; security updates,
 database changes, new and updated API methods, bug fixes, translation updates,
 new tests and internal refactoring.
