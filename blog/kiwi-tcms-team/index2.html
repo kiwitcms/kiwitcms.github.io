@@ -94,6 +94,67 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/" rel="bookmark" title="Permalink to Kiwi TCMS container images now available via Red Hat Quay.io">
+                <h1 class="top-header">Kiwi TCMS container images now available via Red Hat Quay.io</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 18 August 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello testers, we have very important news around how container images
+for Kiwi TCMS will be distributed! Recently Docker has announced
+several changes in their storage plans which makes it less viable for
+our team to continue using their services in full!</p>
+<h2>Information about official upstream container images</h2>
+<p>The official upstream Kiwi TCMS container image will continue to be
+publicly available via <a href="https://hub.docker.com/r/kiwitcms/kiwi">Docker Hub</a>
+as before. In addition all existing and new images will be available via
+<a href="https://quay.io/repository/kiwitcms/kiwi">Quay.io</a>.
+These images are available as</p>
+<ul>
+<li><a href="https://hub.docker.com/r/kiwitcms/kiwi">kiwitcms/kiwi</a> (Docker Hub)</li>
+<li><a href="https://quay.io/repository/kiwitcms/kiwi">quay.io/kiwitcms/kiwi</a> (Quay.io)</li>
+</ul>
+<p>Content is exactly the same between the two registries and you may use
+the one which you like best!</p>
+<p><strong>Warning:</strong> after November 1st 2020 older versions will not be available from
+Docker Hub, only from Quay.io! The reason is that Docker is enforcing a
+<a href="https://www.docker.com/pricing/retentionfaq">6 month image retention limit</a>
+for free plans!</p>
+<h2>Information about private containers for subscribers</h2>
+<p>Subscribers enjoy the benefit of having read-only access to tagged versions of the
+upstream Kiwi TCMS container images as well as access to tagged versions of
+Kiwi TCMS Enterprise container images! Previously these containers were distributed
+via Docker Hub and are now available via Quay.io:</p>
+<ul>
+<li><code>mrsenko/kiwitcms</code> -&gt; <code>quay.io/kiwitcms/version</code> (version tagged upstream images)</li>
+<li><code>mrsenko/kiwitcms-enterprise</code> -&gt; <code>quay.io/kiwitcms/enterprise</code> (enterprise images)</li>
+</ul>
+<p><strong>Important:</strong> existing subscribers have been notified and granted access
+to the new repositories on Quay.io. We advise you to update your
+<code>docker-compose.yml</code> files and start using the new images at your earliest convenience!</p>
+<p><strong>Warning:</strong> existing subscribers will continue having access to private
+repositories on Docker Hub until December 31st 2020! Private repositories on
+Docker Hub will become unavailable after January 31st, 2021 when Docker's new
+storage plans will be forced into effect!</p>
+<h2>Why did we chose Quay.io</h2>
+<p>There are multiple container registry services available! We think Quay.io
+delivers the best price/quality ratio for our own use-case. In particular
+we like the billing model around number of private repositories instead the
+one around the number of users in your organization. That's very similar
+to how we provide access to Kiwi TCMS via our own subscriptions!</p>
+<p>Also it just looks cool if you employ your imagination, especially
+for non-native English speakers: quay -&gt; qu-ai -&gt; QA!</p>
+<p><br>
+Thanks for reading and happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/08/11/qgis-has-chosen-kiwi-tcms/" rel="bookmark" title="Permalink to QGIS has chosen Kiwi TCMS">
                 <h1 class="top-header">QGIS has chosen Kiwi TCMS</h1>
             </a>
@@ -2043,31 +2104,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 <p>Happy testing!</p>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/" rel="bookmark" title="Permalink to GitHub OAuth tokens have been revoked">
-                <h1 class="top-header">GitHub OAuth tokens have been revoked</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 04 February 2020
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Hello testers as we've
-<a href="/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/">stated previously</a>
-Kiwi TCMS has migrated to a new GitHub backend. The previous OAuth
-application with ID <code>e45b09369720518e1fc3</code> has been deprecated.</p>
-<p>OAuth tokens for this application have been revoked and you should have
-received an email notification from GitHub about this.</p>
-<p>If you still have an active Marketplace listing we kindly ask you to
-cancel it until we're able to deploy the improved integration on
-GitHub Marketplace again.</p>
-<p>Thank you!</p>
         </div>
     </article>
 
