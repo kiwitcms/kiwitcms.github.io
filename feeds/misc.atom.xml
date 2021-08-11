@@ -1,5 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-07-12T11:40:00+03:00</updated><entry><title>Kiwi TCMS 10.2</title><link href="/blog/kiwi-tcms-team/2021/07/12/kiwi-tcms-102/" rel="alternate"></link><published>2021-07-12T11:40:00+03:00</published><updated>2021-07-12T11:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-07-12:/blog/kiwi-tcms-team/2021/07/12/kiwi-tcms-102/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.2!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-08-11T16:05:00+03:00</updated><entry><title>Kiwi TCMS 10.3</title><link href="/blog/kiwi-tcms-team/2021/08/11/kiwi-tcms-103/" rel="alternate"></link><published>2021-08-11T16:05:00+03:00</published><updated>2021-08-11T16:05:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-08-11:/blog/kiwi-tcms-team/2021/08/11/kiwi-tcms-103/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.3!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which includes several improvements,
+bug fixes, internal refactoring and updated translations.
+It is the twelveth release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.3!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which includes several improvements,
+bug fixes, internal refactoring and updated translations.
+It is the twelveth release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Container images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  bd28c4b064f5    579 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-10-2"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 10.2&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update bleach from 3.3.0 to 4.0.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django from 3.2.5 to 3.2.6&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-colorfield from 0.4.1 to 0.4.2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-tree-queries from 0.5.2 to 0.6.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update python-bugzilla from 3.0.2 to 3.1.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update python-gitlab from 2.9.0 to 2.10.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update node_modules/html5sortable from 0.13.2 to 0.13.3&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Docker image is now based on Red Hat's Universal Base Image instead of
+CentOS 8. See &lt;a class="reference external" href="https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image"&gt;https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image&lt;/a&gt; and
+&lt;a class="reference external" href="https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8"&gt;https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;mysql&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;psql&lt;/tt&gt; binaries in the container image are not available anymore!
+Backup and restore instructions have been updated accordingly, see
+&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Use &lt;tt class="docutils literal"&gt;initial_setup&lt;/tt&gt; command to create public tenant in case we're running a multi-tenant
+instance. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/88"&gt;Enterprise #88&lt;/a&gt; (Ivajlo Karabojkov)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Document that for Jira integration we use API tokens&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix a bug where drop-down selectors for test plans would not show any values when
+product is changed. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2467"&gt;Issue #2467&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add tests for missing coverage in &lt;tt class="docutils literal"&gt;kiwi_auth.admin&lt;/tt&gt;. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1607"&gt;Issue #1607&lt;/a&gt;
+(Mariyan Garvanski)&lt;/li&gt;
+&lt;li&gt;Fix some eslint issues and formatting in &lt;tt class="docutils literal"&gt;testcases/js/get.js&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Use shorter URL when cloning test cases from TP page. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1054"&gt;Issue #1054&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Limit URI size to 10KiB. This alone should allow for more than 1000 PKs
+specified for cloning. In addition Django itself limits the maximum number of
+GET/POST fields to 1000 via the &lt;tt class="docutils literal"&gt;DATA_UPLOAD_MAX_NUMBER_FIELDS&lt;/tt&gt; setting,
+see &lt;a class="reference external" href="https://docs.djangoproject.com/en/3.2/ref/settings/#data-upload-max-number-fields"&gt;https://docs.djangoproject.com/en/3.2/ref/settings/#data-upload-max-number-fields&lt;/a&gt;.
+Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1054"&gt;Issue #1054&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#"&gt;Portuguese, Brazilian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v10-3-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v10.3-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v10.3&lt;/li&gt;
+&lt;li&gt;Container image based on Red Hat Universal Base Image&lt;/li&gt;
+&lt;li&gt;Update django-ses from 2.1.1 to 2.2.1&lt;/li&gt;
+&lt;li&gt;Update python3-saml from 1.10.1 to 1.11.0&lt;/li&gt;
+&lt;li&gt;Add GitLab login icon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; Kiwi TCMS Enterprise container images are available only to subscribers!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS 10.2</title><link href="/blog/kiwi-tcms-team/2021/07/12/kiwi-tcms-102/" rel="alternate"></link><published>2021-07-12T11:40:00+03:00</published><updated>2021-07-12T11:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-07-12:/blog/kiwi-tcms-team/2021/07/12/kiwi-tcms-102/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.2!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release including upgrades to 3rd party libraries
 (including security related updates), several improvements and bug fixes.
 It is the eleventh release to include contributions via our
