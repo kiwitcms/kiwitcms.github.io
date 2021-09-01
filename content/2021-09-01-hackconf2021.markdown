@@ -1,0 +1,70 @@
+Title: Win 6 SUPERFAN tickets for HackConf 2021
+Headline: by supporting Kiwi TCMS
+date: 2021-09-01 16:25
+comments: true
+og_image: images/banners/hackconf2021.png
+twitter_image: images/banners/hackconf2021.png
+tags: community, events
+
+
+[HackConf](https://hackconf.bg/) is one of the premium developer conferences in Bulgaria.
+Over the years Kiwi TCMS and HackConf have collaborated multiple times and our history goes
+way back to before the first edition of the conference!
+We're happy to announce that Kiwi TCMS will be giving away 6 SUPERFAN
+tickets for HackConf 2021 in order to celebrate their 6th anniversary!
+
+All 6 tickets include:
+
+- Conference live stream access (online due to COVID-19)
+- Ability to ask questions during the live stream
+- Virtual Goodie Bag with valuable content & digital treats
+- Special Physical Goodie Bag delivered to your home.
+  ** Shipping is available only for the territory of Bulgaria.
+
+
+How to win a ticket
+-------------------
+
+We need your support in order to become part of GitLab's open source family!
+We kindly ask you to upvote the first comment at
+[https://gitlab.com/gitlab-org/gitlab/-/issues/334558](https://gitlab.com/gitlab-org/gitlab/-/issues/334558)!
+
+
+```gherkin
+Scenario: help Kiwi TCMS become part of GitLab’s open source family
+    Given: navigate your browser to http://tinyurl.com/KiwiTCMS
+    And: log into GitLab via the "Sign in / Register" button
+    And: complete the login / registration process
+    When: click the 👍 icon under the first comment
+    Then: wait for the winners to be announced!
+```
+
+!["GitLab steps"](/images/gitlab-call-to-action.png)
+
+Thank you very much and Happy Testing!
+
+Winners announcement
+--------------------
+
+Winners will be selected from all voters, excluding Kiwi TCMS team members, HackConf organizers
+and GitLab affiliated accounts. The accounts which have participated can be verified with
+`curl https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/issues/334558/participants`.
+
+Winners will be announced on Oct 7th 2021 in a blog post on our website. We will try our best to
+get in touch with all winners but we also ask you to get in touch with us if you see your username!
+
+
+
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!
+
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give 👍 on GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/334558);
+- [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
+- [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
+  and follow all project news;
+- [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;
+- [Become a customer](/#subscriptions) and we'll share our profits with the community
