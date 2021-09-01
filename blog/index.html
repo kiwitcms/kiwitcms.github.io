@@ -88,6 +88,67 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/" rel="bookmark" title="Permalink to Win 6 SUPERFAN tickets for HackConf 2021">
+                <h1 class="top-header">Win 6 SUPERFAN tickets for HackConf 2021</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 01 September 2021
+            </p>
+        </div>
+
+        <div class="content">
+            <p><a href="https://hackconf.bg/">HackConf</a> is one of the premium developer conferences in Bulgaria.
+Over the years Kiwi TCMS and HackConf have collaborated multiple times and our history goes
+way back to before the first edition of the conference!
+We're happy to announce that Kiwi TCMS will be giving away 6 SUPERFAN
+tickets for HackConf 2021 in order to celebrate their 6th anniversary!</p>
+<p>All 6 tickets include:</p>
+<ul>
+<li>Conference live stream access (online due to COVID-19), sessions are in English</li>
+<li>Ability to ask questions during the live stream</li>
+<li>Virtual Goodie Bag with valuable content &amp; digital treats</li>
+<li>Special Physical Goodie Bag delivered to your home.
+  ** Shipping is available only for the territory of Bulgaria.</li>
+</ul>
+<h2>How to win a ticket</h2>
+<p>We need your support in order to become part of GitLab's open source family!
+We kindly ask you to upvote the first comment at
+<a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">https://gitlab.com/gitlab-org/gitlab/-/issues/334558</a>!</p>
+<div class="highlight"><pre><span></span><code><span class="k">Scenario:</span><span class="nf"> help Kiwi TCMS become part of GitLab’s open source family</span>
+<span class="nf">    Given: navigate your browser to http://tinyurl.com/KiwiTCMS</span>
+<span class="nf">    And: log into GitLab via the &quot;Sign in / Register&quot; button</span>
+<span class="nf">    And: complete the login / registration process</span>
+<span class="nf">    When: click the 👍 icon under the first comment</span>
+<span class="nf">    Then: wait for the winners to be announced!</span>
+</code></pre></div>
+
+
+<p><img alt="&quot;GitLab steps&quot;" src="/images/gitlab-call-to-action.png"></p>
+<p>Thank you very much and Happy Testing!</p>
+<h2>Winners announcement</h2>
+<p>Winners will be selected from all voters, excluding Kiwi TCMS team members, HackConf organizers
+and GitLab affiliated accounts. The accounts which have participated can be verified with
+<code>curl https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/issues/334558/participants</code>.</p>
+<p>Winners will be announced on Oct 7th 2021 in a blog post on our website. We will try our best to
+get in touch with all winners but we also ask you to get in touch with us if you see your username!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2021/08/11/kiwi-tcms-103/" rel="bookmark" title="Permalink to Kiwi TCMS 10.3">
                 <h1 class="top-header">Kiwi TCMS 10.3</h1>
             </a>
@@ -2421,168 +2482,6 @@ Vuk made a mistake and now he can't turn it off :D. How's that for dogfooding?</
 around us please <a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/">nominate us as GitHub Stars</a>!</p>
 <p><br>
 Thanks for reading and happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/" rel="bookmark" title="Permalink to Kiwi TCMS 8.7">
-                <h1 class="top-header">Kiwi TCMS 8.7</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 16 September 2020
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 8.7!</p>
-<p><strong>IMPORTANT:</strong> this is a medium sized release which includes
-improvements, API changes, bug fixes, translation updates and
-new tests. It is the fifth release to include contributions via our
-<a class="reference external" href="/blog/tags/bounty-program/">open source bounty program</a>.
-You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  1f2461b1facd    643 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-8-6">
-<h2>Changes since Kiwi TCMS 8.6</h2>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul>
-<li><p class="first">Update Django from 3.0.9 to 3.1.1</p>
-</li>
-<li><p class="first">Update django-attachments from 1.6 to 1.8</p>
-</li>
-<li><p class="first">Update django-extensions from 3.0.5 to 3.0.8</p>
-</li>
-<li><p class="first">Update psycopg2 from 2.8.5 to 2.8.6</p>
-</li>
-<li><p class="first">Update pygments from 2.6.1 to 2.7.0</p>
-</li>
-<li><p class="first">Update python-gitlab from 2.4.0 to 2.5.0</p>
-</li>
-<li><p class="first">Make it possible to use reCAPTCHA during registration. If you want to enable
-this then add the following to your settings:</p>
-<pre class="literal-block">
-if 'captcha' not in INSTALLED_APPS:
-    INSTALLED_APPS.append('captcha')
-
-    RECAPTCHA_PUBLIC_KEY = '......'
-    RECAPTCHA_PRIVATE_KEY = '.....'
-    RECAPTCHA_USE_SSL = True
-</pre>
-<p>For more info see <a class="reference external" href="https://www.google.com/recaptcha/admin/">https://www.google.com/recaptcha/admin/</a></p>
-</li>
-<li><p class="first">Replace <tt class="docutils literal">GlobalLoginRequiredMiddleware</tt> with
-<tt class="docutils literal">tcms.kiwi_auth.backends.AnonymousViewBackend</tt> for anonymous read-only
-functionality. See section
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/configuration.html#anonymous-read-only-access">Anonymous read-only access</a>
-in the documentation</p>
-</li>
-<li><p class="first">Replace the <tt class="docutils literal">...</tt> in navigation bar with a 3 cogs icon to make the
-object-level menu more visible</p>
-</li>
-</ul>
-</div>
-<div class="section" id="settings">
-<h3>Settings</h3>
-<ul class="simple">
-<li>Remove setting <tt class="docutils literal">PUBLIC_VIEWS</tt></li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li>Remove <tt class="docutils literal">TestCase.get_components()</tt> in favor of <tt class="docutils literal">Component.filter()</tt></li>
-<li><tt class="docutils literal">Bug.details()</tt> method will now return <tt class="docutils literal">{}</tt> instead of failing if
-it can't find an issue tracker from an URL</li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Remove documentation references to non-existing environment</li>
-<li>Don't fail internal calls if Kiwi TCMS bug tracker can't find a bug</li>
-</ul>
-</div>
-<div class="section" id="refactoring-testing">
-<h3>Refactoring &amp; testing</h3>
-<ul class="simple">
-<li>Add tests for <tt class="docutils literal">tcms.core.templatetags</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1602">Issue #1602</a> (Mariyan Garvanski)</li>
-<li>Add tests for <tt class="docutils literal">tcms.bugs.views.Edit</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1599">Issue #1599</a> (Mfon Eti-mfon)</li>
-<li>Add tests for <tt class="docutils literal">tcms.bugs.views.AddComment</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1600">Issue #1600</a> (Mfon Eti-mfon)</li>
-<li>Make paths used in migrations &amp; settings platform aware in order to
-enable development mode on Windows (Mfon Eti-mfon)</li>
-<li>Add new linter checker to check for use of <tt class="docutils literal">db_column</tt> argument in
-model field definition. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/736">Issue #736</a> (Bryan Mutai)</li>
-<li>Add tests for <tt class="docutils literal">Bug.details</tt> API method</li>
-<li>Replace deprecated <tt class="docutils literal">ifequal</tt>/<tt class="docutils literal">ifnotequal</tt> template tags</li>
-<li>Adjust <tt class="docutils literal">migrations_order</tt> for Django 3.1 compatibility</li>
-<li>Add <tt class="docutils literal">npm audit</tt> check in CI</li>
-<li>Resolve several pylint issues</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#">Hungarian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="kiwi-tcms-enterprise-v8-7-mt">
-<h2>Kiwi TCMS Enterprise v8.7-mt</h2>
-<ul class="simple">
-<li>Based on Kiwi TCMS v8.7</li>
-<li>Overrides for setting <tt class="docutils literal">PUBLIC_VIEWS</tt> have been removed</li>
-<li>Update django-ses from 1.0.2 to 1.0.3</li>
-<li>Update kiwitcms-github-app from 1.1 to 1.2</li>
-<li>Update kiwitcms-tenants from 1.2.1 to 1.3.1</li>
-</ul>
-<p>For more info see
-<a class="reference external" href="https://github.com/kiwitcms/enterprise/#v87-mt-16-sep-2020">https://github.com/kiwitcms/enterprise/#v87-mt-16-sep-2020</a></p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Refer to
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
-for more details!</p>
-<p>Happy testing!</p>
-</div>
-
         </div>
     </article>
 
