@@ -40,5 +40,7 @@ and users who never confirmed their accounts!
 FREE Public Tenant and Private Tenant accounts and all of their data
 are removed within 30 days of cancelling their subscription.
 
-
 Account info is not shared with 3rd parties!
+
+Kiwi TCMS doesn't perform any tracking of your activities or collect any statistics
+which are sent-home!
