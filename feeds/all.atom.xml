@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-09-01T16:25:00+03:00</updated><entry><title>Win 6 SUPERFAN tickets for HackConf 2021</title><link href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/" rel="alternate"></link><published>2021-09-01T16:25:00+03:00</published><updated>2021-09-01T16:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-09-01:/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/</id><summary type="html">&lt;p&gt;&lt;a href="https://hackconf.bg/"&gt;HackConf&lt;/a&gt; is one of the premium developer conferences in Bulgaria.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-09-17T21:40:00+03:00</updated><entry><title>Please nominate Kiwi TCMS at MLH Open Source Awards</title><link href="/blog/kiwi-tcms-team/2021/09/17/please-nominate-kiwi-tcms-at-mlh-open-source-awards/" rel="alternate"></link><published>2021-09-17T21:40:00+03:00</published><updated>2021-09-17T21:40:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-09-17:/blog/kiwi-tcms-team/2021/09/17/please-nominate-kiwi-tcms-at-mlh-open-source-awards/</id><summary type="html">&lt;p&gt;&lt;img
+    style="float: none; margin-left:0"
+    src="/images/mlh/opensource_awards_banner.png"
+    alt="MLH Nomination"&gt;&lt;/p&gt;
+&lt;p&gt;Last year Kiwi TCMS started
+&lt;a href="/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/"&gt;partnering&lt;/a&gt;
+with the MLH Fellowship open source program. During the span of 3 semesters
+fellows received mentorship and career advice from us. They were also able
+to work on
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues?q=is%3Aopen+is%3Aissue+label%3A%22MLH+Fellowship%22"&gt;20+ issues&lt;/a&gt;
+the majority of which have been complete.&lt;/p&gt;
+&lt;p&gt;For that we kindly ask the open …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img
+    style="float: none; margin-left:0"
+    src="/images/mlh/opensource_awards_banner.png"
+    alt="MLH Nomination"&gt;&lt;/p&gt;
+&lt;p&gt;Last year Kiwi TCMS started
+&lt;a href="/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/"&gt;partnering&lt;/a&gt;
+with the MLH Fellowship open source program. During the span of 3 semesters
+fellows received mentorship and career advice from us. They were also able
+to work on
+&lt;a href="https://github.com/kiwitcms/Kiwi/issues?q=is%3Aopen+is%3Aissue+label%3A%22MLH+Fellowship%22"&gt;20+ issues&lt;/a&gt;
+the majority of which have been complete.&lt;/p&gt;
+&lt;p&gt;For that we kindly ask the open source community to nominate Kiwi TCMS at the
+&lt;a href="https://fellowship.mlh.io/opensourceawards"&gt;MLH Open Source Awards&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Steps to reproduce:&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to &lt;a href="https://fellowship.mlh.io/opensourceawards"&gt;https://fellowship.mlh.io/opensourceawards&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Submit a Nomination&lt;/strong&gt; button&lt;/li&gt;
+&lt;li&gt;Follow the instructions on screen!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;Expected results:&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It should take you 2 minutes&lt;/li&gt;
+&lt;li&gt;Your submission is recorded by MLH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Why are we doing this&lt;/h2&gt;
+&lt;p&gt;MLH is recognizing extraordinary open source projects and communities. It is up to you,
+our community members and the general public to decide whether Kiwi TCMS qualifies
+or not. Winning this award will let us show what we do before a larger audience!&lt;/p&gt;
+&lt;p&gt;Thank you for supporting Kiwi TCMS and happy testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>Win 6 SUPERFAN tickets for HackConf 2021</title><link href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/" rel="alternate"></link><published>2021-09-01T16:25:00+03:00</published><updated>2021-09-01T16:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-09-01:/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/</id><summary type="html">&lt;p&gt;&lt;a href="https://hackconf.bg/"&gt;HackConf&lt;/a&gt; is one of the premium developer conferences in Bulgaria.
 Over the years Kiwi TCMS and HackConf have collaborated multiple times and our history goes
 way back to before the first edition of the conference!
 We're happy to announce that Kiwi TCMS will be giving away 6 SUPERFAN
