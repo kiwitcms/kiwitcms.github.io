@@ -1,5 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-09-21T16:15:00+03:00</updated><entry><title>Meet Kiwi TCMS at WebSummit 2021 in Lisbon</title><link href="/blog/kiwi-tcms-team/2021/09/21/meet-kiwi-tcms-at-websummit-2021-in-lisbon/" rel="alternate"></link><published>2021-09-21T16:15:00+03:00</published><updated>2021-09-21T16:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-09-21:/blog/kiwi-tcms-team/2021/09/21/meet-kiwi-tcms-at-websummit-2021-in-lisbon/</id><summary type="html">&lt;p&gt;Kiwi TCMS is happy to announce that our first post-COVID live presence
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-10-05T13:15:00+03:00</updated><entry><title>Kiwi TCMS 10.4</title><link href="/blog/kiwi-tcms-team/2021/10/05/kiwi-tcms-104/" rel="alternate"></link><published>2021-10-05T13:15:00+03:00</published><updated>2021-10-05T13:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-05:/blog/kiwi-tcms-team/2021/10/05/kiwi-tcms-104/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.4!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which includes several improvements,
+bug fixes, internal refactoring and updated translations.
+It is the thirteenth release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.4!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which includes several improvements,
+bug fixes, internal refactoring and updated translations.
+It is the thirteenth release to include contributions via our
+&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Container images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  10eb8f04cccd    590 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-10-3"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 10.3&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update prismjs from 1.24.1 to 1.25.0. Includes patches against a
+Regular Expression Denial of Service vulnerability.
+See &lt;a class="reference external" href="https://snyk.io/vuln/SNYK-JS-PRISMJS-1585202"&gt;https://snyk.io/vuln/SNYK-JS-PRISMJS-1585202&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update bleach from 4.0.0 to 4.1.0&lt;/li&gt;
+&lt;li&gt;Update django from 3.2.6 to 3.2.7&lt;/li&gt;
+&lt;li&gt;Update django-colorfield from 0.4.2 to 0.4.3&lt;/li&gt;
+&lt;li&gt;Update pygithub from 1.54.1 to 1.55&lt;/li&gt;
+&lt;li&gt;Update pygments from 2.9.0 to 2.10.0&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 2.10.0 to 2.10.1&lt;/li&gt;
+&lt;li&gt;Allow filtering by TestRun ID in Test Case Search page&lt;/li&gt;
+&lt;li&gt;Update test execution prefix in list of executions on TestRun page.
+Now includes both TE and TC numbers before the summary link&lt;/li&gt;
+&lt;li&gt;Allow search by translated names on Test Run page&lt;/li&gt;
+&lt;li&gt;Redirect &amp;quot;ADMIN -&amp;gt; Users and groups&amp;quot; menu item according to tenancy&lt;/li&gt;
+&lt;li&gt;Allow creation of new test run from selected test cases inside existing test
+run. For example only select cases which are currently failing and re-test
+against a different build!&lt;/li&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;initial_setup&lt;/tt&gt; command will create a schema called &amp;quot;empty&amp;quot; when executed
+inside a multi-tenant setup. Refs
+&lt;a class="reference external" href="https://github.com/kiwitcms/tenants/issues/127"&gt;Issue #127&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update values for &lt;tt class="docutils literal"&gt;MODERNRPC_HANDLERS&lt;/tt&gt; setting&lt;/li&gt;
+&lt;li&gt;Rename &lt;tt class="docutils literal"&gt;SafeJSONRPCHandler&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;KiwiTCMSJsonRpcHandler&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New RPC handler class &lt;tt class="docutils literal"&gt;KiwiTCMSXmlRpcHandler&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p class="last"&gt;If you had manipulated the value of MODERNRPC_HANDLERS make sure that
+you update to the new class names!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New migrations for altered meta options&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCase.create&lt;/tt&gt; method accepts &lt;tt class="docutils literal"&gt;setup_duration&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;testing_duration&lt;/tt&gt; fields.
+Refs &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1923"&gt;Issue #1923&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;TestCase.update&lt;/tt&gt; method acepts  &lt;tt class="docutils literal"&gt;setup_duration&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;testing_duration&lt;/tt&gt; fields.
+Refs &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1923"&gt;Issue #1923&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;New method &lt;tt class="docutils literal"&gt;Testing.individual_test_case_health&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Timedelta values are serialized to float, representing seconds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix wrong URL parameter passed to test cases clone page&lt;/li&gt;
+&lt;li&gt;Show translated execution statuses for TestRun page. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1966"&gt;Issue #1966&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Properly initialize Product value on TestRun Edit page. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2514"&gt;Issue #2514&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clone duration fields when cloning a test case&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New automated test scenario for &lt;tt class="docutils literal"&gt;kiwi_auth.admin&lt;/tt&gt; (Mariyan Garvanski)&lt;/li&gt;
+&lt;li&gt;Unify similar strings to reduce translations burden&lt;/li&gt;
+&lt;li&gt;Inside buildroot &lt;tt class="docutils literal"&gt;PyNaCl&lt;/tt&gt; needs &lt;tt class="docutils literal"&gt;make&lt;/tt&gt; in order to build a wheel package&lt;/li&gt;
+&lt;li&gt;Adjust values for parametrized test to match existing scenarios&lt;/li&gt;
+&lt;li&gt;Fix code smells from newer pylint&lt;/li&gt;
+&lt;li&gt;eslint fixes for the JavaScript files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/it#"&gt;Italian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#"&gt;Portuguese, Brazilian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#"&gt;Russian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v10-4-1-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v10.4.1-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v10.4&lt;/li&gt;
+&lt;li&gt;Update django-ses from 2.2.1 to 2.3.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-github-app from 1.3.0 to 1.3.1&lt;/li&gt;
+&lt;li&gt;Update python3-saml from 1.11.0 to 1.12.0&lt;/li&gt;
+&lt;li&gt;Update social-auth-app-django from 4.0.0 to 5.0.0&lt;/li&gt;
+&lt;li&gt;Use initial_setup during testing. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/88"&gt;Issue #88&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix new pylint issues and start using f-strings&lt;/li&gt;
+&lt;li&gt;Test &amp;quot;ADMIN -&amp;gt; Users and Groups&amp;quot; menu redirect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; Kiwi TCMS Enterprise container images are available only to subscribers!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+If you are using Kiwi TCMS as a container then:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Nominate Kiwi TCMS at &lt;a class="reference external" href="https://fellowship.mlh.io/opensourceawards"&gt;MLH Open Source Awards&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Meet Kiwi TCMS at WebSummit 2021 in Lisbon</title><link href="/blog/kiwi-tcms-team/2021/09/21/meet-kiwi-tcms-at-websummit-2021-in-lisbon/" rel="alternate"></link><published>2021-09-21T16:15:00+03:00</published><updated>2021-09-21T16:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-09-21:/blog/kiwi-tcms-team/2021/09/21/meet-kiwi-tcms-at-websummit-2021-in-lisbon/</id><summary type="html">&lt;p&gt;Kiwi TCMS is happy to announce that our first post-COVID live presence
 will be at &lt;a href="https://websummit.com/"&gt;WebSummit 2021&lt;/a&gt;, Nov 1-4 in Lisbon, Portugal.
 We're joining as a &lt;a href="https://websummit.com/startups/featured-startups"&gt;featured startup&lt;/a&gt;
 as part of the ALPHA program in category &lt;em&gt;Enterprise Software Solutions&lt;/em&gt;.&lt;/p&gt;

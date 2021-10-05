@@ -94,6 +94,67 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/" rel="bookmark" title="Permalink to Kiwi TCMS is Open Source Seed Award winner">
+                <h1 class="top-header">Kiwi TCMS is Open Source Seed Award winner</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Fri 27 March 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Kiwi TCMS is the proud winner of a $10,000 award from Mozilla, Indeed,
+Open Collective, Ford Foundation &amp; Simply Secure. Read below for the full story!</p>
+<p>At the end of January Zahari alerted our team about the
+<a href="https://opencollective.com/open-source-speed-dating/events/open-source-speed-dating-fosdem-2020-96f78c6c">Open Source Speed Dating FOSDEM 2020</a>
+event and Alex was very swift in filing the application form. Just as we landed
+in Brussels, ready to host
+<a href="/blog/kiwi-tcms-team/2019/11/26/kiwi-tcms-is-going-to-fosdem-2020/">Testing and Automation devroom and the Open Source Test Management stand</a>,
+we got the news - Kiwi TCMS has been selected as a participant.</p>
+<p>What followed was a very hasty day of preparing a 5 min pitch and rehearsing it
+as much as possible so we can be ready to present our project. Alex prepared the
+pitch and made final review and polishing together with Anton.
+For the record everything was written down on paper,
+including important facts about the project and schedule - when and where is our slot,
+how is Alex going to get there, when does he need to leave to be on time, etc.
+We believe that preparation was key here and that's why our team always tries to
+be prepared when we participate at events! It was as good
+as it can get, no more changes!</p>
+<p>On Feb 1st all hell broke loose - it was day #1 of FOSDEM,
+the Testing an Automation devroom was full with amazing speakers and packed with people,
+<a href="https://fosdem.org/2020/schedule/track/testing_and_automation/">watch videos here</a>,
+there was barely time to eat or drink water and at 5PM Alex had to rush across town to pitch
+Kiwi TCMS!</p>
+<p>Then everything went like clockwork - weather was warm for the season,
+Alex decided to walk from ULB to La Tricoterie, both so he doesn't get stuck in traffic but
+also to regulate stress level and be clear minded for what comes next. He arrived just on
+time to meet with new folks and have a glass of wine before taking his turn with the judges.</p>
+<p>Open Source Speed Dating is a format where projects pitch to a team of 3 judges who then
+follow up with various questions. Their goal is to assess how suitable your project is
+for the money they are giving away but also how would actually receiving an award help the project.
+You do get guidance how to prepare and what sort of information the judges are looking for.
+However you have no idea who the other participants are and who are you competing against!
+All you have is a 15 minutes slot where you have to give the best of you and hope it is
+enough.</p>
+<p>Afterwards we reunited together, did even more walking, played the SPACESHIP at
+<em>Let Me Out</em> escape room and finished with a mandatory team dinner in the hearth of Brussels.</p>
+<p>Following an internal selection process and due diligence we finally received the award.
+<a href="https://opencollective.com/kiwitcms/transactions">$10,000 for open source</a>!</p>
+<p>As a side note we also got to know who the other winners are, which can be seen from
+<a href="https://opencollective.com/open-source-speed-dating/transactions">Open Source Speed Dating records</a>:
+F-Droid, ossia, MNT Research GmbH and Kiwi TCMS!</p>
+<h2>We’re giving all of it to our community</h2>
+<p>All money from the <a href="https://opencollective.com/kiwitcms/">Kiwi TCMS Collective</a>
+will be going towards funding development tasks.
+Like Alex told the judges - this will help us enable more hands working on Kiwi TCMS
+and complete pending work faster. Stay tuned for our bounty program announcement!</p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/" rel="bookmark" title="Permalink to Kiwi TCMS 8.1">
                 <h1 class="top-header">Kiwi TCMS 8.1</h1>
             </a>
@@ -2410,129 +2471,6 @@ presentations delivered by Anton Sankov and Alex Todorov.</p>
 for our guests at the conference. If you are interested in coming
 <a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">subscribe to our newsletter</a>
 and don't miss the announcement!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:</p>
-<pre class="literal-block">
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-</pre>
-<p>Happy testing!</p>
-</div>
-
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="bookmark" title="Permalink to Kiwi TCMS 6.8">
-                <h1 class="top-header">Kiwi TCMS 6.8</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 03 May 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 6.8!
-This is a small improvement and bug-fix update.
-You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  fca095f95475    994.8 MB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-6-7">
-<h2>Changes since Kiwi TCMS 6.7</h2>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update Django from 2.2 to 2.2.1</li>
-<li>Update django-simple-history from 2.7.0 to 2.7.2</li>
-<li>Update django-grappelli from 2.12.2 to 2.12.3</li>
-<li>Update psycopg2 from 2.8 to 2.8.2</li>
-<li>Update pygithub from 1.43.6 to 1.43.7</li>
-<li>Upgrade pip and setuptools inside Docker image</li>
-<li>Update documentation with newer screenshots and updated Tutotial. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/837/">Issue #837</a> (&#64;Prome88)</li>
-<li>Document how to enable public read-only views</li>
-<li>Remove deprecated documentation section about Bugzilla authentication</li>
-<li>Install PostgreSQL libraries in Docker image which makes it easier to
-switch the DB backend without rebuilding the entire image</li>
-<li>Remove npm, libxml2-devel and libxslt-devel from Docker image</li>
-<li>Database engine configuration now respects the <tt class="docutils literal">KIWI_DB_ENGINE</tt> environment
-variable which defaults to <tt class="docutils literal">django.db.backends.mysql</tt>. This will make it
-easier for admins to change DB engine by updating their <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Pin bootstrap-switch to version 3.3.4 in <tt class="docutils literal">package.json</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/916/">Issue #916</a></li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-<li>New language <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian</a></li>
-<li>New language <a class="reference external" href="https://crowdin.com/project/kiwitcms/cz#">Czech</a></li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Don't use <tt class="docutils literal">Site.objects.get_current()</tt> because it has an internal cache
-and causes email notifications from tenants to use the wrong URL</li>
-<li>More changes around renaming of TestCaseRun to TestExecution</li>
-</ul>
-</div>
-</div>
-<div class="section" id="github-marketplace">
-<h2>GitHub Marketplace</h2>
-<p>During the past week we have silently launched Kiwi TCMS on
-<a class="reference external" href="https://github.com/marketplace/kiwi-tcms/">GitHub Marketplace</a>. Free plans
-will be redirected to
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">public.tenant.kiwitcms.org</a>
-while paid plans will be hosted under <tt class="docutils literal">*.tenant.kiwitcms.org</tt> sub-domains!</p>
-<p>Our team is still working on all requirements for GitHub integration and we will
-issue a formal statement when ready!</p>
 </div>
 <div class="section" id="how-to-upgrade">
 <h2>How to upgrade</h2>
