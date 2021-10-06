@@ -1,5 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-10-05T13:15:00+03:00</updated><entry><title>Kiwi TCMS 10.4</title><link href="/blog/kiwi-tcms-team/2021/10/05/kiwi-tcms-104/" rel="alternate"></link><published>2021-10-05T13:15:00+03:00</published><updated>2021-10-05T13:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-05:/blog/kiwi-tcms-team/2021/10/05/kiwi-tcms-104/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.4!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-10-06T14:00:00+03:00</updated><entry><title>Announcing winners of 6 tickets for HackConf 2021</title><link href="/blog/kiwi-tcms-team/2021/10/06/announcing-winners-of-6-tickets-for-hackconf-2021/" rel="alternate"></link><published>2021-10-06T14:00:00+03:00</published><updated>2021-10-06T14:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-06:/blog/kiwi-tcms-team/2021/10/06/announcing-winners-of-6-tickets-for-hackconf-2021/</id><summary type="html">&lt;p&gt;Here are the winners of our &lt;a href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/"&gt;ticket giveaway&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Martin Ayvazov&lt;/li&gt;
+&lt;li&gt;Ralitsa Georgieva&lt;/li&gt;
+&lt;li&gt;Teodora Pashina - Dimitrova&lt;/li&gt;
+&lt;li&gt;Gabriela Luhova&lt;/li&gt;
+&lt;li&gt;Lyuboslava Arshinkova&lt;/li&gt;
+&lt;li&gt;Yoan Bachev&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attention winners:&lt;/strong&gt; please get in touch with us at &lt;em&gt;info@kiwitcms.org&lt;/em&gt; to claim your tickets.
+We will ask you to validate your GitLab account by performing a quick …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here are the winners of our &lt;a href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/"&gt;ticket giveaway&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Martin Ayvazov&lt;/li&gt;
+&lt;li&gt;Ralitsa Georgieva&lt;/li&gt;
+&lt;li&gt;Teodora Pashina - Dimitrova&lt;/li&gt;
+&lt;li&gt;Gabriela Luhova&lt;/li&gt;
+&lt;li&gt;Lyuboslava Arshinkova&lt;/li&gt;
+&lt;li&gt;Yoan Bachev&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attention winners:&lt;/strong&gt; please get in touch with us at &lt;em&gt;info@kiwitcms.org&lt;/em&gt; to claim your tickets.
+We will ask you to validate your GitLab account by performing a quick action which will be disclosed
+to you via email!&lt;/p&gt;
+&lt;p&gt;Raw data from our
+&lt;a href="https://github.com/kiwitcms/api-scripts/pull/1"&gt;winner selection script&lt;/a&gt; below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;*****&lt;/span&gt; &lt;span class="n"&gt;WINNER&lt;/span&gt; &lt;span class="c1"&gt;#1: Martin Ayvazov&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/eea811553e2b8aa3dd7ef670c3cd3552?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9640539&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Martin Ayvazov&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;majvazov&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://gitlab.com/majvazov&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;*****&lt;/span&gt; &lt;span class="n"&gt;WINNER&lt;/span&gt; &lt;span class="c1"&gt;#2: Ralitsa Georgieva&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/43aa50437fc245766bc3e6072777c056?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9869926&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Ralitsa Georgieva&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ralitsa.georgieva&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://gitlab.com/ralitsa.georgieva&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;*****&lt;/span&gt; &lt;span class="n"&gt;WINNER&lt;/span&gt; &lt;span class="c1"&gt;#3: Teodora Pashina - Dimitrova&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/beca49c67ce9862a8ecb8deff94780a7?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9869893&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Teodora Pashina - Dimitrova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;tedi.pashina&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://gitlab.com/tedi.pashina&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;*****&lt;/span&gt; &lt;span class="n"&gt;WINNER&lt;/span&gt; &lt;span class="c1"&gt;#4: Gabriela Luhova&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/92e863a1e3df1122cc0beb2477a375be?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9641952&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Gabriela Luhova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;gabriela.luhova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://gitlab.com/gabriela.luhova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;*****&lt;/span&gt; &lt;span class="n"&gt;WINNER&lt;/span&gt; &lt;span class="c1"&gt;#5: Lyuboslava Arshinkova&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/1e0a308ddbe3b8ab9660ec7702fa0d6d?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9869399&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Lyuboslava Arshinkova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;arshinkovalyuboslava&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://gitlab.com/arshinkovalyuboslava&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;*****&lt;/span&gt; &lt;span class="n"&gt;WINNER&lt;/span&gt; &lt;span class="c1"&gt;#6: Yoan Bachev&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://gitlab.com/uploads/-/system/user/avatar/7630581/avatar.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;7630581&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Yoan Bachev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yobachev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+ &lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://gitlab.com/yobachev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Video recording of the selection process:&lt;/p&gt;
+&lt;p&gt;&lt;iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/QINm7pLolOw"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;
+&lt;/iframe&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://fellowship.mlh.io/opensourceawards"&gt;Nominate Kiwi TCMS at MLH Open Source Awards&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 10.4</title><link href="/blog/kiwi-tcms-team/2021/10/05/kiwi-tcms-104/" rel="alternate"></link><published>2021-10-05T13:15:00+03:00</published><updated>2021-10-05T13:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-05:/blog/kiwi-tcms-team/2021/10/05/kiwi-tcms-104/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.4!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which includes several improvements,
 bug fixes, internal refactoring and updated translations.
 It is the thirteenth release to include contributions via our
@@ -293,7 +383,7 @@ We kindly ask you to upvote the first comment at
 &lt;p&gt;Winners will be selected from all voters, excluding Kiwi TCMS team members, HackConf organizers
 and GitLab affiliated accounts. The accounts which have participated can be verified with
 &lt;code&gt;curl https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/issues/334558/participants&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Winners will be announced on Oct 7th 2021 in a blog post on our website. We will try our best to
+&lt;p&gt;Winners will be announced on Oct 6th 2021 in a blog post on our website. We will try our best to
 get in touch with all winners but we also ask you to get in touch with us if you see your username!&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities

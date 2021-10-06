@@ -88,6 +88,113 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to backup Docker volumes for Kiwi TCMS">
+                <h1 class="top-header">How to backup Docker volumes for Kiwi TCMS</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on Mon 30 July 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>When you start Kiwi TCMS by running <code>docker-compose up</code>
+(see <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose">here</a>)
+it will automatically create 2 volumes: <code>kiwi_db_data</code> and <code>kiwi_uploads</code>.
+This blog post will outline how to backup these docker volumes.</p>
+<p><strong>Note:</strong> in the instructions below <code>kiwi_db</code> is the container name and <code>kiwi</code> is the
+database name used inside the <code>docker-compose.yml</code> file!</p>
+<h2>MariaDB/MySQL database</h2>
+<p>To export all contents from the docker container execute the command:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">u</span> <span class="mi">0</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">mysqldump</span> <span class="nv">kiwi</span> <span class="o">&gt;</span> <span class="nv">backup</span>.<span class="nv">sql</span>
+</code></pre></div>
+
+
+<p>This will create a file named <code>backup.sql</code> in the current directory, outside of the running container!</p>
+<p>You can restore the database contents by using the following command:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">cat</span> <span class="nv">backup</span>.<span class="nv">sql</span> <span class="o">|</span> <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">u</span> <span class="mi">0</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">mysql</span> <span class="o">-</span><span class="nv">v</span> <span class="nv">kiwi</span>
+</code></pre></div>
+
+
+<p><strong>Notes:</strong></p>
+<ol>
+<li>The commands above using <code>-u 0</code> are executed with <code>root</code> privileges inside the
+   container. In this way you don't need to type-in the database password!</li>
+<li>Depending on your scenario you may want to remove the existing volume
+   (<code>docker-compose down &amp;&amp; docker volume rm kiwi_db_data</code>) before restoring the database!</li>
+</ol>
+<h2>Postgres database</h2>
+<p>To export all contents from the docker container execute the command:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">pg_dump</span> <span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span> <span class="o">-</span><span class="nv">F</span> <span class="nv">c</span> <span class="o">&gt;</span> <span class="nv">backup</span>.<span class="nv">bak</span>
+</code></pre></div>
+
+
+<p>This will create a file named <code>backup.bak</code> in the current directory, outside of the running container.
+This is a PostgreSQL custom database dump format which contains all data and schema definitions.
+That is a binary file which can be read with the <code>pg_restore</code> command!</p>
+<p>To drop and restore the entire database execute:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">psql</span> <span class="o">-</span><span class="nv">c</span> <span class="s2">&quot;</span><span class="s">DROP DATABASE IF EXISTS kiwi;</span><span class="s2">&quot;</span>
+<span class="nv">cat</span> <span class="nv">backup</span>.<span class="nv">bak</span> <span class="o">|</span> <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">pg_restore</span> <span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">template1</span> <span class="o">-</span><span class="nv">vcC</span>
+</code></pre></div>
+
+
+<h2>Multi-tenant database</h2>
+<p>The <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenant</a> add-on and/or
+<a href="https://github.com/kiwitcms/enterprise">Kiwi TCMS Enterprise</a> work only on
+Postgres! Each tenant (aka name-space) uses a separate database schema.
+The first schema name is <code>public</code>.</p>
+<p>The backup and restore instructions shown above operate on all tenants together!
+If you want to [drop and] restore an individual tenant then use the commands:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">it</span> <span class="nv">kiwi_db</span> <span class="nv">psql</span> <span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span>
+
+<span class="nv">kiwi</span><span class="o">=&gt;</span> <span class="nv">DROP</span> <span class="nv">SCHEMA</span> $<span class="nv">tenant_name</span> <span class="nv">CASCADE</span><span class="c1">;</span>
+....
+<span class="nv">DROP</span> <span class="nv">SCHEMA</span>
+<span class="nv">kiwi</span><span class="o">=&gt;</span> <span class="nv">CREATE</span> <span class="nv">SCHEMA</span> $<span class="nv">tenant_name</span><span class="c1">;</span>
+<span class="nv">CREATE</span> <span class="nv">SCHEMA</span>
+<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="nv">Ctrl</span><span class="o">+</span><span class="nv">D</span>
+
+<span class="nv">cat</span> <span class="nv">backup</span>.<span class="nv">bak</span> <span class="o">|</span> <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">pg_restore</span> <span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span> <span class="o">-</span><span class="nv">v</span> <span class="o">--</span><span class="nv">schema</span> $<span class="nv">tenant_name</span>
+</code></pre></div>
+
+
+<h2>Backing up file uploads</h2>
+<p>Uploaded files can easily be backed up with:</p>
+<div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">i</span> <span class="n">kiwi_web</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span> <span class="o">-</span><span class="n">cP</span> <span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">uploads</span> <span class="o">&gt;</span> <span class="n">uploads</span><span class="o">.</span><span class="n">tar</span>
+</code></pre></div>
+
+
+<p>and then restored with:</p>
+<div class="highlight"><pre><span></span><code><span class="n">cat</span> <span class="n">uploads</span><span class="o">.</span><span class="n">tar</span> <span class="o">|</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">i</span> <span class="n">kiwi_web</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span> <span class="o">-</span><span class="n">x</span>
+</code></pre></div>
+
+
+<p>You may also try the <code>rsync</code> command but be aware that it is not installed
+by default!</p>
+<p><strong>Note:</strong>
+the same approach may be used to backup <code>/var/lib/mysql/</code> or <code>/var/lib/pgsql/data</code>
+from the <code>kiwi_db</code> container.</p>
+<h2>Backing up multi-tenant uploads</h2>
+<p>By default multi-tenant file uploads are stored under <code>/Kiwi/uploads/tenant/$tenant_name</code>.
+You can archive all contents with the same procedure above. If you wish to restore
+files per tenant you will have to upload the <code>$tenant_name</code> directory into the
+docker volume.</p>
+<h2>Alternatives</h2>
+<p>By default both docker volumes created for Kiwi TCMS use the <code>local</code> driver
+and are available under <code>/var/lib/docker/volumes/&lt;volume_name&gt;</code> on the host
+running your containers. You can try backing them up from there as well.</p>
+<p>Another alternative is to use the
+<a href="https://www.projectatomic.io/blog/2016/05/docker-lvm-plugin/">docker-lvm-plugin</a>
+and create these volumes as LVM2 block devices. Then use
+<code>lvcreate -s</code> command to create a snapshot volume. For more information see
+<a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/logical_volume_manager_administration/index#snapshot_volumes">chapter 2.3.5. Snapshot Volumes</a>
+from the LVM Administrator Guide for Red Hat Enterprise Linux 7.</p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/atodorov/2018/07/25/mid-year-roadmap-status-report/" rel="bookmark" title="Permalink to Mid-year roadmap status report">
                 <h1 class="top-header">Mid-year roadmap status report</h1>
             </a>
