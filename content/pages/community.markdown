@@ -6,7 +6,6 @@ add_section: True
 # Community
 
 - **Stack Overflow** tag ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms)
-- **Discourse** [forum](https://kiwitcms.discourse.group/)
 - **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
 - **Twitter** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
 - **Blog** tag ["community"](/blog/tags/community/)
