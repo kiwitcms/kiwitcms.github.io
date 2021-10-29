@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-10-06T14:00:00+03:00</updated><entry><title>Announcing winners of 6 tickets for HackConf 2021</title><link href="/blog/kiwi-tcms-team/2021/10/06/announcing-winners-of-6-tickets-for-hackconf-2021/" rel="alternate"></link><published>2021-10-06T14:00:00+03:00</published><updated>2021-10-06T14:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-06:/blog/kiwi-tcms-team/2021/10/06/announcing-winners-of-6-tickets-for-hackconf-2021/</id><summary type="html">&lt;p&gt;Here are the winners of our &lt;a href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/"&gt;ticket giveaway&lt;/a&gt;:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-10-29T16:00:00+03:00</updated><entry><title>Catch up with Kiwi TCMS at WebSummit 2021 Lisbon</title><link href="/blog/kiwi-tcms-team/2021/10/29/catch-up-with-kiwi-tcms-at-websummit-2021-lisbon/" rel="alternate"></link><published>2021-10-29T16:00:00+03:00</published><updated>2021-10-29T16:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-29:/blog/kiwi-tcms-team/2021/10/29/catch-up-with-kiwi-tcms-at-websummit-2021-lisbon/</id><summary type="html">&lt;p&gt;&lt;img alt="Venue map" src="/images/conf/websummit/2021_venue_map.png" title="venue map"&gt;&lt;/p&gt;
+&lt;p&gt;We're happy to announce that
+Kiwi TCMS will host an exhibition stand at &lt;a href="https://websummit.com/"&gt;WebSummit 2021&lt;/a&gt; in Lisbon.
+You can find us on Wednesday, November 03,
+&lt;strong&gt;Stand number: A 407, Industry category: Pavilion 3, ALPHA 4&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="member-bio" style="margin-top: 2vh"&gt;
+    &lt;img src="/images/conf/websummit/black_boxes.png" alt="black boxes" style="float:left; margin-right: 1vw"&gt;
+    &lt;p&gt;
+        At the exhibition stand you will have the opportunity to perform some real
+        &lt;a href="/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/"&gt;black-box testing …&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Venue map" src="/images/conf/websummit/2021_venue_map.png" title="venue map"&gt;&lt;/p&gt;
+&lt;p&gt;We're happy to announce that
+Kiwi TCMS will host an exhibition stand at &lt;a href="https://websummit.com/"&gt;WebSummit 2021&lt;/a&gt; in Lisbon.
+You can find us on Wednesday, November 03,
+&lt;strong&gt;Stand number: A 407, Industry category: Pavilion 3, ALPHA 4&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="member-bio" style="margin-top: 2vh"&gt;
+    &lt;img src="/images/conf/websummit/black_boxes.png" alt="black boxes" style="float:left; margin-right: 1vw"&gt;
+    &lt;p&gt;
+        At the exhibition stand you will have the opportunity to perform some real
+        &lt;a href="/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/"&gt;black-box testing&lt;/a&gt;,
+        learn about Salience bias, Peltzman effect and Wason's experiments and take a photo with
+        our lovely mascot.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        The Kiwi TCMS team will be there to answer all of your questions regarding
+        open source, community, support, various integrations and the differences between
+        &lt;em&gt;Free&lt;/em&gt;, &lt;em&gt;SaaS&lt;/em&gt; and &lt;em&gt;Enterprise&lt;/em&gt;
+        &lt;a href="/#subscriptions"&gt;subscriptions&lt;/a&gt;!
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        If you still need more convincing check-out our
+        &lt;a href="https://www.youtube.com/watch?v=yIyhkcJ8How"&gt;WebSummit SHOWCASE video&lt;/a&gt;
+        and how
+        &lt;a href="https://www.youtube.com/watch?v=Wob_L_SrEwE&amp;t=571s"&gt;QGIS organizes their testing with Kiwi TCMS&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;em&gt;
+            Fun fact: adoption of Kiwi TCMS is lead by Alexandre Neto - a QGIS community member from Portugal.
+        &lt;/em&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="events"></category></entry><entry><title>Announcing winners of 6 tickets for HackConf 2021</title><link href="/blog/kiwi-tcms-team/2021/10/06/announcing-winners-of-6-tickets-for-hackconf-2021/" rel="alternate"></link><published>2021-10-06T14:00:00+03:00</published><updated>2021-10-06T14:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-06:/blog/kiwi-tcms-team/2021/10/06/announcing-winners-of-6-tickets-for-hackconf-2021/</id><summary type="html">&lt;p&gt;Here are the winners of our &lt;a href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/"&gt;ticket giveaway&lt;/a&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Martin Ayvazov&lt;/li&gt;
 &lt;li&gt;Ralitsa Georgieva&lt;/li&gt;
