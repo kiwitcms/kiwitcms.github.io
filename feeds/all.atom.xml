@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-10-29T16:00:00+03:00</updated><entry><title>Catch up with Kiwi TCMS at WebSummit 2021 Lisbon</title><link href="/blog/kiwi-tcms-team/2021/10/29/catch-up-with-kiwi-tcms-at-websummit-2021-lisbon/" rel="alternate"></link><published>2021-10-29T16:00:00+03:00</published><updated>2021-10-29T16:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-29:/blog/kiwi-tcms-team/2021/10/29/catch-up-with-kiwi-tcms-at-websummit-2021-lisbon/</id><summary type="html">&lt;p&gt;&lt;img alt="Venue map" src="/images/conf/websummit/2021_venue_map.png" title="venue map"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-11-01T20:03:00+02:00</updated><entry><title>Kiwi TCMS subscription guidelines</title><link href="/blog/kiwi-tcms-team/2021/11/01/kiwi-tcms-subscription-guidelines/" rel="alternate"></link><published>2021-11-01T20:03:00+02:00</published><updated>2021-11-01T20:03:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-11-01:/blog/kiwi-tcms-team/2021/11/01/kiwi-tcms-subscription-guidelines/</id><summary type="html">&lt;p&gt;An active subscription provides you with certain guarantees that your organization
+will continue to extract value from Kiwi TCMS and is your buy-in into the
+open source world.
+&lt;em&gt;We recommend that customers purchase a subscription for every container running
+Kiwi TCMS&lt;/em&gt; however this becomes distorted for teams who don't actively …&lt;/p&gt;</summary><content type="html">&lt;p&gt;An active subscription provides you with certain guarantees that your organization
+will continue to extract value from Kiwi TCMS and is your buy-in into the
+open source world.
+&lt;em&gt;We recommend that customers purchase a subscription for every container running
+Kiwi TCMS&lt;/em&gt; however this becomes distorted for teams who don't actively seek support
+and large organizations! Here are our guidelines.&lt;/p&gt;
+&lt;h2&gt;Phase of deployment&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Casual exploration:&lt;/strong&gt; No subscription required. Use &lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
+to explore Kiwi TCMS and formulate your questions and further plan of action.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Serious evaluation&lt;/strong&gt; or &lt;strong&gt;Proof of concept:&lt;/strong&gt; 1x Private Tenant SaaS or 1x Enterprise.
+You will have lots of questions during this period and you will need answers in
+a timely manner. You can cancel at any time!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pilot:&lt;/strong&gt; 2-3x Private Tenant SaaS or 1x Enterprise during the pilot period.
+Consider add-on services if you need data migration or custom development
+for a successful pilot. Plan your future needs and issues you'd like to see fixed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Production:&lt;/strong&gt; make your decision according to the size of your test team and
+anticipated support needs, see below.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Our mission is to transform the testing process inside your organization.
+You don't have to do it alone! Let us help you!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;--&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note that Kiwi TCMS is still working to clearly define our value proposition
+and support offering for large organizations!
+&lt;a href="/support/"&gt;Tell us&lt;/a&gt; what are you looking for!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Number of testers&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;= 25:&lt;/strong&gt; 1x Private Tenant SaaS&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;25-100:&lt;/strong&gt; 2-5x Private Tenant SaaS; consider splitting teams
+and purchase a subscription for each of them&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;100 - 200:&lt;/strong&gt; 1x Enterprise; consider additional subscriptions of any kind for
+non-production instances&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;200 - 500&lt;/strong&gt; - 2-3x Enterprise; consider additional subscriptions of any kind
+for non-production instances&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;500 - 1000:&lt;/strong&gt; - 5x Enterprise; consider additional Enterprise subscriptions for
+non-production instances&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Over 1000:&lt;/strong&gt; 10x Enterprise; consider add-on services for custom development&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note that these are not hard rules as we don't restrict the number of accounts
+registered into a specific instance nor how many containers you deploy!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;--&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note that you can still deploy Kiwi TCMS with a 1x subscription inside organization
+with thousands of testers. Or even no subscription at all. Do you really value your
+testing infrastructure so low ?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ready ? &lt;a href="/#subscriptions"&gt;Explore subscriptions&lt;/a&gt;!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and enjoy the benefits&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category></entry><entry><title>Catch up with Kiwi TCMS at WebSummit 2021 Lisbon</title><link href="/blog/kiwi-tcms-team/2021/10/29/catch-up-with-kiwi-tcms-at-websummit-2021-lisbon/" rel="alternate"></link><published>2021-10-29T16:00:00+03:00</published><updated>2021-10-29T16:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-29:/blog/kiwi-tcms-team/2021/10/29/catch-up-with-kiwi-tcms-at-websummit-2021-lisbon/</id><summary type="html">&lt;p&gt;&lt;img alt="Venue map" src="/images/conf/websummit/2021_venue_map.png" title="venue map"&gt;&lt;/p&gt;
 &lt;p&gt;We're happy to announce that
 Kiwi TCMS will host an exhibition stand at &lt;a href="https://websummit.com/"&gt;WebSummit 2021&lt;/a&gt; in Lisbon.
 You can find us on Wednesday, November 03,

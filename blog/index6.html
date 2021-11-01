@@ -88,6 +88,81 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/atodorov/2018/08/06/how-to-override-templates-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to override templates for Kiwi TCMS">
+                <h1 class="top-header">How to override templates for Kiwi TCMS</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on Mon 06 August 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>This is the first publication in our customization series. It will show you
+how to override any template used by Kiwi TCMS. As an example we will override
+the email template that is used when registering new account. By default the
+email text looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
+<span class="x">    thank you for signing up for an </span><span class="cp">{{</span> <span class="nv">site_domain</span> <span class="cp">}}</span><span class="x"> account!</span>
+
+<span class="x">    To activate your account, click this link:</span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span><span class="x"></span>
+</code></pre></div>
+
+
+<p><a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
+runs a custom Docker image based on
+<code>kiwitcms/kiwi</code>. For this image the confirmation email looks like this</p>
+<div class="highlight"><pre><span></span><code><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
+<span class="x">    thank you for signing up for our Kiwi TCMS demo!</span>
+
+<span class="x">    To activate your account, click this link:</span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="x">    GDPR no longer allows us to automatically subscribe you to</span>
+<span class="x">    our newsletter. If you wish to keep in touch and receive emails</span>
+<span class="x">    with news and updates around Kiwi TCMS please subscribe at:</span>
+<span class="x">    https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581</span>
+
+<span class="x">    --</span>
+<span class="x">    Happy testing!</span>
+<span class="x">    The Kiwi TCMS team</span>
+<span class="x">    http://kiwitcms.org</span>
+</code></pre></div>
+
+
+<p>The file that we want to override is <code>tcms/templates/email/confirm_registration.txt</code>.</p>
+<p>Create a local directory (git repository) which will hold customization configuration
+and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
+<p>Next you want to make this file available inside your docker image so your <code>Dockerfile</code>
+should look like this:</p>
+<div class="highlight"><pre><span></span><code>    FROM kiwitcms/kiwi
+
+    COPY ./templates.d/ /venv/lib64/python3.6/site-packages/tcms/overridden_templates/
+    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
+</code></pre></div>
+
+
+<p>where <code>local_settings.py</code> contains</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+
+    <span class="n">settings</span><span class="o">.</span><span class="n">TEMPLATES</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;DIRS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">TCMS_ROOT_PATH</span><span class="p">,</span> <span class="s1">&#39;overridden_templates&#39;</span><span class="p">))</span>
+</code></pre></div>
+
+
+<p>The following code states <em>instruct Django to look into <code>overridden_templates</code> first and
+use any templates it finds there; also make my files available in that specific location
+inside the docker image</em>.</p>
+<p>This approach can be used for all templates that you wish to override. Take into
+account that file names must match (Django searches templates by directory path).
+Now build your customized Docker image and use that for deployment!</p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/07/31/kiwi-tcms-51/" rel="bookmark" title="Permalink to Kiwi TCMS 5.1">
                 <h1 class="top-header">Kiwi TCMS 5.1</h1>
             </a>
