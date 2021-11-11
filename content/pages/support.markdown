@@ -13,10 +13,12 @@ Public Tenant users or anyone without an active subscription:
   Stack Overflow
 - *Priority rule: <a href="/blog/tags/roadmap">based-on-roadmap</a>*
 
-*Do not ask individual project members for support, your request will be ignored!
+**Do not ask individual project members for support, your request will be ignored!
 Use the channels above instead,
-where the whole community can help you and benefit from the solutions provided.
-If community support is insufficient for your situation, consider commercial support!*
+where the whole community can help you and benefit from the solutions provided.**
+
+*If community support is insufficient for your situation, please check the
+[Kiwi TCMS subscription guidelines]({filename}../2021-11-01-how-many-subscriptions.markdown)!*
 
 Customers with an active subscription:
 
