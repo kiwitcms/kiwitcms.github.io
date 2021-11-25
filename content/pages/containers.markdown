@@ -23,7 +23,7 @@ Private containers for subscribers
 
 Subscribers enjoy the benefit of having read-only access to tagged versions of the
 upstream Kiwi TCMS container images as well as access to tagged versions of
-Kiwi TCMS Enterprise container images! These containers are available as:
+Kiwi TCMS Enterprise container images! These images are available as:
 
 - `quay.io/kiwitcms/version`
 - `quay.io/kiwitcms/enterprise`
