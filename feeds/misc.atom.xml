@@ -1,5 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-11-01T20:03:00+02:00</updated><entry><title>Kiwi TCMS subscription guidelines</title><link href="/blog/kiwi-tcms-team/2021/11/01/kiwi-tcms-subscription-guidelines/" rel="alternate"></link><published>2021-11-01T20:03:00+02:00</published><updated>2021-11-01T20:03:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-11-01:/blog/kiwi-tcms-team/2021/11/01/kiwi-tcms-subscription-guidelines/</id><summary type="html">&lt;p&gt;An active subscription provides you with certain guarantees that your organization
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-11-26T11:20:00+02:00</updated><entry><title>Kiwi TCMS 10.5</title><link href="/blog/kiwi-tcms-team/2021/11/26/kiwi-tcms-105/" rel="alternate"></link><published>2021-11-26T11:20:00+02:00</published><updated>2021-11-26T11:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-11-26:/blog/kiwi-tcms-team/2021/11/26/kiwi-tcms-105/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.5 which celebrates the
+very positive reception we had at
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2021/10/29/catch-up-with-kiwi-tcms-at-websummit-2021-lisbon/"&gt;WebSummit 2021&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+this is a medium sized release which contains various improvements and new features,
+database changes, new settings and API methods, bug-fixes, internal refactoring and
+updated translations.&lt;/p&gt;
+&lt;p&gt;You can explore …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.5 which celebrates the
+very positive reception we had at
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2021/10/29/catch-up-with-kiwi-tcms-at-websummit-2021-lisbon/"&gt;WebSummit 2021&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+this is a medium sized release which contains various improvements and new features,
+database changes, new settings and API methods, bug-fixes, internal refactoring and
+updated translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;p&gt;Container images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  0574b19b5d66    583 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-10-4"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 10.4&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django from 3.2.7 to 3.2.9&lt;/li&gt;
+&lt;li&gt;Update django-colorfield from 0.4.3 to 0.4.5&lt;/li&gt;
+&lt;li&gt;Update django-extensions from 3.1.3 to 3.1.5&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 2.15.1 to 2.15.3&lt;/li&gt;
+&lt;li&gt;Update django-tree-queries from 0.6.0 to 0.7.0&lt;/li&gt;
+&lt;li&gt;Update jira from 3.0.1 to 3.1.1&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.3.4 to 3.3.6&lt;/li&gt;
+&lt;li&gt;Update mysqlclient from 2.0.3 to 2.1.0&lt;/li&gt;
+&lt;li&gt;Update psycopg2 from 2.9.1 to 2.9.2&lt;/li&gt;
+&lt;li&gt;Display a warning if connection doesn't use HTTPS (Ivajlo Karabojkov)&lt;/li&gt;
+&lt;li&gt;Account registration page can be turned on/off via settings. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2500"&gt;Issue #2500&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TestCase Search page can now filter by TestPlan. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2283"&gt;Issue #2283&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow template selection when creating new test case. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/957"&gt;Issue #957&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TestCase page now allows specification of properties, e.g. mobile devices
+on which the test should be executed. This feature serves as a building
+block for
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1843"&gt;Issue #1843&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1931"&gt;Issue #1931&lt;/a&gt; and
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1344"&gt;Issue #1344&lt;/a&gt; but isn't active anywhere else inside
+Kiwi TCMS at the moment&lt;/li&gt;
+&lt;li&gt;TestExecution properties will be displayed inside TestRun page if they
+have been specified&lt;/li&gt;
+&lt;li&gt;Rearrange help-text in admin page for better visibility&lt;/li&gt;
+&lt;li&gt;Switch to official Postgres image from Docker Hub&lt;/li&gt;
+&lt;li&gt;Switch to official MariaDB image from Docker Hub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For Postgres data dir changed from &lt;tt class="docutils literal"&gt;/var/lib/pgsql/data&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;/var/lib/postgres/data&lt;/tt&gt;.
+Environment variables inside docker-compose file changed as well,
+see &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.postgres&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;For MariaDB data dir changed from &lt;tt class="docutils literal"&gt;/var/lib/mysql/data&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;/var/lib/mysql&lt;/tt&gt;.
+&lt;tt class="docutils literal"&gt;MYSQL_CHARSET&lt;/tt&gt; &amp;amp; &lt;tt class="docutils literal"&gt;MYSQL_COLLATION&lt;/tt&gt; environment variables are no longer
+recognized. Instead they are present as command line options passed to the container,
+see &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt;. Previous workaround for these variables was also removed.&lt;/p&gt;
+&lt;p&gt;If you want to migrate from the previous &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;centos/mariadb-103-centos7&lt;/span&gt;&lt;/tt&gt; or
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;centos/postgresql-12-centos7&lt;/span&gt;&lt;/tt&gt; containers to &lt;tt class="docutils literal"&gt;mariadb:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;postgres:latest&lt;/tt&gt;
+make sure to update your container control files!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New setting &lt;tt class="docutils literal"&gt;REGISTRATION_ENABLED&lt;/tt&gt;, default &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;, Can be controlled via
+environment variable &lt;tt class="docutils literal"&gt;KIWI_REGISTRATION_ENABLED&lt;/tt&gt;. When set to &lt;tt class="docutils literal"&gt;False&lt;/tt&gt;
+will disable account registration page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New model &lt;tt class="docutils literal"&gt;testcases.Property&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New model &lt;tt class="docutils literal"&gt;testcases.Template&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New model &lt;tt class="docutils literal"&gt;testruns.TestExecutionProperty&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;unique_together&lt;/tt&gt; constraint for &lt;tt class="docutils literal"&gt;testruns.TestExecution&lt;/tt&gt; model.
+This makes it possible to add multiple executions for the same test case in
+the same test run&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;These newly added models create additional permission labels with names
+&lt;em&gt;testcases | template | Can .... template&lt;/em&gt;,
+&lt;em&gt;testcases | property | Can .... property&lt;/em&gt;,
+&lt;em&gt;testruns | test execution property | Can .... test execution property&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Execute &lt;tt class="docutils literal"&gt;manage.py refresh_permissions&lt;/tt&gt; and/or assign them manually to
+users and groups if they should be able to interact with the new objects!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestCase.filter()&lt;/tt&gt; now returns additional fields
+&lt;tt class="docutils literal"&gt;setup_duration&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;testing_duration&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;expected_duration&lt;/tt&gt; - all
+serialized in seconds. Refs
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1923"&gt;Issue #1923&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;User.filter()&lt;/tt&gt; will no longer return fields
+&lt;tt class="docutils literal"&gt;groups&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;user_permissions&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;date_joined&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;last_login&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New method &lt;tt class="docutils literal"&gt;TestExecution.properties()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New method &lt;tt class="docutils literal"&gt;TestCase.properties()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New method &lt;tt class="docutils literal"&gt;TestCase.add_property()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New method &lt;tt class="docutils literal"&gt;TestCase.remove_property()&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Unify tab size &amp;amp; tab indentation b/w Python &amp;amp; SimpleMDE. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1802"&gt;Issue #1802&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;tt class="docutils literal"&gt;sane_list extension&lt;/tt&gt; for rendering consecutive lists in markdown. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2511"&gt;Issue #2511&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The visual markdown editor explicitly didn't follow markdown syntax rules
+by allowing indentation with 2 spaces and treating tabs as 2 spaces as well.
+See &amp;quot;Indentation/Tab Length&amp;quot; at &lt;a class="reference external" href="https://python-markdown.github.io/#differences"&gt;https://python-markdown.github.io/#differences&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The backend markdown rendering engine explicitly followed an undefined behavior
+which happens to be different from what the visual markdown editor does.
+See &amp;quot;Consecutive Lists&amp;quot; at &lt;a class="reference external" href="https://python-markdown.github.io/#differences"&gt;https://python-markdown.github.io/#differences&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The previous 2 changes make sure the visual editor and backend rendering engine
+follow the same rules. This may result is &amp;quot;broken&amp;quot; display of existing text which
+doesn't follow the markdown syntax rules. If you spot such text just edit to make
+it render the way you wish.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix broken URL and minor updates to documentation&lt;/li&gt;
+&lt;li&gt;Update GitLab tracker integration documentation to avoid confusion. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2559"&gt;Issue #2559&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Limit tag input length to 255 characters. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2176"&gt;Issue #2176&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make error notifications in Admin to display with red color&lt;/li&gt;
+&lt;li&gt;Select only visible rows for bulk-update in TestRun page. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2222"&gt;Issue #2222&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Cache-Control&lt;/span&gt;&lt;/tt&gt; header from httpd. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/443"&gt;Issue #443&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add permissions test for add-hyperlink-bulk menu. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/716"&gt;Issue #716&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add explicit tests for issue tracker integration with GitLab.com&lt;/li&gt;
+&lt;li&gt;Tests teardown - remove comments &amp;amp; close issues on GitLab.com&lt;/li&gt;
+&lt;li&gt;Add missing &lt;tt class="docutils literal"&gt;rlPhaseEnd&lt;/tt&gt; for docker tests&lt;/li&gt;
+&lt;li&gt;Multiple pylint and eslint fixes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v10-5-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v10.5-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v10.5&lt;/li&gt;
+&lt;li&gt;Update django-python3-ldap from 0.12.0 to 0.12.1&lt;/li&gt;
+&lt;li&gt;Update django-ses from 2.3.0 to 2.3.1&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 1.7.0 to 1.8.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Private images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/enterprise         10.5-mt         3e597c91d057   804 MB
+quay.io/kiwitcms/version            10.5            0574b19b5d66   583 MB
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then execute the commands:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS subscription guidelines</title><link href="/blog/kiwi-tcms-team/2021/11/01/kiwi-tcms-subscription-guidelines/" rel="alternate"></link><published>2021-11-01T20:03:00+02:00</published><updated>2021-11-01T20:03:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-11-01:/blog/kiwi-tcms-team/2021/11/01/kiwi-tcms-subscription-guidelines/</id><summary type="html">&lt;p&gt;An active subscription provides you with certain guarantees that your organization
 will continue to extract value from Kiwi TCMS and is your buy-in into the
 open source world.
 &lt;em&gt;We recommend that customers purchase a subscription for every container running
