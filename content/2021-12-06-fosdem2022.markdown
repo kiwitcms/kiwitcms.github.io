@@ -1,0 +1,59 @@
+Title: Call for participation: Testing and Automation devroom, FOSDEM'22
+Headline: organized by Kiwi TCMS, Linaro & SUSE
+date: 2021-12-06 19:40
+comments: true
+og_image: images/fosdem/2022/banner.png
+twitter_image: images/fosdem/2022/banner.png
+tags: community, events
+
+
+!["Cfp banner"](/images/fosdem/2022/banner.png "Cfp banner")
+
+Attention testers! On behalf of
+[*Testing and Automation devroom*](https://fosdem-testingautomation.github.io/)
+we'd like to announce that call for participation is now open.
+
+Here are some ideas for topics that are a good fit for this devroom:
+
+Testing in the real, open source world
+
+- War stories/strategies for testing large scale or complex projects
+- Demystify resource e.g. systems/device/cloud provisioning in a CI loop
+- Tools that extend the ability to test low-level code, e.g. bootloaders, init
+systems, etc.
+- Projects that are introducing new/interesting ways of testing "systems"
+- Address the automated testing frameworks fragmentation
+- Lessons learned from testing
+
+Cool Tools (good candidates for lightning talks)
+
+- How your open source tool made developing quality software better
+- What tools do you use to setup your CI/CD
+- Combining projects/plugins/tools to build amazing things "Not enough people in
+the open source community know how to use $X, but here's a tutorial on how to
+use $X to make your project better."
+
+
+In the past the devroom has seen both newbies/students and experienced professionals and
+past speakers as part of the audience and talks covering from beginner/practical
+to advanced/abstract topics. If you have doubts then submit your proposal and
+leave a comment for the devroom managers and we'll get back to you.
+
+Checkout
+<https://fosdem-testingautomation.github.io/> for more information!
+
+
+Happy Testing!
+
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!
+
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
+- [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
+  and follow all project news;
+- [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;
+- [Become a customer](/#subscriptions) and we'll share our profits with the community
