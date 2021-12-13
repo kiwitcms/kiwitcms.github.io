@@ -29,4 +29,4 @@ Latest development is done by
 [the Kiwi TCMS team]({filename}team.html) and its
 [contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors).
 
-The Kiwi TCMS logo is based on the [Kiwix icon](https://commons.wikimedia.org/wiki/File:Kiwix_icon.svg) by Kelson.
+The Kiwi TCMS logo has been designed by Milos Babic.
