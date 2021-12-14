@@ -88,6 +88,223 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="bookmark" title="Permalink to Legacy reports become Telemetry">
+                <h1 class="top-header">Legacy reports become Telemetry</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sun 03 March 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>As we've <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">promised</a> Kiwi TCMS is
+starting work on improving the legacy reports functionality.
+After analyzing your feedback in
+<a href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a> here's what we came up
+with. <em>Note: screenshots below are mockups.</em></p>
+<h2>General tech specs</h2>
+<ul>
+<li>Once a self-contained tarball is installed inside the Docker image (or inside local virtualenv)
+  Kiwi TCMS will be able to find it automatically and update the menu options. Aka plugins.
+  No further configuration should be necessary other than providing the source code implementing
+  the new functionality</li>
+<li>Navigation menu will be able to support several layers of menus</li>
+<li>Where possible Telemetry pages will reuse existing HTML templates</li>
+<li>Telemetry data will be implemented as an RPC method that can be consumed by the front-end
+  via JSON-RPC</li>
+<li>Charts will be rendered in the browser with c3/d3,
+  see <a href="https://www.patternfly.org/pattern-library/data-visualization/area-chart/">Data Visualization</a></li>
+</ul>
+<h2>Feature: Rename TestCaseRun to TestExecution</h2>
+<p>Inside Kiwi TCMS the term "test case" is used to refer to specific scenario of
+testing steps. A "test run" is the collection of multiple "test cases" which
+will be executed against a particular product build and environment.</p>
+<p>The specific results are kept into what is now called "test case run". This will
+be renamed to "test execution" (internally <code>TestExecution</code> class) to make it more
+clear and easier to distinguish among other artifacts.</p>
+<h2>Feature: Better color coding for test execution status</h2>
+<p>As a webUI user I want to easily distinguish between PASSED, FAILED and other statuses
+when looking at charts and graphical visualizations.</p>
+<p><img src="/images/telemetry/tr_progress_bar.png" alt="TestRun progress" style="float: none"></p>
+<p>This feature request comes from the TestRun progress bar.
+Other charts should use the same 4 status categories and color coding standards:</p>
+<ul>
+<li>IDLE - <code>pf-black-600</code></li>
+<li>PASSED - <code>pf-green-400</code></li>
+<li>FAILED - <code>pf-red-100</code></li>
+<li>OTHER - <code>pf-orange-400</code>. This includes other statuses which are not PASSED, FAILED and IDLE.</li>
+</ul>
+<p>Here the percent value will continue to mean <em>percent completed, aka non-IDLE</em>.</p>
+<p>Implementation wise the <code>TestCaseRunStatus</code> class defines methods for the actual icons to be used.
+The same can be done for colors and this can be used directly in the HTML templates.
+For color definitions see <a href="https://www.patternfly.org/styles/color-palette/">Status Palette</a>.</p>
+<h2>Feature: Printable Test Execution Report</h2>
+<p>As a tester I want to have a nice looking TestRun execution report which I can present to
+my managers, stakeholders and/or customers. The page needs to be printer friendly for
+“Print to PDF” or print on paper!</p>
+<p>Kiwi TCMS already has this feature. Clicking the <code>[Report]</code> button
+in the progress widget at <a href="https://public.tenant.kiwitcms.org/runs/625/">TR-625</a> presents
+TestRun execution information in a simplified format found at
+<a href="https://public.tenant.kiwitcms.org/runs/625/report/">TR-625/Report</a>.
+In order to improve the current implementation:</p>
+<ul>
+<li>Convert TestRun page to Patternfly which generally prints better</li>
+<li>Add bug list at the bottom of the page, below all test execution rows</li>
+<li>Keep “View all in Issue Tracker” link (supported only for some bug trackers)</li>
+<li>The widget for TestRun progress must be kept</li>
+<li>Tweak CSS classes to disable printing for visual elements that we don't need.
+  This will be decided after the entire page has been converted to Patternfly</li>
+<li>Remove the existing <code>testruns.views.TestRunReportView</code> and associated templates,
+  JavaScript and CSS because they will not be needed anymore</li>
+</ul>
+<h2>Feature: Individual or team performance telemetry</h2>
+<p>As a manager I want to know what the work-load/performance of individual teams and
+engineers is. I can use this information either for performance review or for 
+capacity planning of future work.</p>
+<p><img src="/images/telemetry/performance_indicator.png" alt="Individual/team performance" style="float: none"></p>
+<p>A new page will be available under TELEMETRY -&gt; Management -&gt; Performance which will:</p>
+<ul>
+<li>Allow filtering by<ul>
+<li>Group (multi-select)</li>
+<li>User (multi select, depends on Group)</li>
+<li>Start / Stop dates</li>
+<li>Product</li>
+</ul>
+</li>
+<li>Show results per User or per Group (if no users are selected)</li>
+<li>Allow grouping per TestRun ID or calendar week number</li>
+</ul>
+<p>The backend will query <code>TestExecution.objects</code> and apply the selected
+filters and grouping logic!
+The returned data is the count of how many tests this person/team was able to execute.</p>
+<p>Further refinement:
+Aggregate count by statuses (executed vs. non-executed or PASSED vs. FAILED vs. OTHER).
+May be represented as a stacked bar chart if grouping of series is supported.</p>
+<h2>Feature: Time-tracking telemetry</h2>
+<p>As a manager I want to know how much time it took to complete previous testing activities.
+I can use this information for predicting future capacity.</p>
+<p>New page under TELEMETRY -&gt; Management -&gt; Time tracking.</p>
+<ul>
+<li>Filtering will be the same as performance telemetry</li>
+<li>Grouping will be the same as performance telemetry</li>
+<li><strong>Unknown:</strong> total execution time is calculated as<ul>
+<li>the sum of duration for each TestExecution (not available ATM,
+  automation plugins not sending this info) or</li>
+<li>the total time for the entire TestRrun (not supported by automation plugins)</li>
+</ul>
+</li>
+</ul>
+<p>Visually this will be a line chart with one line for each user/group which have
+been selected. It will be very good if the existing chart libraries allow for a
+stacked line chart or a stacked area chart here!</p>
+<h2>Feature: Estimate TestRun completion time</h2>
+<p>As a test lead I want to know approximately when testing is expected to complete.</p>
+<p>This feature will utilize time-tracking data from previous executions and
+display the approximated calculation in the web UI. The most obvious place for this
+is the TestRun progress widget (under the progress bar) or the Test Run page
+(near the Started at/Finished at fields).</p>
+<p>Example text:</p>
+<div class="highlight"><pre><span></span><code>Started at: YYYY-MM-DD 10:38
+Status: Running
+Duration: 1.2 / 3 hrs
+Estimated completion at: 13:30
+</code></pre></div>
+
+
+<p><strong>Unknown:</strong> where does baseline duration come from? Either from the most recent TestRun
+or an average from all of the previous Test Runs. Note that cumulative TestRun duration
+is calculated between Start/Finish events while individual TestExecution records may
+sum up to a different value! This needs to be clarified.</p>
+<h2>Feature: TestCase health telemetry</h2>
+<p>As a tester and/or manager I want to be able to discover which TestCase(s) are the most
+common source of problems, that is they fail all the time or from time to time.
+This may indicate poor test design or bad practices when developing the product.
+This is also known as test stability or flaky tests!</p>
+<p><img src="/images/telemetry/flaky_tests.png" alt="Flaky tests" style="float: none"></p>
+<p>New page under TELEMETRY -&gt; Testing -&gt; Flaky tests</p>
+<ul>
+<li>Allow filtering by<ul>
+<li>Product</li>
+<li>Test plan (refined by product)</li>
+<li>Start / Stop dates</li>
+</ul>
+</li>
+<li>Show results in table form as shown in the image above</li>
+<li>PASS/non-PASS stats will be calculated based on <code>TestExecution.objects</code></li>
+<li>100% failing rate will be reported in the first table as ALWAYS FAILING</li>
+<li>Executions where failing rate is &gt;0% and &lt;100% will be reported as FLAKY TESTS</li>
+</ul>
+<h2>Feature: TestCase breakdown telemetry</h2>
+<p>As a tester and/or manager I want to see a breakdown of tests so that I have an
+idea how the existing tests for the product are distributed!</p>
+<p><img src="/images/telemetry/tc_breakdown.png" alt="Test case breakdown" style="float: none"></p>
+<p>New page under TELEMETRY -&gt; Testing -&gt; Breakdown</p>
+<ul>
+<li>Allow filtering by<ul>
+<li>Product</li>
+<li>Test plan (refined by product)</li>
+<li>Start / Stop dates</li>
+</ul>
+</li>
+</ul>
+<p>Shows combined bar/line charts with information about test case priorities, categories,
+automation status and confirmed status.</p>
+<h2>Feature: Individual TestCase health widget</h2>
+<p>As a test engineer I want to be able to quickly see health information about individual
+test case. This can help me visually locate TCs that need improvement so I can edit them
+or will help me visually judge the past history of the TC I am looking at.</p>
+<p><img src="/images/telemetry/tc_executions_card.png" alt="Individual TestCase health" style="float: none"></p>
+<p>This depends on the previous feature. Possible places where health status can be shown:</p>
+<ul>
+<li>Test Case page, Executions card: info per TP</li>
+<li>Test Run page, Test Executions table - visual icon + % to hint the user
+  about expected TC stability</li>
+</ul>
+<h2>Feature: Execution trends telemetry</h2>
+<p>As a test manager I want to see information if Product builds are getting better or worse.
+In other words what is the trend in TestExecution number and status!</p>
+<p><img src="/images/telemetry/build_status.png" alt="Build status" style="float: none"></p>
+<p>This is going to be a new page at TELEMETRY -&gt; Testing -&gt; Execution trends</p>
+<ul>
+<li>Filter by<ul>
+<li>Product</li>
+<li>Version (refined by Product)</li>
+<li>Build (refined by Version)</li>
+<li>Test Plan (refined by Product)</li>
+<li>Start / Stop dates</li>
+</ul>
+</li>
+<li>Shows total count of <code>TestExecution.objects</code> (stacked area chart) with color codes for status</li>
+<li>Group by TestRun ID or calendar week</li>
+</ul>
+<p>You will be able to select TestRuns and/or weeks for detailed comparison.</p>
+<h2>Feature: TestRun status matrix telemetry</h2>
+<p>As a test manager I want to see detailed information about testing status for
+specific test run(s) or a calendar period. I also want to be able to compare
+the results between various weeks and/or test runs.</p>
+<p><img src="/images/telemetry/compare_testruns.png" alt="Compare TestRuns" style="float: none"></p>
+<p>This is a continuation of Execution trends telemetry but can be used on its own as well.
+It will be accessible from TELEMETRY -&gt; Testing -&gt; Status matrix</p>
+<p>Filtering options are the same. Results are displayed in a table format where
+columns are the filtered (or previously selected) TestRun objects or calendar weeks.
+The rows are the names of individual test cases that have been executed. If a case
+is missing the cell will be empty.</p>
+<p>Cells contain color coded information about status, timestamp of execution,
+execution duration, links to the TestExecution object, latest comment in case
+of failure.</p>
+<p>Links to bugs will be shown in each cell with a summarized bug table below the
+charts.</p>
+<h2>Feature: Search and compare TestRuns</h2>
+<p>This is complimentary to the TestRun status matrix feature! While searching
+for TestRuns in SEARCH -&gt; Test Runs the user will be able to select several
+rows and proceed to compare them as described above.</p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/03/02/want-to-hack-open-source/" rel="bookmark" title="Permalink to Want to hack open source ?">
                 <h1 class="top-header">Want to hack open source ?</h1>
             </a>
@@ -2532,131 +2749,6 @@ Test runs should only be able to select product builds (after
 
         <div class="content">
             <p><img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"></p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/atodorov/2018/09/07/how-to-add-api-logging-for-kiwi-tcms/" rel="bookmark" title="Permalink to How to add API logging for Kiwi TCMS">
-                <h1 class="top-header">How to add API logging for Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/atodorov/">Alexander Todorov</a>
-                on Fri 07 September 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>In this blog post I will show more ways to customize Kiwi TCMS by adding
-logging capabilities to the API backend. Indeed this is a feature that
-our team deemed not required for upstream and was removed in
-<a href="https://github.com/kiwitcms/Kiwi/pull/436">PR #436</a>.</p>
-<p>Start by creating the following directory structure:</p>
-<div class="highlight"><pre><span></span><code>    api_logging/
-        __init__.py
-        handlers.py
-        models.py
-</code></pre></div>
-
-
-<p>This is a small Django application that will log every call to the API backend.
-Each file looks like this:</p>
-<div class="highlight"><pre><span></span><code>    <span class="c1"># models.py contains DB schema for your new table</span>
-    <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-    <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-
-    <span class="k">class</span> <span class="nc">ApiCallLog</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-        <span class="n">executed_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                 <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
-        <span class="n">method</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
-        <span class="n">args</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-        <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Then</p>
-<div class="highlight"><pre><span></span><code>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
-    <span class="kn">from</span> <span class="nn">modernrpc</span> <span class="kn">import</span> <span class="n">handlers</span>
-
-    <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-    <span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">get_user_model</span>
-
-    <span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">ApiCallLog</span>
-
-    <span class="k">def</span> <span class="nf">log_call</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Log an RPC call to the database or stdout in DEBUG mode. &quot;&quot;&quot;</span>
-        <span class="n">request_user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">request_user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
-            <span class="c1"># create an anonymous user object for logging purposes</span>
-            <span class="n">request_user</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_user_model</span><span class="p">()</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span>
-                <span class="n">username</span><span class="o">=</span><span class="s1">&#39;Anonymous&#39;</span><span class="p">,</span>
-                <span class="n">is_active</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">method_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">method_name</span> <span class="o">=</span> <span class="s1">&#39;--- method_name missing ---&#39;</span>
-
-        <span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;API call:: user: </span><span class="si">{0}</span><span class="s1">, method: </span><span class="si">{1}</span><span class="s1">, args: </span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-                <span class="n">request_user</span><span class="p">,</span>
-                <span class="n">method_name</span><span class="p">,</span>
-                <span class="n">args</span><span class="p">))</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">ApiCallLog</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-                <span class="n">user</span><span class="o">=</span><span class="n">request_user</span><span class="p">,</span>
-                <span class="n">method</span><span class="o">=</span><span class="n">method_name</span><span class="p">,</span>
-                <span class="n">args</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
-
-    <span class="k">class</span> <span class="nc">XMLRPCHandler</span><span class="p">(</span><span class="n">handlers</span><span class="o">.</span><span class="n">XMLRPCHandler</span><span class="p">):</span>
-        <span class="k">def</span> <span class="nf">process_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="n">encoding</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">or</span> <span class="s1">&#39;utf-8&#39;</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span>
-            <span class="n">params</span><span class="p">,</span> <span class="n">method_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-            <span class="n">log_call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
-            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_request</span><span class="p">()</span>
-
-    <span class="k">class</span> <span class="nc">JSONRPCHandler</span><span class="p">(</span><span class="n">handlers</span><span class="o">.</span><span class="n">JSONRPCHandler</span><span class="p">):</span>
-        <span class="k">def</span> <span class="nf">process_single_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">):</span>
-            <span class="n">method_name</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-            <span class="n">params</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;params&#39;</span><span class="p">)</span>
-
-            <span class="n">log_call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
-            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_single_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p><strong>NOTE:</strong>
-You will have to execute <code>./manage.py makemigrations api_logging</code> to create the
-initial migration for Django. This could be easier if you place the above directory
-into existing Django application or craft the migration file by hand!</p>
-<p>The last thing you want to do is create a <code>local_settings.py</code> file which will override
-Kiwi TCMS defaults:</p>
-<div class="highlight"><pre><span></span><code>    <span class="c1"># local_settings.py</span>
-    <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-
-    <span class="n">settings</span><span class="o">.</span><span class="n">INSTALLED_APPS</span> <span class="o">+=</span> <span class="p">[</span>
-        <span class="s1">&#39;api_logging&#39;</span><span class="p">,</span>
-    <span class="p">]</span>
-
-    <span class="n">MODERNRPC_HANDLERS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;api_logging.handlers.XMLRPCHandler&#39;</span><span class="p">,</span>
-                          <span class="s1">&#39;api_logging.handlers.JSONRPCHandler&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-
-<p>Then place everything in <code>Dockerfile</code> like so:</p>
-<div class="highlight"><pre><span></span><code>    FROM kiwitcms/kiwi
-
-    COPY ./api_logging/ /venv/lib64/python3.6/site-packages/api_logging/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
-</code></pre></div>
-
-
-<p>Kiwi TCMS will import your <code>local_settings.py</code> and enable the logging application.
-Now build your customized Docker image and use it for deployment!</p>
-<p>Happy testing!</p>
         </div>
     </article>
 

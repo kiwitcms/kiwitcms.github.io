@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-12-06T19:40:00+02:00</updated><entry><title>Call for participation: Testing and Automation devroom, FOSDEM'22</title><link href="/blog/kiwi-tcms-team/2021/12/06/call-for-participation-testing-and-automation-devroom-fosdem22/" rel="alternate"></link><published>2021-12-06T19:40:00+02:00</published><updated>2021-12-06T19:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-12-06:/blog/kiwi-tcms-team/2021/12/06/call-for-participation-testing-and-automation-devroom-fosdem22/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2022/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2021-12-14T13:00:00+02:00</updated><entry><title>New versions of automation frameworks plugins</title><link href="/blog/kiwi-tcms-team/2021/12/14/new-versions-of-automation-frameworks-plugins/" rel="alternate"></link><published>2021-12-14T13:00:00+02:00</published><updated>2021-12-14T13:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-12-14:/blog/kiwi-tcms-team/2021/12/14/new-versions-of-automation-frameworks-plugins/</id><summary type="html">&lt;p&gt;Kiwi TCMS is pleased to announce new versions of our plugins for different
+test automation frameworks:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin"&gt;tap-plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin"&gt;junit.xml-plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/junit-plugin/"&gt;JUnit 5 plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;Robot Framework plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/django-plugin"&gt;Django test runner plugin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The new versions are future compatible with upcoming Kiwi TCMS v11 and also with existing
+Kiwi TCMS v10.x installations. Check-out …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS is pleased to announce new versions of our plugins for different
+test automation frameworks:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin"&gt;tap-plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin"&gt;junit.xml-plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/junit-plugin/"&gt;JUnit 5 plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;Robot Framework plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/django-plugin"&gt;Django test runner plugin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The new versions are future compatible with upcoming Kiwi TCMS v11 and also with existing
+Kiwi TCMS v10.x installations. Check-out the pages above for individual instructions.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Call for participation: Testing and Automation devroom, FOSDEM'22</title><link href="/blog/kiwi-tcms-team/2021/12/06/call-for-participation-testing-and-automation-devroom-fosdem22/" rel="alternate"></link><published>2021-12-06T19:40:00+02:00</published><updated>2021-12-06T19:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-12-06:/blog/kiwi-tcms-team/2021/12/06/call-for-participation-testing-and-automation-devroom-fosdem22/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2022/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
 &lt;p&gt;Attention testers! On behalf of
 &lt;a href="https://fosdem-testingautomation.github.io/"&gt;&lt;em&gt;Testing and Automation devroom&lt;/em&gt;&lt;/a&gt;
 we'd like to announce that call for participation is now open.&lt;/p&gt;
