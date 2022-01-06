@@ -97,6 +97,7 @@ database changes, new settings and API methods, bug-fixes, internal refactoring 
 updated translations.&lt;/p&gt;
 &lt;p&gt;You can explore everything at
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Supported upgrade paths:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 5.3   (or older) -&amp;gt; 5.3.1
@@ -105,6 +106,9 @@ updated translations.&lt;/p&gt;
 6.1              -&amp;gt; 6.1.1
 6.1.1            -&amp;gt; 6.2 (or newer)
 &lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Container images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 kiwitcms/kiwi       latest  0574b19b5d66    583 MB
@@ -114,6 +118,10 @@ kiwitcms/kiwi       6.1     b559123d25b0    970 MB
 kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
 kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-10-4"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 10.4&lt;/h2&gt;
 &lt;div class="section" id="improvements"&gt;
@@ -261,17 +269,23 @@ it render the way you wish.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="kiwi-tcms-enterprise-v10-5-mt"&gt;
 &lt;h2&gt;Kiwi TCMS Enterprise v10.5-mt&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Based on Kiwi TCMS v10.5&lt;/li&gt;
-&lt;li&gt;Update django-python3-ldap from 0.12.0 to 0.12.1&lt;/li&gt;
-&lt;li&gt;Update django-ses from 2.3.0 to 2.3.1&lt;/li&gt;
-&lt;li&gt;Update kiwitcms-tenants from 1.7.0 to 1.8.0&lt;/li&gt;
-&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v10.5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-python3-ldap from 0.12.0 to 0.12.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-ses from 2.3.0 to 2.3.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-tenants from 1.7.0 to 1.8.0&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 quay.io/kiwitcms/enterprise         10.5-mt         3e597c91d057   804 MB
 quay.io/kiwitcms/version            10.5            0574b19b5d66   583 MB
 &lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and Enterprise
 &lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
 &lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;

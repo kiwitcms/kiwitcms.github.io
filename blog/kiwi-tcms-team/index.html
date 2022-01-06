@@ -211,6 +211,7 @@ database changes, new settings and API methods, bug-fixes, internal refactoring 
 updated translations.</p>
 <p>You can explore everything at
 <a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<blockquote>
 <p>Supported upgrade paths:</p>
 <pre class="literal-block">
 5.3   (or older) -&gt; 5.3.1
@@ -219,6 +220,9 @@ updated translations.</p>
 6.1              -&gt; 6.1.1
 6.1.1            -&gt; 6.2 (or newer)
 </pre>
+</blockquote>
+<p>---</p>
+<blockquote>
 <p>Container images:</p>
 <pre class="literal-block">
 kiwitcms/kiwi       latest  0574b19b5d66    583 MB
@@ -228,6 +232,10 @@ kiwitcms/kiwi       6.1     b559123d25b0    970 MB
 kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
 kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 </pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged
+<a class="reference external" href="/containers/">container</a> images are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
 <div class="section" id="changes-since-kiwi-tcms-10-4">
 <h2>Changes since Kiwi TCMS 10.4</h2>
 <div class="section" id="improvements">
@@ -375,17 +383,23 @@ it render the way you wish.</p>
 </div>
 <div class="section" id="kiwi-tcms-enterprise-v10-5-mt">
 <h2>Kiwi TCMS Enterprise v10.5-mt</h2>
-<ul class="simple">
-<li>Based on Kiwi TCMS v10.5</li>
-<li>Update django-python3-ldap from 0.12.0 to 0.12.1</li>
-<li>Update django-ses from 2.3.0 to 2.3.1</li>
-<li>Update kiwitcms-tenants from 1.7.0 to 1.8.0</li>
-</ul>
+<ul>
+<li><p class="first">Based on Kiwi TCMS v10.5</p>
+</li>
+<li><p class="first">Update django-python3-ldap from 0.12.0 to 0.12.1</p>
+</li>
+<li><p class="first">Update django-ses from 2.3.0 to 2.3.1</p>
+</li>
+<li><p class="first">Update kiwitcms-tenants from 1.7.0 to 1.8.0</p>
+<blockquote>
 <p>Private images:</p>
 <pre class="literal-block">
 quay.io/kiwitcms/enterprise         10.5-mt         3e597c91d057   804 MB
 quay.io/kiwitcms/version            10.5            0574b19b5d66   583 MB
 </pre>
+</blockquote>
+</li>
+</ul>
 <p><strong>IMPORTANT:</strong> version tagged and Enterprise
 <a class="reference external" href="/containers/">container</a> images are available only to
 <a class="reference external" href="/#subscriptions">subscribers</a>!</p>
