@@ -1,0 +1,66 @@
+Kiwi TCMS Enterprise 10.5.1
+###########################
+
+:headline: improvements and bug-fixes
+:date: 2022-01-06 13:45
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS Enterprise version 10.5.1!
+
+**IMPORTANT:**
+this is a small release which contains minor improvements and bug-fixes.
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+
+Kiwi TCMS Enterprise v10.5.1-mt
+-------------------------------
+
+- Based on Kiwi TCMS v10.5
+- Update django-python3-ldap from 0.13.0 to 0.13.1
+- Update kiwitcms-github-app from 1.3.1 to 1.3.2
+
+    Private images::
+    
+    quay.io/kiwitcms/enterprise         10.5.1-mt       c4d745bd914c   806MB
+
+
+**IMPORTANT:** version tagged and Enterprise
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then execute the commands::
+
+    cd path/containing/docker-compose/
+    docker-compose down
+    docker-compose pull
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py migrate
+
+Refer to
+`our documentation <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading>`_
+for more details!
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
