@@ -1,5 +1,388 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-01-06T13:45:00+02:00</updated><entry><title>Kiwi TCMS Enterprise 10.5.1</title><link href="/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/" rel="alternate"></link><published>2022-01-06T13:45:00+02:00</published><updated>2022-01-06T13:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-01-06:/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS Enterprise version 10.5.1!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-01-25T10:00:00+02:00</updated><entry><title>Kiwi TCMS 11.0</title><link href="/blog/kiwi-tcms-team/2022/01/25/kiwi-tcms-110/" rel="alternate"></link><published>2022-01-25T10:00:00+02:00</published><updated>2022-01-25T10:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-01-25:/blog/kiwi-tcms-team/2022/01/25/kiwi-tcms-110/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.0.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a new major release which contains security related updates, several improvements,
+API changes, bug fixes and new translations!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1 …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.0.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a new major release which contains security related updates, several improvements,
+API changes, bug fixes and new translations!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Container images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi       latest  6600bc56a544    622 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-10-5"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 10.5&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django to 3.2.11&lt;/li&gt;
+&lt;li&gt;Update django-colorfield from 0.4.5 to 0.6.3&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 2.15.3 to 3.0.2&lt;/li&gt;
+&lt;li&gt;Update psycopg2 from 2.9.2 to 2.9.3&lt;/li&gt;
+&lt;li&gt;Update pygments from 2.10.0 to 2.11.2&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 2.10.1 to 3.1.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/prismjs from 1.25.0 to 1.26.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/marked from 2.1.3 to 4.0.10&lt;/li&gt;
+&lt;li&gt;Admin panel now allows to view, add, edit and delete Environment records&lt;/li&gt;
+&lt;li&gt;Allow selection of environment when creating new TestRun and display the chosen
+values inside the TestRun page. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1344"&gt;Issue #1344&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Creating a TestRun will now generate test execution matrix based on the available
+environment and test case properties. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1843"&gt;Issue #1843&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;When generating a test execution matrix the supported algorithms are
+&amp;quot;full&amp;quot; and &amp;quot;pairwise&amp;quot;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1931"&gt;Issue #1931&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Feature is enabled for test runs which contain test cases. This
+feature is not shown when creating an empty test run&lt;/li&gt;
+&lt;li&gt;This feature isn't supported when subsequently adding new test cases
+to test run&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Record a random hex number under &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/Kiwi/uploads/installation-id&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed information about properties, environments and test matrix generation
+can be found
+&lt;a class="reference external" href="/blog/atodorov/2022/01/24/properties-environments-and-test-matrix-generation/"&gt;in a separate article&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New model &lt;tt class="docutils literal"&gt;testrun.Environment&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New model &lt;tt class="docutils literal"&gt;testrun.EnvironmentProperty&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New model &lt;tt class="docutils literal"&gt;testrun.Property&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;These newly added models create additional permission labels with names
+&lt;em&gt;testruns | environment | Can .... environment&lt;/em&gt;,
+&lt;em&gt;testruns | property | Can .... property&lt;/em&gt;,
+&lt;em&gt;testruns | environment property | Can .... environment property&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Execute &lt;tt class="docutils literal"&gt;manage.py refresh_permissions&lt;/tt&gt; and/or assign them manually to
+users and groups if they should be able to interact with the new objects!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update the value of &lt;tt class="docutils literal"&gt;MODERNRPC_METHODS_MODULES&lt;/tt&gt; setting to include
+modules with the new API methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Method &lt;tt class="docutils literal"&gt;TestRun.add_case&lt;/tt&gt; will now return a list.&lt;/p&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p class="last"&gt;This breaks API compatibility with older versions and will break
+all plugins which rely on this method. Use plugins v11 or greater!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Method &lt;tt class="docutils literal"&gt;TestRun.add_case&lt;/tt&gt; return value will now include a field named
+&lt;tt class="docutils literal"&gt;properties&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;New methods &lt;tt class="docutils literal"&gt;Environment.properties&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Environment.add_property&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;Environment.remove_property&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;New method &lt;tt class="docutils literal"&gt;TestRun.properties&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Send e-mail notification when adding comments to bugs. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2232"&gt;Issue #2232&lt;/a&gt; (&amp;#64;cmbahadir)&lt;/li&gt;
+&lt;li&gt;Disable the &amp;quot;+&amp;quot; button when there is no related element selected. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2561"&gt;Issue #2561&lt;/a&gt; (&amp;#64;cmbahadir)&lt;/li&gt;
+&lt;li&gt;When cloning test plans keep the existing test case sort order inside
+the resulting test plan. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2218"&gt;Issue #2218&lt;/a&gt; (Nicolas Gelot)&lt;/li&gt;
+&lt;li&gt;Configure en_US.UTF-8 locale inside container. Allows upload of files with
+unicode names. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2600"&gt;Issue #2600&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Refresh logo design&lt;/li&gt;
+&lt;li&gt;Pylint fixes&lt;/li&gt;
+&lt;li&gt;Pin setuptools b/c of problem with django-extensions&lt;/li&gt;
+&lt;li&gt;Remove redundant test scenario&lt;/li&gt;
+&lt;li&gt;Shell script refactoring&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/he#"&gt;Hebrew translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v11-0-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v11.0-mt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v11.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-tenants from 1.8.0 to 1.11.0&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Private images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/enterprise         11.0-mt         a730291750f8   846 MB
+quay.io/kiwitcms/version            11.0            6600bc56a544   622 MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then execute the commands:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Properties, Environments and test matrix generation</title><link href="/blog/atodorov/2022/01/24/properties-environments-and-test-matrix-generation/" rel="alternate"></link><published>2022-01-24T19:40:00+02:00</published><updated>2022-01-24T19:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2022-01-24:/blog/atodorov/2022/01/24/properties-environments-and-test-matrix-generation/</id><summary type="html">&lt;p&gt;The upcoming Kiwi TCMS v11 contains new functionality around TestCase properties and
+TestRun environments which has an impact on how your final test execution matrix will
+look like. This article provides detailed information about these features but have
+in mind that they are still considered to be a technology-preview.&lt;/p&gt;
+&lt;h2&gt;Properties …&lt;/h2&gt;</summary><content type="html">&lt;p&gt;The upcoming Kiwi TCMS v11 contains new functionality around TestCase properties and
+TestRun environments which has an impact on how your final test execution matrix will
+look like. This article provides detailed information about these features but have
+in mind that they are still considered to be a technology-preview.&lt;/p&gt;
+&lt;h2&gt;Properties&lt;/h2&gt;
+&lt;p&gt;Consider a login functionality which accepts email address and password. Possible states
+for these fields are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Email address:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;valid&lt;/code&gt; - well formed email string, exists in database, access is allowed&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;invalid&lt;/code&gt; - malformed email string, should not exist in the DB but this fact is not relevant to the test&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;disabled&lt;/code&gt; - well formed email string, exists in database, access is not allowed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Password:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;correct&lt;/code&gt; - matches the value in database for the given email address&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;another&lt;/code&gt; - matches the value in database which is related to another email address&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wrong&lt;/code&gt; - doesn't match the value in database&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;empty&lt;/code&gt; - value is empty string, a special case of &lt;code&gt;wrong&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;invalid&lt;/code&gt; - value doesn't conform to predefined rules. May or may not be relevant to login functionality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depending on how the software under test is put together you can design multiple test cases.
+Fundamentally however these are the same test case and the above states are input parameters to it!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition: TestCase properties are different input values which do not fundamentally affect the result of
+a test case! A TestCase with properties will result into multiple test executions!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In other words you will be executing a parameterized test scenario multiple times with different input values!
+Inside Kiwi TCMS the actual parameter values during execution are recorded into the &lt;code&gt;TestExecution&lt;/code&gt; model
+which will not change if you modify test case property values afterwards!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition: TestExecution properties record a snapshot of TestCase properties at the time when you intended
+to execute a particular test scenario!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Environments&lt;/h2&gt;
+&lt;p&gt;A testing environment represents the specifics of where exactly you executed your test suite.
+Consider this example:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The default desktop environment of Fedora is GNOME, but if you prefer an alternative,
+you can download installation media which contains slightly differently defaults, e.g.
+KDE, Xfce, MATE and others, see &lt;a href="https://spins.fedoraproject.org"&gt;https://spins.fedoraproject.org&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Regardless of which Fedora variant you choose the expected functionallity
+of the default desktop experience is the same. However this can only be guaranteed with exhaustive
+testing across all variants. Check-out the test matrix at
+&lt;a href="https://fedoraproject.org/wiki/Test_Results:Fedora_36_Rawhide_20220118.n.0_Desktop?rd=Test_Results:Current_Desktop_Test#Non_release-blocking_desktops:_x86_.2F_x86_64"&gt;https://fedoraproject.org/wiki/Test_Results:Fedora_36_Rawhide_20220118.n.0_Desktop?rd=Test_Results:Current_Desktop_Test#Non_release-blocking_desktops:_x86_.2F_x86_64&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition: a TestRun environment is a set of properties which apply to the entire test suite
+at the time of execution. Usually you expect test results in different environments to be the same!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In Kiwi TCMS environments are represented as named containers of key/value pairs.
+The same key may have multiple values!
+They can be found under &lt;em&gt;ADMIN -&amp;gt; Everything else -&amp;gt; Environments&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Because environments are meant to affect the entire test suite they are linked to the
+&lt;code&gt;TestRun&lt;/code&gt; model. When creating a new test run you can select multiple &lt;code&gt;Environment&lt;/code&gt;
+records.&lt;/p&gt;
+&lt;h2&gt;Test matrix generation&lt;/h2&gt;
+&lt;p&gt;The existing behavior in Kiwi TCMS is that when a test run is created there will be only one
+test execution for every test case which is added inside this test run.&lt;/p&gt;
+&lt;p&gt;In the Fedora example shown above some of the test cases also have their own parameters,
+e.g. the &lt;em&gt;QA:Testcase_desktop_app_basic&lt;/em&gt; scenario.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition: TestRun environment key/values will be combined with TestCase property key/values
+to form the final test matrix! This opens up the possibility for combinatorial test execution
+generation.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once properties and environment(s) are specified you will start seeing multiple test executions
+for the same test case inside newly created test runs. By default a full-combination test matrix
+will be created. The other option is to &lt;a href="https://www.pairwise.org/"&gt;pairwise&lt;/a&gt; all key/value records.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important: test execution generation works only when creating or cloning a test run that contains
+test cases. This feature still does not work for test cases added after a test run is created!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Environment(s) vs Tag(s)&lt;/h2&gt;
+&lt;p&gt;Inside Kiwi TCMS you can use both environments and tags to annotate test runs.
+There are 3 important facts that hold true:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tags possess only informational value, they don't influence how you perform testing;&lt;/li&gt;
+&lt;li&gt;Environments possess informational value and govern the final test matrix;&lt;/li&gt;
+&lt;li&gt;Environments which have a single value for each different key are the same as tags!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;Example from #1344&amp;quot;" src="/images/features/props-and-envs/env_from_1344.png" title="Example from #1344"&gt;&lt;/p&gt;
+&lt;p&gt;If we look at this example from &lt;a href="https://github.com/kiwitcms/Kiwi/issues/1344"&gt;Issue #1344&lt;/a&gt; we
+can make out the following keys:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Driver&lt;/em&gt; - 2 values&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;API&lt;/em&gt; - 2 values&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Python&lt;/em&gt; - 2 values&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Java&lt;/em&gt; - 1 value&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Eclipse&lt;/em&gt; - 1 value&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Host OS&lt;/em&gt; - 1 value&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Target OS&lt;/em&gt; - 1 value&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Redistributable&lt;/em&gt; - 1 value&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Testing Type&lt;/em&gt; - 1 value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here &lt;em&gt;Driver&lt;/em&gt;, &lt;em&gt;API&lt;/em&gt; and &lt;em&gt;Python&lt;/em&gt; clearly should affect your test matrix. Otherwise there isn't
+much point in having the different values recorded in the first place. That results in a 8x
+multiplication factor for every functionality that may be affected/related to these attributes,
+presumably the entire functionality of the product under test.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Java&lt;/em&gt;, &lt;em&gt;Eclipse&lt;/em&gt;, &lt;em&gt;Host OS&lt;/em&gt; and &lt;em&gt;Target OS&lt;/em&gt; carry only informational value but they look like
+more values could be possible. If that's the case these attributes will also affect the overall
+test matrix.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Redistributable&lt;/em&gt; and &lt;em&gt;Testing Type&lt;/em&gt; look like information-only attributes. They don't appear
+to have any relevance to the test matrix at all. The same information-only effect can be achieved
+both with environments and with tags.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Practical rules:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Attributes which affect a single test case should be defined as TestCase properties&lt;/li&gt;
+&lt;li&gt;Attributes which affect all test cases in a suite should be defined as TestRun environment(s)&lt;/li&gt;
+&lt;li&gt;One big TestRun is likely the best from organizational and optimizational point of view&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You may decide to have multiple smaller test runs, usually with 1 value per environment key,
+if you think that fits your workflow better. However you may be missing on some optimizations if you
+choose to do so.&lt;/p&gt;
+&lt;h2&gt;Real life example&lt;/h2&gt;
+&lt;p&gt;To illustrate how all of these new features work let's look at
+&lt;a href="https://fedoraproject.org/wiki/QA:Testcase_partitioning_custom_software_RAID"&gt;Partitioning custom software RAID&lt;/a&gt;
+test case from Fedora QA. It instructs the tester to install Linux and inside the
+partitioning screen create a &lt;em&gt;Software RAID&lt;/em&gt; partition, format it with a filesystem and
+assign a mount point! It is expected that once installation is complete the machine will
+reboot, tester will be able to login as root and the created filesystem will be available!&lt;/p&gt;
+&lt;p&gt;Factors that could affect this functionality:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Raid Level&lt;/em&gt;: Fedora supports 7 of them - 0, 1, 4, 5, 6, 10 and linear. These are all different drivers
+   located under &lt;code&gt;/lib/modules/$(uname -r)/kernel/drivers/md&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./linear.ko.xz
+./raid0.ko.xz
+./raid10.ko.xz
+./raid1.ko.xz
+./raid456.ko.xz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Mount Point&lt;/em&gt;: &lt;code&gt;/&lt;/code&gt; for example is mounted very early in the boot process, &lt;code&gt;/home&lt;/code&gt; is mounted much later.
+  &lt;code&gt;/&lt;/code&gt; also relates to rescue mode, while &lt;code&gt;/home&lt;/code&gt; doesn't. &lt;code&gt;/home&lt;/code&gt;, if corrupted, may affect the terminal
+  login process though&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Encryption&lt;/em&gt;: Yes/No. This is stackable on top of the RAID device and "should-just-work". However it is often
+  included into other partitioning test cases in order to discover weird issues and because it is a critical
+  functionality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We may add the actual filesystem type, used to format the RAID block device,
+e.g. &lt;em&gt;xfs&lt;/em&gt;, &lt;em&gt;ext3&lt;/em&gt;, &lt;em&gt;ext4&lt;/em&gt;, but that's not needed here! Here's how this test case looks in Kiwi TCMS:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;RAID test case&amp;quot;" src="/images/features/props-and-envs/raid-tc-with-params.png" title="RAID test case"&gt;&lt;/p&gt;
+&lt;p&gt;Remember that Fedora comes with multiple variants for multiple CPU architectures! Of those we'll consider
+&lt;em&gt;Server&lt;/em&gt; and &lt;em&gt;Workstation&lt;/em&gt;, which are both available for the &lt;em&gt;aarch64&lt;/em&gt; and &lt;em&gt;x86_64&lt;/em&gt; CPU
+architectures. Here's how this can be represented inside Kiwi TCMS:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;Fedora variants represented as environment&amp;quot;" src="/images/features/props-and-envs/env-fedora-variants.png" title="Fedora variants represented as environment"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+Next we need to organize test execution for an upcoming release by creating test run(s) and
+selecting environment and matrix generation type:
+&lt;img alt="&amp;quot;New test run with environment&amp;quot;" src="/images/features/props-and-envs/new-tr-with-env.png" title="New test run with environment"&gt;&lt;/p&gt;
+&lt;p&gt;The possible outcomes are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;112 test executions&lt;/strong&gt;: full test matrix between all Fedora variants and all RAID parameters&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;56 test executions&lt;/strong&gt;: 4 TR x 14 TE; one TR/variant without environment; RAID parameters are pairwised&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;16 test executions&lt;/strong&gt;: all Fedora variants are pairwised together with all RAID parameters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally this is how the resulting test run looks like. Notice the 3 boxes icon for each
+test execution, listing the actual properties which should be used during testing:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;TR with environment, TE with properties&amp;quot;" src="/images/features/props-and-envs/tr-env-and-te-props.png" title="TR with environment, TE with properties"&gt;&lt;/p&gt;
+&lt;p&gt;Environment properties are read-only here b/c they have been copied to all test execution records.
+It usually doesn't make sense to modify your environment mid-way during test execution.
+If that's needed or you've made a mistake it's probably easier to create a new test run.&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category></entry><entry><title>Kiwi TCMS Enterprise 10.5.1</title><link href="/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/" rel="alternate"></link><published>2022-01-06T13:45:00+02:00</published><updated>2022-01-06T13:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-01-06:/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS Enterprise version 10.5.1!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 this is a small release which contains minor improvements and bug-fixes.&lt;/p&gt;
 &lt;p&gt;You can explore everything at

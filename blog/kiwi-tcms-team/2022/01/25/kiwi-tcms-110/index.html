@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS 11.0</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="improvements, new features, bug-fixes and more" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="tags" content="releases" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS 11.0">
+            <meta name="twitter:description" content="improvements, new features, bug-fixes and more">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2022/01/25/kiwi-tcms-110/" />
+        <meta property="og:title" content="Kiwi TCMS 11.0" />
+        <meta property="article:published_time" content="2022-01-25 10:00:00+02:00">
+            <meta property="og:description" content="improvements, new features, bug-fixes and more">
+
+            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
+        <!-- Custom Styles -->
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
+    </head>
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            </a>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#subscriptions">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/apps/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- content -->
+    <section id="blog-article">
+        <h1 class="top-header">Kiwi TCMS 11.0</h1>
+        <h2 class="top-subheader">improvements, new features, bug-fixes and more</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Tue 25 January 2022
+                under
+                    <a href="https://kiwitcms.org/blog/tags/releases/">releases</a>
+        </p>
+
+        <article class="content">
+            <p>We're happy to announce Kiwi TCMS version 11.0.</p>
+<p><strong>IMPORTANT:</strong>
+This is a new major release which contains security related updates, several improvements,
+API changes, bug fixes and new translations!</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<blockquote>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+</blockquote>
+<p>---</p>
+<blockquote>
+<p>Container images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  6600bc56a544    622 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged
+<a class="reference external" href="/containers/">container</a> images are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-10-5">
+<h2>Changes since Kiwi TCMS 10.5</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django to 3.2.11</li>
+<li>Update django-colorfield from 0.4.5 to 0.6.3</li>
+<li>Update django-grappelli from 2.15.3 to 3.0.2</li>
+<li>Update psycopg2 from 2.9.2 to 2.9.3</li>
+<li>Update pygments from 2.10.0 to 2.11.2</li>
+<li>Update python-gitlab from 2.10.1 to 3.1.0</li>
+<li>Update node_modules/prismjs from 1.25.0 to 1.26.0</li>
+<li>Update node_modules/marked from 2.1.3 to 4.0.10</li>
+<li>Admin panel now allows to view, add, edit and delete Environment records</li>
+<li>Allow selection of environment when creating new TestRun and display the chosen
+values inside the TestRun page. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1344">Issue #1344</a></li>
+<li>Creating a TestRun will now generate test execution matrix based on the available
+environment and test case properties. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1843">Issue #1843</a></li>
+<li>When generating a test execution matrix the supported algorithms are
+&quot;full&quot; and &quot;pairwise&quot;. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1931">Issue #1931</a><ul>
+<li>Feature is enabled for test runs which contain test cases. This
+feature is not shown when creating an empty test run</li>
+<li>This feature isn't supported when subsequently adding new test cases
+to test run</li>
+</ul>
+</li>
+<li>Record a random hex number under <tt class="docutils literal"><span class="pre">/Kiwi/uploads/installation-id</span></tt></li>
+</ul>
+<p>Detailed information about properties, environments and test matrix generation
+can be found
+<a class="reference external" href="/blog/atodorov/2022/01/24/properties-environments-and-test-matrix-generation/">in a separate article</a>.</p>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li>New model <tt class="docutils literal">testrun.Environment</tt></li>
+<li>New model <tt class="docutils literal">testrun.EnvironmentProperty</tt></li>
+<li>New model <tt class="docutils literal">testrun.Property</tt></li>
+</ul>
+<p><strong>Warning:</strong></p>
+<blockquote>
+<p>These newly added models create additional permission labels with names
+<em>testruns | environment | Can .... environment</em>,
+<em>testruns | property | Can .... property</em>,
+<em>testruns | environment property | Can .... environment property</em></p>
+<p>Execute <tt class="docutils literal">manage.py refresh_permissions</tt> and/or assign them manually to
+users and groups if they should be able to interact with the new objects!</p>
+</blockquote>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li>Update the value of <tt class="docutils literal">MODERNRPC_METHODS_MODULES</tt> setting to include
+modules with the new API methods</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul>
+<li><p class="first">Method <tt class="docutils literal">TestRun.add_case</tt> will now return a list.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This breaks API compatibility with older versions and will break
+all plugins which rely on this method. Use plugins v11 or greater!</p>
+</div>
+</li>
+<li><p class="first">Method <tt class="docutils literal">TestRun.add_case</tt> return value will now include a field named
+<tt class="docutils literal">properties</tt></p>
+</li>
+<li><p class="first">New methods <tt class="docutils literal">Environment.properties</tt>, <tt class="docutils literal">Environment.add_property</tt> and
+<tt class="docutils literal">Environment.remove_property</tt></p>
+</li>
+<li><p class="first">New method <tt class="docutils literal">TestRun.properties</tt></p>
+</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Send e-mail notification when adding comments to bugs. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2232">Issue #2232</a> (&#64;cmbahadir)</li>
+<li>Disable the &quot;+&quot; button when there is no related element selected. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2561">Issue #2561</a> (&#64;cmbahadir)</li>
+<li>When cloning test plans keep the existing test case sort order inside
+the resulting test plan. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2218">Issue #2218</a> (Nicolas Gelot)</li>
+<li>Configure en_US.UTF-8 locale inside container. Allows upload of files with
+unicode names. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2600">Issue #2600</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Refresh logo design</li>
+<li>Pylint fixes</li>
+<li>Pin setuptools b/c of problem with django-extensions</li>
+<li>Remove redundant test scenario</li>
+<li>Shell script refactoring</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/he#">Hebrew translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v11-0-mt">
+<h2>Kiwi TCMS Enterprise v11.0-mt</h2>
+<ul>
+<li><p class="first">Based on Kiwi TCMS v11.0</p>
+</li>
+<li><p class="first">Update kiwitcms-tenants from 1.8.0 to 1.11.0</p>
+<blockquote>
+<p>Private images:</p>
+<pre class="literal-block">
+quay.io/kiwitcms/enterprise         11.0-mt         a730291750f8   846 MB
+quay.io/kiwitcms/version            11.0            6600bc56a544   622 MB
+</pre>
+</blockquote>
+</li>
+</ul>
+<p><strong>IMPORTANT:</strong> version tagged and Enterprise
+<a class="reference external" href="/containers/">container</a> images are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then execute the commands:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Refer to
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
+for more details!</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </article>
+    </section>
+
+    <section class="after-content">
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
+
+    <section class="after-content">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2022/01/25/kiwi-tcms-110/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2022/01/25/kiwi-tcms-110/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
+                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Like and share</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
+
+
+            <!-- Google analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881636-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-113881636-1');
+            </script>
+    </body>
+</html>
