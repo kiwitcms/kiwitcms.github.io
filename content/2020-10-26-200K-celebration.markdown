@@ -14,8 +14,8 @@ We are happy to announce that Kiwi TCMS has been downloaded more than
 You can check the real-time stats
 [here](https://hub.docker.com/v2/repositories/kiwitcms/kiwi/).
 To celebrate with us subscribe for a
-[SaaS](https://mrsenko.onfastspring.com/kiwitcms-private-tenant) and/or
-[Enterprise](https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription)
+[SaaS](https://kiwitcms.onfastspring.com/kiwitcms-private-tenant) and/or
+[Enterprise](https://kiwitcms.onfastspring.com/kiwitcms-enterprise-subscription)
 subscriptions using coupon code **200KOFF** at checkout!
 
 Thank you very much and Happy Testing!
