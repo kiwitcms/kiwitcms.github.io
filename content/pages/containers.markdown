@@ -11,11 +11,14 @@ The official upstream Kiwi TCMS container image is publicly available via
 [Docker Hub](https://hub.docker.com/r/kiwitcms/kiwi) and
 [Red Hat Quay.io](https://quay.io/repository/kiwitcms/kiwi). It is
 free of charge and anyone can download and use it via the `docker pull`
-command!
+command! See
+[Running Kiwi TCMS as a Docker container](https://kiwitcms.readthedocs.io/en/latest/installing_docker.html)
+to get started!
 
-**Warning:** after November 1st 2020 older versions will not be available from
-Docker Hub, only from Quay.io! The reason is that Docker is enforcing a
-[6 month image retention limit](https://www.docker.com/pricing/retentionfaq)!
+**Warning:** after November 1st 2020 older versions may not be available from
+Docker Hub! The reason is a
+[6 month image retention limit](https://www.docker.com/pricing/retentionfaq)
+enforced by Docker Inc.!
 
 
 Private containers for subscribers
@@ -28,6 +31,10 @@ Kiwi TCMS Enterprise container images! These images are available as:
 - `quay.io/kiwitcms/version`
 - `quay.io/kiwitcms/enterprise`
 
-**Important:** you need to register an account at [Quay.io](https://quay.io/signin/)
-(it's free) and let us know your username or email. It is best this to be the
-sys-admin account which will be used to deploy these containers when hosting on-premise!
+**Important:** you can find your Docker credentials at the
+[subscriptions page](https://public.tenant.kiwitcms.org/github/marketplace/plans/),
+`PLUGINS -> Subscriptions`. To authenticate try
+
+    $ docker login -u="USERNAME" -p "PASSWORD-TOKEN" quay.io
+    # or
+    $ echo "PASSWORD-TOKEN" | docker login -u="USERNAME" --password-stdin quay.io
