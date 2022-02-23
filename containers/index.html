@@ -95,10 +95,13 @@
 <a href="https://hub.docker.com/r/kiwitcms/kiwi">Docker Hub</a> and
 <a href="https://quay.io/repository/kiwitcms/kiwi">Red Hat Quay.io</a>. It is
 free of charge and anyone can download and use it via the <code>docker pull</code>
-command!</p>
-<p><strong>Warning:</strong> after November 1st 2020 older versions will not be available from
-Docker Hub, only from Quay.io! The reason is that Docker is enforcing a
-<a href="https://www.docker.com/pricing/retentionfaq">6 month image retention limit</a>!</p>
+command! See
+<a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Running Kiwi TCMS as a Docker container</a>
+to get started!</p>
+<p><strong>Warning:</strong> after November 1st 2020 older versions may not be available from
+Docker Hub! The reason is a
+<a href="https://www.docker.com/pricing/retentionfaq">6 month image retention limit</a>
+enforced by Docker Inc.!</p>
 <h1>Private containers for subscribers</h1>
 <p>Subscribers enjoy the benefit of having read-only access to tagged versions of the
 upstream Kiwi TCMS container images as well as access to tagged versions of
@@ -107,9 +110,13 @@ Kiwi TCMS Enterprise container images! These images are available as:</p>
 <li><code>quay.io/kiwitcms/version</code></li>
 <li><code>quay.io/kiwitcms/enterprise</code></li>
 </ul>
-<p><strong>Important:</strong> you need to register an account at <a href="https://quay.io/signin/">Quay.io</a>
-(it's free) and let us know your username or email. It is best this to be the
-sys-admin account which will be used to deploy these containers when hosting on-premise!</p>
+<p><strong>Important:</strong> you can find your Docker credentials at the
+<a href="https://public.tenant.kiwitcms.org/github/marketplace/plans/">subscriptions page</a>,
+<code>PLUGINS -&gt; Subscriptions</code>. To authenticate try</p>
+<div class="highlight"><pre><span></span><code>$ docker login -u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span> -p <span class="s2">&quot;PASSWORD-TOKEN&quot;</span> quay.io
+<span class="c1"># or</span>
+$ <span class="nb">echo</span> <span class="s2">&quot;PASSWORD-TOKEN&quot;</span> <span class="p">|</span> docker login -u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span> --password-stdin quay.io
+</code></pre></div>
     </section>
 
         <footer>
