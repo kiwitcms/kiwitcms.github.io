@@ -94,16 +94,17 @@
                     </p>
                 </div>
                 <div>
-                    <h3>Container ready</h3>
+                    <h3>Container first</h3>
                     <p>
                         Over 1,000,000 downloads via <a href="https://hub.docker.com/r/kiwitcms/kiwi/">Docker Hub</a>.
+                        Check-out <a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/">the stats</a>.
                     </p>
                 </div>
                 <div>
                     <h3>Paid support</h3>
                     <p>
                         Opt-in for a <a href="#subscriptions">subscription</a> if
-                        you don't like to self-support your Kiwi TCMS.
+                        you don't like to DIY your testing infrastructure.
                     </p>
                 </div>
                 <a href="{filename}features.html" class="btn border-btn" icon>Check all features <i></i></a>
@@ -164,68 +165,57 @@
             <h1 id="subscriptions">Subscription plans</h1>
 
             <div class="plan">
-                <h3>Free as in beer</h3>
+                <h3>Self Support</h3>
                 <ul class="caret">
                     <li>
                         Self-hosted on your server
                     </li>
                     <li>
-                        Only <code>latest</code> releases without version tags
+                        Tagged releases from <a href="{filename}containers.markdown">kiwitcms/version</a>
+                        <i class="las la-lock" title="Read-only access to private repository"></i>
                     </li>
                     <li>
-                        <a href="https://hub.docker.com/r/kiwitcms/kiwi/">docker pull kiwitcms/kiwi</a>
-                    </li>
-                    <li>
-                        Community <a href="{filename}support.markdown"">support</a> only
-                    </li>
-                    <li>
-                        Response time is not guaranteed
-                    </li>
-                    <li>
-                        Open source <a href="/blog/tags/roadmap/">bounty-program</a>
-                    </li>
-                    <li>
-                        Priority based on <a href="/blog/tags/roadmap/">roadmap</a>
+                        No dedicated <a href="{filename}support.markdown"">support</a>
                     </li>
                 </ul>
-                <a href="https://opencollective.com/kiwitcms#section-contribute">Make 5 $ single/monthly donation</a>
+                <a href="https://mrsenko.onfastspring.com/kiwitcms-self-support"
+                    data-fsc-item-path-value="kiwitcms-self-support" data-fsc-action="Add, Checkout">
+                    Subscribe for 15 $/mo
+                </a>
             </div>
 
             <div class="plan prefered">
-                <h3>Private Tenant SaaS</h3>
+                <h3>Private Tenant</h3>
                 <ul class="caret">
-                    <li>
-                        Unlimited users. 1x tenant
+                    <li class="first">
+                        Features from <i>Self Support</i>
                     </li>
                     <li>
-                        No User/Group admin (e.g. password, permisions)
+                        1x SaaS hosting &amp; SSL under
+                        <code>*.tenant.kiwitcms.org</code>
+                    </li>
+
+                    <li>
+                        Unlimited users
                     </li>
                     <li>
-                        Fully control authorized users for your tenant
+                        Control of authorized users
+                    </li>
+
+                    <li>
+                        No User/Group admin
                     </li>
                     <li>
                         Extra <a href="https://github.com/apps/kiwi-tcms">GitHub integration</a>
                     </li>
                     <li>
-                        <em>*.tenant.kiwitcms.org</em> domain
-                    </li>
-                    <li>
-                        PostgreSQL schema isolation
-                    </li>
-                    <li>
                         Always the latest version
                     </li>
                     <li>
-                        9-17 UTC/Mon-Fri <a href="{filename}support.markdown">support</a>
+                        09-17 UTC/Mon-Fri <a href="{filename}support.markdown">support</a>
                     </li>
                     <li>
                         Email response within 72 hrs
-                    </li>
-                    <li>
-                        Devel engagement within 3 months aka <code>+1 priority</code>
-                    </li>
-                    <li>
-                        SSL enabled
                     </li>
                 </ul>
                 <a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant"
@@ -234,160 +224,103 @@
                 </a>
             </div>
 
-            <div class="plan">
+            <div class="plan prefered">
                 <h3>Enterprise Subscription</h3>
                 <ul class="caret">
-                    <li>
-                        Built on top of
-                        <a href="https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8">Red Hat Universal Base Image</a>
-                        container
+                    <li class="first">
+                        Features from <i>Private Tenant</i>
                     </li>
                     <li>
-                        Unlimited users, unlimited tenants
+                        Built on top of
+                        <a href="https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8">Red Hat UBI</a>
+                    </li>
+                    <li>
+                        Tagged releases from <a href="{filename}containers.markdown">kiwitcms/enterprise</a>
+                        <i class="las la-lock" title="Read-only access to private repository"></i>
+                    </li>
+                    <li>
+                        Unlimited tenants
                     </li>
                     <li>
                         Full Admin panel access
                     </li>
+
                     <li>
-                        Versioned releases from <a href="{filename}containers.markdown">kiwitcms/version</a>
-                        <i class="las la-lock" title="Read-only access to private repository"></i>
+                        Auto error reporting via Sentry
                     </li>
                     <li>
-                        Versioned releases from <a href="{filename}containers.markdown">kiwitcms/enterprise</a>
-                        <i class="las la-lock" title="Read-only access to private repository"></i>
+                        Versioned static files for CDN
                     </li>
                     <li>
-                        9-21 UTC/Mon-Fri <a href="{filename}support.markdown">support</a>
+                        SMTP and <a href="https://github.com/django-ses/django-ses">Amazon SES</a> email
+                    </li>
+
+                    <li>
+                        <a href="http://python-social-auth.readthedocs.io/en/latest/backends/index.html#supported-backends">OAuth</a>,
+                        <a href="https://github.com/kiwitcms/python-social-auth-kerberos/">kerberos</a>,
+                        <a href="https://github.com/etianen/django-python3-ldap">LDAP</a>
+                        authentication backends
+                    <li>
+                        08-22 UTC/Mon-Fri <a href="{filename}support.markdown">support</a>
                     </li>
                     <li>
                         Email response within 24 hrs
                     </li>
-                    <li>
-                        Devel engagement within 1 month aka
-                        <code>+5 priority</code>
-                    </li>
-
-                    <details title="Click or tap for details">
-                        <summary>
-                            Multiple hosting options
-                        </summary>
-
-                        <p>
-                            <ul>
-                                <li>
-                                    On-premise self-hosting by your team or
-                                </li>
-                                <li>
-                                    Managed hosting under <em>*.kiwitcms.org</em>:
-                                    <ul>
-                                        <li>
-                                            SSL certificate will be provided
-                                        </li>
-                                        <li>
-                                            Can override default settings
-                                        </li>
-                                        <li>
-                                            Superuser access in web app
-                                        </li>
-                                        <li>
-                                            Will upgrade upon request
-                                        </li>
-                                        <li>
-                                            Fully isolated instance
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </p>
-                    </details>
-
-                    <details title="Click or tap for details">
-                        <summary>
-                            Available add-ons in
-                            <a href="https://github.com/kiwitcms/enterprise">kiwitcms/enterprise</a>
-                        </summary>
-
-                        <p>
-                            <ul>
-                                <li>
-                                    Multi-tenant via <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenants</a>
-                                </li>
-                                <li>
-                                    Extra GitHub integration via <a href="https://github.com/kiwitcms/github-app">kiwitcms-github-app</a>
-                                    (needs config)
-                                </li>
-                                <li>
-                                    Automatic error reports via Sentry
-                                </li>
-                                <li>
-                                    Versioned static files; CDN ready
-                                </li>
-                                <li>
-                                    Email backends (need config):
-                                    <ul>
-                                        <li>SMTP</li>
-                                        <li>Amazon SES via <a href="https://github.com/django-ses/django-ses">django-ses</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Authentication backends (need config):
-                                    <ul>
-                                        <li><a href="http://python-social-auth.readthedocs.io/en/latest/backends/index.html#supported-backends">social_auth</a></li>
-                                        <li><a href="https://github.com/kiwitcms/python-social-auth-kerberos/">kerberos</a></li>
-                                        <li><a href="https://github.com/etianen/django-python3-ldap">LDAP</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </p>
-                    </details>
-
-                    <details title="Click or tap for details">
-                        <summary>
-                            Additional services - 100 $/hr
-                        </summary>
-
-                        <p>
-                            <ul>
-                                <li>
-                                    Custom development
-                                </li>
-                                <li>
-                                    Import/export scripts
-                                </li>
-                                <li>
-                                    Migration; configuration and upgrades
-                                </li>
-                                <li>
-                                    Integration with 3rd party systems
-                                </li>
-                            </ul>
-
-                            <a href="{filename}support.markdown">Ask here</a> or
-                            <a href="https://mrsenko.onfastspring.com/additional-services-for-kiwi-tcms"
-                                data-fsc-item-path-value="additional-services-for-kiwi-tcms" data-fsc-action="Add, Checkout">
-                                purchase add-on hours
-                            </a>!
-                        </p>
-                    </details>
                 </ul>
                 <a href="https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription"
                     data-fsc-item-path-value="kiwitcms-enterprise-subscription" data-fsc-action="Add, Checkout">
-                    Subscribe for 300 $/mo
+                    Subscribe for 400 $/mo
                 </a>
-
             </div>
 
             <div class="plan">
-                <h3>OSS Program</h3>
+                <h3>Managed Hosting</h3>
                 <ul class="caret">
-                    <li>For open source and partners</li>
-                    <li>1x Private Tenant</li>
-                    <li>Brand endorsement</li>
-                    <li>Feedback expected</li>
-                    <li>Manual approval</li>
-                    <li>0.0 $/mo</li>
+                    <li class="first">
+                        Features from <i>Enterprise Subscription</i>
+                    </li>
+                    <li>
+                        Hosted by Kiwi TCMS in AWS
+                    </li>
+
+                    <li>
+                        DNS/SSL can be provided
+                    </li>
+                    <li>
+                        Can override default settings
+                    </li>
+                    <li>
+                        Will upgrade upon request
+                    </li>
+                    <li>
+                        Regular encrypted backups
+                    </li>
+                    <li>
+                        Fully isolated instance
+                    </li>
+                    <li>
+                        08-22 UTC/Mon-Sun <a href="{filename}support.markdown">support</a>
+                    </li>
+                    <li>
+                        Video response option
+                    </li>
+                    <li>
+                        <a href="https://mrsenko.onfastspring.com/additional-services-for-kiwi-tcms"
+                        data-fsc-item-path-value="additional-services-for-kiwi-tcms" data-fsc-action="Add, Checkout">
+                        Additional services
+                        </a> - 100 $/hr!
+                    </li>
                 </ul>
-                <a href="https://forms.gle/nsYd4hYZpGrWugQ97">Request</a>
+                <a href="https://mrsenko.onfastspring.com/kiwitcms-managed-hosting"
+                    data-fsc-item-path-value="kiwitcms-managed-hosting" data-fsc-action="Add, Checkout">
+                    Subscribe for 1500 $/mo
+                </a>
+            </div>
+
+            <div class="plans-modal">
+                The <i>"free beer"</i> version of Kiwi TCMS is available via
+                <code>docker pull kiwitcms/kiwi</code>.
+                This repository does not provide version tags!
             </div>
 
             <div class="plans-modal" id="plans-modal">
@@ -439,12 +372,8 @@
                         </li>
 
                         <li>
-                            Professional support is independent of hosting! You may chose a Private Tenant subscription
+                            Dedicated support is independent of hosting! You may chose a Private Tenant subscription
                             and still decide to host Kiwi TCMS internally
-                        </li>
-
-                        <li>
-                            All subscriptions are stackable giving you hosting/support flexibility
                         </li>
 
                         <li>
@@ -454,17 +383,6 @@
                                 subscription gudelines
                             </a>
                             for more info
-                        </li>
-
-                        <li>
-                            <em>Devel engagement</em> means that our team will start
-                            working on problems within the specified time frame after you contact
-                            <a href="{filename}support.markdown">support</a>
-                        </li>
-
-                        <li>
-                            We will try our best to estimate how long a particular task will take,
-                            however <em>Devel engagement</em> is not a completion deadline
                         </li>
 
                         <li>
