@@ -65,7 +65,7 @@ non-production instances
 --
 > Note that you can still deploy Kiwi TCMS with a 1x subscription inside organization
 > with thousands of testers. Or even no subscription at all. Do you really value your
-> testing infrastructure so low ?
+> testing infrastructure that low though?
 
 Ready ? [Explore subscriptions](/#subscriptions)!
 

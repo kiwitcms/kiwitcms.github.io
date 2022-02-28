@@ -47,7 +47,7 @@
 	--fa-caret: "\f0da";
 	--fa-caret-down: "\f0d7";
 	--fa-angle-right: "\f105";
-	--la-arrow-left: "\f104";
+	--fa-arrow-left: "\f060";
 	--la-arrow-right: "\f105";
 	--la-quote: "\f10d";
 	--la-twitter: "\f081";
@@ -142,6 +142,10 @@ ul.caret summary:before {
 	font-family: "Font Awesome 5 Free", "FontAwesome";
 	font-weight: 900;
 	margin-right: 5px;
+}
+
+ul.caret li.first:before {
+    content: var(--fa-arrow-left);
 }
 
 ul.caret details > ul > li:before{

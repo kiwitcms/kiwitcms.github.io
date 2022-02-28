@@ -23,6 +23,6 @@ where the whole community can help you and benefit from the solutions provided.*
 Customers with an active subscription:
 
 - **Email:** `kiwitcms-@-mrsenko.com`
-- *Working hours*: 09-17 UTC/Mon-Fri (Private Tenant subscribers), 09-21 UTC/Mon-Fri (Enterprise subscribers)
-- *Response time*: 24-72 hrs depending on subscription type
+- *Working hours*: Depending on [subscription type](/#subscriptions)
+- *Response time*: Depending on [subscription type](/#subscriptions)
 - *Requests must include your email/GitHub username used in the subscription*
