@@ -2,8 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Authors</title>
+        <title>Kiwi TCMS - Container Registry Credentials for Subscribers</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="are now fully automated; here's how to use them" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Container Registry Credentials for Subscribers">
+            <meta name="twitter:description" content="are now fully automated; here's how to use them">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/" />
+        <meta property="og:title" content="Container Registry Credentials for Subscribers" />
+        <meta property="article:published_time" content="2022-02-27 12:40:00+02:00">
+            <meta property="og:description" content="are now fully automated; here's how to use them">
+
+            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
         <link href="/theme/style/responsive-1440.css" rel="stylesheet">
@@ -89,15 +111,61 @@
         </nav>
 
         <!-- content -->
+    <section id="blog-article">
+        <h1 class="top-header">Container Registry Credentials for Subscribers</h1>
+        <h2 class="top-subheader">are now fully automated; here's how to use them</h2>
 
-    <section id="blog-list">
-        <h1 class="top-header">Blog authors</h1>
-        <a href="/blog/atodorov/" rel="bookmark">
-            <h2 class="top-subheader">Alexander Todorov (21)</h2>
-        </a>
-        <a href="/blog/kiwi-tcms-team/" rel="bookmark">
-            <h2 class="top-subheader">Kiwi TCMS Team (104)</h2>
-        </a>
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Sun 27 February 2022
+        </p>
+
+        <article class="content">
+            <p>Kiwi TCMS subscribers had to go through a manual process of registering
+a username with our container registry, <em>quay.io</em> and email support
+before they could access private docker images. This process is now fully
+automated!</p>
+<p><img alt="&quot;private credentials card&quot;" src="/images/private_docker_credentials.png" title="private credentials card"></p>
+<p>Credentials are automatically created upon subscription payment and configured for
+read-only access to respective repositories based on the type of subscription.
+You can find your credentials at the
+<a href="https://public.tenant.kiwitcms.org/github/marketplace/plans/">subscriptions page</a>,
+<code>PLUGINS -&gt; Subscriptions</code>. To authenticate try</p>
+<div class="highlight"><pre><span></span><code>$ docker login -u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span> -p <span class="s2">&quot;PASSWORD-TOKEN&quot;</span> quay.io
+<span class="c1"># or</span>
+$ <span class="nb">echo</span> <span class="s2">&quot;PASSWORD-TOKEN&quot;</span> <span class="p">|</span> docker login -u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span> --password-stdin quay.io
+</code></pre></div>
+
+
+<p>If you would like to have access to private container repositories for Kiwi TCMS
+checkout the <a href="/containers/">containers page</a> and
+<a href="/#subscriptions">subscribe</a>!</p>
+<p>Happy Testing!</p>
+        </article>
+    </section>
+
+    <section class="after-content">
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
+
+    <section class="after-content">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
     </section>
 
         <footer>
