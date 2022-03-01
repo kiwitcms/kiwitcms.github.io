@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2022-02-27T12:40:00+02:00</updated><entry><title>Container Registry Credentials for Subscribers</title><link href="/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/" rel="alternate"></link><published>2022-02-27T12:40:00+02:00</published><updated>2022-02-27T12:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-02-27:/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/</id><summary type="html">&lt;p&gt;Kiwi TCMS subscribers had to go through a manual process of registering
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2022-03-01T10:35:00+02:00</updated><entry><title>New and updated subscription plans for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2022/03/01/new-and-updated-subscription-plans-for-kiwi-tcms/" rel="alternate"></link><published>2022-03-01T10:35:00+02:00</published><updated>2022-03-01T10:35:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-03-01:/blog/kiwi-tcms-team/2022/03/01/new-and-updated-subscription-plans-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;An active Kiwi TCMS subscription ensures a sustainable future for
+all open source software maintained by the Kiwi TCMS team and
+provides its holder with access to software versions and certain
+level services. Given recent changes to
+&lt;a href="/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/"&gt;private container credentials&lt;/a&gt;
+we have refreshed our product and service definitions.&lt;/p&gt;
+&lt;h2&gt;New Self …&lt;/h2&gt;</summary><content type="html">&lt;p&gt;An active Kiwi TCMS subscription ensures a sustainable future for
+all open source software maintained by the Kiwi TCMS team and
+provides its holder with access to software versions and certain
+level services. Given recent changes to
+&lt;a href="/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/"&gt;private container credentials&lt;/a&gt;
+we have refreshed our product and service definitions.&lt;/p&gt;
+&lt;h2&gt;New Self Support subscription&lt;/h2&gt;
+&lt;p&gt;This is an entry-level subscription which provides read-only access to version tagged
+containers of upstream Kiwi TCMS. It is suitable for experimentation,
+very small teams, development against Kiwi TCMS and convenience during upgrades.&lt;/p&gt;
+&lt;p&gt;You are free to use any older or future versions of Kiwi TCMS available from
+the &lt;a href="/containers/"&gt;kiwitcms/version&lt;/a&gt; container repository!&lt;/p&gt;
+&lt;p&gt;This subscription plan is also available via
+&lt;a href="https://github.com/marketplace/kiwi-tcms/"&gt;GitHub Marketplace&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Private Tenant&lt;/h2&gt;
+&lt;p&gt;This is our most popular subscription type.&lt;/p&gt;
+&lt;p&gt;Starting today it also includes access
+to the &lt;a href="/containers/"&gt;kiwitcms/version&lt;/a&gt; container repository!
+This is suitable for teams who prefer to be hosting Kiwi TCMS on-premise instead of
+using the namespace provided under &lt;code&gt;*.tenant.kiwitcms.org&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This subscription plan is also available via
+&lt;a href="https://github.com/marketplace/kiwi-tcms/"&gt;GitHub Marketplace&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Everything else remains the same!&lt;/p&gt;
+&lt;h2&gt;Enterprise Subscription&lt;/h2&gt;
+&lt;p&gt;This is Kiwi TCMS tailored towards on-premise deployments in larger organizations.
+Starting today it also automatically includes 1x &lt;em&gt;Private Tenant&lt;/em&gt; which can be used
+for development or experiments.&lt;/p&gt;
+&lt;p&gt;Support availability has been extended by 2 hours in order to cover more geographic areas!&lt;/p&gt;
+&lt;p&gt;Future features coming to enterprise subscribers -
+tools for provisioning of Kiwi TCMS inside cloud environments and aarch64 containers.&lt;/p&gt;
+&lt;p&gt;Price has been increased to 400 $/mo.&lt;/p&gt;
+&lt;h2&gt;New Managed Hosting subscription&lt;/h2&gt;
+&lt;p&gt;This new offering is designed for the organizations which don't want to bother with provisioning
+containers, configuring DNS resolution, managing SSL certificates, regular upgrades and backups.
+The Kiwi TCMS team can do all of this for you and provide a fully isolated instance inside AWS.&lt;/p&gt;
+&lt;p&gt;Support availability has been extended by 2 days, covering Saturday and Sunday. When necessary
+&lt;em&gt;Managed Hosting&lt;/em&gt; subscribers have the option for video conferences with their support contact.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;All changes are effective immediately. Existing customers are granted access to everything
+that's new while billing changes are not applied.&lt;/p&gt;
+&lt;p&gt;If you prefer the "free beer" version of
+Kiwi TCMS it is available via &lt;code&gt;docker pull kiwitcms/kiwi&lt;/code&gt; - free to use
+and without any guarantees according to GPLv2.&lt;/p&gt;
+&lt;p&gt;Please consider &lt;a href="/#subscriptions"&gt;subscribing&lt;/a&gt; and help us make Kiwi TCMS better!&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Container Registry Credentials for Subscribers</title><link href="/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/" rel="alternate"></link><published>2022-02-27T12:40:00+02:00</published><updated>2022-02-27T12:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-02-27:/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/</id><summary type="html">&lt;p&gt;Kiwi TCMS subscribers had to go through a manual process of registering
 a username with our container registry, &lt;em&gt;quay.io&lt;/em&gt; and email support
 before they could access private docker images. This process is now fully
 automated!&lt;/p&gt;
