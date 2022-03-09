@@ -1,0 +1,151 @@
+Kiwi TCMS 11.2
+##############
+
+:headline: improvements, new API methods and aarch64 container images
+:date: 2022-03-09 12:20
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 11.2.
+
+**IMPORTANT:**
+This is a small release which contains several improvements, new API methods,
+internal refactoring and new translations! This is the first release to ship
+``aarch64`` container images!
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+
+    Supported upgrade paths::
+    
+        5.3   (or older) -> 5.3.1
+        5.3.1 (or newer) -> 6.0.1
+        6.0.1            -> 6.1
+        6.1              -> 6.1.1
+        6.1.1            -> 6.2 (or newer)
+
+---
+
+    Upstream container images (x86_64)::
+    
+        kiwitcms/kiwi   latest  bcc4c658440a    622MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 11.1
+----------------------------
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update django from 4.0.2 to 4.0.3
+- Update django-grappelli from 3.0.2 to 3.0.3
+- Update django-simple-captcha from 0.5.14 to 0.5.17
+- Update python-bugzilla from 3.1.0 to 3.2.0
+- Update python-gitlab from 3.1.1 to 3.2.0
+- Update node_modules/prismjs from 1.26.0 to 1.27.0
+- Add new command to perform a collection of post-upgrade tasks.
+  Kiwi TCMS admins are advised to replace
+  ``manage.py migrate`` with ``manage.py upgrade`` (Ivajlo Karabojkov)
+
+
+API
+~~~
+
+- New API method ``Category.create()``. Fixes
+  `Issue #2705 <https://github.com/kiwitcms/Kiwi/issues/2705>`_ (Erik Heeren)
+- New API method ``Classification.create()``. Fixes
+  `Issue #2705 <https://github.com/kiwitcms/Kiwi/issues/2705>`_ (Erik Heeren)
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Add docker build & push automation
+- Fix Bandit exclusion rule
+- Test and build on aarch64
+- Apply auto fixes fro pre-commit.ci
+- Apply auto fixes from Deepsource
+- Update versions of several GitHub Actions
+- Use the appropriate path to package.json for Dependabot
+- Remove old Telemetry link in menu to avoid confusion
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Bulgarian translation <https://crowdin.com/project/kiwitcms/bg#>`_
+- Updated `Japanese translation <https://crowdin.com/project/kiwitcms/ja#>`_
+- Updated `Chinese Traditional translation <https://crowdin.com/project/kiwitcms/zh-TW#>`_
+- Updated `Slovenian translation <https://crowdin.com/project/kiwitcms/sl#>`_
+- Updated `Spanish translation <https://crowdin.com/project/kiwitcms/es-ES#>`_
+
+
+Kiwi TCMS Enterprise v11.2-mt
+-----------------------------
+
+- Based on Kiwi TCMS v11.2
+- Update django-ses from 2.4.0 to 2.6.0
+- Update python3-saml from 1.13.0 to 1.14.0
+- Revert "Use django.contrib.staticfiles.storage from Django==3.2.12".
+  Instead use the implementation from latest Django version. Closes
+  `Issue #140 <https://github.com/kiwitcms/enterprise/issues/140>`_
+- Start building kiwitcms/enterprise on aarch64
+- Add changelog check & docker release automation
+- Add test for PSA login URLs on login page. References
+  `Issue #83 <https://github.com/kiwitcms/enterprise/issues/83>`_
+- Add SAML & Azure AD logo images
+- Update GitHub Actions
+- Hard-code testing with Keycloak 16.1.1 to workaround significant differences
+  with Keycloak v17 container
+
+    Private images::
+
+        quay.io/kiwitcms/enterprise         11.2-mt (aarch64)   fe5e869e36f6    09 Mar 2022    890MB
+        quay.io/kiwitcms/enterprise         11.2-mt (x86_64)    134320d5fb7c    09 Mar 2022    841MB
+        quay.io/kiwitcms/version            11.2 (aarch64)      3b782830d19d    09 Mar 2022    665MB
+        quay.io/kiwitcms/version            11.2 (x86_64)       bcc4c658440a    09 Mar 2022    620MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then execute the commands::
+
+    cd path/containing/docker-compose/
+    docker-compose down
+    docker-compose pull
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py upgrade
+
+Refer to
+`our documentation <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading>`_
+for more details!
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
