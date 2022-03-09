@@ -1,5 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-03-01T10:35:00+02:00</updated><entry><title>New and updated subscription plans for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2022/03/01/new-and-updated-subscription-plans-for-kiwi-tcms/" rel="alternate"></link><published>2022-03-01T10:35:00+02:00</published><updated>2022-03-01T10:35:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-03-01:/blog/kiwi-tcms-team/2022/03/01/new-and-updated-subscription-plans-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;An active Kiwi TCMS subscription ensures a sustainable future for
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-03-09T12:20:00+02:00</updated><entry><title>Kiwi TCMS 11.2</title><link href="/blog/kiwi-tcms-team/2022/03/09/kiwi-tcms-112/" rel="alternate"></link><published>2022-03-09T12:20:00+02:00</published><updated>2022-03-09T12:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-03-09:/blog/kiwi-tcms-team/2022/03/09/kiwi-tcms-112/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.2.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a small release which contains several improvements, new API methods,
+internal refactoring and new translations! This is the first release to ship
+&lt;tt class="docutils literal"&gt;aarch64&lt;/tt&gt; container images!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported upgrade paths …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.2.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a small release which contains several improvements, new API methods,
+internal refactoring and new translations! This is the first release to ship
+&lt;tt class="docutils literal"&gt;aarch64&lt;/tt&gt; container images!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  bcc4c658440a    622MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-11-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 11.1&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django from 4.0.2 to 4.0.3&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 3.0.2 to 3.0.3&lt;/li&gt;
+&lt;li&gt;Update django-simple-captcha from 0.5.14 to 0.5.17&lt;/li&gt;
+&lt;li&gt;Update python-bugzilla from 3.1.0 to 3.2.0&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 3.1.1 to 3.2.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/prismjs from 1.26.0 to 1.27.0&lt;/li&gt;
+&lt;li&gt;Add new command to perform a collection of post-upgrade tasks.
+Kiwi TCMS admins are advised to replace
+&lt;tt class="docutils literal"&gt;manage.py migrate&lt;/tt&gt; with &lt;tt class="docutils literal"&gt;manage.py upgrade&lt;/tt&gt; (Ivajlo Karabojkov)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New API method &lt;tt class="docutils literal"&gt;Category.create()&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2705"&gt;Issue #2705&lt;/a&gt; (Erik Heeren)&lt;/li&gt;
+&lt;li&gt;New API method &lt;tt class="docutils literal"&gt;Classification.create()&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2705"&gt;Issue #2705&lt;/a&gt; (Erik Heeren)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add docker build &amp;amp; push automation&lt;/li&gt;
+&lt;li&gt;Fix Bandit exclusion rule&lt;/li&gt;
+&lt;li&gt;Test and build on aarch64&lt;/li&gt;
+&lt;li&gt;Apply auto fixes fro pre-commit.ci&lt;/li&gt;
+&lt;li&gt;Apply auto fixes from Deepsource&lt;/li&gt;
+&lt;li&gt;Update versions of several GitHub Actions&lt;/li&gt;
+&lt;li&gt;Use the appropriate path to package.json for Dependabot&lt;/li&gt;
+&lt;li&gt;Remove old Telemetry link in menu to avoid confusion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/es-ES#"&gt;Spanish translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v11-2-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v11.2-mt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v11.2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-ses from 2.4.0 to 2.6.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update python3-saml from 1.13.0 to 1.14.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Revert &amp;quot;Use django.contrib.staticfiles.storage from Django==3.2.12&amp;quot;.
+Instead use the implementation from latest Django version. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/140"&gt;Issue #140&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Start building kiwitcms/enterprise on aarch64&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add changelog check &amp;amp; docker release automation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add test for PSA login URLs on login page. References
+&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/83"&gt;Issue #83&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add SAML &amp;amp; Azure AD logo images&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update GitHub Actions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Hard-code testing with Keycloak 16.1.1 to workaround significant differences
+with Keycloak v17 container&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Private images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/enterprise         11.2-mt (aarch64)   fe5e869e36f6    09 Mar 2022    890MB
+quay.io/kiwitcms/enterprise         11.2-mt (x86_64)    134320d5fb7c    09 Mar 2022    841MB
+quay.io/kiwitcms/version            11.2 (aarch64)      3b782830d19d    09 Mar 2022    665MB
+quay.io/kiwitcms/version            11.2 (x86_64)       bcc4c658440a    09 Mar 2022    620MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then execute the commands:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py upgrade
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>New and updated subscription plans for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2022/03/01/new-and-updated-subscription-plans-for-kiwi-tcms/" rel="alternate"></link><published>2022-03-01T10:35:00+02:00</published><updated>2022-03-01T10:35:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-03-01:/blog/kiwi-tcms-team/2022/03/01/new-and-updated-subscription-plans-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;An active Kiwi TCMS subscription ensures a sustainable future for
 all open source software maintained by the Kiwi TCMS team and
 provides its holder with access to software versions and certain
 level services. Given recent changes to
