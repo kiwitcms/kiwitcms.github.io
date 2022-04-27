@@ -1,0 +1,151 @@
+Kiwi TCMS 11.3
+##############
+
+:headline: security, improvements, new features and translations
+:date: 2022-04-27 20:35
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 11.3 which is the 100th tagged version
+in our git repository!
+
+**IMPORTANT:**
+This is a small release which contains security related updates, several improvements,
+bug fixes and new translations! Most importantly the kiwitcms-tenants plugin now supports
+tenant groups and permissions!
+
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+
+    Supported upgrade paths::
+    
+        5.3   (or older) -> 5.3.1
+        5.3.1 (or newer) -> 6.0.1
+        6.0.1            -> 6.1
+        6.1              -> 6.1.1
+        6.1.1            -> 6.2 (or newer)
+
+---
+
+    Upstream container images (x86_64)::
+    
+        kiwitcms/kiwi   latest  58dcfa91e816    629MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 11.2
+----------------------------
+
+Security
+~~~~~~~~
+
+- Update django from 4.0.3 to 4.0.4, see
+  https://docs.djangoproject.com/en/4.0/releases/4.0.4/
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update bleach from 4.1.0 to 5.0.0
+- Update django-tree-queries from 0.7.0 to 0.9.0
+- Update jira from 3.1.1 to 3.2.0
+- Update pygments from 2.11.2 to 2.12.0
+- Update python-gitlab from 3.2.0 to 3.3.0
+- Update tzdata from 2021.5 to 2022.1
+- Update node_modules/marked from 4.0.12 to 4.0.14
+- Update node_modules/prismjs from 1.27.0 to 1.28.0
+- Allow overriding of Azure Boards API version. Closes
+  `Issue #2717 <https://github.com/kiwitcms/Kiwi/issues/2717>`_
+- If ``tenant_groups`` is enabled then ``refresh_permissions`` command will
+  update default tenant groups too
+- Document tenant-group permissions
+
+
+Settings
+~~~~~~~~
+
+- New setting ``AZURE_BOARDS_API_VERSION``, defaults to 6.0. Can be overriden
+  directly in settings or via environment variable with the same name
+
+
+Bug fixes
+~~~~~~~~~
+
+- Patch for repositories under GitLab subgroups. Fixes
+  `Issue #2643 <https://github.com/kiwitcms/Kiwi/issues/2643>`_ (@cmeissl)
+- Don't crash if a comment user has been removed. Fixes
+  `KIWI-TCMS-HZ <https://sentry.io/organizations/kiwitcms/issues/3086416250/>`_
+
+
+Refactoring
+~~~~~~~~~~~
+
+- Split Users & Groups menu items under ADMIN entry in navigation
+- [pre-commit.ci] updates
+- pylint adjustments
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Chinese Simplified translation <https://crowdin.com/project/kiwitcms/zh-CN#>`_
+
+
+Kiwi TCMS Enterprise v11.3-mt
+-----------------------------
+
+- Based on Kiwi TCMS v11.3
+- Update django-ses from 2.6.0 to 3.0.1
+- Update kiwitcms-tenants from 1.11.0 to 2.1.0 for
+  tenant groups support
+
+    Private images::
+
+        quay.io/kiwitcms/enterprise         11.3-mt (aarch64)   42fd6e3b45fc    27 Apr 2022     894MB
+        quay.io/kiwitcms/enterprise         11.3-mt (x86_64)    f2b22f3037ff    27 Apr 2022     846MB
+        quay.io/kiwitcms/version            11.3 (aarch64)      e9f34a86cd0b    27 Apr 2022     671MB
+        quay.io/kiwitcms/version            11.3 (x86_64)       58dcfa91e816    27 Apr 2022     627MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then execute the commands::
+
+    cd path/containing/docker-compose/
+    docker-compose down
+    docker-compose pull
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py upgrade
+
+Refer to
+`our documentation <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading>`_
+for more details!
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
