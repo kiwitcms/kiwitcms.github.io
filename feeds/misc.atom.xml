@@ -1,5 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2022-03-09T12:20:00+02:00</updated><entry><title>Kiwi TCMS 11.2</title><link href="/blog/kiwi-tcms-team/2022/03/09/kiwi-tcms-112/" rel="alternate"></link><published>2022-03-09T12:20:00+02:00</published><updated>2022-03-09T12:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-03-09:/blog/kiwi-tcms-team/2022/03/09/kiwi-tcms-112/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.2.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2022-04-27T20:35:00+03:00</updated><entry><title>Kiwi TCMS 11.3</title><link href="/blog/kiwi-tcms-team/2022/04/27/kiwi-tcms-113/" rel="alternate"></link><published>2022-04-27T20:35:00+03:00</published><updated>2022-04-27T20:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-04-27:/blog/kiwi-tcms-team/2022/04/27/kiwi-tcms-113/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.3 which is the 100th tagged version
+in our git repository!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a small release which contains security related updates, several improvements,
+bug fixes and new translations! Most importantly the kiwitcms-tenants plugin now supports
+tenant groups and permissions!&lt;/p&gt;
+&lt;p&gt;You can …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.3 which is the 100th tagged version
+in our git repository!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a small release which contains security related updates, several improvements,
+bug fixes and new translations! Most importantly the kiwitcms-tenants plugin now supports
+tenant groups and permissions!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  58dcfa91e816    629MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-11-2"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 11.2&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django from 4.0.3 to 4.0.4, see
+&lt;a class="reference external" href="https://docs.djangoproject.com/en/4.0/releases/4.0.4/"&gt;https://docs.djangoproject.com/en/4.0/releases/4.0.4/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update bleach from 4.1.0 to 5.0.0&lt;/li&gt;
+&lt;li&gt;Update django-tree-queries from 0.7.0 to 0.9.0&lt;/li&gt;
+&lt;li&gt;Update jira from 3.1.1 to 3.2.0&lt;/li&gt;
+&lt;li&gt;Update pygments from 2.11.2 to 2.12.0&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 3.2.0 to 3.3.0&lt;/li&gt;
+&lt;li&gt;Update tzdata from 2021.5 to 2022.1&lt;/li&gt;
+&lt;li&gt;Update node_modules/marked from 4.0.12 to 4.0.14&lt;/li&gt;
+&lt;li&gt;Update node_modules/prismjs from 1.27.0 to 1.28.0&lt;/li&gt;
+&lt;li&gt;Allow overriding of Azure Boards API version. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2717"&gt;Issue #2717&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;If &lt;tt class="docutils literal"&gt;tenant_groups&lt;/tt&gt; is enabled then &lt;tt class="docutils literal"&gt;refresh_permissions&lt;/tt&gt; command will
+update default tenant groups too&lt;/li&gt;
+&lt;li&gt;Document tenant-group permissions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New setting &lt;tt class="docutils literal"&gt;AZURE_BOARDS_API_VERSION&lt;/tt&gt;, defaults to 6.0. Can be overriden
+directly in settings or via environment variable with the same name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Patch for repositories under GitLab subgroups. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2643"&gt;Issue #2643&lt;/a&gt; (&amp;#64;cmeissl)&lt;/li&gt;
+&lt;li&gt;Don't crash if a comment user has been removed. Fixes
+&lt;a class="reference external" href="https://sentry.io/organizations/kiwitcms/issues/3086416250/"&gt;KIWI-TCMS-HZ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Split Users &amp;amp; Groups menu items under ADMIN entry in navigation&lt;/li&gt;
+&lt;li&gt;[pre-commit.ci] updates&lt;/li&gt;
+&lt;li&gt;pylint adjustments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v11-3-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v11.3-mt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v11.3&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-ses from 2.6.0 to 3.0.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-tenants from 1.11.0 to 2.1.0 for
+tenant groups support&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Private images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/enterprise         11.3-mt (aarch64)   42fd6e3b45fc    27 Apr 2022     894MB
+quay.io/kiwitcms/enterprise         11.3-mt (x86_64)    f2b22f3037ff    27 Apr 2022     846MB
+quay.io/kiwitcms/version            11.3 (aarch64)      e9f34a86cd0b    27 Apr 2022     671MB
+quay.io/kiwitcms/version            11.3 (x86_64)       58dcfa91e816    27 Apr 2022     627MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then execute the commands:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py upgrade
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS 11.2</title><link href="/blog/kiwi-tcms-team/2022/03/09/kiwi-tcms-112/" rel="alternate"></link><published>2022-03-09T12:20:00+02:00</published><updated>2022-03-09T12:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-03-09:/blog/kiwi-tcms-team/2022/03/09/kiwi-tcms-112/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.2.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 This is a small release which contains several improvements, new API methods,
 internal refactoring and new translations! This is the first release to ship

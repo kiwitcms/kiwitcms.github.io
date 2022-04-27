@@ -94,6 +94,137 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/02/12/kiwi-tcms-653/" rel="bookmark" title="Permalink to Kiwi TCMS 6.5.3">
+                <h1 class="top-header">Kiwi TCMS 6.5.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 12 February 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 6.5.3! This is a
+security, improvement and bug-fix update that includes new
+versions of Django, includes several database migrations and fixes several bugs.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  b9355cf85833    1.039 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-5">
+<h2>Changes since Kiwi TCMS 6.5</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 2.1.5 to 2.1.7. Fixes CVE-2019-6975:
+Memory exhaustion in <tt class="docutils literal">django.utils.numberformat.format()</tt></li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update mysqlclient from 1.4.1 to 1.4.2</li>
+<li>Multiple template strings marked as translatable (Christophe CHAUVET)</li>
+</ul>
+</div>
+<div class="section" id="database-migrations">
+<h3>Database migrations</h3>
+<ul class="simple">
+<li>Email notifications for TestPlan and TestCase now default to True</li>
+<li>Remove <tt class="docutils literal">TestPlanEmailSettings.is_active</tt> field</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>New method <tt class="docutils literal">Bug.report()</tt>, References
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/18">Issue #18</a></li>
+<li>Method <tt class="docutils literal">Bug.create()</tt> now accepts parameter <tt class="docutils literal">auto_report=False</tt></li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Show the user who actually tested a TestCase instead of hard-coded value. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/765">Issue #765</a></li>
+<li>Properly handle pagination button states and page numbers. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/767">Issue #767</a></li>
+<li>Add TestCase to TestPlan if creating from inside a TestPlan. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/777">Issue #777</a></li>
+<li>Made TestCase text more readable. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/764">Issue #764</a></li>
+<li>Include missing templates and static files from PyPI tarball</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Use <tt class="docutils literal">find_packages()</tt> when building PyPI tarball</li>
+<li>Install Kiwi TCMS as tarball package inside Docker image instead of copying
+from the source directory</li>
+<li>Pylint fixes</li>
+<li>Remove <tt class="docutils literal">testcases.views.ReturnActions()</tt> which is now unused</li>
+<li>Refactor New TestCase to class-based view and add tests</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/02/01/kiwi-tcms-65/" rel="bookmark" title="Permalink to Kiwi TCMS 6.5">
                 <h1 class="top-header">Kiwi TCMS 6.5</h1>
             </a>
@@ -2677,45 +2808,6 @@ has also been updated so you can explore the new version.</p>
 </code></pre></div>
 
 
-<p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/" rel="bookmark" title="Permalink to Kiwi TCMS Python API client">
-                <h1 class="top-header">Kiwi TCMS Python API client</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 08 December 2017
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We are happy to announce the first official release of the
-<a href="https://pypi.org/project/tcms-api/">tcms-api</a> package!
-This is a Python client for Kiwi TCMS.</p>
-<p>There are couple of main distinctions in this module:</p>
-<ul>
-<li>mutable vs. immutable types of objects</li>
-<li>high-level class interface vs. low-level XML-RPC interface</li>
-</ul>
-<p>For more information you should check-out the documentation
-and the <code>script_examples/</code> directory.</p>
-<p>At the moment the API client is both Python2 and Python3 compatible,
-however it is tested only under Python3!</p>
-<h2>A bit of history</h2>
-<p>The original API client, like Kiwi TCMS itself began its origin under a
-different name and was created primarily by Petr Splichal. Since then
-Kiwi TCMS has evolved and we've decided that the API module needs to evolve
-as well. At the moment the tcms-api module is a bit rough around the edges,
-its documentation is not really the best one and it's currently advisable
-to spend some time reading the code to figure out how everything works.</p>
-<p>We're going to improve on all of these areas and we need help from the community
-to do so! Please download the <code>tcms-api</code> module, check it out, write and contribute
-example scripts (you can use the demo site for this), send us bug reports, suggestions
-and pull requests!</p>
 <p>Happy testing!</p>
         </div>
     </article>
