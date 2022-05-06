@@ -32,11 +32,6 @@ anticipated support needs, see below.
 > Our mission is to transform the testing process inside your organization.
 > You don't have to do it alone! Let us help you!
 
---
-> Note that Kiwi TCMS is still working to clearly define our value proposition
-> and support offering for large organizations!
-> [Tell us]({filename}pages/support.markdown) what are you looking for!
-
 
 Number of testers
 -----------------
