@@ -1,7 +1,7 @@
 New versions of automation framework plugins
 ############################################
 
-:headline: future API compati
+:headline: improvements & bug fixes
 :date: 2022-05-18 15:30
 :comments: true
 :tags: releases
