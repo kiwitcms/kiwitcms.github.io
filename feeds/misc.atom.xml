@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2022-04-27T20:35:00+03:00</updated><entry><title>Kiwi TCMS 11.3</title><link href="/blog/kiwi-tcms-team/2022/04/27/kiwi-tcms-113/" rel="alternate"></link><published>2022-04-27T20:35:00+03:00</published><updated>2022-04-27T20:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-04-27:/blog/kiwi-tcms-team/2022/04/27/kiwi-tcms-113/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.3 which is the 100th tagged version
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2022-05-18T15:30:00+03:00</updated><entry><title>New versions of automation framework plugins</title><link href="/blog/kiwi-tcms-team/2022/05/18/new-versions-of-automation-framework-plugins/" rel="alternate"></link><published>2022-05-18T15:30:00+03:00</published><updated>2022-05-18T15:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-05-18:/blog/kiwi-tcms-team/2022/05/18/new-versions-of-automation-framework-plugins/</id><summary type="html">&lt;p&gt;Kiwi TCMS is pleased to announce new versions of our plugins for different
+test automation frameworks:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin"&gt;tap-plugin&lt;/a&gt; - v11.3&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin"&gt;junit.xml-plugin&lt;/a&gt; - v11.3&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;Robot Framework plugin&lt;/a&gt; - v11.2&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/django-plugin"&gt;Django test runner plugin&lt;/a&gt; - v11.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These new versions are compatible with Kiwi TCMS v11.x and include several improvements
+and bug …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS is pleased to announce new versions of our plugins for different
+test automation frameworks:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin"&gt;tap-plugin&lt;/a&gt; - v11.3&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin"&gt;junit.xml-plugin&lt;/a&gt; - v11.3&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;Robot Framework plugin&lt;/a&gt; - v11.2&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/django-plugin"&gt;Django test runner plugin&lt;/a&gt; - v11.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These new versions are compatible with Kiwi TCMS v11.x and include several improvements
+and bug fixes. Check-out the pages above for individual information and instructions on
+how to use them.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS 11.3</title><link href="/blog/kiwi-tcms-team/2022/04/27/kiwi-tcms-113/" rel="alternate"></link><published>2022-04-27T20:35:00+03:00</published><updated>2022-04-27T20:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-04-27:/blog/kiwi-tcms-team/2022/04/27/kiwi-tcms-113/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.3 which is the 100th tagged version
 in our git repository!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 This is a small release which contains security related updates, several improvements,

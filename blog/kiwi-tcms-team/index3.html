@@ -100,6 +100,63 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/08/11/qgis-has-chosen-kiwi-tcms/" rel="bookmark" title="Permalink to QGIS has chosen Kiwi TCMS">
+                <h1 class="top-header">QGIS has chosen Kiwi TCMS</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 11 August 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We are happy to announce that <a href="https://qgis.org">QGIS</a> has chosen Kiwi TCMS
+for the basis of their <em>Quality Assurance methodology and infrastructure</em>
+improvement program!
+Kiwi TCMS will play a central role in storing test case definitions,
+organizing test cycles, and assigning and tracking test executions by testers
+from the QGIS community.</p>
+<div class="member-bio" style="margin-top: 2vh">
+    <img src="/images/customers/qgis-color.png" style="float:left; margin-right: 1vw">
+
+    <p>
+        QGIS is a free and open source geographic information system which contains
+        desktop, server, web and mobile applications for various operating systems.
+        It is an established project with very large and diverse community and also
+        one of the very well known open source GIS systems.
+    </p>
+</div>
+
+<p>The proposal
+<a href="https://github.com/qgis/QGIS-Enhancement-Proposals/issues/180">QEP#180</a> is the
+highest voted proposal in the
+<a href="http://blog.qgis.org/2020/07/10/qgis-grant-programme-2020-results/">2020 QGIS Grant Program</a>
+and has been awarded a budget of 5000€!
+This grant will allow the proponents to spend significantly more time setting up the
+infrastructure and planning a methodology for manual testing.</p>
+<h2>Scope of proposal</h2>
+<p><a href="https://github.com/qgis/QGIS-Enhancement-Proposals/issues/180">QEP#180</a>
+aims to create the necessary infrastructure and methodology to organize and
+encourage systematic testing before each QGIS release:</p>
+<ul>
+<li>Setup a test management system to organize test cycles, assign and track tests execution;</li>
+<li>Elaborate and document a methodology to execute testing to help testers;</li>
+<li>Resurrect and move the tester plugin to QGIS repositories. Publish it in the QGIS official repository</li>
+<li>Create an initial set of relevant test cases;</li>
+<li>Organize and execute the initial test cases for the next releases.</li>
+</ul>
+<p>This effort will steer members &amp; volunteers of the QGIS community towards a more systematic
+and organized testing during a feature freeze period before a release. The focus here
+is on integration testing, manual &amp; semi-automated workflows for important functionality
+that should never regress and is hard or impossible to cover via unit tests.</p>
+<p>The proposal is lead by Alexandre Neto, Giovanni Manghi and Alexander Bruy!</p>
+<p><br>
+On behalf of the Kiwi TCMS community welcome aboard and happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/08/06/kiwi-tcms-enterprise-v852-mt/" rel="bookmark" title="Permalink to Kiwi TCMS Enterprise v8.5.2-mt">
                 <h1 class="top-header">Kiwi TCMS Enterprise v8.5.2-mt</h1>
             </a>
@@ -2017,170 +2074,6 @@ received an email notification from GitHub about this.</p>
 cancel it until we're able to deploy the improved integration on
 GitHub Marketplace again.</p>
 <p>Thank you!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/" rel="bookmark" title="Permalink to Kiwi TCMS 7.3">
-                <h1 class="top-header">Kiwi TCMS 7.3</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 16 January 2020
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 7.3!</p>
-<p><strong>IMPORTANT:</strong> this is a critical security update for
-<strong>CVE-2019-19844: Potential account hijack via password reset form!</strong></p>
-<p>Also migrates to Django 3.0 and includes several other improvement
-and bug-fixes!</p>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  4026ee62e488    556 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-7-2">
-<h2>Changes since Kiwi TCMS 7.2</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Update Django from 2.2.8 to 3.0.2</li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update python-gitlab from 1.13.0 to 1.15.0</li>
-<li>Update pygithub from 1.44.1 to 1.45</li>
-<li>Update django-grappelli from 2.13.2 to 2.13.3</li>
-<li>Bump django-uuslug from 1.1.9 to 1.2.0</li>
-<li>Bump django-attachments from 1.4.1 to 1.5</li>
-<li>Bump django-vinaigrette from 1.2.0 to 2.0.1</li>
-<li>Update marked to version 0.8.0</li>
-<li>Update prismjs to version 1.19.0</li>
-<li>Generalize existing <tt class="docutils literal">kiwitcms.telemetry.plugins</tt> handling code by
-renaming the entry point to <tt class="docutils literal">kiwitcms.plugins</tt></li>
-<li>Refactor views to class based (Svetlozar Stoyanov)</li>
-<li>Teach Kiwi TCMS to automatically report bugs to GitHub when the user
-selects such action. Fall back to opening a new browser window for
-manually entering the bug if something goes wrong</li>
-</ul>
-</div>
-<div class="section" id="database">
-<h3>Database</h3>
-<ul class="simple">
-<li>When migrating from the older <tt class="docutils literal">Bug</tt> model to <tt class="docutils literal">LinkReference</tt> skip
-bugs which are attached directly to test cases instead of test executions.
-See <a class="reference external" href="https://stackoverflow.com/questions/59321756/">SO #59321756</a></li>
-<li>Remove <tt class="docutils literal">AutoField.max_length</tt> because it is ignored by Django 3</li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li><tt class="docutils literal">TestCase.update()</tt> method now allows to update the <tt class="docutils literal">author</tt> field. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/630">Issue #630</a></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Modify template pass <tt class="docutils literal">object</tt> as <tt class="docutils literal">test_plan</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1307">Issue #1307</a> (Ed Oswald S. Go)</li>
-<li>Enable version selection in test plan search page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1276">Issue #1276</a></li>
-<li>Apply percentage rounding for completed test executions. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1230">Issue #1230</a></li>
-<li>Fix a logical bug in conditional expression when deciding whether or not
-reporting bugs to selected issue tracker is disabled</li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Add code of conduct. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1185">Issue #1185</a> (Rosen Sasov)</li>
-<li>Add test for <tt class="docutils literal">KIWI_DONT_ENFORSE_HTTPS</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1274">Issue #1274</a></li>
-<li>Replace <tt class="docutils literal">ugettext_lazy</tt> with <tt class="docutils literal">gettext_lazy</tt> for Django 3</li>
-<li>Remove <tt class="docutils literal">BaseCaseSearchForm.bug_id</tt> field</li>
-<li>Refactor testcase edit view to class-based</li>
-<li>Happy New Year pylint</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/vi#">Vietnamese translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="github-integration">
-<h2>GitHub integration</h2>
-<p>The hosted version of Kiwi TCMS ships with additional GitHub integration. See
-<a class="reference external" href="/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/">GitHub App announcement</a> and
-<a class="reference external" href="https://github.com/kiwitcms/github-app/blob/master/README.rst">github-app</a>
-for more information!</p>
-</div>
-<div class="section" id="upcoming-conferences">
-<h2>Upcoming conferences</h2>
-<p>The next two events we are going to participate are:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://devconfcz2020a.sched.com/speaker/a.sankov96">DevConf.CZ, Jan 24-26, Brno</a>
-where Anton Sankov will be a speaker</li>
-<li><a class="reference external" href="/blog/kiwi-tcms-team/2019/11/26/kiwi-tcms-is-going-to-fosdem-2020/">FOSDEM, Feb 1-2, Brussels</a>
-where you can meet with the entire team</li>
-</ul>
-<p>If you are around come and say &quot;Happy testing&quot;!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd path/containing/docker-compose/
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
-The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:</p>
-<pre class="literal-block">
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-</pre>
-<p>Happy testing!</p>
-</div>
-
         </div>
     </article>
 
