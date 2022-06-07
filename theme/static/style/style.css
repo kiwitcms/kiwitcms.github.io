@@ -55,6 +55,7 @@
 	--la-facebook: "\f082";
 	--la-youtube: "\f431";
 	--la-mail: "\f0e0";
+	--la-reddit: "\f1a2";
 	--fa-info: "\f05a";
 	--la-close: "\f00d";
 	--fa-link: "\f0c1";
@@ -919,7 +920,7 @@ footer .fl-yt i:before {
 }
 footer .fl-fb i:before {
 	font-family: "Line Awesome Brands";
-	content: var(--la-facebook);
+	content: var(--la-reddit);
 }
 footer .mail i:before {
 	content: var(--la-mail);
