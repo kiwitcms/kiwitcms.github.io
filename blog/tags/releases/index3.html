@@ -94,6 +94,139 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/04/06/kiwi-tcms-67/" rel="bookmark" title="Permalink to Kiwi TCMS 6.7">
+                <h1 class="top-header">Kiwi TCMS 6.7</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sat 06 April 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 6.7!
+This is a small improvement and bug-fix update.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  702a78976de7    993.5 MB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-6">
+<h2>Changes since Kiwi TCMS 6.6</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 2.1.7 to 2.2</li>
+<li>Update markdown from 3.0.1 to 3.1</li>
+<li>Update psycopg2 from 2.7.7 to 2.8</li>
+<li>Update pygithub from 1.43.5 to 1.43.6</li>
+<li>Update bleach-whitelist from 0.0.9 to 0.0.10</li>
+<li>Update marked(.js) to version 0.6.2</li>
+<li>Support arbitrary depth for <tt class="docutils literal">MENU_ITEMS</tt> setting</li>
+<li>Support auto-discovery of 3rd party Telemetry plugins, see
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/telemetry/index.html">documentation</a></li>
+</ul>
+</div>
+<div class="section" id="database-migrations">
+<h3>Database migrations</h3>
+<ul class="simple">
+<li>Rename <tt class="docutils literal">TestCaseRun</tt> to <tt class="docutils literal">TestExecution</tt> including renaming existing
+permissions</li>
+<li>Rename <tt class="docutils literal">TestCaseRunStatus</tt> to <tt class="docutils literal">TestExecutionStatus</tt></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Rename <tt class="docutils literal">TestCaseRun.*</tt> to <tt class="docutils literal">TestExecution.*</tt></li>
+<li>Rename <tt class="docutils literal">TestCaseRunStatus.*</tt> to <tt class="docutils literal">TestExecution.*</tt></li>
+<li>This version keeps the old names for backwards compatibility reasons but they
+will be removed in
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/889">Issue #889</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Prompt user before deleting attachments. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/867">Issue #867</a> (Martin Jordanov)</li>
+<li><tt class="docutils literal">email_case_deletion()</tt> format error fixed so notifications when
+test cases are deleted are not sent (Rik)</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Remove unused images</li>
+<li>Install <tt class="docutils literal">node_modules/</tt> under <tt class="docutils literal">tcms/</tt> and include it inside PyPI tarball</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="native-junit-5-plugin">
+<h2>Native JUnit 5 plugin</h2>
+<p>Our team is happy to announce the availability of
+<a class="reference external" href="https://github.com/kiwitcms/junit-plugin/">kiwitcms-junit-plugin</a>.
+This is a native JUnit 5 plugin which will read the results from your
+automated test suite and send them back to Kiwi TCMS.</p>
+<p>Version 1.0.3 and the latest changes in master branch are still to be considered
+Beta quality. They are available for early preview and feedback.</p>
+<p>Many thanks to <a class="reference external" href="https://github.com/apetkova">Aneta Petkova</a> who is the
+main contributor behind this plugin!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/03/19/kiwi-tcms-66/" rel="bookmark" title="Permalink to Kiwi TCMS 6.6">
                 <h1 class="top-header">Kiwi TCMS 6.6</h1>
             </a>
@@ -2803,73 +2936,6 @@ older releases due to the massive ammount of changes in the RPC layer.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">cd</span> <span class="nv">Kiwi</span><span class="o">/</span>
 <span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">down</span>
 <span class="nv">docker</span> <span class="nv">pull</span> <span class="nv">kiwitcms</span><span class="o">/</span><span class="nv">kiwi</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">up</span> <span class="o">-</span><span class="nv">d</span>
-<span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">it</span> <span class="nv">kiwi_web</span> <span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span> <span class="nv">migrate</span>
-</code></pre></div>
-
-
-<p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.50">
-                <h1 class="top-header">Kiwi TCMS version 3.50</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 25 January 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 3.50
-and the corresponding tcms-api version 1.5.1! This is a bug-fix and
-enhancement release and we advise you to upgrade as soon as possible!</p>
-<h2>Changes since Kiwi TCMS 3.49</h2>
-<h3>Enhancements and bug fixes</h3>
-<ul>
-<li>Update documentation for XML-RPC and positional arguments, translations,
-  environment groups</li>
-<li>Enable translations. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/129">Issue #129</a></li>
-<li>Register models for DB translations. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/182">Issue #182</a></li>
-<li>New German translations (@xbln)</li>
-<li>Require django-attachments&gt;=1.3 and restore attachments count in tabs</li>
-<li>Fix missing tag names in TestPlan page</li>
-<li>Hide admin forms for some models not supposed to be edited by users. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/174">Issue #174</a></li>
-<li>Use django-grappelli for the admin templates: modern look and feel and
-  less template files overridden by Kiwi TCMS</li>
-<li>Load values for default property in TestRun 'Add Property' dialog. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/142">Issue #142</a></li>
-<li>Correctly find property ID when renaming environment properties. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/167">Issue #167</a></li>
-<li>Convert request body to string. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/177">Issue #177</a></li>
-</ul>
-<h3>Refactoring</h3>
-<ul>
-<li>Remove batch tag Add/Remove sub-menu in TestPlan view (Anton Sankov)</li>
-<li>Remove Edit tag button in Tag tab (Anton Sankov)</li>
-<li>Remove template functions. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/107">Issue #107</a></li>
-<li>Remove custom HttpJSONResponse classes</li>
-<li>Remove unused and duplicate code</li>
-</ul>
-<h2>tcms-api changes since 1.5.0</h2>
-<ul>
-<li>Fix order of TestCaseRun statuses. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/184">Issue #184</a></li>
-</ul>
-<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cd</span> <span class="nv">Kiwi</span><span class="o">/</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">down</span>
-<span class="nv">make</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">image</span>
 <span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span> <span class="nv">up</span> <span class="o">-</span><span class="nv">d</span>
 <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">it</span> <span class="nv">kiwi_web</span> <span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span> <span class="nv">migrate</span>
 </code></pre></div>

@@ -94,6 +94,61 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/08/09/kiwi-tcms-conference-presence-aw2019/" rel="bookmark" title="Permalink to Kiwi TCMS conference presence, AW2019">
+                <h1 class="top-header">Kiwi TCMS conference presence, AW2019</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Fri 09 August 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Your favorite open source test case management system is going on tour again.
+During the next several months we will be at:</p>
+<ul>
+<li><a href="https://www.facebook.com/events/647230689047274/">DEV.BG All in One, Aug 24, Sofia</a>
+  where we will have an info booth</li>
+<li><a href="https://www.facebook.com/Tabara.de.Testare/">Tabara de Testare Meetup, Sept 25, Bucharest</a>
+  where Alex Todorov will join a discussion panel. To be confirmed!</li>
+<li><a href="https://seetest.org/">SEETEST, Sept 26-27, Bucharest</a> -
+  where you can meet with Alex Todorov and some of our community friends and contributors</li>
+<li><a href="https://ruseconf.com/">RuseConf, Sept 28, Ruse</a> -
+  where Alex Todorov and our friend Gjore Zaharchev (Seavus, Macedonia) will host
+  2 presentations</li>
+<li><a href="https://www.meetup.com/testival/">Testival Meetup, Oct 1-2, Zagreb</a></li>
+<li><a href="https://pyconbalkan.com/">PyCon Balkan, Oct 3-5, Belgrade</a> where:<ul>
+<li>Alex Todorov will present <em>Extending your static analysis for fun and profit</em></li>
+<li>Kiwi TCMS team will host open source prints for 1 or 2 days (more info soon)</li>
+</ul>
+</li>
+<li><a href="https://pionir.zamphyr.com/">Quality Assurance According to Einstein, Oct 6, Kikinda</a>
+  where Alex Todorov will be meeting up with the local technical community as part of our
+  joint work with Zamphyr</li>
+<li><a href="https://www.hackconf.bg/bg/">HackConf, Oct 11-13, Sofia</a> where:<ul>
+<li>Rayna Stankova &amp; Ivaylo Ivanov will be hosting <em>Git for beginners</em> workshop</li>
+<li>Anton Sankov &amp; Alex Todorov will be hosting <em>Python for beginners</em> workshop</li>
+<li>you can use <strong>KIWITCMS</strong> discount code</li>
+</ul>
+</li>
+<li><a href="https://www.testcon.lt/">TestCon Europe, Oct 15-17, Vilnius</a>
+  where Alex Todorov will present <em>Finding security issues in open source</em>
+  and <em>Extend your static analysis for fun and profit</em> (backup presentation
+  in case other speakers don't show up)</li>
+<li><a href="https://2019.testwarez.pl/">TestWarez, Oct 24-25, Ossa (near Warsaw)</a>.</li>
+<li><a href="http://www.openfest.org/">OpenFest, Nov 2-3, Sofia</a>
+  where we will have an info booth</li>
+<li><a href="https://www.istacon.org/">ISTA Conference, Nov 14-15, Sofia</a>
+  where you can meet with Alex Todorov and some of our contributors and
+  customers</li>
+</ul>
+<p>Feel free to ping us at <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a> or look for the
+kiwi bird logo and come to say hi. Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/08/02/kiwi-tcms-611/" rel="bookmark" title="Permalink to Kiwi TCMS 6.11">
                 <h1 class="top-header">Kiwi TCMS 6.11</h1>
             </a>
@@ -2336,253 +2391,6 @@ a small challenge and you can get your hands(errr, feet) on a pair of these:</p>
   We will be happy to publish them on our website</li>
 <li><a href="https://opencollective.com/kiwitcms">Become a sponsor</a>!</li>
 </ul>
-<p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/" rel="bookmark" title="Permalink to Project mission and goals for 2019">
-                <h1 class="top-header">Project mission and goals for 2019</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/atodorov/">Alexander Todorov</a>
-                on Thu 10 January 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Hello testers, Kiwi TCMS has taken on a brave new
-mission! We would like to transform the testing process by making it more
-organized, transparent &amp; accountable for everyone on your team. Our goal
-is to improve engineering productivity and participation in
-testing. The following blog post outlines how we would like to achieve
-this and what goals we put before ourselves for this year.</p>
-<h2>Complete the internal refactoring</h2>
-<p>Last year we took on the challenge to bring a legacy code base up to modern
-coding standard. We did not complete that effort but made very good progress
-along the way. This is not a small task and that's why our team will continue
-with it this year.</p>
-<p><img src="/images/codeclimate_jan_2019.png" style="float:none"
-     alt="CodeClimate report" title="CodeClimate report"></p>
-<ul>
-<li><a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>:
-  0 issues, 0% technical debt, health score A</li>
-<li><a href="https://scrutinizer-ci.com/g/kiwitcms/Kiwi/">Scrutinizer</a>:
-  only A and B type issues</li>
-<li><a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/475946313">Pylint</a>: 0 issues</li>
-<li>Remove vendored-in Handlebars, jQuery, jQuery-UI and TableDnD JavaScript
-  libraries in favor of existing npm dependencies</li>
-<li>Front-end uses the existing JSON-RPC instead of backend views that
-  are only used for AJAX requests. Tip: these are usually accessed via
-  <code>postToURL()</code> and <code>jQ.ajax()</code> on the front-end</li>
-<li>Inspect and classify all 3rd party issues reported from
-  <a href="https://scan.coverity.com/projects/kiwitcms-kiwi">Coverity</a> and
-  <a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/475946312">Bandit</a>. Report and fix
-  what we can, ignore the rest that do not affect Kiwi TCMS.</li>
-</ul>
-<h2>Redesign the UI templates with the help of Patternfly</h2>
-<p>There are 59 templates remaining to be converted to a modern look and feel.
-Along with them comes more refactoring and even redesign of the existing pages
-and the workflow around them. Together with refactoring this will make Kiwi TCMS
-easier to use and also to maintain.</p>
-<h2>Modernize reporting</h2>
-<p>We are planning to remove the existing reports feature because they are not well
-designed. We will re-implement existing functionality that our community finds useful,
-add new types of reports (incl. nicer graphics and UI) and make it possible for the
-reporting sub-system to be more easily extendable.</p>
-<p>Phase out is planned to begin after 1st March 2019! Until then we are looking for your
-feedback. Please comment in
-<a href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a>!</p>
-<h2>Plugins for 3rd party test automation frameworks</h2>
-<p>These will make it easier to collect results from automated test suites into
-Kiwi TCMS for later analysis. Instead of creating scripts that parse the
-results and talk to our API you will only have to install an additional package
-in your test environment and configure the test runner to use it! Automation
-test results will then appear inside Kiwi TCMS.</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/junit-plugin">JUnit 5 plugin</a> - already in progress</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/692">TestNG plugin</a> - RFC</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/693">Django plugin</a> - RFC</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/694">py.test plugin</a> - RFC</li>
-</ul>
-<p>If you would like to use such functionality leave your vote inside GitHub
-issues! In case you would like to write a test-runner plugin you can find the
-specification
-<a href="http://kiwitcms.org/blog/atodorov/2018/11/05/test-runner-plugin-specification/">here</a>.</p>
-<h2>Redefine bug-tracker integration</h2>
-<blockquote>
-<p>Question: Does Kiwi TCMS integrate with JIRA?</p>
-<p>Answer: Well, it does. How exactly do you want to integrate?</p>
-<p>... silence ...</p>
-</blockquote>
-<p>The following dialog happens every time someone asks me about bug-tracker
-integration, especially with JIRA. The thing is integration is a specified
-set of behavior which may or may not be desired in a particular team. As of now
-Kiwi TCMS is able to open a URL to your bug-tracker with predefined field
-values, add comments to bug reports and report a simple summary of bugs
-inside a TestRun.</p>
-<p>We recognize this may not be enough and together with the community we
-really need to define what bug tracker integration means! The broader domain
-of application lifecycle management tools (of which TCMS is a sub-set) have an
-integrated bug tracking system. We can add something like this and save you
-the trouble of using JIRA, however many teams have already invested in
-integrating their infrastructure or just like other tools. For example we love
-GitHub issues and our team regularly makes public reports about issues that
-we find internally!</p>
-<ul>
-<li>Goal: Redefine what bug-tracker integration means, vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/698">Issue #698</a></li>
-<li>Goal: Bug-tracker functionality inside Kiwi TCMS, similar to
-  GitHub Issues. Vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/699">Issue #699</a></li>
-<li>Goal: Integration with Redmine (per current specification), vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/41">Issue #41</a></li>
-<li>Goal: fix existing bugs around bug-tracker integration
-  (per current specification). Vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/97">Issue #97</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/117">Issue #117</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/289">Issue #289</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/290">Issue #290</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/320">Issue #320</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/479">Issue #479</a> and
-  <a href="https://github.com/kiwitcms/Kiwi/issues/530">Issue #530</a></li>
-</ul>
-<h2>GitHub flow integration</h2>
-<p>Developers have their
-<a href="https://guides.github.com/introduction/flow/">GitHub PR flow</a> and if they
-have done the job of having unit tests then they will merge only when things
-are green! This leaves additional testing efforts kind of to the side and
-doesn't really help with transparency and visibility. I'm not going to mention
-having an automatically deployed staging environment for every change
-because very few teams actually have managed to do this effectively.</p>
-<p><img src="/images/github_kiwitcms_pr_status.png" style="float:none"
-     alt="Kiwi TCMS statuses on GitHub PR" title="Kiwi TCMS statuses on GitHub PR"></p>
-<ul>
-<li>Goal: Figure out how Kiwi TCMS can integrate with GitHub flow and bridge the gap.
-  Please share and <code>+1</code> your wildest ideas in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/700">Issue #700</a>.</li>
-<li>Follow up: depending on the results in #700 we will follow with other goals and
-  sub-tasks</li>
-</ul>
-<h2>Agile integration with Trello</h2>
-<p>Speaking of modern engineering flow is your team truly agile? When and how
-do you plan your testing activities ? Before the devel sprint or afterwards?
-How many testers take part in refining product backlog and working on user stories?</p>
-<p>Similar to GitHub flow lots of teams and open source projects are using Trello
-to effectively organize their development process. Testing should not be left
-behind and Kiwi TCMS may be able to help.</p>
-<ul>
-<li>Goal: Figure out how Kiwi TCMS fits into the overall <code>devel-test-planning</code>
-  process for agile teams and what we can do to make this easier for testers.
-  Please share and <code>+1</code> your wildest ideas in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/701">Issue #701</a></li>
-<li>Follow up: depending on the results in #701 we will follow with other goals and
-  sub-tasks</li>
-</ul>
-<h2>Improve engineering productivity</h2>
-<p>What makes a test engineer productive when they need to assess product risk and
-new features, when mapping product requirements documents (PRD) to test plans and
-test cases, when collaborating on user stories and behavior specification ?
-What makes developers, product owners, designers and other professionals productive
-when it comes to dealing with testing ?</p>
-<p>For example consider the following workflow:</p>
-<ul>
-<li>Company has idea for a new product</li>
-<li>In case this is a big product it may have its own mission, i.e. what kind
-  of problem is it trying to solve and for which group of customers</li>
-<li>Product backlog is then created which outlines features that map
-  to the product mission</li>
-<li>Then the team, together with test engineers perform example mapping
-  and discuss and refine the initial feature requirements. User stories
-  are created</li>
-<li>Behavior specification may also be created</li>
-<li>Test plans and test cases are the immediate product of BDD specs and
-  desired user stories</li>
-</ul>
-<p>Later we iterate through the sprints and for each sprint something like
-this happens:</p>
-<ul>
-<li>Desired product features are planned for development. They must be <em>complete</em>
-  at least in terms of requirements, specs and tests</li>
-<li>Devel writes code, maybe some unit tests, testers can also write automated tests
-  and/or manually verify the current state of the feature being developed</li>
-<li>Testing, including exploratory is performed before feature is merged</li>
-<li>Rinse and repeat</li>
-</ul>
-<p>Devel is also part of testing, right? Product owners, UX and interaction
-designers as well. Producing quality software product is a team effort!</p>
-<p>In every step of the way Kiwi TCMS can provide notification wizards, guidelines
-and/or documentation for best practices, facilitate tooling, e.g. to write user stories
-and assess them or map out an exploratory testing session, etc. The list
-of ideas is virtually endless. We can even go into deep learning, AI and
-blockchain but honestly who knows how to use them in testing ?</p>
-<p>Our team is not quite sure how this goal will look like 3 months from now
-but we are certain that testing needs to happen first, last and all the time
-during the entire software development lifecycle. By providing the necessary
-functionality and tools in Kiwi TCMS we can boost engineering productivity
-and steer the testing process in your organization into a better, more productive
-direction which welcomes participation from all engineering groups.</p>
-<p>Let's consider another point of view: testing is a creative activity
-which is benefited by putting your brain into a specific state of mind!
-For example Gherkin (the Given-When-Then language) has the benefit of
-forcing you to think about behavior and while doing so you are vocalizing
-the various roles in the system, what kind of actions are accepted and
-what sort of result is expected! Many times this will help you remember or
-discover missing scenarios, edge cases and raise even more questions!</p>
-<p>Crazy ideas, brain dumps and <code>+1</code> as always are welcome in
-<a href="https://github.com/kiwitcms/Kiwi/issues/703">Issue #703</a>.</p>
-<h2>Community</h2>
-<p>Coding alone is not fun! Here's what you can do to help us:</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Become a stargazer</a> by clicking the
-  <code>Star</code> button on our GitHub repository</li>
-<li><a href="https://twitter.com/KiwiTCMS">Follow @KiwiTCMS on Twitter</a></li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a> -
-  we are GDPR compliant and we don't spam, we promise!</li>
-<li>Vote with a <code>+1</code> reaction on GitHub issues (top-right corner)</li>
-<li>Send us testimonials and feedback about using Kiwi TCMS.
-  We will be happy to publish them on our website</li>
-<li>Send us a pull request on GitHub</li>
-<li><a href="https://opencollective.com/kiwitcms">Become a sponsor</a>!</li>
-</ul>
-<p>We are also looking to expand our core team and the list of occasional
-contributors. The following are mostly organizational goals:</p>
-<ul>
-<li>Goal: participate in 5 conferences with a project stand</li>
-<li>Goal: define how we find, recruit and onboard new team members. The
-  foundation is already set in
-  <a href="https://tcms.kiwitcms.org/plan/3/kiwi-tcms-team-onboarding#testcases">TP-3</a></li>
-<li>Goal: clearly mark GitHub issues which are suitable for external contributors
-  which don’t want to spend lots of time learning how Kiwi TCMS works under the hood.
-  We're going to tag all such issues with the
-  <a href="https://github.com/kiwitcms/Kiwi/labels/help%20wanted">
-    <img src="/images/github_helpwanted.png" style="float: none; margin:0"
-         alt="GitHub help wanted" title="GitHub help wanted">
-  </a> label</li>
-</ul>
-<h2>Development policy</h2>
-<p>Our team will be working on areas related to the goals above. A <code>+1</code>
-reaction on GitHub issues will help us prioritize what we work on!</p>
-<p><img src="/images/github_plus_one.png" style="float:none"
-     alt="GitHub +1" title="GitHub +1"></p>
-<p>Bug fixes and other
-issues will be occasionally slipped into the stream and pull requests from
-non-team contributors will be reviewed and merged in a timely fashion.</p>
-<p>There is at least 1 full day of work that goes behind the scenes when
-a new version is officially released: compile changelog, build images and
-upload them, create blog post and newsletter announcement, share on social
-media, etc. We also deploy on our own Kiwi TCMS instance as a stop-gap
-measure before making everything public!</p>
-<p>New PyPI tarballs and Docker images will be released every few weeks as
-we see fit, this has been our standard process. We try to align releases
-with Django's release schedule and try to cut a new version when there are known
-security vulnerabilities fixed. However we can't guarantee this will always
-be the case!</p>
-<p>If you are in a hurry and need something quickly the best option is to
-send a pull request, build your own Docker image from source and
-maybe consider
-<a href="https://opencollective.com/kiwitcms">sponsoring us via Open Collective</a>!</p>
 <p>Happy testing!</p>
         </div>
     </article>
