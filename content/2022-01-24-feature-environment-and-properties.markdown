@@ -1,4 +1,4 @@
-Title: Properties, Environments and test matrix generation
+Title: Parameters, Environments and test matrix generation
 Headline: understand what they mean and how they work
 author: Alexander Todorov
 date: 2022-01-24 19:40
@@ -7,13 +7,13 @@ og_image: images/features/props-and-envs/banner.png
 twitter_image: images/features/props-and-envs/banner.png
 
 
-The upcoming Kiwi TCMS v11 contains new functionality around TestCase properties and
+The upcoming Kiwi TCMS v11 contains new functionality around TestCase parameters and
 TestRun environments which has an impact on how your final test execution matrix will
 look like. This article provides detailed information about these features but have
 in mind that they are still considered to be a technology-preview.
 
 
-Properties
+Parameters
 ----------
 
 Consider a login functionality which accepts email address and password. Possible states
@@ -34,14 +34,14 @@ for these fields are:
 Depending on how the software under test is put together you can design multiple test cases.
 Fundamentally however these are the same test case and the above states are input parameters to it!
 
-**Definition: TestCase properties are different input values which do not fundamentally affect the result of
-a test case! A TestCase with properties will result into multiple test executions!**
+**Definition: TestCase parameters are different input values which do not fundamentally affect the result of
+a test case! A TestCase with parameters will result into multiple test executions!**
 
 In other words you will be executing a parameterized test scenario multiple times with different input values!
 Inside Kiwi TCMS the actual parameter values during execution are recorded into the `TestExecution` model
-which will not change if you modify test case property values afterwards!
+which will not change if you modify test case parameter values afterwards!
 
-**Definition: TestExecution properties record a snapshot of TestCase properties at the time when you intended
+**Definition: TestExecution parameters record a snapshot of TestCase parameters at the time when you intended
 to execute a particular test scenario!**
 
 
@@ -61,7 +61,7 @@ testing across all variants. Check-out the test matrix at
 <https://fedoraproject.org/wiki/Test_Results:Fedora_36_Rawhide_20220118.n.0_Desktop?rd=Test_Results:Current_Desktop_Test#Non_release-blocking_desktops:_x86_.2F_x86_64>
 
 
-**Definition: a TestRun environment is a set of properties which apply to the entire test suite
+**Definition: a TestRun environment is a set of attributes which apply to the entire test suite
 at the time of execution. Usually you expect test results in different environments to be the same!**
 
 In Kiwi TCMS environments are represented as named containers of key/value pairs.
@@ -82,11 +82,11 @@ test execution for every test case which is added inside this test run.
 In the Fedora example shown above some of the test cases also have their own parameters,
 e.g. the *QA:Testcase_desktop_app_basic* scenario.
 
-**Definition: TestRun environment key/values will be combined with TestCase property key/values
+**Definition: TestRun environment key/values will be combined with TestCase parameter key/values
 to form the final test matrix! This opens up the possibility for combinatorial test execution
 generation.**
 
-Once properties and environment(s) are specified you will start seeing multiple test executions
+Once parameters and environment(s) are specified you will start seeing multiple test executions
 for the same test case inside newly created test runs. By default a full-combination test matrix
 will be created. The other option is to [pairwise](https://www.pairwise.org/) all key/value records.
 
@@ -134,7 +134,7 @@ both with environments and with tags.
 
 **Practical rules:**
 
-1. Attributes which affect a single test case should be defined as TestCase properties
+1. Attributes which affect a single test case should be defined as TestCase parameters
 1. Attributes which affect all test cases in a suite should be defined as TestRun environment(s)
 1. One big TestRun is likely the best from organizational and optimizational point of view
 
@@ -196,11 +196,11 @@ The possible outcomes are:
 - **16 test executions**: all Fedora variants are pairwised together with all RAID parameters
 
 Finally this is how the resulting test run looks like. Notice the 3 boxes icon for each
-test execution, listing the actual properties which should be used during testing:
+test execution, listing the actual parameters which should be used during testing:
 
-!["TR with environment, TE with properties"](/images/features/props-and-envs/tr-env-and-te-props.png "TR with environment, TE with properties")
+!["TR with environment, TE with parameters"](/images/features/props-and-envs/tr-env-and-te-props.png "TR with environment, TE with parameters")
 
-Environment properties are read-only here b/c they have been copied to all test execution records.
+Environment parameters are read-only here b/c they have been copied to all test execution records.
 It usually doesn't make sense to modify your environment mid-way during test execution.
 If that's needed or you've made a mistake it's probably easier to create a new test run.
 
