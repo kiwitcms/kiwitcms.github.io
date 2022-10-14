@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Properties, Environments and test matrix generation</title>
+        <title>Kiwi TCMS - Parameters, Environments and test matrix generation</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
     
 
@@ -12,7 +12,7 @@
         <meta name="author" content="Alexander Todorov">
 
         <meta name="twitter:site" content="@KiwiTCMS">
-        <meta name="twitter:title" content="Properties, Environments and test matrix generation">
+        <meta name="twitter:title" content="Parameters, Environments and test matrix generation">
             <meta name="twitter:description" content="understand what they mean and how they work">
         <meta name="twitter:card" content="summary_large_image">
                 <meta property="twitter:image" content="https://kiwitcms.org/images/features/props-and-envs/banner.png">
@@ -20,8 +20,8 @@
         <meta property="og:site_name" content="Kiwi TCMS">
         <meta property="og:type" content="article" />
             <meta property="article:author" content="https://kiwitcms.org/blog/atodorov/" />
-        <meta property="og:url" content="https://kiwitcms.org/blog/atodorov/2022/01/24/properties-environments-and-test-matrix-generation/" />
-        <meta property="og:title" content="Properties, Environments and test matrix generation" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/atodorov/2022/01/24/parameters-environments-and-test-matrix-generation/" />
+        <meta property="og:title" content="Parameters, Environments and test matrix generation" />
         <meta property="article:published_time" content="2022-01-24 19:40:00+02:00">
             <meta property="og:description" content="understand what they mean and how they work">
 
@@ -112,7 +112,7 @@
 
         <!-- content -->
     <section id="blog-article">
-        <h1 class="top-header">Properties, Environments and test matrix generation</h1>
+        <h1 class="top-header">Parameters, Environments and test matrix generation</h1>
         <h2 class="top-subheader">understand what they mean and how they work</h2>
 
         <p class="post-meta">
@@ -122,11 +122,11 @@
         </p>
 
         <article class="content">
-            <p>The upcoming Kiwi TCMS v11 contains new functionality around TestCase properties and
+            <p>The upcoming Kiwi TCMS v11 contains new functionality around TestCase parameters and
 TestRun environments which has an impact on how your final test execution matrix will
 look like. This article provides detailed information about these features but have
 in mind that they are still considered to be a technology-preview.</p>
-<h2>Properties</h2>
+<h2>Parameters</h2>
 <p>Consider a login functionality which accepts email address and password. Possible states
 for these fields are:</p>
 <ul>
@@ -151,12 +151,12 @@ for these fields are:</p>
 </ul>
 <p>Depending on how the software under test is put together you can design multiple test cases.
 Fundamentally however these are the same test case and the above states are input parameters to it!</p>
-<p><strong>Definition: TestCase properties are different input values which do not fundamentally affect the result of
-a test case! A TestCase with properties will result into multiple test executions!</strong></p>
+<p><strong>Definition: TestCase parameters are different input values which do not fundamentally affect the result of
+a test case! A TestCase with parameters will result into multiple test executions!</strong></p>
 <p>In other words you will be executing a parameterized test scenario multiple times with different input values!
 Inside Kiwi TCMS the actual parameter values during execution are recorded into the <code>TestExecution</code> model
-which will not change if you modify test case property values afterwards!</p>
-<p><strong>Definition: TestExecution properties record a snapshot of TestCase properties at the time when you intended
+which will not change if you modify test case parameter values afterwards!</p>
+<p><strong>Definition: TestExecution parameters record a snapshot of TestCase parameters at the time when you intended
 to execute a particular test scenario!</strong></p>
 <h2>Environments</h2>
 <p>A testing environment represents the specifics of where exactly you executed your test suite.
@@ -170,7 +170,7 @@ KDE, Xfce, MATE and others, see <a href="https://spins.fedoraproject.org">https:
 of the default desktop experience is the same. However this can only be guaranteed with exhaustive
 testing across all variants. Check-out the test matrix at
 <a href="https://fedoraproject.org/wiki/Test_Results:Fedora_36_Rawhide_20220118.n.0_Desktop?rd=Test_Results:Current_Desktop_Test#Non_release-blocking_desktops:_x86_.2F_x86_64">https://fedoraproject.org/wiki/Test_Results:Fedora_36_Rawhide_20220118.n.0_Desktop?rd=Test_Results:Current_Desktop_Test#Non_release-blocking_desktops:_x86_.2F_x86_64</a></p>
-<p><strong>Definition: a TestRun environment is a set of properties which apply to the entire test suite
+<p><strong>Definition: a TestRun environment is a set of attributes which apply to the entire test suite
 at the time of execution. Usually you expect test results in different environments to be the same!</strong></p>
 <p>In Kiwi TCMS environments are represented as named containers of key/value pairs.
 The same key may have multiple values!
@@ -183,10 +183,10 @@ records.</p>
 test execution for every test case which is added inside this test run.</p>
 <p>In the Fedora example shown above some of the test cases also have their own parameters,
 e.g. the <em>QA:Testcase_desktop_app_basic</em> scenario.</p>
-<p><strong>Definition: TestRun environment key/values will be combined with TestCase property key/values
+<p><strong>Definition: TestRun environment key/values will be combined with TestCase parameter key/values
 to form the final test matrix! This opens up the possibility for combinatorial test execution
 generation.</strong></p>
-<p>Once properties and environment(s) are specified you will start seeing multiple test executions
+<p>Once parameters and environment(s) are specified you will start seeing multiple test executions
 for the same test case inside newly created test runs. By default a full-combination test matrix
 will be created. The other option is to <a href="https://www.pairwise.org/">pairwise</a> all key/value records.</p>
 <p><strong>Important: test execution generation works only when creating or cloning a test run that contains
@@ -225,7 +225,7 @@ to have any relevance to the test matrix at all. The same information-only effec
 both with environments and with tags.</p>
 <p><strong>Practical rules:</strong></p>
 <ol>
-<li>Attributes which affect a single test case should be defined as TestCase properties</li>
+<li>Attributes which affect a single test case should be defined as TestCase parameters</li>
 <li>Attributes which affect all test cases in a suite should be defined as TestRun environment(s)</li>
 <li>One big TestRun is likely the best from organizational and optimizational point of view</li>
 </ol>
@@ -281,9 +281,9 @@ selecting environment and matrix generation type:
 <li><strong>16 test executions</strong>: all Fedora variants are pairwised together with all RAID parameters</li>
 </ul>
 <p>Finally this is how the resulting test run looks like. Notice the 3 boxes icon for each
-test execution, listing the actual properties which should be used during testing:</p>
-<p><img alt="&quot;TR with environment, TE with properties&quot;" src="/images/features/props-and-envs/tr-env-and-te-props.png" title="TR with environment, TE with properties"></p>
-<p>Environment properties are read-only here b/c they have been copied to all test execution records.
+test execution, listing the actual parameters which should be used during testing:</p>
+<p><img alt="&quot;TR with environment, TE with parameters&quot;" src="/images/features/props-and-envs/tr-env-and-te-props.png" title="TR with environment, TE with parameters"></p>
+<p>Environment parameters are read-only here b/c they have been copied to all test execution records.
 It usually doesn't make sense to modify your environment mid-way during test execution.
 If that's needed or you've made a mistake it's probably easier to create a new test run.</p>
 <p>Happy Testing!</p>
@@ -312,8 +312,8 @@ please help us!</p>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-                this.page.url = 'https://kiwitcms.org/blog/atodorov/2022/01/24/properties-environments-and-test-matrix-generation/';
-                this.page.identifier = 'blog/atodorov/2022/01/24/properties-environments-and-test-matrix-generation/';
+                this.page.url = 'https://kiwitcms.org/blog/atodorov/2022/01/24/parameters-environments-and-test-matrix-generation/';
+                this.page.identifier = 'blog/atodorov/2022/01/24/parameters-environments-and-test-matrix-generation/';
             };
             (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
