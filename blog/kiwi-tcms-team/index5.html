@@ -100,6 +100,45 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/" rel="bookmark" title="Permalink to Kiwi TCMS needs your help winning OpenAwards 2019">
+                <h1 class="top-header">Kiwi TCMS needs your help winning OpenAwards 2019</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Mon 27 May 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p><img src="/images/openexpo/openawards2019.jpg"
+     alt="Vote for Kiwi TCMS at OpenAwards 2019"
+     style="float: none"></p>
+<p>Thanks to you, our community supporters, Anton Sankov and Alex Todorov
+<a href="/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/">took the lead at OpenExpo 2019 CfP votes</a>.
+We need your help one more time. Our team has submitted participation in
+'Best Tech Community' and 'Best Success Story' categories.</p>
+<p>Unfortunately our submission into 'Best Success Story' has been pulled down!
+We used that category to share the story from a dead open source project into
+a thriving open source community with lots of users and contributors and to
+highlight some of our milestones. Here's the short version:</p>
+<ul>
+<li>lots of technical updates and refactoring, latest everything, modern UI</li>
+<li>the <strong>only</strong> open source test case management system on GitHub Marketplace</li>
+<li>nearly 60000 downloads on Docker Hub</li>
+<li>growing and active core team</li>
+<li>active OSS contributors</li>
+</ul>
+<p>Please help us gain more recognition:</p>
+<ul>
+<li><a href="https://a.cstmapp.com/voteme/31129/633186885">Vote for Kiwi TCMS</a>
+  in the Best Tech Community category!</li>
+</ul>
+<p>Thanks you &amp; happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="bookmark" title="Permalink to Kiwi TCMS 6.9">
                 <h1 class="top-header">Kiwi TCMS 6.9</h1>
             </a>
@@ -2431,206 +2470,6 @@ Test runs should only be able to select product builds (after
 
         <div class="content">
             <p><img alt="1 year infographic" src="/images/1year_infographic.png" title="1 year infographic"></p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/09/04/kiwi-tcms-531/" rel="bookmark" title="Permalink to Kiwi TCMS 5.3.1">
-                <h1 class="top-header">Kiwi TCMS 5.3.1</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 04 September 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 5.3.1! This release
-brings lots of UI updates and removal of unused
-and/or duplicated functionality and source code. Many pages have been redesigned
-with the Patternfly library to have a modern look and feel which you can
-experience at <a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>.</p>
-<p>This will be the last release to carry around squashed migrations. In version
-6.0 older migrations will be deleted and replaced with their squashed equivalents.
-Upgrades from versions &lt; 5.3 to 6.0 will break without an intermediate upgrade to 5.3.1!</p>
-<p>Use <tt class="docutils literal">kiwitcms/kiwi:5.3.1</tt> from Docker Hub when upgrading at some point in the future!</p>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi        5.3.1               a420465852be        976.8 MB
-kiwitcms/kiwi        latest              a420465852be        976.8 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-5-2">
-<h2>Changes since Kiwi TCMS 5.2</h2>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1.1/">Django 2.1.1</a></li>
-<li>Update Patternfly version. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/381">Issue #381</a></li>
-<li>Replace TinyMCE with SimpleMDE markdown editor. Used for TestPlan text and
-TestCase action, setup, breakdown, effect fields</li>
-<li>Allow downstream builds to customize the login templates by
-providing <tt class="docutils literal">registration/custom_login.html</tt> template. It can either
-override the entire login page or provide additional information inside
-the <tt class="docutils literal">custom_login</tt> block!</li>
-</ul>
-</div>
-<div class="section" id="known-issues">
-<h3>Known issues</h3>
-<ul class="simple">
-<li>You may need to strip existing texts from HTML tags that were generated by
-TinyMCE. Either do this manually as you go along and use/edit records or in bulk via
-the API and tools like <a class="reference external" href="https://pypi.org/project/html2text/">html2text</a>.
-We strongly advise you to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-your database before attempting to automatically edit text fields!</li>
-</ul>
-</div>
-<div class="section" id="visual-changes">
-<h3>Visual changes</h3>
-<ul class="simple">
-<li>Remove breadcrumbs at the top of pages. Only admin pages still have them</li>
-<li>Convert login and registration templates to Patternfly. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/211">Issue #211</a></li>
-<li>Convert 404 and 500 templates to Patternfly</li>
-<li>Convert dashboard page to Patternfly</li>
-<li>Convert TestRun new, edit and clone pages to Patternfly. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/17">Issue #17</a></li>
-<li>Convert Search Test Plans page to Patternfly</li>
-<li>Convert Search Test Runs page to Patternfly</li>
-<li>Convert Search Test Cases page to Patternfly</li>
-<li>TestPlan view page, Runs tab now re-uses the search form for test runs
-which is built using Patternfly</li>
-<li>Added pagination controls to pages with search results</li>
-</ul>
-</div>
-<div class="section" id="removed-functionality">
-<h3>Removed functionality</h3>
-<ul class="simple">
-<li>When creating or editing TestRun<ul>
-<li>field <tt class="docutils literal">estimated_time</tt> is scheduled for removal and is not shown</li>
-<li><tt class="docutils literal">product_version</tt> is scheduled for removal in favor of
-<tt class="docutils literal">TR.plan.product_version</tt></li>
-<li>Product &amp; Version can't be edited anymore. Must be set on the parent
-TestPlan instead. Still allows to specify builds</li>
-</ul>
-</li>
-<li>Remove the ability to clone multiple TestPlans from search results</li>
-<li>Remove the ability to upload TestPlan document files in favor of
-the existing API</li>
-<li>Remove TestCase export to XML in favor of existing API</li>
-<li>Remove Advanced Search functionality. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/448">Issue #448</a>,
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/108">Issue #108</a></li>
-<li>Remove tech preview feature: Django Report Builder</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-<li>Marked more strings as translatable</li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Don't use <tt class="docutils literal">get_full_url()</tt> where not needed. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/380">Issue #380</a></li>
-<li>Remove unused templates. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/114">Issue #114</a></li>
-<li>Submit filter form when clicking on tag value. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/426">Issue #426</a></li>
-<li>Update <tt class="docutils literal">TestCaseRun.tested_by</tt> when setting status. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/459">Issue #459</a></li>
-<li>Add tests for <tt class="docutils literal">KiwiUserAdmin</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/489">Issue #489</a></li>
-</ul>
-</div>
-<div class="section" id="settings">
-<h3>Settings</h3>
-<ul class="simple">
-<li>The following settings have been removed <tt class="docutils literal">MOTD_LOGIN</tt>, <tt class="docutils literal">WELCOME_MESSAGE</tt>
-and <tt class="docutils literal">TINYMCE_DEFAULT_CONFIG</tt></li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Fix pylint errors (Anton Sankov, Ivaylo Ivanov)</li>
-<li>Remove lots of unused functions and classes</li>
-<li>Remove old or unnecessary templates</li>
-<li>Remove <tt class="docutils literal">html2text</tt> dependency</li>
-<li>Remove unused CSS and vendored-in JavaScript libraries</li>
-<li>Add JavaScript JSON-RPC client which is now used by the front-end to
-communicate with the existing JSON-RPC API on the back-end. This
-replaces many 'ajax' views which are only used to render the UI and were
-duplicating functionality with existing API</li>
-<li>Non <tt class="docutils literal">dist/</tt> files are no longer removed from <tt class="docutils literal">node_modules/</tt> when building
-a docker image because packages like <tt class="docutils literal">moment.js</tt> and <tt class="docutils literal"><span class="pre">bootstrap-datetimepicker.js</span></tt>
-don't ship their files in <tt class="docutils literal">dist/</tt></li>
-<li>Convert TestPlans.TreeView to JSON RPC</li>
-</ul>
-</div>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
-</div>
-<div class="section" id="ask-your-questions-on-stackoverflow">
-<h2>Ask your questions on StackOverflow</h2>
-<p>Kiwi TCMS is now using the
-<a class="reference external" href="https://stackoverflow.com/questions/tagged/kiwi-tcms">'kiwi-tcms'</a>
-tag on StackOverflow to track questions. Please submit your support requests
-and general questions to
-<a class="reference external" href="https://stackoverflow.com/questions/tagged/kiwi-tcms">StackOverflow</a> tagged
-with the 'kiwi-tcms' tag! Support requests via GitHub or email will not be answered
-anymore (GitHub issues are for bugs or feature discussions only)!</p>
-</div>
-<div class="section" id="subscription-based-online-service">
-<h2>Subscription based online service</h2>
-<p>We are planning to convert
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> into
-a subscription based service for people who don't want to bother installing
-Kiwi TCMS on their own systems and just want to use it for test collaboration
-with their team.</p>
-<p>The income from this service will go towards covering operating costs and
-supporting the
-<a class="reference external" href="https://github.com/orgs/kiwitcms/people">development team</a>. Watch this
-blog for further announcements about this. Meanwhile you may share your
-thoughts via
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
-</div>
-<div class="section" id="plans-to-remove-deprecated-functionality">
-<h2>Plans to remove deprecated functionality</h2>
-<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
-<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
-to select a product version different than the one selected in the Test Plan.
-Test runs should only be able to select product builds (after
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
-<p><tt class="docutils literal">TestRun.estimated_time</tt> is scheduled for removal if not used. Objections
-and use-cases must be shared via
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/514">Issue #514</a>.</p>
-<p><tt class="docutils literal">EnvGroup</tt> and <tt class="docutils literal">EnvProperty</tt> models are scheduled for removal in favor
-of <tt class="docutils literal">Tag</tt>. Internally tags are referenced in more places inside Kiwi TCMS'
-source code and they appear to be more fully developed. On the other hand
-while environment appears very similar to tags it is not exactly the same.
-Ongoing discussion is happening via
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/484">Issue #484</a>.</p>
-</div>
-
         </div>
     </article>
 

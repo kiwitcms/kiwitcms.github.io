@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-10-25T11:35:00+03:00</updated><entry><title>Meet Kiwi TCMS at WebSummit 2022 in Lisbon</title><link href="/blog/kiwi-tcms-team/2022/10/25/meet-kiwi-tcms-at-websummit-2022-in-lisbon/" rel="alternate"></link><published>2022-10-25T11:35:00+03:00</published><updated>2022-10-25T11:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-10-25:/blog/kiwi-tcms-team/2022/10/25/meet-kiwi-tcms-at-websummit-2022-in-lisbon/</id><summary type="html">&lt;p&gt;Kiwi TCMS is happy to announce that we're taking part in
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-11-08T15:09:00+02:00</updated><entry><title>Call for participation: Testing and Automation devroom, FOSDEM'23</title><link href="/blog/kiwi-tcms-team/2022/11/08/call-for-participation-testing-and-automation-devroom-fosdem23/" rel="alternate"></link><published>2022-11-08T15:09:00+02:00</published><updated>2022-11-08T15:09:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-11-08:/blog/kiwi-tcms-team/2022/11/08/call-for-participation-testing-and-automation-devroom-fosdem23/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2023/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
+&lt;p&gt;Attention testers! On behalf of
+&lt;a href="https://fosdem-testingautomation.github.io/"&gt;&lt;em&gt;Testing and Automation devroom&lt;/em&gt;&lt;/a&gt;
+we'd like to announce that call for participation is now open.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; devroom will take place 09:00 to 12:50, Sunday, February 5th 2023 at
+&lt;a href="https://fosdem.org/2023/practical/transportation/"&gt;ULB Solbosch Campus, Brussels, Belgium&lt;/a&gt;!
+Presentations will be streamed online but all accepted speakers are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2023/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
+&lt;p&gt;Attention testers! On behalf of
+&lt;a href="https://fosdem-testingautomation.github.io/"&gt;&lt;em&gt;Testing and Automation devroom&lt;/em&gt;&lt;/a&gt;
+we'd like to announce that call for participation is now open.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; devroom will take place 09:00 to 12:50, Sunday, February 5th 2023 at
+&lt;a href="https://fosdem.org/2023/practical/transportation/"&gt;ULB Solbosch Campus, Brussels, Belgium&lt;/a&gt;!
+Presentations will be streamed online but all accepted speakers are required to deliver
+their talks in person! The devroom will not host pre-recorded videos in 2023!&lt;/p&gt;
+&lt;p&gt;Here are some ideas for topics that are a good fit for this devroom:&lt;/p&gt;
+&lt;p&gt;Testing in the real, open source world&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;War stories/strategies for testing large scale or complex projects&lt;/li&gt;
+&lt;li&gt;Demystify resource e.g. systems/device/cloud provisioning in a CI loop&lt;/li&gt;
+&lt;li&gt;Tools that extend the ability to test low-level code, e.g. bootloaders, init
+systems, etc.&lt;/li&gt;
+&lt;li&gt;Projects that are introducing new/interesting ways of testing "systems"&lt;/li&gt;
+&lt;li&gt;Address the automated testing frameworks fragmentation&lt;/li&gt;
+&lt;li&gt;Lessons learned from testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cool Tools (good candidates for lightning talks)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How your open source tool made developing quality software better&lt;/li&gt;
+&lt;li&gt;What tools do you use to setup your CI/CD&lt;/li&gt;
+&lt;li&gt;Combining projects/plugins/tools to build amazing things "Not enough people in
+the open source community know how to use $X, but here's a tutorial on how to
+use $X to make your project better."&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the past the devroom has seen both newbies/students and experienced professionals and
+past speakers as part of the audience and talks covering from beginner/practical
+to advanced/abstract topics. If you have doubts then submit your proposal and
+leave a comment for the devroom managers and we'll get back to you.&lt;/p&gt;
+&lt;p&gt;Checkout
+&lt;a href="https://fosdem-testingautomation.github.io/"&gt;https://fosdem-testingautomation.github.io/&lt;/a&gt; for more information!&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category><category term="events"></category></entry><entry><title>Meet Kiwi TCMS at WebSummit 2022 in Lisbon</title><link href="/blog/kiwi-tcms-team/2022/10/25/meet-kiwi-tcms-at-websummit-2022-in-lisbon/" rel="alternate"></link><published>2022-10-25T11:35:00+03:00</published><updated>2022-10-25T11:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-10-25:/blog/kiwi-tcms-team/2022/10/25/meet-kiwi-tcms-at-websummit-2022-in-lisbon/</id><summary type="html">&lt;p&gt;Kiwi TCMS is happy to announce that we're taking part in
 &lt;a href="https://websummit.com/"&gt;WebSummit 2022&lt;/a&gt;, Nov 01-04 in Lisbon, Portugal.
 We're joining as a &lt;a href="https://websummit.com/startups/featured-startups"&gt;featured startup&lt;/a&gt;
 in the &lt;em&gt;Enterprise Software Solutions&lt;/em&gt; category.&lt;/p&gt;
