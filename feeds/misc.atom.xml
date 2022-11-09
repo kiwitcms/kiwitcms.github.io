@@ -1,5 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2022-11-08T15:09:00+02:00</updated><entry><title>Call for participation: Testing and Automation devroom, FOSDEM'23</title><link href="/blog/kiwi-tcms-team/2022/11/08/call-for-participation-testing-and-automation-devroom-fosdem23/" rel="alternate"></link><published>2022-11-08T15:09:00+02:00</published><updated>2022-11-08T15:09:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-11-08:/blog/kiwi-tcms-team/2022/11/08/call-for-participation-testing-and-automation-devroom-fosdem23/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2023/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2022-11-09T12:40:00+02:00</updated><entry><title>Kiwi TCMS 11.6</title><link href="/blog/kiwi-tcms-team/2022/11/09/kiwi-tcms-116/" rel="alternate"></link><published>2022-11-09T12:40:00+02:00</published><updated>2022-11-09T12:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-11-09:/blog/kiwi-tcms-team/2022/11/09/kiwi-tcms-116/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.6! This is our first release
+after the very positive reception we had at
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2022/10/25/meet-kiwi-tcms-at-websummit-2022-in-lisbon/"&gt;WebSummit 2022&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which contains security updates,
+general improvements, bug fixes and new translations!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.6! This is our first release
+after the very positive reception we had at
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2022/10/25/meet-kiwi-tcms-at-websummit-2022-in-lisbon/"&gt;WebSummit 2022&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which contains security updates,
+general improvements, bug fixes and new translations!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  9773335a58d1    612MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-11-5"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 11.5&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 4.0.7 to 4.1.3 which contains multiple bug fixes and
+security improvements. See &lt;a class="reference external" href="https://docs.djangoproject.com/en/4.1/releases/4.1.3/"&gt;https://docs.djangoproject.com/en/4.1/releases/4.1.3/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sanitize HTML input when generating history diff to prevent XSS attacks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-extensions from 3.2.0 to 3.2.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update jira from 3.4.0 to 3.4.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update psycopg2 from 2.9.3 to 2.9.5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update pygithub from 1.55 to 1.57&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update python-gitlab from 3.9.0 to 3.11.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update tzdata from 2022.2 to 2022.6&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Container is now built on top of Red Hat Enteroprise Linux 9 and Python 3.9&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is high risk of breaking downstream containers. Pay attention to
+bind-mounted settings files. Inspect downstream &lt;tt class="docutils literal"&gt;Dockerfile&lt;/tt&gt; &amp;amp; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt;
+files !!!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Unify some translation strings&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Document add-on issue tracker integrations&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Rename Properties to Parameters because &amp;quot;test case parameters&amp;quot; is
+more widely used&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;JIRA.get_issue_type_from_jira()&lt;/tt&gt; now accepts a second argument. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2929"&gt;Issue #2929&lt;/a&gt; (&amp;#64;cmbahadir)&lt;/li&gt;
+&lt;li&gt;Fix typo in documentation (Christian Clauss)&lt;/li&gt;
+&lt;li&gt;Trim white-space after splitting parameter values. For example the inputs
+'OS=Linux' and 'OS = Windows ' will result in
+Key: 'OS', Values: ['Linux', 'Windows']&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Fedora from 32 to 36 in /tests/bugzilla&lt;/li&gt;
+&lt;li&gt;Remove Travis CI config b/c we don't use it anymore&lt;/li&gt;
+&lt;li&gt;Add Coverity Scan as a GitHub action&lt;/li&gt;
+&lt;li&gt;Don't scan devel dependencies with Coverity Scan&lt;/li&gt;
+&lt;li&gt;Redirect to where we came from in case posting a comment results in invalid
+form&lt;/li&gt;
+&lt;li&gt;Configure Dependabot to update Docker containers and try tightening security
+around docker containers used during testing&lt;/li&gt;
+&lt;li&gt;Use npm audit fix to automatically update some Node.js dependecies&lt;/li&gt;
+&lt;li&gt;Execute &lt;tt class="docutils literal"&gt;npm audit signatures&lt;/tt&gt; when installing Node.js packages&lt;/li&gt;
+&lt;li&gt;Start using &lt;tt class="docutils literal"&gt;find_namespace_packages()&lt;/tt&gt; to resolve
+'Package would be ignored' warnings from setuptools&lt;/li&gt;
+&lt;li&gt;Add missing field in &lt;tt class="docutils literal"&gt;setup()&lt;/tt&gt; to avoid a warning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sk#"&gt;Slovak translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v11-6-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v11.6-mt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v11.6&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update containers for RHEL 9, CentOS Stream 9 and Python 3.9&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update actions/checkout from 2 to 3&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-ses from 3.1.2 to 3.2.2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-tenants from 2.3.1 to 2.3.2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-trackers-integration from 0.2.0 to 0.3.0.
+Supports integration with OpenProject and Mantis BT.
+Closes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2203"&gt;Issue #2203&lt;/a&gt; and
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/879"&gt;Issue #879&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Private images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/version            11.6 (aarch64)          cf244e2f1dac    08 Nov 2022     636MB
+quay.io/kiwitcms/version            11.6 (x86_64)           9773335a58d1    08 Nov 2022     612MB
+quay.io/kiwitcms/enterprise         11.6-mt (aarch64)       55cf76524ebd    08 Nov 2022     858MB
+quay.io/kiwitcms/enterprise         11.6-mt (x86_64)        61f48a62666b    08 Nov 2022     832MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then execute the commands:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py upgrade
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Call for participation: Testing and Automation devroom, FOSDEM'23</title><link href="/blog/kiwi-tcms-team/2022/11/08/call-for-participation-testing-and-automation-devroom-fosdem23/" rel="alternate"></link><published>2022-11-08T15:09:00+02:00</published><updated>2022-11-08T15:09:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-11-08:/blog/kiwi-tcms-team/2022/11/08/call-for-participation-testing-and-automation-devroom-fosdem23/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2023/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
 &lt;p&gt;Attention testers! On behalf of
 &lt;a href="https://fosdem-testingautomation.github.io/"&gt;&lt;em&gt;Testing and Automation devroom&lt;/em&gt;&lt;/a&gt;
 we'd like to announce that call for participation is now open.&lt;/p&gt;
