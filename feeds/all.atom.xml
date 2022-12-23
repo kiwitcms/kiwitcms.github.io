@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-11-09T12:40:00+02:00</updated><entry><title>Kiwi TCMS 11.6</title><link href="/blog/kiwi-tcms-team/2022/11/09/kiwi-tcms-116/" rel="alternate"></link><published>2022-11-09T12:40:00+02:00</published><updated>2022-11-09T12:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-11-09:/blog/kiwi-tcms-team/2022/11/09/kiwi-tcms-116/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.6! This is our first release
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-12-23T12:05:00+02:00</updated><entry><title>Program for Testing and Automation devroom, FOSDEM'23</title><link href="/blog/kiwi-tcms-team/2022/12/23/program-for-testing-and-automation-devroom-fosdem23/" rel="alternate"></link><published>2022-12-23T12:05:00+02:00</published><updated>2022-12-23T12:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-12-23:/blog/kiwi-tcms-team/2022/12/23/program-for-testing-and-automation-devroom-fosdem23/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Devroom banner&amp;quot;" src="/images/fosdem/2023/banner.png" title="Devroom banner"&gt;&lt;/p&gt;
+&lt;p&gt;Attention testers! On behalf of
+&lt;a href="https://fosdem.org/2023/schedule/track/testing_and_automation/"&gt;&lt;em&gt;Testing and Automation devroom&lt;/em&gt;&lt;/a&gt;
+we'd like to announce that the final program for the devroom is ready!&lt;/p&gt;
+&lt;p&gt;We received over 30 submissions this year and the entire collection of topics was extremely good.
+During FOSDEM we are going to see topics around functional testing for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;Devroom banner&amp;quot;" src="/images/fosdem/2023/banner.png" title="Devroom banner"&gt;&lt;/p&gt;
+&lt;p&gt;Attention testers! On behalf of
+&lt;a href="https://fosdem.org/2023/schedule/track/testing_and_automation/"&gt;&lt;em&gt;Testing and Automation devroom&lt;/em&gt;&lt;/a&gt;
+we'd like to announce that the final program for the devroom is ready!&lt;/p&gt;
+&lt;p&gt;We received over 30 submissions this year and the entire collection of topics was extremely good.
+During FOSDEM we are going to see topics around functional testing for the Linux kernel,
+growing testing infrastructure for Linux, testing of new networking protocols, observability-driven
+development, the testing history behind the GNOME desktop environment, property-based testing
+and mutation testing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; devroom will take place 09:00 to 12:50, Sunday, February 5th 2023 at
+&lt;a href="https://fosdem.org/2023/practical/transportation/"&gt;ULB Solbosch Campus, Brussels, Belgium&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are around don't forget to check-out our friends from the
+&lt;a href="https://fosdem.org/2023/schedule/track/continuous_integration_and_continuous_deployment/"&gt;Continuous Integration and Continuous Deployment devroom&lt;/a&gt;
+on Saturday, February 4th 2023!&lt;/p&gt;
+&lt;p&gt;See you there and happy testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 11.6</title><link href="/blog/kiwi-tcms-team/2022/11/09/kiwi-tcms-116/" rel="alternate"></link><published>2022-11-09T12:40:00+02:00</published><updated>2022-11-09T12:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-11-09:/blog/kiwi-tcms-team/2022/11/09/kiwi-tcms-116/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 11.6! This is our first release
 after the very positive reception we had at
 &lt;a class="reference external" href="/blog/kiwi-tcms-team/2022/10/25/meet-kiwi-tcms-at-websummit-2022-in-lisbon/"&gt;WebSummit 2022&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which contains security updates,
