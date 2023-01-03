@@ -164,7 +164,7 @@ Each file looks like this:</p>
     <span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">ApiCallLog</span>
 
     <span class="k">def</span> <span class="nf">log_call</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Log an RPC call to the database or stdout in DEBUG mode. &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Log an RPC call to the database or stdout in DEBUG mode. &quot;&quot;&quot;</span>
         <span class="n">request_user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">request_user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
             <span class="c1"># create an anonymous user object for logging purposes</span>

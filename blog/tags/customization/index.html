@@ -213,9 +213,9 @@ update the cache for each URL</p>
 <p>Then execute the Python script above regularly. For example use the following
 as your cron script</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="nb">export</span> <span class="nv">VIRTUAL_ENV</span><span class="o">=</span>/venv
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/venv/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
-cat /path/to/cache_updater.py <span class="p">|</span> /Kiwi/manage.py shell
+<span class="nb">export</span><span class="w"> </span><span class="nv">VIRTUAL_ENV</span><span class="o">=</span>/venv
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/venv/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
+cat<span class="w"> </span>/path/to/cache_updater.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>/Kiwi/manage.py<span class="w"> </span>shell
 </code></pre></div>
 
 
@@ -264,8 +264,8 @@ scratch</p>
 <span class="gi">+++ b/tcms/issuetracker/types.py</span>
 <span class="gu">@@ -17,6 +17,9 @@ from django.conf import settings</span>
 
- from tcms.issuetracker.base import IssueTrackerType
- from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
+<span class="w"> </span>from tcms.issuetracker.base import IssueTrackerType
+<span class="w"> </span>from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
 <span class="gi">+from tcms.issuetracker.kiwitcms import ExtendedBugTracker</span>
 </code></pre></div>
 
@@ -354,7 +354,7 @@ Each file looks like this:</p>
     <span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">ApiCallLog</span>
 
     <span class="k">def</span> <span class="nf">log_call</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Log an RPC call to the database or stdout in DEBUG mode. &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Log an RPC call to the database or stdout in DEBUG mode. &quot;&quot;&quot;</span>
         <span class="n">request_user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">request_user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
             <span class="c1"># create an anonymous user object for logging purposes</span>
@@ -447,7 +447,7 @@ email text looks like this:</p>
 <span class="x">    thank you for signing up for an </span><span class="cp">{{</span> <span class="nv">site_domain</span> <span class="cp">}}</span><span class="x"> account!</span>
 
 <span class="x">    To activate your account, click this link:</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span>
 </code></pre></div>
 
 
@@ -458,7 +458,7 @@ runs a custom Docker image based on
 <span class="x">    thank you for signing up for our Kiwi TCMS demo!</span>
 
 <span class="x">    To activate your account, click this link:</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span>
 
 <span class="x">    GDPR no longer allows us to automatically subscribe you to</span>
 <span class="x">    our newsletter. If you wish to keep in touch and receive emails</span>
@@ -522,13 +522,13 @@ This blog post will outline how to backup these docker volumes.</p>
 database name used inside the <code>docker-compose.yml</code> file!</p>
 <h2>MariaDB/MySQL database</h2>
 <p>To export all contents from the docker container execute the command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">u</span> <span class="mi">0</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">mysqldump</span> <span class="nv">kiwi</span> <span class="o">&gt;</span> <span class="nv">backup</span>.<span class="nv">sql</span>
+<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">u</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">mysqldump</span><span class="w"> </span><span class="nv">kiwi</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">sql</span>
 </code></pre></div>
 
 
 <p>This will create a file named <code>backup.sql</code> in the current directory, outside of the running container!</p>
 <p>You can restore the database contents by using the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cat</span> <span class="nv">backup</span>.<span class="nv">sql</span> <span class="o">|</span> <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">u</span> <span class="mi">0</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">mysql</span> <span class="o">-</span><span class="nv">v</span> <span class="nv">kiwi</span>
+<div class="highlight"><pre><span></span><code><span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">sql</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">u</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">mysql</span><span class="w"> </span><span class="o">-</span><span class="nv">v</span><span class="w"> </span><span class="nv">kiwi</span>
 </code></pre></div>
 
 
@@ -541,7 +541,7 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 </ol>
 <h2>Postgres database</h2>
 <p>To export all contents from the docker container execute the command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">pg_dump</span> <span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span> <span class="o">-</span><span class="nv">F</span> <span class="nv">c</span> <span class="o">&gt;</span> <span class="nv">backup</span>.<span class="nv">bak</span>
+<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_dump</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span><span class="w"> </span><span class="o">-</span><span class="nv">F</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span>
 </code></pre></div>
 
 
@@ -549,8 +549,8 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 This is a PostgreSQL custom database dump format which contains all data and schema definitions.
 That is a binary file which can be read with the <code>pg_restore</code> command!</p>
 <p>To drop and restore the entire database execute:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">psql</span> <span class="o">-</span><span class="nv">c</span> <span class="s2">&quot;</span><span class="s">DROP DATABASE IF EXISTS kiwi;</span><span class="s2">&quot;</span>
-<span class="nv">cat</span> <span class="nv">backup</span>.<span class="nv">bak</span> <span class="o">|</span> <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">pg_restore</span> <span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">template1</span> <span class="o">-</span><span class="nv">vcC</span>
+<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">psql</span><span class="w"> </span><span class="o">-</span><span class="nv">c</span><span class="w"> </span><span class="s2">&quot;DROP DATABASE IF EXISTS kiwi;&quot;</span>
+<span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_restore</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">template1</span><span class="w"> </span><span class="o">-</span><span class="nv">vcC</span>
 </code></pre></div>
 
 
@@ -561,27 +561,27 @@ Postgres! Each tenant (aka name-space) uses a separate database schema.
 The first schema name is <code>public</code>.</p>
 <p>The backup and restore instructions shown above operate on all tenants together!
 If you want to [drop and] restore an individual tenant then use the commands:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">it</span> <span class="nv">kiwi_db</span> <span class="nv">psql</span> <span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span>
+<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">psql</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span>
 
-<span class="nv">kiwi</span><span class="o">=&gt;</span> <span class="nv">DROP</span> <span class="nv">SCHEMA</span> $<span class="nv">tenant_name</span> <span class="nv">CASCADE</span><span class="c1">;</span>
+<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="w"> </span><span class="nv">DROP</span><span class="w"> </span><span class="nv">SCHEMA</span><span class="w"> </span>$<span class="nv">tenant_name</span><span class="w"> </span><span class="nv">CASCADE</span><span class="c1">;</span>
 ....
-<span class="nv">DROP</span> <span class="nv">SCHEMA</span>
-<span class="nv">kiwi</span><span class="o">=&gt;</span> <span class="nv">CREATE</span> <span class="nv">SCHEMA</span> $<span class="nv">tenant_name</span><span class="c1">;</span>
-<span class="nv">CREATE</span> <span class="nv">SCHEMA</span>
+<span class="nv">DROP</span><span class="w"> </span><span class="nv">SCHEMA</span>
+<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="w"> </span><span class="nv">CREATE</span><span class="w"> </span><span class="nv">SCHEMA</span><span class="w"> </span>$<span class="nv">tenant_name</span><span class="c1">;</span>
+<span class="nv">CREATE</span><span class="w"> </span><span class="nv">SCHEMA</span>
 <span class="nv">kiwi</span><span class="o">=&gt;</span><span class="nv">Ctrl</span><span class="o">+</span><span class="nv">D</span>
 
-<span class="nv">cat</span> <span class="nv">backup</span>.<span class="nv">bak</span> <span class="o">|</span> <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">kiwi_db</span> <span class="nv">pg_restore</span> <span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span> <span class="o">-</span><span class="nv">v</span> <span class="o">--</span><span class="nv">schema</span> $<span class="nv">tenant_name</span>
+<span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_restore</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span><span class="w"> </span><span class="o">-</span><span class="nv">v</span><span class="w"> </span><span class="o">--</span><span class="nv">schema</span><span class="w"> </span>$<span class="nv">tenant_name</span>
 </code></pre></div>
 
 
 <h2>Backing up file uploads</h2>
 <p>Uploaded files can easily be backed up with:</p>
-<div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">i</span> <span class="n">kiwi_web</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span> <span class="o">-</span><span class="n">cP</span> <span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">uploads</span> <span class="o">&gt;</span> <span class="n">uploads</span><span class="o">.</span><span class="n">tar</span>
+<div class="highlight"><pre><span></span><code><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">cP</span><span class="w"> </span><span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">uploads</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span>
 </code></pre></div>
 
 
 <p>and then restored with:</p>
-<div class="highlight"><pre><span></span><code><span class="n">cat</span> <span class="n">uploads</span><span class="o">.</span><span class="n">tar</span> <span class="o">|</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">i</span> <span class="n">kiwi_web</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span> <span class="o">-</span><span class="n">x</span>
+<div class="highlight"><pre><span></span><code><span class="n">cat</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">x</span>
 </code></pre></div>
 
 

@@ -167,9 +167,9 @@ update the cache for each URL</p>
 <p>Then execute the Python script above regularly. For example use the following
 as your cron script</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="nb">export</span> <span class="nv">VIRTUAL_ENV</span><span class="o">=</span>/venv
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/venv/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
-cat /path/to/cache_updater.py <span class="p">|</span> /Kiwi/manage.py shell
+<span class="nb">export</span><span class="w"> </span><span class="nv">VIRTUAL_ENV</span><span class="o">=</span>/venv
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/venv/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
+cat<span class="w"> </span>/path/to/cache_updater.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>/Kiwi/manage.py<span class="w"> </span>shell
 </code></pre></div>
 
 
@@ -218,8 +218,8 @@ scratch</p>
 <span class="gi">+++ b/tcms/issuetracker/types.py</span>
 <span class="gu">@@ -17,6 +17,9 @@ from django.conf import settings</span>
 
- from tcms.issuetracker.base import IssueTrackerType
- from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
+<span class="w"> </span>from tcms.issuetracker.base import IssueTrackerType
+<span class="w"> </span>from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
 <span class="gi">+from tcms.issuetracker.kiwitcms import ExtendedBugTracker</span>
 </code></pre></div>
 
