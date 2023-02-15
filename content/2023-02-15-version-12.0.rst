@@ -1,0 +1,151 @@
+Kiwi TCMS 12.0
+##############
+
+:headline: security updates, improvements, bug fixes and new translations
+:date: 2023-02-15 13:50
+:comments: true
+:tags: releases
+
+
+We're happy to celebrate our 14th anniversary with Kiwi TCMS version 12.0!
+
+**IMPORTANT:** this is a new major release which contains security related updates,
+general improvements, bug fixes and new translations!
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+
+    Supported upgrade paths::
+
+        5.3   (or older) -> 5.3.1
+        5.3.1 (or newer) -> 6.0.1
+        6.0.1            -> 6.1
+        6.1              -> 6.1.1
+        6.1.1            -> 6.2 (or newer)
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  cbe275c11098    518MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 11.7
+----------------------------
+
+Security
+~~~~~~~~
+
+- Update Django from 4.1.5 to 4.1.7 which includes fixes for
+  `CVE-2023-23969 <https://docs.djangoproject.com/en/4.1/releases/4.1.6/>`_ and
+  `CVE-2023-24580 <https://docs.djangoproject.com/en/4.1/releases/4.1.7/>`_
+- Rate limit everything under /accounts/. Fixes
+  `CVE-2023-25156 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7968-h4m4-ghm9>`_
+- Require a captcha challenge on password reset form. Fixes
+  `CVE-2023-25171 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7j9h-3jxf-3vrf>`_
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update bleach from 5.0.1 to 6.0.0
+- Update django-tree-queries from 0.13.0 to 0.14.0
+- Update python-gitlab from 3.12.0 to 3.13.0
+- Update python-redmine from 2.3.0 to 2.4.0
+- Update node_modules/json5 from 1.0.1 to 1.0.2
+- Switch from Apache to Nginx + uWSGI
+
+  - uWSGI will spawn worker processes for each available CPU core
+  - reduce container image by around 50 MB
+
+  **Warning:**
+
+    No longer support ``KIWI_DONT_ENFORCE_HTTPS`` environment variable
+
+
+Bug fixes
+~~~~~~~~~
+
+- Load SimpleMDE for Admin pages. Fixes
+  `Issue #3057 <https://github.com/kiwitcms/Kiwi/issues/3057>`_
+- Don't show all builds on Search Test Runs page before Product and Version
+  fields are initialized when loading the page directly
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Remove deprecated ``setDaemon()`` method (Ivajlo Karabojkov)
+- Execute docker tests against ``localhost`` instead of container IP
+- Test performance baseline on certain pages with ``wrk``
+- Conditionally execute top-level UI functions
+- Raise ``RuntimeError`` instead of ``Exception`` to satisfy newer
+  pylint checks
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Chinese Simplified translation <https://crowdin.com/project/kiwitcms/zh-CN#>`_
+- Updated `German translation <https://crowdin.com/project/kiwitcms/de#>`_
+- Updated `Polish translation <https://crowdin.com/project/kiwitcms/pl#>`_
+
+
+
+Kiwi TCMS Enterprise v12.0-mt
+-----------------------------
+
+- Based on Kiwi TCMS v12.0
+- Update kiwitcms-github-app from 1.4.0 to 1.4.1
+- Update kiwitcms-tenants from 2.4.0 to 2.5.0
+
+
+    Private images::
+
+        quay.io/kiwitcms/version            12.0 (aarch64)          21507017de36    15 Feb 2023     527MB
+        quay.io/kiwitcms/version            12.0 (x86_64)           cbe275c11098    15 Feb 2023     518MB
+        quay.io/kiwitcms/enterprise         12.0-mt (aarch64)       a67e0c1ac309    15 Feb 2023     727MB
+        quay.io/kiwitcms/enterprise         12.0-mt (x86_64)        3da1342bcd01    15 Feb 2023     717MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then execute the commands::
+
+    cd path/containing/docker-compose/
+    docker-compose down
+    docker-compose pull
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py upgrade
+
+Refer to
+`our documentation <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading>`_
+for more details!
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
