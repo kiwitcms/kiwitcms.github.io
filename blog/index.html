@@ -94,6 +94,167 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2023/02/15/kiwi-tcms-120/" rel="bookmark" title="Permalink to Kiwi TCMS 12.0">
+                <h1 class="top-header">Kiwi TCMS 12.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 15 February 2023
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to celebrate our 14th anniversary with Kiwi TCMS version 12.0!</p>
+<p><strong>IMPORTANT:</strong> this is a new major release which contains security related updates,
+general improvements, bug fixes and new translations!</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<blockquote>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+</blockquote>
+<p>---</p>
+<blockquote>
+<p>Upstream container images (x86_64):</p>
+<pre class="literal-block">
+kiwitcms/kiwi   latest  cbe275c11098    518MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container</a> images are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-11-7">
+<h2>Changes since Kiwi TCMS 11.7</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 4.1.5 to 4.1.7 which includes fixes for
+<a class="reference external" href="https://docs.djangoproject.com/en/4.1/releases/4.1.6/">CVE-2023-23969</a> and
+<a class="reference external" href="https://docs.djangoproject.com/en/4.1/releases/4.1.7/">CVE-2023-24580</a></li>
+<li>Rate limit everything under /accounts/. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7968-h4m4-ghm9">CVE-2023-25156</a></li>
+<li>Require a captcha challenge on password reset form. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7j9h-3jxf-3vrf">CVE-2023-25171</a></li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul>
+<li><p class="first">Update bleach from 5.0.1 to 6.0.0</p>
+</li>
+<li><p class="first">Update django-tree-queries from 0.13.0 to 0.14.0</p>
+</li>
+<li><p class="first">Update python-gitlab from 3.12.0 to 3.13.0</p>
+</li>
+<li><p class="first">Update python-redmine from 2.3.0 to 2.4.0</p>
+</li>
+<li><p class="first">Update node_modules/json5 from 1.0.1 to 1.0.2</p>
+</li>
+<li><p class="first">Switch from Apache to Nginx + uWSGI</p>
+<ul class="simple">
+<li>uWSGI will spawn worker processes for each available CPU core</li>
+<li>reduce container image by around 50 MB</li>
+</ul>
+<p><strong>Warning:</strong></p>
+<blockquote>
+<p>No longer support <tt class="docutils literal">KIWI_DONT_ENFORCE_HTTPS</tt> environment variable</p>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Load SimpleMDE for Admin pages. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3057">Issue #3057</a></li>
+<li>Don't show all builds on Search Test Runs page before Product and Version
+fields are initialized when loading the page directly</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Remove deprecated <tt class="docutils literal">setDaemon()</tt> method (Ivajlo Karabojkov)</li>
+<li>Execute docker tests against <tt class="docutils literal">localhost</tt> instead of container IP</li>
+<li>Test performance baseline on certain pages with <tt class="docutils literal">wrk</tt></li>
+<li>Conditionally execute top-level UI functions</li>
+<li>Raise <tt class="docutils literal">RuntimeError</tt> instead of <tt class="docutils literal">Exception</tt> to satisfy newer
+pylint checks</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pl#">Polish translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v12-0-mt">
+<h2>Kiwi TCMS Enterprise v12.0-mt</h2>
+<ul>
+<li><p class="first">Based on Kiwi TCMS v12.0</p>
+</li>
+<li><p class="first">Update kiwitcms-github-app from 1.4.0 to 1.4.1</p>
+</li>
+<li><p class="first">Update kiwitcms-tenants from 2.4.0 to 2.5.0</p>
+<blockquote>
+<p>Private images:</p>
+<pre class="literal-block">
+quay.io/kiwitcms/version            12.0 (aarch64)          21507017de36    15 Feb 2023     527MB
+quay.io/kiwitcms/version            12.0 (x86_64)           cbe275c11098    15 Feb 2023     518MB
+quay.io/kiwitcms/enterprise         12.0-mt (aarch64)       a67e0c1ac309    15 Feb 2023     727MB
+quay.io/kiwitcms/enterprise         12.0-mt (x86_64)        3da1342bcd01    15 Feb 2023     717MB
+</pre>
+</blockquote>
+</li>
+</ul>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container</a> images are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then execute the commands:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py upgrade
+</pre>
+<p>Refer to
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
+for more details!</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2023/01/03/kiwi-tcms-117/" rel="bookmark" title="Permalink to Kiwi TCMS 11.7">
                 <h1 class="top-header">Kiwi TCMS 11.7</h1>
             </a>
@@ -2271,80 +2432,10 @@ please help us!</p>
 </ul>
         </div>
     </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/" rel="bookmark" title="Permalink to Kiwi TCMS Enterprise 10.5.1">
-                <h1 class="top-header">Kiwi TCMS Enterprise 10.5.1</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 06 January 2022
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS Enterprise version 10.5.1!</p>
-<p><strong>IMPORTANT:</strong>
-this is a small release which contains minor improvements and bug-fixes.</p>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<div class="section" id="kiwi-tcms-enterprise-v10-5-1-mt">
-<h2>Kiwi TCMS Enterprise v10.5.1-mt</h2>
-<ul>
-<li><p class="first">Based on Kiwi TCMS v10.5</p>
-</li>
-<li><p class="first">Update django-python3-ldap from 0.13.0 to 0.13.1</p>
-</li>
-<li><p class="first">Update kiwitcms-github-app from 1.3.1 to 1.3.2</p>
-<blockquote>
-<p>Private images:</p>
-<pre class="literal-block">
-quay.io/kiwitcms/enterprise         10.5.1-mt       c4d745bd914c   806MB
-</pre>
-</blockquote>
-</li>
-</ul>
-<p><strong>IMPORTANT:</strong> version tagged and Enterprise
-<a class="reference external" href="/containers/">container</a> images are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-Then execute the commands:</p>
-<pre class="literal-block">
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Refer to
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
-for more details!</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all project news;</li>
-<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
-and an awesome open source hacker;</li>
-<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-</div>
-
-        </div>
-    </article>
 
 <section id="pagination">
         <p>
-            Page 1 / 7
+            Page 1 / 8
         </p>
             <a href="/blog/index2.html" class="btn" icon>Older Posts <i></i></a>
 </section>
