@@ -1,5 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-02-15T13:50:00+02:00</updated><entry><title>Kiwi TCMS 12.0</title><link href="/blog/kiwi-tcms-team/2023/02/15/kiwi-tcms-120/" rel="alternate"></link><published>2023-02-15T13:50:00+02:00</published><updated>2023-02-15T13:50:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-02-15:/blog/kiwi-tcms-team/2023/02/15/kiwi-tcms-120/</id><summary type="html">&lt;p&gt;We're happy to celebrate our 14th anniversary with Kiwi TCMS version 12.0!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-03-29T23:00:00+03:00</updated><entry><title>Kiwi TCMS 12.1</title><link href="/blog/kiwi-tcms-team/2023/03/29/kiwi-tcms-121/" rel="alternate"></link><published>2023-03-29T23:00:00+03:00</published><updated>2023-03-29T23:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-03-29:/blog/kiwi-tcms-team/2023/03/29/kiwi-tcms-121/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 12.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a minor release which contains security related updates,
+general improvements, bug fixes and new translations!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 12.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a minor release which contains security related updates,
+general improvements, bug fixes and new translations!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+5.3   (or older) -&amp;gt; 5.3.1
+5.3.1 (or newer) -&amp;gt; 6.0.1
+6.0.1            -&amp;gt; 6.1
+6.1              -&amp;gt; 6.1.1
+6.1.1            -&amp;gt; 6.2 (or newer)
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  590c0cd6f25f    521MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-12-0"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 12.0&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Content-Security-Policy&lt;/span&gt;&lt;/tt&gt; header to block inline JavaScript. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-2wcr-87wf-cf9j"&gt;CVE-2023-27489&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;X-Frame-Options&lt;/span&gt;&lt;/tt&gt; header to deny loading Kiwi TCMS into an iframe&lt;/li&gt;
+&lt;li&gt;Add the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;X-Content-Type-Options&lt;/span&gt;&lt;/tt&gt; header&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django-grappelli from 3.0.4 to 3.0.5&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 3.2.0 to 3.3.0&lt;/li&gt;
+&lt;li&gt;Update jira from 3.4.1 to 3.5.0&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.4.1 to 3.4.3&lt;/li&gt;
+&lt;li&gt;Update pygithub from 1.57 to 1.58.1&lt;/li&gt;
+&lt;li&gt;Update tzdata from 2022.7 to 2023.3&lt;/li&gt;
+&lt;li&gt;Do not allow last super-user to be deleted (Ivajlo Karabojkov)&lt;/li&gt;
+&lt;li&gt;Improve loading time on test runs pages which have large number of
+executions with components, parameters and/or tags (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;li&gt;Expose all RPC methods in the documentation&lt;/li&gt;
+&lt;li&gt;Update documentation to describe transitions for TestRun statuses. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3124"&gt;Issue #3124&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Allow uWSGI configuration override via the file
+&lt;tt class="docutils literal"&gt;/Kiwi/etc/uwsgi.override&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New API method &lt;tt class="docutils literal"&gt;TestRun.add_attachment&lt;/tt&gt; (David M. Johnson)&lt;/li&gt;
+&lt;li&gt;New API method &lt;tt class="docutils literal"&gt;Environment.filter()&lt;/tt&gt; method. Refs
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3034"&gt;Issue #3034&lt;/a&gt; (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;li&gt;New API method &lt;tt class="docutils literal"&gt;Environment.create()&lt;/tt&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3034"&gt;Issue #3034&lt;/a&gt; (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix /admin/testcases/template/ page not being able to render the text editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Refactor bugtracker integration&lt;/li&gt;
+&lt;li&gt;Remove unnecessary onChanged function for DurationWidget&lt;/li&gt;
+&lt;li&gt;Refactoring to avoid inline &lt;tt class="docutils literal"&gt;&amp;lt;script&amp;gt;&lt;/tt&gt; tags&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Enable translation integration on Admin pages&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v12-1-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v12.1-mt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v12.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update dj-database-url from 1.2.0 to 1.3.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-github-app from 1.4.1 to 1.5.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-trackers-integration from 0.3.0 to 0.4.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add test for missing migrations&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Private images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/version            12.1 (aarch64)          571870729367    29 Mar 2023     528MB
+quay.io/kiwitcms/version            12.1 (x86_64)           590c0cd6f25f    29 Mar 2023     520MB
+quay.io/kiwitcms/enterprise         12.1-mt (aarch64)       0a1e2f092351    29 Mar 2023     734MB
+quay.io/kiwitcms/enterprise         12.1-mt (x86_64)        9f44aaab7646    29 Mar 2023     725MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container&lt;/a&gt; images are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then execute the commands:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py upgrade
+&lt;/pre&gt;
+&lt;p&gt;Refer to
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
+for more details!&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS 12.0</title><link href="/blog/kiwi-tcms-team/2023/02/15/kiwi-tcms-120/" rel="alternate"></link><published>2023-02-15T13:50:00+02:00</published><updated>2023-02-15T13:50:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-02-15:/blog/kiwi-tcms-team/2023/02/15/kiwi-tcms-120/</id><summary type="html">&lt;p&gt;We're happy to celebrate our 14th anniversary with Kiwi TCMS version 12.0!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a new major release which contains security related updates,
 general improvements, bug fixes and new translations!&lt;/p&gt;
 &lt;p&gt;You can explore everything at

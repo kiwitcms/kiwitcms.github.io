@@ -94,6 +94,83 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2017/11/28/kiwi-tcms-version-348/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.48">
+                <h1 class="top-header">Kiwi TCMS version 3.48</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 28 November 2017
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're proud to announce Kiwi TCMS version 3.48!
+This is the first release to be announced on our blog and it is also an
+important one!</p>
+<p>Kiwi TCMS 3.48 introduces new versions of Django and Patternfly,
+a Python API client library, many bug-fixes and updated documentation.</p>
+<h2>Changes since KiwiTCMS 3.44</h2>
+<ul>
+<li>Update to Django 1.11.7 (Mr. Senko)</li>
+<li>Update documentation including high level information
+  about how data is organized within Kiwi TCMS and how to work
+  with the system. (Mr. Senko)</li>
+<li>Stop caching report views. (Mr. Senko)</li>
+<li>Make test execution comments optional. Fixes
+  <a href="https://github.com/MrSenko/Kiwi/issues/77">Issue #77</a>. (Mr. Senko)</li>
+<li>Escape special symbols when exporting JSON.
+  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/78">Issue #78</a>. (Mr. Senko)</li>
+<li>Remove Test Run export to XML functionality in favor of API.
+  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/79">Issue #79</a>. (Mr. Senko)</li>
+<li>Make it possible to search Test Runs via Env properties.
+  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/82">Issue #82</a>. (Mr. Senko)</li>
+<li>Display Environment properties in Test Run search results. (Mr. Senko)</li>
+<li>Allow bulk update TestCase.default_tester via email.
+  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/85">Issue #85</a>. (Mr. Senko)</li>
+<li>Don't crash reports when there are untested TestCaseRuns.
+  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/88">Issue #88</a>. (Mr. Senko)</li>
+<li>Bind localhost:80 to container:80.
+  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/99">Issue #99</a>. (Mr. Senko)</li>
+<li>Enable testing with Python 3.6 in preparation for migration. (Mr. Senko)</li>
+<li>If JIRA isn't fully configured then don't connect. Fixes
+  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/100">Issue #100</a>. (Mr. Senko)</li>
+<li>Pin patternfly version to 3.30 and update templates.
+  Fixes <a href="https://github.com/MrSenko/Kiwi/issues/120">Issue #120</a>. (Mr. Senko)</li>
+<li>Show status name rather than status id in TestCaseRun change log. (Chenxiong Qi)</li>
+<li>[api] Adds a Python API client with changes that make it possible to
+  execute on both Python 2 and Python 3. For now take a look at
+  <code>tcms_api/script_examples/</code> for examples how to use it.</li>
+<li>[api] Remove experimental support for Teiid. (Mr. Senko)</li>
+<li>[api] Cache level defaults to <code>CACHE_NONE</code> if not set. (Mr. Senko)</li>
+<li>[api] Remove persistent cache, in-memory caching is still available. (Mr. Senko)</li>
+<li>[api] Remove multicall support. (Mr. Senko)</li>
+</ul>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
+<p><em>NOTE:</em> the API client has been initially developed as the <em>python-nitrate</em>
+project by Petr Splichal and other contributors! We've decided to fork their
+code base into Kiwi's repository and continue further development in a central
+place. This makes it easier testing the API server and client together and
+allows us to move more rapidly! </p>
+<p>As of now there isn't a lot of documentation
+and examples on how to use the API client but we are looking to improve this.
+Additional documentation and examples will be published in the project's
+repository or on this blog!</p>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span><code><span class="nv">cd</span><span class="w"> </span><span class="nv">Kiwi</span><span class="o">/</span>
+<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">down</span>
+<span class="nv">make</span><span class="w"> </span><span class="nv">docker</span><span class="o">-</span><span class="nv">image</span>
+<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="o">-</span><span class="nv">d</span>
+<span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span><span class="w"> </span><span class="nv">migrate</span>
+</code></pre></div>
+
+
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2017/11/03/testing-testing-it-works/" rel="bookmark" title="Permalink to Testing, testing. It works!">
                 <h1 class="top-header">Testing, testing. It works!</h1>
             </a>
