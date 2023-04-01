@@ -21,19 +21,17 @@ MariaDB/MySQL database
 
 To export all contents from the docker container execute the command:
 
-    docker exec -u 0 -i kiwi_db mysqldump kiwi > backup.sql
+    docker exec -i kiwi_db mysqldump --user <username> --password <password> kiwi > backup.sql
 
 This will create a file named `backup.sql` in the current directory, outside of the running container!
 
 You can restore the database contents by using the following command:
 
-    cat backup.sql | docker exec -u 0 -i kiwi_db mysql -v kiwi
+    cat backup.sql | docker exec kiwi_db mysql --user <username> --password <password> -v kiwi
 
 **Notes:**
 
-1. The commands above using `-u 0` are executed with `root` privileges inside the
-   container. In this way you don't need to type-in the database password!
-2. Depending on your scenario you may want to remove the existing volume
+1. Depending on your scenario you may want to remove the existing volume
    (`docker-compose down && docker volume rm kiwi_db_data`) before restoring the database!
 
 
@@ -42,7 +40,7 @@ Postgres database
 
 To export all contents from the docker container execute the command:
 
-    docker exec -i kiwi_db pg_dump --dbname=kiwi -F c > backup.bak
+    docker exec -i kiwi_db pg_dump -U <username> --dbname=kiwi -F c > backup.bak
 
 This will create a file named `backup.bak` in the current directory, outside of the running container.
 This is a PostgreSQL custom database dump format which contains all data and schema definitions.
@@ -51,7 +49,7 @@ That is a binary file which can be read with the `pg_restore` command!
 To drop and restore the entire database execute:
 
     docker exec -i kiwi_db psql -c "DROP DATABASE IF EXISTS kiwi;"
-    cat backup.bak | docker exec -i kiwi_db pg_restore --dbname=template1 -vcC
+    cat backup.bak | docker exec -i kiwi_db pg_restore -U <username> --dbname=template1 -vcC
 
 
 Multi-tenant database
@@ -74,7 +72,7 @@ If you want to [drop and] restore an individual tenant then use the commands:
     CREATE SCHEMA
     kiwi=>Ctrl+D
     
-    cat backup.bak | docker exec -i kiwi_db pg_restore --dbname=kiwi -v --schema $tenant_name
+    cat backup.bak | docker exec -i kiwi_db pg_restore -U <username> --dbname=kiwi -v --schema $tenant_name
 
 
 Backing up file uploads
