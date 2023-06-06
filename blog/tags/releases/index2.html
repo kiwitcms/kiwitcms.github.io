@@ -94,6 +94,79 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2021/07/01/kiwi-tcms-enterprise-1011-mt/" rel="bookmark" title="Permalink to Kiwi TCMS Enterprise 10.1.1-mt">
+                <h1 class="top-header">Kiwi TCMS Enterprise 10.1.1-mt</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 01 July 2021
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS Enterprise version 10.1.1-mt!</p>
+<p><strong>IMPORTANT:</strong> this release includes support for authentication via
+Keycloak and support for enabling read-only view of tenants data for
+anonymous users.</p>
+<p>Docker images:</p>
+<pre class="literal-block">
+quay.io/kiwitcms/enterprise       10.1.1-mt   d61e243dc4f5   1.19GB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-10-1-mt">
+<h2>Changes since Kiwi TCMS Enterprise 10.1-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v10.1</li>
+<li>Fix URL to Python Social Auth documentation</li>
+<li>Support read-only view on tenants for anonymous users. Contains a
+database migration to rename <tt class="docutils literal">on_trial</tt> field to <tt class="docutils literal">publicly_readable</tt></li>
+<li>Document initial configuration. Site administrators should add the
+<tt class="docutils literal">tenants.change_tenant</tt> permission to users/groups who are allowed
+to make their tenants publicly visible. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/87">Issue #87</a>,
+references
+<a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/88">Issue #88</a></li>
+<li>Document the build process. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/89">Issue #89</a></li>
+<li>Verify support for Keycloak logins. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/86">Issue #86</a></li>
+<li>Update kiwitcms-github-app from 1.2.4 to 1.3.0</li>
+<li>Update kiwitcms-tenants from 1.5.0 to 1.6.0</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Refer to
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
+for more details!</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a customer</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2021/05/18/kiwi-tcms-101/" rel="bookmark" title="Permalink to Kiwi TCMS 10.1">
                 <h1 class="top-header">Kiwi TCMS 10.1</h1>
             </a>
@@ -3129,80 +3202,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 <p>Happy testing!</p>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/" rel="bookmark" title="Permalink to Kiwi TCMS is migrating from OAuth to GitHub App">
-                <h1 class="top-header">Kiwi TCMS is migrating from OAuth to GitHub App</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Sun 12 January 2020
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Hello testers, Kiwi TCMS is migrating from its OAuth backend
-to the so called "GitHub App" backend in order to enable further
-integration with GitHub's PR flow as stated previously in our
-<a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">yearly goals</a>.
-This blog post outlines the differences between the old and the new!</p>
-<p>The old OAuth application only had access to your username, name and email
-for authentication purposes. Its authorization screen looked like so:</p>
-<p><img src="/images/github/oauth_login.png"
-    alt="OAuth login screen"
-    style="float:none"></p>
-<p>GitHub Apps on the other hand are designed for more granular access and tighter
-integration with the GitHub platform. This type of application still allows you
-to perform 1-click login into
-<a href="https://public.tenant.kiwitcms.org">https://public.tenant.kiwitcms.org</a>. If this is your
-first time logging into Kiwi TCMS after the migration you will see the following screen:</p>
-<p><img src="/images/github/app_login.png"
-    alt="App login screen"
-    style="float:none"></p>
-<p>Notice how the heading, information section and action button are slightly different!
-The important section is <strong>Resources on your account</strong>! We still only need your
-name, username and email address! Existing Kiwi TCMS accounts (from before the migration)
-will continue to work and they will still have access to all of their data previously
-created. Authorization of this new GitHub app (e.g. login only) does not give it
-permissions to access your repositories and act on your behalf.</p>
-<p>To permit this GitHub App to access your repositories and/or act on your behalf
-you must <strong>Install</strong> it first. That is tell Kiwi TCMS GitHub integration code
-what kind of resources from your GitHub account it is allowed to access. You may
-install into your personal GitHub account or an organizational account! You may
-do this by following the <strong>Install &amp; Authorize</strong> button on our home page or
-directly from <a href="https://github.com/apps/kiwi-tcms">https://github.com/apps/kiwi-tcms</a>!
-The screen should look like this:</p>
-<p><img src="/images/github/app_installation.png"
-    alt="App installation screen"
-    style="float:none"></p>
-<p>Initially we ask for read-only access to a few resources so Kiwi TCMS can start
-receiving webhooks from GitHub and synchronize information about your repositories
-into our database. This is documented both on the app installation screen itself
-(required by GitHub) and on
-<a href="https://github.com/kiwitcms/github-app">https://github.com/kiwitcms/github-app</a>!</p>
-<p>Further ideas about integration between GitHub and Kiwi TCMS, including the original
-idea about status checks from <a href="https://github.com/kiwitcms/Kiwi/issues/700">Issue #700</a>,
-can be found at
-<a href="https://github.com/kiwitcms/github-app/issues">https://github.com/kiwitcms/github-app/issues</a>.</p>
-<h2>Help us grow</h2>
-<p>After this migration we're back to zero! The thousands of authorizations we've had
-on our legacy OAuth app can't be migrated to the new app. This also means our
-listing on GitHub Marketplace will be taken down and we have to qualify through the
-entire process from scratch.</p>
-<p>Please help us get back on track! Here's what we ask you to do (in this order):</p>
-<ul>
-<li>Go to <a href="https://public.tenant.kiwitcms.org">https://public.tenant.kiwitcms.org</a> and
-  click the GitHub login icon, follow through with the process;</li>
-<li>Go to <a href="https://github.com/apps/kiwi-tcms">https://github.com/apps/kiwi-tcms</a> and
-  click the <strong>Install</strong> button, select account &amp; repositories and complete the
-  process;</li>
-<li>Share this blog post with friends, co-workers and other testers who might be
-  interested to help!</li>
-</ul>
-<p>Thank you! Happy testing and happy new year!</p>
         </div>
     </article>
 
