@@ -1,0 +1,140 @@
+Kiwi TCMS 12.5
+##############
+
+:headline: security updates, general improvements and new translations
+:date: 2023-07-04 17:30
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 12.5!
+
+**IMPORTANT:** this is a small release which contains security related updates,
+several improvements and new translations!
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+
+    Supported upgrade paths::
+
+        5.3   (or older) -> 5.3.1
+        5.3.1 (or newer) -> 6.0.1
+        6.0.1            -> 6.1
+        6.1              -> 6.1.1
+        6.1.1            -> 6.2 (or newer)
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  9a689f9866d9    597MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 12.4
+----------------------------
+
+Security
+~~~~~~~~
+
+- Update django from 4.2.2 to 4.2.3. Fixes
+  `CVE-2023-36053 <https://github.com/advisories/GHSA-jh3w-4vvf-mjgr>`_ -
+  ReDoS vulnerability
+- Patch misconfigured HTTP headers allowing stored XSS execution. Fixes
+  `CVE-2023-36809 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-jpgw-2r9m-8qfw>`_
+- Sanitize test plan name in ``tree_view_html()`` function to reduce the
+  opportunity for exploiting stored XSS vulnerabilities
+- Extend the list of file upload validators to reduce the opportunity for
+  exploiting stored XSS vulnerabilities
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update django-colorfield from 0.8.0 to 0.9.0
+- Update django-extensions from 3.2.1 to 3.2.3
+- Update django-simple-captcha from 0.5.17 to 0.5.18
+- Update django-tree-queries from 0.14.0 to 0.15.0
+- Update jira from 3.5.1 to 3.5.2
+- Update python-gitlab from 3.14.0 to 3.15.0
+- Small update to ``HEALTHCHECK`` command in container
+- Replace ``mysql`` with native ``mariadb`` commands for backup/restore
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update node_modules/eslint from 8.42.0 to 8.44.0
+- Update node_modules/eslint-plugin-n from 16.0.0 to 16.0.1
+- Update node_modules/webpack from 5.85.0 to 5.88.1
+- Update node_modules/webpack-cli from 5.1.3 to 5.1.4
+- Pin Selenium to 4.9.1 b/c of failures with 4.10.0
+- Add configuration for testing with reverse proxy
+- Assert that Nginx proxy doesn't strip response headers
+- Assert on the number of ``Content-Type`` headers for attachments
+- Update how we seed GitLab API token used for testing
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Russian translation <https://crowdin.com/project/kiwitcms/ru#>`_
+
+
+
+Kiwi TCMS Enterprise v12.5-mt
+-----------------------------
+
+- Based on Kiwi TCMS v12.5
+- Update django-python3-ldap from 0.15.4 to 0.15.5
+- Install django-prometheus inside container
+- Pin Selenium to 4.9.1 b/c of failures with 4.10.0
+
+    Private images::
+
+        quay.io/kiwitcms/version            12.5 (aarch64)          2349e3ea1b78    04 Jul 2023     606MB
+        quay.io/kiwitcms/version            12.5 (x86_64)           9a689f9866d9    04 Jul 2023     597MB
+        quay.io/kiwitcms/enterprise         12.5-mt (aarch64)       56634afe511a    04 Jul 2023     852MB
+        quay.io/kiwitcms/enterprise         12.5-mt (x86_64)        cdfd6965ad4e    04 Jul 2023     841MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container <{filename}pages/containers.markdown>`_ images are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then execute the commands::
+
+    cd path/containing/docker-compose/
+    docker-compose down
+    docker-compose pull
+    docker-compose up -d
+    docker exec -it kiwi_web /Kiwi/manage.py upgrade
+
+Refer to
+`our documentation <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading>`_
+for more details!
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
