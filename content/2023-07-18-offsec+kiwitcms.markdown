@@ -1,6 +1,6 @@
 Title: OffSec has chosen Kiwi TCMS
 Headline: for their new Introduction to Assurance Testing security course
-date: 2023-07-07 16:05
+date: 2023-07-18 09:45
 author: Malcolm Shore
 comments: true
 og_image: images/offsec_chapter3_kiwitcms.png
