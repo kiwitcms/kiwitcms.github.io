@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-07-04T17:30:00+03:00</updated><entry><title>Kiwi TCMS 12.5</title><link href="/blog/kiwi-tcms-team/2023/07/04/kiwi-tcms-125/" rel="alternate"></link><published>2023-07-04T17:30:00+03:00</published><updated>2023-07-04T17:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-07-04:/blog/kiwi-tcms-team/2023/07/04/kiwi-tcms-125/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 12.5!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-07-18T09:45:00+03:00</updated><entry><title>OffSec has chosen Kiwi TCMS</title><link href="/blog/malcolm-shore/2023/07/18/offsec-has-chosen-kiwi-tcms/" rel="alternate"></link><published>2023-07-18T09:45:00+03:00</published><updated>2023-07-18T09:45:00+03:00</updated><author><name>Malcolm Shore</name></author><id>tag:None,2023-07-18:/blog/malcolm-shore/2023/07/18/offsec-has-chosen-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;a href="https://www.offsec.com/"&gt;OffSec&lt;/a&gt; is an American international company working
+in information security, penetration testing and digital forensics. Operating
+from around 2007, the company has created multiple open source projects,
+advanced security courses, the ExploitDB vulnerability database, and the popular Kali Linux.
+It has recently released the Kali Purple platform, a dedicated platform …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.offsec.com/"&gt;OffSec&lt;/a&gt; is an American international company working
+in information security, penetration testing and digital forensics. Operating
+from around 2007, the company has created multiple open source projects,
+advanced security courses, the ExploitDB vulnerability database, and the popular Kali Linux.
+It has recently released the Kali Purple platform, a dedicated platform for
+cyber defence analysts and a platform for security services.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://portal.offsec.com/library/all/new-releases/modal/module/introduction-to-assurance-testing/"&gt;Introduction to Assurance Testing&lt;/a&gt;
+is a brand new training course covering the defensive testing techniques used
+to establish a level of assurance that your server is secure. It is the first
+course of OffSec’s OSDA cyber defence learning path. This course introduces the
+context for security testing and explains how security testing aligns to the business.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Chapter 3: Creating and Using Security Test Documentation explains the documentation
+used in security related testing and introduces Kiwi TCMS as the test management tool of choice!&lt;/em&gt;
+&lt;img alt="&amp;quot;Kiwi TCMS as shown in OffSec's training materials&amp;quot;" src="/images/offsec_chapter3_kiwitcms.png" title="Kiwi TCMS as shown in OffSec's training materials"&gt;&lt;/p&gt;
+&lt;p&gt;The course is part of Offsec’s fundamentals package which is designed as baseline knowledge
+and skills for all security professionals and in particular for those who wish to progress
+to the OffSec Defence Analyst (OSDA) certification.  The Assurance Testing course,
+and the Kiwi TCMS tool which it uses, gives developers and security testers alike a good
+understanding of the best practice approach to test case management and helps build their
+skills in carrying out testing in a disciplined way. Using Kiwi TCMS provides the
+opportunity to improve the processes and documentation around security testing,
+and around the wider functional testing as well.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS bridges the gap between security requirements and software development by
+enabling standardized test cases to be developed by the security team whilst
+software developers and dedicated QA teams can use these same test cases to ensure that
+security requirements are met. With preset test plans and test cases,
+execution of security tests can proceed in the same way as for any other non-functional testing,
+and any issues identified during testing can be fixed and tests can be executed again.&lt;/p&gt;
+&lt;p&gt;Learning how to use Kiwi TCMS as part of the Introduction to Assurance Testing course helps
+both security teams and QA teams work together in a common environment to improve
+the quality and security of their software. Using Kiwi TCMS enables security teams to
+provide clear instructions to QA teams as to how to use specialist security testing tools.
+For example, having clear test cases for running the PowerShell audit tool
+for the Active Directory Certificate Server, PSPKIAudit, means that the test team can take advantage
+of a powerful testing tool without needing the specialist knowledge that might otherwise be required
+to use and interpret the results of such a tool.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us grow&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>Kiwi TCMS 12.5</title><link href="/blog/kiwi-tcms-team/2023/07/04/kiwi-tcms-125/" rel="alternate"></link><published>2023-07-04T17:30:00+03:00</published><updated>2023-07-04T17:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-07-04:/blog/kiwi-tcms-team/2023/07/04/kiwi-tcms-125/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 12.5!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which contains security related updates,
 several improvements and new translations!&lt;/p&gt;
 &lt;p&gt;You can explore everything at

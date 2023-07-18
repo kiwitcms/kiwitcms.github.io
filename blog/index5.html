@@ -94,6 +94,256 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/02/12/kiwi-tcms-80/" rel="bookmark" title="Permalink to Kiwi TCMS 8.0">
+                <h1 class="top-header">Kiwi TCMS 8.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 12 February 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 8.0!</p>
+<p><strong>IMPORTANT:</strong> this is a major release which includes important database and
+API changes, several improvements and bug fixes. Multiple API methods are now
+incompatible with older releases and extra caution needs to be applied when
+upgrading via <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> because newer MariaDB versions are
+breaking direct upgrades from existing installations!</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  71a55e353da2    557 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-7-3">
+<h2>Changes since Kiwi TCMS 7.3</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 3.0.2 to 3.0.3</li>
+<li>Update django-grappelli from 2.13.3 to 2.14.1</li>
+<li>Update markdown from 3.1.1 to 3.2</li>
+<li>Update python-gitlab from 1.15.0 to 2.0.1</li>
+<li>Update pygithub from 1.45 to 1.46</li>
+<li>Allow customization of test execution statuses via admin.
+For more information see
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses">https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses</a>.
+Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/236">Issue #236</a></li>
+<li>Add passing rate chart to Execution trends telemetry</li>
+<li>Documentation updates (&#64;Prome88)</li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<p>This release adds several migrations which alter the underlying database schema
+by renaming multiple columns.</p>
+<p><strong>WARNINGS:</strong></p>
+<ul>
+<li><p class="first">SQLite has very poor capabilities for altering schema and it will break
+when run with existing database! If you had deployed Kiwi TCMS with
+SQLite for production purposes you will not be able to upgrade! We recommend
+switching to Postgres first and then upgrading!</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from MariaDB 5.5 to MariaDB 10.3.
+The 10.x MariaDB containers change their <tt class="docutils literal">datadir</tt> configuration from
+<tt class="docutils literal">/var/lib/mysql</tt> to <tt class="docutils literal">/var/lib/mysql/data</tt>! We recommend first upgrading
+your MariaDB version, using Kiwi TCMS 7.3 and afterwards upgrading to
+Kiwi TCMS 8.0:</p>
+<ol class="arabic">
+<li><p class="first">Backup existing database with:</p>
+<pre class="literal-block">
+docker exec -it kiwi_db mysqldump -u kiwi -pYourPass kiwi &gt; backup.sql
+</pre>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">docker-compose</span> down</tt></p>
+</li>
+<li><p class="first"><tt class="docutils literal">docker volume rm kiwi_db_data</tt> - will remove existing data volume
+b/c of incompatibilities between different MariaDB versions</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">docker-compose</span> up</tt> - will recreate data volume with missing data. e.g.
+<tt class="docutils literal">manage.py showmigrations</tt> will report that 0 migrations have been applied.</p>
+</li>
+<li><p class="first">Restore the data from backup:</p>
+<pre class="literal-block">
+cat backup.sql | docker exec -u 0 -i kiwi_db /opt/rh/rh-mariadb103/root/usr/bin/mysql kiwi
+</pre>
+<p><strong>note:</strong> This connects to the database as the root user</p>
+</li>
+<li><p class="first">Proceed to upgrade your Kiwi TCMS container !</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>CHANGES:</strong></p>
+<ul class="simple">
+<li>Remove model fields of type <tt class="docutils literal">AutoField</tt>. They are a legacy construct
+and shouldn't be specified in the source code! Django knows how to add them
+dynamically. These are:<ul>
+<li><tt class="docutils literal">Tag.id</tt></li>
+<li><tt class="docutils literal">TestCaseStatus.id</tt></li>
+<li><tt class="docutils literal">Category.id</tt></li>
+<li><tt class="docutils literal">PlanType.id</tt></li>
+<li><tt class="docutils literal">TestExecutionStatus.id</tt></li>
+</ul>
+</li>
+<li>Remove <tt class="docutils literal">db_column</tt> attribute from model fields</li>
+<li>Rename several primary key fields to <tt class="docutils literal">id</tt>:<ul>
+<li><tt class="docutils literal">Build.build_id</tt> -&gt; <tt class="docutils literal">Build.id</tt></li>
+<li><tt class="docutils literal">TestRun.run_id</tt> -&gt; <tt class="docutils literal">TestRun.id</tt></li>
+<li><tt class="docutils literal">TestPlan.plan_id</tt> -&gt; <tt class="docutils literal">TestPlan.id</tt></li>
+<li><tt class="docutils literal">TestCase.case_id</tt> -&gt; <tt class="docutils literal">TestCase.id</tt></li>
+<li><tt class="docutils literal">TestExecution.case_run_id</tt> -&gt; <tt class="docutils literal">TestExecution.id</tt></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<p><strong>WARNING:</strong></p>
+<p>The database schema changes mentioned above affect multiple API methods
+in a backwards incompatible way!
+There is possibility that your API scripts will also be affected. You will
+have to adjust those to use the new field names where necessary!</p>
+<p><strong>CHANGES:</strong></p>
+<ul class="simple">
+<li>Methods <tt class="docutils literal">Build.create()</tt>, <tt class="docutils literal">Build.filter()</tt> and <tt class="docutils literal">Build.update()</tt> will
+return <tt class="docutils literal">id</tt> instead of <tt class="docutils literal">build_id</tt> field</li>
+<li>Method <tt class="docutils literal">TestRun.get_cases()</tt> will return <tt class="docutils literal">execution_id</tt> instead of
+<tt class="docutils literal">case_run_id</tt> field and <tt class="docutils literal">id</tt> instead of <tt class="docutils literal">case_id</tt> field</li>
+<li>Methods <tt class="docutils literal">TestRun.add_case()</tt>, <tt class="docutils literal">TestExecution.create()</tt>,
+<tt class="docutils literal">TestExecution.filter()</tt> and <tt class="docutils literal">TestExecution.update()</tt> will return
+<tt class="docutils literal">id</tt> instead of <tt class="docutils literal">case_run_id</tt> field</li>
+<li>Methods <tt class="docutils literal">TestRun.create()</tt>, <tt class="docutils literal">TestRun.filter()</tt>, <tt class="docutils literal">TestRun.update()</tt> will
+return <tt class="docutils literal">id</tt> instead of <tt class="docutils literal">run_id</tt> field</li>
+<li>Methods <tt class="docutils literal">TestPlan.create()</tt>, <tt class="docutils literal">TestPlan.filter()</tt> and
+<tt class="docutils literal">TestPlan.update()</tt> will return <tt class="docutils literal">id</tt> instead of <tt class="docutils literal">plan_id</tt> field</li>
+<li>Methods <tt class="docutils literal">TestCase.add_component()</tt>, <tt class="docutils literal">TestCase.create()</tt>,
+<tt class="docutils literal">TestCase.filter()</tt> and <tt class="docutils literal">TestCase.update()</tt> will return <tt class="docutils literal">id</tt> instead
+of <tt class="docutils literal">case_id</tt> field</li>
+</ul>
+<p><strong>NOTES:</strong></p>
+<p>Kiwi TCMS automation framework plugins have been updated to work with the
+newest API. At the time of Kiwi TCMS v8.0 release their versions are:</p>
+<ul class="simple">
+<li>kiwitcms-tap-plugin v8.0.1</li>
+<li>kiwitcms-junit.xml-plugin v8.0.1</li>
+<li>kiwitcms-junit-plugin v8.0</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Allow displaying lists with more then 9 items when reviewing test cases. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/339">Issue #339</a> (Mfon Eti-mfon)</li>
+<li>Make <tt class="docutils literal">tcms.tests.storage.RaiseWhenFileNotFound`</tt> capable of finding
+finding static files on Windows which enables development mode for folks
+not using Linux environment. See
+<a class="reference external" href="https://stackoverflow.com/questions/55297178">SO #55297178</a> (Mfon Eti-mfon)</li>
+<li>Allow changing test execution status without adding comment. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1261">Issue #1261</a></li>
+<li>Properly refresh test run progress bar when changing statuses. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1326">Issue #1326</a></li>
+<li>Fix a bug where updating test cases from the UI was causing text and various
+other fields to be reset. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1318">Issue #1318</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Extract attachments widget to new template. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1124">Issue #1124</a>
+(Rosen Sasov)</li>
+<li>Rename RPC related classes. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/682">Issue #682</a>
+(Rosen Sasov)</li>
+<li>Add new test (Mariyan Garvanski)</li>
+<li>Start using GitHub actions, first for running flake8</li>
+<li>Remove unused <tt class="docutils literal">TestCase.get_previous_and_next()</tt></li>
+<li>Remove unused <tt class="docutils literal">TestCaseStatus.string_to_instance()</tt></li>
+<li>Remove unused <tt class="docutils literal">TestCase.create()</tt></li>
+<li>Remove unused <tt class="docutils literal">json_success_refresh_page()</tt></li>
+<li>Remove unused fields from <tt class="docutils literal">SearchPlanForm</tt></li>
+<li>Use JSON-RPC in <tt class="docutils literal">previewPlan()</tt></li>
+<li>Remove <tt class="docutils literal">toggleTestCaseContents()</tt>, duplicate of <tt class="docutils literal">toggleTestExecutionPane()</tt></li>
+<li>Refactor a few more views to class-based</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ko#">Korean translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/tr#">Turkish translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="github-marketplace-listing-deprecation">
+<h2>GitHub Marketplace listing deprecation</h2>
+<p>As we've stated previously Kiwi TCMS has migrated to a new GitHub backend and
+OAuth tokens for the previous backend have been revoked and the
+existing listing on GitHub Marketplace is deprecated. It is a non-functioning
+app at the moment!</p>
+<p>It is not possible for us to cancel Marketplace subscriptions programatically,
+that is GitHub does not provide such API. Active subscribers please follow these
+3 steps to help us clean up stale information:</p>
+<ul class="simple">
+<li>Go to <a class="reference external" href="https://github.com/marketplace/kiwi-tcms">https://github.com/marketplace/kiwi-tcms</a></li>
+<li>From &quot;Edit your plan&quot; button at the top select your GitHub account</li>
+<li>Then click &quot;Cancel this plan&quot; link which is at the left-hand side
+at the bottom of the description box!</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb-103-centos7
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/atodorov/2020/02/11/i-deleted-our-newsletter-from-mailchimp-please-re-subscribe/" rel="bookmark" title="Permalink to I deleted our newsletter from Mailchimp ! Please re-subscribe">
                 <h1 class="top-header">I deleted our newsletter from Mailchimp ! Please re-subscribe</h1>
             </a>
@@ -2304,45 +2554,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 <p>Happy testing!</p>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/05/27/kiwi-tcms-needs-your-help-winning-openawards-2019/" rel="bookmark" title="Permalink to Kiwi TCMS needs your help winning OpenAwards 2019">
-                <h1 class="top-header">Kiwi TCMS needs your help winning OpenAwards 2019</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Mon 27 May 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img src="/images/openexpo/openawards2019.jpg"
-     alt="Vote for Kiwi TCMS at OpenAwards 2019"
-     style="float: none"></p>
-<p>Thanks to you, our community supporters, Anton Sankov and Alex Todorov
-<a href="/blog/kiwi-tcms-team/2019/03/13/taking-the-lead-at-openexpo-europe-cfp-votes/">took the lead at OpenExpo 2019 CfP votes</a>.
-We need your help one more time. Our team has submitted participation in
-'Best Tech Community' and 'Best Success Story' categories.</p>
-<p>Unfortunately our submission into 'Best Success Story' has been pulled down!
-We used that category to share the story from a dead open source project into
-a thriving open source community with lots of users and contributors and to
-highlight some of our milestones. Here's the short version:</p>
-<ul>
-<li>lots of technical updates and refactoring, latest everything, modern UI</li>
-<li>the <strong>only</strong> open source test case management system on GitHub Marketplace</li>
-<li>nearly 60000 downloads on Docker Hub</li>
-<li>growing and active core team</li>
-<li>active OSS contributors</li>
-</ul>
-<p>Please help us gain more recognition:</p>
-<ul>
-<li><a href="https://a.cstmapp.com/voteme/31129/633186885">Vote for Kiwi TCMS</a>
-  in the Best Tech Community category!</li>
-</ul>
-<p>Thanks you &amp; happy testing!</p>
         </div>
     </article>
 
