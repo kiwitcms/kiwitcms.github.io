@@ -1,6 +1,6 @@
 Title: The University of Utah uses Kiwi TCMS
 Headline: inside their Platform for Open Wireless Data-driven Experimental Research environment
-date: 2023-08-16 10:45
+date: 2023-08-16 19:13
 comments: true
 og_image: images/customers/university_of_utah+kiwitcms.png
 twitter_image: images/customers/university_of_utah+kiwitcms.png
