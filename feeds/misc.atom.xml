@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-07-18T09:45:00+03:00</updated><entry><title>OffSec has chosen Kiwi TCMS</title><link href="/blog/malcolm-shore/2023/07/18/offsec-has-chosen-kiwi-tcms/" rel="alternate"></link><published>2023-07-18T09:45:00+03:00</published><updated>2023-07-18T09:45:00+03:00</updated><author><name>Malcolm Shore</name></author><id>tag:None,2023-07-18:/blog/malcolm-shore/2023/07/18/offsec-has-chosen-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;a href="https://www.offsec.com/"&gt;OffSec&lt;/a&gt; is an American international company working
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-08-16T19:13:00+03:00</updated><entry><title>The University of Utah uses Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2023/08/16/the-university-of-utah-uses-kiwi-tcms/" rel="alternate"></link><published>2023-08-16T19:13:00+03:00</published><updated>2023-08-16T19:13:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-08-16:/blog/kiwi-tcms-team/2023/08/16/the-university-of-utah-uses-kiwi-tcms/</id><summary type="html">&lt;p&gt;The &lt;a href="https://www.utah.edu/"&gt;University of Utah&lt;/a&gt; is a public research university
+in Salt Lake City, USA. It is the flagship institution of the
+Utah System of Higher Education and was established in 1850.&lt;/p&gt;
+&lt;p&gt;The University of Utah's
+&lt;a href="https://www.cs.utah.edu/"&gt;School of Computing&lt;/a&gt;, founded as the Computer Science Department
+in 1965, has a long and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The &lt;a href="https://www.utah.edu/"&gt;University of Utah&lt;/a&gt; is a public research university
+in Salt Lake City, USA. It is the flagship institution of the
+Utah System of Higher Education and was established in 1850.&lt;/p&gt;
+&lt;p&gt;The University of Utah's
+&lt;a href="https://www.cs.utah.edu/"&gt;School of Computing&lt;/a&gt;, founded as the Computer Science Department
+in 1965, has a long and distinguished record of high impact research.
+The university has provided large, automated testbeds since around the year 2000,
+funded by the National Science Foundation.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://www.flux.utah.edu/"&gt;Flux Research Group&lt;/a&gt; conducts research in operating systems,
+networking, security, and virtualization. The group consists of three faculty and over
+two dozen research staff, graduate students, and undergrads.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.powderwireless.net/"&gt;POWDER&lt;/a&gt;
+(the Platform for Open Wireless Data-driven Experimental Research) is flexible infrastructure
+enabling a wide range of software-defined experiments on the future of wireless networks.
+POWDER supports software-programmable experimentation on 5G and beyond, massive MIMO, ORAN,
+spectrum sharing and CBRS, RF monitoring,
+and anything else that can be supported on software-defined radios.&lt;/p&gt;
+&lt;p&gt;In the words of David M. Johnson, research staff:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The addition of Kiwi TCMS to our POWDER mobile wireless testbed helps to support
+the complex multi-system, end-to-end functional test and integration scenarios
+we see in the 5G/O-RAN/beyond mobile wireless space.&lt;/p&gt;
+&lt;p&gt;We use Kiwi TCMS as part of an on-demand environment that POWDER provides to users
+that can help them automate testing using a workflow approach,
+from CI-triggered orchestration from scratch in our cloud-like environment,
+through resource configuration and running test suites,
+to finally collecting results into private instances of Kiwi TCMS.&lt;/p&gt;
+&lt;p&gt;We use both the Stackstorm and Dagster workflow engines to execute our test and integration workflows.
+The &lt;a href="https://gitlab.flux.utah.edu/powder-workflows/stackstorm-kiwitcms"&gt;stackstorm-kiwitcms&lt;/a&gt;
+library is a simple Stackstorm "integration pack"
+(Python source code in this case) that invokes and re-exports much of the core Kiwi TCMS XML-RPC API
+(with some minor sugar) into Stackstorm, so that each API function is exposed as a Stackstorm action
+(the fundamental unit of its workflows). This means that the workflows can orchestrate resources
+into test scenarios; configure the resources; create or instantiate Kiwi TCMS test runs/executions/metadata;
+execute tests; and push test results/status into Kiwi TCMS records, upload attachments, etc, for persistence.&lt;/p&gt;
+&lt;p&gt;We use &lt;a href="https://gitlab.flux.utah.edu/powderrenewpublic/kiwi"&gt;a fork&lt;/a&gt; of Kiwi TCMS right now
+so that we could upload attachments to test runs via the API.
+That was a trivial change which
+&lt;a href="https://github.com/kiwitcms/Kiwi/commit/9344e2873a48da477ac565362689e4851c34214e"&gt;made its way upstream&lt;/a&gt;
+as part of Kiwi TCMS version 12.1.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us grow&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>OffSec has chosen Kiwi TCMS</title><link href="/blog/malcolm-shore/2023/07/18/offsec-has-chosen-kiwi-tcms/" rel="alternate"></link><published>2023-07-18T09:45:00+03:00</published><updated>2023-07-18T09:45:00+03:00</updated><author><name>Malcolm Shore</name></author><id>tag:None,2023-07-18:/blog/malcolm-shore/2023/07/18/offsec-has-chosen-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;a href="https://www.offsec.com/"&gt;OffSec&lt;/a&gt; is an American international company working
 in information security, penetration testing and digital forensics. Operating
 from around 2007, the company has created multiple open source projects,
 advanced security courses, the ExploitDB vulnerability database, and the popular Kali Linux.
