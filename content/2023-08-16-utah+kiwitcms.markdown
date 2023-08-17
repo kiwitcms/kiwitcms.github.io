@@ -7,6 +7,8 @@ twitter_image: images/customers/university_of_utah+kiwitcms.png
 tags: community
 
 
+!["University of Utah + Kiwi TCMS logos"](/images/customers/university_of_utah+kiwitcms.png "University of Utah + Kiwi TCMS logos")
+
 The [University of Utah](https://www.utah.edu/) is a public research university
 in Salt Lake City, USA. It is the flagship institution of the
 Utah System of Higher Education and was established in 1850.
