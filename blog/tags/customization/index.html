@@ -131,11 +131,9 @@ scratch</p>
         <span class="k">return</span> <span class="n">comment</span>
 </code></pre></div>
 
-
 <p>Then override the <code>EXTERNAL_BUG_TRACKERS</code> setting to include your customizations:</p>
 <div class="highlight"><pre><span></span><code><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
 to <em>mymodule.ExtendedBugTracker</em>.</p>
@@ -191,7 +189,6 @@ file system like so</p>
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>Then you need to poll your 3rd party bug tracker (and/or other systems) and
 update the cache for each URL</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.core.cache</span> <span class="kn">import</span> <span class="n">cache</span>
@@ -209,7 +206,6 @@ update the cache for each URL</p>
     <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">description</span><span class="p">})</span>
 </code></pre></div>
 
-
 <p>Then execute the Python script above regularly. For example use the following
 as your cron script</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
@@ -217,7 +213,6 @@ as your cron script</p>
 <span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/venv/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
 cat<span class="w"> </span>/path/to/cache_updater.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>/Kiwi/manage.py<span class="w"> </span>shell
 </code></pre></div>
-
 
 <p><img src="/images/testcase_shows_bug_details_cache.png" alt="bug details from customized cache" style="float:none"></p>
 <p><strong>IMPORTANT</strong></p>
@@ -256,7 +251,6 @@ scratch</p>
         <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
 
-
 <p>Then import the new <code>ExtendedBugTracker</code> class inside
 <code>tcms/issuetracker/types.py</code> like so</p>
 <div class="highlight"><pre><span></span><code><span class="gh">index 9ad90ac..2c76621 100644</span>
@@ -268,7 +262,6 @@ scratch</p>
 <span class="w"> </span>from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
 <span class="gi">+from tcms.issuetracker.kiwitcms import ExtendedBugTracker</span>
 </code></pre></div>
-
 
 <p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
 to <em>ExtendedBugTracker</em>.</p>
@@ -297,7 +290,6 @@ override the list of available bug tracker integrations:</p>
 <div class="highlight"><pre><span></span><code><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>Happy testing!</p>
         </div>
     </article>
@@ -325,7 +317,6 @@ our team deemed not required for upstream and was removed in
         models.py
 </code></pre></div>
 
-
 <p>This is a small Django application that will log every call to the API backend.
 Each file looks like this:</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># models.py contains DB schema for your new table</span>
@@ -342,7 +333,6 @@ Each file looks like this:</p>
         <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>Then</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
@@ -394,7 +384,6 @@ Each file looks like this:</p>
             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_single_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p><strong>NOTE:</strong>
 You will have to execute <code>./manage.py makemigrations api_logging</code> to create the
 initial migration for Django. This could be easier if you place the above directory
@@ -412,14 +401,12 @@ Kiwi TCMS defaults:</p>
                           <span class="s1">&#39;api_logging.handlers.JSONRPCHandler&#39;</span><span class="p">]</span>
 </code></pre></div>
 
-
 <p>Then place everything in <code>Dockerfile</code> like so:</p>
-<div class="highlight"><pre><span></span><code>    FROM kiwitcms/kiwi
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwi</span>
 
-    COPY ./api_logging/ /venv/lib64/python3.6/site-packages/api_logging/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
+<span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">api_logging</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">api_logging</span><span class="o">/</span>
+<span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
 </code></pre></div>
-
 
 <p>Kiwi TCMS will import your <code>local_settings.py</code> and enable the logging application.
 Now build your customized Docker image and use it for deployment!</p>
@@ -450,7 +437,6 @@ email text looks like this:</p>
 <span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span>
 </code></pre></div>
 
-
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
 runs a custom Docker image based on
 <code>kiwitcms/kiwi</code>. For this image the confirmation email looks like this</p>
@@ -471,18 +457,16 @@ runs a custom Docker image based on
 <span class="x">    http://kiwitcms.org</span>
 </code></pre></div>
 
-
 <p>The file that we want to override is <code>tcms/templates/email/confirm_registration.txt</code>.</p>
 <p>Create a local directory (git repository) which will hold customization configuration
 and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
 <p>Next you want to make this file available inside your docker image so your <code>Dockerfile</code>
 should look like this:</p>
-<div class="highlight"><pre><span></span><code>    FROM kiwitcms/kiwi
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwi</span>
 
-    COPY ./templates.d/ /venv/lib64/python3.6/site-packages/tcms/overridden_templates/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
+<span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">templates</span><span class="p">.</span><span class="nx">d</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">overridden_templates</span><span class="o">/</span>
+<span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
 </code></pre></div>
-
 
 <p>where <code>local_settings.py</code> contains</p>
 <div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
@@ -490,7 +474,6 @@ should look like this:</p>
 
     <span class="n">settings</span><span class="o">.</span><span class="n">TEMPLATES</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;DIRS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">TCMS_ROOT_PATH</span><span class="p">,</span> <span class="s1">&#39;overridden_templates&#39;</span><span class="p">))</span>
 </code></pre></div>
-
 
 <p>The following code states <em>instruct Django to look into <code>overridden_templates</code> first and
 use any templates it finds there; also make my files available in that specific location
@@ -522,15 +505,13 @@ This blog post will outline how to backup these docker volumes.</p>
 database name used inside the <code>docker-compose.yml</code> file!</p>
 <h2>MariaDB/MySQL database</h2>
 <p>To export all contents from the docker container execute the command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">mysqldump</span><span class="w"> </span><span class="o">--</span><span class="nv">user</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">password</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">password</span><span class="o">&gt;</span><span class="w"> </span><span class="nv">kiwi</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">sql</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db mysqldump --user &lt;username&gt; --password &lt;password&gt; kiwi &gt; backup.sql
 </code></pre></div>
-
 
 <p>This will create a file named <code>backup.sql</code> in the current directory, outside of the running container!</p>
 <p>You can restore the database contents by using the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">sql</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">mysql</span><span class="w"> </span><span class="o">--</span><span class="nv">user</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">password</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">password</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="nv">v</span><span class="w"> </span><span class="nv">kiwi</span>
+<div class="highlight"><pre><span></span><code>cat backup.sql | docker exec kiwi_db mysql --user &lt;username&gt; --password &lt;password&gt; -v kiwi
 </code></pre></div>
-
 
 <p><strong>Notes:</strong></p>
 <ol>
@@ -539,18 +520,16 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 </ol>
 <h2>Postgres database</h2>
 <p>To export all contents from the docker container execute the command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_dump</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span><span class="w"> </span><span class="o">-</span><span class="nv">F</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db pg_dump -U &lt;username&gt; --dbname=kiwi -F c &gt; backup.bak
 </code></pre></div>
-
 
 <p>This will create a file named <code>backup.bak</code> in the current directory, outside of the running container.
 This is a PostgreSQL custom database dump format which contains all data and schema definitions.
 That is a binary file which can be read with the <code>pg_restore</code> command!</p>
 <p>To drop and restore the entire database execute:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">psql</span><span class="w"> </span><span class="o">-</span><span class="nv">c</span><span class="w"> </span><span class="s2">&quot;DROP DATABASE IF EXISTS kiwi;&quot;</span>
-<span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_restore</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">template1</span><span class="w"> </span><span class="o">-</span><span class="nv">vcC</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db psql -c &quot;DROP DATABASE IF EXISTS kiwi;&quot;
+cat backup.bak | docker exec -i kiwi_db pg_restore -U &lt;username&gt; --dbname=template1 -vcC
 </code></pre></div>
-
 
 <h2>Multi-tenant database</h2>
 <p>The <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenant</a> add-on and/or
@@ -559,29 +538,26 @@ Postgres! Each tenant (aka name-space) uses a separate database schema.
 The first schema name is <code>public</code>.</p>
 <p>The backup and restore instructions shown above operate on all tenants together!
 If you want to [drop and] restore an individual tenant then use the commands:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">psql</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span>
+<div class="highlight"><pre><span></span><code>docker exec -it kiwi_db psql --dbname=kiwi
 
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="w"> </span><span class="nv">DROP</span><span class="w"> </span><span class="nv">SCHEMA</span><span class="w"> </span>$<span class="nv">tenant_name</span><span class="w"> </span><span class="nv">CASCADE</span><span class="c1">;</span>
+kiwi=&gt; DROP SCHEMA $tenant_name CASCADE;
 ....
-<span class="nv">DROP</span><span class="w"> </span><span class="nv">SCHEMA</span>
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="w"> </span><span class="nv">CREATE</span><span class="w"> </span><span class="nv">SCHEMA</span><span class="w"> </span>$<span class="nv">tenant_name</span><span class="c1">;</span>
-<span class="nv">CREATE</span><span class="w"> </span><span class="nv">SCHEMA</span>
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="nv">Ctrl</span><span class="o">+</span><span class="nv">D</span>
+DROP SCHEMA
+kiwi=&gt; CREATE SCHEMA $tenant_name;
+CREATE SCHEMA
+kiwi=&gt;Ctrl+D
 
-<span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_restore</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span><span class="w"> </span><span class="o">-</span><span class="nv">v</span><span class="w"> </span><span class="o">--</span><span class="nv">schema</span><span class="w"> </span>$<span class="nv">tenant_name</span>
+cat backup.bak | docker exec -i kiwi_db pg_restore -U &lt;username&gt; --dbname=kiwi -v --schema $tenant_name
 </code></pre></div>
-
 
 <h2>Backing up file uploads</h2>
 <p>Uploaded files can easily be backed up with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">cP</span><span class="w"> </span><span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">uploads</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span>
 </code></pre></div>
 
-
 <p>and then restored with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">cat</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">x</span>
 </code></pre></div>
-
 
 <p>You may also try the <code>rsync</code> command but be aware that it is not installed
 by default!</p>

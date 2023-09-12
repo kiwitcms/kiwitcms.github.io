@@ -204,15 +204,14 @@ community effort. If you'd like to help consult our
 <a href="http://kiwitcms.readthedocs.io/en/latest/contribution.html#translation">translations contribution page</a>.</p>
 <h2>How to upgrade</h2>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cd</span><span class="w"> </span><span class="nv">Kiwi</span><span class="o">/</span>
-<span class="nv">git</span><span class="w"> </span><span class="nv">pull</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">down</span>
-<span class="nv">docker</span><span class="w"> </span><span class="nv">pull</span><span class="w"> </span><span class="nv">kiwitcms</span><span class="o">/</span><span class="nv">kiwi</span>
-<span class="nv">docker</span><span class="w"> </span><span class="nv">pull</span><span class="w"> </span><span class="nv">centos</span><span class="o">/</span><span class="nv">mariadb</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="o">-</span><span class="nv">d</span>
-<span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span><span class="w"> </span><span class="nv">migrate</span>
+<div class="highlight"><pre><span></span><code>cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
-
 
 <h2>Help us make Kiwi TCMS better</h2>
 <p>According to <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the

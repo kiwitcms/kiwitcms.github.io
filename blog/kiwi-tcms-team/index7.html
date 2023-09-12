@@ -313,13 +313,12 @@ older releases due to the massive ammount of changes in the RPC layer.</p>
 </ul>
 <h2>How to upgrade</h2>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cd</span><span class="w"> </span><span class="nv">Kiwi</span><span class="o">/</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">down</span>
-<span class="nv">docker</span><span class="w"> </span><span class="nv">pull</span><span class="w"> </span><span class="nv">kiwitcms</span><span class="o">/</span><span class="nv">kiwi</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="o">-</span><span class="nv">d</span>
-<span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span><span class="w"> </span><span class="nv">migrate</span>
+<div class="highlight"><pre><span></span><code>cd Kiwi/
+docker-compose down
+docker pull kiwitcms/kiwi
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
-
 
 <p>Happy testing!</p>
         </div>
@@ -380,13 +379,12 @@ enhancement release and we advise you to upgrade as soon as possible!</p>
 <p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
 <h2>How to upgrade</h2>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cd</span><span class="w"> </span><span class="nv">Kiwi</span><span class="o">/</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">down</span>
-<span class="nv">make</span><span class="w"> </span><span class="nv">docker</span><span class="o">-</span><span class="nv">image</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="o">-</span><span class="nv">d</span>
-<span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span><span class="w"> </span><span class="nv">migrate</span>
+<div class="highlight"><pre><span></span><code>cd Kiwi/
+docker-compose down
+make docker-image
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
-
 
 <p>Happy testing!</p>
         </div>
@@ -612,13 +610,12 @@ has also been updated so you can explore the new version.</p>
 <p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
 <h2>How to upgrade</h2>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cd</span><span class="w"> </span><span class="nv">Kiwi</span><span class="o">/</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">down</span>
-<span class="nv">make</span><span class="w"> </span><span class="nv">docker</span><span class="o">-</span><span class="nv">image</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="o">-</span><span class="nv">d</span>
-<span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span><span class="w"> </span><span class="nv">migrate</span>
+<div class="highlight"><pre><span></span><code>cd Kiwi/
+docker-compose down
+make docker-image
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
-
 
 <p>Happy testing!</p>
         </div>
@@ -728,13 +725,12 @@ Additional documentation and examples will be published in the project's
 repository or on this blog!</p>
 <h2>How to upgrade</h2>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cd</span><span class="w"> </span><span class="nv">Kiwi</span><span class="o">/</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">down</span>
-<span class="nv">make</span><span class="w"> </span><span class="nv">docker</span><span class="o">-</span><span class="nv">image</span>
-<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="o">-</span><span class="nv">d</span>
-<span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="nv">Kiwi</span><span class="o">/</span><span class="nv">manage</span>.<span class="nv">py</span><span class="w"> </span><span class="nv">migrate</span>
+<div class="highlight"><pre><span></span><code>cd Kiwi/
+docker-compose down
+make docker-image
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
-
 
 <p>Happy testing!</p>
         </div>

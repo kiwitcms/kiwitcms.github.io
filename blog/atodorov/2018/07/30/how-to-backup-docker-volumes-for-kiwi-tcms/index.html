@@ -132,15 +132,13 @@ This blog post will outline how to backup these docker volumes.</p>
 database name used inside the <code>docker-compose.yml</code> file!</p>
 <h2>MariaDB/MySQL database</h2>
 <p>To export all contents from the docker container execute the command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">mysqldump</span><span class="w"> </span><span class="o">--</span><span class="nv">user</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">password</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">password</span><span class="o">&gt;</span><span class="w"> </span><span class="nv">kiwi</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">sql</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db mysqldump --user &lt;username&gt; --password &lt;password&gt; kiwi &gt; backup.sql
 </code></pre></div>
-
 
 <p>This will create a file named <code>backup.sql</code> in the current directory, outside of the running container!</p>
 <p>You can restore the database contents by using the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">sql</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">mysql</span><span class="w"> </span><span class="o">--</span><span class="nv">user</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">password</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">password</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="nv">v</span><span class="w"> </span><span class="nv">kiwi</span>
+<div class="highlight"><pre><span></span><code>cat backup.sql | docker exec kiwi_db mysql --user &lt;username&gt; --password &lt;password&gt; -v kiwi
 </code></pre></div>
-
 
 <p><strong>Notes:</strong></p>
 <ol>
@@ -149,18 +147,16 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 </ol>
 <h2>Postgres database</h2>
 <p>To export all contents from the docker container execute the command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_dump</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span><span class="w"> </span><span class="o">-</span><span class="nv">F</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db pg_dump -U &lt;username&gt; --dbname=kiwi -F c &gt; backup.bak
 </code></pre></div>
-
 
 <p>This will create a file named <code>backup.bak</code> in the current directory, outside of the running container.
 This is a PostgreSQL custom database dump format which contains all data and schema definitions.
 That is a binary file which can be read with the <code>pg_restore</code> command!</p>
 <p>To drop and restore the entire database execute:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">psql</span><span class="w"> </span><span class="o">-</span><span class="nv">c</span><span class="w"> </span><span class="s2">&quot;DROP DATABASE IF EXISTS kiwi;&quot;</span>
-<span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_restore</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">template1</span><span class="w"> </span><span class="o">-</span><span class="nv">vcC</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db psql -c &quot;DROP DATABASE IF EXISTS kiwi;&quot;
+cat backup.bak | docker exec -i kiwi_db pg_restore -U &lt;username&gt; --dbname=template1 -vcC
 </code></pre></div>
-
 
 <h2>Multi-tenant database</h2>
 <p>The <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenant</a> add-on and/or
@@ -169,29 +165,26 @@ Postgres! Each tenant (aka name-space) uses a separate database schema.
 The first schema name is <code>public</code>.</p>
 <p>The backup and restore instructions shown above operate on all tenants together!
 If you want to [drop and] restore an individual tenant then use the commands:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">psql</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span>
+<div class="highlight"><pre><span></span><code>docker exec -it kiwi_db psql --dbname=kiwi
 
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="w"> </span><span class="nv">DROP</span><span class="w"> </span><span class="nv">SCHEMA</span><span class="w"> </span>$<span class="nv">tenant_name</span><span class="w"> </span><span class="nv">CASCADE</span><span class="c1">;</span>
+kiwi=&gt; DROP SCHEMA $tenant_name CASCADE;
 ....
-<span class="nv">DROP</span><span class="w"> </span><span class="nv">SCHEMA</span>
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="w"> </span><span class="nv">CREATE</span><span class="w"> </span><span class="nv">SCHEMA</span><span class="w"> </span>$<span class="nv">tenant_name</span><span class="c1">;</span>
-<span class="nv">CREATE</span><span class="w"> </span><span class="nv">SCHEMA</span>
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="nv">Ctrl</span><span class="o">+</span><span class="nv">D</span>
+DROP SCHEMA
+kiwi=&gt; CREATE SCHEMA $tenant_name;
+CREATE SCHEMA
+kiwi=&gt;Ctrl+D
 
-<span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_restore</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span><span class="w"> </span><span class="o">-</span><span class="nv">v</span><span class="w"> </span><span class="o">--</span><span class="nv">schema</span><span class="w"> </span>$<span class="nv">tenant_name</span>
+cat backup.bak | docker exec -i kiwi_db pg_restore -U &lt;username&gt; --dbname=kiwi -v --schema $tenant_name
 </code></pre></div>
-
 
 <h2>Backing up file uploads</h2>
 <p>Uploaded files can easily be backed up with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">cP</span><span class="w"> </span><span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">uploads</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span>
 </code></pre></div>
 
-
 <p>and then restored with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">cat</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">x</span>
 </code></pre></div>
-
 
 <p>You may also try the <code>rsync</code> command but be aware that it is not installed
 by default!</p>

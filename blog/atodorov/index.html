@@ -240,7 +240,6 @@ reboot, tester will be able to login as root and the created filesystem will be 
 ./raid456.ko.xz
 </code></pre></div>
 
-
 </li>
 <li>
 <p><em>Mount Point</em>: <code>/</code> for example is mounted very early in the boot process, <code>/home</code> is mounted much later.
@@ -314,7 +313,6 @@ sustainable open source project. For now this means three key areas:</p>
 <span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="n">Technical</span>
 <span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="n">Community</span><span class="w"> </span><span class="err">&amp;</span><span class="w"> </span><span class="n">Adoption</span>
 </code></pre></div>
-
 
 <h2>Team</h2>
 <p>Right now we have a core team with 3 members, 3 more members on-boarding
@@ -400,7 +398,6 @@ established 3 main areas to work on. Their completeness scores are:</p>
 <span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="n">Technical</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">70</span><span class="err">%</span>
 <span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="n">Community</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">100</span><span class="err">%</span>
 </code></pre></div>
-
 
 <p>Average score is 65% completion!</p>
 <h2>Team</h2>
@@ -499,11 +496,9 @@ scratch</p>
         <span class="k">return</span> <span class="n">comment</span>
 </code></pre></div>
 
-
 <p>Then override the <code>EXTERNAL_BUG_TRACKERS</code> setting to include your customizations:</p>
 <div class="highlight"><pre><span></span><code><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
 to <em>mymodule.ExtendedBugTracker</em>.</p>
@@ -606,7 +601,6 @@ sustainable open source project. For now this means several key areas:</p>
 <span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="n">Technical</span>
 <span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="n">Community</span>
 </code></pre></div>
-
 
 <h2>Team</h2>
 <p>Right now we have a core team with 6 newcomers on-boarding.
@@ -807,7 +801,6 @@ file system like so</p>
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>Then you need to poll your 3rd party bug tracker (and/or other systems) and
 update the cache for each URL</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.core.cache</span> <span class="kn">import</span> <span class="n">cache</span>
@@ -825,7 +818,6 @@ update the cache for each URL</p>
     <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">description</span><span class="p">})</span>
 </code></pre></div>
 
-
 <p>Then execute the Python script above regularly. For example use the following
 as your cron script</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
@@ -833,7 +825,6 @@ as your cron script</p>
 <span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/venv/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
 cat<span class="w"> </span>/path/to/cache_updater.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>/Kiwi/manage.py<span class="w"> </span>shell
 </code></pre></div>
-
 
 <p><img src="/images/testcase_shows_bug_details_cache.png" alt="bug details from customized cache" style="float:none"></p>
 <p><strong>IMPORTANT</strong></p>
@@ -872,7 +863,6 @@ scratch</p>
         <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
 
-
 <p>Then import the new <code>ExtendedBugTracker</code> class inside
 <code>tcms/issuetracker/types.py</code> like so</p>
 <div class="highlight"><pre><span></span><code><span class="gh">index 9ad90ac..2c76621 100644</span>
@@ -884,7 +874,6 @@ scratch</p>
 <span class="w"> </span>from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
 <span class="gi">+from tcms.issuetracker.kiwitcms import ExtendedBugTracker</span>
 </code></pre></div>
-
 
 <p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
 to <em>ExtendedBugTracker</em>.</p>
@@ -912,7 +901,6 @@ importing <code>ExtendedBugTracker</code> in <code>tcms/issuetracker/types.py</c
 override the list of available bug tracker integrations:</p>
 <div class="highlight"><pre><span></span><code><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>Happy testing!</p>
         </div>
@@ -1160,7 +1148,6 @@ Version=d455fb42fb7c2aedadfd5f66de7d131109c03350
 Build=2
 </code></pre></div>
 
-
 <p>Next we convert the README file from Markdown to reStructuredText which triggers
 <a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496220575">Travis Build #3</a> for
 <a href="https://github.com/kiwitcms/plugin-demo/commit/418b80b3bbb65a799f695dc59d488c76f560fa2b">commit 418b80b</a>.
@@ -1171,7 +1158,6 @@ This build <strong>again</strong> creates a new TestRun and new TestPlan for it.
 Version=418b80b3bbb65a799f695dc59d488c76f560fa2b
 Build=3
 </code></pre></div>
-
 
 <p><strong>Important:</strong> we can see that version is different which will affect how artifacts
 are organized in Kiwi TCMS, possibly affect how you will report status to stakeholders!</p>
@@ -1191,7 +1177,6 @@ Version=master
 Build=4
 </code></pre></div>
 
-
 <p>Right after that I realized we can make this configuration a bit more generic
 because our team is planning to support multiple versions of the product and
 development will be done in separate branches!
@@ -1206,7 +1191,6 @@ branch! That is to say, the product is in active mode of development.</p>
 Version=master
 Build=5
 </code></pre></div>
-
 
 <p><a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496229819">Travis Build #6</a> for
 <a href="https://github.com/kiwitcms/plugin-demo/commit/df6153b2495bfc6825f25e544ae1806108aa490f">commit df6153b</a>
@@ -1230,7 +1214,6 @@ for investigation.</p>
 Version=master
 Build=bf75d0a
 </code></pre></div>
-
 
 <h2>Report results in pre-existing TestRun</h2>
 <p>There are many reasons you may want to do this:</p>
@@ -1269,7 +1252,6 @@ Version=master
 Build=unspecified
 </code></pre></div>
 
-
 <p>Also check-out comments in TR executions to see when and who had executed the test case.</p>
 <p>So far there have been some tests which were failing (although Travis reports PASS) so
 I decided to fix them.
@@ -1291,7 +1273,6 @@ Version=master
 Build=c4f1ae5
 </code></pre></div>
 
-
 <h2>Branch out for an LTS version</h2>
 <p>Our team has decided to make the first LTS release of the product. We branch out into
 <code>lts-v0</code> branch in git and cut the first NVR. This results in
@@ -1303,7 +1284,6 @@ Build=c4f1ae5
 Version=lts-v0
 Build=9f1ef71
 </code></pre></div>
-
 
 <p>Because this is the first time we are running tests for this product version
 we end up with the newly created TP-16!</p>
@@ -1321,7 +1301,6 @@ will come in the future!</p>
 Version=lts-v0
 Build=2d72754
 </code></pre></div>
-
 
 <p>TR-29 contains the new <a href="https://tcms.kiwitcms.org/case/58/">TC-58</a>!</p>
 <h2>cherry-pick between branches</h2>
@@ -1741,121 +1720,120 @@ client!</p>
 for inspiration!</p>
 <h2>Behavior Specification</h2>
 <p><em>Please use the comments section to discuss unclear behavior and missing scenarios!</em></p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">exists</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">~/.</span><span class="n">tcms</span><span class="o">.</span><span class="n">conf</span><span class="w"> </span><span class="n">exists</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">initializes</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">and</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">configure</span><span class="w"> </span><span class="n">TCMS_API_URL</span><span class="p">,</span><span class="w"> </span><span class="n">TCMS_USERNAME</span><span class="p">,</span><span class="w"> </span><span class="n">TCMS_PASSWORD</span>
-<span class="w">          </span><span class="n">variables</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">respective</span><span class="w"> </span><span class="n">values</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">exists</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="nx">tcms</span><span class="p">.</span><span class="nx">conf</span><span class="w"> </span><span class="nx">exists</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">initializes</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">log</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">info</span><span class="w"> </span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="nx">read</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="k">and</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">configure</span><span class="w"> </span><span class="nx">TCMS_API_URL</span><span class="p">,</span><span class="w"> </span><span class="nx">TCMS_USERNAME</span><span class="p">,</span><span class="w"> </span><span class="nx">TCMS_PASSWORD</span>
+<span class="w">          </span><span class="nx">variables</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">respective</span><span class="w"> </span><span class="nx">values</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">ENVIRONMENT</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">doesn</span><span class="s1">&#39;t exist</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">~/.</span><span class="n">tcms</span><span class="o">.</span><span class="n">conf</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">exists</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">initializes</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">configure</span>
-<span class="w">          </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">variables</span><span class="o">/</span><span class="k">class</span><span class="w"> </span><span class="n">members</span><span class="p">:</span>
-<span class="w">          </span><span class="n">TCMS_API_URL</span><span class="p">,</span><span class="w"> </span><span class="n">TCMS_USERNAME</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">TCMS_PASSWORD</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">ENVIRONMENT</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">doesn</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">exist</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="nx">tcms</span><span class="p">.</span><span class="nx">conf</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">exists</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">initializes</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">read</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">environment</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">configure</span>
+<span class="w">          </span><span class="nx">the</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">variables</span><span class="o">/</span><span class="kd">class</span><span class="w"> </span><span class="nx">members</span><span class="p">:</span>
+<span class="w">          </span><span class="nx">TCMS_API_URL</span><span class="p">,</span><span class="w"> </span><span class="nx">TCMS_USERNAME</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">TCMS_PASSWORD</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">exit</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">TCMS_API_URL</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">configured</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">TCMS_API_URL</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">empty</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">initializes</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">warning</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">exit</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="n">depending</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">runner</span><span class="w"> </span><span class="n">framework</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">exist</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="nx">exit</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">TCMS_API_URL</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">configured</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">TCMS_API_URL</span><span class="w"> </span><span class="nx">variable</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">empty</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">initializes</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">log</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">warning</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">exit</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="nx">depending</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">runner</span><span class="w"> </span><span class="nx">framework</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">exist</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">1</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">exit</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">TCMS_USERNAME</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">configured</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">TCMS_USERNAME</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">empty</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">initializes</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">warning</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">exit</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="n">depending</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">runner</span><span class="w"> </span><span class="n">framework</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">exist</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="nx">exit</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">TCMS_USERNAME</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">configured</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">TCMS_USERNAME</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">empty</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">initializes</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">log</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">warning</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">exit</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="nx">depending</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">runner</span><span class="w"> </span><span class="nx">framework</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">exist</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">1</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">exit</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">TCMS_PASSWORD</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">configured</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">TCMS_PASSWORD</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">empty</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">initializes</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">warning</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">exit</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="n">depending</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">runner</span><span class="w"> </span><span class="n">framework</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">exist</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="nx">exit</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">TCMS_PASSWORD</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">configured</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">TCMS_PASSWORD</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">empty</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">initializes</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">log</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">warning</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">exit</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="nx">depending</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">runner</span><span class="w"> </span><span class="nx">framework</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">exist</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">1</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">use</span><span class="w"> </span><span class="n">existing</span><span class="w"> </span><span class="n">TestPlan</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">configured</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">TCMS_RUN_ID</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">empty</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">initializes</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w">  </span><span class="n">this</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Current_TestRun</span><span class="w"> </span><span class="n">record</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="k">is</span>
-<span class="w">           </span><span class="n">going</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">execution</span><span class="w"> </span><span class="n">results</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="n">Current_TestPlan</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span>
-<span class="w">           </span><span class="n">search</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">cases</span><span class="w"> </span><span class="n">becomes</span><span class="w"> </span><span class="n">Current_TestRun</span><span class="o">.</span><span class="n">plan</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="nx">re</span><span class="o">-</span><span class="nx">use</span><span class="w"> </span><span class="nx">existing</span><span class="w"> </span><span class="nx">TestPlan</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">configured</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">TCMS_RUN_ID</span><span class="w"> </span><span class="nx">environment</span><span class="w"> </span><span class="nx">variable</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">empty</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">initializes</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w">  </span><span class="nx">this</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">Current_TestRun</span><span class="w"> </span><span class="nx">record</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="k">is</span>
+<span class="w">           </span><span class="nx">going</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">execution</span><span class="w"> </span><span class="nx">results</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="nx">Current_TestPlan</span><span class="w"> </span><span class="nx">document</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span>
+<span class="w">           </span><span class="nx">search</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">cases</span><span class="w"> </span><span class="nx">becomes</span><span class="w"> </span><span class="nx">Current_TestRun</span><span class="p">.</span><span class="nx">plan</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">TestPlan</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">TestRun</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">TCMS_RUN_ID</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">configured</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">TCMS_RUN_ID</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">empty</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">TestPlan</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Kiwi</span><span class="w"> </span><span class="n">TCMS</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">attributes</span><span class="p">:</span>
-<span class="w">        </span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Automated test plan for %(product)&#39;</span>
-<span class="w">        </span><span class="n">product</span><span class="o">=</span><span class="s1">&#39;%(product)&#39;</span>
-<span class="w">        </span><span class="n">product_version</span><span class="o">=</span><span class="s1">&#39;%(version)&#39;</span>
-<span class="w">        </span><span class="n">type</span><span class="o">=</span><span class="s1">&#39;Unit&#39;</span>
-<span class="w">    </span><span class="n">WHERE</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">product</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">placeholder</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">TCMS_PRODUCT</span><span class="o">==</span><span class="n">TRAVIS_REPO_SLUG</span><span class="o">==</span><span class="n">JOB_NAME</span>
-<span class="w">           </span><span class="o">%</span><span class="p">(</span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">placeholder</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">TCMS_PRODUCT_VERSION</span><span class="o">==</span><span class="n">TRAVIS_COMMIT</span><span class="o">==</span><span class="n">TRAVIS_PULL_REQUEST_SHA</span><span class="o">==</span><span class="n">GIT_COMMIT</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">crate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">TestRun</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Kiwi</span><span class="w"> </span><span class="n">TCMS</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">attributes</span><span class="p">:</span>
-<span class="w">        </span><span class="n">summary</span><span class="o">=</span><span class="s1">&#39;Automated test run ....&#39;</span>
-<span class="w">        </span><span class="n">plan</span><span class="o">=</span><span class="n">Current</span><span class="w"> </span><span class="n">TestPlan</span>
-<span class="w">        </span><span class="n">build</span><span class="o">=</span><span class="s1">&#39;%(build)&#39;</span>
-<span class="w">        </span><span class="n">manager</span><span class="o">=</span><span class="n">TCMS_USERNAME</span>
-<span class="w">    </span><span class="n">WHERE</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">build</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">placeholder</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">TCMS_BUILD</span><span class="o">==</span><span class="n">TRAVIS_BUILD_NUMBER</span><span class="o">==</span><span class="n">BUILD_NUMBER</span>
-<span class="w">    </span><span class="n">Environment</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="ow">in</span><span class="p">:</span>
-<span class="w">    </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">travis</span><span class="o">-</span><span class="n">ci</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">environment</span><span class="o">-</span><span class="n">variables</span><span class="c1">#default-environment-variables</span>
-<span class="w">    </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">wiki</span><span class="o">.</span><span class="n">jenkins</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">display</span><span class="o">/</span><span class="n">JENKINS</span><span class="o">/</span><span class="n">Building</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="n">software</span><span class="o">+</span><span class="n">project</span><span class="c1">#Buildingasoftwareproject-belowJenkinsSetEnvironmentVariables</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">TestPlan</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nx">TestRun</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">TCMS_RUN_ID</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">configured</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">TCMS_RUN_ID</span><span class="w"> </span><span class="nx">environment</span><span class="w"> </span><span class="nx">variable</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">empty</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">TestPlan</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">Kiwi</span><span class="w"> </span><span class="nx">TCMS</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">attributes</span><span class="p">:</span>
+<span class="w">        </span><span class="nx">name</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">Automated</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">plan</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span><span class="err">&#39;</span>
+<span class="w">        </span><span class="nx">product</span><span class="p">=</span><span class="err">&#39;</span><span class="o">%</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span><span class="err">&#39;</span>
+<span class="w">        </span><span class="nx">product_version</span><span class="p">=</span><span class="err">&#39;</span><span class="o">%</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span><span class="err">&#39;</span>
+<span class="w">        </span><span class="k">type</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">Unit</span><span class="err">&#39;</span>
+<span class="w">    </span><span class="nx">WHERE</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">placeholder</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">TCMS_PRODUCT</span><span class="o">==</span><span class="nx">TRAVIS_REPO_SLUG</span><span class="o">==</span><span class="nx">JOB_NAME</span>
+<span class="w">           </span><span class="o">%</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">placeholder</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">TCMS_PRODUCT_VERSION</span><span class="o">==</span><span class="nx">TRAVIS_COMMIT</span><span class="o">==</span><span class="nx">TRAVIS_PULL_REQUEST_SHA</span><span class="o">==</span><span class="nx">GIT_COMMIT</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">crate</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">TestRun</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">Kiwi</span><span class="w"> </span><span class="nx">TCMS</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">attributes</span><span class="p">:</span>
+<span class="w">        </span><span class="nx">summary</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">Automated</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="o">...</span><span class="p">.</span><span class="err">&#39;</span>
+<span class="w">        </span><span class="nx">plan</span><span class="p">=</span><span class="nx">Current</span><span class="w"> </span><span class="nx">TestPlan</span>
+<span class="w">        </span><span class="nx">build</span><span class="p">=</span><span class="err">&#39;</span><span class="o">%</span><span class="p">(</span><span class="nx">build</span><span class="p">)</span><span class="err">&#39;</span>
+<span class="w">        </span><span class="nx">manager</span><span class="p">=</span><span class="nx">TCMS_USERNAME</span>
+<span class="w">    </span><span class="nx">WHERE</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">build</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">placeholder</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">TCMS_BUILD</span><span class="o">==</span><span class="nx">TRAVIS_BUILD_NUMBER</span><span class="o">==</span><span class="nx">BUILD_NUMBER</span>
+<span class="w">    </span><span class="nx">Environment</span><span class="w"> </span><span class="nx">variables</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">specified</span><span class="w"> </span><span class="k">in</span><span class="p">:</span>
+<span class="w">    </span><span class="nx">https</span><span class="p">:</span><span class="c1">//docs.travis-ci.com/user/environment-variables#default-environment-variables</span>
+<span class="w">    </span><span class="nx">https</span><span class="p">:</span><span class="c1">//wiki.jenkins.io/display/JENKINS/Building+a+software+project#Buildingasoftwareproject-belowJenkinsSetEnvironmentVariables</span>
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">Product</span><span class="p">,</span><span class="w"> </span><span class="n">Version</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">Build</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">exist</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">TCMS_RUN_ID</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">configured</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">product</span><span class="p">)</span><span class="w"> </span><span class="n">exists</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="n">exists</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">build</span><span class="p">)</span><span class="w"> </span><span class="n">exists</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">tries</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">auto</span><span class="o">-</span><span class="n">create</span><span class="w"> </span><span class="n">TestPlan</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">TestRun</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">use</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">product</span><span class="p">),</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">build</span><span class="p">)</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">database</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">try</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">auto</span><span class="o">-</span><span class="n">create</span><span class="w"> </span><span class="n">them</span>
-
-
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">auto</span><span class="o">-</span><span class="n">create</span><span class="w"> </span><span class="n">Product</span><span class="p">,</span><span class="w"> </span><span class="n">Version</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">Build</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">don</span><span class="s1">&#39;t exist</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">TCMS_RUN_ID</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">configured</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">product</span><span class="p">)</span><span class="w"> </span><span class="n">doesn</span><span class="s1">&#39;t exist</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="n">doesn</span><span class="s1">&#39;t exist</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">build</span><span class="p">)</span><span class="w"> </span><span class="n">doesn</span><span class="s1">&#39;t exist</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">tries</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">auto</span><span class="o">-</span><span class="n">create</span><span class="w"> </span><span class="n">TestPlan</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">TestRun</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">product</span><span class="p">),</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">build</span><span class="p">)</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">created</span><span class="w"> </span><span class="n">automatically</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="nx">duplicate</span><span class="w"> </span><span class="nx">Product</span><span class="p">,</span><span class="w"> </span><span class="nx">Version</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nx">Build</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">they</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">exist</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">TCMS_RUN_ID</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">configured</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span><span class="w"> </span><span class="nx">exists</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span><span class="w"> </span><span class="nx">exists</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">build</span><span class="p">)</span><span class="w"> </span><span class="nx">exists</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">tries</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="kt">auto</span><span class="o">-</span><span class="nx">create</span><span class="w"> </span><span class="nx">TestPlan</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">TestRun</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">re</span><span class="o">-</span><span class="nx">use</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">product</span><span class="p">),</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">build</span><span class="p">)</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">database</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">try</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="kt">auto</span><span class="o">-</span><span class="nx">create</span><span class="w"> </span><span class="nx">them</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">TestPlan</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">good</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">configuration</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">loops</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">tests</span><span class="w"> </span><span class="n">emitted</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">runner</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="n">Current_TestPlan</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">TestCase</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">name</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">case</span><span class="w"> </span><span class="n">doesn</span><span class="s1">&#39;t exist in Current_TestPlan</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Current_TestPlan</span>
-<span class="w">    </span><span class="n">hint</span><span class="p">:</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">best</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">end</span><span class="o">!</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Will</span><span class="w"> </span><span class="kt">auto</span><span class="o">-</span><span class="nx">create</span><span class="w"> </span><span class="nx">Product</span><span class="p">,</span><span class="w"> </span><span class="nx">Version</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nx">Build</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">they</span><span class="w"> </span><span class="nx">don</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">exist</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">TCMS_RUN_ID</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">configured</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span><span class="w"> </span><span class="nx">doesn</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">exist</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span><span class="w"> </span><span class="nx">doesn</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">exist</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">build</span><span class="p">)</span><span class="w"> </span><span class="nx">doesn</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">exist</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">tries</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="kt">auto</span><span class="o">-</span><span class="nx">create</span><span class="w"> </span><span class="nx">TestPlan</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">TestRun</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">product</span><span class="p">),</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="nx">build</span><span class="p">)</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">created</span><span class="w"> </span><span class="nx">automatically</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">TestRun</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">good</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">configuration</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">loops</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">tests</span><span class="w"> </span><span class="n">emitted</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">runner</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="n">Current_TestRun</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">TestCaseRun</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">matches</span>
-<span class="w">          </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">name</span>
-<span class="w">    </span><span class="n">hint</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="ow">or</span><span class="w"> </span><span class="n">Current_TestCase</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">scenario</span><span class="p">,</span><span class="w"> </span><span class="n">depending</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">implementation</span><span class="p">)</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">TestCaseRun</span><span class="w"> </span><span class="n">doesn</span><span class="s1">&#39;t exist in Current_TestRun</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Current_TestRun</span>
-<span class="w">    </span><span class="n">hint</span><span class="p">:</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">best</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">end</span><span class="o">!</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">added</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">TestPlan</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">good</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">configuration</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">loops</span><span class="w"> </span><span class="nx">over</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">tests</span><span class="w"> </span><span class="nx">emitted</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">runner</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="nx">Current_TestPlan</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">TestCase</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">same</span><span class="w"> </span><span class="nx">name</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="nx">doesn</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">exist</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">Current_TestPlan</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">added</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">Current_TestPlan</span>
+<span class="w">    </span><span class="nx">hint</span><span class="p">:</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">probably</span><span class="w"> </span><span class="nx">best</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">process</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">results</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">end</span><span class="p">!</span>
 
 
-<span class="w">    </span><span class="n">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="n">Current_TestRun</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">results</span>
-<span class="w">    </span><span class="n">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">good</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">configuration</span>
-<span class="w">    </span><span class="n">WHEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">loops</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">tests</span><span class="w"> </span><span class="n">emitted</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">runner</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="n">Current_TestRun</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">TestCaseRun</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">matches</span>
-<span class="w">          </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">name</span>
-<span class="w">    </span><span class="n">hint</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="ow">or</span><span class="w"> </span><span class="n">Current_TestCase</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">scenario</span><span class="p">,</span><span class="w"> </span><span class="n">depending</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">implementation</span><span class="p">)</span>
-<span class="w">    </span><span class="n">AND</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">TestCaseRun</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">exists</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Current_TestRun</span>
-<span class="w">    </span><span class="n">THEN</span><span class="p">:</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">execution</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">coming</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">runner</span>
-<span class="w">    </span><span class="n">hint</span><span class="p">:</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">best</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">end</span><span class="o">!</span>
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">added</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">TestRun</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">good</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">configuration</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">loops</span><span class="w"> </span><span class="nx">over</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">tests</span><span class="w"> </span><span class="nx">emitted</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">runner</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="nx">Current_TestRun</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">TestCaseRun</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">matches</span>
+<span class="w">          </span><span class="nx">the</span><span class="w"> </span><span class="nx">current</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">name</span>
+<span class="w">    </span><span class="nx">hint</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="k">or</span><span class="w"> </span><span class="nx">Current_TestCase</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">previous</span><span class="w"> </span><span class="nx">scenario</span><span class="p">,</span><span class="w"> </span><span class="nx">depending</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">implementation</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">such</span><span class="w"> </span><span class="nx">TestCaseRun</span><span class="w"> </span><span class="nx">doesn</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">exist</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">Current_TestRun</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">added</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">Current_TestRun</span>
+<span class="w">    </span><span class="nx">hint</span><span class="p">:</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">probably</span><span class="w"> </span><span class="nx">best</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">process</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">results</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">end</span><span class="p">!</span>
+
+
+<span class="w">    </span><span class="nx">SUMMARY</span><span class="p">:</span><span class="w"> </span><span class="nx">Current_TestRun</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">updated</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">results</span>
+<span class="w">    </span><span class="nx">GIVEN</span><span class="p">:</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">good</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">configuration</span>
+<span class="w">    </span><span class="nx">WHEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">loops</span><span class="w"> </span><span class="nx">over</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">tests</span><span class="w"> </span><span class="nx">emitted</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">runner</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="nx">Current_TestRun</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">TestCaseRun</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">matches</span>
+<span class="w">          </span><span class="nx">the</span><span class="w"> </span><span class="nx">current</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">name</span>
+<span class="w">    </span><span class="nx">hint</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="k">or</span><span class="w"> </span><span class="nx">Current_TestCase</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">previous</span><span class="w"> </span><span class="nx">scenario</span><span class="p">,</span><span class="w"> </span><span class="nx">depending</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">implementation</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">AND</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">TestCaseRun</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="nx">exists</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">Current_TestRun</span>
+<span class="w">    </span><span class="nx">THEN</span><span class="p">:</span><span class="w"> </span><span class="nx">its</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">updated</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">execution</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="nx">coming</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">runner</span>
+<span class="w">    </span><span class="nx">hint</span><span class="p">:</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">probably</span><span class="w"> </span><span class="nx">best</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">process</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">results</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">end</span><span class="p">!</span>
 </code></pre></div>
-
 
 <p>Happy testing!</p>
         </div>
@@ -1914,7 +1892,6 @@ user<span class="w">    </span>0m1.050s
 sys<span class="w">     </span>0m0.353s
 </code></pre></div>
 
-
 <p>This measures at 120 msec/req or 7.85 req/sec!</p>
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">public.tenant.kiwitcms.org</a> is running on an
 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware">AWS t2.micro</a>
@@ -1946,14 +1923,12 @@ user<span class="w">    </span>0m1.154s
 sys<span class="w">     </span>0m0.091s
 </code></pre></div>
 
-
 <p>This measures at 140 sec/req or 7.05 req/sec!</p>
 <p>Note: since I am using Python 3.6 I had to modify the file
 <code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Used by http.client if no context is explicitly passed.</span>
 <span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
 </code></pre></div>
-
 
 <p>The issue has been reported in
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
@@ -2070,7 +2045,6 @@ our team deemed not required for upstream and was removed in
         models.py
 </code></pre></div>
 
-
 <p>This is a small Django application that will log every call to the API backend.
 Each file looks like this:</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># models.py contains DB schema for your new table</span>
@@ -2087,7 +2061,6 @@ Each file looks like this:</p>
         <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>Then</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
@@ -2139,7 +2112,6 @@ Each file looks like this:</p>
             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_single_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p><strong>NOTE:</strong>
 You will have to execute <code>./manage.py makemigrations api_logging</code> to create the
 initial migration for Django. This could be easier if you place the above directory
@@ -2157,14 +2129,12 @@ Kiwi TCMS defaults:</p>
                           <span class="s1">&#39;api_logging.handlers.JSONRPCHandler&#39;</span><span class="p">]</span>
 </code></pre></div>
 
-
 <p>Then place everything in <code>Dockerfile</code> like so:</p>
-<div class="highlight"><pre><span></span><code>    FROM kiwitcms/kiwi
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwi</span>
 
-    COPY ./api_logging/ /venv/lib64/python3.6/site-packages/api_logging/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
+<span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">api_logging</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">api_logging</span><span class="o">/</span>
+<span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
 </code></pre></div>
-
 
 <p>Kiwi TCMS will import your <code>local_settings.py</code> and enable the logging application.
 Now build your customized Docker image and use it for deployment!</p>
@@ -2195,7 +2165,6 @@ email text looks like this:</p>
 <span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span>
 </code></pre></div>
 
-
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
 runs a custom Docker image based on
 <code>kiwitcms/kiwi</code>. For this image the confirmation email looks like this</p>
@@ -2216,18 +2185,16 @@ runs a custom Docker image based on
 <span class="x">    http://kiwitcms.org</span>
 </code></pre></div>
 
-
 <p>The file that we want to override is <code>tcms/templates/email/confirm_registration.txt</code>.</p>
 <p>Create a local directory (git repository) which will hold customization configuration
 and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
 <p>Next you want to make this file available inside your docker image so your <code>Dockerfile</code>
 should look like this:</p>
-<div class="highlight"><pre><span></span><code>    FROM kiwitcms/kiwi
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwi</span>
 
-    COPY ./templates.d/ /venv/lib64/python3.6/site-packages/tcms/overridden_templates/
-    COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/
+<span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">templates</span><span class="p">.</span><span class="nx">d</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">overridden_templates</span><span class="o">/</span>
+<span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
 </code></pre></div>
-
 
 <p>where <code>local_settings.py</code> contains</p>
 <div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
@@ -2235,7 +2202,6 @@ should look like this:</p>
 
     <span class="n">settings</span><span class="o">.</span><span class="n">TEMPLATES</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;DIRS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">TCMS_ROOT_PATH</span><span class="p">,</span> <span class="s1">&#39;overridden_templates&#39;</span><span class="p">))</span>
 </code></pre></div>
-
 
 <p>The following code states <em>instruct Django to look into <code>overridden_templates</code> first and
 use any templates it finds there; also make my files available in that specific location
@@ -2267,15 +2233,13 @@ This blog post will outline how to backup these docker volumes.</p>
 database name used inside the <code>docker-compose.yml</code> file!</p>
 <h2>MariaDB/MySQL database</h2>
 <p>To export all contents from the docker container execute the command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">mysqldump</span><span class="w"> </span><span class="o">--</span><span class="nv">user</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">password</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">password</span><span class="o">&gt;</span><span class="w"> </span><span class="nv">kiwi</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">sql</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db mysqldump --user &lt;username&gt; --password &lt;password&gt; kiwi &gt; backup.sql
 </code></pre></div>
-
 
 <p>This will create a file named <code>backup.sql</code> in the current directory, outside of the running container!</p>
 <p>You can restore the database contents by using the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">sql</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">mysql</span><span class="w"> </span><span class="o">--</span><span class="nv">user</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">password</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">password</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="nv">v</span><span class="w"> </span><span class="nv">kiwi</span>
+<div class="highlight"><pre><span></span><code>cat backup.sql | docker exec kiwi_db mysql --user &lt;username&gt; --password &lt;password&gt; -v kiwi
 </code></pre></div>
-
 
 <p><strong>Notes:</strong></p>
 <ol>
@@ -2284,18 +2248,16 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 </ol>
 <h2>Postgres database</h2>
 <p>To export all contents from the docker container execute the command:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_dump</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span><span class="w"> </span><span class="o">-</span><span class="nv">F</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db pg_dump -U &lt;username&gt; --dbname=kiwi -F c &gt; backup.bak
 </code></pre></div>
-
 
 <p>This will create a file named <code>backup.bak</code> in the current directory, outside of the running container.
 This is a PostgreSQL custom database dump format which contains all data and schema definitions.
 That is a binary file which can be read with the <code>pg_restore</code> command!</p>
 <p>To drop and restore the entire database execute:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">psql</span><span class="w"> </span><span class="o">-</span><span class="nv">c</span><span class="w"> </span><span class="s2">&quot;DROP DATABASE IF EXISTS kiwi;&quot;</span>
-<span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_restore</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">template1</span><span class="w"> </span><span class="o">-</span><span class="nv">vcC</span>
+<div class="highlight"><pre><span></span><code>docker exec -i kiwi_db psql -c &quot;DROP DATABASE IF EXISTS kiwi;&quot;
+cat backup.bak | docker exec -i kiwi_db pg_restore -U &lt;username&gt; --dbname=template1 -vcC
 </code></pre></div>
-
 
 <h2>Multi-tenant database</h2>
 <p>The <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenant</a> add-on and/or
@@ -2304,29 +2266,26 @@ Postgres! Each tenant (aka name-space) uses a separate database schema.
 The first schema name is <code>public</code>.</p>
 <p>The backup and restore instructions shown above operate on all tenants together!
 If you want to [drop and] restore an individual tenant then use the commands:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">it</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">psql</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span>
+<div class="highlight"><pre><span></span><code>docker exec -it kiwi_db psql --dbname=kiwi
 
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="w"> </span><span class="nv">DROP</span><span class="w"> </span><span class="nv">SCHEMA</span><span class="w"> </span>$<span class="nv">tenant_name</span><span class="w"> </span><span class="nv">CASCADE</span><span class="c1">;</span>
+kiwi=&gt; DROP SCHEMA $tenant_name CASCADE;
 ....
-<span class="nv">DROP</span><span class="w"> </span><span class="nv">SCHEMA</span>
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="w"> </span><span class="nv">CREATE</span><span class="w"> </span><span class="nv">SCHEMA</span><span class="w"> </span>$<span class="nv">tenant_name</span><span class="c1">;</span>
-<span class="nv">CREATE</span><span class="w"> </span><span class="nv">SCHEMA</span>
-<span class="nv">kiwi</span><span class="o">=&gt;</span><span class="nv">Ctrl</span><span class="o">+</span><span class="nv">D</span>
+DROP SCHEMA
+kiwi=&gt; CREATE SCHEMA $tenant_name;
+CREATE SCHEMA
+kiwi=&gt;Ctrl+D
 
-<span class="nv">cat</span><span class="w"> </span><span class="nv">backup</span>.<span class="nv">bak</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span><span class="nv">kiwi_db</span><span class="w"> </span><span class="nv">pg_restore</span><span class="w"> </span><span class="o">-</span><span class="nv">U</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">username</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nv">dbname</span><span class="o">=</span><span class="nv">kiwi</span><span class="w"> </span><span class="o">-</span><span class="nv">v</span><span class="w"> </span><span class="o">--</span><span class="nv">schema</span><span class="w"> </span>$<span class="nv">tenant_name</span>
+cat backup.bak | docker exec -i kiwi_db pg_restore -U &lt;username&gt; --dbname=kiwi -v --schema $tenant_name
 </code></pre></div>
-
 
 <h2>Backing up file uploads</h2>
 <p>Uploaded files can easily be backed up with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">cP</span><span class="w"> </span><span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">uploads</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span>
 </code></pre></div>
 
-
 <p>and then restored with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">cat</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">x</span>
 </code></pre></div>
-
 
 <p>You may also try the <code>rsync</code> command but be aware that it is not installed
 by default!</p>
