@@ -30,7 +30,7 @@ CATEGORIES_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''
 
 STATIC_PATHS = ['google/google8b349b847d57319a.html', 'CNAME', 'images/',
-                'scripts/', 'README']
+                'scripts/', 'README', '2m.png']
 EXTRA_PATH_METADATA = {
     'google/google8b349b847d57319a.html': {'path': 'google8b349b847d57319a.html'},
 }
