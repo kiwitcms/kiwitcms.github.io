@@ -552,6 +552,7 @@ sustainable open source project. For now this means several key areas:</p>
 <span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="n">Community</span>
 </code></pre></div>
 
+
 <h2>Team</h2>
 <p>Right now we have a core team with 6 newcomers on-boarding.
 Engineering performance is all over the place with some people contributing
@@ -1204,6 +1205,7 @@ file system like so</p>
 <span class="p">}</span>
 </code></pre></div>
 
+
 <p>Then you need to poll your 3rd party bug tracker (and/or other systems) and
 update the cache for each URL</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.core.cache</span> <span class="kn">import</span> <span class="n">cache</span>
@@ -1221,6 +1223,7 @@ update the cache for each URL</p>
     <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">description</span><span class="p">})</span>
 </code></pre></div>
 
+
 <p>Then execute the Python script above regularly. For example use the following
 as your cron script</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
@@ -1228,6 +1231,7 @@ as your cron script</p>
 <span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/venv/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
 cat<span class="w"> </span>/path/to/cache_updater.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>/Kiwi/manage.py<span class="w"> </span>shell
 </code></pre></div>
+
 
 <p><img src="/images/testcase_shows_bug_details_cache.png" alt="bug details from customized cache" style="float:none"></p>
 <p><strong>IMPORTANT</strong></p>
@@ -1266,6 +1270,7 @@ scratch</p>
         <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
 
+
 <p>Then import the new <code>ExtendedBugTracker</code> class inside
 <code>tcms/issuetracker/types.py</code> like so</p>
 <div class="highlight"><pre><span></span><code><span class="gh">index 9ad90ac..2c76621 100644</span>
@@ -1277,6 +1282,7 @@ scratch</p>
 <span class="w"> </span>from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
 <span class="gi">+from tcms.issuetracker.kiwitcms import ExtendedBugTracker</span>
 </code></pre></div>
+
 
 <p>and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
 to <em>ExtendedBugTracker</em>.</p>
@@ -1304,6 +1310,7 @@ importing <code>ExtendedBugTracker</code> in <code>tcms/issuetracker/types.py</c
 override the list of available bug tracker integrations:</p>
 <div class="highlight"><pre><span></span><code><span class="n">EXTERNAL_BUG_TRACKERS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;mymodule.ExtendedBugTracker&#39;</span><span class="p">)</span>
 </code></pre></div>
+
 
 <p>Happy testing!</p>
         </div>

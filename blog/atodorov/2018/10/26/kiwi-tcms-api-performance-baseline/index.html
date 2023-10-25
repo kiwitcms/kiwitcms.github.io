@@ -163,6 +163,7 @@ user<span class="w">    </span>0m1.050s
 sys<span class="w">     </span>0m0.353s
 </code></pre></div>
 
+
 <p>This measures at 120 msec/req or 7.85 req/sec!</p>
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">public.tenant.kiwitcms.org</a> is running on an
 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware">AWS t2.micro</a>
@@ -194,12 +195,14 @@ user<span class="w">    </span>0m1.154s
 sys<span class="w">     </span>0m0.091s
 </code></pre></div>
 
+
 <p>This measures at 140 sec/req or 7.05 req/sec!</p>
 <p>Note: since I am using Python 3.6 I had to modify the file
 <code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Used by http.client if no context is explicitly passed.</span>
 <span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
 </code></pre></div>
+
 
 <p>The issue has been reported in
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>

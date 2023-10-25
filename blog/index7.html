@@ -258,6 +258,7 @@ for inspiration!</p>
 <span class="w">    </span><span class="nx">hint</span><span class="p">:</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">probably</span><span class="w"> </span><span class="nx">best</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">process</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">results</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">end</span><span class="p">!</span>
 </code></pre></div>
 
+
 <p>Happy testing!</p>
         </div>
     </article>
@@ -558,6 +559,7 @@ user<span class="w">    </span>0m1.050s
 sys<span class="w">     </span>0m0.353s
 </code></pre></div>
 
+
 <p>This measures at 120 msec/req or 7.85 req/sec!</p>
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">public.tenant.kiwitcms.org</a> is running on an
 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware">AWS t2.micro</a>
@@ -589,12 +591,14 @@ user<span class="w">    </span>0m1.154s
 sys<span class="w">     </span>0m0.091s
 </code></pre></div>
 
+
 <p>This measures at 140 sec/req or 7.05 req/sec!</p>
 <p>Note: since I am using Python 3.6 I had to modify the file
 <code>/opt/rh/rh-python36/root/lib64/python3.6/ssl.py</code> to read:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Used by http.client if no context is explicitly passed.</span>
 <span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">_create_unverified_context</span> <span class="c1"># this disables HTTPS cert validation</span>
 </code></pre></div>
+
 
 <p>The issue has been reported in
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
@@ -860,6 +864,7 @@ at OpenFest to learn more about Kiwi TCMS and have fun with us!</p>
     <a href="https://twitter.com/a_sankov/status/1041260417669124097?ref_src=twsrc%5Etfw">September 16, 2018</a>
 </p>
 </blockquote>
+
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>In case you are unable to visit Sofia, which you totally should, you can catch up with
@@ -1049,6 +1054,7 @@ our team deemed not required for upstream and was removed in
         models.py
 </code></pre></div>
 
+
 <p>This is a small Django application that will log every call to the API backend.
 Each file looks like this:</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># models.py contains DB schema for your new table</span>
@@ -1065,6 +1071,7 @@ Each file looks like this:</p>
         <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
 </code></pre></div>
+
 
 <p>Then</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># handlers.py overrides the RPC handlers coming from django-modernrpc</span>
@@ -1116,6 +1123,7 @@ Each file looks like this:</p>
             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">process_single_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
 </code></pre></div>
 
+
 <p><strong>NOTE:</strong>
 You will have to execute <code>./manage.py makemigrations api_logging</code> to create the
 initial migration for Django. This could be easier if you place the above directory
@@ -1133,12 +1141,14 @@ Kiwi TCMS defaults:</p>
                           <span class="s1">&#39;api_logging.handlers.JSONRPCHandler&#39;</span><span class="p">]</span>
 </code></pre></div>
 
+
 <p>Then place everything in <code>Dockerfile</code> like so:</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwi</span>
 
 <span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">api_logging</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">api_logging</span><span class="o">/</span>
 <span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
 </code></pre></div>
+
 
 <p>Kiwi TCMS will import your <code>local_settings.py</code> and enable the logging application.
 Now build your customized Docker image and use it for deployment!</p>
@@ -1471,6 +1481,7 @@ email text looks like this:</p>
 <span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span>
 </code></pre></div>
 
+
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
 runs a custom Docker image based on
 <code>kiwitcms/kiwi</code>. For this image the confirmation email looks like this</p>
@@ -1491,6 +1502,7 @@ runs a custom Docker image based on
 <span class="x">    http://kiwitcms.org</span>
 </code></pre></div>
 
+
 <p>The file that we want to override is <code>tcms/templates/email/confirm_registration.txt</code>.</p>
 <p>Create a local directory (git repository) which will hold customization configuration
 and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
@@ -1502,12 +1514,14 @@ should look like this:</p>
 <span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
 </code></pre></div>
 
+
 <p>where <code>local_settings.py</code> contains</p>
 <div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 
     <span class="n">settings</span><span class="o">.</span><span class="n">TEMPLATES</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;DIRS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">TCMS_ROOT_PATH</span><span class="p">,</span> <span class="s1">&#39;overridden_templates&#39;</span><span class="p">))</span>
 </code></pre></div>
+
 
 <p>The following code states <em>instruct Django to look into <code>overridden_templates</code> first and
 use any templates it finds there; also make my files available in that specific location
@@ -1640,10 +1654,12 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 <div class="highlight"><pre><span></span><code>docker exec -i kiwi_db mysqldump --user &lt;username&gt; --password &lt;password&gt; kiwi &gt; backup.sql
 </code></pre></div>
 
+
 <p>This will create a file named <code>backup.sql</code> in the current directory, outside of the running container!</p>
 <p>You can restore the database contents by using the following command:</p>
 <div class="highlight"><pre><span></span><code>cat backup.sql | docker exec kiwi_db mysql --user &lt;username&gt; --password &lt;password&gt; -v kiwi
 </code></pre></div>
+
 
 <p><strong>Notes:</strong></p>
 <ol>
@@ -1655,6 +1671,7 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 <div class="highlight"><pre><span></span><code>docker exec -i kiwi_db pg_dump -U &lt;username&gt; --dbname=kiwi -F c &gt; backup.bak
 </code></pre></div>
 
+
 <p>This will create a file named <code>backup.bak</code> in the current directory, outside of the running container.
 This is a PostgreSQL custom database dump format which contains all data and schema definitions.
 That is a binary file which can be read with the <code>pg_restore</code> command!</p>
@@ -1662,6 +1679,7 @@ That is a binary file which can be read with the <code>pg_restore</code> command
 <div class="highlight"><pre><span></span><code>docker exec -i kiwi_db psql -c &quot;DROP DATABASE IF EXISTS kiwi;&quot;
 cat backup.bak | docker exec -i kiwi_db pg_restore -U &lt;username&gt; --dbname=template1 -vcC
 </code></pre></div>
+
 
 <h2>Multi-tenant database</h2>
 <p>The <a href="https://github.com/kiwitcms/tenants">kiwitcms-tenant</a> add-on and/or
@@ -1682,14 +1700,17 @@ kiwi=&gt;Ctrl+D
 cat backup.bak | docker exec -i kiwi_db pg_restore -U &lt;username&gt; --dbname=kiwi -v --schema $tenant_name
 </code></pre></div>
 
+
 <h2>Backing up file uploads</h2>
 <p>Uploaded files can easily be backed up with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">cP</span><span class="w"> </span><span class="o">/</span><span class="n">Kiwi</span><span class="o">/</span><span class="n">uploads</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span>
 </code></pre></div>
 
+
 <p>and then restored with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">cat</span><span class="w"> </span><span class="n">uploads</span><span class="o">.</span><span class="n">tar</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">kiwi_web</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">x</span>
 </code></pre></div>
+
 
 <p>You may also try the <code>rsync</code> command but be aware that it is not installed
 by default!</p>
@@ -2124,6 +2145,7 @@ docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
 
+
 <h2>Help us make Kiwi TCMS better</h2>
 <p>According to <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the
 Kiwi TCMS team is investing a great deal of our time to make the code base more
@@ -2241,6 +2263,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
+
 
 <h2>Help us make Kiwi TCMS better</h2>
 <p>According to <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">our 2018 roadmap</a> the

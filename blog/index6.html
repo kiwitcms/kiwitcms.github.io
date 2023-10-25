@@ -1038,6 +1038,7 @@ Duration: 1.2 / 3 hrs
 Estimated completion at: 13:30
 </code></pre></div>
 
+
 <p><strong>Unknown:</strong> where does baseline duration come from? Either from the most recent TestRun
 or an average from all of the previous Test Runs. Note that cumulative TestRun duration
 is calculated between Start/Finish events while individual TestExecution records may
@@ -1272,6 +1273,7 @@ Version=d455fb42fb7c2aedadfd5f66de7d131109c03350
 Build=2
 </code></pre></div>
 
+
 <p>Next we convert the README file from Markdown to reStructuredText which triggers
 <a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496220575">Travis Build #3</a> for
 <a href="https://github.com/kiwitcms/plugin-demo/commit/418b80b3bbb65a799f695dc59d488c76f560fa2b">commit 418b80b</a>.
@@ -1282,6 +1284,7 @@ This build <strong>again</strong> creates a new TestRun and new TestPlan for it.
 Version=418b80b3bbb65a799f695dc59d488c76f560fa2b
 Build=3
 </code></pre></div>
+
 
 <p><strong>Important:</strong> we can see that version is different which will affect how artifacts
 are organized in Kiwi TCMS, possibly affect how you will report status to stakeholders!</p>
@@ -1301,6 +1304,7 @@ Version=master
 Build=4
 </code></pre></div>
 
+
 <p>Right after that I realized we can make this configuration a bit more generic
 because our team is planning to support multiple versions of the product and
 development will be done in separate branches!
@@ -1315,6 +1319,7 @@ branch! That is to say, the product is in active mode of development.</p>
 Version=master
 Build=5
 </code></pre></div>
+
 
 <p><a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496229819">Travis Build #6</a> for
 <a href="https://github.com/kiwitcms/plugin-demo/commit/df6153b2495bfc6825f25e544ae1806108aa490f">commit df6153b</a>
@@ -1338,6 +1343,7 @@ for investigation.</p>
 Version=master
 Build=bf75d0a
 </code></pre></div>
+
 
 <h2>Report results in pre-existing TestRun</h2>
 <p>There are many reasons you may want to do this:</p>
@@ -1376,6 +1382,7 @@ Version=master
 Build=unspecified
 </code></pre></div>
 
+
 <p>Also check-out comments in TR executions to see when and who had executed the test case.</p>
 <p>So far there have been some tests which were failing (although Travis reports PASS) so
 I decided to fix them.
@@ -1397,6 +1404,7 @@ Version=master
 Build=c4f1ae5
 </code></pre></div>
 
+
 <h2>Branch out for an LTS version</h2>
 <p>Our team has decided to make the first LTS release of the product. We branch out into
 <code>lts-v0</code> branch in git and cut the first NVR. This results in
@@ -1408,6 +1416,7 @@ Build=c4f1ae5
 Version=lts-v0
 Build=9f1ef71
 </code></pre></div>
+
 
 <p>Because this is the first time we are running tests for this product version
 we end up with the newly created TP-16!</p>
@@ -1425,6 +1434,7 @@ will come in the future!</p>
 Version=lts-v0
 Build=2d72754
 </code></pre></div>
+
 
 <p>TR-29 contains the new <a href="https://tcms.kiwitcms.org/case/58/">TC-58</a>!</p>
 <h2>cherry-pick between branches</h2>

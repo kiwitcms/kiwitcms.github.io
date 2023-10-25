@@ -135,6 +135,7 @@ email text looks like this:</p>
 <span class="x">    </span><span class="cp">{{</span> <span class="nv">confirm_url</span> <span class="cp">}}</span>
 </code></pre></div>
 
+
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
 runs a custom Docker image based on
 <code>kiwitcms/kiwi</code>. For this image the confirmation email looks like this</p>
@@ -155,6 +156,7 @@ runs a custom Docker image based on
 <span class="x">    http://kiwitcms.org</span>
 </code></pre></div>
 
+
 <p>The file that we want to override is <code>tcms/templates/email/confirm_registration.txt</code>.</p>
 <p>Create a local directory (git repository) which will hold customization configuration
 and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
@@ -166,12 +168,14 @@ should look like this:</p>
 <span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
 </code></pre></div>
 
+
 <p>where <code>local_settings.py</code> contains</p>
 <div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
     <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 
     <span class="n">settings</span><span class="o">.</span><span class="n">TEMPLATES</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;DIRS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">TCMS_ROOT_PATH</span><span class="p">,</span> <span class="s1">&#39;overridden_templates&#39;</span><span class="p">))</span>
 </code></pre></div>
+
 
 <p>The following code states <em>instruct Django to look into <code>overridden_templates</code> first and
 use any templates it finds there; also make my files available in that specific location

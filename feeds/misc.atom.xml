@@ -2613,6 +2613,7 @@ You can find your credentials at the
 $&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PASSWORD-TOKEN&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;docker&lt;span class="w"&gt; &lt;/span&gt;login&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;USERNAME&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--password-stdin&lt;span class="w"&gt; &lt;/span&gt;quay.io
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;If you would like to have access to private container repositories for Kiwi TCMS
 checkout the &lt;a href="/containers/"&gt;containers page&lt;/a&gt; and
 &lt;a href="/#subscriptions"&gt;subscribe&lt;/a&gt;!&lt;/p&gt;
@@ -3106,6 +3107,7 @@ reboot, tester will be able to login as root and the created filesystem will be 
 ./raid1.ko.xz
 ./raid456.ko.xz
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;/li&gt;
 &lt;li&gt;
@@ -3717,6 +3719,7 @@ to you via email!&lt;/p&gt;
 &lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://gitlab.com/yobachev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Video recording of the selection process:&lt;/p&gt;
 &lt;p&gt;&lt;iframe
     width="560"
@@ -3725,8 +3728,7 @@ to you via email!&lt;/p&gt;
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;/p&gt;
+&lt;/iframe&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!&lt;/p&gt;
@@ -3934,8 +3936,7 @@ or find us on the conference floor if you want to meet.&lt;/p&gt;
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;/p&gt;
+&lt;/iframe&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!&lt;/p&gt;
@@ -4026,6 +4027,7 @@ We kindly ask you to upvote the first comment at
 &lt;span class="nf"&gt;    When: click the 👍 icon under the first comment&lt;/span&gt;
 &lt;span class="nf"&gt;    Then: wait for the winners to be announced!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;&lt;img alt="&amp;quot;GitLab steps&amp;quot;" src="/images/gitlab-call-to-action.png"&gt;&lt;/p&gt;
 &lt;p&gt;Thank you very much and Happy Testing!&lt;/p&gt;
@@ -5141,6 +5143,7 @@ sustainable open source project. For now this means three key areas:&lt;/p&gt;
 &lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Community&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Adoption&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;h2&gt;Team&lt;/h2&gt;
 &lt;p&gt;Right now we have a core team with 3 members, 3 more members on-boarding
 and 2 interns. In the past year we weren't successful into turning more
@@ -5401,6 +5404,7 @@ established 3 main areas to work on. Their completeness scores are:&lt;/p&gt;
 &lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Technical&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;70&lt;/span&gt;&lt;span class="err"&gt;%&lt;/span&gt;
 &lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Community&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;100&lt;/span&gt;&lt;span class="err"&gt;%&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Average score is 65% completion!&lt;/p&gt;
 &lt;h2&gt;Team&lt;/h2&gt;
@@ -6810,9 +6814,11 @@ scratch&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;comment&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Then override the &lt;code&gt;EXTERNAL_BUG_TRACKERS&lt;/code&gt; setting to include your customizations:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;EXTERNAL_BUG_TRACKERS&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mymodule.ExtendedBugTracker&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
 to &lt;em&gt;mymodule.ExtendedBugTracker&lt;/em&gt;.&lt;/p&gt;
@@ -7815,6 +7821,7 @@ to do that!&lt;/p&gt;
 &lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;there is good chance this campaign coincides with FOSDEM&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;ul&gt;
 &lt;li&gt;Go to &lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;https://webawards.eurid.eu …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;
     &lt;img
@@ -7828,6 +7835,7 @@ to do that!&lt;/p&gt;
 &lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;Kiwi TCMS wins&lt;/span&gt;
 &lt;span class="nf"&gt;    &lt;/span&gt;&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;there is good chance this campaign coincides with FOSDEM&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;ul&gt;
 &lt;li&gt;Go to &lt;a href="https://webawards.eurid.eu/?q=kiwitcms.eu"&gt;https://webawards.eurid.eu/?q=kiwitcms.eu&lt;/a&gt;;&lt;/li&gt;
@@ -8600,6 +8608,7 @@ sustainable open source project. For now this means several key areas:&lt;/p&gt;
 &lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Community&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;h2&gt;Team&lt;/h2&gt;
 &lt;p&gt;Right now we have a core team with 6 newcomers on-boarding.
 Engineering performance is all over the place with some people contributing
@@ -9193,6 +9202,7 @@ file system like so&lt;/p&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Then you need to poll your 3rd party bug tracker (and/or other systems) and
 update the cache for each URL&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.core.cache&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cache&lt;/span&gt;
@@ -9210,6 +9220,7 @@ update the cache for each URL&lt;/p&gt;
     &lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reference&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Then execute the Python script above regularly. For example use the following
 as your cron script&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
@@ -9217,6 +9228,7 @@ as your cron script&lt;/p&gt;
 &lt;span class="nb"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/venv/bin:&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
 cat&lt;span class="w"&gt; &lt;/span&gt;/path/to/cache_updater.py&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;/Kiwi/manage.py&lt;span class="w"&gt; &lt;/span&gt;shell
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;&lt;img src="/images/testcase_shows_bug_details_cache.png" alt="bug details from customized cache" style="float:none"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;&lt;/p&gt;
@@ -9255,6 +9267,7 @@ scratch&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Then import the new &lt;code&gt;ExtendedBugTracker&lt;/code&gt; class inside
 &lt;code&gt;tcms/issuetracker/types.py&lt;/code&gt; like so&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gh"&gt;index 9ad90ac..2c76621 100644&lt;/span&gt;
@@ -9266,6 +9279,7 @@ scratch&lt;/p&gt;
 &lt;span class="w"&gt; &lt;/span&gt;from tcms.issuetracker.kiwitcms import KiwiTCMS  # noqa
 &lt;span class="gi"&gt;+from tcms.issuetracker.kiwitcms import ExtendedBugTracker&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;and change the bug tracker type, via https://tcms.example.com/admin/testcases/bugsystem/,
 to &lt;em&gt;ExtendedBugTracker&lt;/em&gt;.&lt;/p&gt;
@@ -9293,6 +9307,7 @@ importing &lt;code&gt;ExtendedBugTracker&lt;/code&gt; in &lt;code&gt;tcms/issuet
 override the list of available bug tracker integrations:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;EXTERNAL_BUG_TRACKERS&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mymodule.ExtendedBugTracker&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="customization"></category></entry><entry><title>Kiwi TCMS 7.1</title><link href="/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/" rel="alternate"></link><published>2019-10-29T13:40:00+02:00</published><updated>2019-10-29T13:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2019-10-29:/blog/kiwi-tcms-team/2019/10/29/kiwi-tcms-71/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 7.1!
 This is a small improvement update which includes
@@ -11279,6 +11294,7 @@ Duration: 1.2 / 3 hrs
 Estimated completion at: 13:30
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;&lt;strong&gt;Unknown:&lt;/strong&gt; where does baseline duration come from? Either from the most recent TestRun
 or an average from all of the previous Test Runs. Note that cumulative TestRun duration
 is calculated between Start/Finish events while individual TestExecution records may
@@ -11491,6 +11507,7 @@ Version=d455fb42fb7c2aedadfd5f66de7d131109c03350
 Build=2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Next we convert the README file from Markdown to reStructuredText which triggers
 &lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496220575"&gt;Travis Build #3&lt;/a&gt; for
 &lt;a href="https://github.com/kiwitcms/plugin-demo/commit/418b80b3bbb65a799f695dc59d488c76f560fa2b"&gt;commit 418b80b&lt;/a&gt;.
@@ -11501,6 +11518,7 @@ This build &lt;strong&gt;again&lt;/strong&gt; creates a new TestRun and new Test
 Version=418b80b3bbb65a799f695dc59d488c76f560fa2b
 Build=3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; we can see that version is different which will affect how artifacts
 are organized in Kiwi TCMS, possibly affect how you will report status to stakeholders!&lt;/p&gt;
@@ -11520,6 +11538,7 @@ Version=master
 Build=4
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Right after that I realized we can make this configuration a bit more generic
 because our team is planning to support multiple versions of the product and
 development will be done in separate branches!
@@ -11534,6 +11553,7 @@ branch! That is to say, the product is in active mode of development.&lt;/p&gt;
 Version=master
 Build=5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;&lt;a href="https://travis-ci.org/kiwitcms/plugin-demo/builds/496229819"&gt;Travis Build #6&lt;/a&gt; for
 &lt;a href="https://github.com/kiwitcms/plugin-demo/commit/df6153b2495bfc6825f25e544ae1806108aa490f"&gt;commit df6153b&lt;/a&gt;
@@ -11557,6 +11577,7 @@ for investigation.&lt;/p&gt;
 Version=master
 Build=bf75d0a
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;h2&gt;Report results in pre-existing TestRun&lt;/h2&gt;
 &lt;p&gt;There are many reasons you may want to do this:&lt;/p&gt;
@@ -11595,6 +11616,7 @@ Version=master
 Build=unspecified
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Also check-out comments in TR executions to see when and who had executed the test case.&lt;/p&gt;
 &lt;p&gt;So far there have been some tests which were failing (although Travis reports PASS) so
 I decided to fix them.
@@ -11616,6 +11638,7 @@ Version=master
 Build=c4f1ae5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;h2&gt;Branch out for an LTS version&lt;/h2&gt;
 &lt;p&gt;Our team has decided to make the first LTS release of the product. We branch out into
 &lt;code&gt;lts-v0&lt;/code&gt; branch in git and cut the first NVR. This results in
@@ -11627,6 +11650,7 @@ Build=c4f1ae5
 Version=lts-v0
 Build=9f1ef71
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Because this is the first time we are running tests for this product version
 we end up with the newly created TP-16!&lt;/p&gt;
@@ -11644,6 +11668,7 @@ will come in the future!&lt;/p&gt;
 Version=lts-v0
 Build=2d72754
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;TR-29 contains the new &lt;a href="https://tcms.kiwitcms.org/case/58/"&gt;TC-58&lt;/a&gt;!&lt;/p&gt;
 &lt;h2&gt;cherry-pick between branches&lt;/h2&gt;
@@ -12924,6 +12949,7 @@ for inspiration!&lt;/p&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;hint&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;probably&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;best&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;process&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;results&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;at&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;end&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="plugins"></category></entry><entry><title>Kiwi TCMS 6.2</title><link href="/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/" rel="alternate"></link><published>2018-11-02T12:15:00+02:00</published><updated>2018-11-02T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2018-11-02:/blog/kiwi-tcms-team/2018/11/02/kiwi-tcms-62/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 6.2! This is a small release
 that removes squashed migrations from previous releases and includes a few
 improvements. You can explore everything at
@@ -13195,6 +13221,7 @@ user&lt;span class="w"&gt;    &lt;/span&gt;0m1.050s
 sys&lt;span class="w"&gt;     &lt;/span&gt;0m0.353s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;This measures at 120 msec/req or 7.85 req/sec!&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;public.tenant.kiwitcms.org&lt;/a&gt; is running on an
 &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html#burstable-performance-instances-hardware"&gt;AWS t2.micro&lt;/a&gt;
@@ -13226,12 +13253,14 @@ user&lt;span class="w"&gt;    &lt;/span&gt;0m1.154s
 sys&lt;span class="w"&gt;     &lt;/span&gt;0m0.091s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;This measures at 140 sec/req or 7.05 req/sec!&lt;/p&gt;
 &lt;p&gt;Note: since I am using Python 3.6 I had to modify the file
 &lt;code&gt;/opt/rh/rh-python36/root/lib64/python3.6/ssl.py&lt;/code&gt; to read:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Used by http.client if no context is explicitly passed.&lt;/span&gt;
 &lt;span class="n"&gt;_create_default_https_context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_create_unverified_context&lt;/span&gt; &lt;span class="c1"&gt;# this disables HTTPS cert validation&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;The issue has been reported in
 &lt;a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454"&gt;RHBZ #1643454&lt;/a&gt;&lt;/p&gt;
@@ -13463,6 +13492,7 @@ at OpenFest to learn more about Kiwi TCMS and have fun with us!&lt;/p&gt;
     &lt;a href="https://twitter.com/a_sankov/status/1041260417669124097?ref_src=twsrc%5Etfw"&gt;September 16, 2018&lt;/a&gt;
 &lt;/p&gt;
 &lt;/blockquote&gt;
+
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;p&gt;In case you are unable to visit Sofia, which you totally should, you can catch up with
@@ -13616,6 +13646,7 @@ our team deemed not required for upstream and was removed in
         models.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;This is a small Django application that will log every call to the API backend.
 Each file looks like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="c1"&gt;# models.py contains DB schema for your new table&lt;/span&gt;
@@ -13632,6 +13663,7 @@ Each file looks like this:&lt;/p&gt;
         &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__str__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
             &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Then&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="c1"&gt;# handlers.py overrides the RPC handlers coming from django-modernrpc&lt;/span&gt;
@@ -13683,6 +13715,7 @@ Each file looks like this:&lt;/p&gt;
             &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;process_single_request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;payload&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt;
 You will have to execute &lt;code&gt;./manage.py makemigrations api_logging&lt;/code&gt; to create the
 initial migration for Django. This could be easier if you place the above directory
@@ -13700,12 +13733,14 @@ Kiwi TCMS defaults:&lt;/p&gt;
                           &lt;span class="s1"&gt;&amp;#39;api_logging.handlers.JSONRPCHandler&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Then place everything in &lt;code&gt;Dockerfile&lt;/code&gt; like so:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;FROM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;kiwitcms&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;kiwi&lt;/span&gt;
 
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;COPY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;api_logging&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;lib64&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;python3&lt;/span&gt;&lt;span class="m m-Double"&gt;.6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;api_logging&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;COPY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;local_settings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;lib64&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;python3&lt;/span&gt;&lt;span class="m m-Double"&gt;.6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;tcms&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Kiwi TCMS will import your &lt;code&gt;local_settings.py&lt;/code&gt; and enable the logging application.
 Now build your customized Docker image and use it for deployment!&lt;/p&gt;
@@ -14003,6 +14038,7 @@ email text looks like this:&lt;/p&gt;
 &lt;span class="x"&gt;    &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;confirm_url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;&lt;a href="https://public.tenant.kiwitcms.org/login/github-app/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;
 runs a custom Docker image based on
 &lt;code&gt;kiwitcms/kiwi&lt;/code&gt;. For this image the confirmation email looks like this&lt;/p&gt;
@@ -14023,6 +14059,7 @@ runs a custom Docker image based on
 &lt;span class="x"&gt;    http://kiwitcms.org&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;The file that we want to override is &lt;code&gt;tcms/templates/email/confirm_registration.txt&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Create a local directory (git repository) which will hold customization configuration
 and create a file named &lt;code&gt;templates.d/email/confirm_registration.txt&lt;/code&gt; with your text!&lt;/p&gt;
@@ -14034,12 +14071,14 @@ should look like this:&lt;/p&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;COPY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;local_settings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;lib64&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;python3&lt;/span&gt;&lt;span class="m m-Double"&gt;.6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;tcms&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;where &lt;code&gt;local_settings.py&lt;/code&gt; contains&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
     &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.conf&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;settings&lt;/span&gt;
 
     &lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TEMPLATES&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;DIRS&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;insert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TCMS_ROOT_PATH&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;overridden_templates&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;The following code states &lt;em&gt;instruct Django to look into &lt;code&gt;overridden_templates&lt;/code&gt; first and
 use any templates it finds there; also make my files available in that specific location
@@ -14152,10 +14191,12 @@ database name used inside the &lt;code&gt;docker-compose.yml&lt;/code&gt; file!&
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker exec -i kiwi_db mysqldump --user &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; kiwi &amp;gt; backup.sql
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;This will create a file named &lt;code&gt;backup.sql&lt;/code&gt; in the current directory, outside of the running container!&lt;/p&gt;
 &lt;p&gt;You can restore the database contents by using the following command:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cat backup.sql | docker exec kiwi_db mysql --user &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; -v kiwi
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -14167,6 +14208,7 @@ database name used inside the &lt;code&gt;docker-compose.yml&lt;/code&gt; file!&
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker exec -i kiwi_db pg_dump -U &amp;lt;username&amp;gt; --dbname=kiwi -F c &amp;gt; backup.bak
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;This will create a file named &lt;code&gt;backup.bak&lt;/code&gt; in the current directory, outside of the running container.
 This is a PostgreSQL custom database dump format which contains all data and schema definitions.
 That is a binary file which can be read with the &lt;code&gt;pg_restore&lt;/code&gt; command!&lt;/p&gt;
@@ -14174,6 +14216,7 @@ That is a binary file which can be read with the &lt;code&gt;pg_restore&lt;/code
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker exec -i kiwi_db psql -c &amp;quot;DROP DATABASE IF EXISTS kiwi;&amp;quot;
 cat backup.bak | docker exec -i kiwi_db pg_restore -U &amp;lt;username&amp;gt; --dbname=template1 -vcC
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;h2&gt;Multi-tenant database&lt;/h2&gt;
 &lt;p&gt;The &lt;a href="https://github.com/kiwitcms/tenants"&gt;kiwitcms-tenant&lt;/a&gt; add-on and/or
@@ -14194,14 +14237,17 @@ kiwi=&amp;gt;Ctrl+D
 cat backup.bak | docker exec -i kiwi_db pg_restore -U &amp;lt;username&amp;gt; --dbname=kiwi -v --schema $tenant_name
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;h2&gt;Backing up file uploads&lt;/h2&gt;
 &lt;p&gt;Uploaded files can easily be backed up with:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;docker&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;kiwi_web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Kiwi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;uploads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;uploads&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;and then restored with:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;uploads&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;docker&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;kiwi_web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;You may also try the &lt;code&gt;rsync&lt;/code&gt; command but be aware that it is not installed
 by default!&lt;/p&gt;
@@ -14602,6 +14648,7 @@ docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
 &lt;p&gt;According to &lt;a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
 Kiwi TCMS team is investing a great deal of our time to make the code base more
@@ -14698,6 +14745,7 @@ docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
 &lt;p&gt;According to &lt;a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
@@ -14799,6 +14847,7 @@ docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;h2&gt;Help us make Kiwi TCMS better&lt;/h2&gt;
 &lt;p&gt;According to &lt;a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/"&gt;our 2018 roadmap&lt;/a&gt; the
 Kiwi TCMS team is investing a great deal of our time to make the code base more
@@ -14873,6 +14922,7 @@ docker pull kiwitcms/kiwi
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS &amp; tcms-api version 4.0.0</title><link href="/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/" rel="alternate"></link><published>2018-02-10T15:30:00+02:00</published><updated>2018-02-10T15:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2018-02-10:/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 4.0.0
 and the corresponding tcms-api version 4.0.0! This is a very big release
@@ -15087,6 +15137,7 @@ docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS version 3.50</title><link href="/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="alternate"></link><published>2018-01-25T11:30:00+02:00</published><updated>2018-01-25T11:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2018-01-25:/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 3.50
 and the corresponding tcms-api version 1.5.1! This is a bug-fix and
 enhancement release and we advise you to upgrade as soon as possible!&lt;/p&gt;
@@ -15142,6 +15193,7 @@ make docker-image
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS roadmap for 2018</title><link href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="alternate"></link><published>2018-01-22T12:10:00+02:00</published><updated>2018-01-22T12:10:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2018-01-22:/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/</id><summary type="html">&lt;p&gt;Hello everyone. As you know Kiwi TCMS has been around for a while and it has
 gone through some big changes in the last year! It started as an abandoned
@@ -15348,6 +15400,7 @@ docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS Python API client</title><link href="/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/" rel="alternate"></link><published>2017-12-08T15:20:00+02:00</published><updated>2017-12-08T15:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2017-12-08:/blog/kiwi-tcms-team/2017/12/08/kiwi-tcms-python-api-client/</id><summary type="html">&lt;p&gt;We are happy to announce the first official release of the
 &lt;a href="https://pypi.org/project/tcms-api/"&gt;tcms-api&lt;/a&gt; package!
 This is a Python client for Kiwi TCMS.&lt;/p&gt;
@@ -15443,6 +15496,7 @@ make docker-image
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Testing, testing. It works!</title><link href="/blog/kiwi-tcms-team/2017/11/03/testing-testing-it-works/" rel="alternate"></link><published>2017-11-03T11:15:00+02:00</published><updated>2017-11-03T11:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2017-11-03:/blog/kiwi-tcms-team/2017/11/03/testing-testing-it-works/</id><summary type="html">&lt;p&gt;Welcome to the official website and blog of Kiwi TCMS.
 We are happy to finally be online!&lt;/p&gt;
