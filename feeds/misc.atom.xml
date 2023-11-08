@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-08-31T09:03:00+03:00</updated><entry><title>Kiwi TCMS 12.6.1</title><link href="/blog/kiwi-tcms-team/2023/08/31/kiwi-tcms-1261/" rel="alternate"></link><published>2023-08-31T09:03:00+03:00</published><updated>2023-08-31T09:03:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-08-31:/blog/kiwi-tcms-team/2023/08/31/kiwi-tcms-1261/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 12.6.1!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-11-08T10:08:00+02:00</updated><entry><title>Kiwi TCMS surpassed 2 million downloads</title><link href="/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/" rel="alternate"></link><published>2023-11-08T10:08:00+02:00</published><updated>2023-11-08T10:08:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-11-08:/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;2M banner&amp;quot;" src="/images/2m.png" title="2M banner"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to share that Kiwi TCMS has surpassed 2 million downloads on Docker Hub.
+At the time of writing this blog post the exact number is &lt;em&gt;2004544&lt;/em&gt;!
+We say a big THANK YOU you to our entire community!&lt;/p&gt;
+&lt;p&gt;As luck would have it we were able to announce …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;2M banner&amp;quot;" src="/images/2m.png" title="2M banner"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to share that Kiwi TCMS has surpassed 2 million downloads on Docker Hub.
+At the time of writing this blog post the exact number is &lt;em&gt;2004544&lt;/em&gt;!
+We say a big THANK YOU you to our entire community!&lt;/p&gt;
+&lt;p&gt;As luck would have it we were able to announce this achievement at the annual
+&lt;a href="https://www.openfest.org"&gt;OpenFest&lt;/a&gt; conference in Bulgaria and celebrate the day with
+not one, but two kiwi bird mascots.
+&lt;img alt="&amp;quot;Presenting at OpenFest 2023&amp;quot;" src="/images/openfest_2023.jpeg" title="Presenting at OpenFest 2023"&gt;&lt;/p&gt;
+&lt;p&gt;Thank you and Happy testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us grow&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>Kiwi TCMS 12.6.1</title><link href="/blog/kiwi-tcms-team/2023/08/31/kiwi-tcms-1261/" rel="alternate"></link><published>2023-08-31T09:03:00+03:00</published><updated>2023-08-31T09:03:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-08-31:/blog/kiwi-tcms-team/2023/08/31/kiwi-tcms-1261/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 12.6.1!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; This is a small release which contains several improvements, bug fixes
 and new translations!&lt;/p&gt;
 &lt;p&gt;You can explore everything at
