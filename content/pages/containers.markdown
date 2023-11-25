@@ -8,14 +8,13 @@ Upstream containers
 ===================
 
 The official upstream Kiwi TCMS container image is publicly available via
-[Docker Hub](https://hub.docker.com/r/kiwitcms/kiwi) and
-[Red Hat Quay.io](https://quay.io/repository/kiwitcms/kiwi). It is
+[Docker Hub](https://hub.docker.com/r/kiwitcms/kiwi). It is
 free of charge and anyone can download and use it via the `docker pull`
 command! See
 [Running Kiwi TCMS as a Docker container](https://kiwitcms.readthedocs.io/en/latest/installing_docker.html)
 to get started!
 
-**Warning:** after November 1st 2020 older versions may not be available from
+**Warning:** after November 1st 2020 older versions will not be available from
 Docker Hub! The reason is a
 [6 month image retention limit](https://www.docker.com/pricing/retentionfaq)
 enforced by Docker Inc.!
@@ -43,7 +42,7 @@ Kiwi TCMS Enterprise container images! These images are available as:
 Image versions
 ==============
 
-Changelog information can be found under the [releases]({tag}releases) tag!
+Changelog information can be found under the [releases]({tag}releases) tag in our blog!
 
     quay.io/kiwitcms/version            12.7 (aarch64)          aa6a4c5434c9    25 Nov 2023     624MB
     quay.io/kiwitcms/version            12.7 (x86_64)           973df48a2f82    25 Nov 2023     613MB
