@@ -1,0 +1,89 @@
+Title: Call for participation: Testing and Continuous Delivery devroom, FOSDEM'24
+Headline: co-organized by Kiwi TCMS
+date: 2023-11-28 11:00
+comments: true
+og_image: images/fosdem/2024/banner.png
+twitter_image: images/fosdem/2024/banner.png
+tags: community, events
+
+
+!["Cfp banner"](/images/fosdem/2024/banner.png "Cfp banner")
+
+Attention testers! On behalf of the
+[*Testing and Continuous Delivery devroom*](https://fosdem-testingautomation.github.io/)
+we'd like to announce that call for participation is still open.
+This room is about building better software through a focus on testing and
+continuous delivery practices across all layers of the stack.
+The purpose of this devroom is to share good and bad examples around the question
+“how to improve quality of our software by automating tests, deliveries or deployments”
+and to showcase new open source tools and practices.
+
+**Note:** for FOSDEM 2024 this devroom is a merger between the former
+*Testing and Automation* and *Continuous Integration and Continuous Deployment* devrooms and
+is jointly co-organized between devroom managers in previous FOSDEM editions!
+Kiwi TCMS is proud to be part of the team hosting this devroom!
+
+
+**Important:** devroom will take place on Sunday, February 4th 2024 at
+[ULB Solbosch Campus, Brussels, Belgium](https://fosdem.org/2024/practical/transportation/)!
+Presentations will be streamed online but all accepted speakers are required to deliver
+their talks in person!
+
+Here are some ideas for topics that are a good fit for this devroom:
+
+Testing in the real, open source world
+
+
+- War stories/strategies for testing large scale or complex projects
+- Tools that extend the ability to test low-level code, e.g. bootloaders, init systems, etc.
+- Projects that are introducing new/interesting ways of testing "systems"
+- Address the automated testing frameworks fragmentation
+- Stories from end-users (e.g. success/failure)
+- Continuous Integration
+- Continuous Delivery
+- Continuous Deployment
+- Security in Software Supply Chain
+- Pipeline standardization
+- Interoperability in CI/CD
+- Lessons learned
+
+Cool Tools (good candidates for lightning talks)
+
+- Project showcases, modern tooling
+- How your open source tool made developing quality software better
+- What tools do you use to setup your CI/CD
+- Combining projects/plugins/tools to build amazing things
+  "Not enough people in the open source community know how to use $X,
+  but here's a tutorial on how to use $X to make your project better."
+
+
+In the past the devroom has seen both newbies/students and experienced professionals and
+past speakers as part of the audience and talks covering from beginner/practical
+to advanced/abstract topics. If you have doubts then submit your proposal and
+leave a comment for the devroom managers and we'll get back to you.
+
+
+To submit a talk proposal (you can submit multiple proposals if you'd like) use
+[Pretalx](https://pretalx.fosdem.org/), the FOSDEM paper submission system.
+Be sure to select *Testing and Continuous delivery*!
+
+
+Checkout
+<https://fosdem-testingautomation.github.io/> for more information!
+
+
+Happy Testing!
+
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!
+
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give 👍 on GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/334558);
+- [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
+- [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
+  and follow all project news;
+- [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;
+- [Become a customer](/#subscriptions) and we'll share our profits with the community
