@@ -1,0 +1,169 @@
+Kiwi TCMS 12.7
+##############
+
+:headline: security updates, general improvements, bug fixes and refactoring
+:date: 2023-11-26 11:03
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 12.7!
+
+**IMPORTANT:** This is our first release after reaching
+`2 million downloads <{filename}2023-11-08-thank-you-2m.markdown>`_ on Docker Hub
+earlier this month! It is a small release which contains security related updates,
+several improvements, bug fixes and internal refactoring!
+
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  973df48a2f82    613MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 12.6.1
+------------------------------
+
+Security
+~~~~~~~~
+
+- Update django from 4.2.4 to 4.2.7. Fixes
+  `CVE-2023-46695 <https://docs.djangoproject.com/en/4.2/releases/4.2.7/>`_,
+  `CVE-2023-43665 <https://docs.djangoproject.com/en/4.2/releases/4.2.6/>`_ and
+  `CVE-2023-41164 <https://docs.djangoproject.com/en/4.2/releases/4.2.5/>`_
+- Update django-simple-captcha from 0.5.18 to 0.5.20
+- We believe that none of these issue affect Kiwi TCMS directly however
+  we recommend that you upgrade your installation as soon as possible
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update bleach from 6.0.0 to 6.1.0
+- Update django-colorfield from 0.9.0 to 0.10.1
+- Update django-grappelli from 3.0.6 to 3.0.8
+- Update django-simple-history from 3.3.0 to 3.4.0
+- Update markdown from 3.4.4 to 3.5.1
+- Update psycopg2 from 2.9.7 to 2.9.9
+- Update pygments from 2.16.1 to 2.17.2
+- Update python-gitlab from 3.15.0 to 4.1.1
+- Update uwsgi from 2.0.22 to 2.0.23
+- Update node_modules/crypto-js from 4.1.1 to 4.2.0
+- Update node_modules/datatables.net-buttons from 2.4.1 to 2.4.2
+- Update node_modules/pdfmake from 0.2.7 to 0.2.8
+- Update bug-tracker integration documentation with specifics about matches
+  for product name
+- When searching for JIRA projects try also matching by project key
+- Fall-back to credentials from database if
+  ``settings.EXTERNAL_ISSUE_RPC_CREDENTIALS`` override returns ``None``
+
+
+Database
+~~~~~~~~
+
+- New migrations after upgrading django-color-field. Increases field
+  ``max_length`` from 18 to 25
+
+
+Bug fixes
+~~~~~~~~~
+
+- Fix error in filtering by TestRun ID on TestCase Search page (@somenewacc)
+- Fix TestRun page to not automatically update its ``stop_date`` when marking
+  statuses for test executions if there are more neutral executions left on
+  the page outside of the currently filtered selection (@somenewacc)
+- Fix bug with JIRA integration not being able to find project via name
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Refactor calls to `delete expandedExecutionIds` to satisfy
+  https://rules.sonarsource.com/typescript/RSPEC-2870/ (@somenewacc)
+- Refactor calls to `delete expandedTestCaseIds` to satisfy
+  https://rules.sonarsource.com/typescript/RSPEC-2870/
+- Use tuple as the cache-key for ``IssueTrackerType.rpc_cache`` internally
+- Add test for ``collectstatic`` because of an upstream issue with
+  django-grappelli
+- Improve tests for JIRA integration
+- Test against Bugzilla on Fedora 39
+- Update actions/checkout from 3 to 4
+- Update node_modules/eslint from 8.48.0 to 8.54.0
+- Update node_modules/eslint-plugin-import from 2.28.1 to 2.29.0
+- Update node_modules/eslint-plugin-n from 16.0.2 to 16.3.1
+- Update node_modules/webpack from 5.88.2 to 5.89.0
+- Update pylint-django from 2.5.3 to 2.5.5 and all of our custom linter rules
+
+
+Kiwi TCMS Enterprise v12.7-mt
+-----------------------------
+
+- Based on Kiwi TCMS v12.7
+- Update kiwitcms-tenants from 2.5.1 to 2.5.2
+- Update kiwitcms-trackers-integration from 0.5.0 to 0.6.0
+
+    Provides functionality for personal API tokens. Accessible via
+    PLUGINS -> Personal API tokens menu!
+
+    **WARNING:** in order for users to be able to define personal API tokens
+    for 3rd party bug-trackers they will need to be assigned permissions.
+
+    Kiwi TCMS administrators should consider granting the following
+    permissions::
+
+        tracker_integrations | api token | Can add api token
+        tracker_integrations | api token | Can change api token
+        tracker_integrations | api token | Can delete api token
+        tracker_integrations | api token | Can view api token
+
+    either individually per-user basis or via groups!
+
+- Update python3-saml from 1.15.0 to 1.16.0
+- Update social-auth-app-django from 5.2.0 to 5.4.0
+
+
+    Private container images::
+
+        quay.io/kiwitcms/version            12.7 (aarch64)          aa6a4c5434c9    25 Nov 2023     624MB
+        quay.io/kiwitcms/version            12.7 (x86_64)           973df48a2f82    25 Nov 2023     613MB
+        quay.io/kiwitcms/enterprise         12.7-mt (aarch64)       e19c493e7291    25 Nov 2023     814MB
+        quay.io/kiwitcms/enterprise         12.7-mt (x86_64)        f38a49d661ad    25 Nov 2023     801MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
