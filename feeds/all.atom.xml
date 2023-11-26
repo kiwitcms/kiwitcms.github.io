@@ -1,5 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-11-08T10:08:00+02:00</updated><entry><title>Kiwi TCMS surpassed 2 million downloads</title><link href="/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/" rel="alternate"></link><published>2023-11-08T10:08:00+02:00</published><updated>2023-11-08T10:08:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-11-08:/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;2M banner&amp;quot;" src="/images/2m.png" title="2M banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-11-26T13:30:00+02:00</updated><entry><title>Kiwi TCMS 12.7</title><link href="/blog/kiwi-tcms-team/2023/11/26/kiwi-tcms-127/" rel="alternate"></link><published>2023-11-26T13:30:00+02:00</published><updated>2023-11-26T13:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-11-26:/blog/kiwi-tcms-team/2023/11/26/kiwi-tcms-127/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 12.7!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; This is our first release after reaching
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/"&gt;2 million downloads&lt;/a&gt; on Docker Hub
+earlier this month! It is a small release which contains security related updates,
+several improvements, bug fixes and internal refactoring!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 12.7!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; This is our first release after reaching
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/"&gt;2 million downloads&lt;/a&gt; on Docker Hub
+earlier this month! It is a small release which contains security related updates,
+several improvements, bug fixes and internal refactoring!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  973df48a2f82    613MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-12-6-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 12.6.1&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django from 4.2.4 to 4.2.7. Fixes
+&lt;a class="reference external" href="https://docs.djangoproject.com/en/4.2/releases/4.2.7/"&gt;CVE-2023-46695&lt;/a&gt;,
+&lt;a class="reference external" href="https://docs.djangoproject.com/en/4.2/releases/4.2.6/"&gt;CVE-2023-43665&lt;/a&gt; and
+&lt;a class="reference external" href="https://docs.djangoproject.com/en/4.2/releases/4.2.5/"&gt;CVE-2023-41164&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update django-simple-captcha from 0.5.18 to 0.5.20&lt;/li&gt;
+&lt;li&gt;We believe that none of these issue affect Kiwi TCMS directly however
+we recommend that you upgrade your installation as soon as possible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update bleach from 6.0.0 to 6.1.0&lt;/li&gt;
+&lt;li&gt;Update django-colorfield from 0.9.0 to 0.10.1&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 3.0.6 to 3.0.8&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 3.3.0 to 3.4.0&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.4.4 to 3.5.1&lt;/li&gt;
+&lt;li&gt;Update psycopg2 from 2.9.7 to 2.9.9&lt;/li&gt;
+&lt;li&gt;Update pygments from 2.16.1 to 2.17.2&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 3.15.0 to 4.1.1&lt;/li&gt;
+&lt;li&gt;Update uwsgi from 2.0.22 to 2.0.23&lt;/li&gt;
+&lt;li&gt;Update node_modules/crypto-js from 4.1.1 to 4.2.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/datatables.net-buttons from 2.4.1 to 2.4.2&lt;/li&gt;
+&lt;li&gt;Update node_modules/pdfmake from 0.2.7 to 0.2.8&lt;/li&gt;
+&lt;li&gt;Update bug-tracker integration documentation with specifics about matches
+for product name&lt;/li&gt;
+&lt;li&gt;When searching for JIRA projects try also matching by project key&lt;/li&gt;
+&lt;li&gt;Fall-back to credentials from database if
+&lt;tt class="docutils literal"&gt;settings.EXTERNAL_ISSUE_RPC_CREDENTIALS&lt;/tt&gt; override returns &lt;tt class="docutils literal"&gt;None&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New migrations after upgrading django-color-field. Increases field
+&lt;tt class="docutils literal"&gt;max_length&lt;/tt&gt; from 18 to 25&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix error in filtering by TestRun ID on TestCase Search page (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;li&gt;Fix TestRun page to not automatically update its &lt;tt class="docutils literal"&gt;stop_date&lt;/tt&gt; when marking
+statuses for test executions if there are more neutral executions left on
+the page outside of the currently filtered selection (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;li&gt;Fix bug with JIRA integration not being able to find project via name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Refactor calls to &lt;cite&gt;delete expandedExecutionIds&lt;/cite&gt; to satisfy
+&lt;a class="reference external" href="https://rules.sonarsource.com/typescript/RSPEC-2870/"&gt;https://rules.sonarsource.com/typescript/RSPEC-2870/&lt;/a&gt; (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;li&gt;Refactor calls to &lt;cite&gt;delete expandedTestCaseIds&lt;/cite&gt; to satisfy
+&lt;a class="reference external" href="https://rules.sonarsource.com/typescript/RSPEC-2870/"&gt;https://rules.sonarsource.com/typescript/RSPEC-2870/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use tuple as the cache-key for &lt;tt class="docutils literal"&gt;IssueTrackerType.rpc_cache&lt;/tt&gt; internally&lt;/li&gt;
+&lt;li&gt;Add test for &lt;tt class="docutils literal"&gt;collectstatic&lt;/tt&gt; because of an upstream issue with
+django-grappelli&lt;/li&gt;
+&lt;li&gt;Improve tests for JIRA integration&lt;/li&gt;
+&lt;li&gt;Test against Bugzilla on Fedora 39&lt;/li&gt;
+&lt;li&gt;Update actions/checkout from 3 to 4&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint from 8.48.0 to 8.54.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint-plugin-import from 2.28.1 to 2.29.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint-plugin-n from 16.0.2 to 16.3.1&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.88.2 to 5.89.0&lt;/li&gt;
+&lt;li&gt;Update pylint-django from 2.5.3 to 2.5.5 and all of our custom linter rules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v12-7-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v12.7-mt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v12.7&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-tenants from 2.5.1 to 2.5.2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-trackers-integration from 0.5.0 to 0.6.0&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Provides functionality for personal API tokens. Accessible via
+PLUGINS -&amp;gt; Personal API tokens menu!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; in order for users to be able to define personal API tokens
+for 3rd party bug-trackers they will need to be assigned permissions.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS administrators should consider granting the following
+permissions:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+tracker_integrations | api token | Can add api token
+tracker_integrations | api token | Can change api token
+tracker_integrations | api token | Can delete api token
+tracker_integrations | api token | Can view api token
+&lt;/pre&gt;
+&lt;p&gt;either individually per-user basis or via groups!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update python3-saml from 1.15.0 to 1.16.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update social-auth-app-django from 5.2.0 to 5.4.0&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Private container images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/version            12.7 (aarch64)          aa6a4c5434c9    25 Nov 2023     624MB
+quay.io/kiwitcms/version            12.7 (x86_64)           973df48a2f82    25 Nov 2023     613MB
+quay.io/kiwitcms/enterprise         12.7-mt (aarch64)       e19c493e7291    25 Nov 2023     814MB
+quay.io/kiwitcms/enterprise         12.7-mt (x86_64)        f38a49d661ad    25 Nov 2023     801MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS surpassed 2 million downloads</title><link href="/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/" rel="alternate"></link><published>2023-11-08T10:08:00+02:00</published><updated>2023-11-08T10:08:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-11-08:/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;2M banner&amp;quot;" src="/images/2m.png" title="2M banner"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to share that Kiwi TCMS has surpassed 2 million downloads on Docker Hub.
 At the time of writing this blog post the exact number is &lt;em&gt;2004544&lt;/em&gt;!
 We say a big THANK YOU you to our entire community!&lt;/p&gt;

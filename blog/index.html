@@ -94,6 +94,176 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2023/11/26/kiwi-tcms-127/" rel="bookmark" title="Permalink to Kiwi TCMS 12.7">
+                <h1 class="top-header">Kiwi TCMS 12.7</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sun 26 November 2023
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 12.7!</p>
+<p><strong>IMPORTANT:</strong> This is our first release after reaching
+<a class="reference external" href="/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/">2 million downloads</a> on Docker Hub
+earlier this month! It is a small release which contains security related updates,
+several improvements, bug fixes and internal refactoring!</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Upstream container images (x86_64):</p>
+<pre class="literal-block">
+kiwitcms/kiwi   latest  973df48a2f82    613MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-12-6-1">
+<h2>Changes since Kiwi TCMS 12.6.1</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update django from 4.2.4 to 4.2.7. Fixes
+<a class="reference external" href="https://docs.djangoproject.com/en/4.2/releases/4.2.7/">CVE-2023-46695</a>,
+<a class="reference external" href="https://docs.djangoproject.com/en/4.2/releases/4.2.6/">CVE-2023-43665</a> and
+<a class="reference external" href="https://docs.djangoproject.com/en/4.2/releases/4.2.5/">CVE-2023-41164</a></li>
+<li>Update django-simple-captcha from 0.5.18 to 0.5.20</li>
+<li>We believe that none of these issue affect Kiwi TCMS directly however
+we recommend that you upgrade your installation as soon as possible</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update bleach from 6.0.0 to 6.1.0</li>
+<li>Update django-colorfield from 0.9.0 to 0.10.1</li>
+<li>Update django-grappelli from 3.0.6 to 3.0.8</li>
+<li>Update django-simple-history from 3.3.0 to 3.4.0</li>
+<li>Update markdown from 3.4.4 to 3.5.1</li>
+<li>Update psycopg2 from 2.9.7 to 2.9.9</li>
+<li>Update pygments from 2.16.1 to 2.17.2</li>
+<li>Update python-gitlab from 3.15.0 to 4.1.1</li>
+<li>Update uwsgi from 2.0.22 to 2.0.23</li>
+<li>Update node_modules/crypto-js from 4.1.1 to 4.2.0</li>
+<li>Update node_modules/datatables.net-buttons from 2.4.1 to 2.4.2</li>
+<li>Update node_modules/pdfmake from 0.2.7 to 0.2.8</li>
+<li>Update bug-tracker integration documentation with specifics about matches
+for product name</li>
+<li>When searching for JIRA projects try also matching by project key</li>
+<li>Fall-back to credentials from database if
+<tt class="docutils literal">settings.EXTERNAL_ISSUE_RPC_CREDENTIALS</tt> override returns <tt class="docutils literal">None</tt></li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li>New migrations after upgrading django-color-field. Increases field
+<tt class="docutils literal">max_length</tt> from 18 to 25</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix error in filtering by TestRun ID on TestCase Search page (&#64;somenewacc)</li>
+<li>Fix TestRun page to not automatically update its <tt class="docutils literal">stop_date</tt> when marking
+statuses for test executions if there are more neutral executions left on
+the page outside of the currently filtered selection (&#64;somenewacc)</li>
+<li>Fix bug with JIRA integration not being able to find project via name</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Refactor calls to <cite>delete expandedExecutionIds</cite> to satisfy
+<a class="reference external" href="https://rules.sonarsource.com/typescript/RSPEC-2870/">https://rules.sonarsource.com/typescript/RSPEC-2870/</a> (&#64;somenewacc)</li>
+<li>Refactor calls to <cite>delete expandedTestCaseIds</cite> to satisfy
+<a class="reference external" href="https://rules.sonarsource.com/typescript/RSPEC-2870/">https://rules.sonarsource.com/typescript/RSPEC-2870/</a></li>
+<li>Use tuple as the cache-key for <tt class="docutils literal">IssueTrackerType.rpc_cache</tt> internally</li>
+<li>Add test for <tt class="docutils literal">collectstatic</tt> because of an upstream issue with
+django-grappelli</li>
+<li>Improve tests for JIRA integration</li>
+<li>Test against Bugzilla on Fedora 39</li>
+<li>Update actions/checkout from 3 to 4</li>
+<li>Update node_modules/eslint from 8.48.0 to 8.54.0</li>
+<li>Update node_modules/eslint-plugin-import from 2.28.1 to 2.29.0</li>
+<li>Update node_modules/eslint-plugin-n from 16.0.2 to 16.3.1</li>
+<li>Update node_modules/webpack from 5.88.2 to 5.89.0</li>
+<li>Update pylint-django from 2.5.3 to 2.5.5 and all of our custom linter rules</li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v12-7-mt">
+<h2>Kiwi TCMS Enterprise v12.7-mt</h2>
+<ul>
+<li><p class="first">Based on Kiwi TCMS v12.7</p>
+</li>
+<li><p class="first">Update kiwitcms-tenants from 2.5.1 to 2.5.2</p>
+</li>
+<li><p class="first">Update kiwitcms-trackers-integration from 0.5.0 to 0.6.0</p>
+<blockquote>
+<p>Provides functionality for personal API tokens. Accessible via
+PLUGINS -&gt; Personal API tokens menu!</p>
+<p><strong>WARNING:</strong> in order for users to be able to define personal API tokens
+for 3rd party bug-trackers they will need to be assigned permissions.</p>
+<p>Kiwi TCMS administrators should consider granting the following
+permissions:</p>
+<pre class="literal-block">
+tracker_integrations | api token | Can add api token
+tracker_integrations | api token | Can change api token
+tracker_integrations | api token | Can delete api token
+tracker_integrations | api token | Can view api token
+</pre>
+<p>either individually per-user basis or via groups!</p>
+</blockquote>
+</li>
+<li><p class="first">Update python3-saml from 1.15.0 to 1.16.0</p>
+</li>
+<li><p class="first">Update social-auth-app-django from 5.2.0 to 5.4.0</p>
+<blockquote>
+<p>Private container images:</p>
+<pre class="literal-block">
+quay.io/kiwitcms/version            12.7 (aarch64)          aa6a4c5434c9    25 Nov 2023     624MB
+quay.io/kiwitcms/version            12.7 (x86_64)           973df48a2f82    25 Nov 2023     613MB
+quay.io/kiwitcms/enterprise         12.7-mt (aarch64)       e19c493e7291    25 Nov 2023     814MB
+quay.io/kiwitcms/enterprise         12.7-mt (x86_64)        f38a49d661ad    25 Nov 2023     801MB
+</pre>
+</blockquote>
+</li>
+</ul>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/" rel="bookmark" title="Permalink to Kiwi TCMS surpassed 2 million downloads">
                 <h1 class="top-header">Kiwi TCMS surpassed 2 million downloads</h1>
             </a>
@@ -2424,49 +2594,6 @@ please email Steve Winter at <em>swinter @ aboutbwf.com</em> (remove spaces) or 
 <hr>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
-</ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2022/06/07/zaklina-welcome-to-the-kiwi-tcms-team/" rel="bookmark" title="Permalink to Zaklina, welcome to the Kiwi TCMS team">
-                <h1 class="top-header">Zaklina, welcome to the Kiwi TCMS team</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 07 June 2022
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Kiwi TCMS is pleased to welcome Zaklina Stojnev to <a href="/team/">our team</a>!</p>
-<p><img class="rounded" src="/images/team/zstojnev.jpg"></p>
-<p>She holds an engineering degree in computer science and
-has been working as a test engineer for more than 10 years.
-In the last couple of years her main focus is automation in testing,
-finding ways to improve testing process and tools that will support testing activities.</p>
-<p>Zaklina will be the primary contact for our
-<a href="https://github.com/kiwitcms/history-of-testing">History of Testing</a> project where we are
-compiling a database of people who influenced or made important contributions to our professional field.</p>
-<p>With her prior experience as a conference organizer Zaklina will also be lending a much needed hand
-in preparing the <em>Testing and Automation</em> devroom at <em>FOSDEM</em> and showcasing Kiwi TCMS at different
-events.</p>
-<p>You can find her on-boarding progress at <a href="https://tcms.kiwitcms.org/runs/1190/">TR-1190</a> and her
-contributions on
-<a href="https://github.com/pulls?q=is%3Aopen+is%3Apr+author%3Azaklinica+archived%3Afalse+user%3Akiwitcms">GitHub</a>.</p>
-<p>Happy Testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow!</p>
 <ul>
 <li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
