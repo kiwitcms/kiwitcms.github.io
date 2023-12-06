@@ -1,10 +1,11 @@
-Title: Parameters, Environments and test matrix generation
-Headline: understand what they mean and how they work
+Title: Feature showcase: Test matrix generation
+Headline: available in Kiwi TCMS v11.0
 author: Alexander Todorov
 date: 2022-01-24 19:40
 comments: true
 og_image: images/features/props-and-envs/banner.png
 twitter_image: images/features/props-and-envs/banner.png
+tags: features
 
 
 The upcoming Kiwi TCMS v11 contains new functionality around TestCase parameters and
