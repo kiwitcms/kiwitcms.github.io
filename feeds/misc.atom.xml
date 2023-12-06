@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-11-28T11:00:00+02:00</updated><entry><title>Call for participation: Testing and Continuous Delivery devroom, FOSDEM'24</title><link href="/blog/kiwi-tcms-team/2023/11/28/call-for-participation-testing-and-continuous-delivery-devroom-fosdem24/" rel="alternate"></link><published>2023-11-28T11:00:00+02:00</published><updated>2023-11-28T11:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-11-28:/blog/kiwi-tcms-team/2023/11/28/call-for-participation-testing-and-continuous-delivery-devroom-fosdem24/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2024/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-12-06T13:05:00+02:00</updated><entry><title>Feature showcase: Personal API tokens</title><link href="/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/" rel="alternate"></link><published>2023-12-06T13:05:00+02:00</published><updated>2023-12-06T13:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-12-06:/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/</id><summary type="html">&lt;p&gt;For a long time now Kiwi TCMS has supported integration with external issue tracking systems,
+such as JIRA. This integration is usually configured via bot accounts and their respective
+credentials and our flagship functionality is 1-click bug report! This is how it looks like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For any TestExecution click on the …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;For a long time now Kiwi TCMS has supported integration with external issue tracking systems,
+such as JIRA. This integration is usually configured via bot accounts and their respective
+credentials and our flagship functionality is 1-click bug report! This is how it looks like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For any TestExecution click on the menu in the corner
+&lt;img alt="&amp;quot;Corner menu for TestExecution&amp;quot;" src="/images/features/personal-api-tokens/step_001.png" title="Corner menu for TestExecution"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select an existing Issue Tracker configuration and click &lt;em&gt;Report bug&lt;/em&gt;
+&lt;img alt="&amp;quot;1-click bug report button&amp;quot;" src="/images/features/personal-api-tokens/step_002.png" title="1-click bug report button"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Your browser will open a new window with the resulting report inside the external Issue Tracker
+&lt;img alt="&amp;quot;Newly JIRA issue from a bot account&amp;quot;" src="/images/features/personal-api-tokens/step_003.png" title="Newly JIRA issue from a bot account"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notice that &lt;em&gt;Reporter&lt;/em&gt; (field 1) is &lt;em&gt;kiwitcms-bot&lt;/em&gt; although the currently logged in user (field 2) is
+different. The &lt;em&gt;Reporter&lt;/em&gt; text reference (field 3) is the full name of the tester working on the Kiwi TCMS side
+and may not match neither of fields 1 and 2! &lt;strong&gt;This presents a challenge if you are tracking any metrics
+based on the actual &lt;em&gt;Reporter&lt;/em&gt; field in JIRA.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The new &lt;strong&gt;Personal API tokens&lt;/strong&gt; functionality allows Kiwi TCMS users to override existing
+issue tracker configurations with their own API credentials. Here's how it works:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In JIRA click on your account and select &lt;em&gt;Manage account&lt;/em&gt;
+&lt;img alt="&amp;quot;Manage account menu in JIRA&amp;quot;" src="/images/features/personal-api-tokens/step_004.png" title="Manage account menu in JIRA"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then select the &lt;em&gt;Security&lt;/em&gt; tab
+&lt;img alt="&amp;quot;Account page in JIRA&amp;quot;" src="/images/features/personal-api-tokens/step_005.png" title="Account page in JIRA"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then click on &lt;a href="https://id.atlassian.com/manage-profile/security/api-tokens"&gt;Create and manage API tokens&lt;/a&gt;
+&lt;img alt="&amp;quot;Security tab of Account page in JIRA&amp;quot;" src="/images/features/personal-api-tokens/step_006.png" title="Security tab of Account page in JIRA"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And create a new API token; Copy the token value for use inside Kiwi TCMS!
+&lt;img alt="&amp;quot;API Tokens page in JIRA&amp;quot;" src="/images/features/personal-api-tokens/step_007.png" title="API Tokens page in JIRA"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;From the Kiwi TCMS navigation menu select PLUGINS -&amp;gt; Personal API tokens
+&lt;img alt="&amp;quot;Navigate to Personal API tokens in Kiwi TCMS&amp;quot;" src="/images/features/personal-api-tokens/step_008.png" title="Navigate to Personal API tokens in Kiwi TCMS"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select an existing Issue Tracker via its URL and fill-in your credentials. For JIRA
+  &lt;code&gt;api_username&lt;/code&gt; is your JIRA email and &lt;code&gt;api_password&lt;/code&gt; is your JIRA API token.
+  Other issue trackers may only require the &lt;code&gt;api_password&lt;/code&gt; field. The meaning of
+  these fields can be found in
+  &lt;a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.issuetracker.html#submodules"&gt;documentation&lt;/a&gt;
+  for each different type of issue tracker that Kiwi TCMS can integrate with
+&lt;img alt="&amp;quot;Create a new API token in Kiwi TCMS&amp;quot;" src="/images/features/personal-api-tokens/step_009.png" title="Create a new API token in Kiwi TCMS"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Repeat the &lt;em&gt;1-click bug report&lt;/em&gt; steps shown in the beginning.
+  Your browser will open a new window with the resulting report inside JIRA
+&lt;img alt="&amp;quot;New JIRA issue from your personal account&amp;quot;" src="/images/features/personal-api-tokens/step_010.png" title="New JIRA issue from your personal account"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notice that &lt;em&gt;Reporter&lt;/em&gt; (field 1), the currently logged in user (field 2) and
+the &lt;em&gt;Reporter&lt;/em&gt; text reference (field 3) now represent the same person!&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="features"></category></entry><entry><title>Call for participation: Testing and Continuous Delivery devroom, FOSDEM'24</title><link href="/blog/kiwi-tcms-team/2023/11/28/call-for-participation-testing-and-continuous-delivery-devroom-fosdem24/" rel="alternate"></link><published>2023-11-28T11:00:00+02:00</published><updated>2023-11-28T11:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-11-28:/blog/kiwi-tcms-team/2023/11/28/call-for-participation-testing-and-continuous-delivery-devroom-fosdem24/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2024/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
 &lt;p&gt;Attention testers! On behalf of the
 &lt;a href="https://fosdem-testingautomation.github.io/"&gt;&lt;em&gt;Testing and Continuous Delivery devroom&lt;/em&gt;&lt;/a&gt;
 we'd like to announce that call for participation is still open.
@@ -3098,7 +3176,7 @@ to test run&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Detailed information about properties, environments and test matrix generation
 can be found
-&lt;a class="reference external" href="/blog/atodorov/2022/01/24/parameters-environments-and-test-matrix-generation/"&gt;in a separate article&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="/blog/atodorov/2022/01/24/feature-showcase-test-matrix-generation/"&gt;in a separate article&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="database"&gt;
 &lt;h3&gt;Database&lt;/h3&gt;
@@ -3228,7 +3306,7 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Parameters, Environments and test matrix generation</title><link href="/blog/atodorov/2022/01/24/parameters-environments-and-test-matrix-generation/" rel="alternate"></link><published>2022-01-24T19:40:00+02:00</published><updated>2022-01-24T19:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2022-01-24:/blog/atodorov/2022/01/24/parameters-environments-and-test-matrix-generation/</id><summary type="html">&lt;p&gt;The upcoming Kiwi TCMS v11 contains new functionality around TestCase parameters and
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Feature showcase: Test matrix generation</title><link href="/blog/atodorov/2022/01/24/feature-showcase-test-matrix-generation/" rel="alternate"></link><published>2022-01-24T19:40:00+02:00</published><updated>2022-01-24T19:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2022-01-24:/blog/atodorov/2022/01/24/feature-showcase-test-matrix-generation/</id><summary type="html">&lt;p&gt;The upcoming Kiwi TCMS v11 contains new functionality around TestCase parameters and
 TestRun environments which has an impact on how your final test execution matrix will
 look like. This article provides detailed information about these features but have
 in mind that they are still considered to be a technology-preview.&lt;/p&gt;
@@ -3408,7 +3486,7 @@ please help us!&lt;/p&gt;
   and follow all project news;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"></category></entry><entry><title>Kiwi TCMS Enterprise 10.5.1</title><link href="/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/" rel="alternate"></link><published>2022-01-06T13:45:00+02:00</published><updated>2022-01-06T13:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-01-06:/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS Enterprise version 10.5.1!&lt;/p&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="features"></category></entry><entry><title>Kiwi TCMS Enterprise 10.5.1</title><link href="/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/" rel="alternate"></link><published>2022-01-06T13:45:00+02:00</published><updated>2022-01-06T13:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-01-06:/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS Enterprise version 10.5.1!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 this is a small release which contains minor improvements and bug-fixes.&lt;/p&gt;
 &lt;p&gt;You can explore everything at

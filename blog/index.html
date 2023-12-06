@@ -94,6 +94,95 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/" rel="bookmark" title="Permalink to Feature showcase: Personal API tokens">
+                <h1 class="top-header">Feature showcase: Personal API tokens</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 06 December 2023
+            </p>
+        </div>
+
+        <div class="content">
+            <p>For a long time now Kiwi TCMS has supported integration with external issue tracking systems,
+such as JIRA. This integration is usually configured via bot accounts and their respective
+credentials and our flagship functionality is 1-click bug report! This is how it looks like:</p>
+<ul>
+<li>
+<p>For any TestExecution click on the menu in the corner
+<img alt="&quot;Corner menu for TestExecution&quot;" src="/images/features/personal-api-tokens/step_001.png" title="Corner menu for TestExecution"></p>
+</li>
+<li>
+<p>Select an existing Issue Tracker configuration and click <em>Report bug</em>
+<img alt="&quot;1-click bug report button&quot;" src="/images/features/personal-api-tokens/step_002.png" title="1-click bug report button"></p>
+</li>
+<li>
+<p>Your browser will open a new window with the resulting report inside the external Issue Tracker
+<img alt="&quot;Newly JIRA issue from a bot account&quot;" src="/images/features/personal-api-tokens/step_003.png" title="Newly JIRA issue from a bot account"></p>
+</li>
+</ul>
+<p>Notice that <em>Reporter</em> (field 1) is <em>kiwitcms-bot</em> although the currently logged in user (field 2) is
+different. The <em>Reporter</em> text reference (field 3) is the full name of the tester working on the Kiwi TCMS side
+and may not match neither of fields 1 and 2! <strong>This presents a challenge if you are tracking any metrics
+based on the actual <em>Reporter</em> field in JIRA.</strong></p>
+<p>The new <strong>Personal API tokens</strong> functionality allows Kiwi TCMS users to override existing
+issue tracker configurations with their own API credentials. Here's how it works:</p>
+<ul>
+<li>
+<p>In JIRA click on your account and select <em>Manage account</em>
+<img alt="&quot;Manage account menu in JIRA&quot;" src="/images/features/personal-api-tokens/step_004.png" title="Manage account menu in JIRA"></p>
+</li>
+<li>
+<p>Then select the <em>Security</em> tab
+<img alt="&quot;Account page in JIRA&quot;" src="/images/features/personal-api-tokens/step_005.png" title="Account page in JIRA"></p>
+</li>
+<li>
+<p>Then click on <a href="https://id.atlassian.com/manage-profile/security/api-tokens">Create and manage API tokens</a>
+<img alt="&quot;Security tab of Account page in JIRA&quot;" src="/images/features/personal-api-tokens/step_006.png" title="Security tab of Account page in JIRA"></p>
+</li>
+<li>
+<p>And create a new API token; Copy the token value for use inside Kiwi TCMS!
+<img alt="&quot;API Tokens page in JIRA&quot;" src="/images/features/personal-api-tokens/step_007.png" title="API Tokens page in JIRA"></p>
+</li>
+<li>
+<p>From the Kiwi TCMS navigation menu select PLUGINS -&gt; Personal API tokens
+<img alt="&quot;Navigate to Personal API tokens in Kiwi TCMS&quot;" src="/images/features/personal-api-tokens/step_008.png" title="Navigate to Personal API tokens in Kiwi TCMS"></p>
+</li>
+<li>
+<p>Select an existing Issue Tracker via its URL and fill-in your credentials. For JIRA
+  <code>api_username</code> is your JIRA email and <code>api_password</code> is your JIRA API token.
+  Other issue trackers may only require the <code>api_password</code> field. The meaning of
+  these fields can be found in
+  <a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.issuetracker.html#submodules">documentation</a>
+  for each different type of issue tracker that Kiwi TCMS can integrate with
+<img alt="&quot;Create a new API token in Kiwi TCMS&quot;" src="/images/features/personal-api-tokens/step_009.png" title="Create a new API token in Kiwi TCMS"></p>
+</li>
+<li>
+<p>Repeat the <em>1-click bug report</em> steps shown in the beginning.
+  Your browser will open a new window with the resulting report inside JIRA
+<img alt="&quot;New JIRA issue from your personal account&quot;" src="/images/features/personal-api-tokens/step_010.png" title="New JIRA issue from your personal account"></p>
+</li>
+</ul>
+<p>Notice that <em>Reporter</em> (field 1), the currently logged in user (field 2) and
+the <em>Reporter</em> text reference (field 3) now represent the same person!</p>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2023/11/28/call-for-participation-testing-and-continuous-delivery-devroom-fosdem24/" rel="bookmark" title="Permalink to Call for participation: Testing and Continuous Delivery devroom, FOSDEM'24">
                 <h1 class="top-header">Call for participation: Testing and Continuous Delivery devroom, FOSDEM'24</h1>
             </a>
@@ -2558,50 +2647,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2022/06/27/mejor-sitio-web-2022/" rel="bookmark" title="Permalink to Mejor Sitio Web 2022">
-                <h1 class="top-header">Mejor Sitio Web 2022</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Mon 27 June 2022
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Kiwi TCMS is happy to announce that we have been awarded a "Best Website 2022" award
-by <a href="https://www.reviewbox.es">Reviewbox.es</a>, scoring 36/40 on their evaluation.
-The review criteria can be found at <a href="https://www.reviewbox.es/los-mejores-sitios-web/">https://www.reviewbox.es/los-mejores-sitios-web/</a>.</p>
-<blockquote>
-<p>Querido equipo de Kiwitcms,</p>
-<p>¡Felicidades!</p>
-<p>Habéis logrado lo que muchos otros desean:</p>
-<p>Habéis acumulado 36/40 puntos en nuestra investigación de
-mercado y por lo tanto calificasteis (mínimo 30 de 40 puntos necesarios)
-para nuestro premio Mejor Sitio Web 2022.</p>
-<p>Resultados y criterios de investigación</p>
-<p>URL: Kiwitcms-Team</p>
-<p>Puntos: 36/40</p>
-</blockquote>
-<p>Our team is happy to accept this award, which comes exactly 2 years
-after we became an <a href="/blog/atodorov/2019/06/24/kiwi-tcms-is-openawards-2019-best-tech-community-winner/">OpenAwards winner</a>.</p>
-<p>Thank you and Happy testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
-</ul>
         </div>
     </article>
 
