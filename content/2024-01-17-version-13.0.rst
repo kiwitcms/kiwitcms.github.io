@@ -1,0 +1,228 @@
+Kiwi TCMS 13.0
+##############
+
+:headline: new major version introducing backwards incompatible changes
+:date: 2024-01-17 21:43
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 13.0!
+
+**IMPORTANT:**
+This is a backwards incompatible release which contains security and functional improvements,
+runtime, settings and API changes, bug fixes, internal refactoring and updated translations!
+
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  088187a81d3c    686MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 12.7
+----------------------------
+
+Security
+~~~~~~~~
+
+- Preventatively patch calls to the built-in ``xmlrpc.client`` module using the
+  ``defusedxml`` package
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update container runtime from Python 3.9 to Python 3.11
+- Update Django from 4.2.7 to 4.2.9
+- Update django-colorfield from 0.10.1 to 0.11.0
+- Update django-modern-rpc from 0.12.1 to 1.0.2
+- Update django-tree-queries from 0.15.0 to 0.16.1
+- Update django-simple-captcha from 0.5.20 to 0.6.0
+- Update jira from 3.5.2 to 3.6.0
+- Update markdown from 3.5.1 to 3.5.2
+- Update mysqlclient from 2.2.0 to 2.2.1
+- Update psycopg from 2.9.9 to 3.1.17
+- Update python-gitlab from 4.1.1 to 4.4.0
+- Update tzdata from 2023.3 to 2023.4
+- Update node_modules/pdfmake from 0.2.8 to 0.2.9
+- Show an icon when some child TPs not shown on Search Test Plans page to let
+  the user know that parent-child hierarchies shown on the page may be
+  incomplete because the data has been filtered out by their search criteria.
+  Closes `Issue #3313 <https://github.com/kiwitcms/Kiwi/issues/3313>`_
+- Hide the Expand/Collapse button Search Test Plans page for TP with 0 children
+  in the result set
+
+
+Settings
+~~~~~~~~
+
+**WARNING:**
+
+The location of the Python runtime inside the container has changed.
+This affects settings override files as well as any downstream customizations
+to the Kiwi TCMS container image! For example you may have to adjust Docker
+volumes like so:
+
+.. code-block:: diff
+
+             volumes:
+    -            - ./local_settings.py:/venv/lib64/python3.9/site-packages/tcms/settings/local_settings.py
+    +            - ./local_settings.py:/venv/lib64/python3.11/site-packages/tcms/settings/local_settings.py
+
+- Explicitly define the ``DATA_UPLOAD_MAX_MEMORY_SIZE`` setting. It controls
+  file uploads via RPC, not webUI, because the payload is base64 encoded and is
+  part of the request body. Closes
+  `Issue #3262 <https://github.com/kiwitcms/Kiwi/issues/3262>`_
+
+
+API
+~~~
+
+**WARNING:**
+
+This version of Kiwi TCMS introduces backward incompatible changes to API methods
+
+- Method ``TestRun.filter()`` no longer returns the field
+  ``plan__product``
+- Method ``TestRun.filter()`` no longer returns the field
+  ``plan__product_version``
+- Method ``TestRun.filter()`` no longer returns the field
+  ``plan__product_version__value``
+- Method ``TestRun.filter()`` now returns the new field ``build__version``
+- Method ``TestRun.filter()`` now returns the new field
+  ``build__version__product``
+- Method ``TestRun.filter()`` now returns the new field
+  ``build__version__value``
+
+
+Bug fixes
+~~~~~~~~~
+
+- Fix TestPlan cloning with different product (@somenewacc)
+- Fix row reload when adding new comment in TestRun page (@somenewacc)
+- Fix tag display for parametrized executions on TestRun page (@somenewacc)
+- Fix bug in search/display of Version on Search TestRun page. The root
+  cause was that the correct relationship here should have been
+  TR -> Build -> Version which is independent of the relationship
+  TP -> Product -> Version. Fixes
+  `Issue #3258 <https://github.com/kiwitcms/Kiwi/issues/3258>`_
+- Fix bug in search/display of Product on Search TestRun page. The root
+  cause was that the correct relationship here should have been
+  TR -> Build -> Version -> Product which is independent of the relationship
+  TP -> Product
+- Fix Telemetry pages to query Product/Version from execution's data.
+  All of these underlying queries on these pages operate on TestExecution and
+  Product/Version information should be matched against what is stored in
+  TestExecution->Build because it is more accurate over time, while
+  TE->TR->TP->Product/Version is more likely to change as test plan
+  documents evolve
+- Adjust Product & Version display on TestRun page using the relationship
+  TR->Build as the starting point
+- For IssueTracker integration use Product/Version from ``execution.build``
+  Note that ``execution.build`` is initialized with ``run.build`` and then may
+  change its value if we're recording results against multiple builds inside
+  the same TestRun. For example mark some executions as PASS, others as FAIL;
+  then update TR to a newer Build; retest and mark the FAIL results as PASS.
+  Using the value of ``execution.build`` is more accurate
+- Treat the file ``/Kiwi/etc/uwsgi.override`` as an ini file and load it if it
+  exists. This means that any override files must include the ``[uwsgi]``
+  section as well
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Adjust Kiwi TCMS for newer version of django-modern-rpc (Antoine Lorence)
+- Remove commented out code (@deepsource-autofix[bot])
+- Add integration test for uploading files with maximum allowed size
+- Update isort from 5.12.0 to 5.13.2
+- Update node_modules/eslint from 8.54.0 to 8.56.0
+- Update node_modules/eslint-plugin-import from 2.29.0 to 2.29.1
+- Update node_modules/eslint-plugin-n from 16.3.1 to 16.6.2
+- Update actions/setup-python from 4 to 5
+- Update github/codeql-action from 2 to 3
+- Update actions/upload-artifact from 3 to 4
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Chinese Simplified translation <https://crowdin.com/project/kiwitcms/zh-CN#>`_
+- Updated `Japanese translation <https://crowdin.com/project/kiwitcms/ja#>`_
+
+
+
+Kiwi TCMS Enterprise v13.0-mt
+-----------------------------
+
+- Based on Kiwi TCMS v13.0
+- Update container runtime from Python 3.9 to Python 3.11
+- Update django-ses from 3.5.0 to 3.5.2
+- Update kiwitcms-github-app from 1.5.1 to 1.6.0
+- Update kiwitcms-tenants from 2.5.2 to 2.6.0
+- Update kiwitcms-trackers-integration from 0.6.0 to 0.7.0
+- Update social-auth-kerberos from 0.2.4 to 0.3.0
+- Start testing with upstream Postgres container image
+- Assert that Personal API Tokens is listed in PLUGINS menu
+- Adjust search path for images during test
+
+
+    Private container images::
+
+        quay.io/kiwitcms/version            13.0 (aarch64)          edf0999ee223    17 Jan 2024     698MB
+        quay.io/kiwitcms/version            13.0 (x86_64)           088187a81d3c    17 Jan 2024     686MB
+        quay.io/kiwitcms/enterprise         13.0-mt (aarch64)       58a8321da098    17 Jan 2024     899MB
+        quay.io/kiwitcms/enterprise         13.0-mt (x86_64)        2c6fbc6adcc5    17 Jan 2024     885MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+tcms-api changes since v12.7
+----------------------------
+
+- Refresh internal https transport every 4 minutes to avoid an
+  ``ssl.SSLEOFError: EOF occurred in violation of protocol`` error
+  on Python 3.10 and later when executing very long running tests
+- Include Python version in ``User-Agent`` header
+- Send XML-RPC method name in ``Referer`` header
+- When creating a ``TestPlan`` limit ``name`` to 255 characters
+- When creating a ``TestCase`` limit ``summary`` to 255 characters
+
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
