@@ -1,5 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-12-06T13:05:00+02:00</updated><entry><title>Feature showcase: Personal API tokens</title><link href="/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/" rel="alternate"></link><published>2023-12-06T13:05:00+02:00</published><updated>2023-12-06T13:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-12-06:/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/</id><summary type="html">&lt;p&gt;For a long time now Kiwi TCMS has supported integration with external issue tracking systems,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-01-17T21:43:00+02:00</updated><entry><title>Kiwi TCMS 13.0</title><link href="/blog/kiwi-tcms-team/2024/01/17/kiwi-tcms-130/" rel="alternate"></link><published>2024-01-17T21:43:00+02:00</published><updated>2024-01-17T21:43:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-01-17:/blog/kiwi-tcms-team/2024/01/17/kiwi-tcms-130/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.0!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a backwards incompatible release which contains security and functional improvements,
+runtime, settings and API changes, bug fixes, internal refactoring and updated translations!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.0!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a backwards incompatible release which contains security and functional improvements,
+runtime, settings and API changes, bug fixes, internal refactoring and updated translations!&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  088187a81d3c    686MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-12-7"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 12.7&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Preventatively patch calls to the built-in &lt;tt class="docutils literal"&gt;xmlrpc.client&lt;/tt&gt; module using the
+&lt;tt class="docutils literal"&gt;defusedxml&lt;/tt&gt; package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update container runtime from Python 3.9 to Python 3.11&lt;/li&gt;
+&lt;li&gt;Update Django from 4.2.7 to 4.2.9&lt;/li&gt;
+&lt;li&gt;Update django-colorfield from 0.10.1 to 0.11.0&lt;/li&gt;
+&lt;li&gt;Update django-modern-rpc from 0.12.1 to 1.0.2&lt;/li&gt;
+&lt;li&gt;Update django-tree-queries from 0.15.0 to 0.16.1&lt;/li&gt;
+&lt;li&gt;Update django-simple-captcha from 0.5.20 to 0.6.0&lt;/li&gt;
+&lt;li&gt;Update jira from 3.5.2 to 3.6.0&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.5.1 to 3.5.2&lt;/li&gt;
+&lt;li&gt;Update mysqlclient from 2.2.0 to 2.2.1&lt;/li&gt;
+&lt;li&gt;Update psycopg from 2.9.9 to 3.1.17&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 4.1.1 to 4.4.0&lt;/li&gt;
+&lt;li&gt;Update tzdata from 2023.3 to 2023.4&lt;/li&gt;
+&lt;li&gt;Update node_modules/pdfmake from 0.2.8 to 0.2.9&lt;/li&gt;
+&lt;li&gt;Show an icon when some child TPs not shown on Search Test Plans page to let
+the user know that parent-child hierarchies shown on the page may be
+incomplete because the data has been filtered out by their search criteria.
+Closes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3313"&gt;Issue #3313&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hide the Expand/Collapse button Search Test Plans page for TP with 0 children
+in the result set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The location of the Python runtime inside the container has changed.
+This affects settings override files as well as any downstream customizations
+to the Kiwi TCMS container image! For example you may have to adjust Docker
+volumes like so:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;        volumes:
+&lt;span class="gd"&gt;-            - ./local_settings.py:/venv/lib64/python3.9/site-packages/tcms/settings/local_settings.py&lt;/span&gt;
+&lt;span class="gi"&gt;+            - ./local_settings.py:/venv/lib64/python3.11/site-packages/tcms/settings/local_settings.py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Explicitly define the &lt;tt class="docutils literal"&gt;DATA_UPLOAD_MAX_MEMORY_SIZE&lt;/tt&gt; setting. It controls
+file uploads via RPC, not webUI, because the payload is base64 encoded and is
+part of the request body. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3262"&gt;Issue #3262&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This version of Kiwi TCMS introduces backward incompatible changes to API methods&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt; no longer returns the field
+&lt;tt class="docutils literal"&gt;plan__product&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt; no longer returns the field
+&lt;tt class="docutils literal"&gt;plan__product_version&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt; no longer returns the field
+&lt;tt class="docutils literal"&gt;plan__product_version__value&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt; now returns the new field &lt;tt class="docutils literal"&gt;build__version&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt; now returns the new field
+&lt;tt class="docutils literal"&gt;build__version__product&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt; now returns the new field
+&lt;tt class="docutils literal"&gt;build__version__value&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix TestPlan cloning with different product (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;li&gt;Fix row reload when adding new comment in TestRun page (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;li&gt;Fix tag display for parametrized executions on TestRun page (&amp;#64;somenewacc)&lt;/li&gt;
+&lt;li&gt;Fix bug in search/display of Version on Search TestRun page. The root
+cause was that the correct relationship here should have been
+TR -&amp;gt; Build -&amp;gt; Version which is independent of the relationship
+TP -&amp;gt; Product -&amp;gt; Version. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3258"&gt;Issue #3258&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix bug in search/display of Product on Search TestRun page. The root
+cause was that the correct relationship here should have been
+TR -&amp;gt; Build -&amp;gt; Version -&amp;gt; Product which is independent of the relationship
+TP -&amp;gt; Product&lt;/li&gt;
+&lt;li&gt;Fix Telemetry pages to query Product/Version from execution's data.
+All of these underlying queries on these pages operate on TestExecution and
+Product/Version information should be matched against what is stored in
+TestExecution-&amp;gt;Build because it is more accurate over time, while
+TE-&amp;gt;TR-&amp;gt;TP-&amp;gt;Product/Version is more likely to change as test plan
+documents evolve&lt;/li&gt;
+&lt;li&gt;Adjust Product &amp;amp; Version display on TestRun page using the relationship
+TR-&amp;gt;Build as the starting point&lt;/li&gt;
+&lt;li&gt;For IssueTracker integration use Product/Version from &lt;tt class="docutils literal"&gt;execution.build&lt;/tt&gt;
+Note that &lt;tt class="docutils literal"&gt;execution.build&lt;/tt&gt; is initialized with &lt;tt class="docutils literal"&gt;run.build&lt;/tt&gt; and then may
+change its value if we're recording results against multiple builds inside
+the same TestRun. For example mark some executions as PASS, others as FAIL;
+then update TR to a newer Build; retest and mark the FAIL results as PASS.
+Using the value of &lt;tt class="docutils literal"&gt;execution.build&lt;/tt&gt; is more accurate&lt;/li&gt;
+&lt;li&gt;Treat the file &lt;tt class="docutils literal"&gt;/Kiwi/etc/uwsgi.override&lt;/tt&gt; as an ini file and load it if it
+exists. This means that any override files must include the &lt;tt class="docutils literal"&gt;[uwsgi]&lt;/tt&gt;
+section as well&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Adjust Kiwi TCMS for newer version of django-modern-rpc (Antoine Lorence)&lt;/li&gt;
+&lt;li&gt;Remove commented out code (&amp;#64;deepsource-autofix[bot])&lt;/li&gt;
+&lt;li&gt;Add integration test for uploading files with maximum allowed size&lt;/li&gt;
+&lt;li&gt;Update isort from 5.12.0 to 5.13.2&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint from 8.54.0 to 8.56.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint-plugin-import from 2.29.0 to 2.29.1&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint-plugin-n from 16.3.1 to 16.6.2&lt;/li&gt;
+&lt;li&gt;Update actions/setup-python from 4 to 5&lt;/li&gt;
+&lt;li&gt;Update github/codeql-action from 2 to 3&lt;/li&gt;
+&lt;li&gt;Update actions/upload-artifact from 3 to 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v13-0-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v13.0-mt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v13.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update container runtime from Python 3.9 to Python 3.11&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update django-ses from 3.5.0 to 3.5.2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-github-app from 1.5.1 to 1.6.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-tenants from 2.5.2 to 2.6.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update kiwitcms-trackers-integration from 0.6.0 to 0.7.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Update social-auth-kerberos from 0.2.4 to 0.3.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Start testing with upstream Postgres container image&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Assert that Personal API Tokens is listed in PLUGINS menu&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Adjust search path for images during test&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Private container images:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/version            13.0 (aarch64)          edf0999ee223    17 Jan 2024     698MB
+quay.io/kiwitcms/version            13.0 (x86_64)           088187a81d3c    17 Jan 2024     686MB
+quay.io/kiwitcms/enterprise         13.0-mt (aarch64)       58a8321da098    17 Jan 2024     899MB
+quay.io/kiwitcms/enterprise         13.0-mt (x86_64)        2c6fbc6adcc5    17 Jan 2024     885MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tcms-api-changes-since-v12-7"&gt;
+&lt;h2&gt;tcms-api changes since v12.7&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Refresh internal https transport every 4 minutes to avoid an
+&lt;tt class="docutils literal"&gt;ssl.SSLEOFError: EOF occurred in violation of protocol&lt;/tt&gt; error
+on Python 3.10 and later when executing very long running tests&lt;/li&gt;
+&lt;li&gt;Include Python version in &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;User-Agent&lt;/span&gt;&lt;/tt&gt; header&lt;/li&gt;
+&lt;li&gt;Send XML-RPC method name in &lt;tt class="docutils literal"&gt;Referer&lt;/tt&gt; header&lt;/li&gt;
+&lt;li&gt;When creating a &lt;tt class="docutils literal"&gt;TestPlan&lt;/tt&gt; limit &lt;tt class="docutils literal"&gt;name&lt;/tt&gt; to 255 characters&lt;/li&gt;
+&lt;li&gt;When creating a &lt;tt class="docutils literal"&gt;TestCase&lt;/tt&gt; limit &lt;tt class="docutils literal"&gt;summary&lt;/tt&gt; to 255 characters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Feature showcase: Personal API tokens</title><link href="/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/" rel="alternate"></link><published>2023-12-06T13:05:00+02:00</published><updated>2023-12-06T13:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-12-06:/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/</id><summary type="html">&lt;p&gt;For a long time now Kiwi TCMS has supported integration with external issue tracking systems,
 such as JIRA. This integration is usually configured via bot accounts and their respective
 credentials and our flagship functionality is 1-click bug report! This is how it looks like:&lt;/p&gt;
 &lt;ul&gt;
