@@ -14,6 +14,11 @@
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/responsive-768.css" rel="stylesheet">
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/responsive-micro.css" rel="stylesheet">
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style/github.css" rel="stylesheet">
+
+        {% if PLAUSIBLE_DOMAIN %}
+        <script defer data-domain="{{ PLAUSIBLE_DOMAIN }}" src="https://plausible.io/js/script.js"></script>
+        {% endif %}
+
         <script
             id="fsc-api"
             src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.5/fastspring-builder.min.js"
@@ -113,19 +118,6 @@
             {% for stylesheet in page.extra_css.split(' ') %}
             <link rel="stylesheet" href="{{ stylesheet }}">
             {% endfor %}
-        {% endif %}
-
-        {% if GOOGLE_ANALYTICS %}
-            <!-- Google analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS }}"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){
-                    dataLayer.push(arguments);
-                }
-                gtag('js', new Date());
-                gtag('config', '{{ GOOGLE_ANALYTICS }}');
-            </script>
         {% endif %}
     </body>
 </html>

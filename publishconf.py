@@ -24,5 +24,5 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 DISQUS_SITENAME = 'kiwitcms'
-GOOGLE_ANALYTICS = "G-SJWW55DFKC"
+PLAUSIBLE_DOMAIN ="kiwitcms.org"
 ADDTHIS_PUBID = "ra-5a8aeaec2954eb1b"
