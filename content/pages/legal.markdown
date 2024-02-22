@@ -17,7 +17,7 @@ Community donations are collected via
 Project infrastructure, development and support services provided by:
 
 * Company name: Open Technologies Bulgaria, Ltd;
-* Address: Ivan Susanin 43, Sofia 1618, Bulgaria
+* Address: Cherkovna 80, Sofia 1505, Bulgaria
 * Registration number: 200601818
 * VAT number: BG200601818
 * Domain names: [kiwitcms.eu](http://kiwitcms.eu),
