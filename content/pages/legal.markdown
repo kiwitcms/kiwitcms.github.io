@@ -42,5 +42,20 @@ are removed within 30 days of cancelling their subscription.
 
 Account info is not shared with 3rd parties!
 
-Kiwi TCMS doesn't perform any tracking of your activities or collect any statistics
-which are sent-home!
+Anonymous analytics
+===================
+
+Kiwi TCMS uses Plausible Analytics on this website, inside our
+[official container images]({filename}containers.markdown) and
+all tenants provisioned under `https://*.tenant.kiwitcms.org` to collect some
+anonymous usage data for statistical purposes.
+
+Our goal is to track overall trends
+and usage patterns in Kiwi TCMS application(s), not to track individual visitors.
+All the data is in aggregate only. No personal data is sent to Plausible.
+Data collected includes referral sources,
+top pages, visit duration, information from the devices
+(device type, operating system, country and browser) used during the visit.
+Read more in the Plausible Analytics [Data Policy](https://plausible.io/data-policy)
+and [our blog]({filename}../2024-02-23-anonymous-analytics.markdown).
+Check-out the Plausible Analytics dashboard: [kiwitcms.org](https://plausible.io/kiwitcms.org)!
