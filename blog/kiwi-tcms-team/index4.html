@@ -103,6 +103,168 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/" rel="bookmark" title="Permalink to Kiwi TCMS 8.7">
+                <h1 class="top-header">Kiwi TCMS 8.7</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 16 September 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 8.7!</p>
+<p><strong>IMPORTANT:</strong> this is a medium sized release which includes
+improvements, API changes, bug fixes, translation updates and
+new tests. It is the fifth release to include contributions via our
+<a class="reference external" href="/blog/tags/bounty-program/">open source bounty program</a>.
+You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  1f2461b1facd    643 MB
+kiwitcms/kiwi       6.2     7870085ad415    957 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-8-6">
+<h2>Changes since Kiwi TCMS 8.6</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul>
+<li><p class="first">Update Django from 3.0.9 to 3.1.1</p>
+</li>
+<li><p class="first">Update django-attachments from 1.6 to 1.8</p>
+</li>
+<li><p class="first">Update django-extensions from 3.0.5 to 3.0.8</p>
+</li>
+<li><p class="first">Update psycopg2 from 2.8.5 to 2.8.6</p>
+</li>
+<li><p class="first">Update pygments from 2.6.1 to 2.7.0</p>
+</li>
+<li><p class="first">Update python-gitlab from 2.4.0 to 2.5.0</p>
+</li>
+<li><p class="first">Make it possible to use reCAPTCHA during registration. If you want to enable
+this then add the following to your settings:</p>
+<pre class="literal-block">
+if 'captcha' not in INSTALLED_APPS:
+    INSTALLED_APPS.append('captcha')
+
+    RECAPTCHA_PUBLIC_KEY = '......'
+    RECAPTCHA_PRIVATE_KEY = '.....'
+    RECAPTCHA_USE_SSL = True
+</pre>
+<p>For more info see <a class="reference external" href="https://www.google.com/recaptcha/admin/">https://www.google.com/recaptcha/admin/</a></p>
+</li>
+<li><p class="first">Replace <tt class="docutils literal">GlobalLoginRequiredMiddleware</tt> with
+<tt class="docutils literal">tcms.kiwi_auth.backends.AnonymousViewBackend</tt> for anonymous read-only
+functionality. See section
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/configuration.html#anonymous-read-only-access">Anonymous read-only access</a>
+in the documentation</p>
+</li>
+<li><p class="first">Replace the <tt class="docutils literal">...</tt> in navigation bar with a 3 cogs icon to make the
+object-level menu more visible</p>
+</li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li>Remove setting <tt class="docutils literal">PUBLIC_VIEWS</tt></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Remove <tt class="docutils literal">TestCase.get_components()</tt> in favor of <tt class="docutils literal">Component.filter()</tt></li>
+<li><tt class="docutils literal">Bug.details()</tt> method will now return <tt class="docutils literal">{}</tt> instead of failing if
+it can't find an issue tracker from an URL</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Remove documentation references to non-existing environment</li>
+<li>Don't fail internal calls if Kiwi TCMS bug tracker can't find a bug</li>
+</ul>
+</div>
+<div class="section" id="refactoring-testing">
+<h3>Refactoring &amp; testing</h3>
+<ul class="simple">
+<li>Add tests for <tt class="docutils literal">tcms.core.templatetags</tt>. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1602">Issue #1602</a> (Mariyan Garvanski)</li>
+<li>Add tests for <tt class="docutils literal">tcms.bugs.views.Edit</tt>. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1599">Issue #1599</a> (Mfon Eti-mfon)</li>
+<li>Add tests for <tt class="docutils literal">tcms.bugs.views.AddComment</tt>. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1600">Issue #1600</a> (Mfon Eti-mfon)</li>
+<li>Make paths used in migrations &amp; settings platform aware in order to
+enable development mode on Windows (Mfon Eti-mfon)</li>
+<li>Add new linter checker to check for use of <tt class="docutils literal">db_column</tt> argument in
+model field definition. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/736">Issue #736</a> (Bryan Mutai)</li>
+<li>Add tests for <tt class="docutils literal">Bug.details</tt> API method</li>
+<li>Replace deprecated <tt class="docutils literal">ifequal</tt>/<tt class="docutils literal">ifnotequal</tt> template tags</li>
+<li>Adjust <tt class="docutils literal">migrations_order</tt> for Django 3.1 compatibility</li>
+<li>Add <tt class="docutils literal">npm audit</tt> check in CI</li>
+<li>Resolve several pylint issues</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#">Hungarian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v8-7-mt">
+<h2>Kiwi TCMS Enterprise v8.7-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v8.7</li>
+<li>Overrides for setting <tt class="docutils literal">PUBLIC_VIEWS</tt> have been removed</li>
+<li>Update django-ses from 1.0.2 to 1.0.3</li>
+<li>Update kiwitcms-github-app from 1.1 to 1.2</li>
+<li>Update kiwitcms-tenants from 1.2.1 to 1.3.1</li>
+</ul>
+<p>For more info see
+<a class="reference external" href="https://github.com/kiwitcms/enterprise/#v87-mt-16-sep-2020">https://github.com/kiwitcms/enterprise/#v87-mt-16-sep-2020</a></p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Refer to
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
+for more details!</p>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/" rel="bookmark" title="Permalink to Please nominate @kiwitcms as a GitHub Star">
                 <h1 class="top-header">Please nominate @kiwitcms as a GitHub Star</h1>
             </a>
@@ -1877,188 +2039,6 @@ will be going towards funding development tasks.
 Like Alex told the judges - this will help us enable more hands working on Kiwi TCMS
 and complete pending work faster. Stay tuned for our bounty program announcement!</p>
 <p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2020/03/04/kiwi-tcms-81/" rel="bookmark" title="Permalink to Kiwi TCMS 8.1">
-                <h1 class="top-header">Kiwi TCMS 8.1</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 04 March 2020
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 8.1!</p>
-<p><strong>IMPORTANT:</strong>
-this is a small security and improvement release which
-also includes several bug fixes, internal refactoring and updated translations.
-You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  fbb363af2d90    557 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-8-0">
-<h2>Changes since Kiwi TCMS 8.0</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul>
-<li><p class="first">JSON-RPC handler will now HTML escape all strings. This prevents XSS attacks
-via tags, components or anything else which is loaded on the web page via RPC
-and then shown as string. Even if someone saves <tt class="docutils literal"><span class="pre">&lt;script&gt;alert(123);&lt;/script&gt;</span></tt>
-in the database the returned result will be HTML escaped and will not be executed
-as JavaScript!</p>
-<p><strong>Notes:</strong></p>
-<blockquote>
-<p>This is easy to exploit but people able to do so should have accounts in
-your Kiwi TCMS installation and write privileges on their accounts. If they
-do this means they can cause a lot more damage much more easily!</p>
-</blockquote>
-</li>
-<li><p class="first">Update Django from 3.0.3 to 3.0.4 - fixes security issue CVE-2020-9402:
-Potential SQL injection via <tt class="docutils literal">tolerance</tt> parameter in GIS functions and aggregates
-on Oracle which we believe does not affect Kiwi TCMS</p>
-</li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul>
-<li><p class="first">Update bleach from 3.1.0 to 3.1.1</p>
-</li>
-<li><p class="first">Update django-colorfield from 0.1.15 to 0.2.1</p>
-</li>
-<li><p class="first">Update markdown from 3.2 to 3.2.1</p>
-</li>
-<li><p class="first">On bug creation send email to assignee. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1154">Issue #1154</a> (Mfon Eti-mfon)</p>
-</li>
-<li><p class="first">Make it possible to provide override settings in a directory. Kiwi TCMS will
-respect:</p>
-<ul class="simple">
-<li><tt class="docutils literal">local_settings.py</tt></li>
-<li><tt class="docutils literal"><span class="pre">local_settings_dir/*.py</span></tt></li>
-</ul>
-<p>For more information see
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization">https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization</a></p>
-</li>
-<li><p class="first">Allow adding TestPlan to TestCase via UI. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1021">Issue #1021</a></p>
-</li>
-<li><p class="first">Add visual representation of failures in TestCase health telemetry</p>
-</li>
-<li><p class="first">Add helper text to TestExecutionStatus admin</p>
-</li>
-<li><p class="first">Add link to discussion forum in Help menu</p>
-</li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li><tt class="docutils literal">TestCase.create()</tt> method no longer accepts <tt class="docutils literal">product</tt> or <tt class="docutils literal">product_id</tt>
-fields which have previously been deprecated</li>
-<li>API methods which receive True/False values will no longer parse yes,no,1,0 values.
-The only accepted values are boolean constants defined in the calling programming
-language which are then transmitted via XML-RPC or JSON-RPC and converted to
-native boolean on the backend</li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>The number of search results shown per page can now be controlled via
-<tt class="docutils literal">DEFAULT_PAGE_SIZE</tt> setting, which is 100 by default. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1210">Issue #1210</a> (Ivailo Karabojkov)</li>
-<li>Use comma separated display of components in bug reports. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1157">Issue #1157</a> (Ivailo Karabojkov)</li>
-<li>Update selector for 'Select All' test executions in TestRun page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1404">Issue #1404</a></li>
-<li>Fix crash when sorting test cases in TestPlan page. Fixes
-<a class="reference external" href="https://sentry.io/organizations/open-technologies-bulgaria-ltd/issues/1519809326/">Sentry #KIWI-TCMS-A6</a></li>
-<li>Fix a <tt class="docutils literal"><span class="pre">TC-undefined</span></tt> displayed in TestCase health telemetry</li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Add test for <tt class="docutils literal">TestRunAdmin.change_view()</tt> (Mariyan Garvanski)</li>
-<li>Remove unused <tt class="docutils literal">showCaseRunsWithSelectedStatus</tt></li>
-<li>Internal JavaScript updates</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="github-marketplace-listing-deprecation">
-<h2>GitHub Marketplace listing deprecation</h2>
-<p>As we've stated previously Kiwi TCMS has migrated to a new GitHub backend and
-OAuth tokens for the previous backend have been revoked and the
-existing listing on GitHub Marketplace is deprecated. It is a non-functioning
-app at the moment!</p>
-<p>It is not possible for us to cancel Marketplace subscriptions programatically,
-that is GitHub does not provide such API. Active subscribers please follow these
-3 steps to help us clean up stale information:</p>
-<ul class="simple">
-<li>Go to <a class="reference external" href="https://github.com/marketplace/kiwi-tcms">https://github.com/marketplace/kiwi-tcms</a></li>
-<li>From &quot;Edit your plan&quot; button at the top select your GitHub account</li>
-<li>Then click &quot;Cancel this plan&quot; link which is at the left-hand side
-at the bottom of the description box!</li>
-</ul>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd path/containing/docker-compose/
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb-103-centos7
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
-The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:</p>
-<pre class="literal-block">
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-</pre>
-<p>Happy testing!</p>
-</div>
-
         </div>
     </article>
 
