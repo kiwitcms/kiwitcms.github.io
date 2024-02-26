@@ -1,0 +1,177 @@
+Kiwi TCMS 13.1
+##############
+
+:headline: new major version introducing backwards incompatible changes
+:date: 2024-02-26 16:45
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 13.1!
+
+**IMPORTANT:**
+This is a small release which contains several improvements,
+new settings and API methods, bug fixes and internal refactoring!
+
+
+Recommended
+`upgrade <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+path::
+
+    13.0 -> 13.1
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  b64472d820a2    698MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 13.0
+----------------------------
+
+Improvements
+~~~~~~~~~~~~
+
+- Update django from 4.2.9 to 4.2.10
+- Update django-simple-history from 3.4.0 to 3.5.0
+- Update mysqlclient from 2.2.1 to 2.2.4
+- Update psycopg from 3.1.17 to 3.1.18
+- Update tzdata from 2023.4 to 2024.1
+- Update uwsgi from 2.0.23 to 2.0.24
+- Update node_modules/datatables.net-buttons from 2.4.2 to 3.0.0
+- Add ``robots.txt`` file to tell various robots to stop probing Kiwi TCMS
+- Resolve the path ``/favicon.ico`` because some browsers still search for it
+- Send ``Referer:`` header for container ``HEALTHCHECK`` command in order to
+  make NGINX logs more readable
+- Allow users to reset their email by asking them to confirm their new address. Fixes
+  `Issue #3211 <https://github.com/kiwitcms/Kiwi/issues/3211>`_
+- Add support for custom email validators on the registration page
+- Move ``X-Frame-Options`` header definition into settings
+- Move ``X-Content-Type-Options`` header definition into settings
+- Enable anonymous analytics,
+  `see here <{filename}2024-02-23-anonymous-analytics.markdown>`_
+
+
+Settings
+~~~~~~~~
+
+- New settings ``ANONYMOUS_ANALYTICS`` and ``PLAUSIBLE_DOMAIN`` control
+  anonymous analytics
+- New setting ``EMAIL_VALIDATORS`` for custom email validation during
+  registration
+- Add the following settings in order to document them -
+  ``CSRF_COOKIE_AGE``, ``CSRF_COOKIE_HTTPONLY``, ``SESSION_COOKIE_HTTPONLY``,
+  ``CSRF_COOKIE_SECURE`` and ``SESSION_COOKIE_SECURE``. Most likely you don't
+  need to change their values
+- Respect ``X_FRAME_OPTIONS`` setting, defaults to ``DENY``
+- Respect ``SECURE_CONTENT_TYPE_NOSNIFF`` setting, defaults to ``nosniff``
+- Configure ``SECURE_SSL_REDIRECT`` setting to ``True``
+
+
+API
+~~~
+
+- New method ``TestExecution.remove()`` which should be used in favor of
+  ``TestRun.remove_case()``
+
+
+Bug fixes
+~~~~~~~~~~
+
+- Fix a bug where non-distinct values made it into generated property matrix
+- On TestRun page allow removal of individual parameterized TestExecution(s).
+  Closes `Pull #3282 <https://github.com/kiwitcms/Kiwi/pull/3282>`_
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update codecov/codecov-action from 3 to 4
+- Update node_modules/webpack from 5.89.0 to 5.90.3
+- Update runner image for CircleCI
+- Fix failure in ``test_utf8_uploads`` on CircleCI
+- Several improvements around performance benchmark tests
+- Refactor ``RegistrationForm.clean_email()`` using field validator function
+- Add tests for test matrix generation functionality
+
+
+
+Kiwi TCMS Enterprise v13.1-mt
+-----------------------------
+
+- Based on Kiwi TCMS v13.1
+- Replace NGINX with OpenResty with built-in support for Lua scripting
+- Implement request limits configurable via environment variables
+- Initial integration with Let's Encrypt. Closes
+  `Issue #253 <https://github.com/kiwitcms/enterprise/issues/253>`_
+
+  **WARNINGS:**
+
+    - true
+      `wildcard certificates <https://letsencrypt.org/docs/faq/#does-let-s-encrypt-issue-wildcard-certificates>`_
+      are only possible via certbot's DNS plugins while current integration uses ``--webroot``
+    - you need to bind-mount ``/etc/letsencrypt/`` and ``/Kiwi/ssl/`` inside the container
+      if you want the Let's Encrypt certificates to persist a restart
+
+- Replace ``raven`` with ``sentry-sdk``
+- Override ``HEALTHCHECK`` command
+- Add more tests for container and http functionality
+
+
+Private container images
+------------------------
+
+    ::
+
+        quay.io/kiwitcms/version            13.1 (aarch64)          a611a00ee2bc    26 Feb 2024     709MB
+        quay.io/kiwitcms/version            13.1 (x86_64)           b64472d820a2    26 Feb 2024     698MB
+        quay.io/kiwitcms/enterprise         13.1-mt (aarch64)       76ef5773b488    26 Feb 2024     1.07GB
+        quay.io/kiwitcms/enterprise         13.1-mt (x86_64)        9781119c2348    26 Feb 2024     1.04GB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+SaaS changes since v13.0
+------------------------
+
+Applies to any digital property under ``*.tenant.kiwitcms.org``!
+
+- Newly registered accounts are no longer possible using ``@yahoo`` email addresses
+- Anonymous analytics has been enabled,
+  `see here <{filename}2024-02-23-anonymous-analytics.markdown>`_
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
