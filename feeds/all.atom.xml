@@ -1,5 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-02-23T12:15:00+02:00</updated><entry><title>Anonymous analytics via Plausible.io</title><link href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/" rel="alternate"></link><published>2024-02-23T12:15:00+02:00</published><updated>2024-02-23T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-02-23:/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/</id><summary type="html">&lt;p&gt;Since the very beginning when we launched Kiwi TCMS our team has been struggling to
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-02-26T16:45:00+02:00</updated><entry><title>Kiwi TCMS 13.1</title><link href="/blog/kiwi-tcms-team/2024/02/26/kiwi-tcms-131/" rel="alternate"></link><published>2024-02-26T16:45:00+02:00</published><updated>2024-02-26T16:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-02-26:/blog/kiwi-tcms-team/2024/02/26/kiwi-tcms-131/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a small release which contains several improvements,
+new settings and API methods, bug fixes and internal refactoring!&lt;/p&gt;
+&lt;p&gt;Recommended
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;upgrade&lt;/a&gt;
+path:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+13.0 -&amp;gt; 13.1
+&lt;/pre&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a small release which contains several improvements,
+new settings and API methods, bug fixes and internal refactoring!&lt;/p&gt;
+&lt;p&gt;Recommended
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;upgrade&lt;/a&gt;
+path:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+13.0 -&amp;gt; 13.1
+&lt;/pre&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  b64472d820a2    698MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-13-0"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 13.0&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django from 4.2.9 to 4.2.10&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 3.4.0 to 3.5.0&lt;/li&gt;
+&lt;li&gt;Update mysqlclient from 2.2.1 to 2.2.4&lt;/li&gt;
+&lt;li&gt;Update psycopg from 3.1.17 to 3.1.18&lt;/li&gt;
+&lt;li&gt;Update tzdata from 2023.4 to 2024.1&lt;/li&gt;
+&lt;li&gt;Update uwsgi from 2.0.23 to 2.0.24&lt;/li&gt;
+&lt;li&gt;Update node_modules/datatables.net-buttons from 2.4.2 to 3.0.0&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;robots.txt&lt;/tt&gt; file to tell various robots to stop probing Kiwi TCMS&lt;/li&gt;
+&lt;li&gt;Resolve the path &lt;tt class="docutils literal"&gt;/favicon.ico&lt;/tt&gt; because some browsers still search for it&lt;/li&gt;
+&lt;li&gt;Send &lt;tt class="docutils literal"&gt;Referer:&lt;/tt&gt; header for container &lt;tt class="docutils literal"&gt;HEALTHCHECK&lt;/tt&gt; command in order to
+make NGINX logs more readable&lt;/li&gt;
+&lt;li&gt;Allow users to reset their email by asking them to confirm their new address. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3211"&gt;Issue #3211&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for custom email validators on the registration page&lt;/li&gt;
+&lt;li&gt;Move &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;X-Frame-Options&lt;/span&gt;&lt;/tt&gt; header definition into settings&lt;/li&gt;
+&lt;li&gt;Move &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;X-Content-Type-Options&lt;/span&gt;&lt;/tt&gt; header definition into settings&lt;/li&gt;
+&lt;li&gt;Enable anonymous analytics,
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/"&gt;see here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New settings &lt;tt class="docutils literal"&gt;ANONYMOUS_ANALYTICS&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;PLAUSIBLE_DOMAIN&lt;/tt&gt; control
+anonymous analytics&lt;/li&gt;
+&lt;li&gt;New setting &lt;tt class="docutils literal"&gt;EMAIL_VALIDATORS&lt;/tt&gt; for custom email validation during
+registration&lt;/li&gt;
+&lt;li&gt;Add the following settings in order to document them -
+&lt;tt class="docutils literal"&gt;CSRF_COOKIE_AGE&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;CSRF_COOKIE_HTTPONLY&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;SESSION_COOKIE_HTTPONLY&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;CSRF_COOKIE_SECURE&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;SESSION_COOKIE_SECURE&lt;/tt&gt;. Most likely you don't
+need to change their values&lt;/li&gt;
+&lt;li&gt;Respect &lt;tt class="docutils literal"&gt;X_FRAME_OPTIONS&lt;/tt&gt; setting, defaults to &lt;tt class="docutils literal"&gt;DENY&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Respect &lt;tt class="docutils literal"&gt;SECURE_CONTENT_TYPE_NOSNIFF&lt;/tt&gt; setting, defaults to &lt;tt class="docutils literal"&gt;nosniff&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Configure &lt;tt class="docutils literal"&gt;SECURE_SSL_REDIRECT&lt;/tt&gt; setting to &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New method &lt;tt class="docutils literal"&gt;TestExecution.remove()&lt;/tt&gt; which should be used in favor of
+&lt;tt class="docutils literal"&gt;TestRun.remove_case()&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix a bug where non-distinct values made it into generated property matrix&lt;/li&gt;
+&lt;li&gt;On TestRun page allow removal of individual parameterized TestExecution(s).
+Closes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/pull/3282"&gt;Pull #3282&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update codecov/codecov-action from 3 to 4&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.89.0 to 5.90.3&lt;/li&gt;
+&lt;li&gt;Update runner image for CircleCI&lt;/li&gt;
+&lt;li&gt;Fix failure in &lt;tt class="docutils literal"&gt;test_utf8_uploads&lt;/tt&gt; on CircleCI&lt;/li&gt;
+&lt;li&gt;Several improvements around performance benchmark tests&lt;/li&gt;
+&lt;li&gt;Refactor &lt;tt class="docutils literal"&gt;RegistrationForm.clean_email()&lt;/tt&gt; using field validator function&lt;/li&gt;
+&lt;li&gt;Add tests for test matrix generation functionality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v13-1-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v13.1-mt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Based on Kiwi TCMS v13.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Replace NGINX with OpenResty with built-in support for Lua scripting&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Implement request limits configurable via environment variables&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Initial integration with Let's Encrypt. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/253"&gt;Issue #253&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WARNINGS:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;true
+&lt;a class="reference external" href="https://letsencrypt.org/docs/faq/#does-let-s-encrypt-issue-wildcard-certificates"&gt;wildcard certificates&lt;/a&gt;
+are only possible via certbot's DNS plugins while current integration uses &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--webroot&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;you need to bind-mount &lt;tt class="docutils literal"&gt;/etc/letsencrypt/&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;/Kiwi/ssl/&lt;/tt&gt; inside the container
+if you want the Let's Encrypt certificates to persist a restart&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Replace &lt;tt class="docutils literal"&gt;raven&lt;/tt&gt; with &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;sentry-sdk&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Override &lt;tt class="docutils literal"&gt;HEALTHCHECK&lt;/tt&gt; command&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add more tests for container and http functionality&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/version            13.1 (aarch64)          a611a00ee2bc    26 Feb 2024     709MB
+quay.io/kiwitcms/version            13.1 (x86_64)           b64472d820a2    26 Feb 2024     698MB
+quay.io/kiwitcms/enterprise         13.1-mt (aarch64)       76ef5773b488    26 Feb 2024     1.07GB
+quay.io/kiwitcms/enterprise         13.1-mt (x86_64)        9781119c2348    26 Feb 2024     1.04GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="saas-changes-since-v13-0"&gt;
+&lt;h2&gt;SaaS changes since v13.0&lt;/h2&gt;
+&lt;p&gt;Applies to any digital property under &lt;tt class="docutils literal"&gt;*.tenant.kiwitcms.org&lt;/tt&gt;!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Newly registered accounts are no longer possible using &lt;tt class="docutils literal"&gt;&amp;#64;yahoo&lt;/tt&gt; email addresses&lt;/li&gt;
+&lt;li&gt;Anonymous analytics has been enabled,
+&lt;a class="reference external" href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/"&gt;see here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Anonymous analytics via Plausible.io</title><link href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/" rel="alternate"></link><published>2024-02-23T12:15:00+02:00</published><updated>2024-02-23T12:15:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-02-23:/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/</id><summary type="html">&lt;p&gt;Since the very beginning when we launched Kiwi TCMS our team has been struggling to
 understand how many people use it, how active these users are, which pages &amp;amp; functionality
 they spend the most time with, how many installations of Kiwi TCMS are out there in the wild
 and which exactly …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since the very beginning when we launched Kiwi TCMS our team has been struggling to
