@@ -1,0 +1,95 @@
+Kiwi TCMS 13.1.1
+################
+
+:headline: hot-fix for a bug introduced in v13.1
+:date: 2024-02-27 14:39
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 13.1.1!
+
+**IMPORTANT:**
+This is a hot-fix release for a bug introduced in v13.1!
+
+
+Recommended
+`upgrade <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+path::
+
+    13.1 -> 13.1.1
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  5574cf84d49e    696MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 13.1
+----------------------------
+
+Bug fixes
+~~~~~~~~~
+
+- Downgrade node_modules/datatables.net-buttons from 3.0.0 to 2.4.3. Fixes
+  `Issue #3552 <https://github.com/kiwitcms/Kiwi/issues/3552>`_
+
+Refactoring
+~~~~~~~~~~~
+
+- Use ``max()`` built-in function instead of an if block
+
+
+Kiwi TCMS Enterprise v13.1.1-mt
+-------------------------------
+
+- Based on Kiwi TCMS v13.1.1
+
+
+Private container images
+------------------------
+
+    ::
+
+        quay.io/kiwitcms/version            13.1.1 (aarch64)        d9bdea3736ce    27 Feb 2024     707MB
+        quay.io/kiwitcms/version            13.1.1 (x86_64)         5574cf84d49e    27 Feb 2024     696MB
+        quay.io/kiwitcms/enterprise         13.1.1-mt (aarch64)     0c6e3d1d7a05    27 Feb 2024     1.06GB
+        quay.io/kiwitcms/enterprise         13.1.1-mt (x86_64)      fe2cb1e64b75    27 Feb 2024     1.04GB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
