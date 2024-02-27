@@ -103,6 +103,125 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="bookmark" title="Permalink to Kiwi TCMS 6.9">
+                <h1 class="top-header">Kiwi TCMS 6.9</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 16 May 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 6.9!
+This is a small improvement and bug-fix update which introduces
+our first telemetry report: testing breakdown. You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+kiwitcms/kiwi       latest  a01eaeddf213    1.001 GB
+kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-8">
+<h2>Changes since Kiwi TCMS 6.8</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update mysqlclient from 1.4.2 to 1.4.2.post1</li>
+<li>Ship with prism.js so it can be used for syntax highlighting</li>
+<li>Add Testing Breakdown telemetry</li>
+<li>Mark more strings for translations</li>
+<li>Add <tt class="docutils literal">delete_user()</tt> function which can delete data across
+Postgre schemas (if kiwitcms-tenants add-on is installed)</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Remove deprecated <tt class="docutils literal">TestCaseRun.</tt> API methods. Use the new
+<tt class="docutils literal">TestExecution.</tt> methods introduced in v6.7. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/889/">Issue #889</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix typos in documentation (&#64;Prome88)</li>
+<li>Fix <tt class="docutils literal">TemplateParseError</tt> in email templates when removing test cases.
+On-delete email notification is now sent properly</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Add more tests around TestRun/TestExecution menu permissions</li>
+<li>Minor pylint fixes</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="join-us-at-openexpo-in-madrid">
+<h2>Join us at OpenExpo in Madrid</h2>
+<p>Kiwi TCMS is exhibitor at <a class="reference external" href="https://openexpoeurope.com/">OpenExpo Europe</a>
+on June 20th in Madrid. We will be hosting an info booth and 2 technical
+presentations delivered by Anton Sankov and Alex Todorov.</p>
+<p>Next week we are going to announce 100% discount tickets
+for our guests at the conference. If you are interested in coming
+<a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">subscribe to our newsletter</a>
+and don't miss the announcement!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="bookmark" title="Permalink to Kiwi TCMS 6.8">
                 <h1 class="top-header">Kiwi TCMS 6.8</h1>
             </a>
@@ -2513,108 +2632,6 @@ source code and they appear to be more fully developed. On the other hand
 while environment appears very similar to tags it is not exactly the same.
 Ongoing discussion is happening via
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/484">Issue #484</a>.</p>
-</div>
-
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/" rel="bookmark" title="Permalink to Kiwi TCMS 5.2">
-                <h1 class="top-header">Kiwi TCMS 5.2</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 07 August 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 5.2! This release
-introduces new database migrations and converts
-the Docker image to a non-root user with uid 1001. You may have to adjust
-ownership/permissions on the <tt class="docutils literal">kiwi_uploads</tt> Docker volume!</p>
-<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">6bc4e3124fd4</tt>.
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
-has also been updated!</p>
-<div class="section" id="changes-since-kiwi-tcms-5-1">
-<h2>Changes since Kiwi TCMS 5.1</h2>
-<div class="section" id="enhancements">
-<h3>Enhancements</h3>
-<ul class="simple">
-<li>Upgrade to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1/">Django 2.1</a></li>
-<li>Upgrade to <tt class="docutils literal"><span class="pre">django-report-builder</span> 6.2.2</tt>, compatible with Django 2.1</li>
-<li>Docker image now executes with uid 1001 instead of root<ul>
-<li>image based on <tt class="docutils literal">centos7</tt> image instead of <tt class="docutils literal">centos/httpd</tt></li>
-<li>image now exposes ports 8080 and 8443</li>
-<li>Apache logs now printed on Docker console</li>
-<li>SSL certificates copied to <tt class="docutils literal">/Kiwi/ssl</tt> inside Docker image instead of being bind-mounted</li>
-<li>uploads dir changed to <tt class="docutils literal">/Kiwi/uploads</tt></li>
-<li>static dir changed to <tt class="docutils literal">/Kiwi/static</tt></li>
-<li><tt class="docutils literal">/Kiwi</tt> is now owned by uid 1001</li>
-<li><tt class="docutils literal">/venv</tt> is now owned by uid 1001</li>
-<li><tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> is updated to match</li>
-</ul>
-</li>
-<li>Fix pylint errors (Ivaylo Ivanov)</li>
-<li>Allow users to see other profiles via Admin</li>
-<li>Use password change form from Admin instead of custom one</li>
-<li><tt class="docutils literal">product.py</tt> will try to import <tt class="docutils literal">local_settings.py</tt> if available in the
-same directory. This can be used to customize settings in downstream
-distributions</li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Make password reset views public</li>
-<li>Don't crash when adding new users via Admin</li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Remove <tt class="docutils literal">UserProfile</tt> model. Kiwi TCMS doesn't needs extra information
-about users so we remove this part of the application. Custom installations
-may choose to define their own profiles if they wish</li>
-<li>Remove custom <tt class="docutils literal">DBModelBackend</tt> authentication backend</li>
-<li>Remove unused <tt class="docutils literal">tcms.core.context_processors.auth_backend_processor</tt></li>
-<li>Remove unused <tt class="docutils literal">get_using_backend()</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/261">Issue #261</a></li>
-<li>Remove <tt class="docutils literal">dj_pagination</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/110">Issue #110</a></li>
-</ul>
-</div>
-<div class="section" id="settings">
-<h3>Settings</h3>
-<ul class="simple">
-<li><tt class="docutils literal">AUTHENTICATION_BACKENDS</tt> is removed</li>
-<li><tt class="docutils literal">PAGINATION_DEFAULT_PAGINATION</tt> is removed</li>
-<li>Navigation menu links are now defined in <tt class="docutils literal">MENU_ITEMS</tt> and can be redefined</li>
-</ul>
-</div>
-<div class="section" id="signals">
-<h3>Signals</h3>
-<ul class="simple">
-<li><tt class="docutils literal">USER_REGISTERED_SIGNAL</tt> now doesn't receive the <tt class="docutils literal">backend</tt> parameter</li>
-</ul>
-</div>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
 </div>
 
         </div>

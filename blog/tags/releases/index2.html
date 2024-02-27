@@ -97,6 +97,76 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2022/01/06/kiwi-tcms-enterprise-1051/" rel="bookmark" title="Permalink to Kiwi TCMS Enterprise 10.5.1">
+                <h1 class="top-header">Kiwi TCMS Enterprise 10.5.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 06 January 2022
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS Enterprise version 10.5.1!</p>
+<p><strong>IMPORTANT:</strong>
+this is a small release which contains minor improvements and bug-fixes.</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<div class="section" id="kiwi-tcms-enterprise-v10-5-1-mt">
+<h2>Kiwi TCMS Enterprise v10.5.1-mt</h2>
+<ul>
+<li><p class="first">Based on Kiwi TCMS v10.5</p>
+</li>
+<li><p class="first">Update django-python3-ldap from 0.13.0 to 0.13.1</p>
+</li>
+<li><p class="first">Update kiwitcms-github-app from 1.3.1 to 1.3.2</p>
+<blockquote>
+<p>Private images:</p>
+<pre class="literal-block">
+quay.io/kiwitcms/enterprise         10.5.1-mt       c4d745bd914c   806MB
+</pre>
+</blockquote>
+</li>
+</ul>
+<p><strong>IMPORTANT:</strong> version tagged and Enterprise
+<a class="reference external" href="/containers/">container</a> images are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then execute the commands:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker-compose pull
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Refer to
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
+for more details!</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2021/12/14/new-versions-of-automation-frameworks-plugins/" rel="bookmark" title="Permalink to New versions of automation frameworks plugins">
                 <h1 class="top-header">New versions of automation frameworks plugins</h1>
             </a>
@@ -3059,55 +3129,6 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 for more details!</p>
 <p>Happy testing!</p>
 </div>
-
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2020/05/06/robot-framework-plugin-for-kiwi-tcms/" rel="bookmark" title="Permalink to Robot Framework plugin for Kiwi TCMS">
-                <h1 class="top-header">Robot Framework plugin for Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 06 May 2020
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce the initial release of
-<a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin">kiwitcms-robotframework-plugin</a>!
-This package allows you execute your Robot Framework test suite and report the
-results into Kiwi TCMS!
-This plugin is the brain child of our Luca Valentini and Aniello Barletta and has its
-roots in the
-<a class="reference external" href="https://www.meetup.com/Robot-Framework-Milano/events/269468758/">Robot Framework Milano user-group</a>.</p>
-<p>To install:</p>
-<pre class="literal-block">
-pip install kiwitcms-robotframework-plugin
-</pre>
-<p>and then make use of it like so:</p>
-<pre class="literal-block">
-robot --listener zealand.listener.KiwiTCMS
-</pre>
-<p>The plugin needs the <tt class="docutils literal"><span class="pre">~/.tcms.conf</span></tt> configuration file:</p>
-<pre class="literal-block">
-[tcms]
-url = https://tcms.server/xml-rpc/
-username = your-username
-password = your-password
-</pre>
-<p>and you can also specify the <tt class="docutils literal">${plan_id}</tt>, <tt class="docutils literal">${product}</tt> and <tt class="docutils literal">${build_user_email}</tt> variables
-in your .robot files. If any of these are missing it will attempt to discover
-the necessary information from your environment. The exact behavior is documented
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html#plugin-configuration">here</a>.</p>
-<p>This plugin uses the upstream
-<a class="reference external" href="https://github.com/robotframework/WebDemo">robotframework/WebDemo</a> test suite
-with <tt class="docutils literal">SeleniumLibrary</tt> in a combination with a downstream test with the
-<tt class="docutils literal">OperatingSystem</tt> library. The results are reported in
-<a class="reference external" href="https://tcms.kiwitcms.org/plan/290/">TP-290</a>. For more information checkout our
-<a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin">package repository</a> on GitHub!</p>
-<p>Happy testing!</p>
 
         </div>
     </article>

@@ -1,5 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-02-26T16:45:00+02:00</updated><entry><title>Kiwi TCMS 13.1</title><link href="/blog/kiwi-tcms-team/2024/02/26/kiwi-tcms-131/" rel="alternate"></link><published>2024-02-26T16:45:00+02:00</published><updated>2024-02-26T16:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-02-26:/blog/kiwi-tcms-team/2024/02/26/kiwi-tcms-131/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.1!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-02-27T14:39:00+02:00</updated><entry><title>Kiwi TCMS 13.1.1</title><link href="/blog/kiwi-tcms-team/2024/02/27/kiwi-tcms-1311/" rel="alternate"></link><published>2024-02-27T14:39:00+02:00</published><updated>2024-02-27T14:39:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-02-27:/blog/kiwi-tcms-team/2024/02/27/kiwi-tcms-1311/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.1.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a hot-fix release for a bug introduced in v13.1!&lt;/p&gt;
+&lt;p&gt;Recommended
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;upgrade&lt;/a&gt;
+path:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+13.1 -&amp;gt; 13.1.1
+&lt;/pre&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  5574cf84d49e    696MB …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.1.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a hot-fix release for a bug introduced in v13.1!&lt;/p&gt;
+&lt;p&gt;Recommended
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;upgrade&lt;/a&gt;
+path:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+13.1 -&amp;gt; 13.1.1
+&lt;/pre&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  5574cf84d49e    696MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-13-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 13.1&lt;/h2&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Downgrade node_modules/datatables.net-buttons from 3.0.0 to 2.4.3. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3552"&gt;Issue #3552&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Use &lt;tt class="docutils literal"&gt;max()&lt;/tt&gt; built-in function instead of an if block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v13-1-1-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v13.1.1-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v13.1.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/version            13.1.1 (aarch64)        d9bdea3736ce    27 Feb 2024     707MB
+quay.io/kiwitcms/version            13.1.1 (x86_64)         5574cf84d49e    27 Feb 2024     696MB
+quay.io/kiwitcms/enterprise         13.1.1-mt (aarch64)     0c6e3d1d7a05    27 Feb 2024     1.06GB
+quay.io/kiwitcms/enterprise         13.1.1-mt (x86_64)      fe2cb1e64b75    27 Feb 2024     1.04GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS 13.1</title><link href="/blog/kiwi-tcms-team/2024/02/26/kiwi-tcms-131/" rel="alternate"></link><published>2024-02-26T16:45:00+02:00</published><updated>2024-02-26T16:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-02-26:/blog/kiwi-tcms-team/2024/02/26/kiwi-tcms-131/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.1!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 This is a small release which contains several improvements,
 new settings and API methods, bug fixes and internal refactoring!&lt;/p&gt;
