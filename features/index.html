@@ -100,11 +100,12 @@
                     <tr>
                         <th></th>
                         <th>free-beer</th>
-                        <th>Enterprise</th>
+                        <th>kiwitcms/version</th>
+                        <th>kiwitcms/enterprise</th>
                     </tr>
 
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             Available via
                         </th>
                     </tr>
@@ -116,6 +117,7 @@
                                 <i class="las la-link"></i>
                             </a>
                         </th>
+                        <td></td>
                         <td></td>
                         <td>
                             <i class="las la-check yellow"></i>
@@ -133,14 +135,21 @@
                                 <i class="las la-link"></i>
                             </a>
                         </td>
-                        <td>
-                        </td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th>
                             &nbsp;&nbsp;&nbsp;&nbsp; Red Hat Quay.io
                         </th>
                         <td></td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <i class="las la-lock" title="private repository"></i>
+                            <a href="/containers/">
+                                <i class="las la-link"></i>
+                            </a>
+                        </td>
                         <td>
                             <i class="las la-check green"></i>
                             <i class="las la-lock" title="private repository"></i>
@@ -160,6 +169,12 @@
                                 <i class="las la-link"></i>
                             </a>
                         </td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <a href="https://github.com/marketplace/kiwi-tcms/">
+                                <i class="las la-link"></i>
+                            </a>
+                        </td>
                     </tr>
                     <tr>
                         <th>
@@ -169,13 +184,19 @@
                         <td>
                             <i class="las la-check green"></i>
                             <a href="/#subscriptions">
+                                <i class="las la-dollar-sign" title="self-support"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <a href="/#subscriptions">
                                 <i class="las la-dollar-sign" title="includes hosting options"></i>
                             </a>
                         </td>
                     </tr>
 
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             Container differences
                             <a href="/containers/">
                                 <i class="las la-link"></i>
@@ -192,6 +213,9 @@
                         <td>
                             aarch64, x86_64
                         </td>
+                        <td>
+                            aarch64, x86_64
+                        </td>
                     </tr>
                     <tr>
                         <th>
@@ -201,7 +225,10 @@
                             latest
                         </td>
                         <td>
-                            any version tag
+                            <a href="/containers/">multiple, see here</a>
+                        </td>
+                        <td>
+                            <a href="/containers/">multiple, see here</a>
                         </td>
                     </tr>
 
@@ -209,6 +236,12 @@
                         <th>
                             Source code
                         </th>
+                        <td>
+                            <i class="las la-check green"></i>
+                            <a href="https://github.com/kiwitcms/Kiwi/">
+                                <i class="las la-link"></i>
+                            </a>
+                        </td>
                         <td>
                             <i class="las la-check green"></i>
                             <a href="https://github.com/kiwitcms/Kiwi/">
@@ -230,6 +263,9 @@
                             GPL-2.0
                         </td>
                         <td>
+                            GPL-2.0
+                        </td>
+                        <td>
                             GPL-3.0
                             <i class="las la-exclamation-circle" title="applies to most kiwitcms add-ons"></i>
                             <i class="las la-exclamation-circle" title="3rd party plugins may be licensed under a different OSS license"></i>
@@ -237,7 +273,7 @@
                     </tr>
 
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             Authentication methods
                         </th>
                     </tr>
@@ -245,6 +281,7 @@
                         <th>
                             &nbsp;&nbsp;&nbsp;&nbsp; Username &amp; password
                         </th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -257,6 +294,7 @@
                             </a>
                         </th>
                         <td></td>
+                        <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
@@ -267,6 +305,7 @@
                                 <i class="las la-link"></i>
                             </a>
                         </th>
+                        <td></td>
                         <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -279,9 +318,9 @@
                             </a>
                         </th>
                         <td></td>
+                        <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
-
 
                     <tr>
                         <th>
@@ -291,11 +330,12 @@
                             </a>
                         </th>
                         <td></td>
+                        <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             TestPlan
                         </th>
                     </tr>
@@ -303,9 +343,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; attachments</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; cloning</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -313,14 +355,17 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; emails</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; history</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; tags</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -328,10 +373,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; test case review</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             TestCase
                         </th>
                     </tr>
@@ -339,9 +385,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; attachments</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; cloning</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -349,9 +397,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; emails</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; history</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -359,15 +409,17 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; parameters</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; tags</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             TestRun
                         </th>
                     </tr>
@@ -375,9 +427,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; cloning</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; emails</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -385,9 +439,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; environment</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; history</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -395,9 +451,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; parameters</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; tags</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -413,10 +471,11 @@
                         </th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             TestExecution
                         </th>
                     </tr>
@@ -424,9 +483,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; comments</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; execution status</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -434,9 +495,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; history</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; hyperlinks</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -444,21 +507,23 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; parameters</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; report bug</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
-
 
                     <tr>
                         <th>Internal bug tracker</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             Bug tracker integration
 
                             <a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.issuetracker.html#module-tcms.issuetracker">
@@ -470,9 +535,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Azure Boards</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; BitBucket Issues</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -480,15 +547,18 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Bugzilla</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; GitHub Issues</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; GitHub Issues via GitHub App</th>
+                        <td></td>
                         <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -497,9 +567,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; GitLab Issues</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; JIRA</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -507,19 +579,23 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Kiwi TCMS (integrated bug tracker)</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Mantis BT</th>
+                        <td></td>
                         <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; OpenProject</th>
                         <td></td>
+                        <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Redmine</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -530,10 +606,12 @@
                             </a>
                         </th>
                         <td></td>
+                        <td></td>
                         <td><i class="las la-spinner"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; 1-click bug report</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -541,14 +619,17 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; automatic bug update</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; show bug info from BT</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; customizable integration with BT</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -560,6 +641,7 @@
                             </a>
                         </th>
                         <td></td>
+                        <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
 
@@ -567,11 +649,11 @@
                         <th>Manual testing</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
-
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             <!-- WHEN UPDATING THIS SECTION MAKE SURE IT MATCHES DOCUMENTATION -->
 
                             Automation plugins
@@ -584,9 +666,11 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Django</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; JUnit 5</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -594,14 +678,17 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; junit.xml</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; PHPUnit</th>
-                        <td><i class="las la-spinner"></i></td>
-                        <td><i class="las la-spinner"></i></td>
+                        <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; py.test</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -609,14 +696,17 @@
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Robot Framework</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Test Anything Protocol</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; TestNG</th>
+                        <td><i class="las la-spinner"></i></td>
                         <td><i class="las la-spinner"></i></td>
                         <td><i class="las la-spinner"></i></td>
                     </tr>
@@ -625,11 +715,12 @@
                         <th>Telemetry aka reports</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
 
                     <tr>
-                        <th colspan="3">
+                        <th colspan="4">
                             Database engine
                             <a href="https://docs.djangoproject.com/en/3.2/ref/databases/">
                                 <i class="las la-link"></i>
@@ -639,6 +730,7 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; MariaDB >= 10.2.2</th>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-times red"></i></td>
                     </tr>
                     <tr>
@@ -647,10 +739,12 @@
                             <i class="las la-exclamation-circle" title="running without ONLY_FULL_GROUP_BY"></i>
                         </th>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-times red"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; PostgreSQL</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td>
                             <i class="las la-check green"></i>
@@ -660,6 +754,7 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; SQLite</th>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-times red"></i></td>
                     </tr>
 
@@ -667,6 +762,9 @@
                         <th>
                             HTTPS engine
                         </th>
+                        <td>
+                            NGINX
+                        </td>
                         <td>
                             NGINX
                         </td>
@@ -680,6 +778,7 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; embedded Lua support</th>
                         <td></td>
+                        <td></td>
                         <td>
                             <i class="las la-check green"></i>
                             <a href="https://github.com/openresty/lua-nginx-module">
@@ -690,10 +789,12 @@
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; control via ENV variables</th>
                         <td></td>
+                        <td></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
                     <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp; Let's Encrypt integration</th>
+                        <td></td>
                         <td></td>
                         <td>
                             <i class="las la-check green"></i>
@@ -707,6 +808,7 @@
                         <th>API</th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -716,6 +818,7 @@
                                 <i class="las la-link"></i>
                             </a>
                         </th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -730,10 +833,12 @@
                         </th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
                         <th>Responsive design</th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
@@ -747,6 +852,7 @@
                         </th>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
+                        <td><i class="las la-check green"></i></td>
                     </tr>
 
                     <tr>
@@ -756,6 +862,7 @@
                                 <i class="las la-link" title="see translation guide"></i>
                             </a>
                         </th>
+                        <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                         <td><i class="las la-check green"></i></td>
                     </tr>
