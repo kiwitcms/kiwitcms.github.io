@@ -23,6 +23,7 @@ where the whole community can help you and benefit from the solutions provided.*
 Customers with an active subscription:
 
 - **Email:** `kiwitcms-@-mrsenko.com`
+- *Support language*: English
 - *Working hours*: Depending on [subscription type](/#subscriptions)
 - *Response time*: Depending on [subscription type](/#subscriptions)
-- *Requests must include your email/GitHub username used in the subscription*
+- *Requests must include your email/GitHub username used as part of the subscription*
