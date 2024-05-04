@@ -103,6 +103,155 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2024/05/04/kiwi-tcms-132/" rel="bookmark" title="Permalink to Kiwi TCMS 13.2">
+                <h1 class="top-header">Kiwi TCMS 13.2</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sat 04 May 2024
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 13.2!</p>
+<p><strong>IMPORTANT:</strong>
+This is a small release which contains several improvements,
+internal refactoring and updated translations!</p>
+<p>Recommended
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
+path:</p>
+<pre class="literal-block">
+13.1.1 -&gt; 13.2
+</pre>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Upstream container images (x86_64):</p>
+<pre class="literal-block">
+kiwitcms/kiwi   latest  6cb7c6d669a2    681MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-13-1-1">
+<h2>Changes since Kiwi TCMS 13.1.1</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 4.2.10 to 4.2.11</li>
+<li>Update django-grappelli from 3.0.8 to 4.0.1</li>
+<li>Update django-modern-rpc from 1.0.2 to 1.0.3</li>
+<li>Update django-tree-queries from 0.16.1 to 0.19.0</li>
+<li>Update jira from 3.6.0 to 3.8.0</li>
+<li>Update markdown from 3.5.2 to 3.6</li>
+<li>Update python-redmine from 2.4.0 to 2.5.0</li>
+<li>Update uwsgi from 2.0.24 to 2.0.25.1</li>
+<li>Update node_modules/pdfmake from 0.2.9 to 0.2.10</li>
+<li>Update node_modules/es5-ext from 0.10.62 to 0.10.63</li>
+<li>Update documentation with better installation instructions when using Docker</li>
+<li>Remove multiple inline <tt class="docutils literal">style=</tt> HTML attributes</li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li>Don't send outgoing emails to addresses which fail validation, including
+custom validation configured via the <tt class="docutils literal">EMAIL_VALIDATORS</tt> setting. For
+example if there are blacklisted addresses Kiwi TCMS will not send messages
+to them anymore</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update black from 23.12.1 to 24.4.2</li>
+<li>Update selenium from 4.9.1 to 4.20.0</li>
+<li>Update node_modules/eslint from 8.56.0 to 8.57.0</li>
+<li>Update nodemodules/webpack from 5.90.3 to 5.91.0</li>
+<li>Remove unused <tt class="docutils literal">has_permissions_to_modify()</tt></li>
+<li>Do not execute Docker image tests as root</li>
+<li>Add tests for file upload via browser UI</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sq#">Albanian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ko#">Korean translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#">Portuguese, Brazilian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/tr#">Turkish translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v13-2-mt">
+<h2>Kiwi TCMS Enterprise v13.2-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v13.2</li>
+<li>Update certbot from 2.9.0 to 2.10.0</li>
+<li>Upgrade certbot-dns-* plugins from 2.9.0 to 2.10.0</li>
+<li>Update django-python3-ldap from 0.15.5 to 0.15.6</li>
+<li>Update django-ses from 3.5.2 to 4.0.0</li>
+<li>Update kiwitcms-tenants from 2.6.0 to 2.8.3</li>
+<li>Update sentry-sdk from 1.40.5 to 2.0.1</li>
+<li>Update social-auth-app-django from 5.4.0 to 5.4.1</li>
+<li>Update documentation related to production deployments</li>
+<li>Add test for file uploads via browser UI</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+quay.io/kiwitcms/version            13.2 (aarch64)          e596cef147cc    04 May 2024     693MB
+quay.io/kiwitcms/version            13.2 (x86_64)           6cb7c6d669a2    04 May 2024     681MB
+quay.io/kiwitcms/enterprise         13.2-mt (aarch64)       ab6d8f2039b4    04 May 2024     1.06GB
+quay.io/kiwitcms/enterprise         13.2-mt (x86_64)        a6938623851d    04 May 2024     1.04GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="saas-changes-since-v13-1-1">
+<h2>SaaS changes since v13.1.1</h2>
+<p>Applies to any digital property under <tt class="docutils literal">*.tenant.kiwitcms.org</tt>!</p>
+<ul class="simple">
+<li><tt class="docutils literal">&#64;hotmail</tt> email addresses are blacklisted</li>
+<li>email addresses on all <tt class="docutils literal">.ru</tt> domains are blacklisted</li>
+<li>Existing accounts whose email addresses have been blacklisted will continue
+to be active, however they will not receive any email communication.
+<strong>This includes confirmation and password reset messages!</strong> Users are advised
+to update their accounts with a different address!</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2024/02/27/kiwi-tcms-1311/" rel="bookmark" title="Permalink to Kiwi TCMS 13.1.1">
                 <h1 class="top-header">Kiwi TCMS 13.1.1</h1>
             </a>
@@ -2638,67 +2787,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2022/11/08/call-for-participation-testing-and-automation-devroom-fosdem23/" rel="bookmark" title="Permalink to Call for participation: Testing and Automation devroom, FOSDEM'23">
-                <h1 class="top-header">Call for participation: Testing and Automation devroom, FOSDEM'23</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 08 November 2022
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="&quot;Cfp banner&quot;" src="/images/fosdem/2023/banner.png" title="Cfp banner"></p>
-<p>Attention testers! On behalf of
-<a href="https://fosdem-testingautomation.github.io/"><em>Testing and Automation devroom</em></a>
-we'd like to announce that call for participation is now open.</p>
-<p><strong>Important:</strong> devroom will take place 09:00 to 12:50, Sunday, February 5th 2023 at
-<a href="https://fosdem.org/2023/practical/transportation/">ULB Solbosch Campus, Brussels, Belgium</a>!
-Presentations will be streamed online but all accepted speakers are required to deliver
-their talks in person! The devroom will not host pre-recorded videos in 2023!</p>
-<p>Here are some ideas for topics that are a good fit for this devroom:</p>
-<p>Testing in the real, open source world</p>
-<ul>
-<li>War stories/strategies for testing large scale or complex projects</li>
-<li>Demystify resource e.g. systems/device/cloud provisioning in a CI loop</li>
-<li>Tools that extend the ability to test low-level code, e.g. bootloaders, init
-systems, etc.</li>
-<li>Projects that are introducing new/interesting ways of testing "systems"</li>
-<li>Address the automated testing frameworks fragmentation</li>
-<li>Lessons learned from testing</li>
-</ul>
-<p>Cool Tools (good candidates for lightning talks)</p>
-<ul>
-<li>How your open source tool made developing quality software better</li>
-<li>What tools do you use to setup your CI/CD</li>
-<li>Combining projects/plugins/tools to build amazing things "Not enough people in
-the open source community know how to use $X, but here's a tutorial on how to
-use $X to make your project better."</li>
-</ul>
-<p>In the past the devroom has seen both newbies/students and experienced professionals and
-past speakers as part of the audience and talks covering from beginner/practical
-to advanced/abstract topics. If you have doubts then submit your proposal and
-leave a comment for the devroom managers and we'll get back to you.</p>
-<p>Checkout
-<a href="https://fosdem-testingautomation.github.io/">https://fosdem-testingautomation.github.io/</a> for more information!</p>
-<p>Happy Testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
-</ul>
         </div>
     </article>
 
