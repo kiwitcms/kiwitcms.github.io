@@ -1,0 +1,154 @@
+Kiwi TCMS 13.2
+##############
+
+:headline: small release with several improvements
+:date: 2024-05-04 13:30
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 13.2!
+
+**IMPORTANT:**
+This is a small release which contains several improvements,
+internal refactoring and updated translations!
+
+Recommended
+`upgrade <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+path::
+
+    13.1.1 -> 13.2
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  6cb7c6d669a2    681MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 13.1.1
+------------------------------
+
+Improvements
+~~~~~~~~~~~~
+
+- Update Django from 4.2.10 to 4.2.11
+- Update django-grappelli from 3.0.8 to 4.0.1
+- Update django-modern-rpc from 1.0.2 to 1.0.3
+- Update django-tree-queries from 0.16.1 to 0.19.0
+- Update jira from 3.6.0 to 3.8.0
+- Update markdown from 3.5.2 to 3.6
+- Update python-redmine from 2.4.0 to 2.5.0
+- Update uwsgi from 2.0.24 to 2.0.25.1
+- Update node_modules/pdfmake from 0.2.9 to 0.2.10
+- Update node_modules/es5-ext from 0.10.62 to 0.10.63
+- Update documentation with better installation instructions when using Docker
+- Remove multiple inline ``style=`` HTML attributes
+
+
+Settings
+~~~~~~~~
+
+- Don't send outgoing emails to addresses which fail validation, including
+  custom validation configured via the ``EMAIL_VALIDATORS`` setting. For
+  example if there are blacklisted addresses Kiwi TCMS will not send messages
+  to them anymore
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update black from 23.12.1 to 24.4.2
+- Update selenium from 4.9.1 to 4.20.0
+- Update node_modules/eslint from 8.56.0 to 8.57.0
+- Update nodemodules/webpack from 5.90.3 to 5.91.0
+- Remove unused ``has_permissions_to_modify()``
+- Do not execute Docker image tests as root
+- Add tests for file upload via browser UI
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Albanian translation <https://crowdin.com/project/kiwitcms/sq#>`_
+- Updated `Korean translation <https://crowdin.com/project/kiwitcms/ko#>`_
+- Updated `Portuguese, Brazilian translation <https://crowdin.com/project/kiwitcms/pt-BR#>`_
+- Updated `Turkish translation <https://crowdin.com/project/kiwitcms/tr#>`_
+
+
+
+Kiwi TCMS Enterprise v13.2-mt
+-----------------------------
+
+- Based on Kiwi TCMS v13.2
+- Update certbot from 2.9.0 to 2.10.0
+- Upgrade certbot-dns-* plugins from 2.9.0 to 2.10.0
+- Update django-python3-ldap from 0.15.5 to 0.15.6
+- Update django-ses from 3.5.2 to 4.0.0
+- Update kiwitcms-tenants from 2.6.0 to 2.8.3
+- Update sentry-sdk from 1.40.5 to 2.0.1
+- Update social-auth-app-django from 5.4.0 to 5.4.1
+- Update documentation related to production deployments
+- Add test for file uploads via browser UI
+
+
+Private container images
+------------------------
+
+    ::
+
+        quay.io/kiwitcms/version            13.2 (aarch64)          e596cef147cc    04 May 2024     693MB
+        quay.io/kiwitcms/version            13.2 (x86_64)           6cb7c6d669a2    04 May 2024     681MB
+        quay.io/kiwitcms/enterprise         13.2-mt (aarch64)       ab6d8f2039b4    04 May 2024     1.06GB
+        quay.io/kiwitcms/enterprise         13.2-mt (x86_64)        a6938623851d    04 May 2024     1.04GB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+SaaS changes since v13.1.1
+--------------------------
+
+Applies to any digital property under ``*.tenant.kiwitcms.org``!
+
+- ``@hotmail`` email addresses are blacklisted
+- email addresses on all ``.ru`` domains are blacklisted
+- Existing accounts whose email addresses have been blacklisted will continue
+  to be active, however they will not receive any email communication.
+  **This includes confirmation and password reset messages!** Users are advised
+  to update their accounts with a different address!
+
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
