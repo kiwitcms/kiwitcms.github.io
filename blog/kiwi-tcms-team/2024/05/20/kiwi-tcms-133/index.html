@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS 13.3</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+
+        <meta name="description" content="several improvements, bug fixes and updated translations" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="tags" content="releases" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS 13.3">
+            <meta name="twitter:description" content="several improvements, bug fixes and updated translations">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2024/05/20/kiwi-tcms-133/" />
+        <meta property="og:title" content="Kiwi TCMS 13.3" />
+        <meta property="article:published_time" content="2024-05-20 16:15:00+03:00">
+            <meta property="og:description" content="several improvements, bug fixes and updated translations">
+
+            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
+        <!-- Custom Styles -->
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
+
+        <script defer data-domain="kiwitcms.org" src="https://plausible.io/js/script.js"></script>
+
+        <script
+            id="fsc-api"
+            src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.5/fastspring-builder.min.js"
+            type="text/javascript"
+            data-storefront="mrsenko.onfastspring.com/popup-kiwitcms">
+        </script>
+    </head>
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            </a>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#subscriptions">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- content -->
+    <section id="blog-article">
+        <h1 class="top-header">Kiwi TCMS 13.3</h1>
+        <h2 class="top-subheader">several improvements, bug fixes and updated translations</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Mon 20 May 2024
+                under
+                    <a href="https://kiwitcms.org/blog/tags/releases/">releases</a>
+        </p>
+
+        <article class="content">
+            <p>We're happy to announce Kiwi TCMS version 13.3!</p>
+<p><strong>IMPORTANT:</strong>
+This is a small release which contains several improvements, bug fixes,
+internal refactoring and updated translations!</p>
+<p>Recommended
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
+path:</p>
+<pre class="literal-block">
+13.2 -&gt; 13.3
+</pre>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Upstream container images (x86_64):</p>
+<pre class="literal-block">
+kiwitcms/kiwi   latest  c43a47e388ab    675MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-13-2">
+<h2>Changes since Kiwi TCMS 13.2</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 4.2.11 to 4.2.12</li>
+<li>Update psycopg from 3.1.18 to 3.1.19</li>
+<li>Update PyGithub from 1.58.2 to 2.3.0</li>
+<li>Update pygments from 2.17.2 to 2.18.0</li>
+<li>Update python-gitlab from 4.4.0 to 4.5.0</li>
+<li>Replace more inline <tt class="docutils literal">style=</tt> HTML attributes with CSS classes</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Truncate <tt class="docutils literal">TestCase.text</tt> length for Jira 1-click bug reports to avoid
+400, 414 and/or 500 errors! Text will be truncated to 30k chars for automated
+POST requests and 6k chars for fallback GET requests to fit inside Jira
+limitations</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Remove double slash in Jira fallback URL</li>
+<li>Stop using the <tt class="docutils literal">Github(login_or_token)</tt> argument b/c it is deprecated</li>
+<li>Update selenium from 4.20.0 to 4.21.0</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v13-3-mt">
+<h2>Kiwi TCMS Enterprise v13.3-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v13.3</li>
+<li>Update kiwitcms-github-app from 1.6.0 to 1.7.0</li>
+<li>Update sentry-sdk from 2.0.1 to 2.2.0</li>
+<li>Preserve <tt class="docutils literal">/static/ca.crt</tt> file inside the container</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+quay.io/kiwitcms/version            13.3 (aarch64)          0f9f70835859    20 May 2024     686MB
+quay.io/kiwitcms/version            13.3 (x86_64)           c43a47e388ab    20 May 2024     675MB
+quay.io/kiwitcms/enterprise         13.3-mt (aarch64)       40d0769bc640    20 May 2024     1.05GB
+quay.io/kiwitcms/enterprise         13.3-mt (x86_64)        ea3d8e8999f4    20 May 2024     1.03GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </article>
+    </section>
+
+    <section class="after-content">
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
+
+    <section class="after-content">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2024/05/20/kiwi-tcms-133/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2024/05/20/kiwi-tcms-133/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <div class="legal">
+                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p><a href="/legal/">Legal information</a></p>
+            </div>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Join</h3>
+                <a href="https://www.reddit.com/r/KiwiTCMS/">r/KiwiTCMS</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
+
+    </body>
+</html>

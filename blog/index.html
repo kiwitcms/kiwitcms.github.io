@@ -97,6 +97,125 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2024/05/20/kiwi-tcms-133/" rel="bookmark" title="Permalink to Kiwi TCMS 13.3">
+                <h1 class="top-header">Kiwi TCMS 13.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Mon 20 May 2024
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 13.3!</p>
+<p><strong>IMPORTANT:</strong>
+This is a small release which contains several improvements, bug fixes,
+internal refactoring and updated translations!</p>
+<p>Recommended
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
+path:</p>
+<pre class="literal-block">
+13.2 -&gt; 13.3
+</pre>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Upstream container images (x86_64):</p>
+<pre class="literal-block">
+kiwitcms/kiwi   latest  c43a47e388ab    675MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-13-2">
+<h2>Changes since Kiwi TCMS 13.2</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 4.2.11 to 4.2.12</li>
+<li>Update psycopg from 3.1.18 to 3.1.19</li>
+<li>Update PyGithub from 1.58.2 to 2.3.0</li>
+<li>Update pygments from 2.17.2 to 2.18.0</li>
+<li>Update python-gitlab from 4.4.0 to 4.5.0</li>
+<li>Replace more inline <tt class="docutils literal">style=</tt> HTML attributes with CSS classes</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Truncate <tt class="docutils literal">TestCase.text</tt> length for Jira 1-click bug reports to avoid
+400, 414 and/or 500 errors! Text will be truncated to 30k chars for automated
+POST requests and 6k chars for fallback GET requests to fit inside Jira
+limitations</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Remove double slash in Jira fallback URL</li>
+<li>Stop using the <tt class="docutils literal">Github(login_or_token)</tt> argument b/c it is deprecated</li>
+<li>Update selenium from 4.20.0 to 4.21.0</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v13-3-mt">
+<h2>Kiwi TCMS Enterprise v13.3-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v13.3</li>
+<li>Update kiwitcms-github-app from 1.6.0 to 1.7.0</li>
+<li>Update sentry-sdk from 2.0.1 to 2.2.0</li>
+<li>Preserve <tt class="docutils literal">/static/ca.crt</tt> file inside the container</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+quay.io/kiwitcms/version            13.3 (aarch64)          0f9f70835859    20 May 2024     686MB
+quay.io/kiwitcms/version            13.3 (x86_64)           c43a47e388ab    20 May 2024     675MB
+quay.io/kiwitcms/enterprise         13.3-mt (aarch64)       40d0769bc640    20 May 2024     1.05GB
+quay.io/kiwitcms/enterprise         13.3-mt (x86_64)        ea3d8e8999f4    20 May 2024     1.03GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2024/05/04/kiwi-tcms-132/" rel="bookmark" title="Permalink to Kiwi TCMS 13.2">
                 <h1 class="top-header">Kiwi TCMS 13.2</h1>
             </a>
@@ -2615,48 +2734,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2022/12/23/program-for-testing-and-automation-devroom-fosdem23/" rel="bookmark" title="Permalink to Program for Testing and Automation devroom, FOSDEM'23">
-                <h1 class="top-header">Program for Testing and Automation devroom, FOSDEM'23</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 23 December 2022
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="&quot;Devroom banner&quot;" src="/images/fosdem/2023/banner.png" title="Devroom banner"></p>
-<p>Attention testers! On behalf of
-<a href="https://fosdem.org/2023/schedule/track/testing_and_automation/"><em>Testing and Automation devroom</em></a>
-we'd like to announce that the final program for the devroom is ready!</p>
-<p>We received over 30 submissions this year and the entire collection of topics was extremely good.
-During FOSDEM we are going to see topics around functional testing for the Linux kernel,
-growing testing infrastructure for Linux, testing of new networking protocols, observability-driven
-development, the testing history behind the GNOME desktop environment, property-based testing
-and mutation testing.</p>
-<p><strong>Important:</strong> devroom will take place 09:00 to 12:50, Sunday, February 5th 2023 at
-<a href="https://fosdem.org/2023/practical/transportation/">ULB Solbosch Campus, Brussels, Belgium</a>.</p>
-<p>If you are around don't forget to check-out our friends from the
-<a href="https://fosdem.org/2023/schedule/track/continuous_integration_and_continuous_deployment/">Continuous Integration and Continuous Deployment devroom</a>
-on Saturday, February 4th 2023!</p>
-<p>See you there and happy testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
-</ul>
         </div>
     </article>
 
