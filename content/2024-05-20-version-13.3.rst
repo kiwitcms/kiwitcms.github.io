@@ -1,0 +1,123 @@
+Kiwi TCMS 13.3
+##############
+
+:headline: several improvements, bug fixes and updated translations
+:date: 2024-05-20 16:15
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 13.3!
+
+**IMPORTANT:**
+This is a small release which contains several improvements, bug fixes,
+internal refactoring and updated translations!
+
+Recommended
+`upgrade <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+path::
+
+    13.2 -> 13.3
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  c43a47e388ab    675MB
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 13.2
+----------------------------
+
+Improvements
+~~~~~~~~~~~~
+
+- Update Django from 4.2.11 to 4.2.12
+- Update psycopg from 3.1.18 to 3.1.19
+- Update PyGithub from 1.58.2 to 2.3.0
+- Update pygments from 2.17.2 to 2.18.0
+- Update python-gitlab from 4.4.0 to 4.5.0
+- Replace more inline ``style=`` HTML attributes with CSS classes
+
+
+Bug fixes
+~~~~~~~~~
+
+- Truncate ``TestCase.text`` length for Jira 1-click bug reports to avoid
+  400, 414 and/or 500 errors! Text will be truncated to 30k chars for automated
+  POST requests and 6k chars for fallback GET requests to fit inside Jira
+  limitations
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Remove double slash in Jira fallback URL
+- Stop using the ``Github(login_or_token)`` argument b/c it is deprecated
+- Update selenium from 4.20.0 to 4.21.0
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Chinese Simplified translation <https://crowdin.com/project/kiwitcms/zh-CN#>`_
+- Updated `Chinese Traditional translation <https://crowdin.com/project/kiwitcms/zh-TW#>`_
+
+
+
+Kiwi TCMS Enterprise v13.3-mt
+-----------------------------
+
+- Based on Kiwi TCMS v13.3
+- Update kiwitcms-github-app from 1.6.0 to 1.7.0
+- Update sentry-sdk from 2.0.1 to 2.2.0
+- Preserve ``/static/ca.crt`` file inside the container
+
+
+
+Private container images
+------------------------
+
+    ::
+
+        quay.io/kiwitcms/version            13.3 (aarch64)          0f9f70835859    20 May 2024     686MB
+        quay.io/kiwitcms/version            13.3 (x86_64)           c43a47e388ab    20 May 2024     675MB
+        quay.io/kiwitcms/enterprise         13.3-mt (aarch64)       40d0769bc640    20 May 2024     1.05GB
+        quay.io/kiwitcms/enterprise         13.3-mt (x86_64)        ea3d8e8999f4    20 May 2024     1.03GB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
