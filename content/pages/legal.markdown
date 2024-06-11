@@ -58,4 +58,5 @@ top pages, visit duration, information from the devices
 (device type, operating system, country and browser) used during the visit.
 Read more in the Plausible Analytics [Data Policy](https://plausible.io/data-policy)
 and [our blog]({filename}../2024-02-23-anonymous-analytics.markdown).
-Check-out the Plausible Analytics dashboard: [kiwitcms.org](https://plausible.io/kiwitcms.org)!
+Check-out the Plausible Analytics dashboard for [kiwitcms.org](https://plausible.io/kiwitcms.org)
+and [kiwitcms-container](https://plausible.io/kiwitcms-container)!
