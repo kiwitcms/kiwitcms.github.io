@@ -1,0 +1,126 @@
+Kiwi TCMS 13.4
+##############
+
+:headline: several improvements and updated translations
+:date: 2024-06-12 17:00
+:comments: true
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 13.4!
+
+**IMPORTANT:**
+This is a small release which contains several improvements,
+internal refactoring and updated translations!
+
+Recommended
+`upgrade <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+path::
+
+    13.3 -> 13.4
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Upstream container images (x86_64)::
+
+        kiwitcms/kiwi   latest  16bf67e2fc1f    674MB
+
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 13.3
+----------------------------
+
+Improvements
+~~~~~~~~~~~~
+
+- Update Django from 4.2.12 to 4.2.13
+- Update django-simple-history from 3.5.0 to 3.7.0
+- Update python-gitlab from 4.5.0 to 4.6.0
+- Update uwsgi from 2.0.25.1 to 2.0.26
+- Update node_modules/html5sortable from 0.13.3 to 0.14.0
+- Remove cron job for anonymous analytics
+- Remove anonymous analytics from ``/admin/`` pages
+- Replace inline HTML attributes with CSS classes
+- Make it possible for Kiwi TCMS plugins to provide markdown extensions
+
+
+Refactoring
+~~~~~~~~~~~
+
+- Remove django-debug-toolbar as a development dependency
+- Update node_modules/eslint-plugin-promise from 6.1.1 to 6.2.0
+- Update node_modules/webpack from 5.91.0 to 5.92.0
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Chinese Traditional translation <https://crowdin.com/project/kiwitcms/zh-TW#>`_
+- Updated `Korean translation <https://crowdin.com/project/kiwitcms/ko#>`_
+
+
+
+Kiwi TCMS Enterprise v13.4-mt
+-----------------------------
+
+- Based on Kiwi TCMS v13.4
+- Relicense this source code under GNU Affero General Public License v3 or later
+- Prior versions are still licensed under GNU General Public License v3
+- Support Mermaid.js syntax in Markdown fenced code blocks. Closes
+  `Issue #3116 <https://github.com/kiwitcms/Kiwi/issues/3116>`_
+- Update certbot from 2.10.0 to 2.11.0
+- Update certbot-dns-* plugins from 2.10.0 to 2.11.0
+- Update django-ses from 4.0.0 to 4.1.0
+- Update dj-database-url from 2.1.0 to 2.2.0
+- Update kiwitcms-github-app from 1.7.0 to 2.0.0
+- Update kiwitcms-tenants from 2.8.3 to 3.0.0
+- Update sentry-sdk from 2.2.0 to 2.5.1
+
+
+
+Private container images
+------------------------
+
+    ::
+
+        quay.io/kiwitcms/version            13.4 (aarch64)          d4aaf8b83d66    12 Jun 2024     686MB
+        quay.io/kiwitcms/version            13.4 (x86_64)           16bf67e2fc1f    12 Jun 2024     674MB
+        quay.io/kiwitcms/enterprise         13.4-mt (aarch64)       c070b5cdf01b    12 Jun 2024     1.05GB
+        quay.io/kiwitcms/enterprise         13.4-mt (x86_64)        c3a1059e1884    12 Jun 2024     1.03GB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+`Backup <{filename}2018-07-30-docker-backup.markdown>`_ first!
+Then follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
