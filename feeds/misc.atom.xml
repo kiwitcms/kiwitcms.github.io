@@ -1,5 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2024-06-11T15:35:00+03:00</updated><entry><title>Anonymous analytics for kiwitcms-container</title><link href="/blog/kiwi-tcms-team/2024/06/11/anonymous-analytics-for-kiwitcms-container/" rel="alternate"></link><published>2024-06-11T15:35:00+03:00</published><updated>2024-06-11T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-06-11:/blog/kiwi-tcms-team/2024/06/11/anonymous-analytics-for-kiwitcms-container/</id><summary type="html">&lt;p&gt;Several months ago we've announced
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2024-06-12T17:00:00+03:00</updated><entry><title>Kiwi TCMS 13.4</title><link href="/blog/kiwi-tcms-team/2024/06/12/kiwi-tcms-134/" rel="alternate"></link><published>2024-06-12T17:00:00+03:00</published><updated>2024-06-12T17:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-06-12:/blog/kiwi-tcms-team/2024/06/12/kiwi-tcms-134/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.4!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a small release which contains several improvements,
+internal refactoring and updated translations!&lt;/p&gt;
+&lt;p&gt;Recommended
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;upgrade&lt;/a&gt;
+path:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+13.3 -&amp;gt; 13.4
+&lt;/pre&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  16bf67e2fc1f    674MB …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.4!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+This is a small release which contains several improvements,
+internal refactoring and updated translations!&lt;/p&gt;
+&lt;p&gt;Recommended
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;upgrade&lt;/a&gt;
+path:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+13.3 -&amp;gt; 13.4
+&lt;/pre&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  16bf67e2fc1f    674MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-13-3"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 13.3&lt;/h2&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 4.2.12 to 4.2.13&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 3.5.0 to 3.7.0&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 4.5.0 to 4.6.0&lt;/li&gt;
+&lt;li&gt;Update uwsgi from 2.0.25.1 to 2.0.26&lt;/li&gt;
+&lt;li&gt;Update node_modules/html5sortable from 0.13.3 to 0.14.0&lt;/li&gt;
+&lt;li&gt;Remove cron job for anonymous analytics&lt;/li&gt;
+&lt;li&gt;Remove anonymous analytics from &lt;tt class="docutils literal"&gt;/admin/&lt;/tt&gt; pages&lt;/li&gt;
+&lt;li&gt;Replace inline HTML attributes with CSS classes&lt;/li&gt;
+&lt;li&gt;Make it possible for Kiwi TCMS plugins to provide markdown extensions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring"&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove django-debug-toolbar as a development dependency&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint-plugin-promise from 6.1.1 to 6.2.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.91.0 to 5.92.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ko#"&gt;Korean translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v13-4-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v13.4-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v13.4&lt;/li&gt;
+&lt;li&gt;Relicense this source code under GNU Affero General Public License v3 or later&lt;/li&gt;
+&lt;li&gt;Prior versions are still licensed under GNU General Public License v3&lt;/li&gt;
+&lt;li&gt;Support Mermaid.js syntax in Markdown fenced code blocks. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3116"&gt;Issue #3116&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update certbot from 2.10.0 to 2.11.0&lt;/li&gt;
+&lt;li&gt;Update certbot-dns-* plugins from 2.10.0 to 2.11.0&lt;/li&gt;
+&lt;li&gt;Update django-ses from 4.0.0 to 4.1.0&lt;/li&gt;
+&lt;li&gt;Update dj-database-url from 2.1.0 to 2.2.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-github-app from 1.7.0 to 2.0.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 2.8.3 to 3.0.0&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk from 2.2.0 to 2.5.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/version            13.4 (aarch64)          d4aaf8b83d66    12 Jun 2024     686MB
+quay.io/kiwitcms/version            13.4 (x86_64)           16bf67e2fc1f    12 Jun 2024     674MB
+quay.io/kiwitcms/enterprise         13.4-mt (aarch64)       c070b5cdf01b    12 Jun 2024     1.05GB
+quay.io/kiwitcms/enterprise         13.4-mt (x86_64)        c3a1059e1884    12 Jun 2024     1.03GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Anonymous analytics for kiwitcms-container</title><link href="/blog/kiwi-tcms-team/2024/06/11/anonymous-analytics-for-kiwitcms-container/" rel="alternate"></link><published>2024-06-11T15:35:00+03:00</published><updated>2024-06-11T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-06-11:/blog/kiwi-tcms-team/2024/06/11/anonymous-analytics-for-kiwitcms-container/</id><summary type="html">&lt;p&gt;Several months ago we've announced
 &lt;a href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/"&gt;the collection of anonymous analytics&lt;/a&gt;
 from Kiwi TCMS with the analytics dashboard for this website being immediately
 accessible via &lt;a href="https://plausible.io/kiwitcms.org"&gt;https://plausible.io/kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
