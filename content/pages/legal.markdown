@@ -14,33 +14,42 @@ Kiwi TCMS source code is developed by a
 Community donations are collected via
 [Open Collective](https://opencollective.com/kiwitcms).
 
-Project infrastructure, development and support services provided by:
+Project infrastructure, development, data processing and support services provided by:
 
 * Company name: Open Technologies Bulgaria, Ltd;
-* Address: Cherkovna 80, Sofia 1505, Bulgaria
+* Address: Cherkovna 80 str., Sofia 1505, Bulgaria
 * Registration number: 200601818
 * VAT number: BG200601818
 * Domain names: [kiwitcms.eu](http://kiwitcms.eu),
                 [kiwitcms.org](http://kiwitcms.org),
                 [mrsenko.com](http://mrsenko.com/),
-                [otb.bg](http://otb.bg)
+                [otb.bg](http://otb.bg),
+                [public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org)
 
 Privacy policy
 ==============
 
-Public Tenant data is shared between all public accounts and is intended for
-demonstrational purposes. Everyone has the same read/write/delete access to
-everything except other user's profiles!
-There are no guarantees or SLA for Public Tenant.
+For the purposes of passwordless login via GitHub, GitLab, Google, etc, Kiwi TCMS is
+requesting the following data: **your name**, **email address**. This information
+is stored in our database and is linked to your Kiwi TCMS account which let's you
+login into the Kiwi TCMS application. User account information is accessible only
+to the administrators of Kiwi TCMS and is not publicly exposed to 3rd parties.
 
-Public Tenant accounts and all of their data are removed after 90 days of
+Data, other than user accounts, stored on the so called *Public Tenant*,
+aka *public.tenant.kiwitcms.org*,
+is visible to all application users and is intended for demonstrational purposes.
+Everyone has the same read/write/delete access to everything except other users' profiles!
+There are no guarantees or SLA for *Public Tenant*.
+
+*Public Tenant* accounts and all of their data are removed after 30 days of
 inactivity. This applies to users who have not logged in during that period
 and users who never confirmed their accounts!
 
-FREE Public Tenant and Private Tenant accounts and all of their data
-are removed within 30 days of cancelling their subscription.
+*Private Tenant* and all of their data are removed within 45 days after
+their subscription expiration.
 
-Account info is not shared with 3rd parties!
+Your user profile information is not shared with 3rd parties!
+
 
 Anonymous analytics
 ===================
