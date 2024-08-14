@@ -50,7 +50,9 @@ issue tracker configurations with their own API credentials. Here's how it works
 !["Navigate to Personal API tokens in Kiwi TCMS"](/images/features/personal-api-tokens/step_008.png "Navigate to Personal API tokens in Kiwi TCMS")
 
 
-* Select an existing Issue Tracker via its URL and fill-in your credentials. For JIRA
+* Select an existing Issue Tracker via its URL and fill-in your credentials. The drop-down choices
+  represent all Issue Tracker records accessible to the current user across all tenants they are
+  authorized for! For JIRA
   `api_username` is your JIRA email and `api_password` is your JIRA API token.
   Other issue trackers may only require the `api_password` field. The meaning of
   these fields can be found in
