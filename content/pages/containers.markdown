@@ -44,6 +44,8 @@ Image versions
 
 Changelog information can be found under the [releases]({tag}releases) tag in our blog!
 
+    quay.io/kiwitcms/version            13.6 (aarch64)          14f4599db480    12 Oct 2024     705MB
+    quay.io/kiwitcms/version            13.6 (x86_64)           2d925723ab4e    12 Oct 2024     693MB
     quay.io/kiwitcms/version            13.5 (aarch64)          0fe07ed87230    07 Aug 2024     701MB
     quay.io/kiwitcms/version            13.5 (x86_64)           086fed49c1ca    07 Aug 2024     688MB
     quay.io/kiwitcms/version            13.4 (aarch64)          d4aaf8b83d66    12 Jun 2024     686MB
@@ -129,6 +131,8 @@ Changelog information can be found under the [releases]({tag}releases) tag in ou
     quay.io/kiwitcms/version            6.0                     44787161a4d1    04 Oct 2018     1.1GB
     quay.io/kiwitcms/version            5.3.1                   a420465852be    04 Sep 2018     977MB
     =================================================================================================
+    quay.io/kiwitcms/enterprise         13.6-mt (aarch64)       27a5de45d8dc    12 Oct 2024     1.07GB
+    quay.io/kiwitcms/enterprise         13.6-mt (x86_64)        f2ba176b5e0f    12 Oct 2024     1.05GB
     quay.io/kiwitcms/enterprise         13.5-mt (aarch64)       3983e3289c81    07 Aug 2024     1.07GB
     quay.io/kiwitcms/enterprise         13.5-mt (x86_64)        eedb94e79149    07 Aug 2024     1.04GB
     quay.io/kiwitcms/enterprise         13.4-mt (aarch64)       c070b5cdf01b    12 Jun 2024     1.05GB
