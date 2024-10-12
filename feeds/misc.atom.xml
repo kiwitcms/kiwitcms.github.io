@@ -1,5 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2024-08-07T09:30:00+03:00</updated><entry><title>Kiwi TCMS 13.5</title><link href="/blog/kiwi-tcms-team/2024/08/07/kiwi-tcms-135/" rel="alternate"></link><published>2024-08-07T09:30:00+03:00</published><updated>2024-08-07T09:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-08-07:/blog/kiwi-tcms-team/2024/08/07/kiwi-tcms-135/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.5!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2024-10-12T20:30:00+03:00</updated><entry><title>Kiwi TCMS 13.6</title><link href="/blog/kiwi-tcms-team/2024/10/12/kiwi-tcms-136/" rel="alternate"></link><published>2024-10-12T20:30:00+03:00</published><updated>2024-10-12T20:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-10-12:/blog/kiwi-tcms-team/2024/10/12/kiwi-tcms-136/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.6!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+this release includes security related updates, several small improvements
+and important bug fixes.&lt;/p&gt;
+&lt;p&gt;Recommended
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;upgrade&lt;/a&gt;
+path:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+13.5 -&amp;gt; 13.6
+&lt;/pre&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  b560bb4d3744    693MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.6!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
+this release includes security related updates, several small improvements
+and important bug fixes.&lt;/p&gt;
+&lt;p&gt;Recommended
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;upgrade&lt;/a&gt;
+path:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+13.5 -&amp;gt; 13.6
+&lt;/pre&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+kiwitcms/kiwi   latest  b560bb4d3744    693MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-13-5"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 13.5&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 5.0.8 to 5.0.9, addressing multiple potential security
+vulnerabilities, which do not seem to affect Kiwi TCMS directly however
+this is not 100% guaranteed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update markdown from 3.6 to 3.7&lt;/li&gt;
+&lt;li&gt;Update psycopg from 3.2.1 to 3.2.3&lt;/li&gt;
+&lt;li&gt;Update pygithub from 2.3.0 to 2.4.0&lt;/li&gt;
+&lt;li&gt;Update python-bugzilla from 3.2.0 to 3.3.0&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 4.9.0 to 4.13.0&lt;/li&gt;
+&lt;li&gt;Update tzdata from 2024.1 to 2024.2&lt;/li&gt;
+&lt;li&gt;Update uwsgi from 2.0.26 to 2.0.27&lt;/li&gt;
+&lt;li&gt;Update node_modules/pdfmake from 0.2.10 to 0.2.14&lt;/li&gt;
+&lt;li&gt;Specify &lt;tt class="docutils literal"&gt;large_client_header_buffers&lt;/tt&gt; for NGINX proxy configuration example
+to match the configuration of Kiwi TCMS&lt;/li&gt;
+&lt;li&gt;Set uWSGI configuration &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;max-requests&lt;/span&gt;&lt;/tt&gt; to 1024&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Explicitly set &lt;tt class="docutils literal"&gt;DATA_UPLOAD_MAX_NUMBER_FIELDS&lt;/tt&gt; to 1024, default is 1000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Increase uWSGI configuration &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;buffer-size&lt;/span&gt;&lt;/tt&gt; to 20k to allows the creation of
+a TestRun with 1000 test cases! Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3387"&gt;Issue #3387&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3800"&gt;Issue #3800&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update black from 24.8.0 to 24.10.0&lt;/li&gt;
+&lt;li&gt;Update pylint-django from 2.5.5 to 2.6.1&lt;/li&gt;
+&lt;li&gt;Update selenium from 4.23.1 to 4.25.0&lt;/li&gt;
+&lt;li&gt;Update sphinx from 8.0.2 to 8.1.1&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.93.0 to 5.95.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint from 8.57.0 to 8.57.1&lt;/li&gt;
+&lt;li&gt;Update node_modules/eslint-plugin-import from 2.29.1 to 2.31.0&lt;/li&gt;
+&lt;li&gt;Assert that password reset email contains username reminder&lt;/li&gt;
+&lt;li&gt;Update translation source strings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiwi-tcms-enterprise-v13-6-mt"&gt;
+&lt;h2&gt;Kiwi TCMS Enterprise v13.6-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v13.6&lt;/li&gt;
+&lt;li&gt;Update django-ses from 4.1.0 to 4.2.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 3.1.0 to 3.2.1&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk from 2.12.0 to 2.16.0&lt;/li&gt;
+&lt;li&gt;Update value for &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Content-Security-Policy&lt;/span&gt;&lt;/tt&gt; header to match
+upstream Kiwi TCMS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+quay.io/kiwitcms/version            13.6 (aarch64)          14f4599db480    12 Oct 2024     705MB
+quay.io/kiwitcms/version            13.6 (x86_64)           2d925723ab4e    12 Oct 2024     693MB
+quay.io/kiwitcms/enterprise         13.6-mt (aarch64)       27a5de45d8dc    12 Oct 2024     1.07GB
+quay.io/kiwitcms/enterprise         13.6-mt (x86_64)        f2ba176b5e0f    12 Oct 2024     1.05GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
+Then follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS 13.5</title><link href="/blog/kiwi-tcms-team/2024/08/07/kiwi-tcms-135/" rel="alternate"></link><published>2024-08-07T09:30:00+03:00</published><updated>2024-08-07T09:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-08-07:/blog/kiwi-tcms-team/2024/08/07/kiwi-tcms-135/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.5!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 this release includes security related updates, several improvements,
 bug fixes and updated translations.&lt;/p&gt;
