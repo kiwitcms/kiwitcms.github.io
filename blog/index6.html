@@ -97,6 +97,103 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/atodorov/2020/01/17/project-roadmap-2020/" rel="bookmark" title="Permalink to Project roadmap 2020">
+                <h1 class="top-header">Project roadmap 2020</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/atodorov/">Alexander Todorov</a>
+                on Fri 17 January 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello testers,
+the Kiwi TCMS team sat down together last week and talked about what we feel
+is important for us during the upcoming year. This blog post outlines our
+roadmap for 2020!</p>
+<p><img style="background-color: inherit" src="/images/roadmap2020.png" alt="roadmap image 2020"></p>
+<h1>Project sustainability</h1>
+<p>The big goal towards which we are striving is to turn Kiwi TCMS into a
+sustainable open source project. For now this means several key areas:</p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="n">Team</span>
+<span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="n">Technical</span>
+<span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="n">Community</span>
+</code></pre></div>
+
+
+<h2>Team</h2>
+<p>Right now we have a core team with 6 newcomers on-boarding.
+Engineering performance is all over the place with some people contributing
+too much while others contributing too little. More importantly there is no
+consistent pace of contributions which makes planning timely completion of
+technical tasks impossible.</p>
+<p>At the moment we do operate as a bunch of disconnected people who happen to
+talk to each other from time to time.</p>
+<p>We are going to adjust our internal processes and how we on-board new members.
+In fact we did our first "scrum-like" meeting this week and agreed to change
+our existing practice and strive to become better as a team!</p>
+<p><strong>Goal:</strong> to have a cohesive team at the end of the year which operates with
+a predictable capacity.</p>
+<p><strong>Goal:</strong> 1 PR/week/person as broad measure of individual performance.</p>
+<h2>Technical</h2>
+<p>The areas shown on the picture above will receive more priority.</p>
+<p><strong>Goal:</strong> complete remaining <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Telemetry features</a>.</p>
+<p><strong>Goal:</strong> complete
+<a href="https://github.com/kiwitcms/Kiwi/milestone/1">bug-tracker integration milestone</a>.</p>
+<p><strong>Goal:</strong> all pylint issues resolved.</p>
+<p><strong>Goal:</strong> migrate all remaining legacy templates to Patternfly UI. See
+<a href="https://github.com/kiwitcms/Kiwi/milestone/3">patternfly-migration</a> milestone.</p>
+<p><strong>Goal:</strong> where FE sends AJAX requests to BE views replace with JSON RPC API instead.</p>
+<p><strong>Extra:</strong> start tackling the JavaScript mess that we have. This depends and is related
+to Patternfly migration and overall refactoring.</p>
+<p><strong>Extra:</strong> make it easier for downstream installations to extend and override parts
+of Kiwi TCMS in order for users to adjust the system to their own needs.
+The system is pretty flexible as-is but there have been requests,
+both online and offline, to provide some extra features! We'll start looking
+into them, likely making partial progress in the next 12 months.</p>
+<h2>Community</h2>
+<p>Last year Kiwi TCMS had massive success at every single conference that we've been to.
+Both project and team have been well received. While we are going to continue
+being part of various communities around the world we are trying to limit
+extensive travel and focus on functionality and partnerships which will
+increase Kiwi TCMS eco-system, make the project even more popular and
+drive further adoption!</p>
+<p><strong>Goal:</strong> extended GitHub integration via
+<a href="https://github.com/kiwitcms/github-app/">kiwitcms-github-app</a> plugin.</p>
+<p><strong>Goal:</strong> release the following
+<a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html">test automation framework plugins</a>
+for Kiwi TCMS:</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/phpunit-plugin/">PHPUnit plugin</a></li>
+<li><a href="https://github.com/kiwitcms/pytest-plugin/">py.test plugin</a></li>
+<li>TestNG plugin</li>
+<li>Jenkins plugin</li>
+<li>Robot framework plugin</li>
+<li>Django plugin</li>
+</ul>
+<p>For more information see
+<a href="https://github.com/kiwitcms/Kiwi/milestone/2">test-automation-plugins</a> milestone.</p>
+<p><strong>Ongoing:</strong> work with our partners from the proprietary and open source worlds.
+This is hard to quantify and lots of it doesn't actually depend on the team.
+However we are continuing to talk to them regularly. Expect new feedback to
+become available under GitHub Issues.</p>
+<p><strong>Extra:</strong> see what we can do about testing productivity! This has always been
+part of our mission but we have not been able to produce anything worth sharing.
+We do have ideas in this space but we are generally looking for partnerships and collaborations.
+It is very likely that there will not be very much progress on this front
+because it is hard to define it properly :-(.</p>
+<h2>Summary</h2>
+<p>At the end of the day most of these goals compliment each other and help drive all of
+them to completion. Many of the still on-boarding people have expressed desire to
+improve their Python &amp; Django skills. Working to resolve issues in the above specific
+areas will give them this opportunity! I expect they will show good progress on their respective
+tasks so we can write more about them on this blog.</p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/01/16/kiwi-tcms-73/" rel="bookmark" title="Permalink to Kiwi TCMS 7.3">
                 <h1 class="top-header">Kiwi TCMS 7.3</h1>
             </a>
@@ -2298,129 +2395,6 @@ presentations delivered by Anton Sankov and Alex Todorov.</p>
 for our guests at the conference. If you are interested in coming
 <a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">subscribe to our newsletter</a>
 and don't miss the announcement!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
-always point to the latest available version! If you have to upgrade in steps,
-e.g. between several intermediate releases, you have to modify the above workflow:</p>
-<pre class="literal-block">
-# starting from an older Kiwi TCMS version
-docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-# repeat until you have reached latest
-</pre>
-<p>Happy testing!</p>
-</div>
-
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="bookmark" title="Permalink to Kiwi TCMS 6.8">
-                <h1 class="top-header">Kiwi TCMS 6.8</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 03 May 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 6.8!
-This is a small improvement and bug-fix update.
-You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  fca095f95475    994.8 MB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-6-7">
-<h2>Changes since Kiwi TCMS 6.7</h2>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update Django from 2.2 to 2.2.1</li>
-<li>Update django-simple-history from 2.7.0 to 2.7.2</li>
-<li>Update django-grappelli from 2.12.2 to 2.12.3</li>
-<li>Update psycopg2 from 2.8 to 2.8.2</li>
-<li>Update pygithub from 1.43.6 to 1.43.7</li>
-<li>Upgrade pip and setuptools inside Docker image</li>
-<li>Update documentation with newer screenshots and updated Tutotial. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/837/">Issue #837</a> (&#64;Prome88)</li>
-<li>Document how to enable public read-only views</li>
-<li>Remove deprecated documentation section about Bugzilla authentication</li>
-<li>Install PostgreSQL libraries in Docker image which makes it easier to
-switch the DB backend without rebuilding the entire image</li>
-<li>Remove npm, libxml2-devel and libxslt-devel from Docker image</li>
-<li>Database engine configuration now respects the <tt class="docutils literal">KIWI_DB_ENGINE</tt> environment
-variable which defaults to <tt class="docutils literal">django.db.backends.mysql</tt>. This will make it
-easier for admins to change DB engine by updating their <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Pin bootstrap-switch to version 3.3.4 in <tt class="docutils literal">package.json</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/916/">Issue #916</a></li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-<li>New language <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian</a></li>
-<li>New language <a class="reference external" href="https://crowdin.com/project/kiwitcms/cz#">Czech</a></li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Don't use <tt class="docutils literal">Site.objects.get_current()</tt> because it has an internal cache
-and causes email notifications from tenants to use the wrong URL</li>
-<li>More changes around renaming of TestCaseRun to TestExecution</li>
-</ul>
-</div>
-</div>
-<div class="section" id="github-marketplace">
-<h2>GitHub Marketplace</h2>
-<p>During the past week we have silently launched Kiwi TCMS on
-<a class="reference external" href="https://github.com/marketplace/kiwi-tcms/">GitHub Marketplace</a>. Free plans
-will be redirected to
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">public.tenant.kiwitcms.org</a>
-while paid plans will be hosted under <tt class="docutils literal">*.tenant.kiwitcms.org</tt> sub-domains!</p>
-<p>Our team is still working on all requirements for GitHub integration and we will
-issue a formal statement when ready!</p>
 </div>
 <div class="section" id="how-to-upgrade">
 <h2>How to upgrade</h2>
