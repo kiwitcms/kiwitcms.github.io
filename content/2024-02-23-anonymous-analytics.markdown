@@ -25,7 +25,7 @@ not to track individual visitors. All the data is in aggregate only.
 No personal data is sent to Plausible.
 
 Anonymous analytics are enabled on this website,
-inside our [official container images]({filename}containers.markdown) and for
+inside our [official container images]({filename}pages/containers.markdown) and for
 all tenants provisioned under `https://*.tenant.kiwitcms.org`. Running containers
 will report back to Plausible Analytics every 5 days to send the version number of Kiwi TCMS,
 nothing else! Here's a preview of what it looks like:
