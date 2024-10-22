@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2024-10-16T13:00:00+03:00</updated><entry><title>Managed Hosting Subscription Explained</title><link href="/blog/kiwi-tcms-team/2024/10/16/managed-hosting-subscription-explained/" rel="alternate"></link><published>2024-10-16T13:00:00+03:00</published><updated>2024-10-16T13:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-10-16:/blog/kiwi-tcms-team/2024/10/16/managed-hosting-subscription-explained/</id><summary type="html">&lt;p&gt;Hello testers,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2024-10-22T12:15:00+03:00</updated><entry><title>Important changes for Kiwi TCMS subscribers</title><link href="/blog/kiwi-tcms-team/2024/10/22/important-changes-for-kiwi-tcms-subscribers/" rel="alternate"></link><published>2024-10-22T12:15:00+03:00</published><updated>2024-10-22T12:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-10-22:/blog/kiwi-tcms-team/2024/10/22/important-changes-for-kiwi-tcms-subscribers/</id><summary type="html">&lt;p&gt;Hello testers,
+starting today we are introducing several important changes to our subscription backend.&lt;/p&gt;
+&lt;h2&gt;New Quay.io accounts&lt;/h2&gt;
+&lt;p&gt;Subscribers have the ability to access extra
+&lt;a href="/containers/"&gt;container images&lt;/a&gt; via private docker repositories.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is changing:&lt;/strong&gt; quay.io account username will no longer be based on email address,
+instead it is based …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers,
+starting today we are introducing several important changes to our subscription backend.&lt;/p&gt;
+&lt;h2&gt;New Quay.io accounts&lt;/h2&gt;
+&lt;p&gt;Subscribers have the ability to access extra
+&lt;a href="/containers/"&gt;container images&lt;/a&gt; via private docker repositories.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is changing:&lt;/strong&gt; quay.io account username will no longer be based on email address,
+instead it is based on the subscription ID which is more stable over time.
+Discovering your credentials is explained on the page above.&lt;/p&gt;
+&lt;p&gt;New accounts have been created automatically for those eligible!
+Old accounts will continue to be active until &lt;strong&gt;December 31st 2024&lt;/strong&gt;,
+afterwards they will be removed! Make sure to update your
+workflows with the new credentials before December 31st!&lt;/p&gt;
+&lt;h2&gt;Automatic account creation for new subscriptions&lt;/h2&gt;
+&lt;p&gt;Previously subscribers who purchased a subscription were required to create
+an account on &lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt; using the same email address
+used during their purchase.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is changing:&lt;/strong&gt; user accounts for new subscriptions will be created automatically
+if they do not exist and a random password would be assigned to them. Customers will
+be able to reset passwords for these accounts via
+&lt;a href="https://public.tenant.kiwitcms.org/accounts/passwordreset/"&gt;https://public.tenant.kiwitcms.org/accounts/passwordreset/&lt;/a&gt;! The account username
+is sent as a reminder in the password reset email!&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category></entry><entry><title>Managed Hosting Subscription Explained</title><link href="/blog/kiwi-tcms-team/2024/10/16/managed-hosting-subscription-explained/" rel="alternate"></link><published>2024-10-16T13:00:00+03:00</published><updated>2024-10-16T13:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-10-16:/blog/kiwi-tcms-team/2024/10/16/managed-hosting-subscription-explained/</id><summary type="html">&lt;p&gt;Hello testers,
 our team has worked with our largest customers in order to better define what the
 &lt;em&gt;Managed Hosting&lt;/em&gt; subscription is and how it can bring more value beyond the
 Kiwi TCMS application itself. You can read about the details below.&lt;/p&gt;
@@ -1132,7 +1170,7 @@ Our goal is to track overall usage patterns inside the Kiwi TCMS application(s),
 not to track individual visitors. All the data is in aggregate only.
 No personal data is sent to Plausible.&lt;/p&gt;
 &lt;p&gt;Anonymous analytics are enabled on this website,
-inside our &lt;a href="{filename}containers.markdown"&gt;official container images&lt;/a&gt; and for
+inside our &lt;a href="/containers/"&gt;official container images&lt;/a&gt; and for
 all tenants provisioned under &lt;code&gt;https://*.tenant.kiwitcms.org&lt;/code&gt;. Running containers
 will report back to Plausible Analytics every 5 days to send the version number of Kiwi TCMS,
 nothing else! Here's a preview of what it looks like:&lt;/p&gt;
