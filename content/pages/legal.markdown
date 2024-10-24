@@ -31,7 +31,7 @@ Privacy policy
 
 For the purposes of passwordless login via GitHub, GitLab, Google, etc, Kiwi TCMS is
 requesting the following data: **your name**, **email address**. This information
-is stored in our database and is linked to your Kiwi TCMS account which let's you
+is stored in our database and is linked to your Kiwi TCMS account which lets you
 login into the Kiwi TCMS application. User account information is accessible only
 to the administrators of Kiwi TCMS and is not publicly exposed to 3rd parties.
 
