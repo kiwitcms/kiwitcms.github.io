@@ -30,4 +30,5 @@ Project infrastructure, development, data processing and support services provid
 
 Other pages:
 
-*  [Privacy policy]({filename}privacy.markdown)
+* [Privacy Policy]({filename}privacy.markdown)
+* [Terms of Service]({filename}terms.markdown)
