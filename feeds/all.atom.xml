@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-10-29T10:00:00+02:00</updated><entry><title>Testing and Continuous Delivery devroom, FOSDEM'25</title><link href="/blog/kiwi-tcms-team/2024/10/29/testing-and-continuous-delivery-devroom-fosdem25/" rel="alternate"></link><published>2024-10-29T10:00:00+02:00</published><updated>2024-10-29T10:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-10-29:/blog/kiwi-tcms-team/2024/10/29/testing-and-continuous-delivery-devroom-fosdem25/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2025/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-11-05T22:45:00+02:00</updated><entry><title>Important changes to user accounts on *.tenant.kiwitcms.org</title><link href="/blog/kiwi-tcms-team/2024/11/05/important-changes-to-user-accounts-on-tenantkiwitcmsorg/" rel="alternate"></link><published>2024-11-05T22:45:00+02:00</published><updated>2024-11-05T22:45:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-11-05:/blog/kiwi-tcms-team/2024/11/05/important-changes-to-user-accounts-on-tenantkiwitcmsorg/</id><summary type="html">&lt;p&gt;Hello testers,
+starting today we are discontinuing the ability to register user
+accounts on &lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;! New accounts can still
+be created by logging in via the existing OAuth integrations - GitHub, GitLab and Google!&lt;/p&gt;
+&lt;h2&gt;How does this affect users&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;New account registrations via email+password are not …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Hello testers,
+starting today we are discontinuing the ability to register user
+accounts on &lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;! New accounts can still
+be created by logging in via the existing OAuth integrations - GitHub, GitLab and Google!&lt;/p&gt;
+&lt;h2&gt;How does this affect users&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;New account registrations via email+password are not possible anymore - use OAuth login&lt;/li&gt;
+&lt;li&gt;Existing users are able to login via OAuth and/or email+password - reset your password
+  if forgotten&lt;/li&gt;
+&lt;li&gt;New subscription purchases will create user accounts automatically -
+  reset your password before first login.
+  &lt;em&gt;Note: existing subscribers already have accounts&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Inviting new users to a Private Tenant, &lt;code&gt;PLUGINS -&amp;gt; Tenant -&amp;gt; Invite users&lt;/code&gt;
+  will create user accounts automatically - reset your password before first login&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category></entry><entry><title>Testing and Continuous Delivery devroom, FOSDEM'25</title><link href="/blog/kiwi-tcms-team/2024/10/29/testing-and-continuous-delivery-devroom-fosdem25/" rel="alternate"></link><published>2024-10-29T10:00:00+02:00</published><updated>2024-10-29T10:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-10-29:/blog/kiwi-tcms-team/2024/10/29/testing-and-continuous-delivery-devroom-fosdem25/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2025/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
 &lt;p&gt;Attention testers! On behalf of the
 &lt;a href="https://fosdem-testingautomation.github.io/"&gt;&lt;em&gt;Testing and Continuous Delivery devroom&lt;/em&gt;&lt;/a&gt;
 we'd like to announce that call for participation is now open.

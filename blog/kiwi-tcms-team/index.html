@@ -103,6 +103,48 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2024/11/05/important-changes-to-user-accounts-on-tenantkiwitcmsorg/" rel="bookmark" title="Permalink to Important changes to user accounts on *.tenant.kiwitcms.org">
+                <h1 class="top-header">Important changes to user accounts on *.tenant.kiwitcms.org</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 05 November 2024
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello testers,
+starting today we are discontinuing the ability to register user
+accounts on <a href="https://public.tenant.kiwitcms.org">https://public.tenant.kiwitcms.org</a>! New accounts can still
+be created by logging in via the existing OAuth integrations - GitHub, GitLab and Google!</p>
+<h2>How does this affect users</h2>
+<ul>
+<li>New account registrations via email+password are not possible anymore - use OAuth login</li>
+<li>Existing users are able to login via OAuth and/or email+password - reset your password
+  if forgotten</li>
+<li>New subscription purchases will create user accounts automatically -
+  reset your password before first login.
+  <em>Note: existing subscribers already have accounts</em></li>
+<li>Inviting new users to a Private Tenant, <code>PLUGINS -&gt; Tenant -&gt; Invite users</code>
+  will create user accounts automatically - reset your password before first login</li>
+</ul>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2024/10/29/testing-and-continuous-delivery-devroom-fosdem25/" rel="bookmark" title="Permalink to Testing and Continuous Delivery devroom, FOSDEM'25">
                 <h1 class="top-header">Testing and Continuous Delivery devroom, FOSDEM'25</h1>
             </a>
@@ -2278,151 +2320,6 @@ please help us!</p>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
 <li><a href="/#subscriptions">Become a customer</a> and help us grow</li>
 </ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2023/07/04/kiwi-tcms-125/" rel="bookmark" title="Permalink to Kiwi TCMS 12.5">
-                <h1 class="top-header">Kiwi TCMS 12.5</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 04 July 2023
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 12.5!</p>
-<p><strong>IMPORTANT:</strong> this is a small release which contains security related updates,
-several improvements and new translations!</p>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<blockquote>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-</blockquote>
-<p>---</p>
-<blockquote>
-<p>Upstream container images (x86_64):</p>
-<pre class="literal-block">
-kiwitcms/kiwi   latest  9a689f9866d9    597MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged and multi-arch
-<a class="reference external" href="/containers/">container</a> images are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-<div class="section" id="changes-since-kiwi-tcms-12-4">
-<h2>Changes since Kiwi TCMS 12.4</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Update django from 4.2.2 to 4.2.3. Fixes
-<a class="reference external" href="https://github.com/advisories/GHSA-jh3w-4vvf-mjgr">CVE-2023-36053</a> -
-ReDoS vulnerability</li>
-<li>Patch misconfigured HTTP headers allowing stored XSS execution. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-jpgw-2r9m-8qfw">CVE-2023-36809</a></li>
-<li>Sanitize test plan name in <tt class="docutils literal">tree_view_html()</tt> function to reduce the
-opportunity for exploiting stored XSS vulnerabilities</li>
-<li>Extend the list of file upload validators to reduce the opportunity for
-exploiting stored XSS vulnerabilities</li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update django-colorfield from 0.8.0 to 0.9.0</li>
-<li>Update django-extensions from 3.2.1 to 3.2.3</li>
-<li>Update django-simple-captcha from 0.5.17 to 0.5.18</li>
-<li>Update django-tree-queries from 0.14.0 to 0.15.0</li>
-<li>Update jira from 3.5.1 to 3.5.2</li>
-<li>Update python-gitlab from 3.14.0 to 3.15.0</li>
-<li>Small update to <tt class="docutils literal">HEALTHCHECK</tt> command in container</li>
-<li>Replace <tt class="docutils literal">mysql</tt> with native <tt class="docutils literal">mariadb</tt> commands for backup/restore</li>
-</ul>
-</div>
-<div class="section" id="refactoring-and-testing">
-<h3>Refactoring and testing</h3>
-<ul class="simple">
-<li>Update node_modules/eslint from 8.42.0 to 8.44.0</li>
-<li>Update node_modules/eslint-plugin-n from 16.0.0 to 16.0.1</li>
-<li>Update node_modules/webpack from 5.85.0 to 5.88.1</li>
-<li>Update node_modules/webpack-cli from 5.1.3 to 5.1.4</li>
-<li>Pin Selenium to 4.9.1 b/c of failures with 4.10.0</li>
-<li>Add configuration for testing with reverse proxy</li>
-<li>Assert that Nginx proxy doesn't strip response headers</li>
-<li>Assert on the number of <tt class="docutils literal"><span class="pre">Content-Type</span></tt> headers for attachments</li>
-<li>Update how we seed GitLab API token used for testing</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="kiwi-tcms-enterprise-v12-5-mt">
-<h2>Kiwi TCMS Enterprise v12.5-mt</h2>
-<ul>
-<li><p class="first">Based on Kiwi TCMS v12.5</p>
-</li>
-<li><p class="first">Update django-python3-ldap from 0.15.4 to 0.15.5</p>
-</li>
-<li><p class="first">Install django-prometheus inside container</p>
-</li>
-<li><p class="first">Pin Selenium to 4.9.1 b/c of failures with 4.10.0</p>
-<blockquote>
-<p>Private images:</p>
-<pre class="literal-block">
-quay.io/kiwitcms/version            12.5 (aarch64)          2349e3ea1b78    04 Jul 2023     606MB
-quay.io/kiwitcms/version            12.5 (x86_64)           9a689f9866d9    04 Jul 2023     597MB
-quay.io/kiwitcms/enterprise         12.5-mt (aarch64)       56634afe511a    04 Jul 2023     852MB
-quay.io/kiwitcms/enterprise         12.5-mt (x86_64)        cdfd6965ad4e    04 Jul 2023     841MB
-</pre>
-</blockquote>
-</li>
-</ul>
-<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
-<a class="reference external" href="/containers/">container</a> images are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-Then execute the commands:</p>
-<pre class="literal-block">
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py upgrade
-</pre>
-<p>Refer to
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
-for more details!</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all project news;</li>
-<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
-and an awesome open source hacker;</li>
-<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-</div>
-
         </div>
     </article>
 
