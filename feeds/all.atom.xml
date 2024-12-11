@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-12-04T21:00:00+02:00</updated><entry><title>Kiwi TCMS 13.7</title><link href="/blog/kiwi-tcms-team/2024/12/04/kiwi-tcms-137/" rel="alternate"></link><published>2024-12-04T21:00:00+02:00</published><updated>2024-12-04T21:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-12-04:/blog/kiwi-tcms-team/2024/12/04/kiwi-tcms-137/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.7!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-12-11T12:20:00+02:00</updated><entry><title>Major outage for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2024/12/11/major-outage-for-kiwi-tcms/" rel="alternate"></link><published>2024-12-11T12:20:00+02:00</published><updated>2024-12-11T12:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-12-11:/blog/kiwi-tcms-team/2024/12/11/major-outage-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;Hello testers,
+in the spirit of transparency we'd like to inform everyone that
+on Dec 11th 2024 between 07:20-09:30 UTC Kiwi TCMS suffered a major outage!&lt;/p&gt;
+&lt;p&gt;The Kiwi TCMS web application was up and running, however the database behind
+it had stopped accepting requests resulting in 500 Internal …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers,
+in the spirit of transparency we'd like to inform everyone that
+on Dec 11th 2024 between 07:20-09:30 UTC Kiwi TCMS suffered a major outage!&lt;/p&gt;
+&lt;p&gt;The Kiwi TCMS web application was up and running, however the database behind
+it had stopped accepting requests resulting in 500 Internal Server Error page visible
+to everyone. A little over 1000 requests (both manual and via API) were affected!&lt;/p&gt;
+&lt;p&gt;As of this time service has been restored and our team is taking corrective actions.
+So far it doesn't look like that there was loss of historical data.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="outage"></category></entry><entry><title>Kiwi TCMS 13.7</title><link href="/blog/kiwi-tcms-team/2024/12/04/kiwi-tcms-137/" rel="alternate"></link><published>2024-12-04T21:00:00+02:00</published><updated>2024-12-04T21:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-12-04:/blog/kiwi-tcms-team/2024/12/04/kiwi-tcms-137/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.7!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This release includes security related updates, several improvements,
 API changes, a few bug fixes and new translations.&lt;/p&gt;
