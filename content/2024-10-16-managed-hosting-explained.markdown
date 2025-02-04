@@ -134,6 +134,12 @@ plus a *video conference* option when necessary in order to resolve
 requests faster.
 
 
+**Custom long-term billing terms:** we can adjust your payment schedule so that
+it works best for you. For example weekly, monthly, every 3 or 6 months, every 1, 2 or 3 years!
+We apply a custom discount for long-term billing agreements. In addition to that
+customers who've been using a *Managed Hosting* subscription for more than 3 years are
+eligible for a loyalty discount.
+
 
 Mid-term plans
 --------------
