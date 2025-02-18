@@ -73,7 +73,7 @@ for the institution, as these are other tools commonly used within SIU.
 The flexibility of this system allows test cases to be extended as needed,
 making it easier to adjust and update test cases or test plans in response to the development cycle.
 
-In the words of *Emilia Cejas, Leader Communities of Practice*:
+In the words of *Lucas del Reguero Martinez, QA tester*:
 
 > The implementation of Kiwi TCMS has provided significant advantages to the institution,
 > resulting in tangible benefits to users within the SIU community.
