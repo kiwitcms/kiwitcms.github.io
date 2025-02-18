@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2025-02-06T00:20:00+02:00</updated><entry><title>Kiwi TCMS 14.0</title><link href="/blog/kiwi-tcms-team/2025/02/06/kiwi-tcms-140/" rel="alternate"></link><published>2025-02-06T00:20:00+02:00</published><updated>2025-02-06T00:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-02-06:/blog/kiwi-tcms-team/2025/02/06/kiwi-tcms-140/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 14.0!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2025-02-18T10:13:00+02:00</updated><entry><title>The University Information System of Argentina adopts Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2025/02/18/the-university-information-system-of-argentina-adopts-kiwi-tcms/" rel="alternate"></link><published>2025-02-18T10:13:00+02:00</published><updated>2025-02-18T10:13:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-02-18:/blog/kiwi-tcms-team/2025/02/18/the-university-information-system-of-argentina-adopts-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;SIU + Kiwi TCMS logos&amp;quot;" src="/images/customers/siu-argentina+kiwitcms.png" title="SIU + Kiwi TCMS logos"&gt;&lt;/p&gt;
+&lt;p&gt;For more than 25 years,
+&lt;a href="https://www.siu.edu.ar/"&gt;Sistema de Información Universitaria&lt;/a&gt; - SIU - has been
+developing solutions for the digital management of the Argentine university
+system and various government agencies.&lt;/p&gt;
+&lt;p&gt;This ecosystem of solutions integrates all management areas within an institution
+(administrative, financial, academic, human resources, purchasing and assets, data analysis),
+optimizing process …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;SIU + Kiwi TCMS logos&amp;quot;" src="/images/customers/siu-argentina+kiwitcms.png" title="SIU + Kiwi TCMS logos"&gt;&lt;/p&gt;
+&lt;p&gt;For more than 25 years,
+&lt;a href="https://www.siu.edu.ar/"&gt;Sistema de Información Universitaria&lt;/a&gt; - SIU - has been
+developing solutions for the digital management of the Argentine university
+system and various government agencies.&lt;/p&gt;
+&lt;p&gt;This ecosystem of solutions integrates all management areas within an institution
+(administrative, financial, academic, human resources, purchasing and assets, data analysis),
+optimizing process management, data quality, transparency, and decision-making.&lt;/p&gt;
+&lt;p&gt;One of the main pillars of SIU is its collaborative network based on communities of practice.
+In these communities, users interact, exchange knowledge and best practices,
+solve common challenges, and share experiences. This governance model has gained national and
+international recognition and has enabled successful implementations in over 140 institutions.&lt;/p&gt;
+&lt;h3&gt;The Kiwi TCMS experience&lt;/h3&gt;
+&lt;p&gt;In recent years, digital transformation and the evolution of the institution
+have led SIU to move from a structure based on specific solutions to integrated
+project management, requiring the search for new tools to streamline and improve
+software development. As part of this process, a test management system was evaluated.&lt;/p&gt;
+&lt;p&gt;This experience began with the &lt;strong&gt;Integrated Electronic File&lt;/strong&gt; solution,
+a tool designed to seamlessly manage documents and files within an institution.
+One of its components, &lt;strong&gt;SUDOCU&lt;/strong&gt; (Unique Document System), was developed by
+&lt;a href="https://www.ungs.edu.ar/"&gt;Universidad Nacional de General Sarmiento&lt;/a&gt; - UNGS -
+and made available to the Argentine university system through SIU.
+This feature added complexity for the QA team during their work,
+as test cases had to be replicated on different platforms both on the SIU and UNGS sides.&lt;/p&gt;
+&lt;p&gt;In order to simplify processes and avoid duplicated efforts, a tool was sought
+to streamline the workflow. After evaluating several options, Kiwi TCMS was selected
+because of its open source nature, which is in line with SIU's policy.&lt;/p&gt;
+&lt;p&gt;Evaluation began with a local installation, testing its functionalities,
+and optimizing its use to improve workflow. After adjustments in both test and production environments,
+Kiwi TCMS was incorporated into SUDOCU's projects, creating test cases and test plans.
+This improved the organization and visibility of testing activities for the entire team involved,
+including QAs, developers, and analysts.&lt;/p&gt;
+&lt;p&gt;Based on this initial implementation, a work plan was created to gradually integrate testing
+of more projects into Kiwi TCMS, taking into account the unique characteristics of the SIU ecosystem.&lt;/p&gt;
+&lt;p&gt;Currently, a consolidated QA team has been established within SIU,
+working in a fully integrated manner. Other projects are now using Kiwi TCMS in their daily
+operations for functional testing, system integration, regression testing and smoke testing.&lt;/p&gt;
+&lt;h3&gt;Impact and benefits&lt;/h3&gt;
+&lt;p&gt;The experience with Kiwi TCMS has enhanced the quality of software developed by
+SIU by centralizing test cases, test plans and test executions.
+This has improved both the traceability and transparency of QA work.
+It also provided the ability to generate reports and metrics to further
+evaluate and improve internal processes.&lt;/p&gt;
+&lt;p&gt;One of the key benefits for SIU is time optimization achieved by
+reusing test cases and test plans,
+as well as the ability to track an unlimited number of executions,
+within the same test management tool.
+In addition, Kiwi TCMS' integration with &lt;strong&gt;Gitlab&lt;/strong&gt; and &lt;strong&gt;Redmine&lt;/strong&gt; is very useful
+for the institution, as these are other tools commonly used within SIU.&lt;/p&gt;
+&lt;p&gt;The flexibility of this system allows test cases to be extended as needed,
+making it easier to adjust and update test cases or test plans in response to the development cycle.&lt;/p&gt;
+&lt;p&gt;In the words of &lt;em&gt;Emilia Cejas, Leader Communities of Practice&lt;/em&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The implementation of Kiwi TCMS has provided significant advantages to the institution,
+resulting in tangible benefits to users within the SIU community.
+The plan for the future is to continue training teams on the tool to further democratize its use.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow and sustain development!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a paid customer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category></entry><entry><title>Kiwi TCMS 14.0</title><link href="/blog/kiwi-tcms-team/2025/02/06/kiwi-tcms-140/" rel="alternate"></link><published>2025-02-06T00:20:00+02:00</published><updated>2025-02-06T00:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-02-06:/blog/kiwi-tcms-team/2025/02/06/kiwi-tcms-140/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 14.0!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a major version release which includes security related updates,
 backwards incompatible changes, several improvements and new translations.&lt;/p&gt;
@@ -10179,53 +10254,4 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS is Open Source Seed Award winner</title><link href="/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/" rel="alternate"></link><published>2020-03-27T10:47:00+02:00</published><updated>2020-03-27T10:47:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-03-27:/blog/kiwi-tcms-team/2020/03/27/kiwi-tcms-is-open-source-seed-award-winner/</id><summary type="html">&lt;p&gt;Kiwi TCMS is the proud winner of a $10,000 award from Mozilla, Indeed,
-Open Collective, Ford Foundation &amp;amp; Simply Secure. Read below for the full story!&lt;/p&gt;
-&lt;p&gt;At the end of January Zahari alerted our team about the
-&lt;a href="https://opencollective.com/open-source-speed-dating/events/open-source-speed-dating-fosdem-2020-96f78c6c"&gt;Open Source Speed Dating FOSDEM 2020&lt;/a&gt;
-event and Alex was very swift in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS is the proud winner of a $10,000 award from Mozilla, Indeed,
-Open Collective, Ford Foundation &amp;amp; Simply Secure. Read below for the full story!&lt;/p&gt;
-&lt;p&gt;At the end of January Zahari alerted our team about the
-&lt;a href="https://opencollective.com/open-source-speed-dating/events/open-source-speed-dating-fosdem-2020-96f78c6c"&gt;Open Source Speed Dating FOSDEM 2020&lt;/a&gt;
-event and Alex was very swift in filing the application form. Just as we landed
-in Brussels, ready to host
-&lt;a href="/blog/kiwi-tcms-team/2019/11/26/kiwi-tcms-is-going-to-fosdem-2020/"&gt;Testing and Automation devroom and the Open Source Test Management stand&lt;/a&gt;,
-we got the news - Kiwi TCMS has been selected as a participant.&lt;/p&gt;
-&lt;p&gt;What followed was a very hasty day of preparing a 5 min pitch and rehearsing it
-as much as possible so we can be ready to present our project. Alex prepared the
-pitch and made final review and polishing together with Anton.
-For the record everything was written down on paper,
-including important facts about the project and schedule - when and where is our slot,
-how is Alex going to get there, when does he need to leave to be on time, etc.
-We believe that preparation was key here and that's why our team always tries to
-be prepared when we participate at events! It was as good
-as it can get, no more changes!&lt;/p&gt;
-&lt;p&gt;On Feb 1st all hell broke loose - it was day #1 of FOSDEM,
-the Testing an Automation devroom was full with amazing speakers and packed with people,
-&lt;a href="https://fosdem.org/2020/schedule/track/testing_and_automation/"&gt;watch videos here&lt;/a&gt;,
-there was barely time to eat or drink water and at 5PM Alex had to rush across town to pitch
-Kiwi TCMS!&lt;/p&gt;
-&lt;p&gt;Then everything went like clockwork - weather was warm for the season,
-Alex decided to walk from ULB to La Tricoterie, both so he doesn't get stuck in traffic but
-also to regulate stress level and be clear minded for what comes next. He arrived just on
-time to meet with new folks and have a glass of wine before taking his turn with the judges.&lt;/p&gt;
-&lt;p&gt;Open Source Speed Dating is a format where projects pitch to a team of 3 judges who then
-follow up with various questions. Their goal is to assess how suitable your project is
-for the money they are giving away but also how would actually receiving an award help the project.
-You do get guidance how to prepare and what sort of information the judges are looking for.
-However you have no idea who the other participants are and who are you competing against!
-All you have is a 15 minutes slot where you have to give the best of you and hope it is
-enough.&lt;/p&gt;
-&lt;p&gt;Afterwards we reunited together, did even more walking, played the SPACESHIP at
-&lt;em&gt;Let Me Out&lt;/em&gt; escape room and finished with a mandatory team dinner in the hearth of Brussels.&lt;/p&gt;
-&lt;p&gt;Following an internal selection process and due diligence we finally received the award.
-&lt;a href="https://opencollective.com/kiwitcms/transactions"&gt;$10,000 for open source&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;As a side note we also got to know who the other winners are, which can be seen from
-&lt;a href="https://opencollective.com/open-source-speed-dating/transactions"&gt;Open Source Speed Dating records&lt;/a&gt;:
-F-Droid, ossia, MNT Research GmbH and Kiwi TCMS!&lt;/p&gt;
-&lt;h2&gt;We’re giving all of it to our community&lt;/h2&gt;
-&lt;p&gt;All money from the &lt;a href="https://opencollective.com/kiwitcms/"&gt;Kiwi TCMS Collective&lt;/a&gt;
-will be going towards funding development tasks.
-Like Alex told the judges - this will help us enable more hands working on Kiwi TCMS
-and complete pending work faster. Stay tuned for our bounty program announcement!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="community"></category></entry></feed>
+</content><category term="misc"></category><category term="releases"></category></entry></feed>

@@ -103,6 +103,41 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2022/06/02/survey-how-do-testers-and-qa-use-github-gitlab-and-bitbucket/" rel="bookmark" title="Permalink to Survey: How do testers and QA use GitHub, GitLab and Bitbucket">
+                <h1 class="top-header">Survey: How do testers and QA use GitHub, GitLab and Bitbucket</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 02 June 2022
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello testers,
+we are conducting a little research/survey into how other testers and QA professionals
+use modern platforms like GitHub, GitLab and Bitbucket. At this moment in time our goal
+is to collect as much information as possible in order to understand the existing ecosystem.</p>
+<p>If you can spare 5 minutes of your time please check-out
+<a href="https://forms.gle/avqjWVvSPsE4SWQr5">https://forms.gle/avqjWVvSPsE4SWQr5</a>.</p>
+<p>We promise there will be no follow up emails unless you indicate that you agree to that.</p>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2022/05/18/new-versions-of-automation-framework-plugins/" rel="bookmark" title="Permalink to New versions of automation framework plugins">
                 <h1 class="top-header">New versions of automation framework plugins</h1>
             </a>
@@ -2036,166 +2071,6 @@ Closes
 <h2>How to upgrade</h2>
 <p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
 If you are using Kiwi TCMS as a container then:</p>
-<pre class="literal-block">
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Refer to
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
-for more details!</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all project news;</li>
-<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
-and an awesome open source hacker;</li>
-<li><a class="reference external" href="/#subscriptions">Become a customer</a> and help us sustain development</li>
-</ul>
-</div>
-
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2021/07/12/kiwi-tcms-102/" rel="bookmark" title="Permalink to Kiwi TCMS 10.2">
-                <h1 class="top-header">Kiwi TCMS 10.2</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Mon 12 July 2021
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 10.2!</p>
-<p><strong>IMPORTANT:</strong> this is a small release including upgrades to 3rd party libraries
-(including security related updates), several improvements and bug fixes.
-It is the eleventh release to include contributions via our
-<a class="reference external" href="/blog/tags/bounty-program/">open source bounty program</a>!</p>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-kiwitcms/kiwi       latest  71b5c2a3dee4    972 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-10-1">
-<h2>Changes since Kiwi TCMS 10.1</h2>
-<div class="section" id="improvements-security-updates">
-<h3>Improvements &amp; security updates</h3>
-<ul class="simple">
-<li>Update django from 3.2.3 to 3.2.5</li>
-<li>Update django-guardian from 2.3.0 to 2.4.0</li>
-<li>Update django-tree-queries from 0.5.1 to 0.5.2</li>
-<li>Update psycopg2 from 2.8.6 to 2.9.1</li>
-<li>Update python-gitlab from 2.7.1 to 2.9.0</li>
-<li>Update node_modules/marked from 2.0.3 to 2.1.3</li>
-<li>Update node_modules/html5sortable from 0.11.1 to 0.13.2</li>
-<li>Update node_modules/prismjs from 1.23.0 to 1.24.1</li>
-<li>Multiple select for filters on Telemetry pages. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1940">Issue #1940</a>
-(Shantanu Verma + Alex Todorov)</li>
-<li>Allow editting TestCase <tt class="docutils literal">setup_duration</tt> &amp; <tt class="docutils literal">testing_duration</tt> fields.
-References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1923">Issue #1923</a> (&#64;APiligrim + Alex Todorov)</li>
-<li>Move several checks to Dashboard page instead of performing them on
-every request (Ivajlo Karabojkov)</li>
-<li>Fix grammatical error in documentation (Kushal Beniwal)</li>
-<li>Add health check for Issue Tracker configuration. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/97">Issue #97</a></li>
-<li>Document API URL field for Jira integration. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2443">Issue #2443</a></li>
-</ul>
-</div>
-<div class="section" id="settings">
-<h3>Settings</h3>
-<ul class="simple">
-<li><tt class="docutils literal">tcms.core.middleware.CheckSettingsMiddleware</tt> has been removed</li>
-<li><tt class="docutils literal">tcms.core.middleware.CheckUnappliedMigrationsMiddleware</tt> has been removed</li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li>Method <tt class="docutils literal">Version.filter()</tt> now returns new field called <tt class="docutils literal">product__name</tt></li>
-<li>Method <tt class="docutils literal">Build.filter()</tt> now returns new field called <tt class="docutils literal">version__value</tt></li>
-<li>Methods <tt class="docutils literal">Build.filter()</tt>, <tt class="docutils literal">Version.filter()</tt> and <tt class="docutils literal">TestPlan.filter()</tt>
-will now order their results by <tt class="docutils literal">product</tt>/<tt class="docutils literal">version</tt> and then <tt class="docutils literal">id</tt>.</li>
-<li>Method <tt class="docutils literal">Telemetry.breakdown()</tt> now returns only distinct results</li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Make error messages in admin forms more legible. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2404">Issue #2404</a></li>
-<li>Large images will now fit into the available space on the screen,
-e.g. inside test case description cards. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2220">Issue #2220</a></li>
-</ul>
-</div>
-<div class="section" id="refactoring-and-testing">
-<h3>Refactoring and testing</h3>
-<ul class="simple">
-<li>Add automated tests for missing coverage in <tt class="docutils literal">kiwi_auth.admin</tt> References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1607">Issue #1607</a> (Mariyan Garvanski)</li>
-<li>Apply eslint fixes (&#64;sonyagennova + Alex Todorov)</li>
-<li>Refactor <tt class="docutils literal">TestExecution.add_link</tt> method to use ModelForm and extend tests. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1327">Issue #1327</a> (Rosen Sasov + Alex Todorov)</li>
-<li>Use context manager when opening files to make pylint happier</li>
-<li>Simplify 2 UI buttons on TestRun page</li>
-<li>Enable <tt class="docutils literal">doc8</tt> for README and CHANGELOG and fix formatting errors</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/cs#">Czech translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#">Hungarian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pl#">Polish translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="kiwi-tcms-enterprise-v10-2-mt">
-<h2>Kiwi TCMS Enterprise v10.2-mt</h2>
-<ul class="simple">
-<li>Based on Kiwi TCMS v10.2</li>
-<li>Update django-ses from 2.0.0 to 2.1.1</li>
-<li>Update django-python3-ldap from 0.11.4 to 0.12.0</li>
-<li>Update documentation around initial config</li>
-</ul>
-<p><strong>IMPORTANT:</strong> Kiwi TCMS Enterprise container images are available only to subscribers!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
