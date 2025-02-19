@@ -4,20 +4,14 @@ save_as: containers/index.html
 add_section: True
 
 
-Upstream containers
-===================
+Public container
+================
 
-The official upstream Kiwi TCMS container image is publicly available via
-[Docker Hub](https://hub.docker.com/r/kiwitcms/kiwi). It is
-free of charge and anyone can download and use it via the `docker pull`
+The official upstream Kiwi TCMS container image is publicly available
+and can be downloaded via the `docker pull pub.kiwitcms.eu/kiwitcms/kiwi`
 command! See
 [Running Kiwi TCMS as a Docker container](https://kiwitcms.readthedocs.io/en/latest/installing_docker.html)
 to get started!
-
-**Warning:** after November 1st 2020 older versions will not be available from
-Docker Hub! The reason is a
-[6 month image retention limit](https://www.docker.com/pricing/retentionfaq)
-enforced by Docker Inc.!
 
 
 Private containers for subscribers
@@ -27,16 +21,16 @@ Subscribers enjoy the benefit of having read-only access to tagged versions of t
 upstream Kiwi TCMS container images as well as access to tagged versions of
 Kiwi TCMS Enterprise container images! These images are available as:
 
-- `quay.io/kiwitcms/version`
-- `quay.io/kiwitcms/enterprise`
+- `hub.kiwitcms.eu/kiwitcms/version`
+- `hub.kiwitcms.eu/kiwitcms/enterprise`
 
 **Important:** you can find your Docker credentials at the
 [subscriptions page](https://public.tenant.kiwitcms.org/github/marketplace/plans/),
 `PLUGINS -> Subscriptions`. To authenticate try
 
-    $ docker login -u="USERNAME" -p "PASSWORD-TOKEN" quay.io
+    $ docker login -u="USERNAME" -p "PASSWORD-TOKEN" hub.kiwitcms.eu
     # or
-    $ echo "PASSWORD-TOKEN" | docker login -u="USERNAME" --password-stdin quay.io
+    $ echo "PASSWORD-TOKEN" | docker login -u="USERNAME" --password-stdin hub.kiwitcms.eu
 
 
 Image versions
@@ -44,175 +38,175 @@ Image versions
 
 Changelog information can be found under the [releases]({tag}releases) tag in our blog!
 
-    quay.io/kiwitcms/version            14.0 (aarch64)          9aaf5f3e5c7e    05 Feb 2025     695MB
-    quay.io/kiwitcms/version            14.0 (x86_64)           0152d6ac4cec    05 Feb 2025     681MB
-    quay.io/kiwitcms/version            13.7 (aarch64)          33ab4247df54    04 Dec 2024     687MB
-    quay.io/kiwitcms/version            13.7 (x86_64)           ecf66eb23dda    04 Dec 2024     677MB
-    quay.io/kiwitcms/version            13.6 (aarch64)          14f4599db480    12 Oct 2024     705MB
-    quay.io/kiwitcms/version            13.6 (x86_64)           2d925723ab4e    12 Oct 2024     693MB
-    quay.io/kiwitcms/version            13.5 (aarch64)          0fe07ed87230    07 Aug 2024     701MB
-    quay.io/kiwitcms/version            13.5 (x86_64)           086fed49c1ca    07 Aug 2024     688MB
-    quay.io/kiwitcms/version            13.4 (aarch64)          d4aaf8b83d66    12 Jun 2024     686MB
-    quay.io/kiwitcms/version            13.4 (x86_64)           16bf67e2fc1f    12 Jun 2024     674MB
-    quay.io/kiwitcms/version            13.3 (aarch64)          0f9f70835859    20 May 2024     686MB
-    quay.io/kiwitcms/version            13.3 (x86_64)           c43a47e388ab    20 May 2024     675MB
-    quay.io/kiwitcms/version            13.2 (aarch64)          e596cef147cc    04 May 2024     693MB
-    quay.io/kiwitcms/version            13.2 (x86_64)           6cb7c6d669a2    04 May 2024     681MB
-    quay.io/kiwitcms/version            13.1.1 (aarch64)        d9bdea3736ce    27 Feb 2024     707MB
-    quay.io/kiwitcms/version            13.1.1 (x86_64)         5574cf84d49e    27 Feb 2024     696MB
-    quay.io/kiwitcms/version            13.1 (aarch64)          a611a00ee2bc    26 Feb 2024     709MB
-    quay.io/kiwitcms/version            13.1 (x86_64)           b64472d820a2    26 Feb 2024     698MB
-    quay.io/kiwitcms/version            13.0 (aarch64)          edf0999ee223    17 Jan 2024     698MB
-    quay.io/kiwitcms/version            13.0 (x86_64)           088187a81d3c    17 Jan 2024     686MB
-    quay.io/kiwitcms/version            12.7 (aarch64)          aa6a4c5434c9    25 Nov 2023     624MB
-    quay.io/kiwitcms/version            12.7 (x86_64)           973df48a2f82    25 Nov 2023     613MB
-    quay.io/kiwitcms/version            12.6.1 (aarch64)        323f49dbe0f8    31 Aug 2023     607MB
-    quay.io/kiwitcms/version            12.6.1 (x86_64)         c2a9b82871d9    31 Aug 2023     598MB
-    quay.io/kiwitcms/version            12.6 (aarch64)          9cab3be23ee9    30 Aug 2023     607MB
-    quay.io/kiwitcms/version            12.6 (x86_64)           47fd845c2563    30 Aug 2023     598MB
-    quay.io/kiwitcms/version            12.5 (aarch64)          2349e3ea1b78    04 Jul 2023     606MB
-    quay.io/kiwitcms/version            12.5 (x86_64)           9a689f9866d9    04 Jul 2023     597MB
-    quay.io/kiwitcms/version            12.4 (aarch64)          2d1f5f1ead8a    06 Jun 2023     607MB
-    quay.io/kiwitcms/version            12.4 (x86_64)           5f88a1a37a39    06 Jun 2023     598MB
-    quay.io/kiwitcms/version            12.3 (aarch64)          8bf8cd56c565    22 May 2023     601MB
-    quay.io/kiwitcms/version            12.3 (x86_64)           1cbaba8640d9    22 May 2023     592MB
-    quay.io/kiwitcms/version            12.2 (aarch64)          7e88241f7476    23 Apr 2023     601MB
-    quay.io/kiwitcms/version            12.2 (x86_64)           89b8ca5e0f5f    23 Apr 2023     592MB
-    quay.io/kiwitcms/version            12.1 (aarch64)          571870729367    29 Mar 2023     528MB
-    quay.io/kiwitcms/version            12.1 (x86_64)           590c0cd6f25f    29 Mar 2023     520MB
-    quay.io/kiwitcms/version            12.0 (aarch64)          21507017de36    15 Feb 2023     527MB
-    quay.io/kiwitcms/version            12.0 (x86_64)           cbe275c11098    15 Feb 2023     518MB
-    quay.io/kiwitcms/version            11.7 (aarch64)          54ca241ac5ca    02 Jan 2023     595MB
-    quay.io/kiwitcms/version            11.7 (x86_64)           316d5d4865a1    02 Jan 2023     571MB
-    quay.io/kiwitcms/version            11.6 (aarch64)          cf244e2f1dac    08 Nov 2022     636MB
-    quay.io/kiwitcms/version            11.6 (x86_64)           9773335a58d1    08 Nov 2022     612MB
-    quay.io/kiwitcms/version            11.5 (aarch64)          4be7894de8ae    06 Sep 2022     638MB
-    quay.io/kiwitcms/version            11.5 (x86_64)           66c51b64e0a6    06 Sep 2022     608MB
-    quay.io/kiwitcms/version            11.4 (aarch64)          62207c605dcf    03 Aug 2022     639MB
-    quay.io/kiwitcms/version            11.4 (x86_64)           8c8356c0268d    03 Aug 2022     610MB
-    quay.io/kiwitcms/version            11.3 (aarch64)          e9f34a86cd0b    27 Apr 2022     671MB
-    quay.io/kiwitcms/version            11.3 (x86_64)           58dcfa91e816    27 Apr 2022     627MB
-    quay.io/kiwitcms/version            11.2 (aarch64)          3b782830d19d    09 Mar 2022     665MB
-    quay.io/kiwitcms/version            11.2 (x86_64)           bcc4c658440a    09 Mar 2022     620MB
-    quay.io/kiwitcms/version            11.1                    72099aa8ee93    02 Feb 2022     627MB
-    quay.io/kiwitcms/version            11.0                    6600bc56a544    24 Jan 2022     620MB
-    quay.io/kiwitcms/version            10.5                    0574b19b5d66    25 Nov 2021     581MB
-    quay.io/kiwitcms/version            10.4                    10eb8f04cccd    04 Oct 2021     588MB
-    quay.io/kiwitcms/version            10.3                    bd28c4b064f5    11 Aug 2021     577MB
-    quay.io/kiwitcms/version            10.2                    71b5c2a3dee4    11 Jul 2021     970MB
-    quay.io/kiwitcms/version            10.1                    788af5c3f067    18 May 2021     798MB
-    quay.io/kiwitcms/version            10.0                    9f23186803d5    02 Mar 2021     734MB
-    quay.io/kiwitcms/version            9.0.1                   c6492d498703    14 Jan 2021     694MB
-    quay.io/kiwitcms/version            9.0                     f98908772a2a    12 Jan 2021     694MB
-    quay.io/kiwitcms/version            8.9                     9bcfea3a532e    07 Dec 2020     651MB
-    quay.io/kiwitcms/version            8.8                     4b31ecf8ab5b    07 Nov 2020     653MB
-    quay.io/kiwitcms/version            8.7                     1f2461b1facd    16 Sep 2020     642MB
-    quay.io/kiwitcms/version            8.6                     f2c21b370cd9    23 Aug 2020     638MB
-    quay.io/kiwitcms/version            8.5                     4379e2438e43    10 Jul 2020     635MB
-    quay.io/kiwitcms/version            8.4                     602dddcf41a7    03 Jun 2020     645MB
-    quay.io/kiwitcms/version            8.3                     7b4e0fbe4aea    27 Apr 2020     551MB
-    quay.io/kiwitcms/version            8.2                     55ff30b351fe    03 Apr 2020     552MB
-    quay.io/kiwitcms/version            8.1                     dbcf37258d15    04 Mar 2020     551MB
-    quay.io/kiwitcms/version            8.0                     16489020f5f8    12 Feb 2020     551MB
-    quay.io/kiwitcms/version            7.3                     34028e9d16fc    16 Jan 2020     550MB
-    quay.io/kiwitcms/version            7.2.1                   7250ab605c9b    23 Dec 2019     550MB
-    quay.io/kiwitcms/version            7.2                     9b0678efa915    08 Dec 2019     550MB
-    quay.io/kiwitcms/version            7.1                     9e9673fa84d6    29 Oct 2019     613MB
-    quay.io/kiwitcms/version            7.0                     b9a2c2013af2    24 Sep 2019     590MB
-    quay.io/kiwitcms/version            6.11                    3c9cd1094c44    02 Aug 2019     970MB
-    quay.io/kiwitcms/version            6.10                    2ad9a57fc762    18 Jun 2019     972MB
-    quay.io/kiwitcms/version            6.9                     a004729760bd    15 May 2019     972MB
-    quay.io/kiwitcms/version            6.8                     4c03a023ff80    03 May 2019     966MB
-    quay.io/kiwitcms/version            6.7                     a9f959a53519    06 Apr 2019     1.05GB
-    quay.io/kiwitcms/version            6.6                     253803a55cc3    19 Mar 2019     1.04GB
-    quay.io/kiwitcms/version            6.5.3                   fe28a6b0d35a    11 Feb 2019     1.04GB
-    quay.io/kiwitcms/version            6.5.1                   3bf08817da8d    01 Feb 2019     1.04GB
-    quay.io/kiwitcms/version            6.2.1                   048826206038    12 Nov 2018     1.15GB
-    quay.io/kiwitcms/version            6.2                     7870085ad415    02 Nov 2018     958MB
-    quay.io/kiwitcms/version            6.1.1                   49fa42ddfe4d    29 Oct 2018     956MB
-    quay.io/kiwitcms/version            6.1                     b559123d25b0    20 Oct 2018     970MB
-    quay.io/kiwitcms/version            6.0.1                   87b24d94197d    20 Oct 2018     970MB
-    quay.io/kiwitcms/version            6.0                     44787161a4d1    04 Oct 2018     1.1GB
-    quay.io/kiwitcms/version            5.3.1                   a420465852be    04 Sep 2018     977MB
+    hub.kiwitcms.eu/kiwitcms/version            14.0 (aarch64)          9aaf5f3e5c7e    05 Feb 2025     695MB
+    hub.kiwitcms.eu/kiwitcms/version            14.0 (x86_64)           0152d6ac4cec    05 Feb 2025     681MB
+    hub.kiwitcms.eu/kiwitcms/version            13.7 (aarch64)          33ab4247df54    04 Dec 2024     687MB
+    hub.kiwitcms.eu/kiwitcms/version            13.7 (x86_64)           ecf66eb23dda    04 Dec 2024     677MB
+    hub.kiwitcms.eu/kiwitcms/version            13.6 (aarch64)          14f4599db480    12 Oct 2024     705MB
+    hub.kiwitcms.eu/kiwitcms/version            13.6 (x86_64)           2d925723ab4e    12 Oct 2024     693MB
+    hub.kiwitcms.eu/kiwitcms/version            13.5 (aarch64)          0fe07ed87230    07 Aug 2024     701MB
+    hub.kiwitcms.eu/kiwitcms/version            13.5 (x86_64)           086fed49c1ca    07 Aug 2024     688MB
+    hub.kiwitcms.eu/kiwitcms/version            13.4 (aarch64)          d4aaf8b83d66    12 Jun 2024     686MB
+    hub.kiwitcms.eu/kiwitcms/version            13.4 (x86_64)           16bf67e2fc1f    12 Jun 2024     674MB
+    hub.kiwitcms.eu/kiwitcms/version            13.3 (aarch64)          0f9f70835859    20 May 2024     686MB
+    hub.kiwitcms.eu/kiwitcms/version            13.3 (x86_64)           c43a47e388ab    20 May 2024     675MB
+    hub.kiwitcms.eu/kiwitcms/version            13.2 (aarch64)          e596cef147cc    04 May 2024     693MB
+    hub.kiwitcms.eu/kiwitcms/version            13.2 (x86_64)           6cb7c6d669a2    04 May 2024     681MB
+    hub.kiwitcms.eu/kiwitcms/version            13.1.1 (aarch64)        d9bdea3736ce    27 Feb 2024     707MB
+    hub.kiwitcms.eu/kiwitcms/version            13.1.1 (x86_64)         5574cf84d49e    27 Feb 2024     696MB
+    hub.kiwitcms.eu/kiwitcms/version            13.1 (aarch64)          a611a00ee2bc    26 Feb 2024     709MB
+    hub.kiwitcms.eu/kiwitcms/version            13.1 (x86_64)           b64472d820a2    26 Feb 2024     698MB
+    hub.kiwitcms.eu/kiwitcms/version            13.0 (aarch64)          edf0999ee223    17 Jan 2024     698MB
+    hub.kiwitcms.eu/kiwitcms/version            13.0 (x86_64)           088187a81d3c    17 Jan 2024     686MB
+    hub.kiwitcms.eu/kiwitcms/version            12.7 (aarch64)          aa6a4c5434c9    25 Nov 2023     624MB
+    hub.kiwitcms.eu/kiwitcms/version            12.7 (x86_64)           973df48a2f82    25 Nov 2023     613MB
+    hub.kiwitcms.eu/kiwitcms/version            12.6.1 (aarch64)        323f49dbe0f8    31 Aug 2023     607MB
+    hub.kiwitcms.eu/kiwitcms/version            12.6.1 (x86_64)         c2a9b82871d9    31 Aug 2023     598MB
+    hub.kiwitcms.eu/kiwitcms/version            12.6 (aarch64)          9cab3be23ee9    30 Aug 2023     607MB
+    hub.kiwitcms.eu/kiwitcms/version            12.6 (x86_64)           47fd845c2563    30 Aug 2023     598MB
+    hub.kiwitcms.eu/kiwitcms/version            12.5 (aarch64)          2349e3ea1b78    04 Jul 2023     606MB
+    hub.kiwitcms.eu/kiwitcms/version            12.5 (x86_64)           9a689f9866d9    04 Jul 2023     597MB
+    hub.kiwitcms.eu/kiwitcms/version            12.4 (aarch64)          2d1f5f1ead8a    06 Jun 2023     607MB
+    hub.kiwitcms.eu/kiwitcms/version            12.4 (x86_64)           5f88a1a37a39    06 Jun 2023     598MB
+    hub.kiwitcms.eu/kiwitcms/version            12.3 (aarch64)          8bf8cd56c565    22 May 2023     601MB
+    hub.kiwitcms.eu/kiwitcms/version            12.3 (x86_64)           1cbaba8640d9    22 May 2023     592MB
+    hub.kiwitcms.eu/kiwitcms/version            12.2 (aarch64)          7e88241f7476    23 Apr 2023     601MB
+    hub.kiwitcms.eu/kiwitcms/version            12.2 (x86_64)           89b8ca5e0f5f    23 Apr 2023     592MB
+    hub.kiwitcms.eu/kiwitcms/version            12.1 (aarch64)          571870729367    29 Mar 2023     528MB
+    hub.kiwitcms.eu/kiwitcms/version            12.1 (x86_64)           590c0cd6f25f    29 Mar 2023     520MB
+    hub.kiwitcms.eu/kiwitcms/version            12.0 (aarch64)          21507017de36    15 Feb 2023     527MB
+    hub.kiwitcms.eu/kiwitcms/version            12.0 (x86_64)           cbe275c11098    15 Feb 2023     518MB
+    hub.kiwitcms.eu/kiwitcms/version            11.7 (aarch64)          54ca241ac5ca    02 Jan 2023     595MB
+    hub.kiwitcms.eu/kiwitcms/version            11.7 (x86_64)           316d5d4865a1    02 Jan 2023     571MB
+    hub.kiwitcms.eu/kiwitcms/version            11.6 (aarch64)          cf244e2f1dac    08 Nov 2022     636MB
+    hub.kiwitcms.eu/kiwitcms/version            11.6 (x86_64)           9773335a58d1    08 Nov 2022     612MB
+    hub.kiwitcms.eu/kiwitcms/version            11.5 (aarch64)          4be7894de8ae    06 Sep 2022     638MB
+    hub.kiwitcms.eu/kiwitcms/version            11.5 (x86_64)           66c51b64e0a6    06 Sep 2022     608MB
+    hub.kiwitcms.eu/kiwitcms/version            11.4 (aarch64)          62207c605dcf    03 Aug 2022     639MB
+    hub.kiwitcms.eu/kiwitcms/version            11.4 (x86_64)           8c8356c0268d    03 Aug 2022     610MB
+    hub.kiwitcms.eu/kiwitcms/version            11.3 (aarch64)          e9f34a86cd0b    27 Apr 2022     671MB
+    hub.kiwitcms.eu/kiwitcms/version            11.3 (x86_64)           58dcfa91e816    27 Apr 2022     627MB
+    hub.kiwitcms.eu/kiwitcms/version            11.2 (aarch64)          3b782830d19d    09 Mar 2022     665MB
+    hub.kiwitcms.eu/kiwitcms/version            11.2 (x86_64)           bcc4c658440a    09 Mar 2022     620MB
+    hub.kiwitcms.eu/kiwitcms/version            11.1                    72099aa8ee93    02 Feb 2022     627MB
+    hub.kiwitcms.eu/kiwitcms/version            11.0                    6600bc56a544    24 Jan 2022     620MB
+    hub.kiwitcms.eu/kiwitcms/version            10.5                    0574b19b5d66    25 Nov 2021     581MB
+    hub.kiwitcms.eu/kiwitcms/version            10.4                    10eb8f04cccd    04 Oct 2021     588MB
+    hub.kiwitcms.eu/kiwitcms/version            10.3                    bd28c4b064f5    11 Aug 2021     577MB
+    hub.kiwitcms.eu/kiwitcms/version            10.2                    71b5c2a3dee4    11 Jul 2021     970MB
+    hub.kiwitcms.eu/kiwitcms/version            10.1                    788af5c3f067    18 May 2021     798MB
+    hub.kiwitcms.eu/kiwitcms/version            10.0                    9f23186803d5    02 Mar 2021     734MB
+    hub.kiwitcms.eu/kiwitcms/version            9.0.1                   c6492d498703    14 Jan 2021     694MB
+    hub.kiwitcms.eu/kiwitcms/version            9.0                     f98908772a2a    12 Jan 2021     694MB
+    hub.kiwitcms.eu/kiwitcms/version            8.9                     9bcfea3a532e    07 Dec 2020     651MB
+    hub.kiwitcms.eu/kiwitcms/version            8.8                     4b31ecf8ab5b    07 Nov 2020     653MB
+    hub.kiwitcms.eu/kiwitcms/version            8.7                     1f2461b1facd    16 Sep 2020     642MB
+    hub.kiwitcms.eu/kiwitcms/version            8.6                     f2c21b370cd9    23 Aug 2020     638MB
+    hub.kiwitcms.eu/kiwitcms/version            8.5                     4379e2438e43    10 Jul 2020     635MB
+    hub.kiwitcms.eu/kiwitcms/version            8.4                     602dddcf41a7    03 Jun 2020     645MB
+    hub.kiwitcms.eu/kiwitcms/version            8.3                     7b4e0fbe4aea    27 Apr 2020     551MB
+    hub.kiwitcms.eu/kiwitcms/version            8.2                     55ff30b351fe    03 Apr 2020     552MB
+    hub.kiwitcms.eu/kiwitcms/version            8.1                     dbcf37258d15    04 Mar 2020     551MB
+    hub.kiwitcms.eu/kiwitcms/version            8.0                     16489020f5f8    12 Feb 2020     551MB
+    hub.kiwitcms.eu/kiwitcms/version            7.3                     34028e9d16fc    16 Jan 2020     550MB
+    hub.kiwitcms.eu/kiwitcms/version            7.2.1                   7250ab605c9b    23 Dec 2019     550MB
+    hub.kiwitcms.eu/kiwitcms/version            7.2                     9b0678efa915    08 Dec 2019     550MB
+    hub.kiwitcms.eu/kiwitcms/version            7.1                     9e9673fa84d6    29 Oct 2019     613MB
+    hub.kiwitcms.eu/kiwitcms/version            7.0                     b9a2c2013af2    24 Sep 2019     590MB
+    hub.kiwitcms.eu/kiwitcms/version            6.11                    3c9cd1094c44    02 Aug 2019     970MB
+    hub.kiwitcms.eu/kiwitcms/version            6.10                    2ad9a57fc762    18 Jun 2019     972MB
+    hub.kiwitcms.eu/kiwitcms/version            6.9                     a004729760bd    15 May 2019     972MB
+    hub.kiwitcms.eu/kiwitcms/version            6.8                     4c03a023ff80    03 May 2019     966MB
+    hub.kiwitcms.eu/kiwitcms/version            6.7                     a9f959a53519    06 Apr 2019     1.05GB
+    hub.kiwitcms.eu/kiwitcms/version            6.6                     253803a55cc3    19 Mar 2019     1.04GB
+    hub.kiwitcms.eu/kiwitcms/version            6.5.3                   fe28a6b0d35a    11 Feb 2019     1.04GB
+    hub.kiwitcms.eu/kiwitcms/version            6.5.1                   3bf08817da8d    01 Feb 2019     1.04GB
+    hub.kiwitcms.eu/kiwitcms/version            6.2.1                   048826206038    12 Nov 2018     1.15GB
+    hub.kiwitcms.eu/kiwitcms/version            6.2                     7870085ad415    02 Nov 2018     958MB
+    hub.kiwitcms.eu/kiwitcms/version            6.1.1                   49fa42ddfe4d    29 Oct 2018     956MB
+    hub.kiwitcms.eu/kiwitcms/version            6.1                     b559123d25b0    20 Oct 2018     970MB
+    hub.kiwitcms.eu/kiwitcms/version            6.0.1                   87b24d94197d    20 Oct 2018     970MB
+    hub.kiwitcms.eu/kiwitcms/version            6.0                     44787161a4d1    04 Oct 2018     1.1GB
+    hub.kiwitcms.eu/kiwitcms/version            5.3.1                   a420465852be    04 Sep 2018     977MB
     =================================================================================================
-    quay.io/kiwitcms/enterprise         14.0-mt (aarch64)       f28044190b68    05 Feb 2025     1.08GB
-    quay.io/kiwitcms/enterprise         14.0-mt (x86_64)        317f8f14a984    05 Feb 2025     1.06GB
-    quay.io/kiwitcms/enterprise         13.7-mt (aarch64)       5e9b96dd3e6f    04 Dec 2024     1.08GB
-    quay.io/kiwitcms/enterprise         13.7-mt (x86_64)        62d4a283713b    04 Dec 2024     1.06GB
-    quay.io/kiwitcms/enterprise         13.6-mt (aarch64)       27a5de45d8dc    12 Oct 2024     1.07GB
-    quay.io/kiwitcms/enterprise         13.6-mt (x86_64)        f2ba176b5e0f    12 Oct 2024     1.05GB
-    quay.io/kiwitcms/enterprise         13.5-mt (aarch64)       3983e3289c81    07 Aug 2024     1.07GB
-    quay.io/kiwitcms/enterprise         13.5-mt (x86_64)        eedb94e79149    07 Aug 2024     1.04GB
-    quay.io/kiwitcms/enterprise         13.4-mt (aarch64)       c070b5cdf01b    12 Jun 2024     1.05GB
-    quay.io/kiwitcms/enterprise         13.4-mt (x86_64)        c3a1059e1884    12 Jun 2024     1.03GB
-    quay.io/kiwitcms/enterprise         13.3-mt (aarch64)       40d0769bc640    20 May 2024     1.05GB
-    quay.io/kiwitcms/enterprise         13.3-mt (x86_64)        ea3d8e8999f4    20 May 2024     1.03GB
-    quay.io/kiwitcms/enterprise         13.2-mt (aarch64)       ab6d8f2039b4    04 May 2024     1.06GB
-    quay.io/kiwitcms/enterprise         13.2-mt (x86_64)        a6938623851d    04 May 2024     1.04GB
-    quay.io/kiwitcms/enterprise         13.1.1-mt-20240302(arm64) 7cd9cbb94f71  02 Mar 2024     1.06GB
-    quay.io/kiwitcms/enterprise         13.1.1-mt-20240302(amd64) 0adcd8f6cbc8  02 Mar 2024     1.04GB
-    quay.io/kiwitcms/enterprise         13.1.1-mt (aarch64)     0c6e3d1d7a05    27 Feb 2024     1.06GB
-    quay.io/kiwitcms/enterprise         13.1.1-mt (x86_64)      fe2cb1e64b75    27 Feb 2024     1.04GB
-    quay.io/kiwitcms/enterprise         13.1-mt (aarch64)       76ef5773b488    26 Feb 2024     1.07GB
-    quay.io/kiwitcms/enterprise         13.1-mt (x86_64)        9781119c2348    26 Feb 2024     1.04GB
-    quay.io/kiwitcms/enterprise         13.0-mt (aarch64)       58a8321da098    17 Jan 2024     899MB
-    quay.io/kiwitcms/enterprise         13.0-mt (x86_64)        2c6fbc6adcc5    17 Jan 2024     885MB
-    quay.io/kiwitcms/enterprise         12.7-mt (aarch64)       e19c493e7291    25 Nov 2023     814MB
-    quay.io/kiwitcms/enterprise         12.7-mt (x86_64)        f38a49d661ad    25 Nov 2023     801MB
-    quay.io/kiwitcms/enterprise         12.6.1-mt (aarch64)     34a63fa8e979    31 Aug 2023     860MB
-    quay.io/kiwitcms/enterprise         12.6.1-mt (x86_64)      dbf819ed00cc    31 Aug 2023     849MB
-    quay.io/kiwitcms/enterprise         12.5-mt (aarch64)       56634afe511a    04 Jul 2023     852MB
-    quay.io/kiwitcms/enterprise         12.5-mt (x86_64)        cdfd6965ad4e    04 Jul 2023     841MB
-    quay.io/kiwitcms/enterprise         12.4-mt (aarch64)       254794a5c858    06 Jun 2023     851MB
-    quay.io/kiwitcms/enterprise         12.4-mt (x86_64)        5bc0ef78a3c4    06 Jun 2023     840MB
-    quay.io/kiwitcms/enterprise         12.3-mt (aarch64)       36d6670c3fca    22 May 2023     845MB
-    quay.io/kiwitcms/enterprise         12.3-mt (x86_64)        e769e6bdb5c1    22 May 2023     835MB
-    quay.io/kiwitcms/enterprise         12.2-mt (aarch64)       7f2a05cf9888    23 Apr 2023     843MB
-    quay.io/kiwitcms/enterprise         12.2-mt (x86_64)        c4f518a20c58    23 Apr 2023     833MB
-    quay.io/kiwitcms/enterprise         12.1-mt (aarch64)       0a1e2f092351    29 Mar 2023     734MB
-    quay.io/kiwitcms/enterprise         12.1-mt (x86_64)        9f44aaab7646    29 Mar 2023     725MB
-    quay.io/kiwitcms/enterprise         12.0-mt (aarch64)       a67e0c1ac309    15 Feb 2023     727MB
-    quay.io/kiwitcms/enterprise         12.0-mt (x86_64)        3da1342bcd01    15 Feb 2023     717MB
-    quay.io/kiwitcms/enterprise         11.7-mt (aarch64)       6657a3c197e8    02 Jan 2023     802MB
-    quay.io/kiwitcms/enterprise         11.7-mt (x86_64)        80f6d959d90a    02 Jan 2023     778MB
-    quay.io/kiwitcms/enterprise         11.6-mt (aarch64)       55cf76524ebd    08 Nov 2022     858MB
-    quay.io/kiwitcms/enterprise         11.6-mt (x86_64)        61f48a62666b    08 Nov 2022     832MB
-    quay.io/kiwitcms/enterprise         11.5.1-mt (aarch64)     9fc726a593fe    10 Sep 2022     862MB
-    quay.io/kiwitcms/enterprise         11.5.1-mt (x86_64)      17821dc87456    10 Sep 2022     829MB
-    quay.io/kiwitcms/enterprise         11.5-mt (aarch64)       82d64398d8bf    06 Sep 2022     862MB
-    quay.io/kiwitcms/enterprise         11.5-mt (x86_64)        8a5b0b58bcca    06 Sep 2022     829MB
-    quay.io/kiwitcms/enterprise         11.4-mt (aarch64)       f5720d030612    03 Aug 2022     862MB
-    quay.io/kiwitcms/enterprise         11.4-mt (x86_64)        8ffd5a64a4d1    03 Aug 2022     829MB
-    quay.io/kiwitcms/enterprise         11.3.1-mt (aarch64)     58a53d616105    27 Apr 2022     894MB
-    quay.io/kiwitcms/enterprise         11.3.1-mt (x86_64)      3b5e7fbd234a    27 Apr 2022     847MB
-    quay.io/kiwitcms/enterprise         11.3-mt (aarch64)       42fd6e3b45fc    27 Apr 2022     894MB
-    quay.io/kiwitcms/enterprise         11.3-mt (x86_64)        f2b22f3037ff    27 Apr 2022     846MB
-    quay.io/kiwitcms/enterprise         11.2-mt (aarch64)       fe5e869e36f6    09 Mar 2022     890MB
-    quay.io/kiwitcms/enterprise         11.2-mt (x86_64)        134320d5fb7c    09 Mar 2022     841MB
-    quay.io/kiwitcms/enterprise         11.1-mt                 df5ce509fd41    02 Feb 2022     852MB
-    quay.io/kiwitcms/enterprise         11.0-mt                 a730291750f8    24 Jan 2022     843MB
-    quay.io/kiwitcms/enterprise         10.5.1-mt               c4d745bd914c    05 Jan 2022     803MB
-    quay.io/kiwitcms/enterprise         10.5-mt                 3e597c91d057    25 Nov 2021     801MB
-    quay.io/kiwitcms/enterprise         10.4.1-mt               3f0504d0d724    05 Oct 2021     806MB
-    quay.io/kiwitcms/enterprise         10.4-mt                 db6c57b8a04a    04 Oct 2021     806MB
-    quay.io/kiwitcms/enterprise         10.3-mt                 841d83502eef    11 Aug 2021     791MB
-    quay.io/kiwitcms/enterprise         10.2-mt                 1fd1cd7442bb    11 Jul 2021     1.29GB
-    quay.io/kiwitcms/enterprise         10.1.1-mt               d61e243dc4f5    01 Jul 2021     1.19GB
-    quay.io/kiwitcms/enterprise         10.1-mt                 08468cd91c3b    18 May 2021     1.11GB
-    quay.io/kiwitcms/enterprise         10.0.1-mt               8b6bb635ba28    29 Apr 2021     1.04GB
-    quay.io/kiwitcms/enterprise         10.0-mt                 d97f096d114d    02 Mar 2021     1.01GB
-    quay.io/kiwitcms/enterprise         9.0.1-mt                959f1005ca92    14 Jan 2021     955MB
-    quay.io/kiwitcms/enterprise         9.0-mt                  ecde99d58348    12 Jan 2021     955MB
-    quay.io/kiwitcms/enterprise         8.9-mt                  6f475eb641d5    07 Dec 2020     905MB
-    quay.io/kiwitcms/enterprise         8.8-mt                  9ed2cd129dad    07 Nov 2020     904MB
-    quay.io/kiwitcms/enterprise         8.7-mt                  2cedfac56597    16 Sep 2020     895MB
-    quay.io/kiwitcms/enterprise         8.6-mt                  1fdf90c4477d    23 Aug 2020     890MB
-    quay.io/kiwitcms/enterprise         8.5.2-mt                633291dd5219    06 Aug 2020     886MB
-    quay.io/kiwitcms/enterprise         8.5.1-mt                8ca936c27da5    24 Jul 2020     885MB
-    quay.io/kiwitcms/enterprise         8.5-mt                  89eb34583295    10 Jul 2020     884MB
-    quay.io/kiwitcms/enterprise         8.4-mt                  74af0d7317da    03 Jun 2020     882MB
-    quay.io/kiwitcms/enterprise         8.3-mt                  caecc20226cc    27 Apr 2020     789MB
-    quay.io/kiwitcms/enterprise         8.2-mt                  87b6c6d01326    03 Apr 2020     755MB
-    quay.io/kiwitcms/enterprise         8.1.99-mt               aa48b7551313    ...........     753MB
-    quay.io/kiwitcms/enterprise         8.1-mt                  44cbe05e5d90    04 Mar 2020     751MB
-    quay.io/kiwitcms/enterprise         8.0-mt                  9e4b8d0c3fef    12 Feb 2020     751MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         14.0-mt (aarch64)       f28044190b68    05 Feb 2025     1.08GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         14.0-mt (x86_64)        317f8f14a984    05 Feb 2025     1.06GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.7-mt (aarch64)       5e9b96dd3e6f    04 Dec 2024     1.08GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.7-mt (x86_64)        62d4a283713b    04 Dec 2024     1.06GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.6-mt (aarch64)       27a5de45d8dc    12 Oct 2024     1.07GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.6-mt (x86_64)        f2ba176b5e0f    12 Oct 2024     1.05GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.5-mt (aarch64)       3983e3289c81    07 Aug 2024     1.07GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.5-mt (x86_64)        eedb94e79149    07 Aug 2024     1.04GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.4-mt (aarch64)       c070b5cdf01b    12 Jun 2024     1.05GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.4-mt (x86_64)        c3a1059e1884    12 Jun 2024     1.03GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.3-mt (aarch64)       40d0769bc640    20 May 2024     1.05GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.3-mt (x86_64)        ea3d8e8999f4    20 May 2024     1.03GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.2-mt (aarch64)       ab6d8f2039b4    04 May 2024     1.06GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.2-mt (x86_64)        a6938623851d    04 May 2024     1.04GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.1.1-mt-20240302(arm64) 7cd9cbb94f71  02 Mar 2024     1.06GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.1.1-mt-20240302(amd64) 0adcd8f6cbc8  02 Mar 2024     1.04GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.1.1-mt (aarch64)     0c6e3d1d7a05    27 Feb 2024     1.06GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.1.1-mt (x86_64)      fe2cb1e64b75    27 Feb 2024     1.04GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.1-mt (aarch64)       76ef5773b488    26 Feb 2024     1.07GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.1-mt (x86_64)        9781119c2348    26 Feb 2024     1.04GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.0-mt (aarch64)       58a8321da098    17 Jan 2024     899MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         13.0-mt (x86_64)        2c6fbc6adcc5    17 Jan 2024     885MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.7-mt (aarch64)       e19c493e7291    25 Nov 2023     814MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.7-mt (x86_64)        f38a49d661ad    25 Nov 2023     801MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.6.1-mt (aarch64)     34a63fa8e979    31 Aug 2023     860MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.6.1-mt (x86_64)      dbf819ed00cc    31 Aug 2023     849MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.5-mt (aarch64)       56634afe511a    04 Jul 2023     852MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.5-mt (x86_64)        cdfd6965ad4e    04 Jul 2023     841MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.4-mt (aarch64)       254794a5c858    06 Jun 2023     851MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.4-mt (x86_64)        5bc0ef78a3c4    06 Jun 2023     840MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.3-mt (aarch64)       36d6670c3fca    22 May 2023     845MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.3-mt (x86_64)        e769e6bdb5c1    22 May 2023     835MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.2-mt (aarch64)       7f2a05cf9888    23 Apr 2023     843MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.2-mt (x86_64)        c4f518a20c58    23 Apr 2023     833MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.1-mt (aarch64)       0a1e2f092351    29 Mar 2023     734MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.1-mt (x86_64)        9f44aaab7646    29 Mar 2023     725MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.0-mt (aarch64)       a67e0c1ac309    15 Feb 2023     727MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         12.0-mt (x86_64)        3da1342bcd01    15 Feb 2023     717MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.7-mt (aarch64)       6657a3c197e8    02 Jan 2023     802MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.7-mt (x86_64)        80f6d959d90a    02 Jan 2023     778MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.6-mt (aarch64)       55cf76524ebd    08 Nov 2022     858MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.6-mt (x86_64)        61f48a62666b    08 Nov 2022     832MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.5.1-mt (aarch64)     9fc726a593fe    10 Sep 2022     862MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.5.1-mt (x86_64)      17821dc87456    10 Sep 2022     829MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.5-mt (aarch64)       82d64398d8bf    06 Sep 2022     862MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.5-mt (x86_64)        8a5b0b58bcca    06 Sep 2022     829MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.4-mt (aarch64)       f5720d030612    03 Aug 2022     862MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.4-mt (x86_64)        8ffd5a64a4d1    03 Aug 2022     829MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.3.1-mt (aarch64)     58a53d616105    27 Apr 2022     894MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.3.1-mt (x86_64)      3b5e7fbd234a    27 Apr 2022     847MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.3-mt (aarch64)       42fd6e3b45fc    27 Apr 2022     894MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.3-mt (x86_64)        f2b22f3037ff    27 Apr 2022     846MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.2-mt (aarch64)       fe5e869e36f6    09 Mar 2022     890MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.2-mt (x86_64)        134320d5fb7c    09 Mar 2022     841MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.1-mt                 df5ce509fd41    02 Feb 2022     852MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         11.0-mt                 a730291750f8    24 Jan 2022     843MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.5.1-mt               c4d745bd914c    05 Jan 2022     803MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.5-mt                 3e597c91d057    25 Nov 2021     801MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.4.1-mt               3f0504d0d724    05 Oct 2021     806MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.4-mt                 db6c57b8a04a    04 Oct 2021     806MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.3-mt                 841d83502eef    11 Aug 2021     791MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.2-mt                 1fd1cd7442bb    11 Jul 2021     1.29GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.1.1-mt               d61e243dc4f5    01 Jul 2021     1.19GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.1-mt                 08468cd91c3b    18 May 2021     1.11GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.0.1-mt               8b6bb635ba28    29 Apr 2021     1.04GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         10.0-mt                 d97f096d114d    02 Mar 2021     1.01GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         9.0.1-mt                959f1005ca92    14 Jan 2021     955MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         9.0-mt                  ecde99d58348    12 Jan 2021     955MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.9-mt                  6f475eb641d5    07 Dec 2020     905MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.8-mt                  9ed2cd129dad    07 Nov 2020     904MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.7-mt                  2cedfac56597    16 Sep 2020     895MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.6-mt                  1fdf90c4477d    23 Aug 2020     890MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.5.2-mt                633291dd5219    06 Aug 2020     886MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.5.1-mt                8ca936c27da5    24 Jul 2020     885MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.5-mt                  89eb34583295    10 Jul 2020     884MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.4-mt                  74af0d7317da    03 Jun 2020     882MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.3-mt                  caecc20226cc    27 Apr 2020     789MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.2-mt                  87b6c6d01326    03 Apr 2020     755MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.1.99-mt               aa48b7551313    ...........     753MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.1-mt                  44cbe05e5d90    04 Mar 2020     751MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         8.0-mt                  9e4b8d0c3fef    12 Feb 2020     751MB

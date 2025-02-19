@@ -25,9 +25,9 @@ You can explore everything at
 
 ---
 
-    Upstream container images (x86_64)::
+    Public container image (x86_64)::
 
-        kiwitcms/kiwi   latest  a4c45db53541    681MB
+        pub.kiwitcms.eu/kiwitcms/kiwi   latest  a4c45db53541    681MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container images <{filename}pages/containers.markdown>`_ are available only to
@@ -125,10 +125,10 @@ Private container images
 
     ::
 
-        quay.io/kiwitcms/version            14.0 (aarch64)          9aaf5f3e5c7e    05 Feb 2025     695MB
-        quay.io/kiwitcms/version            14.0 (x86_64)           0152d6ac4cec    05 Feb 2025     681MB
-        quay.io/kiwitcms/enterprise         14.0-mt (aarch64)       f28044190b68    05 Feb 2025     1.08GB
-        quay.io/kiwitcms/enterprise         14.0-mt (x86_64)        317f8f14a984    05 Feb 2025     1.06GB
+        hub.kiwitcms.eu/kiwitcms/version            14.0 (aarch64)          9aaf5f3e5c7e    05 Feb 2025     695MB
+        hub.kiwitcms.eu/kiwitcms/version            14.0 (x86_64)           0152d6ac4cec    05 Feb 2025     681MB
+        hub.kiwitcms.eu/kiwitcms/enterprise         14.0-mt (aarch64)       f28044190b68    05 Feb 2025     1.08GB
+        hub.kiwitcms.eu/kiwitcms/enterprise         14.0-mt (x86_64)        317f8f14a984    05 Feb 2025     1.06GB
 
 **IMPORTANT:** version tagged, multi-arch and Enterprise
 `container images <{filename}pages/containers.markdown>`_ are available only to

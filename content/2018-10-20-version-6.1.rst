@@ -28,10 +28,10 @@ Supported upgrade paths::
 
 Docker images::
 
-    kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
-    kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-    kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-    kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 
 
 
@@ -96,7 +96,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

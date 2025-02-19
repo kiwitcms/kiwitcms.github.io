@@ -16,13 +16,12 @@ Information about official upstream container images
 ----------------------------------------------------
 
 The official upstream Kiwi TCMS container image will continue to be
-publicly available via [Docker Hub](https://hub.docker.com/r/kiwitcms/kiwi)
-as before. In addition all existing and new images will be available via
-[Quay.io](https://quay.io/repository/kiwitcms/kiwi).
+publicly available as before.
+In addition new images will be available via Red Hat's Quay.io service.
 These images are available as
 
-- [kiwitcms/kiwi](https://hub.docker.com/r/kiwitcms/kiwi) (Docker Hub)
-- [quay.io/kiwitcms/kiwi](https://quay.io/repository/kiwitcms/kiwi) (Quay.io)
+- `pub.kiwitcms.eu/kiwitcms/kiwi` - Docker Hub
+- `hub.kiwitcms.eu/kiwitcms/kiwi` - Quay.io
 
 Content is exactly the same between the two registries and you may use
 the one which you like best!
@@ -41,11 +40,11 @@ upstream Kiwi TCMS container images as well as access to tagged versions of
 Kiwi TCMS Enterprise container images! Previously these containers were distributed
 via Docker Hub and are now available via Quay.io:
 
-- `mrsenko/kiwitcms` -> `quay.io/kiwitcms/version` (version tagged upstream images)
-- `mrsenko/kiwitcms-enterprise` -> `quay.io/kiwitcms/enterprise` (enterprise images)
+- `mrsenko/kiwitcms` -> `hub.kiwitcms.eu/kiwitcms/version` (version tagged upstream images)
+- `mrsenko/kiwitcms-enterprise` -> `hub.kiwitcms.eu/kiwitcms/enterprise` (enterprise images)
 
 **Important:** existing subscribers have been notified and granted access
-to the new repositories on Quay.io. We advise you to update your
+to these new repositories. We advise you to update your
 `docker-compose.yml` files and start using the new images at your earliest convenience!
 
 **Warning:** existing subscribers will continue having access to private

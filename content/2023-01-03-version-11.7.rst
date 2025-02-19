@@ -28,7 +28,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        kiwitcms/kiwi   latest  316d5d4865a1    572MB
+        pub.kiwitcms.eu/kiwitcms/kiwi   latest  316d5d4865a1    572MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -136,10 +136,10 @@ Kiwi TCMS Enterprise v11.7-mt
 
     Private images::
 
-        quay.io/kiwitcms/version            11.7 (aarch64)          54ca241ac5ca    02 Jan 2023     595MB
-        quay.io/kiwitcms/version            11.7 (x86_64)           316d5d4865a1    02 Jan 2023     571MB
-        quay.io/kiwitcms/enterprise         11.7-mt (aarch64)       6657a3c197e8    02 Jan 2023     802MB
-        quay.io/kiwitcms/enterprise         11.7-mt (x86_64)        80f6d959d90a    02 Jan 2023     778MB
+        hub.kiwitcms.eu/kiwitcms/version            11.7 (aarch64)          54ca241ac5ca    02 Jan 2023     595MB
+        hub.kiwitcms.eu/kiwitcms/version            11.7 (x86_64)           316d5d4865a1    02 Jan 2023     571MB
+        hub.kiwitcms.eu/kiwitcms/enterprise         11.7-mt (aarch64)       6657a3c197e8    02 Jan 2023     802MB
+        hub.kiwitcms.eu/kiwitcms/enterprise         11.7-mt (x86_64)        80f6d959d90a    02 Jan 2023     778MB
 
 
 **IMPORTANT:** version tagged, multi-arch and Enterprise

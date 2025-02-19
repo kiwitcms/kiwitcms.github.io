@@ -1,5 +1,5 @@
 Title: Important changes for Kiwi TCMS subscribers
-Headline: new quay.io accounts, automatic account creation for new subscribers
+Headline: new hub.kiwitcms.eu accounts, automatic account creation for new subscribers
 date: 2024-10-22 12:15
 comments: false
 
@@ -7,13 +7,13 @@ Hello testers,
 starting today we are introducing several important changes to our subscription backend.
 
 
-New Quay.io accounts
---------------------
+New hub.kiwitcms.eu accounts
+----------------------------
 
 Subscribers have the ability to access extra
 [container images]({filename}pages/containers.markdown) via private docker repositories.
 
-**What is changing:** quay.io account username will no longer be based on email address,
+**What is changing:** hub.kiwitcms.eu account username will no longer be based on email address,
 instead it is based on the subscription ID which is more stable over time.
 Discovering your credentials is explained on the page above.
 

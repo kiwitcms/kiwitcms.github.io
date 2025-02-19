@@ -27,12 +27,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    kiwitcms/kiwi       latest  4379e2438e43    636 MB
-    kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       latest  4379e2438e43    636 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 8.4
@@ -128,7 +128,7 @@ Kiwi TCMS Enterprise v8.5-mt
 - Update django-ses from 0.8.14 to 1.0.1
 - Update kiwitcms-tenants from 1.1.1 to 1.2
 - Update social-auth-app-django from 3.4.0 to 4.0.0
-- Start tagging non-Enterprise images of `kiwitcms/kiwi` - will be provided
+- Start tagging non-Enterprise images of `pub.kiwitcms.eu/kiwitcms/kiwi` - will be provided
   via separate private repository for enterprise customers. See
   `here <{filename}2020-06-23-versioned-kiwitcms-docker.markdown>`_
 

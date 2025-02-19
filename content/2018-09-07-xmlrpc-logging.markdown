@@ -112,7 +112,7 @@ Kiwi TCMS defaults:
 Then place everything in `Dockerfile` like so:
 
     :::
-        FROM kiwitcms/kiwi
+        FROM pub.kiwitcms.eu/kiwitcms/kiwi
         
         COPY ./api_logging/ /venv/lib64/python3.6/site-packages/api_logging/
         COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/

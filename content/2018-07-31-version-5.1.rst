@@ -11,7 +11,7 @@ We're happy to announce Kiwi TCMS version 5.1! This release
 introduces new database migrations, an experimental reporting feature,
 deprecated functionality and bug fixes.
 
-The new ``kiwitcms/kiwi:latest`` docker image has Image ID ``cc9b55aa664d``.
+The new ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` docker image has Image ID ``cc9b55aa664d``.
 `https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_
 has also been updated!
 
@@ -76,7 +76,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

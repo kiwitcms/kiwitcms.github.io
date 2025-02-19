@@ -4,7 +4,7 @@ date: 2022-02-27 12:40
 comments: true
 
 Kiwi TCMS subscribers had to go through a manual process of registering
-a username with our container registry, *quay.io* and email support
+a username with our container registry, *hub.kiwitcms.eu* and email support
 before they could access private docker images. This process is now fully
 automated!
 
@@ -16,9 +16,9 @@ You can find your credentials at the
 [subscriptions page](https://public.tenant.kiwitcms.org/github/marketplace/plans/),
 `PLUGINS -> Subscriptions`. To authenticate try
 
-    $ docker login -u="USERNAME" -p "PASSWORD-TOKEN" quay.io
+    $ docker login -u="USERNAME" -p "PASSWORD-TOKEN" hub.kiwitcms.eu
     # or
-    $ echo "PASSWORD-TOKEN" | docker login -u="USERNAME" --password-stdin quay.io
+    $ echo "PASSWORD-TOKEN" | docker login -u="USERNAME" --password-stdin hub.kiwitcms.eu
 
 
 If you would like to have access to private container repositories for Kiwi TCMS

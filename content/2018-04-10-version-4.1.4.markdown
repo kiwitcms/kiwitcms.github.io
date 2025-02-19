@@ -8,7 +8,7 @@ We're happy to announce Kiwi TCMS version 4.1.4!
 This is a bug-fix and enhancement update which upgrades to the latest Django
 version, resolves several issues and includes lots of internal code updates.
 
-We've pushed new `kiwitcms/kiwi` docker image to Docker Hub and updated the
+We've pushed new `pub.kiwitcms.eu/kiwitcms/kiwi` container image and updated the
 demo instance at
 [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/)!
 
@@ -77,7 +77,7 @@ If you are using Kiwi TCMS as a Docker container then
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

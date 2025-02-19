@@ -27,12 +27,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    kiwitcms/kiwi       latest  f2c21b370cd9    639 MB
-    kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       latest  f2c21b370cd9    639 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 8.5

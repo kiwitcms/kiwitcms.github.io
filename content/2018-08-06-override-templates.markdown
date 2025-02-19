@@ -22,7 +22,7 @@ email text looks like this:
 
 [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/)
 runs a custom Docker image based on
-`kiwitcms/kiwi`. For this image the confirmation email looks like this
+`pub.kiwitcms.eu/kiwitcms/kiwi`. For this image the confirmation email looks like this
 
         Welcome {{ user }},
         thank you for signing up for our Kiwi TCMS demo!
@@ -49,7 +49,7 @@ and create a file named `templates.d/email/confirm_registration.txt` with your t
 Next you want to make this file available inside your docker image so your `Dockerfile`
 should look like this:
 
-        FROM kiwitcms/kiwi
+        FROM pub.kiwitcms.eu/kiwitcms/kiwi
         
         COPY ./templates.d/ /venv/lib64/python3.6/site-packages/tcms/overridden_templates/
         COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/

@@ -10,7 +10,7 @@ images are now available to customers with an active
 [enterprise subscription](/#subscriptions).
 
 For a long time our release policy has been to push only `latest` version
-of our upstream `kiwitcms/kiwi` containers. This upstream channel doesn't
+of our upstream `pub.kiwitcms.eu/kiwitcms/kiwi` containers. This upstream channel doesn't
 carry version tags and receives versioned releases only when there are
 backwards incompatible database migrations!
 This proved challenging to administrators who don't upgrade
@@ -24,5 +24,5 @@ same time.
 Starting today versioned releases of Kiwi TCMS (single tenant) will be available
 via the `mrsenko/kiwitcms` private repository on Docker Hub.
 This repository includes tagged versions of the same docker images coming from
-the `kiwitcms/kiwi` channel!
+the `pub.kiwitcms.eu/kiwitcms/kiwi` channel!
 Access is granted automatically to all existing enterprise subscribers!

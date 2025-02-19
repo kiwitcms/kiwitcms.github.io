@@ -19,7 +19,7 @@ We've also reduced code duplication and technical debth by 1 month
 according to stats by [CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi).
 
 **IMPORTANT:** this is also the first release to officially publish the
-`kiwitcms/kiwi` image on Docker Hub!
+`pub.kiwitcms.eu/kiwitcms/kiwi` container image!
 
 **WARNING:** upgrading to Kiwi TCMS 4.0.0 means you will have to upgrade
 the tcms-api client as well. None of the 4.x releases is compatible with
@@ -200,7 +200,7 @@ If you are using Kiwi TCMS as a Docker container then
 
     cd Kiwi/
     docker-compose down
-    docker pull kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
 

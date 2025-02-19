@@ -16,7 +16,7 @@ anonymous users.
 
 Docker images::
 
-    quay.io/kiwitcms/enterprise       10.1.1-mt   d61e243dc4f5   1.19GB
+    hub.kiwitcms.eu/kiwitcms/enterprise       10.1.1-mt   d61e243dc4f5   1.19GB
 
 
 Changes since Kiwi TCMS Enterprise 10.1-mt

@@ -7,7 +7,7 @@ tags: releases
 We're happy to announce Kiwi TCMS and tcms-api version 4.2!
 This is a security, bug-fix and enhancement update which upgrades to the latest
 Django version under Python 3.6.
-We've pushed new `kiwitcms/kiwi:latest` docker image to Docker Hub and updated the
+We've pushed new `pub.kiwitcms.eu/kiwitcms/kiwi` container image and updated the
 demo instance at [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/)!
 
 This version also includes GDPR related changes which affect our project. Read below
@@ -133,7 +133,7 @@ If you are using Kiwi TCMS as a Docker container then
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

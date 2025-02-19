@@ -10,8 +10,7 @@ tags: community
 !["200K banner"](/images/200K/banner.png "200K banner")
 
 We are happy to announce that Kiwi TCMS has been downloaded more than
-200000 times via [Docker Hub](https://hub.docker.com/r/kiwitcms/kiwi/)!
-You can check the real-time stats
+200000 times! You can check the real-time stats
 [here](https://hub.docker.com/v2/repositories/kiwitcms/kiwi/).
 To celebrate with us subscribe for a
 [SaaS](https://mrsenko.onfastspring.com/kiwitcms-private-tenant) and/or
