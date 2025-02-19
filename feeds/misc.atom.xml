@@ -88,7 +88,7 @@ path:&lt;/p&gt;
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;---&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Upstream container images (x86_64 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 14.0!&lt;/p&gt;
+&lt;p&gt;Public container image (x86_64 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 14.0!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a major version release which includes security related updates,
 backwards incompatible changes, several improvements and new translations.&lt;/p&gt;
@@ -102,9 +102,9 @@ path:&lt;/p&gt;
 &lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;---&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  a4c45db53541    681MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  a4c45db53541    681MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -199,10 +199,10 @@ frequencies are informed by our Plausible.io stats&lt;/li&gt;
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            14.0 (aarch64)          9aaf5f3e5c7e    05 Feb 2025     695MB
-quay.io/kiwitcms/version            14.0 (x86_64)           0152d6ac4cec    05 Feb 2025     681MB
-quay.io/kiwitcms/enterprise         14.0-mt (aarch64)       f28044190b68    05 Feb 2025     1.08GB
-quay.io/kiwitcms/enterprise         14.0-mt (x86_64)        317f8f14a984    05 Feb 2025     1.06GB
+hub.kiwitcms.eu/kiwitcms/version            14.0 (aarch64)          9aaf5f3e5c7e    05 Feb 2025     695MB
+hub.kiwitcms.eu/kiwitcms/version            14.0 (x86_64)           0152d6ac4cec    05 Feb 2025     681MB
+hub.kiwitcms.eu/kiwitcms/enterprise         14.0-mt (aarch64)       f28044190b68    05 Feb 2025     1.08GB
+hub.kiwitcms.eu/kiwitcms/enterprise         14.0-mt (x86_64)        317f8f14a984    05 Feb 2025     1.06GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -265,7 +265,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.7!&lt;/p&gt;
+pub.kiwitcms …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.7!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This release includes security related updates, several improvements,
 API changes, a few bug fixes and new translations.&lt;/p&gt;
@@ -281,7 +281,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  89261439831b    677MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  89261439831b    677MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -365,10 +365,10 @@ affect Kiwi TCMS.&lt;/li&gt;
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.7 (aarch64)          33ab4247df54    04 Dec 2024     687MB
-quay.io/kiwitcms/version            13.7 (x86_64)           ecf66eb23dda    04 Dec 2024     677MB
-quay.io/kiwitcms/enterprise         13.7-mt (x86_64)        62d4a283713b    04 Dec 2024     1.06GB
-quay.io/kiwitcms/enterprise         13.7-mt (aarch64)       5e9b96dd3e6f    04 Dec 2024     1.08GB
+hub.kiwitcms.eu/kiwitcms/version            13.7 (aarch64)          33ab4247df54    04 Dec 2024     687MB
+hub.kiwitcms.eu/kiwitcms/version            13.7 (x86_64)           ecf66eb23dda    04 Dec 2024     677MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.7-mt (x86_64)        62d4a283713b    04 Dec 2024     1.06GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.7-mt (aarch64)       5e9b96dd3e6f    04 Dec 2024     1.08GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -498,16 +498,16 @@ please help us!&lt;/p&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
 &lt;/ul&gt;</content><category term="misc"></category><category term="community"></category><category term="events"></category></entry><entry><title>Important changes for Kiwi TCMS subscribers</title><link href="/blog/kiwi-tcms-team/2024/10/22/important-changes-for-kiwi-tcms-subscribers/" rel="alternate"></link><published>2024-10-22T12:15:00+03:00</published><updated>2024-10-22T12:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2024-10-22:/blog/kiwi-tcms-team/2024/10/22/important-changes-for-kiwi-tcms-subscribers/</id><summary type="html">&lt;p&gt;Hello testers,
 starting today we are introducing several important changes to our subscription backend.&lt;/p&gt;
-&lt;h2&gt;New Quay.io accounts&lt;/h2&gt;
+&lt;h2&gt;New hub.kiwitcms.eu accounts&lt;/h2&gt;
 &lt;p&gt;Subscribers have the ability to access extra
 &lt;a href="/containers/"&gt;container images&lt;/a&gt; via private docker repositories.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What is changing:&lt;/strong&gt; quay.io account username will no longer be based on email address,
-instead it is based …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers,
+&lt;p&gt;&lt;strong&gt;What is changing:&lt;/strong&gt; hub.kiwitcms.eu account username will no longer be based on email address,
+instead it …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers,
 starting today we are introducing several important changes to our subscription backend.&lt;/p&gt;
-&lt;h2&gt;New Quay.io accounts&lt;/h2&gt;
+&lt;h2&gt;New hub.kiwitcms.eu accounts&lt;/h2&gt;
 &lt;p&gt;Subscribers have the ability to access extra
 &lt;a href="/containers/"&gt;container images&lt;/a&gt; via private docker repositories.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What is changing:&lt;/strong&gt; quay.io account username will no longer be based on email address,
+&lt;p&gt;&lt;strong&gt;What is changing:&lt;/strong&gt; hub.kiwitcms.eu account username will no longer be based on email address,
 instead it is based on the subscription ID which is more stable over time.
 Discovering your credentials is explained on the page above.&lt;/p&gt;
 &lt;p&gt;New accounts have been created automatically for those eligible!
@@ -682,10 +682,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  b560bb4d3744    693MB
-&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.6!&lt;/p&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.6!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 this release includes security related updates, several small improvements
 and important bug fixes.&lt;/p&gt;
@@ -701,7 +698,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  b560bb4d3744    693MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  b560bb4d3744    693MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -778,10 +775,10 @@ upstream Kiwi TCMS&lt;/li&gt;
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.6 (aarch64)          14f4599db480    12 Oct 2024     705MB
-quay.io/kiwitcms/version            13.6 (x86_64)           2d925723ab4e    12 Oct 2024     693MB
-quay.io/kiwitcms/enterprise         13.6-mt (aarch64)       27a5de45d8dc    12 Oct 2024     1.07GB
-quay.io/kiwitcms/enterprise         13.6-mt (x86_64)        f2ba176b5e0f    12 Oct 2024     1.05GB
+hub.kiwitcms.eu/kiwitcms/version            13.6 (aarch64)          14f4599db480    12 Oct 2024     705MB
+hub.kiwitcms.eu/kiwitcms/version            13.6 (x86_64)           2d925723ab4e    12 Oct 2024     693MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.6-mt (aarch64)       27a5de45d8dc    12 Oct 2024     1.07GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.6-mt (x86_64)        f2ba176b5e0f    12 Oct 2024     1.05GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -824,10 +821,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  3df7b154ef68    688MB
-&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.5!&lt;/p&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.5!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 this release includes security related updates, several improvements,
 bug fixes and updated translations.&lt;/p&gt;
@@ -843,7 +837,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  3df7b154ef68    688MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  3df7b154ef68    688MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -940,10 +934,10 @@ cookies, and displays only dev-focused ads. Will be displayed on
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.5 (aarch64)          0fe07ed87230    07 Aug 2024     701MB
-quay.io/kiwitcms/version            13.5 (x86_64)           086fed49c1ca    07 Aug 2024     688MB
-quay.io/kiwitcms/enterprise         13.5-mt (aarch64)       3983e3289c81    07 Aug 2024     1.07GB
-quay.io/kiwitcms/enterprise         13.5-mt (x86_64)        eedb94e79149    07 Aug 2024     1.04GB
+hub.kiwitcms.eu/kiwitcms/version            13.5 (aarch64)          0fe07ed87230    07 Aug 2024     701MB
+hub.kiwitcms.eu/kiwitcms/version            13.5 (x86_64)           086fed49c1ca    07 Aug 2024     688MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.5-mt (aarch64)       3983e3289c81    07 Aug 2024     1.07GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.5-mt (x86_64)        eedb94e79149    07 Aug 2024     1.04GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -986,7 +980,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  16bf67e2fc1f    674MB …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.4!&lt;/p&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.4!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 This is a small release which contains several improvements,
 internal refactoring and updated translations!&lt;/p&gt;
@@ -1002,7 +996,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  16bf67e2fc1f    674MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  16bf67e2fc1f    674MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -1061,10 +1055,10 @@ kiwitcms/kiwi   latest  16bf67e2fc1f    674MB
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.4 (aarch64)          d4aaf8b83d66    12 Jun 2024     686MB
-quay.io/kiwitcms/version            13.4 (x86_64)           16bf67e2fc1f    12 Jun 2024     674MB
-quay.io/kiwitcms/enterprise         13.4-mt (aarch64)       c070b5cdf01b    12 Jun 2024     1.05GB
-quay.io/kiwitcms/enterprise         13.4-mt (x86_64)        c3a1059e1884    12 Jun 2024     1.03GB
+hub.kiwitcms.eu/kiwitcms/version            13.4 (aarch64)          d4aaf8b83d66    12 Jun 2024     686MB
+hub.kiwitcms.eu/kiwitcms/version            13.4 (x86_64)           16bf67e2fc1f    12 Jun 2024     674MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.4-mt (aarch64)       c070b5cdf01b    12 Jun 2024     1.05GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.4-mt (x86_64)        c3a1059e1884    12 Jun 2024     1.03GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -1096,12 +1090,12 @@ and an awesome open source hacker;&lt;/li&gt;
 from Kiwi TCMS with the analytics dashboard for this website being immediately
 accessible via &lt;a href="https://plausible.io/kiwitcms.org"&gt;https://plausible.io/kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Today we're happy to share that the anonymous analytics dashboard for the
-&lt;code&gt;kiwitcms/kiwi&lt;/code&gt; container image is fully accessible via &lt;a href="https://plausible.io/kiwitcms-container"&gt;https …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Several months ago we've announced
+&lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; container image is fully …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Several months ago we've announced
 &lt;a href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/"&gt;the collection of anonymous analytics&lt;/a&gt;
 from Kiwi TCMS with the analytics dashboard for this website being immediately
 accessible via &lt;a href="https://plausible.io/kiwitcms.org"&gt;https://plausible.io/kiwitcms.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Today we're happy to share that the anonymous analytics dashboard for the
-&lt;code&gt;kiwitcms/kiwi&lt;/code&gt; container image is fully accessible via &lt;a href="https://plausible.io/kiwitcms-container"&gt;https://plausible.io/kiwitcms-container&lt;/a&gt;.&lt;/p&gt;
+&lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; container image is fully accessible via &lt;a href="https://plausible.io/kiwitcms-container"&gt;https://plausible.io/kiwitcms-container&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="&amp;quot;screenshot of analytics dashboard&amp;quot;" src="/images/analytics/dashboard-kiwitcms-container.png" title="screenshot of analytics dashboard"&gt;&lt;/p&gt;
 &lt;p&gt;As evident there is no personally identifiable information that is being collected!&lt;/p&gt;
 &lt;p&gt;Happy Testing!&lt;/p&gt;
@@ -1131,7 +1125,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.3!&lt;/p&gt;
+pub.kiwitcms.eu …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.3!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 This is a small release which contains several improvements, bug fixes,
 internal refactoring and updated translations!&lt;/p&gt;
@@ -1147,7 +1141,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  c43a47e388ab    675MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  c43a47e388ab    675MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -1204,10 +1198,10 @@ limitations&lt;/li&gt;
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.3 (aarch64)          0f9f70835859    20 May 2024     686MB
-quay.io/kiwitcms/version            13.3 (x86_64)           c43a47e388ab    20 May 2024     675MB
-quay.io/kiwitcms/enterprise         13.3-mt (aarch64)       40d0769bc640    20 May 2024     1.05GB
-quay.io/kiwitcms/enterprise         13.3-mt (x86_64)        ea3d8e8999f4    20 May 2024     1.03GB
+hub.kiwitcms.eu/kiwitcms/version            13.3 (aarch64)          0f9f70835859    20 May 2024     686MB
+hub.kiwitcms.eu/kiwitcms/version            13.3 (x86_64)           c43a47e388ab    20 May 2024     675MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.3-mt (aarch64)       40d0769bc640    20 May 2024     1.05GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.3-mt (x86_64)        ea3d8e8999f4    20 May 2024     1.03GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -1250,7 +1244,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  6cb7c6d669a2 …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.2!&lt;/p&gt;
+pub.kiwitcms.eu/kiwitcms …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.2!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 This is a small release which contains several improvements,
 internal refactoring and updated translations!&lt;/p&gt;
@@ -1266,7 +1260,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  6cb7c6d669a2    681MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  6cb7c6d669a2    681MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -1341,10 +1335,10 @@ to them anymore&lt;/li&gt;
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.2 (aarch64)          e596cef147cc    04 May 2024     693MB
-quay.io/kiwitcms/version            13.2 (x86_64)           6cb7c6d669a2    04 May 2024     681MB
-quay.io/kiwitcms/enterprise         13.2-mt (aarch64)       ab6d8f2039b4    04 May 2024     1.06GB
-quay.io/kiwitcms/enterprise         13.2-mt (x86_64)        a6938623851d    04 May 2024     1.04GB
+hub.kiwitcms.eu/kiwitcms/version            13.2 (aarch64)          e596cef147cc    04 May 2024     693MB
+hub.kiwitcms.eu/kiwitcms/version            13.2 (x86_64)           6cb7c6d669a2    04 May 2024     681MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.2-mt (aarch64)       ab6d8f2039b4    04 May 2024     1.06GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.2-mt (x86_64)        a6938623851d    04 May 2024     1.04GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -1398,7 +1392,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  5574cf84d49e    696MB …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.1.1!&lt;/p&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.1.1!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 This is a hot-fix release for a bug introduced in v13.1!&lt;/p&gt;
 &lt;p&gt;Recommended
@@ -1413,7 +1407,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  5574cf84d49e    696MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  5574cf84d49e    696MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -1445,10 +1439,10 @@ kiwitcms/kiwi   latest  5574cf84d49e    696MB
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.1.1 (aarch64)        d9bdea3736ce    27 Feb 2024     707MB
-quay.io/kiwitcms/version            13.1.1 (x86_64)         5574cf84d49e    27 Feb 2024     696MB
-quay.io/kiwitcms/enterprise         13.1.1-mt (aarch64)     0c6e3d1d7a05    27 Feb 2024     1.06GB
-quay.io/kiwitcms/enterprise         13.1.1-mt (x86_64)      fe2cb1e64b75    27 Feb 2024     1.04GB
+hub.kiwitcms.eu/kiwitcms/version            13.1.1 (aarch64)        d9bdea3736ce    27 Feb 2024     707MB
+hub.kiwitcms.eu/kiwitcms/version            13.1.1 (x86_64)         5574cf84d49e    27 Feb 2024     696MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.1.1-mt (aarch64)     0c6e3d1d7a05    27 Feb 2024     1.06GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.1.1-mt (x86_64)      fe2cb1e64b75    27 Feb 2024     1.04GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -1505,7 +1499,7 @@ path:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  b64472d820a2    698MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  b64472d820a2    698MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -1614,10 +1608,10 @@ if you want the Let's Encrypt certificates to persist a restart&lt;/li&gt;
 &lt;h2&gt;Private container images&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.1 (aarch64)          a611a00ee2bc    26 Feb 2024     709MB
-quay.io/kiwitcms/version            13.1 (x86_64)           b64472d820a2    26 Feb 2024     698MB
-quay.io/kiwitcms/enterprise         13.1-mt (aarch64)       76ef5773b488    26 Feb 2024     1.07GB
-quay.io/kiwitcms/enterprise         13.1-mt (x86_64)        9781119c2348    26 Feb 2024     1.04GB
+hub.kiwitcms.eu/kiwitcms/version            13.1 (aarch64)          a611a00ee2bc    26 Feb 2024     709MB
+hub.kiwitcms.eu/kiwitcms/version            13.1 (x86_64)           b64472d820a2    26 Feb 2024     698MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.1-mt (aarch64)       76ef5773b488    26 Feb 2024     1.07GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.1-mt (x86_64)        9781119c2348    26 Feb 2024     1.04GB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
@@ -1735,7 +1729,7 @@ runtime, settings and API changes, bug fixes, internal refactoring and updated t
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.0!&lt;/p&gt;
+pub.kiwitcms …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 13.0!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;
 This is a backwards incompatible release which contains security and functional improvements,
 runtime, settings and API changes, bug fixes, internal refactoring and updated translations!&lt;/p&gt;
@@ -1745,7 +1739,7 @@ runtime, settings and API changes, bug fixes, internal refactoring and updated t
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  088187a81d3c    686MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  088187a81d3c    686MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -1902,10 +1896,10 @@ section as well&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private container images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            13.0 (aarch64)          edf0999ee223    17 Jan 2024     698MB
-quay.io/kiwitcms/version            13.0 (x86_64)           088187a81d3c    17 Jan 2024     686MB
-quay.io/kiwitcms/enterprise         13.0-mt (aarch64)       58a8321da098    17 Jan 2024     899MB
-quay.io/kiwitcms/enterprise         13.0-mt (x86_64)        2c6fbc6adcc5    17 Jan 2024     885MB
+hub.kiwitcms.eu/kiwitcms/version            13.0 (aarch64)          edf0999ee223    17 Jan 2024     698MB
+hub.kiwitcms.eu/kiwitcms/version            13.0 (x86_64)           088187a81d3c    17 Jan 2024     686MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.0-mt (aarch64)       58a8321da098    17 Jan 2024     899MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.0-mt (x86_64)        2c6fbc6adcc5    17 Jan 2024     885MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -2113,7 +2107,7 @@ several improvements, bug fixes and internal refactoring!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  973df48a2f82    613MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  973df48a2f82    613MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -2223,10 +2217,10 @@ tracker_integrations | api token | Can view api token
 &lt;blockquote&gt;
 &lt;p&gt;Private container images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            12.7 (aarch64)          aa6a4c5434c9    25 Nov 2023     624MB
-quay.io/kiwitcms/version            12.7 (x86_64)           973df48a2f82    25 Nov 2023     613MB
-quay.io/kiwitcms/enterprise         12.7-mt (aarch64)       e19c493e7291    25 Nov 2023     814MB
-quay.io/kiwitcms/enterprise         12.7-mt (x86_64)        f38a49d661ad    25 Nov 2023     801MB
+hub.kiwitcms.eu/kiwitcms/version            12.7 (aarch64)          aa6a4c5434c9    25 Nov 2023     624MB
+hub.kiwitcms.eu/kiwitcms/version            12.7 (x86_64)           973df48a2f82    25 Nov 2023     613MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.7-mt (aarch64)       e19c493e7291    25 Nov 2023     814MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.7-mt (x86_64)        f38a49d661ad    25 Nov 2023     801MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -2308,7 +2302,7 @@ and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  c2a9b82871d9    598MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  c2a9b82871d9    598MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -2393,10 +2387,10 @@ under the &lt;tt class="docutils literal"&gt;TESTING&lt;/tt&gt; menu. Fixes
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            12.6.1 (aarch64)        323f49dbe0f8    31 Aug 2023     607MB
-quay.io/kiwitcms/version            12.6.1 (x86_64)         c2a9b82871d9    31 Aug 2023     598MB
-quay.io/kiwitcms/enterprise         12.6.1-mt (aarch64)     34a63fa8e979    31 Aug 2023     860MB
-quay.io/kiwitcms/enterprise         12.6.1-mt (x86_64)      dbf819ed00cc    31 Aug 2023     849MB
+hub.kiwitcms.eu/kiwitcms/version            12.6.1 (aarch64)        323f49dbe0f8    31 Aug 2023     607MB
+hub.kiwitcms.eu/kiwitcms/version            12.6.1 (x86_64)         c2a9b82871d9    31 Aug 2023     598MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.6.1-mt (aarch64)     34a63fa8e979    31 Aug 2023     860MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.6.1-mt (x86_64)      dbf819ed00cc    31 Aug 2023     849MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -2572,7 +2566,7 @@ several improvements and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  9a689f9866d9    597MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  9a689f9866d9    597MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -2641,10 +2635,10 @@ exploiting stored XSS vulnerabilities&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            12.5 (aarch64)          2349e3ea1b78    04 Jul 2023     606MB
-quay.io/kiwitcms/version            12.5 (x86_64)           9a689f9866d9    04 Jul 2023     597MB
-quay.io/kiwitcms/enterprise         12.5-mt (aarch64)       56634afe511a    04 Jul 2023     852MB
-quay.io/kiwitcms/enterprise         12.5-mt (x86_64)        cdfd6965ad4e    04 Jul 2023     841MB
+hub.kiwitcms.eu/kiwitcms/version            12.5 (aarch64)          2349e3ea1b78    04 Jul 2023     606MB
+hub.kiwitcms.eu/kiwitcms/version            12.5 (x86_64)           9a689f9866d9    04 Jul 2023     597MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.5-mt (aarch64)       56634afe511a    04 Jul 2023     852MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.5-mt (x86_64)        cdfd6965ad4e    04 Jul 2023     841MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -2710,7 +2704,7 @@ few improvements and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  5f88a1a37a39    599MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  5f88a1a37a39    599MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -2770,10 +2764,10 @@ image has changed&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            12.4 (aarch64)          2d1f5f1ead8a    06 Jun 2023     607MB
-quay.io/kiwitcms/version            12.4 (x86_64)           5f88a1a37a39    06 Jun 2023     598MB
-quay.io/kiwitcms/enterprise         12.4-mt (aarch64)       254794a5c858    06 Jun 2023     851MB
-quay.io/kiwitcms/enterprise         12.4-mt (x86_64)        5bc0ef78a3c4    06 Jun 2023     840MB
+hub.kiwitcms.eu/kiwitcms/version            12.4 (aarch64)          2d1f5f1ead8a    06 Jun 2023     607MB
+hub.kiwitcms.eu/kiwitcms/version            12.4 (x86_64)           5f88a1a37a39    06 Jun 2023     598MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.4-mt (aarch64)       254794a5c858    06 Jun 2023     851MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.4-mt (x86_64)        5bc0ef78a3c4    06 Jun 2023     840MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -2839,7 +2833,7 @@ general improvements and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  1cbaba8640d9    594MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  1cbaba8640d9    594MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -2903,10 +2897,10 @@ We believe this does not affect Kiwi TCMS&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            12.3 (aarch64)          8bf8cd56c565    22 May 2023     601MB
-quay.io/kiwitcms/version            12.3 (x86_64)           1cbaba8640d9    22 May 2023     592MB
-quay.io/kiwitcms/enterprise         12.3-mt (aarch64)       36d6670c3fca    22 May 2023     845MB
-quay.io/kiwitcms/enterprise         12.3-mt (x86_64)        e769e6bdb5c1    22 May 2023     835MB
+hub.kiwitcms.eu/kiwitcms/version            12.3 (aarch64)          8bf8cd56c565    22 May 2023     601MB
+hub.kiwitcms.eu/kiwitcms/version            12.3 (x86_64)           1cbaba8640d9    22 May 2023     592MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.3-mt (aarch64)       36d6670c3fca    22 May 2023     845MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.3-mt (x86_64)        e769e6bdb5c1    22 May 2023     835MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -2972,7 +2966,7 @@ bug fixes, some API changes and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  89b8ca5e0f5f    593MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  89b8ca5e0f5f    593MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -3077,10 +3071,10 @@ Refs &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/iss
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            12.2 (aarch64)          7e88241f7476    23 Apr 2023     601MB
-quay.io/kiwitcms/version            12.2 (x86_64)           89b8ca5e0f5f    23 Apr 2023     592MB
-quay.io/kiwitcms/enterprise         12.2-mt (aarch64)       7f2a05cf9888    23 Apr 2023     843MB
-quay.io/kiwitcms/enterprise         12.2-mt (x86_64)        c4f518a20c58    23 Apr 2023     833MB
+hub.kiwitcms.eu/kiwitcms/version            12.2 (aarch64)          7e88241f7476    23 Apr 2023     601MB
+hub.kiwitcms.eu/kiwitcms/version            12.2 (x86_64)           89b8ca5e0f5f    23 Apr 2023     592MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.2-mt (aarch64)       7f2a05cf9888    23 Apr 2023     843MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.2-mt (x86_64)        c4f518a20c58    23 Apr 2023     833MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -3146,7 +3140,7 @@ general improvements, bug fixes and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  590c0cd6f25f    521MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  590c0cd6f25f    521MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -3236,10 +3230,10 @@ executions with components, parameters and/or tags (&amp;#64;somenewacc)&lt;/li&
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            12.1 (aarch64)          571870729367    29 Mar 2023     528MB
-quay.io/kiwitcms/version            12.1 (x86_64)           590c0cd6f25f    29 Mar 2023     520MB
-quay.io/kiwitcms/enterprise         12.1-mt (aarch64)       0a1e2f092351    29 Mar 2023     734MB
-quay.io/kiwitcms/enterprise         12.1-mt (x86_64)        9f44aaab7646    29 Mar 2023     725MB
+hub.kiwitcms.eu/kiwitcms/version            12.1 (aarch64)          571870729367    29 Mar 2023     528MB
+hub.kiwitcms.eu/kiwitcms/version            12.1 (x86_64)           590c0cd6f25f    29 Mar 2023     520MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.1-mt (aarch64)       0a1e2f092351    29 Mar 2023     734MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.1-mt (x86_64)        9f44aaab7646    29 Mar 2023     725MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -3304,7 +3298,7 @@ general improvements, bug fixes and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  cbe275c11098    518MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  cbe275c11098    518MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -3389,10 +3383,10 @@ pylint checks&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            12.0 (aarch64)          21507017de36    15 Feb 2023     527MB
-quay.io/kiwitcms/version            12.0 (x86_64)           cbe275c11098    15 Feb 2023     518MB
-quay.io/kiwitcms/enterprise         12.0-mt (aarch64)       a67e0c1ac309    15 Feb 2023     727MB
-quay.io/kiwitcms/enterprise         12.0-mt (x86_64)        3da1342bcd01    15 Feb 2023     717MB
+hub.kiwitcms.eu/kiwitcms/version            12.0 (aarch64)          21507017de36    15 Feb 2023     527MB
+hub.kiwitcms.eu/kiwitcms/version            12.0 (x86_64)           cbe275c11098    15 Feb 2023     518MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.0-mt (aarch64)       a67e0c1ac309    15 Feb 2023     727MB
+hub.kiwitcms.eu/kiwitcms/enterprise         12.0-mt (x86_64)        3da1342bcd01    15 Feb 2023     717MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -3457,7 +3451,7 @@ general improvements, bug fixes and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  316d5d4865a1    572MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  316d5d4865a1    572MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -3572,10 +3566,10 @@ allow customization of tenant logo in navigation&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            11.7 (aarch64)          54ca241ac5ca    02 Jan 2023     595MB
-quay.io/kiwitcms/version            11.7 (x86_64)           316d5d4865a1    02 Jan 2023     571MB
-quay.io/kiwitcms/enterprise         11.7-mt (aarch64)       6657a3c197e8    02 Jan 2023     802MB
-quay.io/kiwitcms/enterprise         11.7-mt (x86_64)        80f6d959d90a    02 Jan 2023     778MB
+hub.kiwitcms.eu/kiwitcms/version            11.7 (aarch64)          54ca241ac5ca    02 Jan 2023     595MB
+hub.kiwitcms.eu/kiwitcms/version            11.7 (x86_64)           316d5d4865a1    02 Jan 2023     571MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.7-mt (aarch64)       6657a3c197e8    02 Jan 2023     802MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.7-mt (x86_64)        80f6d959d90a    02 Jan 2023     778MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -3671,7 +3665,7 @@ general improvements, bug fixes and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  9773335a58d1    612MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  9773335a58d1    612MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -3780,10 +3774,10 @@ Closes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/i
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            11.6 (aarch64)          cf244e2f1dac    08 Nov 2022     636MB
-quay.io/kiwitcms/version            11.6 (x86_64)           9773335a58d1    08 Nov 2022     612MB
-quay.io/kiwitcms/enterprise         11.6-mt (aarch64)       55cf76524ebd    08 Nov 2022     858MB
-quay.io/kiwitcms/enterprise         11.6-mt (x86_64)        61f48a62666b    08 Nov 2022     832MB
+hub.kiwitcms.eu/kiwitcms/version            11.6 (aarch64)          cf244e2f1dac    08 Nov 2022     636MB
+hub.kiwitcms.eu/kiwitcms/version            11.6 (x86_64)           9773335a58d1    08 Nov 2022     612MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.6-mt (aarch64)       55cf76524ebd    08 Nov 2022     858MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.6-mt (x86_64)        61f48a62666b    08 Nov 2022     832MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -3960,7 +3954,7 @@ and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  66c51b64e0a6    608MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  66c51b64e0a6    608MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -4029,10 +4023,10 @@ kiwitcms/kiwi   latest  66c51b64e0a6    608MB
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/version            11.5 (aarch64)          4be7894de8ae    06 Sep 2022     638MB
-quay.io/kiwitcms/version            11.5 (x86_64)           66c51b64e0a6    06 Sep 2022     608MB
-quay.io/kiwitcms/enterprise         11.5-mt (aarch64)       82d64398d8bf    06 Sep 2022     862MB
-quay.io/kiwitcms/enterprise         11.5-mt (x86_64)        8a5b0b58bcca    06 Sep 2022     829MB
+hub.kiwitcms.eu/kiwitcms/version            11.5 (aarch64)          4be7894de8ae    06 Sep 2022     638MB
+hub.kiwitcms.eu/kiwitcms/version            11.5 (x86_64)           66c51b64e0a6    06 Sep 2022     608MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.5-mt (aarch64)       82d64398d8bf    06 Sep 2022     862MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.5-mt (x86_64)        8a5b0b58bcca    06 Sep 2022     829MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -4101,7 +4095,7 @@ and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  8c8356c0268d    610MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  8c8356c0268d    610MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -4288,10 +4282,10 @@ like post-processing of automatically created issues to work.&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise         11.4-mt (aarch64)       f5720d030612    03 Aug 2022     862MB
-quay.io/kiwitcms/enterprise         11.4-mt (x86_64)        8ffd5a64a4d1    03 Aug 2022     829MB
-quay.io/kiwitcms/version            11.4 (aarch64)          62207c605dcf    03 Aug 2022     639MB
-quay.io/kiwitcms/version            11.4 (x86_64)           8c8356c0268d    03 Aug 2022     610MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.4-mt (aarch64)       f5720d030612    03 Aug 2022     862MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.4-mt (x86_64)        8ffd5a64a4d1    03 Aug 2022     829MB
+hub.kiwitcms.eu/kiwitcms/version            11.4 (aarch64)          62207c605dcf    03 Aug 2022     639MB
+hub.kiwitcms.eu/kiwitcms/version            11.4 (x86_64)           8c8356c0268d    03 Aug 2022     610MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -4552,7 +4546,7 @@ tenant groups and permissions!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  58dcfa91e816    629MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  58dcfa91e816    629MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -4628,10 +4622,10 @@ tenant groups support&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise         11.3.1-mt (aarch64  58a53d616105    27 Apr 2022     894MB
-quay.io/kiwitcms/enterprise         11.3.1-mt (x86_64)  3b5e7fbd234a    27 Apr 2022     847MB
-quay.io/kiwitcms/version            11.3 (aarch64)      e9f34a86cd0b    27 Apr 2022     671MB
-quay.io/kiwitcms/version            11.3 (x86_64)       58dcfa91e816    27 Apr 2022     627MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.3.1-mt (aarch64  58a53d616105    27 Apr 2022     894MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.3.1-mt (x86_64)  3b5e7fbd234a    27 Apr 2022     847MB
+hub.kiwitcms.eu/kiwitcms/version            11.3 (aarch64)      e9f34a86cd0b    27 Apr 2022     671MB
+hub.kiwitcms.eu/kiwitcms/version            11.3 (x86_64)       58dcfa91e816    27 Apr 2022     627MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -4698,7 +4692,7 @@ internal refactoring and new translations! This is the first release to ship
 &lt;blockquote&gt;
 &lt;p&gt;Upstream container images (x86_64):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi   latest  bcc4c658440a    622MB
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  bcc4c658440a    622MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
@@ -4782,10 +4776,10 @@ with Keycloak v17 container&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise         11.2-mt (aarch64)   fe5e869e36f6    09 Mar 2022    890MB
-quay.io/kiwitcms/enterprise         11.2-mt (x86_64)    134320d5fb7c    09 Mar 2022    841MB
-quay.io/kiwitcms/version            11.2 (aarch64)      3b782830d19d    09 Mar 2022    665MB
-quay.io/kiwitcms/version            11.2 (x86_64)       bcc4c658440a    09 Mar 2022    620MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.2-mt (aarch64)   fe5e869e36f6    09 Mar 2022    890MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.2-mt (x86_64)    134320d5fb7c    09 Mar 2022    841MB
+hub.kiwitcms.eu/kiwitcms/version            11.2 (aarch64)      3b782830d19d    09 Mar 2022    665MB
+hub.kiwitcms.eu/kiwitcms/version            11.2 (x86_64)       bcc4c658440a    09 Mar 2022    620MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -4870,17 +4864,17 @@ The Kiwi TCMS team can do all of this for you and provide a fully isolated insta
 &lt;p&gt;All changes are effective immediately. Existing customers are granted access to everything
 that's new while billing changes are not applied.&lt;/p&gt;
 &lt;p&gt;If you prefer the "free beer" version of
-Kiwi TCMS it is available via &lt;code&gt;docker pull kiwitcms/kiwi&lt;/code&gt; - free to use
+Kiwi TCMS it is available via &lt;code&gt;docker pull pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; - free to use
 and without any guarantees according to GPLv2.&lt;/p&gt;
 &lt;p&gt;Please consider &lt;a href="/#subscriptions"&gt;subscribing&lt;/a&gt; and help us make Kiwi TCMS better!&lt;/p&gt;
 &lt;p&gt;Happy Testing!&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Container Registry Credentials for Subscribers</title><link href="/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/" rel="alternate"></link><published>2022-02-27T12:40:00+02:00</published><updated>2022-02-27T12:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2022-02-27:/blog/kiwi-tcms-team/2022/02/27/container-registry-credentials-for-subscribers/</id><summary type="html">&lt;p&gt;Kiwi TCMS subscribers had to go through a manual process of registering
-a username with our container registry, &lt;em&gt;quay.io&lt;/em&gt; and email support
+a username with our container registry, &lt;em&gt;hub.kiwitcms.eu&lt;/em&gt; and email support
 before they could access private docker images. This process is now fully
 automated!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="&amp;quot;private credentials card&amp;quot;" src="/images/private_docker_credentials.png" title="private credentials card"&gt;&lt;/p&gt;
 &lt;p&gt;Credentials are automatically created upon subscription payment and configured for
-read-only access to respective …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS subscribers had to go through a manual process of registering
-a username with our container registry, &lt;em&gt;quay.io&lt;/em&gt; and email support
+read-only access to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS subscribers had to go through a manual process of registering
+a username with our container registry, &lt;em&gt;hub.kiwitcms.eu&lt;/em&gt; and email support
 before they could access private docker images. This process is now fully
 automated!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="&amp;quot;private credentials card&amp;quot;" src="/images/private_docker_credentials.png" title="private credentials card"&gt;&lt;/p&gt;
@@ -4889,9 +4883,9 @@ read-only access to respective repositories based on the type of subscription.
 You can find your credentials at the
 &lt;a href="https://public.tenant.kiwitcms.org/github/marketplace/plans/"&gt;subscriptions page&lt;/a&gt;,
 &lt;code&gt;PLUGINS -&amp;gt; Subscriptions&lt;/code&gt;. To authenticate try&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;docker&lt;span class="w"&gt; &lt;/span&gt;login&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;USERNAME&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PASSWORD-TOKEN&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;quay.io
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;docker&lt;span class="w"&gt; &lt;/span&gt;login&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;USERNAME&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PASSWORD-TOKEN&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;hub.kiwitcms.eu
 &lt;span class="c1"&gt;# or&lt;/span&gt;
-$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PASSWORD-TOKEN&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;docker&lt;span class="w"&gt; &lt;/span&gt;login&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;USERNAME&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--password-stdin&lt;span class="w"&gt; &lt;/span&gt;quay.io
+$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PASSWORD-TOKEN&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;docker&lt;span class="w"&gt; &lt;/span&gt;login&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;USERNAME&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--password-stdin&lt;span class="w"&gt; &lt;/span&gt;hub.kiwitcms.eu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;If you would like to have access to private container repositories for Kiwi TCMS
@@ -4927,12 +4921,12 @@ bug fixes and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Container images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  72099aa8ee93    629 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  72099aa8ee93    629 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged
@@ -5013,8 +5007,8 @@ is complete and not exit prematurely&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise         11.1-mt         df5ce509fd41   854 MB
-quay.io/kiwitcms/version            11.1            72099aa8ee93   629 MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.1-mt         df5ce509fd41   854 MB
+hub.kiwitcms.eu/kiwitcms/version            11.1            72099aa8ee93   629 MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -5081,12 +5075,12 @@ API changes, bug fixes and new translations!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Container images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  6600bc56a544    622 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  6600bc56a544    622 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged
@@ -5216,8 +5210,8 @@ unicode names. Fixes
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise         11.0-mt         a730291750f8   846 MB
-quay.io/kiwitcms/version            11.0            6600bc56a544   622 MB
+hub.kiwitcms.eu/kiwitcms/enterprise         11.0-mt         a730291750f8   846 MB
+hub.kiwitcms.eu/kiwitcms/version            11.0            6600bc56a544   622 MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -5460,7 +5454,7 @@ this is a small release which contains minor improvements and bug-fixes.&lt;/p&g
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise         10.5.1-mt       c4d745bd914c   806MB
+hub.kiwitcms.eu/kiwitcms/enterprise         10.5.1-mt       c4d745bd914c   806MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -5610,12 +5604,12 @@ updated translations.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Container images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  0574b19b5d66    583 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  0574b19b5d66    583 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged
@@ -5779,8 +5773,8 @@ it render the way you wish.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Private images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise         10.5-mt         3e597c91d057   804 MB
-quay.io/kiwitcms/version            10.5            0574b19b5d66   583 MB
+hub.kiwitcms.eu/kiwitcms/enterprise         10.5-mt         3e597c91d057   804 MB
+hub.kiwitcms.eu/kiwitcms/version            10.5            0574b19b5d66   583 MB
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -6043,12 +6037,12 @@ It is the thirteenth release to include contributions via our
 &lt;/pre&gt;
 &lt;p&gt;Container images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  10eb8f04cccd    590 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  10eb8f04cccd    590 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-10-3"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 10.3&lt;/h2&gt;
@@ -6350,12 +6344,12 @@ It is the twelveth release to include contributions via our
 &lt;/pre&gt;
 &lt;p&gt;Container images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  bd28c4b064f5    579 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  bd28c4b064f5    579 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-10-2"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 10.2&lt;/h2&gt;
@@ -6492,12 +6486,12 @@ It is the eleventh release to include contributions via our
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  71b5c2a3dee4    972 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  71b5c2a3dee4    972 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-10-1"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 10.1&lt;/h2&gt;
@@ -6625,16 +6619,16 @@ Keycloak and support for enabling read-only view of tenants data for
 anonymous users.&lt;/p&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise       10.1.1-mt   d61e243dc4f5   1.19GB
+hub.kiwitcms.eu/kiwitcms/enterprise       10.1.1-mt   d61e243dc4f5   1.19GB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-enterprise-10-1-mt"&gt;
-&lt;h2&gt;Changes since Kiwi TCMS Enterprise 10 …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS Enterprise version 10.1.1-mt!&lt;/p&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS Enterprise version 10.1.1-mt!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release includes support for authentication via
 Keycloak and support for enabling read-only view of tenants data for
 anonymous users.&lt;/p&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-quay.io/kiwitcms/enterprise       10.1.1-mt   d61e243dc4f5   1.19GB
+hub.kiwitcms.eu/kiwitcms/enterprise       10.1.1-mt   d61e243dc4f5   1.19GB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-enterprise-10-1-mt"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS Enterprise 10.1-mt&lt;/h2&gt;
@@ -6687,7 +6681,7 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;/div&gt;
 </content><category term="misc"></category><category term="releases"></category></entry><entry><title>Thank you for downloading Kiwi TCMS 500000 times</title><link href="/blog/kiwi-tcms-team/2021/06/15/thank-you-for-downloading-kiwi-tcms-500000-times/" rel="alternate"></link><published>2021-06-15T14:45:00+03:00</published><updated>2021-06-15T14:45:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-06-15:/blog/kiwi-tcms-team/2021/06/15/thank-you-for-downloading-kiwi-tcms-500000-times/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;500K banner&amp;quot;" src="/images/500K/banner.png" title="500K banner"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
-500000 times via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;!
+500000 times!
 You can check the real-time stats
 &lt;a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thank you very much and Happy Testing!&lt;/p&gt;
@@ -6695,9 +6689,10 @@ You can check the real-time stats
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;500K banner&amp;quot;" src="/images/500K/banner.png" title="500K banner"&gt;&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;500K banner&amp;quot;" src="/images/500K/banner.png" title="500K banner"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
-500000 times via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;!
+500000 times!
 You can check the real-time stats
 &lt;a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thank you very much and Happy Testing!&lt;/p&gt;
@@ -6738,12 +6733,12 @@ on Docker Hub! You can explore everything at
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  788af5c3f067    800 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  788af5c3f067    800 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-10-0"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 10.0&lt;/h2&gt;
@@ -6939,12 +6934,12 @@ on Docker Hub! You can explore everything at
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  9f23186803d5    736 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  9f23186803d5    736 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-9-0"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 9.0&lt;/h2&gt;
@@ -7497,12 +7492,12 @@ on Docker Hub!&lt;/p&gt;
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  f98908772a2a    695 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  f98908772a2a    695 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-9"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.9&lt;/h2&gt;
@@ -7799,12 +7794,12 @@ on Docker Hub!&lt;/p&gt;
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  9bcfea3a532e    652 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  9bcfea3a532e    652 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-8"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.8&lt;/h2&gt;
@@ -8018,12 +8013,12 @@ on Docker Hub!&lt;/p&gt;
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  4b31ecf8ab5b    654 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  4b31ecf8ab5b    654 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-7"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.7&lt;/h2&gt;
@@ -8209,17 +8204,17 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;/div&gt;
 </content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS celebrates 200K+ downloads</title><link href="/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/" rel="alternate"></link><published>2020-10-26T14:00:00+02:00</published><updated>2020-10-26T14:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-26:/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;200K banner&amp;quot;" src="/images/200K/banner.png" title="200K banner"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
-200000 times via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;!
-You can check the real-time stats
+200000 times! You can check the real-time stats
 &lt;a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/"&gt;here&lt;/a&gt;.
 To celebrate with us subscribe for a
 &lt;a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant"&gt;SaaS&lt;/a&gt; and/or
 &lt;a href="https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription"&gt;Enterprise&lt;/a&gt;
 subscriptions using coupon code &lt;strong&gt;200KOFF&lt;/strong&gt; at checkout!&lt;/p&gt;
-&lt;p&gt;Thank you very much and Happy Testing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;200K banner&amp;quot;" src="/images/200K/banner.png" title="200K banner"&gt;&lt;/p&gt;
+&lt;p&gt;Thank you very much and Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;200K banner&amp;quot;" src="/images/200K/banner.png" title="200K banner"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
-200000 times via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi/"&gt;Docker Hub&lt;/a&gt;!
-You can check the real-time stats
+200000 times! You can check the real-time stats
 &lt;a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/"&gt;here&lt;/a&gt;.
 To celebrate with us subscribe for a
 &lt;a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant"&gt;SaaS&lt;/a&gt; and/or
@@ -8517,12 +8512,12 @@ You can explore everything at
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  1f2461b1facd    643 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  1f2461b1facd    643 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-6"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.6&lt;/h2&gt;
@@ -8730,12 +8725,12 @@ You can explore everything at
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  f2c21b370cd9    639 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  f2c21b370cd9    639 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-5"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.5&lt;/h2&gt;
@@ -8932,13 +8927,12 @@ several changes in their storage plans which makes it less viable for
 our team to continue using their services in full!&lt;/p&gt;
 &lt;h2&gt;Information about official upstream container images&lt;/h2&gt;
 &lt;p&gt;The official upstream Kiwi TCMS container image will continue to be
-publicly available via &lt;a href="https://hub.docker.com/r/kiwitcms/kiwi"&gt;Docker Hub&lt;/a&gt;
-as before. In addition all existing and new images will be available via
-&lt;a href="https://quay.io/repository/kiwitcms/kiwi"&gt;Quay.io&lt;/a&gt;.
+publicly available as before.
+In addition new images will be available via Red Hat's Quay.io service.
 These images are available as&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://hub.docker.com/r/kiwitcms/kiwi"&gt;kiwitcms/kiwi&lt;/a&gt; (Docker Hub)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://quay.io/repository/kiwitcms/kiwi"&gt;quay.io/kiwitcms/kiwi&lt;/a&gt; (Quay.io)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; - Docker Hub&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; - Quay.io&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Content is exactly the same between the two registries and you may use
 the one which you like best!&lt;/p&gt;
@@ -8952,11 +8946,11 @@ upstream Kiwi TCMS container images as well as access to tagged versions of
 Kiwi TCMS Enterprise container images! Previously these containers were distributed
 via Docker Hub and are now available via Quay.io:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;mrsenko/kiwitcms&lt;/code&gt; -&amp;gt; &lt;code&gt;quay.io/kiwitcms/version&lt;/code&gt; (version tagged upstream images)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mrsenko/kiwitcms-enterprise&lt;/code&gt; -&amp;gt; &lt;code&gt;quay.io/kiwitcms/enterprise&lt;/code&gt; (enterprise images)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mrsenko/kiwitcms&lt;/code&gt; -&amp;gt; &lt;code&gt;hub.kiwitcms.eu/kiwitcms/version&lt;/code&gt; (version tagged upstream images)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mrsenko/kiwitcms-enterprise&lt;/code&gt; -&amp;gt; &lt;code&gt;hub.kiwitcms.eu/kiwitcms/enterprise&lt;/code&gt; (enterprise images)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; existing subscribers have been notified and granted access
-to the new repositories on Quay.io. We advise you to update your
+to these new repositories. We advise you to update your
 &lt;code&gt;docker-compose.yml&lt;/code&gt; files and start using the new images at your earliest convenience!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; existing subscribers will continue having access to private
 repositories on Docker Hub until December 31st 2020! Private repositories on
@@ -9135,12 +9129,12 @@ You can explore everything at
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  4379e2438e43    636 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  4379e2438e43    636 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-4"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.4&lt;/h2&gt;
@@ -9236,7 +9230,7 @@ can now more easily include customized integrations&lt;/li&gt;
 &lt;li&gt;Update django-ses from 0.8.14 to 1.0.1&lt;/li&gt;
 &lt;li&gt;Update kiwitcms-tenants from 1.1.1 to 1.2&lt;/li&gt;
 &lt;li&gt;Update social-auth-app-django from 3.4.0 to 4.0.0&lt;/li&gt;
-&lt;li&gt;Start tagging non-Enterprise images of &lt;cite&gt;kiwitcms/kiwi&lt;/cite&gt; - will be provided
+&lt;li&gt;Start tagging non-Enterprise images of &lt;cite&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/cite&gt; - will be provided
 via separate private repository for enterprise customers. See
 &lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/06/23/versioned-releases-of-kiwi-tcms/"&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -9325,12 +9319,11 @@ Example results from the plugin's own test suite are reported in
 images are now available to customers with an active
 &lt;a href="/#subscriptions"&gt;enterprise subscription&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For a long time our release policy has been to push only &lt;code&gt;latest&lt;/code&gt; version
-of our upstream &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; containers. This upstream channel doesn't
-carry version tags …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that versioned releases of Kiwi TCMS container
+of our upstream &lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; containers. This upstream channel doesn't …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that versioned releases of Kiwi TCMS container
 images are now available to customers with an active
 &lt;a href="/#subscriptions"&gt;enterprise subscription&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For a long time our release policy has been to push only &lt;code&gt;latest&lt;/code&gt; version
-of our upstream &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; containers. This upstream channel doesn't
+of our upstream &lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; containers. This upstream channel doesn't
 carry version tags and receives versioned releases only when there are
 backwards incompatible database migrations!
 This proved challenging to administrators who don't upgrade
@@ -9342,7 +9335,7 @@ same time.&lt;/p&gt;
 &lt;p&gt;Starting today versioned releases of Kiwi TCMS (single tenant) will be available
 via the &lt;code&gt;mrsenko/kiwitcms&lt;/code&gt; private repository on Docker Hub.
 This repository includes tagged versions of the same docker images coming from
-the &lt;code&gt;kiwitcms/kiwi&lt;/code&gt; channel!
+the &lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; channel!
 Access is granted automatically to all existing enterprise subscribers!&lt;/p&gt;</content><category term="misc"></category><category term="community"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS 8.4</title><link href="/blog/kiwi-tcms-team/2020/06/03/kiwi-tcms-84/" rel="alternate"></link><published>2020-06-03T23:06:00+03:00</published><updated>2020-06-03T23:06:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-06-03:/blog/kiwi-tcms-team/2020/06/03/kiwi-tcms-84/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.4!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a medium sized release which includes
 minor security fixes, many improvements &amp;amp; bug-fixes and translations
@@ -9368,12 +9361,12 @@ You can explore everything at
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  602dddcf41a7    646 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  602dddcf41a7    646 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-3"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.3&lt;/h2&gt;
@@ -9575,7 +9568,7 @@ If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
 cd path/containing/docker-compose/
 docker-compose down
 # !!! docker tag to keep older image version on the machine
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -9793,12 +9786,12 @@ You can explore everything at
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  c5dbd9a7ded6    562 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  c5dbd9a7ded6    562 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-2"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.2&lt;/h2&gt;
@@ -9888,7 +9881,7 @@ If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
 cd path/containing/docker-compose/
 docker-compose down
 # !!! docker tag to keep older image version on the machine
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -10144,12 +10137,12 @@ You can explore everything at
 &lt;/pre&gt;
 &lt;p&gt;Docker images:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-kiwitcms/kiwi       latest  7c1b947b9a43    561 MB
-kiwitcms/kiwi       6.2     7870085ad415    957 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  7c1b947b9a43    561 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 &lt;/pre&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-8-1"&gt;
 &lt;h2&gt;Changes since Kiwi TCMS 8.1&lt;/h2&gt;
@@ -10233,21 +10226,21 @@ If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 cd path/containing/docker-compose/
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 &lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;WHERE:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; &lt;tt class="docutils literal"&gt;pub.kiwitcms.eu/kiwitcms/kiwi:latest&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&amp;lt;next_upgrade_version&amp;gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest

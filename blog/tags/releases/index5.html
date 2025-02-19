@@ -119,7 +119,7 @@ similar and duplicate methods were removed and existing ones were simplified.
 We've also reduced code duplication and technical debth by 1 month
 according to stats by <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>.</p>
 <p><strong>IMPORTANT:</strong> this is also the first release to officially publish the
-<code>kiwitcms/kiwi</code> image on Docker Hub!</p>
+<code>pub.kiwitcms.eu/kiwitcms/kiwi</code> container image!</p>
 <p><strong>WARNING:</strong> upgrading to Kiwi TCMS 4.0.0 means you will have to upgrade
 the tcms-api client as well. None of the 4.x releases is compatible with
 older releases due to the massive ammount of changes in the RPC layer.</p>
@@ -312,7 +312,7 @@ older releases due to the massive ammount of changes in the RPC layer.</p>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
 <div class="highlight"><pre><span></span><code>cd Kiwi/
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>

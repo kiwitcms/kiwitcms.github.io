@@ -132,7 +132,7 @@
 introduces new database migrations and converts
 the Docker image to a non-root user with uid 1001. You may have to adjust
 ownership/permissions on the <tt class="docutils literal">kiwi_uploads</tt> Docker volume!</p>
-<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">6bc4e3124fd4</tt>.
+<p>The new <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">6bc4e3124fd4</tt>.
 <a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
 has also been updated!</p>
 <div class="section" id="changes-since-kiwi-tcms-5-1">
@@ -206,7 +206,7 @@ may choose to define their own profiles if they wish</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate

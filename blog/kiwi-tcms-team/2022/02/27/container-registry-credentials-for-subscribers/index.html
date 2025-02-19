@@ -126,7 +126,7 @@
 
         <article class="content">
             <p>Kiwi TCMS subscribers had to go through a manual process of registering
-a username with our container registry, <em>quay.io</em> and email support
+a username with our container registry, <em>hub.kiwitcms.eu</em> and email support
 before they could access private docker images. This process is now fully
 automated!</p>
 <p><img alt="&quot;private credentials card&quot;" src="/images/private_docker_credentials.png" title="private credentials card"></p>
@@ -135,9 +135,9 @@ read-only access to respective repositories based on the type of subscription.
 You can find your credentials at the
 <a href="https://public.tenant.kiwitcms.org/github/marketplace/plans/">subscriptions page</a>,
 <code>PLUGINS -&gt; Subscriptions</code>. To authenticate try</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>login<span class="w"> </span>-u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;PASSWORD-TOKEN&quot;</span><span class="w"> </span>quay.io
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>login<span class="w"> </span>-u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;PASSWORD-TOKEN&quot;</span><span class="w"> </span>hub.kiwitcms.eu
 <span class="c1"># or</span>
-$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PASSWORD-TOKEN&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>docker<span class="w"> </span>login<span class="w"> </span>-u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span><span class="w"> </span>--password-stdin<span class="w"> </span>quay.io
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PASSWORD-TOKEN&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>docker<span class="w"> </span>login<span class="w"> </span>-u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span><span class="w"> </span>--password-stdin<span class="w"> </span>hub.kiwitcms.eu
 </code></pre></div>
 
 <p>If you would like to have access to private container repositories for Kiwi TCMS

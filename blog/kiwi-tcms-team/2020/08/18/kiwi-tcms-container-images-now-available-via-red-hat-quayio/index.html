@@ -134,13 +134,12 @@ several changes in their storage plans which makes it less viable for
 our team to continue using their services in full!</p>
 <h2>Information about official upstream container images</h2>
 <p>The official upstream Kiwi TCMS container image will continue to be
-publicly available via <a href="https://hub.docker.com/r/kiwitcms/kiwi">Docker Hub</a>
-as before. In addition all existing and new images will be available via
-<a href="https://quay.io/repository/kiwitcms/kiwi">Quay.io</a>.
+publicly available as before.
+In addition new images will be available via Red Hat's Quay.io service.
 These images are available as</p>
 <ul>
-<li><a href="https://hub.docker.com/r/kiwitcms/kiwi">kiwitcms/kiwi</a> (Docker Hub)</li>
-<li><a href="https://quay.io/repository/kiwitcms/kiwi">quay.io/kiwitcms/kiwi</a> (Quay.io)</li>
+<li><code>pub.kiwitcms.eu/kiwitcms/kiwi</code> - Docker Hub</li>
+<li><code>hub.kiwitcms.eu/kiwitcms/kiwi</code> - Quay.io</li>
 </ul>
 <p>Content is exactly the same between the two registries and you may use
 the one which you like best!</p>
@@ -154,11 +153,11 @@ upstream Kiwi TCMS container images as well as access to tagged versions of
 Kiwi TCMS Enterprise container images! Previously these containers were distributed
 via Docker Hub and are now available via Quay.io:</p>
 <ul>
-<li><code>mrsenko/kiwitcms</code> -&gt; <code>quay.io/kiwitcms/version</code> (version tagged upstream images)</li>
-<li><code>mrsenko/kiwitcms-enterprise</code> -&gt; <code>quay.io/kiwitcms/enterprise</code> (enterprise images)</li>
+<li><code>mrsenko/kiwitcms</code> -&gt; <code>hub.kiwitcms.eu/kiwitcms/version</code> (version tagged upstream images)</li>
+<li><code>mrsenko/kiwitcms-enterprise</code> -&gt; <code>hub.kiwitcms.eu/kiwitcms/enterprise</code> (enterprise images)</li>
 </ul>
 <p><strong>Important:</strong> existing subscribers have been notified and granted access
-to the new repositories on Quay.io. We advise you to update your
+to these new repositories. We advise you to update your
 <code>docker-compose.yml</code> files and start using the new images at your earliest convenience!</p>
 <p><strong>Warning:</strong> existing subscribers will continue having access to private
 repositories on Docker Hub until December 31st 2020! Private repositories on

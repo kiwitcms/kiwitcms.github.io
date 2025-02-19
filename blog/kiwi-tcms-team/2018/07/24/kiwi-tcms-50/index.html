@@ -131,7 +131,7 @@
             <p>We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
 introduces object history tracking, removal of old functionality and unused code,
 lots of internal updates and bug fixes.</p>
-<p>The new <tt class="docutils literal">kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">468de0abe8a8</tt>.
+<p>The new <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">468de0abe8a8</tt>.
 <a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> has also been updated!</p>
 <div class="section" id="changes-since-kiwi-tcms-4-2">
 <h2>Changes since Kiwi TCMS 4.2</h2>
@@ -292,7 +292,7 @@ dictionaries instead of objects.</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate

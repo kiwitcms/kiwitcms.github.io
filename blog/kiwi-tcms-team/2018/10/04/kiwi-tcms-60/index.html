@@ -137,7 +137,7 @@ You can explore everything at
 &lt; 5.3.1 to 6.0 will break without an intermediate upgrade to 5.3.1!</p>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  cd087297f349    991.3 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  cd087297f349    991.3 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-5-3-1">
 <h2>Changes since Kiwi TCMS 5.3.1</h2>
@@ -162,7 +162,7 @@ Existing values and properties are converted into tags and automatically added
 to test runs!</li>
 <li>Convert squashed database migrations to regular ones and remove older migrations.
 <strong>WARNING:</strong> upgrade from versions &lt;= 5.3.1 to 6.0 will break without an intermediate
-upgrade to <tt class="docutils literal">kiwitcms/kiwi:5.3.1 a420465852be</tt>.</li>
+upgrade to <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:5.3.1 a420465852be</tt>.</li>
 <li>Remove deprecated <tt class="docutils literal">TestCase.estimated_time</tt> and <tt class="docutils literal">TestRun.estimated_time</tt>. Fixes
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/514">Issue #514</a></li>
 </ul>
@@ -215,7 +215,7 @@ permissions</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate

@@ -121,7 +121,7 @@ and access httpd log files and resolves several issues. This release also includ
 lots of internal code refactoring which removes code duplication and brings down
 <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> metrics
 to 26.9% of technical debt or 10 months to fix.</p>
-<p>We've pushed the new <code>kiwitcms/kiwi</code> docker image to Docker Hub and updated the
+<p>We've pushed the new <code>pub.kiwitcms.eu/kiwitcms/kiwi</code> container image and updated the
 demo instance at
 <a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>.
 Starting forward the demo will use
@@ -196,7 +196,7 @@ community effort. If you'd like to help consult our
 <div class="highlight"><pre><span></span><code>cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -282,7 +282,7 @@ community effort. If you'd like to help consult our
 <p>If you are using Kiwi TCMS as a Docker container then</p>
 <div class="highlight"><pre><span></span><code>cd Kiwi/
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
@@ -314,7 +314,7 @@ similar and duplicate methods were removed and existing ones were simplified.
 We've also reduced code duplication and technical debth by 1 month
 according to stats by <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>.</p>
 <p><strong>IMPORTANT:</strong> this is also the first release to officially publish the
-<code>kiwitcms/kiwi</code> image on Docker Hub!</p>
+<code>pub.kiwitcms.eu/kiwitcms/kiwi</code> container image!</p>
 <p><strong>WARNING:</strong> upgrading to Kiwi TCMS 4.0.0 means you will have to upgrade
 the tcms-api client as well. None of the 4.x releases is compatible with
 older releases due to the massive ammount of changes in the RPC layer.</p>
@@ -507,7 +507,7 @@ older releases due to the massive ammount of changes in the RPC layer.</p>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
 <div class="highlight"><pre><span></span><code>cd Kiwi/
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>

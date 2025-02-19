@@ -135,7 +135,7 @@ and access httpd log files and resolves several issues. This release also includ
 lots of internal code refactoring which removes code duplication and brings down
 <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> metrics
 to 26.9% of technical debt or 10 months to fix.</p>
-<p>We've pushed the new <code>kiwitcms/kiwi</code> docker image to Docker Hub and updated the
+<p>We've pushed the new <code>pub.kiwitcms.eu/kiwitcms/kiwi</code> container image and updated the
 demo instance at
 <a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>.
 Starting forward the demo will use
@@ -210,7 +210,7 @@ community effort. If you'd like to help consult our
 <div class="highlight"><pre><span></span><code>cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate

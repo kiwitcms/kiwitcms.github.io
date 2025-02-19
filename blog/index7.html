@@ -375,12 +375,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  bbb581d60ed1    1.005 GB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  bbb581d60ed1    1.005 GB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-9">
 <h2>Changes since Kiwi TCMS 6.9</h2>
@@ -445,21 +445,21 @@ category at Open Awards 2019!</p>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -576,12 +576,12 @@ our first telemetry report: testing breakdown. You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  a01eaeddf213    1.001 GB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  a01eaeddf213    1.001 GB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-8">
 <h2>Changes since Kiwi TCMS 6.8</h2>
@@ -644,21 +644,21 @@ and don't miss the announcement!</p>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -695,12 +695,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  fca095f95475    994.8 MB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  fca095f95475    994.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-7">
 <h2>Changes since Kiwi TCMS 6.7</h2>
@@ -767,21 +767,21 @@ issue a formal statement when ready!</p>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -818,12 +818,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  702a78976de7    993.5 MB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  702a78976de7    993.5 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-6">
 <h2>Changes since Kiwi TCMS 6.6</h2>
@@ -900,21 +900,21 @@ main contributor behind this plugin!</p>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -951,12 +951,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  c4734f98ca37    971.3 MB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  c4734f98ca37    971.3 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-5-3">
 <h2>Changes since Kiwi TCMS 6.5.3</h2>
@@ -1085,21 +1085,21 @@ translations</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -1713,12 +1713,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  b9355cf85833    1.039 GB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  b9355cf85833    1.039 GB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-5">
 <h2>Changes since Kiwi TCMS 6.5</h2>
@@ -1792,21 +1792,21 @@ from the source directory</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -1862,12 +1862,12 @@ in PHP</li>
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  7ca4fda602fc    1.002 GB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  7ca4fda602fc    1.002 GB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-4">
 <h2>Changes since Kiwi TCMS 6.4</h2>
@@ -2004,21 +2004,21 @@ in Python</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -2357,12 +2357,12 @@ Patternfly and other dependencies. You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi       latest  39fcb88182bb    963.4 MB
-kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  39fcb88182bb    963.4 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-3">
 <h2>Changes since Kiwi TCMS 6.3</h2>
@@ -2457,21 +2457,21 @@ Previously the summary column was a link to nowhere.</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest

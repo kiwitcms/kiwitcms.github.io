@@ -136,11 +136,11 @@ experience at <a class="reference external" href="https://public.tenant.kiwitcms
 <p>This will be the last release to carry around squashed migrations. In version
 6.0 older migrations will be deleted and replaced with their squashed equivalents.
 Upgrades from versions &lt; 5.3 to 6.0 will break without an intermediate upgrade to 5.3.1!</p>
-<p>Use <tt class="docutils literal">kiwitcms/kiwi:5.3.1</tt> from Docker Hub when upgrading at some point in the future!</p>
+<p>Use <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:5.3.1</tt> from Docker Hub when upgrading at some point in the future!</p>
 <p>Docker images:</p>
 <pre class="literal-block">
-kiwitcms/kiwi        5.3.1               a420465852be        976.8 MB
-kiwitcms/kiwi        latest              a420465852be        976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi        5.3.1               a420465852be        976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwi        latest              a420465852be        976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-5-2">
 <h2>Changes since Kiwi TCMS 5.2</h2>
@@ -263,7 +263,7 @@ don't ship their files in <tt class="docutils literal">dist/</tt></li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
