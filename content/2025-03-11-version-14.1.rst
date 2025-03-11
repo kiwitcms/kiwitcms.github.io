@@ -70,7 +70,7 @@ Improvements
 - Update references to Kiwi TCMS container images across our code base,
   documentation and website as we may change hosting providers soon
 - Update performance results documentation
-- Document results for parallel user session perfomance. Closes
+- Document results for parallel user session performance. Closes
   `Issue #721 <https://github.com/kiwitcms/Kiwi/issues/721>`_
 
 
