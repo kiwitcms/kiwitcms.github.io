@@ -103,6 +103,256 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/02/12/kiwi-tcms-80/" rel="bookmark" title="Permalink to Kiwi TCMS 8.0">
+                <h1 class="top-header">Kiwi TCMS 8.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 12 February 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 8.0!</p>
+<p><strong>IMPORTANT:</strong> this is a major release which includes important database and
+API changes, several improvements and bug fixes. Multiple API methods are now
+incompatible with older releases and extra caution needs to be applied when
+upgrading via <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> because newer MariaDB versions are
+breaking direct upgrades from existing installations!</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  71a55e353da2    557 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-7-3">
+<h2>Changes since Kiwi TCMS 7.3</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 3.0.2 to 3.0.3</li>
+<li>Update django-grappelli from 2.13.3 to 2.14.1</li>
+<li>Update markdown from 3.1.1 to 3.2</li>
+<li>Update python-gitlab from 1.15.0 to 2.0.1</li>
+<li>Update pygithub from 1.45 to 1.46</li>
+<li>Allow customization of test execution statuses via admin.
+For more information see
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses">https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses</a>.
+Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/236">Issue #236</a></li>
+<li>Add passing rate chart to Execution trends telemetry</li>
+<li>Documentation updates (&#64;Prome88)</li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<p>This release adds several migrations which alter the underlying database schema
+by renaming multiple columns.</p>
+<p><strong>WARNINGS:</strong></p>
+<ul>
+<li><p class="first">SQLite has very poor capabilities for altering schema and it will break
+when run with existing database! If you had deployed Kiwi TCMS with
+SQLite for production purposes you will not be able to upgrade! We recommend
+switching to Postgres first and then upgrading!</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from MariaDB 5.5 to MariaDB 10.3.
+The 10.x MariaDB containers change their <tt class="docutils literal">datadir</tt> configuration from
+<tt class="docutils literal">/var/lib/mysql</tt> to <tt class="docutils literal">/var/lib/mysql/data</tt>! We recommend first upgrading
+your MariaDB version, using Kiwi TCMS 7.3 and afterwards upgrading to
+Kiwi TCMS 8.0:</p>
+<ol class="arabic">
+<li><p class="first">Backup existing database with:</p>
+<pre class="literal-block">
+docker exec -it kiwi_db mysqldump -u kiwi -pYourPass kiwi &gt; backup.sql
+</pre>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">docker-compose</span> down</tt></p>
+</li>
+<li><p class="first"><tt class="docutils literal">docker volume rm kiwi_db_data</tt> - will remove existing data volume
+b/c of incompatibilities between different MariaDB versions</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">docker-compose</span> up</tt> - will recreate data volume with missing data. e.g.
+<tt class="docutils literal">manage.py showmigrations</tt> will report that 0 migrations have been applied.</p>
+</li>
+<li><p class="first">Restore the data from backup:</p>
+<pre class="literal-block">
+cat backup.sql | docker exec -u 0 -i kiwi_db /opt/rh/rh-mariadb103/root/usr/bin/mysql kiwi
+</pre>
+<p><strong>note:</strong> This connects to the database as the root user</p>
+</li>
+<li><p class="first">Proceed to upgrade your Kiwi TCMS container !</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>CHANGES:</strong></p>
+<ul class="simple">
+<li>Remove model fields of type <tt class="docutils literal">AutoField</tt>. They are a legacy construct
+and shouldn't be specified in the source code! Django knows how to add them
+dynamically. These are:<ul>
+<li><tt class="docutils literal">Tag.id</tt></li>
+<li><tt class="docutils literal">TestCaseStatus.id</tt></li>
+<li><tt class="docutils literal">Category.id</tt></li>
+<li><tt class="docutils literal">PlanType.id</tt></li>
+<li><tt class="docutils literal">TestExecutionStatus.id</tt></li>
+</ul>
+</li>
+<li>Remove <tt class="docutils literal">db_column</tt> attribute from model fields</li>
+<li>Rename several primary key fields to <tt class="docutils literal">id</tt>:<ul>
+<li><tt class="docutils literal">Build.build_id</tt> -&gt; <tt class="docutils literal">Build.id</tt></li>
+<li><tt class="docutils literal">TestRun.run_id</tt> -&gt; <tt class="docutils literal">TestRun.id</tt></li>
+<li><tt class="docutils literal">TestPlan.plan_id</tt> -&gt; <tt class="docutils literal">TestPlan.id</tt></li>
+<li><tt class="docutils literal">TestCase.case_id</tt> -&gt; <tt class="docutils literal">TestCase.id</tt></li>
+<li><tt class="docutils literal">TestExecution.case_run_id</tt> -&gt; <tt class="docutils literal">TestExecution.id</tt></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<p><strong>WARNING:</strong></p>
+<p>The database schema changes mentioned above affect multiple API methods
+in a backwards incompatible way!
+There is possibility that your API scripts will also be affected. You will
+have to adjust those to use the new field names where necessary!</p>
+<p><strong>CHANGES:</strong></p>
+<ul class="simple">
+<li>Methods <tt class="docutils literal">Build.create()</tt>, <tt class="docutils literal">Build.filter()</tt> and <tt class="docutils literal">Build.update()</tt> will
+return <tt class="docutils literal">id</tt> instead of <tt class="docutils literal">build_id</tt> field</li>
+<li>Method <tt class="docutils literal">TestRun.get_cases()</tt> will return <tt class="docutils literal">execution_id</tt> instead of
+<tt class="docutils literal">case_run_id</tt> field and <tt class="docutils literal">id</tt> instead of <tt class="docutils literal">case_id</tt> field</li>
+<li>Methods <tt class="docutils literal">TestRun.add_case()</tt>, <tt class="docutils literal">TestExecution.create()</tt>,
+<tt class="docutils literal">TestExecution.filter()</tt> and <tt class="docutils literal">TestExecution.update()</tt> will return
+<tt class="docutils literal">id</tt> instead of <tt class="docutils literal">case_run_id</tt> field</li>
+<li>Methods <tt class="docutils literal">TestRun.create()</tt>, <tt class="docutils literal">TestRun.filter()</tt>, <tt class="docutils literal">TestRun.update()</tt> will
+return <tt class="docutils literal">id</tt> instead of <tt class="docutils literal">run_id</tt> field</li>
+<li>Methods <tt class="docutils literal">TestPlan.create()</tt>, <tt class="docutils literal">TestPlan.filter()</tt> and
+<tt class="docutils literal">TestPlan.update()</tt> will return <tt class="docutils literal">id</tt> instead of <tt class="docutils literal">plan_id</tt> field</li>
+<li>Methods <tt class="docutils literal">TestCase.add_component()</tt>, <tt class="docutils literal">TestCase.create()</tt>,
+<tt class="docutils literal">TestCase.filter()</tt> and <tt class="docutils literal">TestCase.update()</tt> will return <tt class="docutils literal">id</tt> instead
+of <tt class="docutils literal">case_id</tt> field</li>
+</ul>
+<p><strong>NOTES:</strong></p>
+<p>Kiwi TCMS automation framework plugins have been updated to work with the
+newest API. At the time of Kiwi TCMS v8.0 release their versions are:</p>
+<ul class="simple">
+<li>kiwitcms-tap-plugin v8.0.1</li>
+<li>kiwitcms-junit.xml-plugin v8.0.1</li>
+<li>kiwitcms-junit-plugin v8.0</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Allow displaying lists with more then 9 items when reviewing test cases. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/339">Issue #339</a> (Mfon Eti-mfon)</li>
+<li>Make <tt class="docutils literal">tcms.tests.storage.RaiseWhenFileNotFound`</tt> capable of finding
+finding static files on Windows which enables development mode for folks
+not using Linux environment. See
+<a class="reference external" href="https://stackoverflow.com/questions/55297178">SO #55297178</a> (Mfon Eti-mfon)</li>
+<li>Allow changing test execution status without adding comment. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1261">Issue #1261</a></li>
+<li>Properly refresh test run progress bar when changing statuses. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1326">Issue #1326</a></li>
+<li>Fix a bug where updating test cases from the UI was causing text and various
+other fields to be reset. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1318">Issue #1318</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Extract attachments widget to new template. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1124">Issue #1124</a>
+(Rosen Sasov)</li>
+<li>Rename RPC related classes. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/682">Issue #682</a>
+(Rosen Sasov)</li>
+<li>Add new test (Mariyan Garvanski)</li>
+<li>Start using GitHub actions, first for running flake8</li>
+<li>Remove unused <tt class="docutils literal">TestCase.get_previous_and_next()</tt></li>
+<li>Remove unused <tt class="docutils literal">TestCaseStatus.string_to_instance()</tt></li>
+<li>Remove unused <tt class="docutils literal">TestCase.create()</tt></li>
+<li>Remove unused <tt class="docutils literal">json_success_refresh_page()</tt></li>
+<li>Remove unused fields from <tt class="docutils literal">SearchPlanForm</tt></li>
+<li>Use JSON-RPC in <tt class="docutils literal">previewPlan()</tt></li>
+<li>Remove <tt class="docutils literal">toggleTestCaseContents()</tt>, duplicate of <tt class="docutils literal">toggleTestExecutionPane()</tt></li>
+<li>Refactor a few more views to class-based</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ko#">Korean translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/tr#">Turkish translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="github-marketplace-listing-deprecation">
+<h2>GitHub Marketplace listing deprecation</h2>
+<p>As we've stated previously Kiwi TCMS has migrated to a new GitHub backend and
+OAuth tokens for the previous backend have been revoked and the
+existing listing on GitHub Marketplace is deprecated. It is a non-functioning
+app at the moment!</p>
+<p>It is not possible for us to cancel Marketplace subscriptions programatically,
+that is GitHub does not provide such API. Active subscribers please follow these
+3 steps to help us clean up stale information:</p>
+<ul class="simple">
+<li>Go to <a class="reference external" href="https://github.com/marketplace/kiwi-tcms">https://github.com/marketplace/kiwi-tcms</a></li>
+<li>From &quot;Edit your plan&quot; button at the top select your GitHub account</li>
+<li>Then click &quot;Cancel this plan&quot; link which is at the left-hand side
+at the bottom of the description box!</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd path/containing/docker-compose/
+docker-compose down
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull centos/mariadb-103-centos7
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
+The file provided in our GitHub repository is an example. Not for production use!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2020/02/04/github-oauth-tokens-have-been-revoked/" rel="bookmark" title="Permalink to GitHub OAuth tokens have been revoked">
                 <h1 class="top-header">GitHub OAuth tokens have been revoked</h1>
             </a>
@@ -2388,222 +2638,6 @@ but remember to confirm your email address!</p>
   currently 3rd in the Open Source Tech Talks category</li>
 </ul>
 <p>Thank you &amp; happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" rel="bookmark" title="Permalink to Legacy reports become Telemetry">
-                <h1 class="top-header">Legacy reports become Telemetry</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Sun 03 March 2019
-            </p>
-        </div>
-
-        <div class="content">
-            <p>As we've <a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">promised</a> Kiwi TCMS is
-starting work on improving the legacy reports functionality.
-After analyzing your feedback in
-<a href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a> here's what we came up
-with. <em>Note: screenshots below are mockups.</em></p>
-<h2>General tech specs</h2>
-<ul>
-<li>Once a self-contained tarball is installed inside the Docker image (or inside local virtualenv)
-  Kiwi TCMS will be able to find it automatically and update the menu options. Aka plugins.
-  No further configuration should be necessary other than providing the source code implementing
-  the new functionality</li>
-<li>Navigation menu will be able to support several layers of menus</li>
-<li>Where possible Telemetry pages will reuse existing HTML templates</li>
-<li>Telemetry data will be implemented as an RPC method that can be consumed by the front-end
-  via JSON-RPC</li>
-<li>Charts will be rendered in the browser with c3/d3,
-  see <a href="https://www.patternfly.org/pattern-library/data-visualization/area-chart/">Data Visualization</a></li>
-</ul>
-<h2>Feature: Rename TestCaseRun to TestExecution</h2>
-<p>Inside Kiwi TCMS the term "test case" is used to refer to specific scenario of
-testing steps. A "test run" is the collection of multiple "test cases" which
-will be executed against a particular product build and environment.</p>
-<p>The specific results are kept into what is now called "test case run". This will
-be renamed to "test execution" (internally <code>TestExecution</code> class) to make it more
-clear and easier to distinguish among other artifacts.</p>
-<h2>Feature: Better color coding for test execution status</h2>
-<p>As a webUI user I want to easily distinguish between PASSED, FAILED and other statuses
-when looking at charts and graphical visualizations.</p>
-<p><img src="/images/telemetry/tr_progress_bar.png" alt="TestRun progress" style="float: none"></p>
-<p>This feature request comes from the TestRun progress bar.
-Other charts should use the same 4 status categories and color coding standards:</p>
-<ul>
-<li>IDLE - <code>pf-black-600</code></li>
-<li>PASSED - <code>pf-green-400</code></li>
-<li>FAILED - <code>pf-red-100</code></li>
-<li>OTHER - <code>pf-orange-400</code>. This includes other statuses which are not PASSED, FAILED and IDLE.</li>
-</ul>
-<p>Here the percent value will continue to mean <em>percent completed, aka non-IDLE</em>.</p>
-<p>Implementation wise the <code>TestCaseRunStatus</code> class defines methods for the actual icons to be used.
-The same can be done for colors and this can be used directly in the HTML templates.
-For color definitions see <a href="https://www.patternfly.org/styles/color-palette/">Status Palette</a>.</p>
-<h2>Feature: Printable Test Execution Report</h2>
-<p>As a tester I want to have a nice looking TestRun execution report which I can present to
-my managers, stakeholders and/or customers. The page needs to be printer friendly for
-“Print to PDF” or print on paper!</p>
-<p>Kiwi TCMS already has this feature. Clicking the <code>[Report]</code> button
-in the progress widget at <a href="https://public.tenant.kiwitcms.org/runs/625/">TR-625</a> presents
-TestRun execution information in a simplified format found at
-<a href="https://public.tenant.kiwitcms.org/runs/625/report/">TR-625/Report</a>.
-In order to improve the current implementation:</p>
-<ul>
-<li>Convert TestRun page to Patternfly which generally prints better</li>
-<li>Add bug list at the bottom of the page, below all test execution rows</li>
-<li>Keep “View all in Issue Tracker” link (supported only for some bug trackers)</li>
-<li>The widget for TestRun progress must be kept</li>
-<li>Tweak CSS classes to disable printing for visual elements that we don't need.
-  This will be decided after the entire page has been converted to Patternfly</li>
-<li>Remove the existing <code>testruns.views.TestRunReportView</code> and associated templates,
-  JavaScript and CSS because they will not be needed anymore</li>
-</ul>
-<h2>Feature: Individual or team performance telemetry</h2>
-<p>As a manager I want to know what the work-load/performance of individual teams and
-engineers is. I can use this information either for performance review or for 
-capacity planning of future work.</p>
-<p><img src="/images/telemetry/performance_indicator.png" alt="Individual/team performance" style="float: none"></p>
-<p>A new page will be available under TELEMETRY -&gt; Management -&gt; Performance which will:</p>
-<ul>
-<li>Allow filtering by<ul>
-<li>Group (multi-select)</li>
-<li>User (multi select, depends on Group)</li>
-<li>Start / Stop dates</li>
-<li>Product</li>
-</ul>
-</li>
-<li>Show results per User or per Group (if no users are selected)</li>
-<li>Allow grouping per TestRun ID or calendar week number</li>
-</ul>
-<p>The backend will query <code>TestExecution.objects</code> and apply the selected
-filters and grouping logic!
-The returned data is the count of how many tests this person/team was able to execute.</p>
-<p>Further refinement:
-Aggregate count by statuses (executed vs. non-executed or PASSED vs. FAILED vs. OTHER).
-May be represented as a stacked bar chart if grouping of series is supported.</p>
-<h2>Feature: Time-tracking telemetry</h2>
-<p>As a manager I want to know how much time it took to complete previous testing activities.
-I can use this information for predicting future capacity.</p>
-<p>New page under TELEMETRY -&gt; Management -&gt; Time tracking.</p>
-<ul>
-<li>Filtering will be the same as performance telemetry</li>
-<li>Grouping will be the same as performance telemetry</li>
-<li><strong>Unknown:</strong> total execution time is calculated as<ul>
-<li>the sum of duration for each TestExecution (not available ATM,
-  automation plugins not sending this info) or</li>
-<li>the total time for the entire TestRrun (not supported by automation plugins)</li>
-</ul>
-</li>
-</ul>
-<p>Visually this will be a line chart with one line for each user/group which have
-been selected. It will be very good if the existing chart libraries allow for a
-stacked line chart or a stacked area chart here!</p>
-<h2>Feature: Estimate TestRun completion time</h2>
-<p>As a test lead I want to know approximately when testing is expected to complete.</p>
-<p>This feature will utilize time-tracking data from previous executions and
-display the approximated calculation in the web UI. The most obvious place for this
-is the TestRun progress widget (under the progress bar) or the Test Run page
-(near the Started at/Finished at fields).</p>
-<p>Example text:</p>
-<div class="highlight"><pre><span></span><code>Started at: YYYY-MM-DD 10:38
-Status: Running
-Duration: 1.2 / 3 hrs
-Estimated completion at: 13:30
-</code></pre></div>
-
-<p><strong>Unknown:</strong> where does baseline duration come from? Either from the most recent TestRun
-or an average from all of the previous Test Runs. Note that cumulative TestRun duration
-is calculated between Start/Finish events while individual TestExecution records may
-sum up to a different value! This needs to be clarified.</p>
-<h2>Feature: TestCase health telemetry</h2>
-<p>As a tester and/or manager I want to be able to discover which TestCase(s) are the most
-common source of problems, that is they fail all the time or from time to time.
-This may indicate poor test design or bad practices when developing the product.
-This is also known as test stability or flaky tests!</p>
-<p><img src="/images/telemetry/flaky_tests.png" alt="Flaky tests" style="float: none"></p>
-<p>New page under TELEMETRY -&gt; Testing -&gt; Flaky tests</p>
-<ul>
-<li>Allow filtering by<ul>
-<li>Product</li>
-<li>Test plan (refined by product)</li>
-<li>Start / Stop dates</li>
-</ul>
-</li>
-<li>Show results in table form as shown in the image above</li>
-<li>PASS/non-PASS stats will be calculated based on <code>TestExecution.objects</code></li>
-<li>100% failing rate will be reported in the first table as ALWAYS FAILING</li>
-<li>Executions where failing rate is &gt;0% and &lt;100% will be reported as FLAKY TESTS</li>
-</ul>
-<h2>Feature: TestCase breakdown telemetry</h2>
-<p>As a tester and/or manager I want to see a breakdown of tests so that I have an
-idea how the existing tests for the product are distributed!</p>
-<p><img src="/images/telemetry/tc_breakdown.png" alt="Test case breakdown" style="float: none"></p>
-<p>New page under TELEMETRY -&gt; Testing -&gt; Breakdown</p>
-<ul>
-<li>Allow filtering by<ul>
-<li>Product</li>
-<li>Test plan (refined by product)</li>
-<li>Start / Stop dates</li>
-</ul>
-</li>
-</ul>
-<p>Shows combined bar/line charts with information about test case priorities, categories,
-automation status and confirmed status.</p>
-<h2>Feature: Individual TestCase health widget</h2>
-<p>As a test engineer I want to be able to quickly see health information about individual
-test case. This can help me visually locate TCs that need improvement so I can edit them
-or will help me visually judge the past history of the TC I am looking at.</p>
-<p><img src="/images/telemetry/tc_executions_card.png" alt="Individual TestCase health" style="float: none"></p>
-<p>This depends on the previous feature. Possible places where health status can be shown:</p>
-<ul>
-<li>Test Case page, Executions card: info per TP</li>
-<li>Test Run page, Test Executions table - visual icon + % to hint the user
-  about expected TC stability</li>
-</ul>
-<h2>Feature: Execution trends telemetry</h2>
-<p>As a test manager I want to see information if Product builds are getting better or worse.
-In other words what is the trend in TestExecution number and status!</p>
-<p><img src="/images/telemetry/build_status.png" alt="Build status" style="float: none"></p>
-<p>This is going to be a new page at TELEMETRY -&gt; Testing -&gt; Execution trends</p>
-<ul>
-<li>Filter by<ul>
-<li>Product</li>
-<li>Version (refined by Product)</li>
-<li>Build (refined by Version)</li>
-<li>Test Plan (refined by Product)</li>
-<li>Start / Stop dates</li>
-</ul>
-</li>
-<li>Shows total count of <code>TestExecution.objects</code> (stacked area chart) with color codes for status</li>
-<li>Group by TestRun ID or calendar week</li>
-</ul>
-<p>You will be able to select TestRuns and/or weeks for detailed comparison.</p>
-<h2>Feature: TestRun status matrix telemetry</h2>
-<p>As a test manager I want to see detailed information about testing status for
-specific test run(s) or a calendar period. I also want to be able to compare
-the results between various weeks and/or test runs.</p>
-<p><img src="/images/telemetry/compare_testruns.png" alt="Compare TestRuns" style="float: none"></p>
-<p>This is a continuation of Execution trends telemetry but can be used on its own as well.
-It will be accessible from TELEMETRY -&gt; Testing -&gt; Status matrix</p>
-<p>Filtering options are the same. Results are displayed in a table format where
-columns are the filtered (or previously selected) TestRun objects or calendar weeks.
-The rows are the names of individual test cases that have been executed. If a case
-is missing the cell will be empty.</p>
-<p>Cells contain color coded information about status, timestamp of execution,
-execution duration, links to the TestExecution object, latest comment in case
-of failure.</p>
-<p>Links to bugs will be shown in each cell with a summarized bug table below the
-charts.</p>
-<h2>Feature: Search and compare TestRuns</h2>
-<p>This is complimentary to the TestRun status matrix feature! While searching
-for TestRuns in SEARCH -&gt; Test Runs the user will be able to select several
-rows and proceed to compare them as described above.</p>
-<p>Happy testing!</p>
         </div>
     </article>
 
