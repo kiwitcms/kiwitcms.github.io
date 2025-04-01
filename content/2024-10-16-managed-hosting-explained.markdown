@@ -69,6 +69,11 @@ As part of the *Managed Hosting* subscription you get an unlimited storage quota
 uploaded files and attachments. We may work with you to establish a data retention period if necessary.
 
 
+**Static files via global CDN:** for *Managed Hosting* deployments all JavaScript, CSS
+and related assets are served via a global content distribution network across hundreds of
+edge locations in order to reduce latency and speed up page loading times in the browser.
+
+
 **Email delivery via Amazon SES:** depending on the amount of testing you perform Kiwi TCMS may be
 sending lots of emails. Throughout the years we've observed that SMTP connections sometimes fail
 resulting in unreliable service or email messages get marked as SPAM hurting the reputation of the sender.
