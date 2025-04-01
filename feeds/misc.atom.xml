@@ -728,6 +728,9 @@ services (e.g. a Redis cache) will be completely isolated from resources provisi
 due to security concerns.&lt;/p&gt;
 &lt;p&gt;As part of the &lt;em&gt;Managed Hosting&lt;/em&gt; subscription you get an unlimited storage quota for
 uploaded files and attachments. We may work with you to establish a data retention period if necessary.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Static files via global CDN:&lt;/strong&gt; for &lt;em&gt;Managed Hosting&lt;/em&gt; deployments all JavaScript, CSS
+and related assets are served via a global content distribution network across hundreds of
+edge locations in order to reduce latency and speed up page loading times in the browser.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Email delivery via Amazon SES:&lt;/strong&gt; depending on the amount of testing you perform Kiwi TCMS may be
 sending lots of emails. Throughout the years we've observed that SMTP connections sometimes fail
 resulting in unreliable service or email messages get marked as SPAM hurting the reputation of the sender.
