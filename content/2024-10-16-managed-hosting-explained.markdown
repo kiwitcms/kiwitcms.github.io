@@ -85,7 +85,7 @@ this subscription you will have to authorize one of your email addresses to be u
 Alternatively we may use an email address on one of our own domains.
 
 
-**DNS & SSL management:** correct DNS and SSL configuration is vital for the
+**Delegated DNS & SSL management:** correct DNS and SSL configuration is vital for the
 so called multi-tenant feature in Kiwi TCMS. This is the feature where you can create
 unlimited namespaces of the type `team-1.tcms.example.com` and `product-2.tcms.example.com`
 via the Kiwi TCMS web interface and have them available immediately.
@@ -93,6 +93,10 @@ via the Kiwi TCMS web interface and have them available immediately.
 A misconfigred DNS and/or misconfigured and/or expired SSL certificates is something that
 happens regularly and leads to sub-optimal performance. With *Managed Hosting* we're going
 to be managing all of this in the background.
+
+*IMPORTANT: this requires that your company delegates an entire sub-domain, e.g.
+`kiwitcms.example.com`, under our control!
+If this isn't possible due to existing security policies then you will have to manage it yourself!*
 
 
 **Full application admin via web:** as a customer you get the super-user account defined
