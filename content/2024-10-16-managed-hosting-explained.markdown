@@ -166,8 +166,8 @@ and the kiwitcms/enterprise container application which is already built on top 
 container image.
 
 
-**Load balanced deployment:** running the Kiwi TCMS application in a load balanced
-environment for customers with high performance requirements.
+**Distributed deployment:** running the Kiwi TCMS application across multiple regions,
+e.g. Europe, US, Asia, for customers with a global workforce and high performance requirements.
 
 
 **Access to monitoring tools:** we're exploring how to securely provide access
