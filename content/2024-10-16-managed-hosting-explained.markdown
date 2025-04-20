@@ -153,19 +153,6 @@ eligible for a loyalty discount.
 Mid-term plans
 --------------
 
-**Hosting on Red Hat Enterprise Linux:** in some cases we are running containers directly
-onto a bare-metal or virtualized machine. We are exploring the possibility of using
-Red Hat Enterprise Linux throughout the entire hosting stack and tying this with
-Red Hat's existing management infrastructure without adding extra charges towards
-our customers.
-
-
-**Red Hat Enterprise Linux package upgrades:** will apply to both host OS (where applicable)
-and the kiwitcms/enterprise container application which is already built on top of
-[Red Hat UBI 9](https://catalog.redhat.com/software/containers/ubi9-minimal/61832888c0d15aff4912fe0d)
-container image.
-
-
 **Distributed deployment:** running the Kiwi TCMS application across multiple regions,
 e.g. Europe, US, Asia, for customers with a global workforce and high performance requirements.
 
@@ -179,6 +166,19 @@ provide us with valuable feedback. Let us know what you would be interested to h
 
 Long-term plans
 ---------------
+
+**Hosting on Red Hat Enterprise Linux:** in some cases we are running containers directly
+onto a bare-metal or virtualized machine. We are exploring the possibility of using
+Red Hat Enterprise Linux throughout the entire hosting stack and tying this with
+Red Hat's existing management infrastructure without adding extra charges towards
+our customers.
+
+
+**Red Hat Enterprise Linux package upgrades:** will apply to both host OS (where applicable)
+and the kiwitcms/enterprise container application which is already built on top of
+[Red Hat UBI 9](https://catalog.redhat.com/software/containers/ubi9-minimal/61832888c0d15aff4912fe0d)
+container image.
+
 
 **Security certifications via NDA:** our vision is to be able to securely share existing and
 future security related certifications with our *Managed Hosting* customers under a
