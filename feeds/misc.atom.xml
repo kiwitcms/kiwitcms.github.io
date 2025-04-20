@@ -786,6 +786,13 @@ We apply a custom discount for long-term billing agreements. In addition to that
 customers who've been using a &lt;em&gt;Managed Hosting&lt;/em&gt; subscription for more than 3 years are
 eligible for a loyalty discount.&lt;/p&gt;
 &lt;h2&gt;Mid-term plans&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Distributed deployment:&lt;/strong&gt; running the Kiwi TCMS application across multiple regions,
+e.g. Europe, US, Asia, for customers with a global workforce and high performance requirements.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Access to monitoring tools:&lt;/strong&gt; we're exploring how to securely provide access
+for each customer to our existing monitoring tools and/or implement new ones where needed.
+This will allow your DevOps team to scrutinize how well we are doing and
+provide us with valuable feedback. Let us know what you would be interested to have access to!&lt;/p&gt;
+&lt;h2&gt;Long-term plans&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Hosting on Red Hat Enterprise Linux:&lt;/strong&gt; in some cases we are running containers directly
 onto a bare-metal or virtualized machine. We are exploring the possibility of using
 Red Hat Enterprise Linux throughout the entire hosting stack and tying this with
@@ -795,13 +802,6 @@ our customers.&lt;/p&gt;
 and the kiwitcms/enterprise container application which is already built on top of
 &lt;a href="https://catalog.redhat.com/software/containers/ubi9-minimal/61832888c0d15aff4912fe0d"&gt;Red Hat UBI 9&lt;/a&gt;
 container image.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Load balanced deployment:&lt;/strong&gt; running the Kiwi TCMS application in a load balanced
-environment for customers with high performance requirements.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Access to monitoring tools:&lt;/strong&gt; we're exploring how to securely provide access
-for each customer to our existing monitoring tools and/or implement new ones where needed.
-This will allow your DevOps team to scrutinize how well we are doing and
-provide us with valuable feedback. Let us know what you would be interested to have access to!&lt;/p&gt;
-&lt;h2&gt;Long-term plans&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Security certifications via NDA:&lt;/strong&gt; our vision is to be able to securely share existing and
 future security related certifications with our &lt;em&gt;Managed Hosting&lt;/em&gt; customers under a
 non-disclosure agreement. Ideally we would enroll provisioned instances into a penetration testing
