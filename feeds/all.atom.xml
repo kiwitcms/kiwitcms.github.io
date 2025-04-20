@@ -739,13 +739,16 @@ This is also an area which requires prior configuration and does not work out of
 automatically managing blacklists when a delivery fails or is marked as SPAM. As part of
 this subscription you will have to authorize one of your email addresses to be used with SES!
 Alternatively we may use an email address on one of our own domains.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DNS &amp;amp; SSL management:&lt;/strong&gt; correct DNS and SSL configuration is vital for the
+&lt;p&gt;&lt;strong&gt;Delegated DNS &amp;amp; SSL management:&lt;/strong&gt; correct DNS and SSL configuration is vital for the
 so called multi-tenant feature in Kiwi TCMS. This is the feature where you can create
 unlimited namespaces of the type &lt;code&gt;team-1.tcms.example.com&lt;/code&gt; and &lt;code&gt;product-2.tcms.example.com&lt;/code&gt;
 via the Kiwi TCMS web interface and have them available immediately.&lt;/p&gt;
 &lt;p&gt;A misconfigred DNS and/or misconfigured and/or expired SSL certificates is something that
 happens regularly and leads to sub-optimal performance. With &lt;em&gt;Managed Hosting&lt;/em&gt; we're going
 to be managing all of this in the background.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;IMPORTANT: this requires that your company delegates an entire sub-domain, e.g.
+&lt;code&gt;kiwitcms.example.com&lt;/code&gt;, under our control!
+If this isn't possible due to existing security policies then you will have to manage it yourself!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Full application admin via web:&lt;/strong&gt; as a customer you get the super-user account defined
 in the Kiwi TCMS application and we promise that Kiwi TCMS staff will not login to minimize
 the possibility of incidents. In any case we treat all of the data stored in a
