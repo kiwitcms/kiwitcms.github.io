@@ -110,6 +110,97 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/" rel="bookmark" title="Permalink to Feature showcase: Personal API tokens">
+                <h1 class="top-header">Feature showcase: Personal API tokens</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 06 December 2023
+            </p>
+        </div>
+
+        <div class="content">
+            <p>For a long time now Kiwi TCMS has supported integration with external issue tracking systems,
+such as JIRA. This integration is usually configured via bot accounts and their respective
+credentials and our flagship functionality is 1-click bug report! This is how it looks like:</p>
+<ul>
+<li>
+<p>For any TestExecution click on the menu in the corner
+<img alt="&quot;Corner menu for TestExecution&quot;" src="/images/features/personal-api-tokens/step_001.png" title="Corner menu for TestExecution"></p>
+</li>
+<li>
+<p>Select an existing Issue Tracker configuration and click <em>Report bug</em>
+<img alt="&quot;1-click bug report button&quot;" src="/images/features/personal-api-tokens/step_002.png" title="1-click bug report button"></p>
+</li>
+<li>
+<p>Your browser will open a new window with the resulting report inside the external Issue Tracker
+<img alt="&quot;Newly JIRA issue from a bot account&quot;" src="/images/features/personal-api-tokens/step_003.png" title="Newly JIRA issue from a bot account"></p>
+</li>
+</ul>
+<p>Notice that <em>Reporter</em> (field 1) is <em>kiwitcms-bot</em> although the currently logged in user (field 2) is
+different. The <em>Reporter</em> text reference (field 3) is the full name of the tester working on the Kiwi TCMS side
+and may not match neither of fields 1 and 2! <strong>This presents a challenge if you are tracking any metrics
+based on the actual <em>Reporter</em> field in JIRA.</strong></p>
+<p>The new <strong>Personal API tokens</strong> functionality allows Kiwi TCMS users to override existing
+issue tracker configurations with their own API credentials. Here's how it works:</p>
+<ul>
+<li>
+<p>In JIRA click on your account and select <em>Manage account</em>
+<img alt="&quot;Manage account menu in JIRA&quot;" src="/images/features/personal-api-tokens/step_004.png" title="Manage account menu in JIRA"></p>
+</li>
+<li>
+<p>Then select the <em>Security</em> tab
+<img alt="&quot;Account page in JIRA&quot;" src="/images/features/personal-api-tokens/step_005.png" title="Account page in JIRA"></p>
+</li>
+<li>
+<p>Then click on <a href="https://id.atlassian.com/manage-profile/security/api-tokens">Create and manage API tokens</a>
+<img alt="&quot;Security tab of Account page in JIRA&quot;" src="/images/features/personal-api-tokens/step_006.png" title="Security tab of Account page in JIRA"></p>
+</li>
+<li>
+<p>And create a new API token; Copy the token value for use inside Kiwi TCMS!
+<img alt="&quot;API Tokens page in JIRA&quot;" src="/images/features/personal-api-tokens/step_007.png" title="API Tokens page in JIRA"></p>
+</li>
+<li>
+<p>From the Kiwi TCMS navigation menu select PLUGINS -&gt; Personal API tokens
+<img alt="&quot;Navigate to Personal API tokens in Kiwi TCMS&quot;" src="/images/features/personal-api-tokens/step_008.png" title="Navigate to Personal API tokens in Kiwi TCMS"></p>
+</li>
+<li>
+<p>Select an existing Issue Tracker via its URL and fill-in your credentials. The drop-down choices
+  represent all Issue Tracker records accessible to the current user across all tenants they are
+  authorized for! For JIRA
+  <code>api_username</code> is your JIRA email and <code>api_password</code> is your JIRA API token.
+  Other issue trackers may only require the <code>api_password</code> field. The meaning of
+  these fields can be found in
+  <a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.issuetracker.html#submodules">documentation</a>
+  for each different type of issue tracker that Kiwi TCMS can integrate with
+<img alt="&quot;Create a new API token in Kiwi TCMS&quot;" src="/images/features/personal-api-tokens/step_009.png" title="Create a new API token in Kiwi TCMS"></p>
+</li>
+<li>
+<p>Repeat the <em>1-click bug report</em> steps shown in the beginning.
+  Your browser will open a new window with the resulting report inside JIRA
+<img alt="&quot;New JIRA issue from your personal account&quot;" src="/images/features/personal-api-tokens/step_010.png" title="New JIRA issue from your personal account"></p>
+</li>
+</ul>
+<p>Notice that <em>Reporter</em> (field 1), the currently logged in user (field 2) and
+the <em>Reporter</em> text reference (field 3) now represent the same person!</p>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2023/11/28/call-for-participation-testing-and-continuous-delivery-devroom-fosdem24/" rel="bookmark" title="Permalink to Call for participation: Testing and Continuous Delivery devroom, FOSDEM'24">
                 <h1 class="top-header">Call for participation: Testing and Continuous Delivery devroom, FOSDEM'24</h1>
             </a>
@@ -2543,86 +2634,6 @@ para nuestro premio Mejor Sitio Web 2022.</p>
 <p>Our team is happy to accept this award, which comes exactly 2 years
 after we became an <a href="/blog/atodorov/2019/06/24/kiwi-tcms-is-openawards-2019-best-tech-community-winner/">OpenAwards winner</a>.</p>
 <p>Thank you and Happy testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
-</ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2022/06/14/meet-kiwi-tcms-at-collision-2022-in-toronto/" rel="bookmark" title="Permalink to Meet Kiwi TCMS at Collision 2022 in Toronto">
-                <h1 class="top-header">Meet Kiwi TCMS at Collision 2022 in Toronto</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 14 June 2022
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Kiwi TCMS is happy to announce that we're taking part in
-<a href="https://collisionconf.com/">Collision 2022</a>, Jun 20-23 in Toronto, Canada.
-We're joining as a <a href="https://collisionconf.com/startups/featured-startups">featured startup</a>
-in the <em>Enterprise Software Solutions</em> category.</p>
-<p>Kiwi TCMS will have an on-site presence on
-<strong>Thursday, Jun 23, Stand A3201</strong>. Check-out the map for more details:
-<img alt="venue map" src="/images/conf/collision/stand2022.png" title="venue map"></p>
-<h2>For engineers</h2>
-<p>At the exhibition stand you will have the opportunity to perform some real
-<a href="/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/">black-box testing</a>,
-learn about Salience bias, Peltzman effect and Wason's experiments and take a photo with
-our lovely mascot.</p>
-<p>The Kiwi TCMS team will be there to answer all of your questions regarding
-open source, community, support, various integrations and the differences between
-<em>Self-Support</em>, <em>SaaS</em> and <em>Enterprise</em> <a href="/#subscriptions">subscriptions</a>!</p>
-<p><img alt="&quot;black boxes&quot;" src="/images/conf/websummit/black_boxes.png" title="black boxes"></p>
-<p>If you are a test or QA engineer please answer our survey
-<a href="https://forms.gle/LTYnimNjbUaSmTeL8">https://forms.gle/LTYnimNjbUaSmTeL8</a>. Participants may claim a small surprise at our booth!</p>
-<h2>For startups</h2>
-<p>We know that in a startup, the major strength of the people is that they are multitaskers.
-And it is often the case that the founders will perform some functional and acceptance testing
-because they know all the important use-cases.</p>
-<p>Still you need to document and organize your testing activities early on. You need to
-start collecting information about which features of the product have been tested and
-how they have been tested. That's the basis on which you can scale your QA team and
-future testing activities.</p>
-<p>If you are a fellow startup exhibitor please swing by out stand to talk about
-organizing your product testing with Kiwi TCMS. We know the drill because we're in
-the same boat!</p>
-<h2>For partners</h2>
-<p>If you are another ISV providing engineering tools, a product outsourcing company
-or a devel/testing service venture we've got a partnership proposal for you!</p>
-<p>We're interested in partners where we can integrate other products with Kiwi TCMS
-and provide a better offering; provide extra services (e.g. managed hosting) and/or
-provide more transparency to your own customers (e.g. allow them to see how their products
-are being tested).</p>
-<p>Message us via the <a href="https://play.google.com/store/apps/details?id=com.collision">Collision app</a>
-and request a meeting or better yet, find our team on-site!</p>
-<h2>Virtual press conference</h2>
-<p>If you aren't around in Toronto please join us for a pre 2022 Collision News Conference (VIRTUAL) on
-<strong>Wednesday, June 15, 1:00 - 2:00 p.m. EDT / 17:00 - 18:00 UTC</strong>.</p>
-<p>For more information see
-<a href="https://www.eventbrite.com/e/pre-collision-press-conference-1-of-2-hosted-by-brotmanwinterfried-tickets-365110534437">https://www.eventbrite.com/e/pre-collision-press-conference-1-of-2-hosted-by-brotmanwinterfried-tickets-365110534437</a></p>
-<h2>After hours</h2>
-<p>The Kiwi TCMS team will be joining the following after-hours events:</p>
-<ul>
-<li>Jun 20 - <a href="https://inthecloud.withgoogle.com/collision-happy-hour/register.html">Collision: Join Us at Craft Beer Market, Toronto</a></li>
-<li>Jun 22 - <a href="https://www.eventbrite.sg/e/drinks-dragons-collision-official-after-hours-event-by-metis-fest-tickets-340062816037">Drinks &amp; Dragons - Collision Official After Hours event by Metis Fest</a></li>
-<li>Jun 23 - <a href="https://www.meetup.com/agileto/events/286454424/">Agile Drinks....we are back!!</a></li>
-</ul>
-<h2>For media</h2>
-<p>If you have any questions, need additional information or would like to schedule an interview,
-please email Steve Winter at <em>swinter @ aboutbwf.com</em> (remove spaces) or call <em>202-468-8100</em>.</p>
 <hr>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
