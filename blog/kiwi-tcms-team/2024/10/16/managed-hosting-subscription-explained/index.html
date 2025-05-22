@@ -168,6 +168,8 @@ actual underlying technology, e.g. EC2, ECS, Lightsail or other - this is up to 
 within reason. The total cost of all consumed cloud resources should still be covered by your
 monthly payment. In extreme scenarios we would ask you to purchase a higher quantity
 of the same subscription.</p>
+<p>NOTICE: This subscription price is per instance! For distributed deployments across multiple
+data centers you have to adjust the quantity of items on the subscription!</p>
 <p><strong>Fully isolated instance:</strong> means exactly that - your database, web application and any additional
 services (e.g. a Redis cache) will be completely isolated from resources provisioned for other customers
 due to security concerns.</p>
@@ -182,8 +184,7 @@ resulting in unreliable service or email messages get marked as SPAM hurting the
 This is also an area which requires prior configuration and does not work out of the box.</p>
 <p><em>Managed Hosting</em> deployments use Amazon SES for email delivery which has the added benefit of
 automatically managing blacklists when a delivery fails or is marked as SPAM. As part of
-this subscription you will have to authorize one of your email addresses to be used with SES!
-Alternatively we may use an email address on one of our own domains.</p>
+this subscription we will use an <code>@kiwitcms.org</code> email address authorized with Amazon SES!</p>
 <p><strong>Delegated DNS &amp; SSL management:</strong> correct DNS and SSL configuration is vital for the
 so called multi-tenant feature in Kiwi TCMS. This is the feature where you can create
 unlimited namespaces of the type <code>team-1.tcms.example.com</code> and <code>product-2.tcms.example.com</code>
@@ -193,7 +194,8 @@ happens regularly and leads to sub-optimal performance. With <em>Managed Hosting
 to be managing all of this in the background.</p>
 <p><em>IMPORTANT: this requires that your company delegates an entire sub-domain, e.g.
 <code>kiwitcms.example.com</code>, under our control!
-If this isn't possible due to existing security policies then you will have to manage it yourself!</em></p>
+If this isn't possible due to existing security policies we can configure a
+<code>&lt;company&gt;.managed-hosting.kiwitcms.eu</code> DNS for you!</em></p>
 <p><strong>Full application admin via web:</strong> as a customer you get the super-user account defined
 in the Kiwi TCMS application and we promise that Kiwi TCMS staff will not login to minimize
 the possibility of incidents. In any case we treat all of the data stored in a
@@ -226,13 +228,11 @@ data. Our team is open to further collaboration in this area!</p>
 plus a <em>video conference</em> option when necessary in order to resolve
 requests faster.</p>
 <p><strong>Custom long-term billing terms:</strong> we can adjust your payment schedule so that
-it works best for you. For example weekly, monthly, every 3 or 6 months, every 1, 2 or 3 years!
-We apply a custom discount for long-term billing agreements. In addition to that
-customers who've been using a <em>Managed Hosting</em> subscription for more than 3 years are
-eligible for a loyalty discount.</p>
+it works best for you. For example weekly, monthly, every 3 or 6 months, every 1, 2 or 3 years!</p>
 <h2>Mid-term plans</h2>
 <p><strong>Distributed deployment:</strong> running the Kiwi TCMS application across multiple regions,
-e.g. Europe, US, Asia, for customers with a global workforce and high performance requirements.</p>
+e.g. Europe, US, Asia, for customers with a global workforce and high performance requirements.
+Requires that you adjust the quantity of items on the subscription!</p>
 <p><strong>Access to monitoring tools:</strong> we're exploring how to securely provide access
 for each customer to our existing monitoring tools and/or implement new ones where needed.
 This will allow your DevOps team to scrutinize how well we are doing and
