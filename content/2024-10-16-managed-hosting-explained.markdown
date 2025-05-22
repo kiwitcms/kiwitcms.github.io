@@ -60,6 +60,9 @@ within reason. The total cost of all consumed cloud resources should still be co
 monthly payment. In extreme scenarios we would ask you to purchase a higher quantity
 of the same subscription.
 
+NOTICE: This subscription price is per instance! For distributed deployments across multiple
+data centers you have to adjust the quantity of items on the subscription!
+
 
 **Fully isolated instance:** means exactly that - your database, web application and any additional
 services (e.g. a Redis cache) will be completely isolated from resources provisioned for other customers
@@ -81,8 +84,7 @@ This is also an area which requires prior configuration and does not work out of
 
 *Managed Hosting* deployments use Amazon SES for email delivery which has the added benefit of
 automatically managing blacklists when a delivery fails or is marked as SPAM. As part of
-this subscription you will have to authorize one of your email addresses to be used with SES!
-Alternatively we may use an email address on one of our own domains.
+this subscription we will use an `@kiwitcms.org` email address authorized with Amazon SES!
 
 
 **Delegated DNS & SSL management:** correct DNS and SSL configuration is vital for the
@@ -96,7 +98,8 @@ to be managing all of this in the background.
 
 *IMPORTANT: this requires that your company delegates an entire sub-domain, e.g.
 `kiwitcms.example.com`, under our control!
-If this isn't possible due to existing security policies then you will have to manage it yourself!*
+If this isn't possible due to existing security policies we can configure a
+`<company>.managed-hosting.kiwitcms.eu` DNS for you!*
 
 
 **Full application admin via web:** as a customer you get the super-user account defined
@@ -145,9 +148,6 @@ requests faster.
 
 **Custom long-term billing terms:** we can adjust your payment schedule so that
 it works best for you. For example weekly, monthly, every 3 or 6 months, every 1, 2 or 3 years!
-We apply a custom discount for long-term billing agreements. In addition to that
-customers who've been using a *Managed Hosting* subscription for more than 3 years are
-eligible for a loyalty discount.
 
 
 Mid-term plans
@@ -155,6 +155,7 @@ Mid-term plans
 
 **Distributed deployment:** running the Kiwi TCMS application across multiple regions,
 e.g. Europe, US, Asia, for customers with a global workforce and high performance requirements.
+Requires that you adjust the quantity of items on the subscription!
 
 
 **Access to monitoring tools:** we're exploring how to securely provide access
