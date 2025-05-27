@@ -104,6 +104,144 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2025/05/27/ami-transitions-to-kiwi-tcms-managed-hosting/" rel="bookmark" title="Permalink to AMI transitions to Kiwi TCMS Managed Hosting">
+                <h1 class="top-header">AMI transitions to Kiwi TCMS Managed Hosting</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 27 May 2025
+            </p>
+        </div>
+
+        <div class="content">
+            <p><img alt="&quot;AMI + Kiwi TCMS logos&quot;" src="/images/customers/ami+kiwitcms.png" title="AMI + Kiwi TCMS logos"></p>
+<p><a href="https://www.ami.com">AMI</a>, is an international company,
+reimagining firmware for modern computing, providing secure, manageable solutions
+across on-premises, cloud, and edge platforms. Its technology and support drive
+innovation and lasting partnerships with top tech brands.</p>
+<h3>Tell us more about AMI's product lines</h3>
+<p>AMI delivers firmware and management solutions for servers, data centers,
+and embedded systems. Key products include:</p>
+<ul>
+<li><strong>Aptio V®</strong>: A next-gen UEFI/BIOS solution enabling dynamic processor and peripheral
+  management for Cloud, Edge, and IoT environments.</li>
+<li><strong>MegaRAC®</strong>: Advanced BMC solutions like SP-X and OneTree for remote, OS-independent
+  server management, including power control, KVM redirection, and virtual
+  media.</li>
+<li><strong>TektagonTM</strong>: A Platform Root of Trust ensuring secure and validated firmware boot
+  processes.</li>
+<li><strong>AMI® Data Center Manager (DCM)</strong>: Software for managing multi-vendor data centers,
+  offering insights on health, power, thermal performance, and sustainability metrics to
+  optimize operations and efficiency.</li>
+</ul>
+<p>AMI develops products at all levels of the technology hierarchy, starting with low level firmware
+to cloud based applications. For boot firmware, it's mostly assembly and C.
+For manageability firmware, it's a combination of C, C++, Linux Shell scripting.
+Our products have web interfaces so the HTML/CSS/JavaScript stack is also very common.
+Python is extensively used as the backend language of choice for cloud applications.</p>
+<h3>How about AMI's relation to open source</h3>
+<p>AMI has forged a robust partnership with the <a href="https://www.opencompute.org/">Open Compute Project</a>,
+driving innovation and collaboration in open source firmware solutions. As one of the key proponents of
+open source technologies in this space, AMI integrates
+<a href="https://github.com/tianocore/edk2">EDK2</a> and embedded Linux into firmware solutions.
+We are a major sponsor of the Open Compute Project and a key contributor.</p>
+<h3>What makes testing at AMI challenging</h3>
+<p>At AMI, the Test team plays a pivotal role in ensuring the reliability and excellence of our
+product lines. Given the dynamic nature of our projects, the team frequently transitions
+between tasks to accommodate multiple ongoing initiatives. This adaptability is crucial in
+maintaining rigorous standards across diverse firmware and management solutions.</p>
+<p>Additionally, the Test team is committed to delivering valuable insights by analyzing
+quality trends and producing detailed reports. These analyses equip leadership with actionable
+data, fostering informed decision-making and continuous improvement across all
+development efforts.</p>
+<p><em>Constantly changing priorities combined with the need to provide accurate
+reporting make testing at AMI challenging!</em></p>
+<p>Since we are a black box/acceptance test group, our System Under Test are actual hardware platforms.
+And since we do boot firmware and manageability firmware solutions, we have to test on
+early revision hardware, which is unstable. This makes test automation challenging.
+And even for automation, we have to rely on hardware tooling like IP controlled AC power strips,
+firmware programming devices and single board computers like Raspberry Pi for controlling various
+aspects of the system under test. We also support multiple hardware architectures, 
+which increases the breadth of what we need to test.</p>
+<h3>How do teams at AMI approach testing? Can you walk us through the process</h3>
+<p>Our black-box user acceptance testing (UAT) team ensures end-user expectations align
+with product functionality, performance, and usability. Collaborating with developers and
+studying standards and specifications, we create detailed test scenarios covering positive,
+negative, performance, and usability aspects.</p>
+<p>Using a hybrid agile-like model, we test features as they're ready and conduct a final
+integration cycle to assess system readiness. Given that we work with firmware and
+embedded solutions, achieving 100% test automation is a significant challenge. As a
+result, our approach includes a considerable amount of manual testing to ensure thorough
+coverage and reliability. This process ensures seamless component interactions, uncovers
+overlooked issues, and delivers actionable insights so we can ship
+high-quality systems that exceed user expectations.</p>
+<p>AMI is committed to upholding rigorous standards in testing, including a strict test exit
+criterion that mandates zero high severity bugs before product release. This ensures that all
+solutions delivered to clients meet the highest levels of reliability and performance. Our
+testing methodologies are designed to identify and resolve any critical issues at an early
+stage, preventing them from affecting the functionality of end products.</p>
+<h3>What other technologies does testing at AMI involve</h3>
+<p>At AMI, testing leverages tools like Python for automation scripting and Robot Framework
+for test case creation and execution.
+Previously, AMI utilized a custom-built test management system to organize test cases and
+generate actionable reports.</p>
+<p>AMI uses GitLab CI for triggering test jobs.
+We have CI workflows that execute daily and weekly runs of our automated tests.
+We would like to get to a point where our systems can
+analyse what features a code change impacts and then it selects the test cases needed to
+execute to test that changeset.</p>
+<h3>Why did you decide to use Kiwi TCMS</h3>
+<p>The legacy homegrown tool faced significant limitations as it struggled to keep up with the
+scaling demands of AMI's growing testing infrastructure.
+It was slow and could no longer support our evolving need for real-time reporting,
+lacked flexibility, and was unable to accommodate new features, primarily due to the absence
+of dedicated personnel to maintain and upgrade it. These constraints led the QA team to seek modern
+solutions capable of addressing their evolving requirements effectively.</p>
+<p>We conducted extensive research into alternative solutions, but
+many tools we evaluated were either overly complex or prohibitively expensive. Kiwi TCMS
+emerged as the perfect choice, seamlessly aligning with our requirements for affordability
+and functionality.</p>
+<h3>Where does Kiwi TCMS fit into AMI's overall testing infrastructure</h3>
+<p>Kiwi TCMS has become a mission-critical tool for us, drastically
+reducing latency while maintaining a lightweight and responsive design. Its versatility
+ensures widespread use across AMI's testing infrastructure, benefiting not just testers but
+also project managers and developers. The integration with JIRA further enhances our
+workflow efficiency.</p>
+<p>Additionally, the Kiwi TCMS API and the <a href="https://github.com/kiwitcms/tcms-api/">tcms-api</a>
+client-side library are a great foundation which
+enables us to create custom integrations, allowing
+the AMI team to develop tailored workflows that fit their unique requirements.</p>
+<p>For example, we have built a custom web application which provides
+data visualizations and reporting capabilities that are tailored to meet the needs of our
+stakeholders and customers. These custom solutions empower the QA team to provide actionable insights
+into testing quality, enhancing transparency and fostering trust across all levels of
+collaboration within our organization.</p>
+<hr>
+<p>In the words of <em>Utpal Patel, Senior Director, Global Test Engineering</em>:</p>
+<blockquote>
+<p>After a highly successful two-year run with Kiwi TCMS, we have transitioned
+to a <em>Managed Hosting</em> subscription to better accommodate the rapid growth at AMI. This move
+underscores our commitment to leveraging Kiwi TCMS as a cornerstone of our testing
+infrastructure. We're excited about collaborating closely with the Kiwi TCMS development
+team to refine it further, introducing features and capabilities that not only
+strengthen our own workflows but also contribute valuable enhancements for the broader
+testing community.</p>
+</blockquote>
+<hr>
+<p>If you like what we're doing please help us grow and sustain development!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2025/04/23/kiwi-tcms-142/" rel="bookmark" title="Permalink to Kiwi TCMS 14.2">
                 <h1 class="top-header">Kiwi TCMS 14.2</h1>
             </a>
@@ -2201,234 +2339,6 @@ please help us!</p>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
 <li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
 </ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2024/01/17/kiwi-tcms-130/" rel="bookmark" title="Permalink to Kiwi TCMS 13.0">
-                <h1 class="top-header">Kiwi TCMS 13.0</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 17 January 2024
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 13.0!</p>
-<p><strong>IMPORTANT:</strong>
-This is a backwards incompatible release which contains security and functional improvements,
-runtime, settings and API changes, bug fixes, internal refactoring and updated translations!</p>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>---</p>
-<blockquote>
-<p>Upstream container images (x86_64):</p>
-<pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  088187a81d3c    686MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged and multi-arch
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-<div class="section" id="changes-since-kiwi-tcms-12-7">
-<h2>Changes since Kiwi TCMS 12.7</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Preventatively patch calls to the built-in <tt class="docutils literal">xmlrpc.client</tt> module using the
-<tt class="docutils literal">defusedxml</tt> package</li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update container runtime from Python 3.9 to Python 3.11</li>
-<li>Update Django from 4.2.7 to 4.2.9</li>
-<li>Update django-colorfield from 0.10.1 to 0.11.0</li>
-<li>Update django-modern-rpc from 0.12.1 to 1.0.2</li>
-<li>Update django-tree-queries from 0.15.0 to 0.16.1</li>
-<li>Update django-simple-captcha from 0.5.20 to 0.6.0</li>
-<li>Update jira from 3.5.2 to 3.6.0</li>
-<li>Update markdown from 3.5.1 to 3.5.2</li>
-<li>Update mysqlclient from 2.2.0 to 2.2.1</li>
-<li>Update psycopg from 2.9.9 to 3.1.17</li>
-<li>Update python-gitlab from 4.1.1 to 4.4.0</li>
-<li>Update tzdata from 2023.3 to 2023.4</li>
-<li>Update node_modules/pdfmake from 0.2.8 to 0.2.9</li>
-<li>Show an icon when some child TPs not shown on Search Test Plans page to let
-the user know that parent-child hierarchies shown on the page may be
-incomplete because the data has been filtered out by their search criteria.
-Closes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3313">Issue #3313</a></li>
-<li>Hide the Expand/Collapse button Search Test Plans page for TP with 0 children
-in the result set</li>
-</ul>
-</div>
-<div class="section" id="settings">
-<h3>Settings</h3>
-<p><strong>WARNING:</strong></p>
-<p>The location of the Python runtime inside the container has changed.
-This affects settings override files as well as any downstream customizations
-to the Kiwi TCMS container image! For example you may have to adjust Docker
-volumes like so:</p>
-<div class="highlight"><pre><span></span><span class="w"> </span>        volumes:
-<span class="gd">-            - ./local_settings.py:/venv/lib64/python3.9/site-packages/tcms/settings/local_settings.py</span>
-<span class="gi">+            - ./local_settings.py:/venv/lib64/python3.11/site-packages/tcms/settings/local_settings.py</span>
-</pre></div>
-<ul class="simple">
-<li>Explicitly define the <tt class="docutils literal">DATA_UPLOAD_MAX_MEMORY_SIZE</tt> setting. It controls
-file uploads via RPC, not webUI, because the payload is base64 encoded and is
-part of the request body. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3262">Issue #3262</a></li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<p><strong>WARNING:</strong></p>
-<p>This version of Kiwi TCMS introduces backward incompatible changes to API methods</p>
-<ul class="simple">
-<li>Method <tt class="docutils literal">TestRun.filter()</tt> no longer returns the field
-<tt class="docutils literal">plan__product</tt></li>
-<li>Method <tt class="docutils literal">TestRun.filter()</tt> no longer returns the field
-<tt class="docutils literal">plan__product_version</tt></li>
-<li>Method <tt class="docutils literal">TestRun.filter()</tt> no longer returns the field
-<tt class="docutils literal">plan__product_version__value</tt></li>
-<li>Method <tt class="docutils literal">TestRun.filter()</tt> now returns the new field <tt class="docutils literal">build__version</tt></li>
-<li>Method <tt class="docutils literal">TestRun.filter()</tt> now returns the new field
-<tt class="docutils literal">build__version__product</tt></li>
-<li>Method <tt class="docutils literal">TestRun.filter()</tt> now returns the new field
-<tt class="docutils literal">build__version__value</tt></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Fix TestPlan cloning with different product (&#64;somenewacc)</li>
-<li>Fix row reload when adding new comment in TestRun page (&#64;somenewacc)</li>
-<li>Fix tag display for parametrized executions on TestRun page (&#64;somenewacc)</li>
-<li>Fix bug in search/display of Version on Search TestRun page. The root
-cause was that the correct relationship here should have been
-TR -&gt; Build -&gt; Version which is independent of the relationship
-TP -&gt; Product -&gt; Version. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3258">Issue #3258</a></li>
-<li>Fix bug in search/display of Product on Search TestRun page. The root
-cause was that the correct relationship here should have been
-TR -&gt; Build -&gt; Version -&gt; Product which is independent of the relationship
-TP -&gt; Product</li>
-<li>Fix Telemetry pages to query Product/Version from execution's data.
-All of these underlying queries on these pages operate on TestExecution and
-Product/Version information should be matched against what is stored in
-TestExecution-&gt;Build because it is more accurate over time, while
-TE-&gt;TR-&gt;TP-&gt;Product/Version is more likely to change as test plan
-documents evolve</li>
-<li>Adjust Product &amp; Version display on TestRun page using the relationship
-TR-&gt;Build as the starting point</li>
-<li>For IssueTracker integration use Product/Version from <tt class="docutils literal">execution.build</tt>
-Note that <tt class="docutils literal">execution.build</tt> is initialized with <tt class="docutils literal">run.build</tt> and then may
-change its value if we're recording results against multiple builds inside
-the same TestRun. For example mark some executions as PASS, others as FAIL;
-then update TR to a newer Build; retest and mark the FAIL results as PASS.
-Using the value of <tt class="docutils literal">execution.build</tt> is more accurate</li>
-<li>Treat the file <tt class="docutils literal">/Kiwi/etc/uwsgi.override</tt> as an ini file and load it if it
-exists. This means that any override files must include the <tt class="docutils literal">[uwsgi]</tt>
-section as well</li>
-</ul>
-</div>
-<div class="section" id="refactoring-and-testing">
-<h3>Refactoring and testing</h3>
-<ul class="simple">
-<li>Adjust Kiwi TCMS for newer version of django-modern-rpc (Antoine Lorence)</li>
-<li>Remove commented out code (&#64;deepsource-autofix[bot])</li>
-<li>Add integration test for uploading files with maximum allowed size</li>
-<li>Update isort from 5.12.0 to 5.13.2</li>
-<li>Update node_modules/eslint from 8.54.0 to 8.56.0</li>
-<li>Update node_modules/eslint-plugin-import from 2.29.0 to 2.29.1</li>
-<li>Update node_modules/eslint-plugin-n from 16.3.1 to 16.6.2</li>
-<li>Update actions/setup-python from 4 to 5</li>
-<li>Update github/codeql-action from 2 to 3</li>
-<li>Update actions/upload-artifact from 3 to 4</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="kiwi-tcms-enterprise-v13-0-mt">
-<h2>Kiwi TCMS Enterprise v13.0-mt</h2>
-<ul>
-<li><p class="first">Based on Kiwi TCMS v13.0</p>
-</li>
-<li><p class="first">Update container runtime from Python 3.9 to Python 3.11</p>
-</li>
-<li><p class="first">Update django-ses from 3.5.0 to 3.5.2</p>
-</li>
-<li><p class="first">Update kiwitcms-github-app from 1.5.1 to 1.6.0</p>
-</li>
-<li><p class="first">Update kiwitcms-tenants from 2.5.2 to 2.6.0</p>
-</li>
-<li><p class="first">Update kiwitcms-trackers-integration from 0.6.0 to 0.7.0</p>
-</li>
-<li><p class="first">Update social-auth-kerberos from 0.2.4 to 0.3.0</p>
-</li>
-<li><p class="first">Start testing with upstream Postgres container image</p>
-</li>
-<li><p class="first">Assert that Personal API Tokens is listed in PLUGINS menu</p>
-</li>
-<li><p class="first">Adjust search path for images during test</p>
-<blockquote>
-<p>Private container images:</p>
-<pre class="literal-block">
-hub.kiwitcms.eu/kiwitcms/version            13.0 (aarch64)          edf0999ee223    17 Jan 2024     698MB
-hub.kiwitcms.eu/kiwitcms/version            13.0 (x86_64)           088187a81d3c    17 Jan 2024     686MB
-hub.kiwitcms.eu/kiwitcms/enterprise         13.0-mt (aarch64)       58a8321da098    17 Jan 2024     899MB
-hub.kiwitcms.eu/kiwitcms/enterprise         13.0-mt (x86_64)        2c6fbc6adcc5    17 Jan 2024     885MB
-</pre>
-</blockquote>
-</li>
-</ul>
-<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-</div>
-<div class="section" id="tcms-api-changes-since-v12-7">
-<h2>tcms-api changes since v12.7</h2>
-<ul class="simple">
-<li>Refresh internal https transport every 4 minutes to avoid an
-<tt class="docutils literal">ssl.SSLEOFError: EOF occurred in violation of protocol</tt> error
-on Python 3.10 and later when executing very long running tests</li>
-<li>Include Python version in <tt class="docutils literal"><span class="pre">User-Agent</span></tt> header</li>
-<li>Send XML-RPC method name in <tt class="docutils literal">Referer</tt> header</li>
-<li>When creating a <tt class="docutils literal">TestPlan</tt> limit <tt class="docutils literal">name</tt> to 255 characters</li>
-<li>When creating a <tt class="docutils literal">TestCase</tt> limit <tt class="docutils literal">summary</tt> to 255 characters</li>
-</ul>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-Then follow the
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
-from our documentation.</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all project news;</li>
-<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
-and an awesome open source hacker;</li>
-<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-</div>
-
         </div>
     </article>
 

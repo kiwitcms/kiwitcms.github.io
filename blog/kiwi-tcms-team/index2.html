@@ -110,6 +110,234 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2024/01/17/kiwi-tcms-130/" rel="bookmark" title="Permalink to Kiwi TCMS 13.0">
+                <h1 class="top-header">Kiwi TCMS 13.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 17 January 2024
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 13.0!</p>
+<p><strong>IMPORTANT:</strong>
+This is a backwards incompatible release which contains security and functional improvements,
+runtime, settings and API changes, bug fixes, internal refactoring and updated translations!</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Upstream container images (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  088187a81d3c    686MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-12-7">
+<h2>Changes since Kiwi TCMS 12.7</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Preventatively patch calls to the built-in <tt class="docutils literal">xmlrpc.client</tt> module using the
+<tt class="docutils literal">defusedxml</tt> package</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update container runtime from Python 3.9 to Python 3.11</li>
+<li>Update Django from 4.2.7 to 4.2.9</li>
+<li>Update django-colorfield from 0.10.1 to 0.11.0</li>
+<li>Update django-modern-rpc from 0.12.1 to 1.0.2</li>
+<li>Update django-tree-queries from 0.15.0 to 0.16.1</li>
+<li>Update django-simple-captcha from 0.5.20 to 0.6.0</li>
+<li>Update jira from 3.5.2 to 3.6.0</li>
+<li>Update markdown from 3.5.1 to 3.5.2</li>
+<li>Update mysqlclient from 2.2.0 to 2.2.1</li>
+<li>Update psycopg from 2.9.9 to 3.1.17</li>
+<li>Update python-gitlab from 4.1.1 to 4.4.0</li>
+<li>Update tzdata from 2023.3 to 2023.4</li>
+<li>Update node_modules/pdfmake from 0.2.8 to 0.2.9</li>
+<li>Show an icon when some child TPs not shown on Search Test Plans page to let
+the user know that parent-child hierarchies shown on the page may be
+incomplete because the data has been filtered out by their search criteria.
+Closes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3313">Issue #3313</a></li>
+<li>Hide the Expand/Collapse button Search Test Plans page for TP with 0 children
+in the result set</li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<p><strong>WARNING:</strong></p>
+<p>The location of the Python runtime inside the container has changed.
+This affects settings override files as well as any downstream customizations
+to the Kiwi TCMS container image! For example you may have to adjust Docker
+volumes like so:</p>
+<div class="highlight"><pre><span></span><span class="w"> </span>        volumes:
+<span class="gd">-            - ./local_settings.py:/venv/lib64/python3.9/site-packages/tcms/settings/local_settings.py</span>
+<span class="gi">+            - ./local_settings.py:/venv/lib64/python3.11/site-packages/tcms/settings/local_settings.py</span>
+</pre></div>
+<ul class="simple">
+<li>Explicitly define the <tt class="docutils literal">DATA_UPLOAD_MAX_MEMORY_SIZE</tt> setting. It controls
+file uploads via RPC, not webUI, because the payload is base64 encoded and is
+part of the request body. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3262">Issue #3262</a></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<p><strong>WARNING:</strong></p>
+<p>This version of Kiwi TCMS introduces backward incompatible changes to API methods</p>
+<ul class="simple">
+<li>Method <tt class="docutils literal">TestRun.filter()</tt> no longer returns the field
+<tt class="docutils literal">plan__product</tt></li>
+<li>Method <tt class="docutils literal">TestRun.filter()</tt> no longer returns the field
+<tt class="docutils literal">plan__product_version</tt></li>
+<li>Method <tt class="docutils literal">TestRun.filter()</tt> no longer returns the field
+<tt class="docutils literal">plan__product_version__value</tt></li>
+<li>Method <tt class="docutils literal">TestRun.filter()</tt> now returns the new field <tt class="docutils literal">build__version</tt></li>
+<li>Method <tt class="docutils literal">TestRun.filter()</tt> now returns the new field
+<tt class="docutils literal">build__version__product</tt></li>
+<li>Method <tt class="docutils literal">TestRun.filter()</tt> now returns the new field
+<tt class="docutils literal">build__version__value</tt></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix TestPlan cloning with different product (&#64;somenewacc)</li>
+<li>Fix row reload when adding new comment in TestRun page (&#64;somenewacc)</li>
+<li>Fix tag display for parametrized executions on TestRun page (&#64;somenewacc)</li>
+<li>Fix bug in search/display of Version on Search TestRun page. The root
+cause was that the correct relationship here should have been
+TR -&gt; Build -&gt; Version which is independent of the relationship
+TP -&gt; Product -&gt; Version. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3258">Issue #3258</a></li>
+<li>Fix bug in search/display of Product on Search TestRun page. The root
+cause was that the correct relationship here should have been
+TR -&gt; Build -&gt; Version -&gt; Product which is independent of the relationship
+TP -&gt; Product</li>
+<li>Fix Telemetry pages to query Product/Version from execution's data.
+All of these underlying queries on these pages operate on TestExecution and
+Product/Version information should be matched against what is stored in
+TestExecution-&gt;Build because it is more accurate over time, while
+TE-&gt;TR-&gt;TP-&gt;Product/Version is more likely to change as test plan
+documents evolve</li>
+<li>Adjust Product &amp; Version display on TestRun page using the relationship
+TR-&gt;Build as the starting point</li>
+<li>For IssueTracker integration use Product/Version from <tt class="docutils literal">execution.build</tt>
+Note that <tt class="docutils literal">execution.build</tt> is initialized with <tt class="docutils literal">run.build</tt> and then may
+change its value if we're recording results against multiple builds inside
+the same TestRun. For example mark some executions as PASS, others as FAIL;
+then update TR to a newer Build; retest and mark the FAIL results as PASS.
+Using the value of <tt class="docutils literal">execution.build</tt> is more accurate</li>
+<li>Treat the file <tt class="docutils literal">/Kiwi/etc/uwsgi.override</tt> as an ini file and load it if it
+exists. This means that any override files must include the <tt class="docutils literal">[uwsgi]</tt>
+section as well</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Adjust Kiwi TCMS for newer version of django-modern-rpc (Antoine Lorence)</li>
+<li>Remove commented out code (&#64;deepsource-autofix[bot])</li>
+<li>Add integration test for uploading files with maximum allowed size</li>
+<li>Update isort from 5.12.0 to 5.13.2</li>
+<li>Update node_modules/eslint from 8.54.0 to 8.56.0</li>
+<li>Update node_modules/eslint-plugin-import from 2.29.0 to 2.29.1</li>
+<li>Update node_modules/eslint-plugin-n from 16.3.1 to 16.6.2</li>
+<li>Update actions/setup-python from 4 to 5</li>
+<li>Update github/codeql-action from 2 to 3</li>
+<li>Update actions/upload-artifact from 3 to 4</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v13-0-mt">
+<h2>Kiwi TCMS Enterprise v13.0-mt</h2>
+<ul>
+<li><p class="first">Based on Kiwi TCMS v13.0</p>
+</li>
+<li><p class="first">Update container runtime from Python 3.9 to Python 3.11</p>
+</li>
+<li><p class="first">Update django-ses from 3.5.0 to 3.5.2</p>
+</li>
+<li><p class="first">Update kiwitcms-github-app from 1.5.1 to 1.6.0</p>
+</li>
+<li><p class="first">Update kiwitcms-tenants from 2.5.2 to 2.6.0</p>
+</li>
+<li><p class="first">Update kiwitcms-trackers-integration from 0.6.0 to 0.7.0</p>
+</li>
+<li><p class="first">Update social-auth-kerberos from 0.2.4 to 0.3.0</p>
+</li>
+<li><p class="first">Start testing with upstream Postgres container image</p>
+</li>
+<li><p class="first">Assert that Personal API Tokens is listed in PLUGINS menu</p>
+</li>
+<li><p class="first">Adjust search path for images during test</p>
+<blockquote>
+<p>Private container images:</p>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            13.0 (aarch64)          edf0999ee223    17 Jan 2024     698MB
+hub.kiwitcms.eu/kiwitcms/version            13.0 (x86_64)           088187a81d3c    17 Jan 2024     686MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.0-mt (aarch64)       58a8321da098    17 Jan 2024     899MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.0-mt (x86_64)        2c6fbc6adcc5    17 Jan 2024     885MB
+</pre>
+</blockquote>
+</li>
+</ul>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="tcms-api-changes-since-v12-7">
+<h2>tcms-api changes since v12.7</h2>
+<ul class="simple">
+<li>Refresh internal https transport every 4 minutes to avoid an
+<tt class="docutils literal">ssl.SSLEOFError: EOF occurred in violation of protocol</tt> error
+on Python 3.10 and later when executing very long running tests</li>
+<li>Include Python version in <tt class="docutils literal"><span class="pre">User-Agent</span></tt> header</li>
+<li>Send XML-RPC method name in <tt class="docutils literal">Referer</tt> header</li>
+<li>When creating a <tt class="docutils literal">TestPlan</tt> limit <tt class="docutils literal">name</tt> to 255 characters</li>
+<li>When creating a <tt class="docutils literal">TestCase</tt> limit <tt class="docutils literal">summary</tt> to 255 characters</li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/" rel="bookmark" title="Permalink to Feature showcase: Personal API tokens">
                 <h1 class="top-header">Feature showcase: Personal API tokens</h1>
             </a>
@@ -2602,50 +2830,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2022/06/27/mejor-sitio-web-2022/" rel="bookmark" title="Permalink to Mejor Sitio Web 2022">
-                <h1 class="top-header">Mejor Sitio Web 2022</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Mon 27 June 2022
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Kiwi TCMS is happy to announce that we have been awarded a "Best Website 2022" award
-by <a href="https://www.reviewbox.es">Reviewbox.es</a>, scoring 36/40 on their evaluation.
-The review criteria can be found at <a href="https://www.reviewbox.es/los-mejores-sitios-web/">https://www.reviewbox.es/los-mejores-sitios-web/</a>.</p>
-<blockquote>
-<p>Querido equipo de Kiwitcms,</p>
-<p>¡Felicidades!</p>
-<p>Habéis logrado lo que muchos otros desean:</p>
-<p>Habéis acumulado 36/40 puntos en nuestra investigación de
-mercado y por lo tanto calificasteis (mínimo 30 de 40 puntos necesarios)
-para nuestro premio Mejor Sitio Web 2022.</p>
-<p>Resultados y criterios de investigación</p>
-<p>URL: Kiwitcms-Team</p>
-<p>Puntos: 36/40</p>
-</blockquote>
-<p>Our team is happy to accept this award, which comes exactly 2 years
-after we became an <a href="/blog/atodorov/2019/06/24/kiwi-tcms-is-openawards-2019-best-tech-community-winner/">OpenAwards winner</a>.</p>
-<p>Thank you and Happy testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
-</ul>
         </div>
     </article>
 
