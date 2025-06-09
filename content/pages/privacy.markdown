@@ -31,18 +31,18 @@ Your user profile information is not shared with 3rd parties!
 Anonymous analytics
 ===================
 
-Kiwi TCMS uses Plausible Analytics on this website, inside our
+Kiwi TCMS uses Plausible Analytics and Scarf on this website, inside our
 [official container images]({filename}containers.markdown) and
 all tenants provisioned under `https://*.tenant.kiwitcms.org` to collect some
 anonymous usage data for statistical purposes.
 
-Our goal is to track overall trends
-and usage patterns in Kiwi TCMS application(s), not to track individual visitors.
-All the data is in aggregate only. No personal data is sent to Plausible.
-Data collected includes referral sources,
-top pages, visit duration, information from the devices
+Our goal is to track overall trends and usage patterns in Kiwi TCMS application(s),
+not to track individuals.
+All data is in aggregate only and no personally identifiable information is collected.
+Data collected includes referral sources, top pages, visit duration, information from the devices
 (device type, operating system, country and browser) used during the visit.
-Read more in the Plausible Analytics [Data Policy](https://plausible.io/data-policy)
+Read more in the [Plausible Analytics Data Policy](https://plausible.io/data-policy),
+[Scarf's FAQ page](https://about.scarf.sh/contact#FAQ)
 and [our blog]({filename}../2024-02-23-anonymous-analytics.markdown).
 Check-out the Plausible Analytics dashboard for
 [kiwitcms.org](https://plausible.io/kiwitcms.org),
