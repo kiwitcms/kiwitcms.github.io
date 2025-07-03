@@ -110,6 +110,157 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2025/07/03/kiwi-tcms-143/" rel="bookmark" title="Permalink to Kiwi TCMS 14.3">
+                <h1 class="top-header">Kiwi TCMS 14.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 03 July 2025
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 14.3!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which includes security related updates,
+several improvements, bug fixes and new translations.</p>
+<p>Recommended
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
+path:</p>
+<pre class="literal-block">
+14.2 -&gt; 14.3
+</pre>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  0de20b89c781    691MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-14-2">
+<h2>Changes since Kiwi TCMS 14.2</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 5.1.8 to 5.1.11, addressing medium severity vulnerabilities,
+<a class="reference external" href="https://docs.djangoproject.com/en/5.1/releases/5.1.9/">CVE-2025-32873</a> and
+<a class="reference external" href="https://docs.djangoproject.com/en/5.1/releases/5.1.10/">CVE-2025-48432</a>,
+which do not appear to affect Kiwi TCMS</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Remove the django-uuslug dependency</li>
+<li>Update django-colorfield from 0.13.0 to 0.14.0</li>
+<li>Update django-grappelli from 4.0.1 to 4.0.2</li>
+<li>Update django-guardian from 2.4.0 to 3.0.3</li>
+<li>Update django-simple-history from 3.8.0 to 3.10.1</li>
+<li>Update django-tree-queries from 0.19.0 to 0.20.0</li>
+<li>Update markdown from 3.8 to 3.8.2</li>
+<li>Update psycopg[binary] from 3.2.6 to 3.2.9</li>
+<li>Update pygments from 2.19.1 to 2.19.2</li>
+<li>Update python-gitlab from 5.6.0 to 6.1.0</li>
+<li>Update uwsgi from 2.0.29 to 2.0.30</li>
+<li>Update node_modules/pdfmake from 0.2.18 to 0.2.20</li>
+<li>Display nested Test Plan(s) in select drop-down on New Test Run page</li>
+<li>Implement <tt class="docutils literal">Bugzilla.details()</tt> method to fetch more information about
+reported bugs via the existing Bugzilla integration interface</li>
+<li>Refactor URL <tt class="docutils literal"><span class="pre">/accounts/&lt;username&gt;/profile/</span></tt> into
+<tt class="docutils literal"><span class="pre">/accounts/&lt;pk&gt;/profile/</span></tt>
+to prevent usernames being exposed in logs or anonymous analytics</li>
+<li>Refactor URL <tt class="docutils literal"><span class="pre">/plan/&lt;pk&gt;/&lt;slug&gt;</span></tt> into <tt class="docutils literal"><span class="pre">/plan/&lt;pk&gt;/</span></tt> to prevent test plan
+summary being exposed in logs or anonymous analytics. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3994">Issue #3994</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Make sure <tt class="docutils literal">IssueTrackerType.details()</tt> method provides <tt class="docutils literal">id</tt> and
+<tt class="docutils literal">status</tt> fields to prevent crashes when IssueTracker integration falls back
+to this method</li>
+<li>For <tt class="docutils literal">Bug.details()</tt> API method always cast internal result to dict
+to avoid the situation where <tt class="docutils literal"><span class="pre">modernrpc/handlers/xmlhandler.py::dumps_result()</span></tt>
+doesn't know how to serialize that! Fixes
+<a class="reference external" href="https://kiwitcms.sentry.io/issues/6660677083/">Sentry KIWI-TCMS-VV</a></li>
+<li>Don't send email notifications to inactive users</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update node_modules/eslint-plugin-import from 2.31.0 to 2.32.0</li>
+<li>Update node_modules/webpack from 5.99.6 to 5.99.9</li>
+<li>Use the public interface <tt class="docutils literal"><span class="pre">tcms_api.TCMS().exec</span></tt> in tests</li>
+<li>Add test for unauthenticated <tt class="docutils literal">Bugzilla.details()</tt> which falls back to
+OpenGraph</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fa#">Persian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v14-3-mt">
+<h2>Kiwi TCMS Enterprise v14.3-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v14.3</li>
+<li>Update certbot-* from 4.0.0 to 4.1.1</li>
+<li>Update dj-database-url from 2.3.0 to 3.0.1</li>
+<li>Update django-prometheus from 2.3.1 to 2.4.1</li>
+<li>Update sentry-sdk from 2.26.1 to 2.32.0</li>
+<li>Update social-auth-app-django from 5.4.3 to 5.5.1</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            14.3 (x86_64)           096aa72ea8b7    03 Jul 2025     691MB
+hub.kiwitcms.eu/kiwitcms/version            14.3 (aarch64)          90de3cb881d6    03 Jul 2025     703MB
+hub.kiwitcms.eu/kiwitcms/enterprise         14.3-mt (aarch64)       182297e972ce    03 Jul 2025     1.08GB
+hub.kiwitcms.eu/kiwitcms/enterprise         14.3-mt (x86_64)        3697c45224c0    03 Jul 2025     1.06GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2025/05/27/ami-transitions-to-kiwi-tcms-managed-hosting/" rel="bookmark" title="Permalink to AMI transitions to Kiwi TCMS Managed Hosting">
                 <h1 class="top-header">AMI transitions to Kiwi TCMS Managed Hosting</h1>
             </a>
@@ -2260,91 +2411,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/" rel="bookmark" title="Permalink to Anonymous analytics via Plausible.io">
-                <h1 class="top-header">Anonymous analytics via Plausible.io</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Fri 23 February 2024
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Since the very beginning when we launched Kiwi TCMS our team has been struggling to
-understand how many people use it, how active these users are, which pages &amp; functionality
-they spend the most time with, how many installations of Kiwi TCMS are out there in the wild
-and which exactly versions are the most used ones!</p>
-<p>We reached over <a href="/blog/kiwi-tcms-team/2023/11/08/kiwi-tcms-surpassed-2-million-downloads/">2 million downloads</a>
-without any analytics inside the application because we do not want to intrude
-on our users' privacy and this has not been easy! Inspired by
-<a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3648-privacy-respecting-usage-metrics-for-free-software-projects/">a recent presentation</a>
-we learned about Plausible Analytics - GDPR, CCPA and cookie law compliant, open source site analytics tool -
-and decided to use it! You can check-out how it works <a href="https://plausible.io/privacy-focused-web-analytics">here</a>.</p>
-<h1>What is changing</h1>
-<p>Starting with Kiwi TCMS v13.1 anonymous analytics will be enabled for statistical purposes.
-Our goal is to track overall usage patterns inside the Kiwi TCMS application(s),
-not to track individual visitors. All the data is in aggregate only.
-No personal data is sent to Plausible.</p>
-<p>Anonymous analytics are enabled on this website,
-inside our <a href="/containers/">official container images</a> and for
-all tenants provisioned under <code>https://*.tenant.kiwitcms.org</code>. Running containers
-will report back to Plausible Analytics every 5 days to send the version number of Kiwi TCMS,
-nothing else! Here's a preview of what it looks like:</p>
-<p><img alt="&quot;preview of versions report&quot;" src="/images/analytics/preview_active_versions.png" title="preview of versions report"></p>
-<p>You can examine our source code
-<a href="https://github.com/kiwitcms/Kiwi/pull/3546">here</a> and <a href="https://github.com/kiwitcms/Kiwi/pull/3547">here</a>.</p>
-<p>Staying true to our open source nature we've made the
-<a href="https://plausible.io/kiwitcms.org">kiwitcms.org stats dashboard</a> publicly available immediately!
-In several months we are going to carefully examine the stats collected by the <em>kiwitcms-container</em> dashboard
-and consider making them publicly available as well! Most likely we will!</p>
-<h1>Who uses Plausible</h1>
-<p>A number of [open source] organizations have publicly endorsed the use of Plausible Analytics:</p>
-<ul>
-<li>Plausible Analytics - check-out <a href="https://plausible.io/plausible.io">their stats</a></li>
-<li>elementary OS - <a href="https://blog.elementary.io/leaving-google-analytics-is-finally-plausible/">blog post</a>,
-    <a href="https://plausible.io/blog.elementary.io">blog stats</a>,
-    <a href="https://plausible.io/elementary.io">main stats</a></li>
-<li>Open Source Initiative - <a href="https://opensource.org/blog/2022-01-welcome-new-members">blog post</a>,
-    <a href="https://plausible.io/join.opensource.org">landing-page stats</a>,
-    <a href="https://plausible.io/opensource.org">main stats</a></li>
-<li>The Rails Foundation - <a href="https://rubyonrails.org/foundation/privacy">privacy policy</a>,
-    <a href="https://plausible.io/rubyonrails.org">website stats</a></li>
-<li>System 76 - open source hardware vendor -
-    <a href="https://system76.com/privacy-2021">privacy policy</a>, stats not public</li>
-<li>The Scottish Government - <a href="https://www.gov.scot/privacy/">privacy policy</a>, stats not public</li>
-</ul>
-<p>You can also inspect this huge list of
-<a href="https://trends.builtwith.com/websitelist/Plausible-Analytics">Websites using Plausible Analytics</a>
-compiled by a 3rd party vendor!</p>
-<h1>How can I opt-out</h1>
-<ul>
-<li>Leave everything as-is and help us better understand usage of Kiwi TCMS</li>
-<li>Update the setting <code>PLAUSIBLE_DOMAIN</code> and collect your own stats with Plausible</li>
-<li>Update the setting <code>ANONYMOUS_ANALYTICS</code> to False and disable all stats</li>
-</ul>
-<p><strong>IMPORTANT:</strong> Private Tenant customers and
-<a href="https://public.tenant.kiwitcms.org">demo instance</a> users cannot opt-out! Given that they
-are consuming digital resources hosted by our own team they have already shared
-more information with us than what gets sent to Plausible!
-Note that we do not track individual users, analyze or sell your information to 3rd parties
-even across our own digital properties!</p>
-<p>Happy Testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
-</ul>
         </div>
     </article>
 
