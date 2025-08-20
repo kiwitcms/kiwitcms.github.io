@@ -104,6 +104,186 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2024/02/26/kiwi-tcms-131/" rel="bookmark" title="Permalink to Kiwi TCMS 13.1">
+                <h1 class="top-header">Kiwi TCMS 13.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Mon 26 February 2024
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 13.1!</p>
+<p><strong>IMPORTANT:</strong>
+This is a small release which contains several improvements,
+new settings and API methods, bug fixes and internal refactoring!</p>
+<p>Recommended
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
+path:</p>
+<pre class="literal-block">
+13.0 -&gt; 13.1
+</pre>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Upstream container images (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  b64472d820a2    698MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-13-0">
+<h2>Changes since Kiwi TCMS 13.0</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update django from 4.2.9 to 4.2.10</li>
+<li>Update django-simple-history from 3.4.0 to 3.5.0</li>
+<li>Update mysqlclient from 2.2.1 to 2.2.4</li>
+<li>Update psycopg from 3.1.17 to 3.1.18</li>
+<li>Update tzdata from 2023.4 to 2024.1</li>
+<li>Update uwsgi from 2.0.23 to 2.0.24</li>
+<li>Update node_modules/datatables.net-buttons from 2.4.2 to 3.0.0</li>
+<li>Add <tt class="docutils literal">robots.txt</tt> file to tell various robots to stop probing Kiwi TCMS</li>
+<li>Resolve the path <tt class="docutils literal">/favicon.ico</tt> because some browsers still search for it</li>
+<li>Send <tt class="docutils literal">Referer:</tt> header for container <tt class="docutils literal">HEALTHCHECK</tt> command in order to
+make NGINX logs more readable</li>
+<li>Allow users to reset their email by asking them to confirm their new address. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3211">Issue #3211</a></li>
+<li>Add support for custom email validators on the registration page</li>
+<li>Move <tt class="docutils literal"><span class="pre">X-Frame-Options</span></tt> header definition into settings</li>
+<li>Move <tt class="docutils literal"><span class="pre">X-Content-Type-Options</span></tt> header definition into settings</li>
+<li>Enable anonymous analytics,
+<a class="reference external" href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/">see here</a></li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li>New settings <tt class="docutils literal">ANONYMOUS_ANALYTICS</tt> and <tt class="docutils literal">PLAUSIBLE_DOMAIN</tt> control
+anonymous analytics</li>
+<li>New setting <tt class="docutils literal">EMAIL_VALIDATORS</tt> for custom email validation during
+registration</li>
+<li>Add the following settings in order to document them -
+<tt class="docutils literal">CSRF_COOKIE_AGE</tt>, <tt class="docutils literal">CSRF_COOKIE_HTTPONLY</tt>, <tt class="docutils literal">SESSION_COOKIE_HTTPONLY</tt>,
+<tt class="docutils literal">CSRF_COOKIE_SECURE</tt> and <tt class="docutils literal">SESSION_COOKIE_SECURE</tt>. Most likely you don't
+need to change their values</li>
+<li>Respect <tt class="docutils literal">X_FRAME_OPTIONS</tt> setting, defaults to <tt class="docutils literal">DENY</tt></li>
+<li>Respect <tt class="docutils literal">SECURE_CONTENT_TYPE_NOSNIFF</tt> setting, defaults to <tt class="docutils literal">nosniff</tt></li>
+<li>Configure <tt class="docutils literal">SECURE_SSL_REDIRECT</tt> setting to <tt class="docutils literal">True</tt></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>New method <tt class="docutils literal">TestExecution.remove()</tt> which should be used in favor of
+<tt class="docutils literal">TestRun.remove_case()</tt></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix a bug where non-distinct values made it into generated property matrix</li>
+<li>On TestRun page allow removal of individual parameterized TestExecution(s).
+Closes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/pull/3282">Pull #3282</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update codecov/codecov-action from 3 to 4</li>
+<li>Update node_modules/webpack from 5.89.0 to 5.90.3</li>
+<li>Update runner image for CircleCI</li>
+<li>Fix failure in <tt class="docutils literal">test_utf8_uploads</tt> on CircleCI</li>
+<li>Several improvements around performance benchmark tests</li>
+<li>Refactor <tt class="docutils literal">RegistrationForm.clean_email()</tt> using field validator function</li>
+<li>Add tests for test matrix generation functionality</li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v13-1-mt">
+<h2>Kiwi TCMS Enterprise v13.1-mt</h2>
+<ul>
+<li><p class="first">Based on Kiwi TCMS v13.1</p>
+</li>
+<li><p class="first">Replace NGINX with OpenResty with built-in support for Lua scripting</p>
+</li>
+<li><p class="first">Implement request limits configurable via environment variables</p>
+</li>
+<li><p class="first">Initial integration with Let's Encrypt. Closes
+<a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/253">Issue #253</a></p>
+<p><strong>WARNINGS:</strong></p>
+<blockquote>
+<ul class="simple">
+<li>true
+<a class="reference external" href="https://letsencrypt.org/docs/faq/#does-let-s-encrypt-issue-wildcard-certificates">wildcard certificates</a>
+are only possible via certbot's DNS plugins while current integration uses <tt class="docutils literal"><span class="pre">--webroot</span></tt></li>
+<li>you need to bind-mount <tt class="docutils literal">/etc/letsencrypt/</tt> and <tt class="docutils literal">/Kiwi/ssl/</tt> inside the container
+if you want the Let's Encrypt certificates to persist a restart</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Replace <tt class="docutils literal">raven</tt> with <tt class="docutils literal"><span class="pre">sentry-sdk</span></tt></p>
+</li>
+<li><p class="first">Override <tt class="docutils literal">HEALTHCHECK</tt> command</p>
+</li>
+<li><p class="first">Add more tests for container and http functionality</p>
+</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            13.1 (aarch64)          a611a00ee2bc    26 Feb 2024     709MB
+hub.kiwitcms.eu/kiwitcms/version            13.1 (x86_64)           b64472d820a2    26 Feb 2024     698MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.1-mt (aarch64)       76ef5773b488    26 Feb 2024     1.07GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.1-mt (x86_64)        9781119c2348    26 Feb 2024     1.04GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="saas-changes-since-v13-0">
+<h2>SaaS changes since v13.0</h2>
+<p>Applies to any digital property under <tt class="docutils literal">*.tenant.kiwitcms.org</tt>!</p>
+<ul class="simple">
+<li>Newly registered accounts are no longer possible using <tt class="docutils literal">&#64;yahoo</tt> email addresses</li>
+<li>Anonymous analytics has been enabled,
+<a class="reference external" href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/">see here</a></li>
+</ul>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/" rel="bookmark" title="Permalink to Anonymous analytics via Plausible.io">
                 <h1 class="top-header">Anonymous analytics via Plausible.io</h1>
             </a>
@@ -2480,75 +2660,6 @@ leave a comment for the devroom managers and we'll get back to you.</p>
 <p>Checkout
 <a href="https://fosdem-testingautomation.github.io/">https://fosdem-testingautomation.github.io/</a> for more information!</p>
 <p>Happy Testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and we'll share our profits with the community</li>
-</ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2022/10/25/meet-kiwi-tcms-at-websummit-2022-in-lisbon/" rel="bookmark" title="Permalink to Meet Kiwi TCMS at WebSummit 2022 in Lisbon">
-                <h1 class="top-header">Meet Kiwi TCMS at WebSummit 2022 in Lisbon</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 25 October 2022
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Kiwi TCMS is happy to announce that we're taking part in
-<a href="https://websummit.com/">WebSummit 2022</a>, Nov 01-04 in Lisbon, Portugal.
-We're joining as a <a href="https://websummit.com/startups/featured-startups">featured startup</a>
-in the <em>Enterprise Software Solutions</em> category.</p>
-<p>Kiwi TCMS will have an on-site presence on
-<strong>Wednesday, Nov 02 at Pavilion 4, Stand A709</strong>. Check-out the map for more details:
-<img alt="venue map" src="/images/conf/websummit/stand2022.png" title="venue map"></p>
-<h2>For engineers</h2>
-<p>At the exhibition stand you will have the opportunity to perform some real
-<a href="/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/">black-box testing</a>,
-learn about Salience bias, Peltzman effect and Wason's experiments and take a photo with
-our lovely mascot. We've got new stickers too!</p>
-<p>Alex and Zaklina will be there to answer all of your questions regarding
-open source, community, support, various integrations and the differences between
-<em>Self-Support</em>, <em>SaaS</em> and <em>Enterprise</em> <a href="/#subscriptions">subscriptions</a>!</p>
-<p><img alt="&quot;black boxes&quot;" src="/images/conf/websummit/black_boxes.png" title="black boxes"></p>
-<p><strong>IMPORTANT:</strong> We've previously announced participation in
-<a href="https://testingportugal.pstqb.pt/en/">Testing Portigal</a> at the end of November.
-Unfortunately this had to be canceled due to personal reasons. If you are a test or
-QA engineer please swing by and Alex can tell you a bit about his presentation!</p>
-<h2>For partners</h2>
-<p>If you are another ISV providing engineering tools, a product outsourcing company
-or a devel/testing services venture we've got a partnership proposal for you!</p>
-<p>We're interested in partners where we can integrate other products with Kiwi TCMS
-and provide a better offering; provide extra services (e.g. managed hosting) and/or
-provide more transparency to your own customers (e.g. allow them to see how their products
-are being tested).</p>
-<p>Message us via the WebSummit mobile app and request a meeting or better yet,
-find our team on-site!</p>
-<h2>After hours</h2>
-<p>The Kiwi TCMS team will be joining the following after-hours events:</p>
-<ul>
-<li>Nov 01 - <a href="https://www.meetup.com/lagos-digital-nomads-community-meetup-group/events/289071623/">MEETUP - Local &amp; International Entrepreneurs &amp; Digital Nomads</a></li>
-<li>Nov 02 - <a href="https://www.meetup.com/bites-bytes/events/288577914/">Bites and bytes founder gathering: dev tools &amp; open source</a></li>
-<li>Nov 03 - <a href="https://www.meetup.com/lisbon-digital-nomads/events/288840698/">Web Summit 2022 Special! Lisbon Digital Nomads Meetup</a></li>
-<li>Nov 04 - Meeting with <a href="https://www.youtube.com/watch?v=Wob_L_SrEwE">QGIS community</a> which have been onboard
-  with Kiwi TCMS for some time now. Ping <a href="https://github.com/SrNetoChan">Alexandre Neto</a> if you would like
-  to join</li>
-<li>Nov 04 - <a href="https://www.meetup.com/theblock/events/288815979/">Crypto Friday @ The Block Lisboa</a></li>
-<li>Nov 05 - <a href="https://www.meetup.com/web3-for-the-win/events/289145375/">☕️Web3 Brunch🥞</a></li>
-</ul>
-<p>Catch-up with us for a beer and let's talk testing and open source!</p>
 <hr>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
