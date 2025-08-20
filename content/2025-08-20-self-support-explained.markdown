@@ -75,7 +75,7 @@ they are implemented.
 from [EthicalAds](https://www.ethicalads.io/) rewards from which are paid out to
 [opencollective.com/kiwitcms](https://opencollective.com/kiwitcms/transactions) for transparency.
 
-Docker images from the *Self Support* subscription remove those ads and make the web
+Container images from the *Self Support* subscription remove those ads and make the web
 interface cleaner.
 
 
