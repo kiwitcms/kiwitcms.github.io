@@ -92,6 +92,20 @@ IMPORTANT: With a *Private Tenant* subscription the responsibility of testing al
 the latest version of Kiwi TCMS falls onto the customer.
 
 
+**Backup & disaster recovery:** the Kiwi TCMS team takes care to backup our SaaS cluster regularly
+in case a catastrophic failure occurs - this is designed for disaster recovery purposes.
+
+While the Kiwi TCMS application itself keeps track of changes and removals of certain objects it may
+not always be possible to restore a deleted entry. You may be able to create new records with
+the same information however if a record cannot be restored via the Kiwi TCMS web interface we cannot help you.
+Due to technical limitations we cannot restore individual records from a *Private Tenant*.
+
+
+**Data access via web & API:** keeping in mind that a *Private Tenant* namespace is allocated
+on a cluster with hundreds of others your only access to data is via web and API.
+Due to technical and security limitations we cannot give you access to the underlying database nor
+the raw backup files. You are free to export your data as frequently as you wish though!
+
 
 **Dedicated technical support:** as a *Private Tenant* customer you receive full technical support
 from the Kiwi TCMS team spanning all components related to the Kiwi TCMS application. Working hours
