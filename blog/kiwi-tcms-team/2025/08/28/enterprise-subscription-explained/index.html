@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Private Tenant Subscription Explained</title>
+        <title>Kiwi TCMS - Enterprise Subscription Explained</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-Frame-Options" content="deny">
         <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
@@ -19,7 +19,7 @@
         <meta name="author" content="Kiwi TCMS Team">
 
         <meta name="twitter:site" content="@KiwiTCMS">
-        <meta name="twitter:title" content="Private Tenant Subscription Explained">
+        <meta name="twitter:title" content="Enterprise Subscription Explained">
             <meta name="twitter:description" content="all the details you need to know">
         <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
@@ -27,9 +27,9 @@
         <meta property="og:site_name" content="Kiwi TCMS">
         <meta property="og:type" content="article" />
             <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
-        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/" />
-        <meta property="og:title" content="Private Tenant Subscription Explained" />
-        <meta property="article:published_time" content="2025-08-20 13:00:00+03:00">
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2025/08/28/enterprise-subscription-explained/" />
+        <meta property="og:title" content="Enterprise Subscription Explained" />
+        <meta property="article:published_time" content="2025-08-28 12:00:00+03:00">
             <meta property="og:description" content="all the details you need to know">
 
             <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
@@ -122,82 +122,83 @@
 
         <!-- content -->
     <section id="blog-article">
-        <h1 class="top-header">Private Tenant Subscription Explained</h1>
+        <h1 class="top-header">Enterprise Subscription Explained</h1>
         <h2 class="top-subheader">all the details you need to know</h2>
 
         <p class="post-meta">
             Posted by
                 <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-            on Wed 20 August 2025
+            on Thu 28 August 2025
         </p>
 
         <article class="content">
-            <p>Hello testers, this page explains what the <em>Private Tenant</em> subscription is and
-how it brings more value beyond the Kiwi TCMS application itself.
+            <p>Hello testers,
+this page explains what the <em>Enterprise</em> subscription is and how it brings more
+value beyond the Kiwi TCMS application itself.
 Please read about the details below.</p>
-<h2>What is Private Tenant by Kiwi TCMS</h2>
-<p>This is our most popular subscription tier which combines SaaS hosting and
-additional support services. It is more about <em>ease of use</em> allowing your
-QA team to focus on more testing rather than specific software features.</p>
+<h2>What is Kiwi TCMS Enterprise</h2>
+<p>This is a distribution of the Kiwi TCMS application with multiple add-ons
+suitable for enterprise customers. Popular examples include various login
+backends, e.g. LDAP and multi-tenancy architecture. See the
+<a href="{filename}../pages/features.html">features page</a> for more details.</p>
 <h2>Who is this subscription for</h2>
-<p><em>Private Tenant</em> is suitable for medium sized teams which consider
-their Kiwi TCMS instance to be an important piece of infrastructure but
-not necessarily mission critical.
-These are organizations with less than 100 testers
-which would like to focus their limited resources towards their own
-products and are happy to consume 3rd party software as a service.
-Most typically these are start-up companies and medium sized businesses.</p>
+<p><em>Kiwi TCMS Enterprise</em> is suitable for medium to large organizations which would
+like to have full control over their Kiwi TCMS instance and most likely integrate
+it with existing 3rd party systems.
+These are typically organizations with hundreds or thousands of testers with strong
+internal DevOps team and sizable existing infrastructure.</p>
 <h2>What do you get</h2>
 <p>Everything from lower tier subscription plans!</p>
-<p>Most notably you get access to all versions of community releases and a
-dedicated SaaS namespace as your main Kiwi TCMS instance plus extra
-product features and technical support.</p>
+<p>Most notably you get access to all versions of community &amp; enterprise containers
+as well as a SaaS namespace plus extended support.</p>
+<p>The SaaS namespace can be used as a sandbox for in-house development and
+backwards compatibility testing against the latest version of Kiwi TCMS before
+upgrading your internal production instance!</p>
 <h2>What do all of the individual items mean</h2>
-<p><strong>1x SaaS hosting:</strong> you will receive the opportunity to create your own namespace
-under the <code>tenant.kiwitcms.org</code> domain name, for example <code>https://acme-inc.tenant.kiwitcms.org</code>.</p>
-<p>IMPORTANT: A <em>Private Tenant</em> subscription entitles you to a single namespace and the email associated
-with the purchase is referred to as <em>tenant owner</em>.
-If you need more tenants you should purchase additional subscriptions under different email addresses!</p>
-<p><strong>Unlimited users:</strong> means exactly that - you may assign an arbitrary number of users to have access
-to the information kept under your tenant. With <em>Private Tenant</em> subscription there are no per-seat
-fees - it is a flat rate price!</p>
-<p><strong>Control of authorized users:</strong> means that you can control who has access to your data and adjust
-their permissions level when necessary. You can have your QA team and your partners collaborate in a
-single Kiwi TCMS tenant if you decide to do so.</p>
-<p>With a <em>Private Tenant</em> subscription user accounts are actually kept under <code>public.tenant.kiwitcms.org</code>,
-which is also referred to as <em>the main tenant</em> or <em>the public tenant</em> while access control is granted on
-a per-tenant basis via the web interface by the tenant owner.</p>
-<p>NOTICE: the name "public tenant" is a misnomer, which comes from one of the underlying programming
-libraries used inside Kiwi TCMS. In reality no data is publicly visible, including user accounts.</p>
-<p><strong>No User account admin:</strong> a stand-alone installation of Kiwi TCMS allows the first registered account,
-named super-user, to have access to all others. This isn't the case with a <em>Private Tenant</em> subscription.
-You may invite/authorize users and groups for your own tenant and manage access permissions however
-you cannot create, remove or disable user accounts. You cannot view the list of all other accounts
-which exist in the database.</p>
-<p><strong>Extra functionality:</strong> a <em>Private Tenant</em> subscription is actually built on top of a
-Kiwi TCMS Enterprise container image which means some extra features and add-ons are available
-to you as part of this subscription. Whenever possible add-on features are also accessible to
-<em>Private Tenant</em> subscribers. A notable exception are different login methods which cannot be
-enabled nor configured on a per-tenant basis!</p>
-<p><strong>Always the latest version:</strong> a SaaS tenant is always the latest version and is automatically
-upgraded by the Kiwi TCMS team. While we try our best not to introduce bugs and backwards incompatible
-changes it is possible that test automation scripts and/or 3rd party integration code may break
-sometimes.</p>
-<p>IMPORTANT: With a <em>Private Tenant</em> subscription the responsibility of testing all of your integrations against
-the latest version of Kiwi TCMS falls onto the customer.</p>
-<p><strong>Backup &amp; disaster recovery:</strong> the Kiwi TCMS team takes care to backup our SaaS cluster regularly
-in case a catastrophic failure occurs - this is designed for disaster recovery purposes.</p>
-<p>While the Kiwi TCMS application itself keeps track of changes and removals of certain objects it may
-not always be possible to restore a deleted entry. You may be able to create new records with
-the same information however if a record cannot be restored via the Kiwi TCMS web interface we cannot help you.
-Due to technical limitations we cannot restore individual records from a <em>Private Tenant</em>.</p>
-<p><strong>Data access via web &amp; API:</strong> keeping in mind that a <em>Private Tenant</em> namespace is allocated
-on a cluster with hundreds of others your only access to data is via web and API.
-Due to technical and security limitations we cannot give you access to the underlying database nor
-the raw backup files. You are free to export your data as frequently as you wish though!</p>
-<p><strong>Dedicated technical support:</strong> as a <em>Private Tenant</em> customer you receive full technical support
-from the Kiwi TCMS team spanning all components related to the Kiwi TCMS application. Working hours
-and response times are listed on our main page!</p>
+<p><strong>On-premises inside your VPN:</strong> your DevOps team is responsible for provisioning Kiwi TCMS
+and keeping it up and running. Typically this would happen inside your company's VPN and would
+be accessible only to employees.
+It is an on-premises installation which you have full control over.</p>
+<p>NOTICE: This subscription price is per instance! For multiple installations of Kiwi TCMS
+please adjust the quantity of items on your subscription!</p>
+<p><strong>Tagged releases and multi-arch builds:</strong> as part of the <em>Kiwi TCMS Enterprise</em> subscription
+you get access to <a href="/containers/">private container repositories</a> with
+version tagged builds for <code>aarch64</code> and <code>x86_64</code> CPU architectures. This gives you more hosting options and makes
+it easier to upgrade to new versions when you decide to do so.</p>
+<p><strong>Unlimited tenants:</strong> a <em>Kiwi TCMS Enterprise</em> container is multi-tenant, meaning that
+you can organize testing work into multiple namespaces. For example <code>product-1.tcms.example.com</code>,
+<code>team-2.tcms.example.com</code>, <code>abcd.tcms.example.com</code> and so on. There is no limit on the number
+of tenants you can have, nor the number of users who can have access to each tenant. That is
+entirely up to your teams to decide.</p>
+<p><strong>Full Admin panel access:</strong> means that as part of a <em>Kiwi TCMS Enterprise</em> installation you would
+designate one or more user accounts as your Kiwi TCMS administrators. They will have full access
+to the built-in admin pages of the application and be able to perform actions such as creating or disabling
+other accounts, assigning permissions, creating tenants, etc.</p>
+<p>Kiwi TCMS refers to such accounts as super-user and the first created account receives super-user
+status by default.</p>
+<p>NOTICE: super-user / admin accounts are meant for day-to-day operations via the web interface while
+a DevOps team will have terminal access to the Kiwi TCMS application for routine maintenance or
+one-off tasks. In many cases these roles are performed by the same engineer but don't need to be.</p>
+<p><strong>Based on Red Hat Enterprise Linux:</strong> with a <em>Kiwi TCMS Enterprise</em> subscription you receive
+an explicit guarantee that the underlying container image is built on top of Red Hat Enterprise Linux.
+There is no such guarantee for other container images produced by the Kiwi TCMS team!</p>
+<p><strong>Multiple add-ons:</strong> a <em>Kiwi TCMS Enterprise</em> container image ships more functionality than the
+community edition of Kiwi TCMS. Our focus is to provide better operational experience for seasoned
+IT teams and make it easier to integrate Kiwi TCMS with existing infrastructure and 3rd party systems.
+Some examples include:</p>
+<ul>
+<li>OAuth (e.g. GitHub, GitLab) login, LDAP or kerberos</li>
+<li>Metrics and error logging</li>
+<li>Let's Encrypt SSL certificates</li>
+<li>Flexible NGINX configuration</li>
+<li>Amazon SES integration</li>
+<li>Various storage backends</li>
+<li>Additional integration with less popular bug-tracking systems</li>
+</ul>
+<p>This list changes over time however we are fully committed to everything being open source!</p>
+<p><strong>Extended support:</strong> as part of <em>Kiwi TCMS Enterprise</em> subscription you get more support coverage,
+<em>08-20 UTC/Mon-Fri</em> with a guaranteed response within <em>24 hrs</em>. This is 6 hours extra coverage
+compared to lower tier subscription plans.</p>
 <p>Happy Testing!</p>
 <hr>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
@@ -222,8 +223,8 @@ please help us!</p>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/';
-                this.page.identifier = 'blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/';
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2025/08/28/enterprise-subscription-explained/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2025/08/28/enterprise-subscription-explained/';
             };
             (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
