@@ -38,8 +38,10 @@ Image versions
 
 Changelog information can be found under the [releases]({tag}releases) tag in our blog!
 
-    hub.kiwitcms.eu/kiwitcms/version            14.3 (x86_64)           096aa72ea8b7    03 Jul 2025     691MB
+    hub.kiwitcms.eu/kiwitcms/version            15.0 (aarch64)          d3842a187b07    23 Sep 2025     706MB
+    hub.kiwitcms.eu/kiwitcms/version            15.0 (x86_64)           3e3aa12837a2    23 Sep 2025     695MB
     hub.kiwitcms.eu/kiwitcms/version            14.3 (aarch64)          90de3cb881d6    03 Jul 2025     703MB
+    hub.kiwitcms.eu/kiwitcms/version            14.3 (x86_64)           096aa72ea8b7    03 Jul 2025     691MB
     hub.kiwitcms.eu/kiwitcms/version            14.2 (aarch64)          77cd9ccde9f6    23 Apr 2025     692MB
     hub.kiwitcms.eu/kiwitcms/version            14.2 (x86_64)           24c27dafcd26    23 Apr 2025     677MB
     hub.kiwitcms.eu/kiwitcms/version            14.1 (aarch64)          21e42abe02fc    10 Mar 2025     688MB
@@ -135,6 +137,8 @@ Changelog information can be found under the [releases]({tag}releases) tag in ou
     hub.kiwitcms.eu/kiwitcms/version            6.0                     44787161a4d1    04 Oct 2018     1.1GB
     hub.kiwitcms.eu/kiwitcms/version            5.3.1                   a420465852be    04 Sep 2018     977MB
     =========================================================================================================
+    hub.kiwitcms.eu/kiwitcms/enterprise         15.0-mt (aarch64)       9856d098eea7    23 Sep 2025     975MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         15.0-mt (x86_64)        a30d6b94b271    23 Sep 2025     954MB
     hub.kiwitcms.eu/kiwitcms/enterprise         14.3-mt (aarch64)       182297e972ce    03 Jul 2025     1.08GB
     hub.kiwitcms.eu/kiwitcms/enterprise         14.3-mt (x86_64)        3697c45224c0    03 Jul 2025     1.06GB
     hub.kiwitcms.eu/kiwitcms/enterprise         14.2-mt (aarch64)       fd7113a910c1    23 Apr 2025     1.06GB
