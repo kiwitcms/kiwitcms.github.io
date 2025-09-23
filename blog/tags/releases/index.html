@@ -104,6 +104,181 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2025/09/23/kiwi-tcms-150/" rel="bookmark" title="Permalink to Kiwi TCMS 15.0">
+                <h1 class="top-header">Kiwi TCMS 15.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 23 September 2025
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 15.0!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a major version release which includes important changes to the database,
+several improvements, bug fixes, couple of updated plugins and new translations.</p>
+<p>Recommended
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
+path:</p>
+<pre class="literal-block">
+14.3 -&gt; 15.0
+</pre>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  1b5584d7b2c1    695MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-14-3">
+<h2>Changes since Kiwi TCMS 14.3</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 5.1.11 to 5.2.6</li>
+<li>Update django-guardian from 3.0.3 to 3.2.0</li>
+<li>Update django-tree-queries from 0.20.0 to 0.21.2</li>
+<li>Update markdown from 3.8.2 to 3.9</li>
+<li>Update psycopg[binary] from 3.2.9 to 3.2.10</li>
+<li>Update pygithub from 2.6.1 to 2.8.1</li>
+<li>Update python-gitlab from 6.1.0 to 6.3.0</li>
+<li>Support access key authentication for Redmine issue tracker integration
+(Makson Lee)</li>
+<li>Rename navbar item PLUGINS -&gt; MORE</li>
+<li>Send email notifications when a TestCase is created. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4058">Issue #4058</a></li>
+<li>Add Cancel button for &quot;New TestCase&quot; &amp; &quot;Edit TestCase&quot; pages. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4073">Issue #4073</a></li>
+<li>Display number of records found on Search pages. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3324">Issue #3324</a></li>
+<li>Start keeping track of history for <tt class="docutils literal">Product</tt>, <tt class="docutils literal">Version</tt> and <tt class="docutils literal">Build</tt>
+records</li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li><strong>WARNING:</strong> Postgres 13 is no longer supported. Minimum version is 14!</li>
+<li>New migration <tt class="docutils literal">management.0011_history_for_product_version_build</tt></li>
+<li><strong>IMPORTANT:</strong> For existing Kiwi TCMS installations history will be generated
+as soon as these objects are changed</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Correct a typo. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4072">Issue #4072</a></li>
+<li>Avoid broader matches when searching for harmful HTML attributes in
+uploaded files. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4074">Issue #4074</a></li>
+<li>Send a POST request when clicking Logout menu while on Admin page. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4005">Issue #4005</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update actions/checkout from 4 to 5</li>
+<li>Update actions/setup-node from 4 to 5</li>
+<li>Update actions/setup-python from 5 to 6</li>
+<li>Update github.com/pre-commit/pre-commit-hooks from v5.0.0 to v6.0.0</li>
+<li>Update psf/black from 25.1.0 to 25.9.0</li>
+<li>Update black from 25.1.0 to 25.9.0</li>
+<li>Update node_modules/webpack from 5.99.9 to 5.101.3</li>
+<li>Adjust API tests for Django 5.2</li>
+<li>Add test for
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4074">Issue #4074</a></li>
+<li>Add logout tests via browser for
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4005">Issue #4005</a></li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pl#">Polish translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#">Portuguese, Brazilian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/es-ES#">Spanish translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/es-AR#">Spanish, Argentina translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/es-UY#">Spanish, Uruguay translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v15-0-mt">
+<h2>Kiwi TCMS Enterprise v15.0-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v15.0</li>
+<li>Update certbot from 4.1.1 to 4.2.0 in the certbot group</li>
+<li>Update django-python3-ldap from 0.15.8 to 0.16.1</li>
+<li>Update kiwitcms-tenants from 4.1.0 to 4.2.0</li>
+<li>Update sentry-sdk from 2.32.0 to 2.38.0</li>
+<li>Remove certbot-dns-* plugins as dependencies</li>
+<li>Redesign bin/lets-encrypt script for wild-card certificates</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            15.0 (aarch64)          d3842a187b07    23 Sep 2025     706MB
+hub.kiwitcms.eu/kiwitcms/version            15.0 (x86_64)           3e3aa12837a2    23 Sep 2025     695MB
+hub.kiwitcms.eu/kiwitcms/enterprise         15.0-mt (aarch64)       9856d098eea7    23 Sep 2025     975MB
+hub.kiwitcms.eu/kiwitcms/enterprise         15.0-mt (x86_64)        a30d6b94b271    23 Sep 2025     954MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="tcms-api-v15-0">
+<h3>tcms-api v15.0</h3>
+<ul class="simple">
+<li>Include host URL in Referer header</li>
+<li>Updates for newer pylint</li>
+<li>Updates for newer Sphynx</li>
+<li>Update GitHub actions</li>
+</ul>
+</div>
+<div class="section" id="kiwitcms-junit-xml-plugin-v15-0">
+<h3>kiwitcms-junit.xml-plugin v15.0</h3>
+<ul class="simple">
+<li>Update junitparser from 3.1.0 to 3.2.0</li>
+<li>Drop official support for Python 3.8</li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2025/07/03/kiwi-tcms-143/" rel="bookmark" title="Permalink to Kiwi TCMS 14.3">
                 <h1 class="top-header">Kiwi TCMS 14.3</h1>
             </a>
@@ -2921,172 +3096,6 @@ hub.kiwitcms.eu/kiwitcms/version            12.2 (aarch64)          7e88241f7476
 hub.kiwitcms.eu/kiwitcms/version            12.2 (x86_64)           89b8ca5e0f5f    23 Apr 2023     592MB
 hub.kiwitcms.eu/kiwitcms/enterprise         12.2-mt (aarch64)       7f2a05cf9888    23 Apr 2023     843MB
 hub.kiwitcms.eu/kiwitcms/enterprise         12.2-mt (x86_64)        c4f518a20c58    23 Apr 2023     833MB
-</pre>
-</blockquote>
-</li>
-</ul>
-<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
-<a class="reference external" href="/containers/">container</a> images are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-Then execute the commands:</p>
-<pre class="literal-block">
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py upgrade
-</pre>
-<p>Refer to
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading">our documentation</a>
-for more details!</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all project news;</li>
-<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
-and an awesome open source hacker;</li>
-<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-</div>
-
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2023/03/29/kiwi-tcms-121/" rel="bookmark" title="Permalink to Kiwi TCMS 12.1">
-                <h1 class="top-header">Kiwi TCMS 12.1</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 29 March 2023
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 12.1!</p>
-<p><strong>IMPORTANT:</strong> this is a minor release which contains security related updates,
-general improvements, bug fixes and new translations!</p>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<blockquote>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-6.1              -&gt; 6.1.1
-6.1.1            -&gt; 6.2 (or newer)
-</pre>
-</blockquote>
-<p>---</p>
-<blockquote>
-<p>Upstream container images (x86_64):</p>
-<pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  590c0cd6f25f    521MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged and multi-arch
-<a class="reference external" href="/containers/">container</a> images are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-<div class="section" id="changes-since-kiwi-tcms-12-0">
-<h2>Changes since Kiwi TCMS 12.0</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Add the <tt class="docutils literal"><span class="pre">Content-Security-Policy</span></tt> header to block inline JavaScript. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-2wcr-87wf-cf9j">CVE-2023-27489</a></li>
-<li>Add the <tt class="docutils literal"><span class="pre">X-Frame-Options</span></tt> header to deny loading Kiwi TCMS into an iframe</li>
-<li>Add the <tt class="docutils literal"><span class="pre">X-Content-Type-Options</span></tt> header</li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update django-grappelli from 3.0.4 to 3.0.5</li>
-<li>Update django-simple-history from 3.2.0 to 3.3.0</li>
-<li>Update jira from 3.4.1 to 3.5.0</li>
-<li>Update markdown from 3.4.1 to 3.4.3</li>
-<li>Update pygithub from 1.57 to 1.58.1</li>
-<li>Update tzdata from 2022.7 to 2023.3</li>
-<li>Do not allow last super-user to be deleted (Ivajlo Karabojkov)</li>
-<li>Improve loading time on test runs pages which have large number of
-executions with components, parameters and/or tags (&#64;somenewacc)</li>
-<li>Expose all RPC methods in the documentation</li>
-<li>Update documentation to describe transitions for TestRun statuses. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3124">Issue #3124</a></li>
-</ul>
-</div>
-<div class="section" id="settings">
-<h3>Settings</h3>
-<ul class="simple">
-<li>Allow uWSGI configuration override via the file
-<tt class="docutils literal">/Kiwi/etc/uwsgi.override</tt></li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li>New API method <tt class="docutils literal">TestRun.add_attachment</tt> (David M. Johnson)</li>
-<li>New API method <tt class="docutils literal">Environment.filter()</tt> method. Refs
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3034">Issue #3034</a> (&#64;somenewacc)</li>
-<li>New API method <tt class="docutils literal">Environment.create()</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3034">Issue #3034</a> (&#64;somenewacc)</li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Fix /admin/testcases/template/ page not being able to render the text editor</li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Refactor bugtracker integration</li>
-<li>Remove unnecessary onChanged function for DurationWidget</li>
-<li>Refactoring to avoid inline <tt class="docutils literal">&lt;script&gt;</tt> tags</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Enable translation integration on Admin pages</li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="kiwi-tcms-enterprise-v12-1-mt">
-<h2>Kiwi TCMS Enterprise v12.1-mt</h2>
-<ul>
-<li><p class="first">Based on Kiwi TCMS v12.1</p>
-</li>
-<li><p class="first">Update dj-database-url from 1.2.0 to 1.3.0</p>
-</li>
-<li><p class="first">Update kiwitcms-github-app from 1.4.1 to 1.5.1</p>
-</li>
-<li><p class="first">Update kiwitcms-trackers-integration from 0.3.0 to 0.4.0</p>
-</li>
-<li><p class="first">Add test for missing migrations</p>
-<blockquote>
-<p>Private images:</p>
-<pre class="literal-block">
-hub.kiwitcms.eu/kiwitcms/version            12.1 (aarch64)          571870729367    29 Mar 2023     528MB
-hub.kiwitcms.eu/kiwitcms/version            12.1 (x86_64)           590c0cd6f25f    29 Mar 2023     520MB
-hub.kiwitcms.eu/kiwitcms/enterprise         12.1-mt (aarch64)       0a1e2f092351    29 Mar 2023     734MB
-hub.kiwitcms.eu/kiwitcms/enterprise         12.1-mt (x86_64)        9f44aaab7646    29 Mar 2023     725MB
 </pre>
 </blockquote>
 </li>
