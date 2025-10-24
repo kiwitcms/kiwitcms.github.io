@@ -110,6 +110,147 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2025/10/24/kiwi-tcms-151/" rel="bookmark" title="Permalink to Kiwi TCMS 15.1">
+                <h1 class="top-header">Kiwi TCMS 15.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Fri 24 October 2025
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 15.1!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which includes security related updates,
+several improvements, new API methods and new translations.</p>
+<p>Recommended
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
+path:</p>
+<pre class="literal-block">
+15.0 -&gt; 15.1
+</pre>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  9b33a6e47c0f    696MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-15-0">
+<h2>Changes since Kiwi TCMS 15.0</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 5.2.6 to 5.2.7, addressing one security vulnerability with
+severity “high” and one security vulnerability with severity “low”:
+<a class="reference external" href="https://docs.djangoproject.com/en/5.2/releases/5.2.7/">CVE-2025-59681</a> and
+<a class="reference external" href="https://docs.djangoproject.com/en/5.2/releases/5.2.7/">CVE-2025-59682</a></li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update jira from 3.8.0 to 3.10.5</li>
+<li>Update psycopg[binary] from 3.2.10 to 3.2.11</li>
+<li>Update python-gitlab from 6.3.0 to 6.5.0</li>
+<li>Update uwsgi from 2.0.30 to 2.0.31</li>
+<li>Display records count in TestPlan page. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4110">Issue #4110</a></li>
+<li>Add 'Deactivate selected accounts' dropdown on <tt class="docutils literal">/admin/auth/user/</tt> page</li>
+<li>Add 'Deactivate' button in 'Change user' admin page</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Add <tt class="docutils literal">User.deactivate()</tt> API method</li>
+<li>Update documentation and tests for <tt class="docutils literal">User.filter()</tt> method</li>
+<li>Add new internal signal <tt class="docutils literal">USER_DEACTIVATED_SIGNAL</tt>. Sent when account is
+deactivated</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update actions/setup-node from 5 to 6</li>
+<li>Update github/codeql-action from 3 to 4</li>
+<li>Update isort from 6.0.1 to 6.1.0</li>
+<li>Update locust from 2.34.1 to 2.42.0</li>
+<li>Update node_modules/webpack from 5.101.3 to 5.102.1</li>
+<li>Pin intermediate dependency Pillow to 11.3.0 to fix
+failing container build</li>
+<li>Define a <tt class="docutils literal">login_form</tt> template block in login.html</li>
+<li>Update Bitbucket repository URL b/c the original repository has reached
+a limit of 10k issues and new ones cannot be created anymore</li>
+<li>Add login tests for disabled accounts via browser</li>
+<li>Add tests for API login and method calls from deactivated accounts</li>
+<li>Collect logs from Postgres container during testing</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v15-1-mt">
+<h2>Kiwi TCMS Enterprise v15.1-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v15.1</li>
+<li>Update certbot from 4.2.0 to 5.1.0</li>
+<li>Update kiwitcms-tenants from 4.2.0 to 4.3.0</li>
+<li>Update sentry-sdk from 2.38.0 to 2.42.1</li>
+<li>Update social-auth-app-django from 5.5.1 to 5.6.0</li>
+<li>Redirect <tt class="docutils literal">/admin/login/</tt> to <tt class="docutils literal">/accounts/login/</tt></li>
+<li>Add 'Export as CSV' dropdown on <tt class="docutils literal">/admin/auth/user/</tt> page</li>
+<li>Add <tt class="docutils literal">PASSWORD_LOGIN_ENABLED</tt> setting</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version          15.1 (aarch64)        c363e5d8b45c   24 Oct 2025      706MB
+hub.kiwitcms.eu/kiwitcms/version          15.1 (x86_64)         994fde01a325   24 Oct 2025      696MB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.1-mt (aarch64)     377a5b6a6b8e   24 Oct 2025      976MB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.1-mt (x86_64)      6e897543a398   24 Oct 2025      955MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2025/09/23/kiwi-tcms-150/" rel="bookmark" title="Permalink to Kiwi TCMS 15.0">
                 <h1 class="top-header">Kiwi TCMS 15.0</h1>
             </a>
@@ -2264,41 +2405,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2024/06/11/anonymous-analytics-for-kiwitcms-container/" rel="bookmark" title="Permalink to Anonymous analytics for kiwitcms-container">
-                <h1 class="top-header">Anonymous analytics for kiwitcms-container</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 11 June 2024
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Several months ago we've announced
-<a href="/blog/kiwi-tcms-team/2024/02/23/anonymous-analytics-via-plausibleio/">the collection of anonymous analytics</a>
-from Kiwi TCMS with the analytics dashboard for this website being immediately
-accessible via <a href="https://plausible.io/kiwitcms.org">https://plausible.io/kiwitcms.org</a>.</p>
-<p>Today we're happy to share that the anonymous analytics dashboard for the
-<code>pub.kiwitcms.eu/kiwitcms/kiwi</code> container image is fully accessible via <a href="https://plausible.io/kiwitcms-container">https://plausible.io/kiwitcms-container</a>.</p>
-<p><img alt="&quot;screenshot of analytics dashboard&quot;" src="/images/analytics/dashboard-kiwitcms-container.png" title="screenshot of analytics dashboard"></p>
-<p>As evident there is no personally identifiable information that is being collected!</p>
-<p>Happy Testing!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
-</ul>
         </div>
     </article>
 
