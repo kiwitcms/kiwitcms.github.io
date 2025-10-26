@@ -32,8 +32,8 @@ Anonymous analytics
 ===================
 
 Kiwi TCMS uses Plausible Analytics and Scarf on this website, inside our
-[official container images]({filename}containers.markdown) and
-all tenants provisioned under `https://*.tenant.kiwitcms.org` to collect some
+[official container images]({filename}containers.markdown) and on
+`https://public.tenant.kiwitcms.org` to collect some
 anonymous usage data for statistical purposes.
 
 Our goal is to track overall trends and usage patterns in Kiwi TCMS application(s),
