@@ -137,6 +137,10 @@ and 12k events/3 mo recorded by Scarf. Here are some of the more interesting one
   [kiwi.dev.cyberrange.fr](https://www.airbus.com/en/products-services/security/cybersecurity) -
   latest Kiwi TCMS installation in France
 
+
+If you would like to know more and meet Kiwi TCMS in person you can do so
+at [Open Source Experience, 10 &amp; 11 Dec 2025 in Paris]({filename}2025-10-30-osx-paris.markdown)!
+
 ---
 
 If you like what we're doing please help us grow and sustain development!
