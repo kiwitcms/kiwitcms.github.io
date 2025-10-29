@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Articles with tag community</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-Frame-Options" content="deny">
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
+        <script>
+            if (top != window) {
+                top.location = window.location;
+            }
+        </script>
+        <!-- Custom Styles -->
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
+
+        <script defer data-domain="kiwitcms.org" src="https://plausible.io/js/script.js"></script>
+
+        <script
+            id="fsc-api"
+            src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.5/fastspring-builder.min.js"
+            type="text/javascript"
+            data-storefront="mrsenko.onfastspring.com/popup-kiwitcms">
+        </script>
+    </head>
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            </a>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#subscriptions">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- content -->
+<section id="blog-list">
+    <h1>Articles with tag community</h1>
+
+    <article class="blog-list">
+        <div class="header">
+            <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/" rel="bookmark" title="Permalink to Kiwi TCMS roadmap for 2018">
+                <h1 class="top-header">Kiwi TCMS roadmap for 2018</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Mon 22 January 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello everyone. As you know Kiwi TCMS has been around for a while and it has
+gone through some big changes in the last year! It started as an abandoned
+Django 1.6 project with broken test suite and is now currently running on the
+latest Django 2.0.1 with Python 3.5! It is clearly a legacy code base!</p>
+<p>We, the Kiwi TCMS team, have learned a lot more about the project and this
+blog post describes our roadmap for 2018 in terms of technical work and community
+engagement. The general technical direction is cleaner/simpler code,
+improved UI/UX and more tests!</p>
+<h2>Make code easier to maintain</h2>
+<p>The current code is a bunch of very large modules and functions and classes
+bundled together. It is also old and sometimes looks like spaghetti code.
+<a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> gives us a "D" rating
+for maintainability with a 1 year estimated effort to fix that. There are 600+
+code smells and 600+ duplications detected by CodeClimate. Our goal is to get this
+number down to zero!</p>
+<h2>Use pylint and pylint-django</h2>
+<p>pylint is the standard static analyzer for Python and currently it reports over
+4000 errors and warnings when executed against Kiwi TCMS. This is a huge number and
+it needs to become zero! We've also identified interesting patterns that will
+make it into pylint and pylint-django plugins!</p>
+<h2>Render HTML, return JSON</h2>
+<p>The current state of affairs is a mix and match of everything. There are views that
+render HTML, others which return pure JSON, other which return HTML encoded as JSON string
+and probably everything in between. Views that render pages need to do just that
+and views that are used with AJAX calls from the UI need to return pure JSON!
+A lot of these are hiding in plain sight and will come to light when we start
+overhauling the user interface.</p>
+<h2>Submit forms, post JSON, GET clean URLs</h2>
+<p>There are lots of forms in Kiwi TCMS. Sometimes they are submitted by the user and
+other times they are serialized and POSTed by some JavaScript code. This isn't
+very easy to understand plus this entire home-grown utility code doesn't bring
+anything useful to the project. All of these need to be identified and cleaned up.
+JavaScript code needs to send or consume JSON, nothing else!</p>
+<p>There are also lots of places where Kiwi issues GET requests with a number of
+query parameters. Our goal is to minimize these and where possible have the
+parameters as part of the Django urls scheme, not as query strings.</p>
+<h2>API layer</h2>
+<p>The current API module is a bit disorganized. API namespaces don't match the
+names of the underlying DB models and the API client classes don't match any
+of the other two! The way we pass parameters and what these parameters are
+named should match between the client, the RPC method and the underlying model!</p>
+<p>In earlier releases we've removed duplicate or similar RPC methods and we
+think there are more of these that need our love.</p>
+<h2>Documentation</h2>
+<p>We've started producing documentation from doc-strings and most of the RPC
+methods have such. However it is unformatted and barely readable, sometimes
+even inaccurate. Previous releases made progress on this but there's a lot
+more to cover.</p>
+<p>All RPC methods should be documented first and then the rest of Kiwi's
+internals to make development easier!</p>
+<h2>No vendored JavaScript libraries</h2>
+<p>There are 11 vendored-in JavaScript files that we carry around in Kiwi TCMS.
+Most notable are jQuery plus a few addons and Handlebars.js. To the extent possible
+our goal is to use jQuery provided by Django or installed via NPM dependencies!</p>
+<h2>Less HTML templates with better organization</h2>
+<p>There are over 100 HTML templates in Kiwi TCMS. There are also email and even
+JavaScript templates. For example there are <code>get_cases.html</code> and <code>get_review_cases.html</code>
+which are essentially the same. This is kind of also true for templates used in
+new and edit views! Such templates should be unified!</p>
+<p>Those JavaScript templates need to be totally gone!</p>
+<p>All templates are stuffed together in a single directory and their names
+are not very predictable. They need to be split per application and follow
+some kind of naming convention.</p>
+<h2>Modern interface with Patternfly</h2>
+<p>The UI already uses the Patternfly library for some of its widgets. Most notably
+the main navigation header. Our goal is for the entire UI to be ported to Patternfly
+by updating widgets HTML and CSS where needed.
+This will also help clean things up a lot. At the same time we'll be rethinking how
+information is organized on screen and how the person interacts with it! Usability
+suggestions are very welcome!</p>
+<p>This move will also help us get rid of the Handlebars dependency which is now
+used for pop-up dialogs.</p>
+<h2>JavaScript updates and front-end testing</h2>
+<p>There's lots of JavaScript code on the front-end and honestly we don't quite know
+what it does or how it is organized. There are also no tests on the front-end
+whatsoever!</p>
+<p>It is our goal for this to change with the intention to not overdo the JavaScript
+part and keep things very minimal. At the moment we're thinking about vanilla jQuery
+that will act as a proxy between the browser and the back-end!</p>
+<h2>Community efforts</h2>
+<p>A year ago hardly anybody knew what Kiwi TCMS was, the project didn't even have
+this name, there was 1 active contributor and hardly any users! Now the community
+has started to slowly revitalize, we're seeing some contributions from our
+junior team members (more on this in another blog post) and also seeing
+folks installing and using Kiwi TCMS and reporting interesting bugs and feature
+requests around it!</p>
+<p>For the upcoming year our goal is to seek active engagement with other open source
+projects that could make use of Kiwi TCMS and work with them. Kudos to
+openSUSE for being the first
+<a href="https://github.com/openSUSE/mentoring/issues/95">to propose such integration</a>!
+We're also planning couple of appearances at a few conferences but there's
+nothing confirmed yet.</p>
+<p>Every other contribution in terms of bug reports, new users and feature requests
+is of course welcome but we're very conscious of the fact that there's tons
+of work to be done and the team is still very small!</p>
+<p>Team wise we'd like to get the existing team members up to speed and tackle
+the above tasks with priority. This will also help us introduce bug fixes
+and new features more quickly!</p>
+<p>Happy testing!</p>
+        </div>
+    </article>
+
+<section id="pagination">
+            <a href="/blog/tags/community/index3.html" class="btn" icon="reversed"><i reversed></i> Newer Posts </a>
+        <p>
+            Page 4 / 4
+        </p>
+</section>
+</section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=7386a67a-a689-40df-a268-b03ada69e169" alt="">
+            <div class="legal">
+                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p>
+                    <a href="/legal/">Legal</a> |
+                    <a href="/privacy/">Privacy</a> |
+                    <a href="/terms/">Terms</a></p>
+            </div>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Join</h3>
+                <a href="https://www.reddit.com/r/KiwiTCMS/">r/KiwiTCMS</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581" class="btn ghost-btn">Sign me up</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
+
+    </body>
+</html>
