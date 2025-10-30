@@ -139,6 +139,8 @@ Changelog information can be found under the [releases]({tag}releases) tag in ou
     hub.kiwitcms.eu/kiwitcms/version            6.0                     44787161a4d1    04 Oct 2018     1.1GB
     hub.kiwitcms.eu/kiwitcms/version            5.3.1                   a420465852be    04 Sep 2018     977MB
     =========================================================================================================
+    hub.kiwitcms.eu/kiwitcms/enterprise         15.1.1-mt (aarch64)     232ecaec2677    30 Oct 2025     976MB
+    hub.kiwitcms.eu/kiwitcms/enterprise         15.1.1-mt (x86_64)      73985ddf95ee    30 Oct 2025     955MB
     hub.kiwitcms.eu/kiwitcms/enterprise         15.1-mt (aarch64)       377a5b6a6b8e    24 Oct 2025     976MB
     hub.kiwitcms.eu/kiwitcms/enterprise         15.1-mt (x86_64)        6e897543a398    24 Oct 2025     955MB
     hub.kiwitcms.eu/kiwitcms/enterprise         15.0-mt (aarch64)       9856d098eea7    23 Sep 2025     975MB

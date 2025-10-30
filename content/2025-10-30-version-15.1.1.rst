@@ -1,0 +1,66 @@
+Kiwi TCMS Enterprise 15.1.1-mt
+##############################
+
+:headline: quick-fix for password reset going into infinite loop
+:date: 2025-10-30 11:40
+:comments: false
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS Enterprise version 15.1.1-mt!
+
+**IMPORTANT:**
+
+This is a quick fix for bug which was causing the password reset page to go
+into an infinite loop when users were trying to reset their passwords.
+
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+
+Changes since Kiwi TCMS Enterprise v15.1-mt
+-------------------------------------------
+
+- Based on Kiwi TCMS v15.1
+- Temporarily disable password reset override to avoid infinite loop.
+  A more elaborate patch will be provided in the next release
+
+
+Private container images
+------------------------
+
+    ::
+
+        hub.kiwitcms.eu/kiwitcms/enterprise       15.1.1-mt (aarch64)   232ecaec2677    30 Oct 2025     976MB
+        hub.kiwitcms.eu/kiwitcms/enterprise       15.1.1-mt (x86_64)    73985ddf95ee    30 Oct 2025     955MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+Follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
