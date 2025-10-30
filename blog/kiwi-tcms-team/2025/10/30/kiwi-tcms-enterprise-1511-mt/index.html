@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Kiwi TCMS - Tags</title>
+        <title>Kiwi TCMS - Kiwi TCMS Enterprise 15.1.1-mt</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-Frame-Options" content="deny">
         <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
@@ -11,6 +11,29 @@
                 top.location = window.location;
             }
         </script>
+    
+
+
+        <meta name="description" content="quick-fix for password reset going into infinite loop" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="tags" content="releases" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS Enterprise 15.1.1-mt">
+            <meta name="twitter:description" content="quick-fix for password reset going into infinite loop">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2025/10/30/kiwi-tcms-enterprise-1511-mt/" />
+        <meta property="og:title" content="Kiwi TCMS Enterprise 15.1.1-mt" />
+        <meta property="article:published_time" content="2025-10-30 11:40:00+02:00">
+            <meta property="og:description" content="quick-fix for password reset going into infinite loop">
+
+            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
         <link href="/theme/style/responsive-1440.css" rel="stylesheet">
@@ -99,19 +122,90 @@
         </nav>
 
         <!-- content -->
-    <h2>Tags for Kiwi TCMS</h2>
-    <ul>
-            <li><a href="/blog/tags/bounty-program/">bounty-program</a> (6)</li>
-            <li><a href="/blog/tags/community/">community</a> (61)</li>
-            <li><a href="/blog/tags/customization/">customization</a> (5)</li>
-            <li><a href="/blog/tags/events/">events</a> (25)</li>
-            <li><a href="/blog/tags/features/">features</a> (2)</li>
-            <li><a href="/blog/tags/outage/">outage</a> (1)</li>
-            <li><a href="/blog/tags/plugins/">plugins</a> (2)</li>
-            <li><a href="/blog/tags/releases/">releases</a> (91)</li>
-            <li><a href="/blog/tags/roadmap/">roadmap</a> (9)</li>
-            <li><a href="/blog/tags/team/">team</a> (3)</li>
-    </ul>
+    <section id="blog-article">
+        <h1 class="top-header">Kiwi TCMS Enterprise 15.1.1-mt</h1>
+        <h2 class="top-subheader">quick-fix for password reset going into infinite loop</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Thu 30 October 2025
+                under
+                    <a href="https://kiwitcms.org/blog/tags/releases/">releases</a>
+        </p>
+
+        <article class="content">
+            <p>We're happy to announce Kiwi TCMS Enterprise version 15.1.1-mt!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a quick fix for bug which was causing the password reset page to go
+into an infinite loop when users were trying to reset their passwords.</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-v15-1-mt">
+<h2>Changes since Kiwi TCMS Enterprise v15.1-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v15.1</li>
+<li>Temporarily disable password reset override to avoid infinite loop.
+A more elaborate patch will be provided in the next release</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/enterprise       15.1.1-mt (aarch64)   232ecaec2677    30 Oct 2025     976MB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.1.1-mt (x86_64)    73985ddf95ee    30 Oct 2025     955MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </article>
+    </section>
+
+    <section class="after-content">
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
+
+    <section class="after-content">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2025/10/30/kiwi-tcms-enterprise-1511-mt/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2025/10/30/kiwi-tcms-enterprise-1511-mt/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
 
         <footer>
             <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
