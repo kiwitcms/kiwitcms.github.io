@@ -15,7 +15,7 @@ What is Kiwi TCMS Enterprise
 This is a distribution of the Kiwi TCMS application with multiple add-ons
 suitable for enterprise customers. Popular examples include various login
 backends, e.g. LDAP and multi-tenancy architecture. See the
-[features page]({filename}../pages/features.html) for more details.
+[features page]({filename}./pages/features.html) for more details.
 
 
 Who is this subscription for
