@@ -104,6 +104,125 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2019/05/16/kiwi-tcms-69/" rel="bookmark" title="Permalink to Kiwi TCMS 6.9">
+                <h1 class="top-header">Kiwi TCMS 6.9</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 16 May 2019
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 6.9!
+This is a small improvement and bug-fix update which introduces
+our first telemetry report: testing breakdown. You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>Supported upgrade paths:</p>
+<pre class="literal-block">
+5.3   (or older) -&gt; 5.3.1
+5.3.1 (or newer) -&gt; 6.0.1
+6.0.1            -&gt; 6.1
+6.1              -&gt; 6.1.1
+6.1.1            -&gt; 6.2 (or newer)
+</pre>
+<p>Docker images:</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi       latest  a01eaeddf213    1.001 GB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+</pre>
+<div class="section" id="changes-since-kiwi-tcms-6-8">
+<h2>Changes since Kiwi TCMS 6.8</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update mysqlclient from 1.4.2 to 1.4.2.post1</li>
+<li>Ship with prism.js so it can be used for syntax highlighting</li>
+<li>Add Testing Breakdown telemetry</li>
+<li>Mark more strings for translations</li>
+<li>Add <tt class="docutils literal">delete_user()</tt> function which can delete data across
+Postgre schemas (if kiwitcms-tenants add-on is installed)</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Remove deprecated <tt class="docutils literal">TestCaseRun.</tt> API methods. Use the new
+<tt class="docutils literal">TestExecution.</tt> methods introduced in v6.7. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/889/">Issue #889</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Fix typos in documentation (&#64;Prome88)</li>
+<li>Fix <tt class="docutils literal">TemplateParseError</tt> in email templates when removing test cases.
+On-delete email notification is now sent properly</li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h3>Refactoring</h3>
+<ul class="simple">
+<li>Add more tests around TestRun/TestExecution menu permissions</li>
+<li>Minor pylint fixes</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="join-us-at-openexpo-in-madrid">
+<h2>Join us at OpenExpo in Madrid</h2>
+<p>Kiwi TCMS is exhibitor at <a class="reference external" href="https://openexpoeurope.com/">OpenExpo Europe</a>
+on June 20th in Madrid. We will be hosting an info booth and 2 technical
+presentations delivered by Anton Sankov and Alex Todorov.</p>
+<p>Next week we are going to announce 100% discount tickets
+for our guests at the conference. If you are interested in coming
+<a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">subscribe to our newsletter</a>
+and don't miss the announcement!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then:</p>
+<pre class="literal-block">
+cd Kiwi/
+git pull
+docker-compose down
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull centos/mariadb
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</pre>
+<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
+before upgrade!</p>
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+always point to the latest available version! If you have to upgrade in steps,
+e.g. between several intermediate releases, you have to modify the above workflow:</p>
+<pre class="literal-block">
+# starting from an older Kiwi TCMS version
+docker-compose down
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+# repeat until you have reached latest
+</pre>
+<p>Happy testing!</p>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/05/03/kiwi-tcms-68/" rel="bookmark" title="Permalink to Kiwi TCMS 6.8">
                 <h1 class="top-header">Kiwi TCMS 6.8</h1>
             </a>
@@ -2800,134 +2919,6 @@ sys<span class="w">     </span>0m0.091s
 <p>The issue has been reported in
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1643454">RHBZ #1643454</a></p>
 <p>Happy testing!</p>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/10/20/kiwi-tcms-61/" rel="bookmark" title="Permalink to Kiwi TCMS 6.1">
-                <h1 class="top-header">Kiwi TCMS 6.1</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Sat 20 October 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 6.1! This release
-introduces new database migrations,
-internal updates and bug fixes. It is a small release designed
-to minimize the number of database migrations by squashing them together.
-You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>.</p>
-<p><strong>NOTE:</strong> there is the 6.0.1 release which resolves an upgrade problem
-caused by non-applied migrations which have been later squashed and
-released in the same release! It is best to jump through the intermediate
-releases to ensure a smooth upgrade!</p>
-<p>Supported upgrade paths:</p>
-<pre class="literal-block">
-5.3   (or older) -&gt; 5.3.1
-5.3.1 (or newer) -&gt; 6.0.1
-6.0.1            -&gt; 6.1
-</pre>
-<p>Docker images:</p>
-<pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
-</pre>
-<div class="section" id="changes-since-kiwi-tcms-6-0">
-<h2>Changes since Kiwi TCMS 6.0</h2>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update <a class="reference external" href="https://github.com/pycontribs/jira">Jira from 1.0.10 to 2.0.0</a></li>
-<li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.55.0</a></li>
-<li>Use button instead of HTML link for deleting test plan (Oleg Kainov)</li>
-<li>New middleware that will check missing settings. At the moment will only
-check Base URL configuration which often gets forgotten!</li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Hot-fix for error caused by the API method <tt class="docutils literal">TestRun.update</tt>. Error was
-initially reported on
-<a class="reference external" href="https://stackoverflow.com/questions/52865463/">StackOverflow</a>.
-This patch makes it possible to use the API without crashing however the
-<tt class="docutils literal">TestRun.update</tt> method doesn't handle the <tt class="docutils literal">stop_date</tt> field at the moment!</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/de#">German translation</a></li>
-<li>Updated translation source strings</li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Fix pylint errors (Ivaylo Ivanov)</li>
-<li>Remove unused <tt class="docutils literal">TestRun.list</tt> and <tt class="docutils literal">TestCase.list_confirmed</tt> methods</li>
-<li>Remove unused <tt class="docutils literal">plan_by_id_or_name()</tt> and <tt class="docutils literal">is_int()</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/269">Issue #269</a></li>
-</ul>
-</div>
-<div class="section" id="database">
-<h3>Database</h3>
-<ul class="simple">
-<li>Rename <tt class="docutils literal">tcms.core.contrib.auth</tt> to <tt class="docutils literal">tcms.kiwi_auth</tt></li>
-<li>Remove field <tt class="docutils literal">user</tt> from <tt class="docutils literal">TestCaseTag</tt>, <tt class="docutils literal">TestRunTag</tt> and <tt class="docutils literal">TestPlanTag</tt>
-models</li>
-<li>Squash migrations for <tt class="docutils literal">management</tt> app</li>
-<li>Squash migrations for <tt class="docutils literal">testcases</tt> app</li>
-<li>Squash migrations for <tt class="docutils literal">testplans</tt> app</li>
-<li>Squash migrations for <tt class="docutils literal">testruns</tt> app</li>
-</ul>
-</div>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
-</div>
-<div class="section" id="subscription-based-online-service">
-<h2>Subscription based online service</h2>
-<p>We are planning to convert
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> into
-a subscription based service for people who don't want to bother installing
-Kiwi TCMS on their own systems and just want to use it for test collaboration
-with their team.</p>
-<p>The income from this service will go towards covering operating costs and
-supporting the
-<a class="reference external" href="/team/">development team</a>. Watch this
-blog for further announcements about this. Meanwhile you may share your
-thoughts via
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
-</div>
-<div class="section" id="plans-to-remove-deprecated-functionality">
-<h2>Plans to remove deprecated functionality</h2>
-<p><tt class="docutils literal">TestRun.product_version</tt> will be removed from the database schema in favor of
-<tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
-to select a product version different than the one selected in the Test Plan.
-Test runs should only be able to select product builds (after
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
-</div>
-
         </div>
     </article>
 
