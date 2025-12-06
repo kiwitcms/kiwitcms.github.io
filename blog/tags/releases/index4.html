@@ -104,6 +104,80 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2020/01/12/kiwi-tcms-is-migrating-from-oauth-to-github-app/" rel="bookmark" title="Permalink to Kiwi TCMS is migrating from OAuth to GitHub App">
+                <h1 class="top-header">Kiwi TCMS is migrating from OAuth to GitHub App</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sun 12 January 2020
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Hello testers, Kiwi TCMS is migrating from its OAuth backend
+to the so called "GitHub App" backend in order to enable further
+integration with GitHub's PR flow as stated previously in our
+<a href="/blog/atodorov/2019/01/10/project-mission-and-goals-for-2019/">yearly goals</a>.
+This blog post outlines the differences between the old and the new!</p>
+<p>The old OAuth application only had access to your username, name and email
+for authentication purposes. Its authorization screen looked like so:</p>
+<p><img src="/images/github/oauth_login.png"
+    alt="OAuth login screen"
+    style="float:none"></p>
+<p>GitHub Apps on the other hand are designed for more granular access and tighter
+integration with the GitHub platform. This type of application still allows you
+to perform 1-click login into
+<a href="https://public.tenant.kiwitcms.org">https://public.tenant.kiwitcms.org</a>. If this is your
+first time logging into Kiwi TCMS after the migration you will see the following screen:</p>
+<p><img src="/images/github/app_login.png"
+    alt="App login screen"
+    style="float:none"></p>
+<p>Notice how the heading, information section and action button are slightly different!
+The important section is <strong>Resources on your account</strong>! We still only need your
+name, username and email address! Existing Kiwi TCMS accounts (from before the migration)
+will continue to work and they will still have access to all of their data previously
+created. Authorization of this new GitHub app (e.g. login only) does not give it
+permissions to access your repositories and act on your behalf.</p>
+<p>To permit this GitHub App to access your repositories and/or act on your behalf
+you must <strong>Install</strong> it first. That is tell Kiwi TCMS GitHub integration code
+what kind of resources from your GitHub account it is allowed to access. You may
+install into your personal GitHub account or an organizational account! You may
+do this by following the <strong>Install &amp; Authorize</strong> button on our home page or
+directly from <a href="https://github.com/apps/kiwi-tcms">https://github.com/apps/kiwi-tcms</a>!
+The screen should look like this:</p>
+<p><img src="/images/github/app_installation.png"
+    alt="App installation screen"
+    style="float:none"></p>
+<p>Initially we ask for read-only access to a few resources so Kiwi TCMS can start
+receiving webhooks from GitHub and synchronize information about your repositories
+into our database. This is documented both on the app installation screen itself
+(required by GitHub) and on
+<a href="https://github.com/kiwitcms/github-app">https://github.com/kiwitcms/github-app</a>!</p>
+<p>Further ideas about integration between GitHub and Kiwi TCMS, including the original
+idea about status checks from <a href="https://github.com/kiwitcms/Kiwi/issues/700">Issue #700</a>,
+can be found at
+<a href="https://github.com/kiwitcms/github-app/issues">https://github.com/kiwitcms/github-app/issues</a>.</p>
+<h2>Help us grow</h2>
+<p>After this migration we're back to zero! The thousands of authorizations we've had
+on our legacy OAuth app can't be migrated to the new app. This also means our
+listing on GitHub Marketplace will be taken down and we have to qualify through the
+entire process from scratch.</p>
+<p>Please help us get back on track! Here's what we ask you to do (in this order):</p>
+<ul>
+<li>Go to <a href="https://public.tenant.kiwitcms.org">https://public.tenant.kiwitcms.org</a> and
+  click the GitHub login icon, follow through with the process;</li>
+<li>Go to <a href="https://github.com/apps/kiwi-tcms">https://github.com/apps/kiwi-tcms</a> and
+  click the <strong>Install</strong> button, select account &amp; repositories and complete the
+  process;</li>
+<li>Share this blog post with friends, co-workers and other testers who might be
+  interested to help!</li>
+</ul>
+<p>Thank you! Happy testing and happy new year!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2019/12/09/kiwi-tcms-72/" rel="bookmark" title="Permalink to Kiwi TCMS 7.2">
                 <h1 class="top-header">Kiwi TCMS 7.2</h1>
             </a>
@@ -3116,108 +3190,6 @@ source code and they appear to be more fully developed. On the other hand
 while environment appears very similar to tags it is not exactly the same.
 Ongoing discussion is happening via
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/484">Issue #484</a>.</p>
-</div>
-
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2018/08/07/kiwi-tcms-52/" rel="bookmark" title="Permalink to Kiwi TCMS 5.2">
-                <h1 class="top-header">Kiwi TCMS 5.2</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 07 August 2018
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 5.2! This release
-introduces new database migrations and converts
-the Docker image to a non-root user with uid 1001. You may have to adjust
-ownership/permissions on the <tt class="docutils literal">kiwi_uploads</tt> Docker volume!</p>
-<p>The new <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">6bc4e3124fd4</tt>.
-<a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
-has also been updated!</p>
-<div class="section" id="changes-since-kiwi-tcms-5-1">
-<h2>Changes since Kiwi TCMS 5.1</h2>
-<div class="section" id="enhancements">
-<h3>Enhancements</h3>
-<ul class="simple">
-<li>Upgrade to <a class="reference external" href="https://docs.djangoproject.com/en/2.1/releases/2.1/">Django 2.1</a></li>
-<li>Upgrade to <tt class="docutils literal"><span class="pre">django-report-builder</span> 6.2.2</tt>, compatible with Django 2.1</li>
-<li>Docker image now executes with uid 1001 instead of root<ul>
-<li>image based on <tt class="docutils literal">centos7</tt> image instead of <tt class="docutils literal">centos/httpd</tt></li>
-<li>image now exposes ports 8080 and 8443</li>
-<li>Apache logs now printed on Docker console</li>
-<li>SSL certificates copied to <tt class="docutils literal">/Kiwi/ssl</tt> inside Docker image instead of being bind-mounted</li>
-<li>uploads dir changed to <tt class="docutils literal">/Kiwi/uploads</tt></li>
-<li>static dir changed to <tt class="docutils literal">/Kiwi/static</tt></li>
-<li><tt class="docutils literal">/Kiwi</tt> is now owned by uid 1001</li>
-<li><tt class="docutils literal">/venv</tt> is now owned by uid 1001</li>
-<li><tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> is updated to match</li>
-</ul>
-</li>
-<li>Fix pylint errors (Ivaylo Ivanov)</li>
-<li>Allow users to see other profiles via Admin</li>
-<li>Use password change form from Admin instead of custom one</li>
-<li><tt class="docutils literal">product.py</tt> will try to import <tt class="docutils literal">local_settings.py</tt> if available in the
-same directory. This can be used to customize settings in downstream
-distributions</li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#">Slovenian translation</a></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Make password reset views public</li>
-<li>Don't crash when adding new users via Admin</li>
-</ul>
-</div>
-<div class="section" id="refactoring">
-<h3>Refactoring</h3>
-<ul class="simple">
-<li>Remove <tt class="docutils literal">UserProfile</tt> model. Kiwi TCMS doesn't needs extra information
-about users so we remove this part of the application. Custom installations
-may choose to define their own profiles if they wish</li>
-<li>Remove custom <tt class="docutils literal">DBModelBackend</tt> authentication backend</li>
-<li>Remove unused <tt class="docutils literal">tcms.core.context_processors.auth_backend_processor</tt></li>
-<li>Remove unused <tt class="docutils literal">get_using_backend()</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/261">Issue #261</a></li>
-<li>Remove <tt class="docutils literal">dj_pagination</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/110">Issue #110</a></li>
-</ul>
-</div>
-<div class="section" id="settings">
-<h3>Settings</h3>
-<ul class="simple">
-<li><tt class="docutils literal">AUTHENTICATION_BACKENDS</tt> is removed</li>
-<li><tt class="docutils literal">PAGINATION_DEFAULT_PAGINATION</tt> is removed</li>
-<li>Navigation menu links are now defined in <tt class="docutils literal">MENU_ITEMS</tt> and can be redefined</li>
-</ul>
-</div>
-<div class="section" id="signals">
-<h3>Signals</h3>
-<ul class="simple">
-<li><tt class="docutils literal">USER_REGISTERED_SIGNAL</tt> now doesn't receive the <tt class="docutils literal">backend</tt> parameter</li>
-</ul>
-</div>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>If you are using Kiwi TCMS as a Docker container then:</p>
-<pre class="literal-block">
-cd Kiwi/
-git pull
-docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
-docker pull centos/mariadb
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-</pre>
-<p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
-before upgrade!</p>
 </div>
 
         </div>

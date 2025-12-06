@@ -1,5 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2025-12-04T12:00:00+02:00</updated><entry><title>Who is using Kiwi TCMS in 2025</title><link href="/blog/kiwi-tcms-team/2025/12/04/who-is-using-kiwi-tcms-in-2025/" rel="alternate"></link><published>2025-12-04T12:00:00+02:00</published><updated>2025-12-04T12:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-12-04:/blog/kiwi-tcms-team/2025/12/04/who-is-using-kiwi-tcms-in-2025/</id><summary type="html">&lt;p&gt;&lt;img alt="2025 banner" src="/images/analytics/2025/banner.png" title="2025 banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2025-12-06T13:30:00+02:00</updated><entry><title>Kiwi TCMS 15.2</title><link href="/blog/kiwi-tcms-team/2025/12/06/kiwi-tcms-152/" rel="alternate"></link><published>2025-12-06T13:30:00+02:00</published><updated>2025-12-06T13:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-12-06:/blog/kiwi-tcms-team/2025/12/06/kiwi-tcms-152/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 15.2!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates,
+several improvements, new API methods and updated translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  f8a2e8b0ce01 …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 15.2!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates,
+several improvements, new API methods and updated translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  f8a2e8b0ce01    716MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-15-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 15.1&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 5.2.7 to 5.2.9 which contains patches for
+&lt;em&gt;CVE-2025-64459&lt;/em&gt;, &lt;em&gt;CVE-2025-64458&lt;/em&gt;, &lt;em&gt;CVE-2025-13372&lt;/em&gt; and &lt;em&gt;CVE-2025-64460&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Update node_modules/js-yaml from 4.1.0 to 4.1.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update bleach from 6.2.0 to 6.3.0&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 4.0.2 to 4.0.3. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4119"&gt;Issue #4119&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update django-tree-queries from 0.21.2 to 0.23.0&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.9 to 3.10&lt;/li&gt;
+&lt;li&gt;Update psycopg[binary] from 3.2.11 to 3.3.1&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 6.5.0 to 7.0.0&lt;/li&gt;
+&lt;li&gt;Add new toolbar menu item on TestRun page, which opens the
+Execution Dashboard page with executions from the current TestRun. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4084"&gt;Issue #4084&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Display TestCase ID on Execution Dashboard page&lt;/li&gt;
+&lt;li&gt;Display Priority &amp;amp; Automated columns in Execution Dashboard page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;BugTracker.create()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;BugTracker.filter()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;Priority.create()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;Severity.create()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;Severity.filter()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;Tag.create()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;Template.create()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;Template.filter()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestCaseStatus.create()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestExecutionStatus.create()&lt;/tt&gt; API method&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update actions/checkout from 5 to 6&lt;/li&gt;
+&lt;li&gt;Update actions/upload-artifact from 4 to 5&lt;/li&gt;
+&lt;li&gt;Update black from 25.9.0 to 25.11.0&lt;/li&gt;
+&lt;li&gt;Update locust from 2.42.0 to 2.42.6&lt;/li&gt;
+&lt;li&gt;Update sphinx from 8.2.3 to 9.0.4&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.102.1 to 5.103.0&lt;/li&gt;
+&lt;li&gt;Update password reset URL format to match latest in Django 5.2&lt;/li&gt;
+&lt;li&gt;Add end-to-end test for password reset functionality&lt;/li&gt;
+&lt;li&gt;Remove redundant &lt;tt class="docutils literal"&gt;_fixture_setup()&lt;/tt&gt; definition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/id#"&gt;Indonesian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pl#"&gt;Polish translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#"&gt;Russian translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v15-1-1-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v15.1.1-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v15.2&lt;/li&gt;
+&lt;li&gt;Update certbot from 5.1.0 to 5.2.1&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-trackers-integration from 1.1.0 to 1.2.1&lt;/li&gt;
+&lt;li&gt;Update psycopg-pool from 3.2.6 to 3.3.0&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk[django] from 2.42.1 to 2.47.0&lt;/li&gt;
+&lt;li&gt;Use a different way to override the password reset page&lt;/li&gt;
+&lt;li&gt;Close connection requests to bogus URLs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/version          15.2 (aarch64)          8df913ae4061    06 Dec 2025     734MB
+hub.kiwitcms.eu/kiwitcms/version          15.2 (x86_64)           96d6cd67103a    06 Dec 2025     716MB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.2-mt (aarch64)       976dfcbd1e50    06 Dec 2025     1GB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.2-mt (x86_64)        4e528923ba04    06 Dec 2025     976MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
+and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Who is using Kiwi TCMS in 2025</title><link href="/blog/kiwi-tcms-team/2025/12/04/who-is-using-kiwi-tcms-in-2025/" rel="alternate"></link><published>2025-12-04T12:00:00+02:00</published><updated>2025-12-04T12:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-12-04:/blog/kiwi-tcms-team/2025/12/04/who-is-using-kiwi-tcms-in-2025/</id><summary type="html">&lt;p&gt;&lt;img alt="2025 banner" src="/images/analytics/2025/banner.png" title="2025 banner"&gt;&lt;/p&gt;
 &lt;p&gt;With 2025 drawing to an end Kiwi TCMS is happy to share some highlights from our
 usage statistics. It is really insightful to see the myriad of organizations
 using Kiwi TCMS.&lt;/p&gt;
@@ -10595,50 +10732,4 @@ to how we provide access to Kiwi TCMS via our own subscriptions!&lt;/p&gt;
 &lt;p&gt;Also it just looks cool if you employ your imagination, especially
 for non-native English speakers: quay -&amp;gt; qu-ai -&amp;gt; QA!&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry><entry><title>QGIS has chosen Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/08/11/qgis-has-chosen-kiwi-tcms/" rel="alternate"></link><published>2020-08-11T14:00:00+03:00</published><updated>2020-08-11T14:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-11:/blog/kiwi-tcms-team/2020/08/11/qgis-has-chosen-kiwi-tcms/</id><summary type="html">&lt;p&gt;We are happy to announce that &lt;a href="https://qgis.org"&gt;QGIS&lt;/a&gt; has chosen Kiwi TCMS
-for the basis of their &lt;em&gt;Quality Assurance methodology and infrastructure&lt;/em&gt;
-improvement program!
-Kiwi TCMS will play a central role in storing test case definitions,
-organizing test cycles, and assigning and tracking test executions by testers
-from the QGIS community …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that &lt;a href="https://qgis.org"&gt;QGIS&lt;/a&gt; has chosen Kiwi TCMS
-for the basis of their &lt;em&gt;Quality Assurance methodology and infrastructure&lt;/em&gt;
-improvement program!
-Kiwi TCMS will play a central role in storing test case definitions,
-organizing test cycles, and assigning and tracking test executions by testers
-from the QGIS community.&lt;/p&gt;
-&lt;div class="member-bio" style="margin-top: 2vh"&gt;
-    &lt;img src="/images/customers/qgis-color.png" style="float:left; margin-right: 1vw"&gt;
-
-    &lt;p&gt;
-        QGIS is a free and open source geographic information system which contains
-        desktop, server, web and mobile applications for various operating systems.
-        It is an established project with very large and diverse community and also
-        one of the very well known open source GIS systems.
-    &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The proposal
-&lt;a href="https://github.com/qgis/QGIS-Enhancement-Proposals/issues/180"&gt;QEP#180&lt;/a&gt; is the
-highest voted proposal in the
-&lt;a href="http://blog.qgis.org/2020/07/10/qgis-grant-programme-2020-results/"&gt;2020 QGIS Grant Program&lt;/a&gt;
-and has been awarded a budget of 5000€!
-This grant will allow the proponents to spend significantly more time setting up the
-infrastructure and planning a methodology for manual testing.&lt;/p&gt;
-&lt;h2&gt;Scope of proposal&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/qgis/QGIS-Enhancement-Proposals/issues/180"&gt;QEP#180&lt;/a&gt;
-aims to create the necessary infrastructure and methodology to organize and
-encourage systematic testing before each QGIS release:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Setup a test management system to organize test cycles, assign and track tests execution;&lt;/li&gt;
-&lt;li&gt;Elaborate and document a methodology to execute testing to help testers;&lt;/li&gt;
-&lt;li&gt;Resurrect and move the tester plugin to QGIS repositories. Publish it in the QGIS official repository&lt;/li&gt;
-&lt;li&gt;Create an initial set of relevant test cases;&lt;/li&gt;
-&lt;li&gt;Organize and execute the initial test cases for the next releases.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This effort will steer members &amp;amp; volunteers of the QGIS community towards a more systematic
-and organized testing during a feature freeze period before a release. The focus here
-is on integration testing, manual &amp;amp; semi-automated workflows for important functionality
-that should never regress and is hard or impossible to cover via unit tests.&lt;/p&gt;
-&lt;p&gt;The proposal is lead by Alexandre Neto, Giovanni Manghi and Alexander Bruy!&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-On behalf of the Kiwi TCMS community welcome aboard and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="community"></category></entry></feed>
+Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry></feed>
