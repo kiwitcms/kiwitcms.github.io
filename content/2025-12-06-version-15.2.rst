@@ -1,0 +1,148 @@
+Kiwi TCMS 15.2
+##############
+
+:headline: security, improvements, new API methods and updated translations
+:date: 2025-12-06 13:30
+:comments: false
+:tags: releases
+
+
+We're happy to announce Kiwi TCMS version 15.2!
+
+**IMPORTANT:**
+
+This is a minor version release which includes security related updates,
+several improvements, new API methods and updated translations.
+
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Public container image (x86_64)::
+
+        pub.kiwitcms.eu/kiwitcms/kiwi   latest  f8a2e8b0ce01    716MB
+
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 15.1
+----------------------------
+
+Security
+~~~~~~~~
+
+- Update Django from 5.2.7 to 5.2.9 which contains patches for
+  *CVE-2025-64459*, *CVE-2025-64458*, *CVE-2025-13372* and *CVE-2025-64460*
+- Update node_modules/js-yaml from 4.1.0 to 4.1.1
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update bleach from 6.2.0 to 6.3.0
+- Update django-grappelli from 4.0.2 to 4.0.3. Fixes
+  `Issue #4119 <https://github.com/kiwitcms/Kiwi/issues/4119>`_
+- Update django-tree-queries from 0.21.2 to 0.23.0
+- Update markdown from 3.9 to 3.10
+- Update psycopg[binary] from 3.2.11 to 3.3.1
+- Update python-gitlab from 6.5.0 to 7.0.0
+- Add new toolbar menu item on TestRun page, which opens the
+  Execution Dashboard page with executions from the current TestRun. Closes
+  `Issue #4084 <https://github.com/kiwitcms/Kiwi/issues/4084>`_
+- Display TestCase ID on Execution Dashboard page
+- Display Priority & Automated columns in Execution Dashboard page
+
+
+API
+~~~
+
+- Add ``BugTracker.create()`` API method
+- Add ``BugTracker.filter()`` API method
+- Add ``Priority.create()`` API method
+- Add ``Severity.create()`` API method
+- Add ``Severity.filter()`` API method
+- Add ``Tag.create()`` API method
+- Add ``Template.create()`` API method
+- Add ``Template.filter()`` API method
+- Add ``TestCaseStatus.create()`` API method
+- Add ``TestExecutionStatus.create()`` API method
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update actions/checkout from 5 to 6
+- Update actions/upload-artifact from 4 to 5
+- Update black from 25.9.0 to 25.11.0
+- Update locust from 2.42.0 to 2.42.6
+- Update sphinx from 8.2.3 to 9.0.4
+- Update node_modules/webpack from 5.102.1 to 5.103.0
+- Update password reset URL format to match latest in Django 5.2
+- Add end-to-end test for password reset functionality
+- Remove redundant ``_fixture_setup()`` definition
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Chinese Simplified translation <https://crowdin.com/project/kiwitcms/zh-CN#>`_
+- Updated `Indonesian translation <https://crowdin.com/project/kiwitcms/id#>`_
+- Updated `Japanese translation <https://crowdin.com/project/kiwitcms/ja#>`_
+- Updated `Polish translation <https://crowdin.com/project/kiwitcms/pl#>`_
+- Updated `Russian translation <https://crowdin.com/project/kiwitcms/ru#>`_
+
+
+Changes since Kiwi TCMS Enterprise v15.1.1-mt
+---------------------------------------------
+
+- Based on Kiwi TCMS v15.2
+- Update certbot from 5.1.0 to 5.2.1
+- Update kiwitcms-trackers-integration from 1.1.0 to 1.2.1
+- Update psycopg-pool from 3.2.6 to 3.3.0
+- Update sentry-sdk[django] from 2.42.1 to 2.47.0
+- Use a different way to override the password reset page
+- Close connection requests to bogus URLs
+
+
+Private container images
+------------------------
+
+    ::
+
+        hub.kiwitcms.eu/kiwitcms/version          15.2 (aarch64)          8df913ae4061    06 Dec 2025     734MB
+        hub.kiwitcms.eu/kiwitcms/version          15.2 (x86_64)           96d6cd67103a    06 Dec 2025     716MB
+        hub.kiwitcms.eu/kiwitcms/enterprise       15.2-mt (aarch64)       976dfcbd1e50    06 Dec 2025     1GB
+        hub.kiwitcms.eu/kiwitcms/enterprise       15.2-mt (x86_64)        4e528923ba04    06 Dec 2025     976MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+Follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all project news;
+- `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_
+  and an awesome open source hacker;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
