@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2025-12-06T13:30:00+02:00</updated><entry><title>Kiwi TCMS 15.2</title><link href="/blog/kiwi-tcms-team/2025/12/06/kiwi-tcms-152/" rel="alternate"></link><published>2025-12-06T13:30:00+02:00</published><updated>2025-12-06T13:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-12-06:/blog/kiwi-tcms-team/2025/12/06/kiwi-tcms-152/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 15.2!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2025-12-17T10:30:00+02:00</updated><entry><title>Kiwi TCMS is going to FOSDEM 2026</title><link href="/blog/kiwi-tcms-team/2025/12/17/kiwi-tcms-is-going-to-fosdem-2026/" rel="alternate"></link><published>2025-12-17T10:30:00+02:00</published><updated>2025-12-17T10:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-12-17:/blog/kiwi-tcms-team/2025/12/17/kiwi-tcms-is-going-to-fosdem-2026/</id><summary type="html">&lt;p&gt;&lt;img alt="fosdem 26 banner" src="/images/fosdem/2026/stand.png" title="fosdem 26 banner"&gt;&lt;/p&gt;
+&lt;p&gt;Hello testers, we are happy to announce that
+Kiwi TCMS is going to &lt;a href="http://fosdem.org/"&gt;FOSDEM 2026&lt;/a&gt; in Brussels.
+This is where you can find us:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Saturday Jan 31st:
+  &lt;a href="https://fosdem.org/2026/news/2025-11-16-accepted-stands/"&gt;Kiwi TCMS stand&lt;/a&gt; -
+  most likely in the K building however specific information will be made available
+  closer to the event! Please follow &lt;a href="https://fosdem.org/2026/"&gt;https …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="fosdem 26 banner" src="/images/fosdem/2026/stand.png" title="fosdem 26 banner"&gt;&lt;/p&gt;
+&lt;p&gt;Hello testers, we are happy to announce that
+Kiwi TCMS is going to &lt;a href="http://fosdem.org/"&gt;FOSDEM 2026&lt;/a&gt; in Brussels.
+This is where you can find us:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Saturday Jan 31st:
+  &lt;a href="https://fosdem.org/2026/news/2025-11-16-accepted-stands/"&gt;Kiwi TCMS stand&lt;/a&gt; -
+  most likely in the K building however specific information will be made available
+  closer to the event! Please follow &lt;a href="https://fosdem.org/2026/"&gt;https://fosdem.org/2026/&lt;/a&gt; for more news!&lt;/li&gt;
+&lt;li&gt;Sunday Feb 1st:
+  &lt;a href="https://fosdem.org/2026/schedule/track/testing-and-continuous-delivery/"&gt;Testing and Continuous Delivery devroom&lt;/a&gt; -
+  we are proud to be co-hosting this devroom again!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We would like to meet with all of you and talk about open source, software testing and test management!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category><category term="community"></category><category term="events"></category></entry><entry><title>Kiwi TCMS 15.2</title><link href="/blog/kiwi-tcms-team/2025/12/06/kiwi-tcms-152/" rel="alternate"></link><published>2025-12-06T13:30:00+02:00</published><updated>2025-12-06T13:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2025-12-06:/blog/kiwi-tcms-team/2025/12/06/kiwi-tcms-152/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 15.2!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a minor version release which includes security related updates,
 several improvements, new API methods and updated translations.&lt;/p&gt;
@@ -10683,53 +10714,4 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 for more details!&lt;/p&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="releases"></category></entry><entry><title>Kiwi TCMS container images now available via Red Hat Quay.io</title><link href="/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/" rel="alternate"></link><published>2020-08-18T12:23:00+03:00</published><updated>2020-08-18T12:23:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-08-18:/blog/kiwi-tcms-team/2020/08/18/kiwi-tcms-container-images-now-available-via-red-hat-quayio/</id><summary type="html">&lt;p&gt;Hello testers, we have very important news around how container images
-for Kiwi TCMS will be distributed! Recently Docker has announced
-several changes in their storage plans which makes it less viable for
-our team to continue using their services in full!&lt;/p&gt;
-&lt;h2&gt;Information about official upstream container images&lt;/h2&gt;
-&lt;p&gt;The official …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers, we have very important news around how container images
-for Kiwi TCMS will be distributed! Recently Docker has announced
-several changes in their storage plans which makes it less viable for
-our team to continue using their services in full!&lt;/p&gt;
-&lt;h2&gt;Information about official upstream container images&lt;/h2&gt;
-&lt;p&gt;The official upstream Kiwi TCMS container image will continue to be
-publicly available as before.
-In addition new images will be available via Red Hat's Quay.io service.
-These images are available as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; - Docker Hub&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; - Quay.io&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Content is exactly the same between the two registries and you may use
-the one which you like best!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; after November 1st 2020 older versions will not be available from
-Docker Hub, only from Quay.io! The reason is that Docker is enforcing a
-&lt;a href="https://www.docker.com/pricing/retentionfaq"&gt;6 month image retention limit&lt;/a&gt;
-for free plans!&lt;/p&gt;
-&lt;h2&gt;Information about private containers for subscribers&lt;/h2&gt;
-&lt;p&gt;Subscribers enjoy the benefit of having read-only access to tagged versions of the
-upstream Kiwi TCMS container images as well as access to tagged versions of
-Kiwi TCMS Enterprise container images! Previously these containers were distributed
-via Docker Hub and are now available via Quay.io:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;mrsenko/kiwitcms&lt;/code&gt; -&amp;gt; &lt;code&gt;hub.kiwitcms.eu/kiwitcms/version&lt;/code&gt; (version tagged upstream images)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mrsenko/kiwitcms-enterprise&lt;/code&gt; -&amp;gt; &lt;code&gt;hub.kiwitcms.eu/kiwitcms/enterprise&lt;/code&gt; (enterprise images)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; existing subscribers have been notified and granted access
-to these new repositories. We advise you to update your
-&lt;code&gt;docker-compose.yml&lt;/code&gt; files and start using the new images at your earliest convenience!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; existing subscribers will continue having access to private
-repositories on Docker Hub until December 31st 2020! Private repositories on
-Docker Hub will become unavailable after January 31st, 2021 when Docker's new
-storage plans will be forced into effect!&lt;/p&gt;
-&lt;h2&gt;Why did we chose Quay.io&lt;/h2&gt;
-&lt;p&gt;There are multiple container registry services available! We think Quay.io
-delivers the best price/quality ratio for our own use-case. In particular
-we like the billing model around number of private repositories instead the
-one around the number of users in your organization. That's very similar
-to how we provide access to Kiwi TCMS via our own subscriptions!&lt;/p&gt;
-&lt;p&gt;Also it just looks cool if you employ your imagination, especially
-for non-native English speakers: quay -&amp;gt; qu-ai -&amp;gt; QA!&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"></category><category term="releases"></category></entry></feed>
+</content><category term="misc"></category><category term="releases"></category></entry></feed>

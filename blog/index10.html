@@ -104,6 +104,231 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2018/02/10/kiwi-tcms-tcms-api-version-400/" rel="bookmark" title="Permalink to Kiwi TCMS & tcms-api version 4.0.0">
+                <h1 class="top-header">Kiwi TCMS &amp; tcms-api version 4.0.0</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sat 10 February 2018
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 4.0.0
+and the corresponding tcms-api version 4.0.0! This is a very big release
+which introduces tons of backwards incompatible changes to the RPC layer
+as well as several bug-fixes and enhancements!</p>
+<p>With this release Kiwi TCMS meets one of our
+<a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">milestones for 2018</a>! All XML-RPC
+namespaces now match DB model names and the API client class names. Lots of
+similar and duplicate methods were removed and existing ones were simplified.
+We've also reduced code duplication and technical debth by 1 month
+according to stats by <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>.</p>
+<p><strong>IMPORTANT:</strong> this is also the first release to officially publish the
+<code>pub.kiwitcms.eu/kiwitcms/kiwi</code> container image!</p>
+<p><strong>WARNING:</strong> upgrading to Kiwi TCMS 4.0.0 means you will have to upgrade
+the tcms-api client as well. None of the 4.x releases is compatible with
+older releases due to the massive ammount of changes in the RPC layer.</p>
+<h2>Changes since Kiwi TCMS 3.50</h2>
+<h3>Enhancements and bug fixes</h3>
+<ul>
+<li>Upgrade to Django 2.0.2 which patches a security issue</li>
+<li>Pin JIRA client version to 1.0.10. Fixes
+  <a href="https://github.com/kiwitcms/Kiwi/issues/195">Issue #195</a></li>
+<li>Generate api-docs for model classes</li>
+<li>Updated documentation for all RPC methods</li>
+<li>Use Grappelli jQuery initialization, fixes popup windows</li>
+<li>Unify RPC namespaces, API client class names and server-side model names.
+  Fixes <a href="https://github.com/kiwitcms/Kiwi/issues/153">Issue #153</a></li>
+</ul>
+<h3>Settings</h3>
+<ul>
+<li>Remove <code>ADMIN_PREFIX</code> setting</li>
+</ul>
+<h3>RPC methods refactoring</h3>
+<ul>
+<li>Remove <code>Build.check_build</code>, use <code>Build.filter</code></li>
+<li>Remove <code>Build.get</code>, use <code>Build.filter</code></li>
+<li>Remove <code>Build.get_caseruns</code>, use <code>TestCaseRun.filter</code></li>
+<li>
+<p>Remove <code>Build.get_runs</code>, use <code>TestRun.filter</code></p>
+</li>
+<li>
+<p>Rename <code>Env.filter_groups</code>, use <code>Env.Group.filter</code></p>
+</li>
+<li>Rename <code>Env.filter_properties</code>, use <code>Env.Property.filter</code></li>
+<li>
+<p>Rename <code>Env.filter_values</code>, use <code>Env.Value.filter</code></p>
+</li>
+<li>
+<p>Remove <code>Product.add_component</code>, use <code>Component.create</code></p>
+</li>
+<li>Remove <code>Product.add_version</code>, use <code>Version.create</code></li>
+<li>Remove <code>Product.check_category</code>, use <code>Category.filter</code></li>
+<li>Remove <code>Product.check_component</code>, use <code>Component.filter</code></li>
+<li>Remove <code>Product.check_product</code>, use <code>Product.filter</code></li>
+<li>Remove <code>Product.filter_categories</code>, use <code>Category.filter</code></li>
+<li>Remove <code>Product.filter_components</code>, use <code>Component.filter</code></li>
+<li>Remove <code>Product.filter_versions</code>, use <code>Version.filter</code></li>
+<li>Remove <code>Product.get</code>, use <code>Product.filter</code></li>
+<li>Remove <code>Product.get_builds</code>, use <code>Build.filter</code></li>
+<li>Remove <code>Product.get_cases</code>, use <code>TestCase.filter</code></li>
+<li>Remove <code>Product.get_categories</code>, use <code>Category.filter</code></li>
+<li>Remove <code>Product.get_category</code>, use <code>Category.filter</code></li>
+<li>Remove <code>Product.get_component</code>, use <code>Component.filter</code></li>
+<li>
+<p>Remove <code>Product.update_component</code>, use <code>Component.update</code></p>
+</li>
+<li>
+<p>Rename <code>Tag.get_tags</code> to <code>Tag.filter</code></p>
+</li>
+<li>
+<p>Remove <code>TestCase.add_comment</code></p>
+</li>
+<li>Update signature for <code>TestCase.add_component</code></li>
+<li>Update signature for <code>TestCase.add_tag</code></li>
+<li>Remove <code>TestCase.add_to_run</code>, use <code>TestRun.add_case</code></li>
+<li>Remove <code>TestCase.attach_bug</code>, use <code>Bug.create</code></li>
+<li>Remove <code>TestCase.calculate_average_estimated_time</code></li>
+<li>Remove <code>TestCase.calculate_total_estimated_time</code></li>
+<li>Remove <code>TestCase.check_case_status</code>, use <code>TestCaseStatus.filter</code></li>
+<li>Remove <code>TestCase.check_priority</code>, use <code>Priority.filter</code></li>
+<li>Update signature for <code>TestCase.create</code>, no longer accepts <code>plan</code>,
+  <code>component</code> and <code>bug</code> dict attributes. Instead use 
+  <code>TestPlan.add_case</code>, <code>TestCase.add_component</code> and <code>Bug.create</code></li>
+<li>Remove <code>TestCase.detach_bug</code>, use <code>Bug.remove</code></li>
+<li>Remove <code>TestCase.filter_count</code></li>
+<li>Remove <code>TestCase.get</code>, use <code>TestCase.filter</code></li>
+<li>Remove <code>TestCase.get_bugs</code>, use <code>Bug.filter({'case': ?})</code></li>
+<li>Remove <code>TestCase.get_bug_systems</code></li>
+<li>Remove <code>TestCase.get_case_status</code>, use <code>TestCaseStatus.filter</code></li>
+<li>Update signature for <code>TestCase.get_components</code></li>
+<li>Remove <code>TestCase.get_plans</code>, use <code>TestPlan.filter({'case': ?})</code></li>
+<li>Remove <code>TestCase.get_priority</code>, use <code>Priority.filter</code></li>
+<li>Remove <code>TestCase.get_tags</code>, use <code>Tag.filter({'case': ?})</code></li>
+<li>Remove <code>TestCase.get_text</code>, use <code>TestCase.filter</code></li>
+<li>Remove <code>TestCase.link_plan</code>, use <code>TestPlan.add_case</code></li>
+<li>Rename <code>TestCase.notification_add_cc</code> to <code>TestCase.add_notification_cc</code>
+  and update signature</li>
+<li>Rename <code>TestCase.notification_get_cc_list</code> to <code>TestCase.get_notification_cc</code>
+  and update signature</li>
+<li>Rename <code>TestCase.notification_remove_cc</code> to <code>TestCase.remove_notification_cc</code>
+  and update signature</li>
+<li>Update signature for <code>TestCase.remove_component</code></li>
+<li>Update signature for <code>TestCase.remove_tag</code></li>
+<li>Remove <code>TestCase.store_text</code>, use <code>TestCase.update</code> with
+  <code>setup</code>, <code>breakdown</code>, <code>action</code> and <code>effect</code> attributes in the parameter dict</li>
+<li>
+<p>Remove <code>TestCase.unlink_plan</code>, use <code>TestPlan.remove_case</code></p>
+</li>
+<li>
+<p>Remove <code>TestCasePlan.get</code></p>
+</li>
+<li>
+<p>Remove <code>TestCasePlan.update</code></p>
+</li>
+<li>
+<p>Update <code>TestCaseRun.add_comment</code> to accept a single ID as first parameter</p>
+</li>
+<li>Remove <code>TestCaseRun.attach_bug</code>, use <code>Bug.create</code></li>
+<li>Rename <code>TestCaseRun.attach_log</code> to <code>TestCaseRun.add_log</code></li>
+<li>Remove <code>TestCaseRun.detach_bug</code>, use <code>Bug.remove</code></li>
+<li>Rename <code>TestCaseRun.detach_log</code> to <code>TestCaseRun.remove_log</code></li>
+<li>Remove <code>TestCaseRun.get</code>, use <code>TestCaseRun.filter</code></li>
+<li>Remove <code>TestCaseRun.get_bugs</code>, use <code>Bug.filter({'case_run': ?})</code></li>
+<li>Remove <code>TestCaseRun.get_case_run_status_by_name</code></li>
+<li>
+<p>Update signature for <code>TestCaseRun.update</code></p>
+</li>
+<li>
+<p>Remove <code>TestPlan.add_component</code></p>
+</li>
+<li>Update signature for <code>TestPlan.add_tag</code></li>
+<li>Remove <code>TestPlan.check_plan_type</code>, use <code>PlanType.filter</code></li>
+<li>Remove <code>TestPlan.filter_count</code></li>
+<li>Remove <code>TestPlan.get</code>, use <code>TestPlan.filter</code></li>
+<li>Remove <code>TestPlan.get_all_cases_tags</code></li>
+<li>Remove <code>TestPlan.get_components</code></li>
+<li>Remove <code>TestPlan.get_env_groups</code>, use <code>Env.Group.filter({'testplan': ?})</code></li>
+<li>Remove <code>TestPlan.get_plan_type</code>, use <code>PlanType.filter</code></li>
+<li>Remove <code>TestPlan.get_product</code>, use <code>Product.filter({'plan': ?})</code></li>
+<li>Remove <code>TestPlan.get_tags</code>, use <code>Tag.filter({'plan': ?})</code></li>
+<li>Remove <code>TestPlan.get_test_cases</code>, use <code>TestCase.filter({'plan': ?})</code></li>
+<li>Remove <code>TestPlan.get_test_runs</code>, use <code>TestRun.filter({'plan': ?})</code></li>
+<li>Remove <code>TestPlan.get_text</code>, use <code>TestPlan.filter</code></li>
+<li>Rename <code>TestPlan.link_env_value</code> to <code>TestPlan.add_env_value</code>
+  and update signature</li>
+<li>Remove <code>TestPlan.remove_component</code></li>
+<li>Update signature for <code>TestPlan.remove_tag</code></li>
+<li>Remove <code>TestPlan.store_text</code>, use <code>TestPlan.update</code> with
+  a <code>text</code> attribute in the parameter values</li>
+<li>
+<p>Rename <code>TestPlan.unlink_env_value</code> to <code>TestPlan.remove_env_value</code>
+  and update signature</p>
+</li>
+<li>
+<p>Rename <code>TestRun.add_cases</code> to <code>TestRun.add_case</code> and update signature</p>
+</li>
+<li>Update signature for <code>TestRun.add_tag</code></li>
+<li>Update signature for <code>TestRun.create</code>, no longer accepts <code>case</code>
+  dict attribute. Instead use <code>TestRun.add_case</code></li>
+<li>Remove <code>TestRun.filter_count</code></li>
+<li>Remove <code>TestRun.get</code>, use <code>TestRun.filter</code></li>
+<li>Remove <code>TestRun.get_bugs</code></li>
+<li>Remove <code>TestRun.get_env_values</code>, use <code>Env.Value.filter({'testrun': ?})</code></li>
+<li>Remove <code>TestRun.get_tags</code>, use <code>Tag.filter({'run': ?})</code></li>
+<li>Rename <code>TestRun.get_test_cases</code> to <code>TestRun.get_cases</code></li>
+<li>Remove <code>TestRun.get_test_case_runs</code>, use <code>TestCaseRun.filter({'run': ?})</code></li>
+<li>Remove <code>TestRun.get_test_plan</code>, use <code>TestPlan.filter({'run': ?})[0]</code></li>
+<li>Rename <code>TestRun.remove_cases</code> to <code>TestRun.remove_case</code> and update signature</li>
+<li>Update signature for <code>TestRun.remove_tag</code></li>
+<li>
+<p>Update signature for <code>TestRun.update</code></p>
+</li>
+<li>
+<p>Rename <code>User.get</code> to <code>User.filter</code></p>
+</li>
+<li>Rename <code>User.join</code> to <code>User.join_group</code></li>
+<li>Update signature for <code>User.update</code></li>
+</ul>
+<h3>Models and database migrations</h3>
+<ul>
+<li>Remove model <code>TestEnvironment</code></li>
+<li>Remove model <code>TestEnvironmentCategory</code></li>
+<li>Remove model <code>TestEnvironmentElement</code></li>
+<li>Remove model <code>TestEnvironmentMap</code></li>
+<li>Remove model <code>TestEnvironmentProperty</code></li>
+<li>Remove model <code>TestPlanComponent</code></li>
+<li>Remove <code>TestPlan.get_text_with_version()</code></li>
+<li>Remove <code>TestRun.get_previous_or_next()</code></li>
+</ul>
+<p><strong>IMPORTANT:</strong> this release introduces new database migrations!</p>
+<h2>tcms-api changes since 1.5.1</h2>
+<ul>
+<li><strong>Make the code compatible with Kiwi TCMS XML-RPC v4.0.0</strong></li>
+<li>Rename <code>Status</code> to <code>TestCaseRunStatus</code></li>
+<li>Rename <code>CaseRun</code> to <code>TestCaseRun</code></li>
+<li>Remove <code>PlanStatus</code>, use <code>TestPlan.is_active</code></li>
+<li>Remove <code>RunStatus</code>, use <code>TestRun.finished</code></li>
+<li>Remove <code>TestPlan.components</code> container</li>
+<li>Update signature for <code>TestPlan</code>. Now accept <code>text</code> kwarg in constructor
+  instead of <code>document</code>.</li>
+</ul>
+<h2>How to upgrade</h2>
+<p>If you are using Kiwi TCMS as a Docker container then</p>
+<div class="highlight"><pre><span></span><code>cd Kiwi/
+docker-compose down
+docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker-compose up -d
+docker exec -it kiwi_web /Kiwi/manage.py migrate
+</code></pre></div>
+
+<p>Happy testing!</p>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2018/01/25/kiwi-tcms-version-350/" rel="bookmark" title="Permalink to Kiwi TCMS version 3.50">
                 <h1 class="top-header">Kiwi TCMS version 3.50</h1>
             </a>
