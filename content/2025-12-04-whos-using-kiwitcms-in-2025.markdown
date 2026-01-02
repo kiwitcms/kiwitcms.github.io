@@ -13,18 +13,16 @@ usage statistics. It is really insightful to see the myriad of organizations
 using Kiwi TCMS.
 
 *Disclaimer: the information below was obtained via anonymous analytics and
-represents only instances of Kiwi TCMS which had recorded over 1000 events until 01 Dec 2025.
+represents only instances of Kiwi TCMS which had recorded over 1000 events
+between 01 Jan 2025 and 31 Dec 2025 (data updated after publication).
 We've used publicly available data in order to identify these
 organizations. Note that we don't keep track of individuals or IP addresses!*
-
-
-
 
 
 ### Numbers at a glance
 
 * 14+ different versions deployed; most popular is v14.2
-* 37 different countries with active usage
+* 38 different countries with active usage
 * 100+ different organizations with ongoing usage
 * 400-500 users/day; upwards monthly trend
 * ~200k total visits
@@ -34,6 +32,10 @@ organizations. Note that we don't keep track of individuals or IP addresses!*
 ### Argentina
 
 - [Sistema de Información Universitaria]({filename}2025-02-18-siu-argentina+kiwitcms.markdown)
+
+### Australia
+
+- [Hargrave Technologies](https://hargravetechnologies.com) - *Control Systems and Power Electronics Engineering for Aerospace applications*
 
 
 ### Austria
@@ -58,6 +60,7 @@ organizations. Note that we don't keep track of individuals or IP addresses!*
 - [NeoPath](https://neopath.com.br/)
 - [openxsolutions.com.br](https://tms.openxsolutions.com.br/)
 - [Pontotel](https://www.pontotel.com.br/) - *Plataforma de controle de ponto online*
+- [VR Software](https://vrsoft.com.br/) - *We live supermarkets*
 
 
 ### Bulgaria
@@ -79,6 +82,7 @@ organizations. Note that we don't keep track of individuals or IP addresses!*
 ### China
 
 - [InfiMotion](https://www.infimotion.com) - *leader in electric drive unit solutions for electric and hybrid vehicles*
+- [KUANDENG](http://www.kuandeng.com/) - *Motor Vehicle Manufacturing*
 
 
 ### Estonia
@@ -95,6 +99,7 @@ organizations. Note that we don't keep track of individuals or IP addresses!*
 ### Germany
 
 - [CIB Group](https://www.cib.de/) - *Digitalisierung. Automatisierung. Künstliche Intelligenz*
+- [Delta Controls Germany](https://www.deltacontrols.de/) - *Hersteller Gebäudeautomation*
 - [EAS Engineering Automation Systems GmbH](https://www.eas-solutions.de) - *CPQ solution*
 - [Elatec RFID](https://www.elatec-rfid.com/int/) - *Universal Access Control Solutions*
 - [Eventim](https://www.eventim.de/) - *Buy Original Tickets for Concerts, Sports and More*
@@ -184,8 +189,9 @@ organizations. Note that we don't keep track of individuals or IP addresses!*
 ### Poland
 
 - [exa_22](https://www.exa22.com/) - *Mechatronika i systemy IoT*
-- [NetCorner](https://www.netcorner.pl/) - *Innowacyjna platforma e-commerce dla Twojego biznesu*
 - [Fingoweb](https://www.fingoweb.com/) - *Software Development Company*
+- [Inseqr](https://inseqr.pl) - *Krajowy lider rozwiązań klasy OSINT i bezpieczeństwa IT*
+- [NetCorner](https://www.netcorner.pl/) - *Innowacyjna platforma e-commerce dla Twojego biznesu*
 
 
 ### Portugal
@@ -244,6 +250,7 @@ organizations. Note that we don't keep track of individuals or IP addresses!*
 ### USA
 
 - [Accure AI](https://accure.ai/) - *Enterprise Operational AI Hub*
+- [Adaptiva](https://adaptiva.com/) - *The fastest way to patch and manage endpoints at scale*
 - [American Time](http://atsclock.com) - *global manufacturer and distributor of synchronized time clocks and systems*
 - [Analog Devices](https://www.analog.com) - *Mixed-signal and digital signal processing ICs*
 - [City Cheers](http://citycheers.com/) - *The Super App for the Hospitality Industry*
@@ -252,6 +259,7 @@ organizations. Note that we don't keep track of individuals or IP addresses!*
 - [Dynamic Ratings](https://www.dynamicratings.com/) - *Responsive Asset Health Solutions*
 - [embedUR](http://embedur.com) - *Embedded Systems & Edge AI Experts*
 - [Lithero](https://lithero.com/) - *AI Agents for Health & Life Sciences Marketers*
+- [Metafora](https://metafora.net/) - *Transportation and Logistics Consultants*
 - [Mobeats](https://www.mobeats.io)
 - [Red Hawk Technologies](https://www.redhawk-tech.com/) - *Custom Software Development and Services*
 - [Terragrit](https://terragrit.com) - *virtualization engine for physical environments*
