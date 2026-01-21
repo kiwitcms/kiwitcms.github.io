@@ -111,11 +111,20 @@ code {
 	font-size: inherit;
 	border-radius: 2px;
 	border: 1px solid var(--trans-green);
+	overflow: scroll;
+    width: fit-content;
+    max-width: 86vw;
+    display: inline-grid;
+    overflow-wrap: normal!important;
+}
+p > code{
+	margin-bottom:0!important;
 }
 
 pre > code {
     border: none;
-    padding: 0;
+	padding: 0;
+	display:inline;
 }
 
 /* pre > code > span { */
@@ -232,7 +241,7 @@ transform: rotate(90deg);
 }
 
 .ghost-btn {
-	background: transparent;
+	background: rgba(255, 255, 255, 0);
 	border: 2px solid white;
 }
 .ghost-btn:hover {
@@ -254,7 +263,7 @@ header {
 	grid-template-areas: "lead video";
 	align-items: center;
 	column-gap: var(--grid-gap);
-	background-image: linear-gradient(to top, var(--white) 0%, transparent 5%), url("/theme/images/header-pattern.png");
+	background-image: linear-gradient(to top, var(--white) 0%, rgba(255, 255, 255, 0) 5%), url("/theme/images/header-pattern.png");
 	background-size: cover, contain;
 	background-attachment: scroll, fixed;
 	background-repeat: no-repeat;
@@ -396,7 +405,7 @@ header .video a {
 /* S FEATURES */
 
 #features {
-	background-image: linear-gradient(to top, var(--dark-green), var(--dark-green) 50%, transparent 50%, transparent);
+	background-image: linear-gradient(to top, var(--dark-green), var(--dark-green) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
 	padding-top: 0;
 	margin-top: calc(var(--unusable-padding) * -1 - 10px);
 }
@@ -453,6 +462,11 @@ header .video a {
 	grid-template-columns: repeat(4, 1fr);
 	gap: var(--grid-gap);
 	padding: var(--x3-padding) var(--unusable-padding);
+}
+
+#quick-links div > *{
+	float:left;
+	grid-column: 1 / 2;
 }
 
 #quick-links div {
@@ -564,12 +578,18 @@ summary, #plans-modal h3{
 }
 
 /* S PRICING > Details */
-#pricing summary::-webkit-details-marker{
+summary::-webkit-details-marker{
 	display: none;
 }
-#pricing summary::marker{
+summary::marker{
 	display:none;
 }
+::-webkit-details-marker { display:none; }
+
+summary{
+	list-style-image: none;
+}
+
 
 #pricing summary:after {
 	height: 20px;
@@ -998,7 +1018,7 @@ footer .mail {
 body.page section{
     gap: var(--x3-padding);
     padding-top: 150px;
-    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
+    background-image: linear-gradient(to top, var(--white), rgba(255, 255, 255, 0)), url(/theme/images/pattern-v2.png);
     background-size: auto 500px, auto 500px;
     background-position: top right;
     background-repeat: no-repeat;
@@ -1102,8 +1122,8 @@ font-size: 25px;
 #blog-list, #blog-article{
 	gap: var(--x3-padding);
     padding-top: 150px;
-    background-image: linear-gradient(to top, var(--white), transparent), url(/theme/images/pattern-v2.png);
-    background-size: auto 500px, auto 500px;
+    background-image: linear-gradient(to top, var(--white), rgba(255, 255, 255, 0)), url(/theme/images/pattern-v2.png);
+    background-size: 1000px 500px, auto 500px;
     background-position: top right;
     background-repeat: no-repeat;
 }
@@ -1143,17 +1163,18 @@ font-size: 25px;
 }
 #blog-list article.blog-list .content *, #blog-article article.content *{
 	margin-bottom:var(--x1-padding);
+	max-width: 86vw;
 	overflow-wrap: break-word;
 }
 #blog-list article.blog-list .content img, #blog-article article.content img{
 	max-width: 100%;
 }
 #blog-list article.blog-list .content pre, #blog-article article.content pre{
-	white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
-	word-wrap: break-word;
 	font-family: "Source Code Pro", monospace;
+	overflow: scroll;
+    width: fit-content;
+    max-width: 86vw;
+    background: var(--light-gray);
 }
 #blog-list article.blog-list .content a, #blog-article article.content a{
 	overflow-wrap: anywhere;
