@@ -110,6 +110,174 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/01/28/kiwi-tcms-153/" rel="bookmark" title="Permalink to Kiwi TCMS 15.3">
+                <h1 class="top-header">Kiwi TCMS 15.3</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 28 January 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Dear testers, we're happy to announce Kiwi TCMS version 15.3!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which includes updates and improvements,
+database migrations and many new API methods.</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  bad66695a117   732MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-15-2">
+<h2>Changes since Kiwi TCMS 15.2</h2>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update Django from 5.2.9 to 5.2.10</li>
+<li>Update django-simple-captcha from 0.6.2 to 0.6.3</li>
+<li>Update django-simple-history from 3.10.1 to 3.11.0</li>
+<li>Update from 3.10 to 3.10.1</li>
+<li>Update psycopg[binary] from 3.3.1 to 3.3.2</li>
+<li>Update python-gitlab from 7.0.0 to 8.0.0</li>
+<li>Update tzdata from 2025.2 to 2025.3</li>
+<li>Update node_modules/pdfmake from 0.2.20 to 0.3.3</li>
+<li>Models Classification, Product, Priority, Component and Version can now be
+translated in Admin pages (&#64;nichicom-yasutake). Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4193">Issue #4193</a></li>
+<li>Display categories ordered by name. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4166">Issue #4166</a></li>
+<li>Stricter checking for attributes in uploaded files</li>
+<li>Strip newline characters from email subjects to avoid crashes</li>
+</ul>
+</div>
+<div class="section" id="database">
+<h3>Database</h3>
+<ul class="simple">
+<li>Add migration
+<tt class="docutils literal">management.0012_alter_classification_options_alter_component_options_and_more</tt></li>
+<li>Add migration <tt class="docutils literal">testcases.0023_alter_category_ordering</tt></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Add <tt class="docutils literal">Bug.create()</tt> API method</li>
+<li>Add <tt class="docutils literal">Bug.filter_canonical()</tt> API method</li>
+<li>Add <tt class="docutils literal">Bug.get_comments()</tt> API method</li>
+<li>Add <tt class="docutils literal">Bug.add_comment()</tt> API method</li>
+<li>Add <tt class="docutils literal">Bug.add_attachment()</tt> API method</li>
+<li>Add <tt class="docutils literal">Bug.list_attachments()</tt> API method</li>
+<li>Add <tt class="docutils literal">Bug.add_execution()</tt> API method</li>
+<li>Add <tt class="docutils literal">Group.filter()</tt> API method</li>
+<li>Add <tt class="docutils literal">Group.permissions()</tt> API method</li>
+<li>Add <tt class="docutils literal">Group.users()</tt> API method</li>
+<li>Add <tt class="docutils literal">TestExecution.add_attachment()</tt> API method</li>
+<li>Add <tt class="docutils literal">TestExecution.list_attachments()</tt> API method</li>
+<li>Add <tt class="docutils literal">TestExecution.create()</tt> API method</li>
+<li>Add <tt class="docutils literal">TestExecution.add_property()</tt> API method</li>
+<li>Add <tt class="docutils literal">TestRun.list_attachments()</tt> API method</li>
+<li>Add <tt class="docutils literal">TestRun.add_property()</tt> API method</li>
+<li>Add <tt class="docutils literal">TestRun.get_cc()</tt> API method</li>
+<li>Allow <tt class="docutils literal">TestCase.create()</tt> API method to override <tt class="docutils literal">TestCase.create_date</tt></li>
+<li>Allow <tt class="docutils literal">TestPlan.create()</tt> API method to override <tt class="docutils literal">TestPlan.create_date</tt></li>
+<li>Allow super-user to override comment author/submission date for
+<tt class="docutils literal">TestCase.add_comment()</tt> API method</li>
+<li>Allow super-user to override comment author/submission date for
+<tt class="docutils literal">TestExecution.add_comment()</tt> API method</li>
+<li>For <tt class="docutils literal">BugTracker.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">Category.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">Classification.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">Component.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">Group.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">PlanType.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">Priority.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">Tag.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">Template.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">TestCase.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">TestCaseStatus.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">TestExecution.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">TestExecutionStatus.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">TestRun.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li>For <tt class="docutils literal">User.filter()</tt> API method order results by <tt class="docutils literal">id</tt> field</li>
+<li><tt class="docutils literal">TestCase.comments()</tt> API method changes the following fields in its
+response:<ul>
+<li><tt class="docutils literal">site</tt> -&gt; <tt class="docutils literal">site_id</tt></li>
+<li><tt class="docutils literal">user</tt> -&gt; <tt class="docutils literal">user_id</tt></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update actions/upload-artifact from 5 to 6</li>
+<li>Update black from 25.11.0 to 25.12.0</li>
+<li>Update locust from 2.42.6 to 2.43.1</li>
+<li>Update node_modules/brace-expansion from 1.1.11 to 1.1.12</li>
+<li>Update node_modules/webpack from 5.103.0 to 5.104.1</li>
+<li>Update URL to website article</li>
+<li>Remove redundant code snippet in <tt class="docutils literal">TestRun.create()</tt> API method</li>
+<li>Add more assertions for <tt class="docutils literal">TestRun.create()</tt> API test scenario</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-v15-2-mt">
+<h2>Changes since Kiwi TCMS Enterprise v15.2-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v15.3</li>
+<li>Update certbot from 5.2.1 to 5.2.2</li>
+<li>Update django-ses from 4.4.0 to 4.6.0</li>
+<li>Update dj-database-url from 3.0.1 to 3.1.0</li>
+<li>Update kiwitcms-tenants from 4.3.0 to 4.4.1</li>
+<li>Update sentry-sdk[django] from 2.47.0 to 2.50.0</li>
+<li>Update social-auth-app-django from 5.6.0 to 5.7.0</li>
+<li>Update workaround for .map files b/c of newer pdfmake</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version          15.3 (aarch64)          3d15693bb229    28 Jan 2026     749MB
+hub.kiwitcms.eu/kiwitcms/version          15.3 (x86_64)           0718496358e5    28 Jan 2026     732MB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.3-mt (aarch64)       235d645ffdfa    28 Jan 2026     1.02GB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.3-mt (x86_64)        b580a3c04ef3    28 Jan 2026     997MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all news;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2025/12/17/kiwi-tcms-is-going-to-fosdem-2026/" rel="bookmark" title="Permalink to Kiwi TCMS is going to FOSDEM 2026">
                 <h1 class="top-header">Kiwi TCMS is going to FOSDEM 2026</h1>
             </a>
@@ -2297,152 +2465,6 @@ please help us!</p>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
 <li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
 </ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2024/12/04/kiwi-tcms-137/" rel="bookmark" title="Permalink to Kiwi TCMS 13.7">
-                <h1 class="top-header">Kiwi TCMS 13.7</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 04 December 2024
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 13.7!</p>
-<p><strong>IMPORTANT:</strong></p>
-<p>This release includes security related updates, several improvements,
-API changes, a few bug fixes and new translations.</p>
-<p>Recommended
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
-path:</p>
-<pre class="literal-block">
-13.6 -&gt; 13.7
-</pre>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>---</p>
-<blockquote>
-<p>Upstream container images (x86_64):</p>
-<pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  89261439831b    677MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged and multi-arch
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-<div class="section" id="changes-since-kiwi-tcms-13-6">
-<h2>Changes since Kiwi TCMS 13.6</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Update Django from 5.0.9 to 5.0.10, addressing
-one security issue with severity “high” and
-one security issue with severity “moderate” which do not appear to
-affect Kiwi TCMS.</li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update bleach from 6.1.0 to 6.2.0</li>
-<li>Update mysqlclient from 2.2.4 to 2.2.6</li>
-<li>Update pygithub from 2.4.0 to 2.5.0</li>
-<li>Update python-gitlab from 4.13.0 to 5.1.0</li>
-<li>Update uwsgi from 2.0.27 to 2.0.28</li>
-<li>Update node_modules/pdfmake from 0.2.14 to 0.2.15</li>
-<li>Speed-up TestCase filtering on the TestPlan view page</li>
-<li>Speed-up TestExecution filtering on TestRun view page</li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li>Method <tt class="docutils literal">Bug.details()</tt> will now return the additional fields
-<tt class="docutils literal">id</tt>, <tt class="docutils literal">status</tt> and <tt class="docutils literal">url</tt>! References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3748">Issue #3748</a></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Remove internal <tt class="docutils literal">IssueTrackerType.rpc_cache</tt> attribute. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3757">Issue #3757</a></li>
-<li>Update filtering logic for <tt class="docutils literal">Automated=False</tt> on TestPlan view page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3841">Issue #3841</a></li>
-<li>Refresh test execution counter when filtering on TestRun view page</li>
-</ul>
-</div>
-<div class="section" id="refactoring-and-testing">
-<h3>Refactoring and testing</h3>
-<ul class="simple">
-<li>Update action psf/black from 24.8.0 to 24.10.0</li>
-<li>Update action codecov/codecov-action from 4 to 5</li>
-<li>Update selenium from 4.25.0 to 4.27.1</li>
-<li>Update sphinx from 8.1.1 to 8.1.3</li>
-<li>Update node_modules/webpack from 5.95.0 to 5.97.0</li>
-<li>Update fedora from 40 to 41 in /tests/bugzilla</li>
-<li>Update redmine from 5 to 6 in /tests/redmine</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>New <a class="reference external" href="https://crowdin.com/project/kiwitcms/uk#">Ukrainian translation</a>
-(Oleksandr Nemchenko)</li>
-</ul>
-</div>
-</div>
-<div class="section" id="kiwi-tcms-enterprise-v13-7-mt">
-<h2>Kiwi TCMS Enterprise v13.7-mt</h2>
-<ul class="simple">
-<li>Based on Kiwi TCMS v13.7</li>
-<li>Add dependency on <tt class="docutils literal"><span class="pre">dict-hash</span></tt> package</li>
-<li>Update django-ses from 4.2.0 to 4.3.0</li>
-<li>Update dj-database-url from 2.2.0 to 2.3.0</li>
-<li>Update certbot from 2.11.0 to 3.0.1</li>
-<li>Update certbot-dns-* plugins from 2.11.0 to 3.0.1</li>
-<li>Update sentry-sdk from 2.16.0 to 2.19.0</li>
-</ul>
-</div>
-<div class="section" id="private-container-images">
-<h2>Private container images</h2>
-<blockquote>
-<pre class="literal-block">
-hub.kiwitcms.eu/kiwitcms/version            13.7 (aarch64)          33ab4247df54    04 Dec 2024     687MB
-hub.kiwitcms.eu/kiwitcms/version            13.7 (x86_64)           ecf66eb23dda    04 Dec 2024     677MB
-hub.kiwitcms.eu/kiwitcms/enterprise         13.7-mt (x86_64)        62d4a283713b    04 Dec 2024     1.06GB
-hub.kiwitcms.eu/kiwitcms/enterprise         13.7-mt (aarch64)       5e9b96dd3e6f    04 Dec 2024     1.08GB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
-Then follow the
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
-from our documentation.</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all project news;</li>
-<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
-and an awesome open source hacker;</li>
-<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-</div>
-
         </div>
     </article>
 

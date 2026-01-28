@@ -110,6 +110,152 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2024/12/04/kiwi-tcms-137/" rel="bookmark" title="Permalink to Kiwi TCMS 13.7">
+                <h1 class="top-header">Kiwi TCMS 13.7</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 04 December 2024
+            </p>
+        </div>
+
+        <div class="content">
+            <p>We're happy to announce Kiwi TCMS version 13.7!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This release includes security related updates, several improvements,
+API changes, a few bug fixes and new translations.</p>
+<p>Recommended
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">upgrade</a>
+path:</p>
+<pre class="literal-block">
+13.6 -&gt; 13.7
+</pre>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Upstream container images (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  89261439831b    677MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-13-6">
+<h2>Changes since Kiwi TCMS 13.6</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 5.0.9 to 5.0.10, addressing
+one security issue with severity “high” and
+one security issue with severity “moderate” which do not appear to
+affect Kiwi TCMS.</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update bleach from 6.1.0 to 6.2.0</li>
+<li>Update mysqlclient from 2.2.4 to 2.2.6</li>
+<li>Update pygithub from 2.4.0 to 2.5.0</li>
+<li>Update python-gitlab from 4.13.0 to 5.1.0</li>
+<li>Update uwsgi from 2.0.27 to 2.0.28</li>
+<li>Update node_modules/pdfmake from 0.2.14 to 0.2.15</li>
+<li>Speed-up TestCase filtering on the TestPlan view page</li>
+<li>Speed-up TestExecution filtering on TestRun view page</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Method <tt class="docutils literal">Bug.details()</tt> will now return the additional fields
+<tt class="docutils literal">id</tt>, <tt class="docutils literal">status</tt> and <tt class="docutils literal">url</tt>! References
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3748">Issue #3748</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Remove internal <tt class="docutils literal">IssueTrackerType.rpc_cache</tt> attribute. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3757">Issue #3757</a></li>
+<li>Update filtering logic for <tt class="docutils literal">Automated=False</tt> on TestPlan view page. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3841">Issue #3841</a></li>
+<li>Refresh test execution counter when filtering on TestRun view page</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update action psf/black from 24.8.0 to 24.10.0</li>
+<li>Update action codecov/codecov-action from 4 to 5</li>
+<li>Update selenium from 4.25.0 to 4.27.1</li>
+<li>Update sphinx from 8.1.1 to 8.1.3</li>
+<li>Update node_modules/webpack from 5.95.0 to 5.97.0</li>
+<li>Update fedora from 40 to 41 in /tests/bugzilla</li>
+<li>Update redmine from 5 to 6 in /tests/redmine</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>New <a class="reference external" href="https://crowdin.com/project/kiwitcms/uk#">Ukrainian translation</a>
+(Oleksandr Nemchenko)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-tcms-enterprise-v13-7-mt">
+<h2>Kiwi TCMS Enterprise v13.7-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v13.7</li>
+<li>Add dependency on <tt class="docutils literal"><span class="pre">dict-hash</span></tt> package</li>
+<li>Update django-ses from 4.2.0 to 4.3.0</li>
+<li>Update dj-database-url from 2.2.0 to 2.3.0</li>
+<li>Update certbot from 2.11.0 to 3.0.1</li>
+<li>Update certbot-dns-* plugins from 2.11.0 to 3.0.1</li>
+<li>Update sentry-sdk from 2.16.0 to 2.19.0</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            13.7 (aarch64)          33ab4247df54    04 Dec 2024     687MB
+hub.kiwitcms.eu/kiwitcms/version            13.7 (x86_64)           ecf66eb23dda    04 Dec 2024     677MB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.7-mt (x86_64)        62d4a283713b    04 Dec 2024     1.06GB
+hub.kiwitcms.eu/kiwitcms/enterprise         13.7-mt (aarch64)       5e9b96dd3e6f    04 Dec 2024     1.08GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p><a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">Backup</a> first!
+Then follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all project news;</li>
+<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
+and an awesome open source hacker;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2024/11/05/important-changes-to-user-accounts-on-tenantkiwitcmsorg/" rel="bookmark" title="Permalink to Important changes to user accounts on *.tenant.kiwitcms.org">
                 <h1 class="top-header">Important changes to user accounts on *.tenant.kiwitcms.org</h1>
             </a>
@@ -2268,75 +2414,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2023/08/16/the-university-of-utah-uses-kiwi-tcms/" rel="bookmark" title="Permalink to The University of Utah uses Kiwi TCMS">
-                <h1 class="top-header">The University of Utah uses Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 16 August 2023
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="&quot;University of Utah + Kiwi TCMS logos&quot;" src="/images/customers/university_of_utah+kiwitcms.png" title="University of Utah + Kiwi TCMS logos"></p>
-<p>The <a href="https://www.utah.edu/">University of Utah</a> is a public research university
-in Salt Lake City, USA. It is the flagship institution of the
-Utah System of Higher Education and was established in 1850.</p>
-<p>The University of Utah's
-<a href="https://www.cs.utah.edu/">School of Computing</a>, founded as the Computer Science Department
-in 1965, has a long and distinguished record of high impact research.
-The university has provided large, automated testbeds since around the year 2000,
-funded by the National Science Foundation.</p>
-<p>The <a href="https://www.flux.utah.edu/">Flux Research Group</a> conducts research in operating systems,
-networking, security, and virtualization. The group consists of three faculty and over
-two dozen research staff, graduate students, and undergrads.</p>
-<p><a href="https://www.powderwireless.net/">POWDER</a>
-(the Platform for Open Wireless Data-driven Experimental Research) is flexible infrastructure
-enabling a wide range of software-defined experiments on the future of wireless networks.
-POWDER supports software-programmable experimentation on 5G and beyond, massive MIMO, ORAN,
-spectrum sharing and CBRS, RF monitoring,
-and anything else that can be supported on software-defined radios.</p>
-<p>In the words of David M. Johnson, research staff:</p>
-<blockquote>
-<p>The addition of Kiwi TCMS to our POWDER mobile wireless testbed helps to support
-the complex multi-system, end-to-end functional test and integration scenarios
-we see in the 5G/O-RAN/beyond mobile wireless space.</p>
-<p>We use Kiwi TCMS as part of an on-demand environment that POWDER provides to users
-that can help them automate testing using a workflow approach,
-from CI-triggered orchestration from scratch in our cloud-like environment,
-through resource configuration and running test suites,
-to finally collecting results into private instances of Kiwi TCMS.</p>
-<p>We use both the Stackstorm and Dagster workflow engines to execute our test and integration workflows.
-The <a href="https://gitlab.flux.utah.edu/powder-workflows/stackstorm-kiwitcms">stackstorm-kiwitcms</a>
-library is a simple Stackstorm "integration pack"
-(Python source code in this case) that invokes and re-exports much of the core Kiwi TCMS XML-RPC API
-(with some minor sugar) into Stackstorm, so that each API function is exposed as a Stackstorm action
-(the fundamental unit of its workflows). This means that the workflows can orchestrate resources
-into test scenarios; configure the resources; create or instantiate Kiwi TCMS test runs/executions/metadata;
-execute tests; and push test results/status into Kiwi TCMS records, upload attachments, etc, for persistence.</p>
-<p>We use <a href="https://gitlab.flux.utah.edu/powderrenewpublic/kiwi">a fork</a> of Kiwi TCMS right now
-so that we could upload attachments to test runs via the API.
-That was a trivial change which
-<a href="https://github.com/kiwitcms/Kiwi/commit/9344e2873a48da477ac565362689e4851c34214e">made its way upstream</a>
-as part of Kiwi TCMS version 12.1.</p>
-</blockquote>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and help us grow</li>
-</ul>
         </div>
     </article>
 
