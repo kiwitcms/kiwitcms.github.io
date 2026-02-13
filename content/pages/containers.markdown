@@ -1,24 +1,25 @@
-Title: Container information
+Title: Container images
 url: containers/
 save_as: containers/index.html
 add_section: True
 
 
-Public container
-================
+Public container image
+======================
 
-The official upstream Kiwi TCMS container image is publicly available
-and can be downloaded via the `docker pull pub.kiwitcms.eu/kiwitcms/kiwi`
-command! See
-[Running Kiwi TCMS as a Docker container](https://kiwitcms.readthedocs.io/en/latest/installing_docker.html)
+The official upstream Kiwi TCMS container image, aka *Community Edition* is publicly available
+and can be downloaded via the
+<br>
+`docker pull pub.kiwitcms.eu/kiwitcms/kiwi` command! See
+[Running Kiwi TCMS as a container](https://kiwitcms.readthedocs.io/en/latest/installing_docker.html)
 to get started!
 
 
-Private containers for subscribers
-==================================
+Private container images for subscribers
+========================================
 
-Subscribers enjoy the benefit of having read-only access to tagged versions of the
-upstream Kiwi TCMS container images as well as access to tagged versions of
+Subscribers enjoy the benefit of having read-only access to tagged versions of
+Kiwi TCMS container images as well as access to tagged versions of
 Kiwi TCMS Enterprise container images! These images are available as:
 
 - `hub.kiwitcms.eu/kiwitcms/version`
