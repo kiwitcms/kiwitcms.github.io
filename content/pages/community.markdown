@@ -9,8 +9,7 @@ add_section: True
 - **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
 - **Twitter** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
 - **Blog** tag ["community"](/blog/tags/community/)
-- **Email** `info-at-kiwitcms.org` (no [support]({filename}support.markdown) requests,
-  see [subscription guidelines]({filename}../2021-11-01-how-many-subscriptions.markdown))
+- **Email** `info-at-kiwitcms.org` ([support]({filename}support.markdown) requests will be ignored)
 
 # Contributing
 

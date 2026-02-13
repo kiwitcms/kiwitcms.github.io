@@ -17,8 +17,8 @@ Public Tenant users or anyone without an active subscription:
 Use the channels above instead,
 where the whole community can help you and benefit from the solutions provided.**
 
-*If community support is insufficient for your situation, please check the
-[Kiwi TCMS subscription guidelines]({filename}../2021-11-01-how-many-subscriptions.markdown)!*
+*If community support is insufficient for you, please check the
+[available subscriptions](/#subscriptions)!*
 
 Customers with an active subscription:
 
