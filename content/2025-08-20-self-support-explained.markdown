@@ -9,6 +9,21 @@ and how it brings a bit more value beyond the Kiwi TCMS application itself.
 You can read about the details below.
 
 
+What is a Kiwi TCMS subscription
+--------------------------------
+
+- An active subscription is a flat rate! It is charged automatically each billing cycle
+- You may cancel at any time if you are not happy with the service provided
+- Subscriptions remain active until the period they have been paid for
+
+- A subscription provides access to software packages, extra services and certain guarantees behind the components which constitute Kiwi TCMS
+- Subscriptions cover everything published under <https://github.com/kiwitcms/>
+- Subscriptions include limited coverage for third-party open source components
+
+> We recommend that customers have an active subscription for each container running Kiwi TCMS!
+
+
+
 
 What is Self Support by Kiwi TCMS
 ---------------------------------
