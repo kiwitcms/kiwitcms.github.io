@@ -101,12 +101,6 @@ the same information however if a record cannot be restored via the Kiwi TCMS we
 Due to technical limitations we cannot restore individual records from a *Private Tenant*.
 
 
-**Data access via web & API:** keeping in mind that a *Private Tenant* namespace is allocated
-on a cluster with hundreds of others your only access to data is via web and API.
-Due to technical and security limitations we cannot give you access to the underlying database nor
-the raw backup files. You are free to export your data as frequently as you wish though!
-
-
 **Dedicated technical support:** as a *Private Tenant* customer you receive full technical support
 from the Kiwi TCMS team spanning all components related to the Kiwi TCMS application. Working hours
 and response times are listed on our main page!
