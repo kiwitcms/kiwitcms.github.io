@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Private Tenant Subscription Explained</title>
+        <title>Kiwi TCMS - Private Tenant Extras Subscription Explained</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-Frame-Options" content="deny">
         <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
@@ -19,7 +19,7 @@
         <meta name="author" content="Kiwi TCMS Team">
 
         <meta name="twitter:site" content="@KiwiTCMS">
-        <meta name="twitter:title" content="Private Tenant Subscription Explained">
+        <meta name="twitter:title" content="Private Tenant Extras Subscription Explained">
             <meta name="twitter:description" content="all the details you need to know">
         <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
@@ -27,9 +27,9 @@
         <meta property="og:site_name" content="Kiwi TCMS">
         <meta property="og:type" content="article" />
             <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
-        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/" />
-        <meta property="og:title" content="Private Tenant Subscription Explained" />
-        <meta property="article:published_time" content="2025-08-20 13:00:00+03:00">
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/" />
+        <meta property="og:title" content="Private Tenant Extras Subscription Explained" />
+        <meta property="article:published_time" content="2026-02-17 10:35:00+02:00">
             <meta property="og:description" content="all the details you need to know">
 
             <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
@@ -122,82 +122,59 @@
 
         <!-- content -->
     <section id="blog-article">
-        <h1 class="top-header">Private Tenant Subscription Explained</h1>
+        <h1 class="top-header">Private Tenant Extras Subscription Explained</h1>
         <h2 class="top-subheader">all the details you need to know</h2>
 
         <p class="post-meta">
             Posted by
                 <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-            on Wed 20 August 2025
+            on Tue 17 February 2026
         </p>
 
         <article class="content">
-            <p>Hello testers, this page explains what the <em>Private Tenant</em> subscription is and
-how it brings more value beyond the Kiwi TCMS application itself.
+            <p>This page explains what <em>Private Tenant Extras</em> is and how it brings
+more value to your existing Kiwi TCMS subscription.
 Please read about the details below.</p>
-<h2>What is Private Tenant by Kiwi TCMS</h2>
-<p>This is our most popular subscription tier which combines SaaS hosting and
-additional support services. It is more about <em>ease of use</em> allowing your
-QA team to focus on more testing rather than specific software features.</p>
+<h2>What is Private Tenant Extras by Kiwi TCMS</h2>
+<p>This is an optional subscription tier which combines our existing
+<a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/">Private Tenant SaaS hosting</a>
+with access to the underlying data in its raw format!</p>
+<p>IMPORTANT: any <em>Private Tenant</em> subscription with unit count &gt; 1
+entitles you to this <em>Extras</em> add-on! Please contant
+<a href="/support/">support</a> for setup!</p>
 <h2>Who is this subscription for</h2>
-<p><em>Private Tenant</em> is suitable for medium sized teams which consider
-their Kiwi TCMS instance to be an important piece of infrastructure but
-not necessarily mission critical.
-These are organizations with less than 100 testers
-which would like to focus their limited resources towards their own
-products and are happy to consume 3rd party software as a service.
-Most typically these are start-up companies and medium sized businesses.</p>
+<p><em>Private Tenant Extras</em> is suitable for teams using the SaaS version of
+Kiwi TCMS which require access to their underlying data in machine readable
+format!</p>
 <h2>What do you get</h2>
-<p>Everything from lower tier subscription plans!</p>
-<p>Most notably you get access to all versions of community releases and a
-dedicated SaaS namespace as your main Kiwi TCMS instance plus extra
-product features and technical support.</p>
+<p>Everything from lower tier subscription plans plus access to a database
+and file exports in case you would like to keep your own backup copy or
+provide in-house integration with other tools.</p>
 <h2>What do all of the individual items mean</h2>
-<p><strong>1x SaaS hosting:</strong> you will receive the opportunity to create your own namespace
-under the <code>tenant.kiwitcms.org</code> domain name, for example <code>https://acme-inc.tenant.kiwitcms.org</code>.</p>
-<p>IMPORTANT: A <em>Private Tenant</em> subscription entitles you to a single namespace and the email associated
-with the purchase is referred to as <em>tenant owner</em>.
-If you need more tenants you should purchase additional subscriptions under different email addresses!</p>
-<p><strong>Unlimited users:</strong> means exactly that - you may assign an arbitrary number of users to have access
-to the information kept under your tenant. With <em>Private Tenant</em> subscription there are no per-seat
-fees - it is a flat rate price!</p>
-<p><strong>Control of authorized users:</strong> means that you can control who has access to your data and adjust
-their permissions level when necessary. You can have your QA team and your partners collaborate in a
-single Kiwi TCMS tenant if you decide to do so.</p>
-<p>With a <em>Private Tenant</em> subscription user accounts are actually kept under <code>public.tenant.kiwitcms.org</code>,
-which is also referred to as <em>the main tenant</em> or <em>the public tenant</em> while access control is granted on
-a per-tenant basis via the web interface by the tenant owner.</p>
-<p>NOTICE: the name "public tenant" is a misnomer, which comes from one of the underlying programming
-libraries used inside Kiwi TCMS. In reality no data is publicly visible, including user accounts.</p>
-<p><strong>No User account admin:</strong> a stand-alone installation of Kiwi TCMS allows the first registered account,
-named super-user, to have access to all others. This isn't the case with a <em>Private Tenant</em> subscription.
-You may invite/authorize users and groups for your own tenant and manage access permissions however
-you cannot create, remove or disable user accounts. You cannot view the list of all other accounts
-which exist in the database.</p>
-<p><strong>Extra functionality:</strong> a <em>Private Tenant</em> subscription is actually built on top of a
-Kiwi TCMS Enterprise container image which means some extra features and add-ons are available
-to you as part of this subscription. Whenever possible add-on features are also accessible to
-<em>Private Tenant</em> subscribers. A notable exception are different login methods which cannot be
-enabled nor configured on a per-tenant basis!</p>
-<p><strong>Always the latest version:</strong> a SaaS tenant is always the latest version and is automatically
-upgraded by the Kiwi TCMS team. While we try our best not to introduce bugs and backwards incompatible
-changes it is possible that test automation scripts and/or 3rd party integration code may break
-sometimes.</p>
-<p>IMPORTANT: With a <em>Private Tenant</em> subscription the responsibility of testing all of your integrations against
-the latest version of Kiwi TCMS falls onto the customer.</p>
-<p><strong>Backup &amp; disaster recovery:</strong> the Kiwi TCMS team takes care to backup our SaaS cluster regularly
-in case a catastrophic failure occurs - this is designed for disaster recovery purposes.</p>
-<p>While the Kiwi TCMS application itself keeps track of changes and removals of certain objects it may
-not always be possible to restore a deleted entry. You may be able to create new records with
-the same information however if a record cannot be restored via the Kiwi TCMS web interface we cannot help you.
-Due to technical limitations we cannot restore individual records from a <em>Private Tenant</em>.</p>
-<p><strong>Dedicated technical support:</strong> as a <em>Private Tenant</em> customer you receive full technical support
-from the Kiwi TCMS team spanning all components related to the Kiwi TCMS application. Working hours
-and response times are listed on our main page!</p>
+<p><strong>Raw SQL database export:</strong> you will receive a database export in SQL format,
+suitable for the Postgres database engine. It includes all tables which constitute your
+own namespace under the <code>*.tenant.kiwitcms.org</code> domain name. This also includes
+information about user accounts authorized to access your tenant!</p>
+<p>IMPORTANT: due to technical and security limitations we cannot give you direct access
+to the underlying database cluster in real-time!</p>
+<p><strong>File uploads included:</strong> means exactly that - all attachments uploaded to your
+private tenant will be included as part of this subscription!</p>
+<p><strong>Encrypted access:</strong> all data we export is stored encrypted and may be accessed
+using the popular open source tool <a href="https://restic.net/">restic</a>.
+We will provide you with read-only level access and an unique public/private keypair!</p>
+<p>IMPORTANT:</p>
+<ul>
+<li>Export frequency: 1/day (max 3/day)</li>
+<li>Exports on disk: last 3 days</li>
+<li>Retention period: 7 days</li>
+</ul>
+<p><strong>Storage region of your choice:</strong> means that we can publish to a geographic region
+and data center of your choice. Exact locations are subject to availability.</p>
+<p>NOTE: At the time of writing our preferred storage backend is
+<a href="https://docs.aws.amazon.com/general/latest/gr/s3.html">Amazon S3</a>.</p>
 <p>Happy Testing!</p>
 <hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
+<p>If you like what we're doing and how Kiwi TCMS please help us!</p>
 <ul>
 <li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
@@ -218,8 +195,8 @@ please help us!</p>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/';
-                this.page.identifier = 'blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/';
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/';
             };
             (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');

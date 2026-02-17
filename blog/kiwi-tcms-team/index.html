@@ -110,6 +110,71 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/" rel="bookmark" title="Permalink to Private Tenant Extras Subscription Explained">
+                <h1 class="top-header">Private Tenant Extras Subscription Explained</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 17 February 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p>This page explains what <em>Private Tenant Extras</em> is and how it brings
+more value to your existing Kiwi TCMS subscription.
+Please read about the details below.</p>
+<h2>What is Private Tenant Extras by Kiwi TCMS</h2>
+<p>This is an optional subscription tier which combines our existing
+<a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/">Private Tenant SaaS hosting</a>
+with access to the underlying data in its raw format!</p>
+<p>IMPORTANT: any <em>Private Tenant</em> subscription with unit count &gt; 1
+entitles you to this <em>Extras</em> add-on! Please contant
+<a href="/support/">support</a> for setup!</p>
+<h2>Who is this subscription for</h2>
+<p><em>Private Tenant Extras</em> is suitable for teams using the SaaS version of
+Kiwi TCMS which require access to their underlying data in machine readable
+format!</p>
+<h2>What do you get</h2>
+<p>Everything from lower tier subscription plans plus access to a database
+and file exports in case you would like to keep your own backup copy or
+provide in-house integration with other tools.</p>
+<h2>What do all of the individual items mean</h2>
+<p><strong>Raw SQL database export:</strong> you will receive a database export in SQL format,
+suitable for the Postgres database engine. It includes all tables which constitute your
+own namespace under the <code>*.tenant.kiwitcms.org</code> domain name. This also includes
+information about user accounts authorized to access your tenant!</p>
+<p>IMPORTANT: due to technical and security limitations we cannot give you direct access
+to the underlying database cluster in real-time!</p>
+<p><strong>File uploads included:</strong> means exactly that - all attachments uploaded to your
+private tenant will be included as part of this subscription!</p>
+<p><strong>Encrypted access:</strong> all data we export is stored encrypted and may be accessed
+using the popular open source tool <a href="https://restic.net/">restic</a>.
+We will provide you with read-only level access and an unique public/private keypair!</p>
+<p>IMPORTANT:</p>
+<ul>
+<li>Export frequency: 1/day (max 3/day)</li>
+<li>Exports on disk: last 3 days</li>
+<li>Retention period: 7 days</li>
+</ul>
+<p><strong>Storage region of your choice:</strong> means that we can publish to a geographic region
+and data center of your choice. Exact locations are subject to availability.</p>
+<p>NOTE: At the time of writing our preferred storage backend is
+<a href="https://docs.aws.amazon.com/general/latest/gr/s3.html">Amazon S3</a>.</p>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/01/28/kiwi-tcms-153/" rel="bookmark" title="Permalink to Kiwi TCMS 15.3">
                 <h1 class="top-header">Kiwi TCMS 15.3</h1>
             </a>
@@ -1531,10 +1596,6 @@ in case a catastrophic failure occurs - this is designed for disaster recovery p
 not always be possible to restore a deleted entry. You may be able to create new records with
 the same information however if a record cannot be restored via the Kiwi TCMS web interface we cannot help you.
 Due to technical limitations we cannot restore individual records from a <em>Private Tenant</em>.</p>
-<p><strong>Data access via web &amp; API:</strong> keeping in mind that a <em>Private Tenant</em> namespace is allocated
-on a cluster with hundreds of others your only access to data is via web and API.
-Due to technical and security limitations we cannot give you access to the underlying database nor
-the raw backup files. You are free to export your data as frequently as you wish though!</p>
 <p><strong>Dedicated technical support:</strong> as a <em>Private Tenant</em> customer you receive full technical support
 from the Kiwi TCMS team spanning all components related to the Kiwi TCMS application. Working hours
 and response times are listed on our main page!</p>
@@ -2449,38 +2510,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2024/12/11/major-outage-for-kiwi-tcms/" rel="bookmark" title="Permalink to Major outage for Kiwi TCMS">
-                <h1 class="top-header">Major outage for Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 11 December 2024
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Hello testers,
-in the spirit of transparency we'd like to inform everyone that
-on Dec 11th 2024 between 07:20-09:30 UTC Kiwi TCMS suffered a major outage!</p>
-<p>The Kiwi TCMS web application was up and running, however the database behind
-it had stopped accepting requests resulting in 500 Internal Server Error page visible
-to everyone. A little over 1000 requests (both manual and via API) were affected!</p>
-<p>As of this time service has been restored and our team is taking corrective actions.
-So far it doesn't look like that there was loss of historical data.</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
-</ul>
         </div>
     </article>
 
