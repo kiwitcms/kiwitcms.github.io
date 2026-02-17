@@ -30,8 +30,8 @@ What is Self Support by Kiwi TCMS
 
 This is our lowest-tier of support services, where the majority of the work
 falls onto the customer to host and run the Kiwi TCMS application.
-It is an entry-level subscription which provides the basis for
-all other subscriptions.
+It is an entry-level subscription which begins addressing some of the
+risks associated with running Kiwi TCMS completely unsupported.
 
 
 Who is this subscription for
