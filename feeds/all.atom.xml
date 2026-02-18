@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-02-17T10:35:00+02:00</updated><entry><title>Private Tenant Extras Subscription Explained</title><link href="/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/" rel="alternate"/><published>2026-02-17T10:35:00+02:00</published><updated>2026-02-17T10:35:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-02-17:/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/</id><summary type="html">&lt;p&gt;This page explains what &lt;em&gt;Private Tenant Extras&lt;/em&gt; is and how it brings
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-02-18T10:20:00+02:00</updated><entry><title>Community Edition Explained</title><link href="/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/" rel="alternate"/><published>2026-02-18T10:20:00+02:00</published><updated>2026-02-18T10:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-02-18:/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/</id><summary type="html">&lt;p&gt;This page explains what Kiwi TCMS &lt;em&gt;Community Edition&lt;/em&gt; is,
+how it ships and what risks are associated with it.
+Please read about the details below.&lt;/p&gt;
+&lt;h2&gt;What is Kiwi TCMS Community Edition&lt;/h2&gt;
+&lt;p&gt;This is the official version of the Kiwi TCMS application as produced by
+our own team with the help …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This page explains what Kiwi TCMS &lt;em&gt;Community Edition&lt;/em&gt; is,
+how it ships and what risks are associated with it.
+Please read about the details below.&lt;/p&gt;
+&lt;h2&gt;What is Kiwi TCMS Community Edition&lt;/h2&gt;
+&lt;p&gt;This is the official version of the Kiwi TCMS application as produced by
+our own team with the help of many contributors. It may also be
+referred to &lt;em&gt;upstream&lt;/em&gt; or &lt;em&gt;the community edition&lt;/em&gt; version and comes
+packaged as a container image which is publicly available and can be downloaded via the
+&lt;code&gt;docker pull pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt; command!&lt;/p&gt;
+&lt;h2&gt;Who is this for&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Community Edition&lt;/em&gt; is suitable for developers, teams and organizations which
+are happy to run Kiwi TCMS without any warranty and safeguards for development,
+testing and even production purposes!&lt;/p&gt;
+&lt;h2&gt;What do you get&lt;/h2&gt;
+&lt;p&gt;You get access the publicly available container image; public documentation
+and source code but not much else!&lt;/p&gt;
+&lt;h2&gt;What do all of the individual items mean&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Upstream container image:&lt;/strong&gt; Kiwi TCMS is packaged as a single
+&lt;a href="/containers/"&gt;container image&lt;/a&gt;. See
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html"&gt;Running Kiwi TCMS as a container&lt;/a&gt;
+to get started!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Only x86_64 build:&lt;/strong&gt; the &lt;em&gt;community edition&lt;/em&gt; container is built on Linux,
+suitable for Intel/AMD 64bit processors only.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No version tags:&lt;/strong&gt; the &lt;em&gt;community edition&lt;/em&gt; container is always the &lt;code&gt;latest&lt;/code&gt; version!
+There are no other versions available!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GPL-2.0 license:&lt;/strong&gt; Kiwi TCMS is an open source software, with very long history,
+with its primary core licensed under the GNU GPL-2.0 license!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No warranty:&lt;/strong&gt; the &lt;em&gt;community edition&lt;/em&gt; version of Kiwi TCMS
+is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+&lt;a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html"&gt;GNU General Public License&lt;/a&gt;
+for more details.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;EthicalAds:&lt;/strong&gt; the &lt;em&gt;community edition&lt;/em&gt; version of Kiwi TCMS comes with built-in
+advertisement from &lt;a href="https://www.ethicalads.io/"&gt;EthicalAds&lt;/a&gt; rewards from which are
+paid out to &lt;a href="https://opencollective.com/kiwitcms/transactions"&gt;opencollective.com/kiwitcms&lt;/a&gt;
+for transparency.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;You assume all risk:&lt;/strong&gt; you must understand and accept that open source comes with associated risks.
+To name just a few: our team disappears and stops development;
+security issues stay unresolved; code slowly becomes outdated &amp;amp; may incur technical debt in the case
+of one-off patches! All of these have
+&lt;a href="/blog/tags/roadmap/"&gt;happened in the past&lt;/a&gt; with the predecessor of what is now Kiwi TCMS.&lt;/p&gt;
+&lt;p&gt;There is &lt;strong&gt;no charge&lt;/strong&gt; but please understand that software isn't &lt;em&gt;zero cost&lt;/em&gt;!
+You pay for it indirectly with time and effort invested in engineering, operations,
+maintenance and resolving any issues which may arise from the use of said software,
+regardless of whether it is open source or not!&lt;/p&gt;
+&lt;p&gt;IMPORTANT: open source and Kiwi TCMS by extension, provide you with more options
+when it comes to mitigating risks and cost compared to proprietary software.
+However the easiest way to secure the future of Kiwi TCMS is to
+&lt;a href="/#subscriptions"&gt;become a customer&lt;/a&gt; and help us sustain development!&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/></entry><entry><title>Private Tenant Extras Subscription Explained</title><link href="/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/" rel="alternate"/><published>2026-02-17T10:35:00+02:00</published><updated>2026-02-17T10:35:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-02-17:/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/</id><summary type="html">&lt;p&gt;This page explains what &lt;em&gt;Private Tenant Extras&lt;/em&gt; is and how it brings
 more value to your existing Kiwi TCMS subscription.
 Please read about the details below.&lt;/p&gt;
 &lt;h2&gt;What is Private Tenant Extras by Kiwi TCMS&lt;/h2&gt;
@@ -1423,8 +1487,8 @@ You can read about the details below.&lt;/p&gt;
 &lt;h2&gt;What is Self Support by Kiwi TCMS&lt;/h2&gt;
 &lt;p&gt;This is our lowest-tier of support services, where the majority of the work
 falls onto the customer to host and run the Kiwi TCMS application.
-It is an entry-level subscription which provides the basis for
-all other subscriptions.&lt;/p&gt;
+It is an entry-level subscription which begins addressing some of the
+risks associated with running Kiwi TCMS completely unsupported.&lt;/p&gt;
 &lt;h2&gt;Who is this subscription for&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Self Support&lt;/em&gt; is suitable for very small teams and individual engineers
 where their Kiwi TCMS instance is not a mission critical piece of infrastructure -
@@ -10664,24 +10728,4 @@ inspire and educate their communities which is exactly what the
 Checkout our &lt;a href="/blog/tags/community/"&gt;community blog posts&lt;/a&gt; for more information!&lt;/p&gt;
 &lt;p&gt;This program will give us access to cool new features
 on the GitHub platform and also let us showcase what we do before a larger audience!&lt;/p&gt;
-&lt;p&gt;Thank you for helping us and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS is a finalist in the 2020 .eu Web Awards</title><link href="/blog/kiwi-tcms-team/2020/09/01/kiwi-tcms-is-a-finalist-in-the-2020-eu-web-awards/" rel="alternate"/><published>2020-09-01T13:50:00+03:00</published><updated>2020-09-01T13:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-09-01:/blog/kiwi-tcms-team/2020/09/01/kiwi-tcms-is-a-finalist-in-the-2020-eu-web-awards/</id><summary type="html">&lt;p&gt;&lt;img
-    style="float: none; margin-left:0"
-    src="/images/eu_web_awards_2020_finalist.png"
-    alt="Click here to vote for Kiwi TCMS"&gt;&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS is happy to announce that our website &lt;a href="https://kiwitcms.eu"&gt;https://kiwitcms.eu&lt;/a&gt; is a finalist
-in the &lt;a href="https://eurid.eu/en/news/2020-wa-finalists/"&gt;2020 .eu Web Awards&lt;/a&gt;
-in the &lt;em&gt;Leaders&lt;/em&gt; category! Big Thank You to everyone who voted for us!&lt;/p&gt;
-&lt;p&gt;Our team is also very happy that we are not the only open source finalist.
-Congratulations …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img
-    style="float: none; margin-left:0"
-    src="/images/eu_web_awards_2020_finalist.png"
-    alt="Click here to vote for Kiwi TCMS"&gt;&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS is happy to announce that our website &lt;a href="https://kiwitcms.eu"&gt;https://kiwitcms.eu&lt;/a&gt; is a finalist
-in the &lt;a href="https://eurid.eu/en/news/2020-wa-finalists/"&gt;2020 .eu Web Awards&lt;/a&gt;
-in the &lt;em&gt;Leaders&lt;/em&gt; category! Big Thank You to everyone who voted for us!&lt;/p&gt;
-&lt;p&gt;Our team is also very happy that we are not the only open source finalist.
-Congratulations to the &lt;em&gt;OpenScan&lt;/em&gt; project and their community!&lt;/p&gt;
-&lt;p&gt;We are still committed to keeping
-&lt;a href="/blog/kiwi-tcms-team/2020/04/09/please-vote-for-kiwi-tcms-in-2020-eu-web-awards/"&gt;our earlier promise&lt;/a&gt;
-and use the award to represent the larger open source community! The decision
-is now in the hands of the jury. Wish us good luck!&lt;/p&gt;</content><category term="misc"/><category term="community"/></entry></feed>
+&lt;p&gt;Thank you for helping us and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/></entry></feed>
