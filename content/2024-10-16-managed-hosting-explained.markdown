@@ -140,6 +140,13 @@ disaster recovery copy and/or to provision staging Kiwi TCMS instances with prod
 data. Our team is open to further collaboration in this area!
 
 
+**Access to monitoring tools:** as part of *Managed Hosting* subscription we'll grant you
+access to the same tools we use to monitor your instance. At the time of writing our
+platform of choice is Datadog.
+This will allow your DevOps team to scrutinize how well we are doing and allow you the
+opportunity to give us valuable feedback with respect to how we operate your instance.
+
+
 **Extended support:** as part of *Managed Hosting* subscription you get more support coverage,
 *07-22 UTC/Mon-Sun*, this is 3 hours extra and coverage over the weekends
 plus a *video conference* option when necessary in order to resolve
@@ -158,22 +165,8 @@ e.g. Europe, US, Asia, for customers with a global workforce and high performanc
 Requires that you adjust the quantity of items on the subscription!
 
 
-**Access to monitoring tools:** we're exploring how to securely provide access
-for each customer to our existing monitoring tools and/or implement new ones where needed.
-This will allow your DevOps team to scrutinize how well we are doing and
-provide us with valuable feedback. Let us know what you would be interested to have access to!
-
-
-
 Long-term plans
 ---------------
-
-**Hosting on Red Hat Enterprise Linux:** in some cases we are running containers directly
-onto a bare-metal or virtualized machine. We are exploring the possibility of using
-Red Hat Enterprise Linux throughout the entire hosting stack and tying this with
-Red Hat's existing management infrastructure without adding extra charges towards
-our customers.
-
 
 **Red Hat Enterprise Linux package upgrades:** will apply to both host OS (where applicable)
 and the kiwitcms/enterprise container application which is already built on top of
