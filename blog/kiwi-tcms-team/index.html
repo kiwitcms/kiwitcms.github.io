@@ -110,6 +110,125 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/03/17/kiwi-tcms-154/" rel="bookmark" title="Permalink to Kiwi TCMS 15.4">
+                <h1 class="top-header">Kiwi TCMS 15.4</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 17 March 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Dear testers, we're happy to announce Kiwi TCMS version 15.4!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which includes security related updates,
+dependency updates and new translations.</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  ae3ae4a25d24   729MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-15-3">
+<h2>Changes since Kiwi TCMS 15.3</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update Django from 5.2.10 to 5.2.12</li>
+<li>Update node_modules/pdfmake from 0.3.3 to 0.3.6</li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update django-guardian from 3.2.0 to 3.3.0</li>
+<li>Update django-tree-queries from 0.23.0 to 0.23.1</li>
+<li>Update markdown from 3.10.1 to 3.10.2</li>
+<li>Update mysqlclient from 2.2.7 to 2.2.8</li>
+<li>Update psycopg[binary] from 3.3.2 to 3.3.3</li>
+<li>Update python-gitlab from 8.0.0 to 8.1.0</li>
+<li>Update node_modules/webpack from 5.104.1 to 5.105.4</li>
+<li>Update node_modules/webpack-cli from 6.0.1 to 7.0.1</li>
+<li>Update transient node_modules/ dependencies</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update actions/upload-artifact from 6 to 7</li>
+<li>Update locust from 2.43.1 to 2.43.3</li>
+<li>Update pylint-django from 2.6.1 to 2.7.0</li>
+<li>Pin setuptools&lt;82 to workaround pkg_resources API deprecation</li>
+<li>Pin pylint to 3.3.9 to workaround false positive errors</li>
+<li>Adjust code for newer pylint</li>
+<li>Cancel CI jobs when new ones are in queue</li>
+<li>Standardize CI jobs on Ubuntu 24.04</li>
+<li>Remove CI jobs against site-packages</li>
+</ul>
+</div>
+<div class="section" id="translations">
+<h3>Translations</h3>
+<ul class="simple">
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#">French translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/id#">Indonesian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#">Portuguese, Brazilian translation</a></li>
+<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/es-VE#">Spanish, Venezuela translation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-v15-3-mt">
+<h2>Changes since Kiwi TCMS Enterprise v15.3-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v15.4</li>
+<li>Update certbot from 5.2.2 to 5.4.0</li>
+<li>Update django-ses from 4.6.0 to 4.7.2</li>
+<li>Update dj-database-url from 3.1.0 to 3.1.2</li>
+<li>Update sentry-sdk[django] from 2.50.0 to 2.54.0</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version          15.4 (aarch64)          9e55b77392d5    17 Mar 2026     747MB
+hub.kiwitcms.eu/kiwitcms/version          15.4 (x86_64)           f65cf08eb2e4    17 Mar 2026     729MB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.4-mt (aarch64)       267353b14a05    17 Mar 2026     1.02GB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.4-mt (x86_64)        b3b04b9b2846    17 Mar 2026     996MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all news;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/" rel="bookmark" title="Permalink to Community Edition Explained">
                 <h1 class="top-header">Community Edition Explained</h1>
             </a>
@@ -2344,90 +2463,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2025/02/18/the-university-information-system-of-argentina-adopts-kiwi-tcms/" rel="bookmark" title="Permalink to The University Information System of Argentina adopts Kiwi TCMS">
-                <h1 class="top-header">The University Information System of Argentina adopts Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 18 February 2025
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="&quot;SIU + Kiwi TCMS logos&quot;" src="/images/customers/siu-argentina+kiwitcms.png" title="SIU + Kiwi TCMS logos"></p>
-<p>For more than 25 years,
-<a href="https://www.siu.edu.ar/">Sistema de Información Universitaria</a> - SIU - has been
-developing solutions for the digital management of the Argentine university
-system and various government agencies.</p>
-<p>This ecosystem of solutions integrates all management areas within an institution
-(administrative, financial, academic, human resources, purchasing and assets, data analysis),
-optimizing process management, data quality, transparency, and decision-making.</p>
-<p>One of the main pillars of SIU is its collaborative network based on communities of practice.
-In these communities, users interact, exchange knowledge and best practices,
-solve common challenges, and share experiences. This governance model has gained national and
-international recognition and has enabled successful implementations in over 140 institutions.</p>
-<h3>The Kiwi TCMS experience</h3>
-<p>In recent years, digital transformation and the evolution of the institution
-have led SIU to move from a structure based on specific solutions to integrated
-project management, requiring the search for new tools to streamline and improve
-software development. As part of this process, a test management system was evaluated.</p>
-<p>This experience began with the <strong>Integrated Electronic File</strong> solution,
-a tool designed to seamlessly manage documents and files within an institution.
-One of its components, <strong>SUDOCU</strong> (Unique Document System), was developed by
-<a href="https://www.ungs.edu.ar/">Universidad Nacional de General Sarmiento</a> - UNGS -
-and made available to the Argentine university system through SIU.
-This feature added complexity for the QA team during their work,
-as test cases had to be replicated on different platforms both on the SIU and UNGS sides.</p>
-<p>In order to simplify processes and avoid duplicated efforts, a tool was sought
-to streamline the workflow. After evaluating several options, Kiwi TCMS was selected
-because of its open source nature, which is in line with SIU's policy.</p>
-<p>Evaluation began with a local installation, testing its functionalities,
-and optimizing its use to improve workflow. After adjustments in both test and production environments,
-Kiwi TCMS was incorporated into SUDOCU's projects, creating test cases and test plans.
-This improved the organization and visibility of testing activities for the entire team involved,
-including QAs, developers, and analysts.</p>
-<p>Based on this initial implementation, a work plan was created to gradually integrate testing
-of more projects into Kiwi TCMS, taking into account the unique characteristics of the SIU ecosystem.</p>
-<p>Currently, a consolidated QA team has been established within SIU,
-working in a fully integrated manner. Other projects are now using Kiwi TCMS in their daily
-operations for functional testing, system integration, regression testing and smoke testing.</p>
-<h3>Impact and benefits</h3>
-<p>The experience with Kiwi TCMS has enhanced the quality of software developed by
-SIU by centralizing test cases, test plans and test executions.
-This has improved both the traceability and transparency of QA work.
-It also provided the ability to generate reports and metrics to further
-evaluate and improve internal processes.</p>
-<p>One of the key benefits for SIU is time optimization achieved by
-reusing test cases and test plans,
-as well as the ability to track an unlimited number of executions,
-within the same test management tool.
-In addition, Kiwi TCMS' integration with <strong>Gitlab</strong> and <strong>Redmine</strong> is very useful
-for the institution, as these are other tools commonly used within SIU.</p>
-<p>The flexibility of this system allows test cases to be extended as needed,
-making it easier to adjust and update test cases or test plans in response to the development cycle.</p>
-<p>In the words of <em>Lucas del Reguero Martinez, QA tester</em>:</p>
-<blockquote>
-<p>The implementation of Kiwi TCMS has provided significant advantages to the institution,
-resulting in tangible benefits to users within the SIU community.
-The plan for the future is to continue training teams on the tool to further democratize its use.</p>
-</blockquote>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow and sustain development!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a paid customer</a></li>
-</ul>
         </div>
     </article>
 

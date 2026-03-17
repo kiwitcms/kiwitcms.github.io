@@ -1,5 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-02-18T10:20:00+02:00</updated><entry><title>Community Edition Explained</title><link href="/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/" rel="alternate"/><published>2026-02-18T10:20:00+02:00</published><updated>2026-02-18T10:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-02-18:/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/</id><summary type="html">&lt;p&gt;This page explains what Kiwi TCMS &lt;em&gt;Community Edition&lt;/em&gt; is,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-03-17T22:05:00+02:00</updated><entry><title>Kiwi TCMS 15.4</title><link href="/blog/kiwi-tcms-team/2026/03/17/kiwi-tcms-154/" rel="alternate"/><published>2026-03-17T22:05:00+02:00</published><updated>2026-03-17T22:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-03-17:/blog/kiwi-tcms-team/2026/03/17/kiwi-tcms-154/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 15.4!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates,
+dependency updates and new translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  ae3ae4a25d24   729MB …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 15.4!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates,
+dependency updates and new translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  ae3ae4a25d24   729MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-15-3"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 15.3&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 5.2.10 to 5.2.12&lt;/li&gt;
+&lt;li&gt;Update node_modules/pdfmake from 0.3.3 to 0.3.6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django-guardian from 3.2.0 to 3.3.0&lt;/li&gt;
+&lt;li&gt;Update django-tree-queries from 0.23.0 to 0.23.1&lt;/li&gt;
+&lt;li&gt;Update markdown from 3.10.1 to 3.10.2&lt;/li&gt;
+&lt;li&gt;Update mysqlclient from 2.2.7 to 2.2.8&lt;/li&gt;
+&lt;li&gt;Update psycopg[binary] from 3.3.2 to 3.3.3&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 8.0.0 to 8.1.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.104.1 to 5.105.4&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack-cli from 6.0.1 to 7.0.1&lt;/li&gt;
+&lt;li&gt;Update transient node_modules/ dependencies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update actions/upload-artifact from 6 to 7&lt;/li&gt;
+&lt;li&gt;Update locust from 2.43.1 to 2.43.3&lt;/li&gt;
+&lt;li&gt;Update pylint-django from 2.6.1 to 2.7.0&lt;/li&gt;
+&lt;li&gt;Pin setuptools&amp;lt;82 to workaround pkg_resources API deprecation&lt;/li&gt;
+&lt;li&gt;Pin pylint to 3.3.9 to workaround false positive errors&lt;/li&gt;
+&lt;li&gt;Adjust code for newer pylint&lt;/li&gt;
+&lt;li&gt;Cancel CI jobs when new ones are in queue&lt;/li&gt;
+&lt;li&gt;Standardize CI jobs on Ubuntu 24.04&lt;/li&gt;
+&lt;li&gt;Remove CI jobs against site-packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/id#"&gt;Indonesian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#"&gt;Portuguese, Brazilian translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/es-VE#"&gt;Spanish, Venezuela translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v15-3-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v15.3-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v15.4&lt;/li&gt;
+&lt;li&gt;Update certbot from 5.2.2 to 5.4.0&lt;/li&gt;
+&lt;li&gt;Update django-ses from 4.6.0 to 4.7.2&lt;/li&gt;
+&lt;li&gt;Update dj-database-url from 3.1.0 to 3.1.2&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk[django] from 2.50.0 to 2.54.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/version          15.4 (aarch64)          9e55b77392d5    17 Mar 2026     747MB
+hub.kiwitcms.eu/kiwitcms/version          15.4 (x86_64)           f65cf08eb2e4    17 Mar 2026     729MB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.4-mt (aarch64)       267353b14a05    17 Mar 2026     1.02GB
+hub.kiwitcms.eu/kiwitcms/enterprise       15.4-mt (x86_64)        b3b04b9b2846    17 Mar 2026     996MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Community Edition Explained</title><link href="/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/" rel="alternate"/><published>2026-02-18T10:20:00+02:00</published><updated>2026-02-18T10:20:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-02-18:/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/</id><summary type="html">&lt;p&gt;This page explains what Kiwi TCMS &lt;em&gt;Community Edition&lt;/em&gt; is,
 how it ships and what risks are associated with it.
 Please read about the details below.&lt;/p&gt;
 &lt;h2&gt;What is Kiwi TCMS Community Edition&lt;/h2&gt;
@@ -10682,46 +10795,4 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
 for more details!&lt;/p&gt;
 &lt;p&gt;Happy testing!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry><entry><title>Please nominate @kiwitcms as a GitHub Star</title><link href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/" rel="alternate"/><published>2020-09-04T14:25:00+03:00</published><updated>2020-09-04T14:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-09-04:/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/</id><summary type="html">&lt;p&gt;&lt;img
-    style="float: none; margin-left:0"
-    src="/images/github-star-nomination.png"
-    alt="GitHub Star nomination"&gt;&lt;/p&gt;
-&lt;p&gt;After our &lt;a href="/blog/kiwi-tcms-team/2020/09/01/kiwi-tcms-is-a-finalist-in-the-2020-eu-web-awards/"&gt;recent success&lt;/a&gt;
-we again ask the community to support Kiwi TCMS.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Steps to reproduce:&lt;/em&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Go to &lt;a href="https://stars.github.com/"&gt;https://stars.github.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Click the &lt;strong&gt;Sign in&lt;/strong&gt; button and Authorize the GitHub-Stars application&lt;/li&gt;
-&lt;li&gt;Make sure you are on the &lt;strong&gt;Nominate page&lt;/strong&gt;, &lt;a href="https://stars.github.com/nominate/"&gt;https://stars.github.com/nominate/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;kiwitcms&lt;/code&gt; as the username …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;&lt;img
-    style="float: none; margin-left:0"
-    src="/images/github-star-nomination.png"
-    alt="GitHub Star nomination"&gt;&lt;/p&gt;
-&lt;p&gt;After our &lt;a href="/blog/kiwi-tcms-team/2020/09/01/kiwi-tcms-is-a-finalist-in-the-2020-eu-web-awards/"&gt;recent success&lt;/a&gt;
-we again ask the community to support Kiwi TCMS.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Steps to reproduce:&lt;/em&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Go to &lt;a href="https://stars.github.com/"&gt;https://stars.github.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Click the &lt;strong&gt;Sign in&lt;/strong&gt; button and Authorize the GitHub-Stars application&lt;/li&gt;
-&lt;li&gt;Make sure you are on the &lt;strong&gt;Nominate page&lt;/strong&gt;, &lt;a href="https://stars.github.com/nominate/"&gt;https://stars.github.com/nominate/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;kiwitcms&lt;/code&gt; as the username. The &lt;code&gt;@&lt;/code&gt; character is provided automatically&lt;/li&gt;
-&lt;li&gt;Type the following text for your reasoning:
-   &lt;code&gt;they took an abandoned project and turned it into the leading open source
-    test management system with more than 150k downloads with users &amp;amp; contributors
-    across the world!&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Click on the checkbox to acknowledge your nomination&lt;/li&gt;
-&lt;li&gt;Click the &lt;strong&gt;Submit nomination&lt;/strong&gt; button!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;Expected results:&lt;/em&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;You fit into the 180 characters provided for nomination&lt;/li&gt;
-&lt;li&gt;Your submission is recorded by GitHub&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;Why are we doing this&lt;/h2&gt;
-&lt;p&gt;GitHub Stars is a program that recognizes those who go above and beyond and help
-inspire and educate their communities which is exactly what the
-&lt;a href="/team/"&gt;Kiwi TCMS team&lt;/a&gt; has been doing from our very start!
-Checkout our &lt;a href="/blog/tags/community/"&gt;community blog posts&lt;/a&gt; for more information!&lt;/p&gt;
-&lt;p&gt;This program will give us access to cool new features
-on the GitHub platform and also let us showcase what we do before a larger audience!&lt;/p&gt;
-&lt;p&gt;Thank you for helping us and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/></entry></feed>
+</content><category term="misc"/><category term="releases"/></entry></feed>
