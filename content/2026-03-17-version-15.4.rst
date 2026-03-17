@@ -1,0 +1,124 @@
+Kiwi TCMS 15.4
+##############
+
+:headline: security and dependency updates and new translations
+:date: 2026-03-17 22:05
+:comments: false
+:tags: releases
+
+
+Dear testers, we're happy to announce Kiwi TCMS version 15.4!
+
+**IMPORTANT:**
+
+This is a minor version release which includes security related updates,
+dependency updates and new translations.
+
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Public container image (x86_64)::
+
+        pub.kiwitcms.eu/kiwitcms/kiwi   latest  ae3ae4a25d24   729MB
+
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 15.3
+----------------------------
+
+Security
+~~~~~~~~
+
+- Update Django from 5.2.10 to 5.2.12
+- Update node_modules/pdfmake from 0.3.3 to 0.3.6
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update django-guardian from 3.2.0 to 3.3.0
+- Update django-tree-queries from 0.23.0 to 0.23.1
+- Update markdown from 3.10.1 to 3.10.2
+- Update mysqlclient from 2.2.7 to 2.2.8
+- Update psycopg[binary] from 3.3.2 to 3.3.3
+- Update python-gitlab from 8.0.0 to 8.1.0
+- Update node_modules/webpack from 5.104.1 to 5.105.4
+- Update node_modules/webpack-cli from 6.0.1 to 7.0.1
+- Update transient node_modules/ dependencies
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update actions/upload-artifact from 6 to 7
+- Update locust from 2.43.1 to 2.43.3
+- Update pylint-django from 2.6.1 to 2.7.0
+- Pin setuptools<82 to workaround pkg_resources API deprecation
+- Pin pylint to 3.3.9 to workaround false positive errors
+- Adjust code for newer pylint
+- Cancel CI jobs when new ones are in queue
+- Standardize CI jobs on Ubuntu 24.04
+- Remove CI jobs against site-packages
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `French translation <https://crowdin.com/project/kiwitcms/fr#>`_
+- Updated `Indonesian translation <https://crowdin.com/project/kiwitcms/id#>`_
+- Updated `Portuguese, Brazilian translation <https://crowdin.com/project/kiwitcms/pt-BR#>`_
+- Updated `Spanish, Venezuela translation <https://crowdin.com/project/kiwitcms/es-VE#>`_
+
+
+Changes since Kiwi TCMS Enterprise v15.3-mt
+-------------------------------------------
+
+- Based on Kiwi TCMS v15.4
+- Update certbot from 5.2.2 to 5.4.0
+- Update django-ses from 4.6.0 to 4.7.2
+- Update dj-database-url from 3.1.0 to 3.1.2
+- Update sentry-sdk[django] from 2.50.0 to 2.54.0
+
+
+Private container images
+------------------------
+
+    ::
+
+        hub.kiwitcms.eu/kiwitcms/version          15.4 (aarch64)          9e55b77392d5    17 Mar 2026     747MB
+        hub.kiwitcms.eu/kiwitcms/version          15.4 (x86_64)           f65cf08eb2e4    17 Mar 2026     729MB
+        hub.kiwitcms.eu/kiwitcms/enterprise       15.4-mt (aarch64)       267353b14a05    17 Mar 2026     1.02GB
+        hub.kiwitcms.eu/kiwitcms/enterprise       15.4-mt (x86_64)        b3b04b9b2846    17 Mar 2026     996MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+Follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all news;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
