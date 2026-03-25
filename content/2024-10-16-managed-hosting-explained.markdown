@@ -155,6 +155,7 @@ requests faster.
 
 **Custom long-term billing terms:** we can adjust your payment schedule so that
 it works best for you. For example weekly, monthly, every 3 or 6 months, every 1, 2 or 3 years!
+Long term discount starts from 10%. Reach out to us to discuss a better deal.
 
 
 Mid-term plans
