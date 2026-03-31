@@ -27,7 +27,7 @@ Kiwi TCMS Enterprise container images! These images are available as:
 
 **Important:** you can find your Docker credentials at the
 [subscriptions page](https://public.tenant.kiwitcms.org/github/marketplace/plans/),
-`PLUGINS -> Subscriptions`. To authenticate try
+`MORE -> Subscriptions`. To authenticate try
 
     $ docker login -u="USERNAME" -p "PASSWORD-TOKEN" hub.kiwitcms.eu
     # or
