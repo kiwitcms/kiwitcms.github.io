@@ -222,6 +222,9 @@ We will provide you with read-only level access and an unique public/private key
 and data center of your choice. Exact locations are subject to availability.&lt;/p&gt;
 &lt;p&gt;NOTE: At the time of writing our preferred storage backend is
 &lt;a href="https://docs.aws.amazon.com/general/latest/gr/s3.html"&gt;Amazon S3&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It may be possible to use a different storage provider depending on
+&lt;a href="https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html"&gt;technical compatibility&lt;/a&gt;.
+Additional charges may apply in that case!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Happy Testing!&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS please help us!&lt;/p&gt;
