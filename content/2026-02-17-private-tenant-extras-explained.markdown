@@ -70,6 +70,9 @@ and data center of your choice. Exact locations are subject to availability.
 NOTE: At the time of writing our preferred storage backend is
 [Amazon S3](https://docs.aws.amazon.com/general/latest/gr/s3.html).
 
+*It may be possible to use a different storage provider depending on
+[technical compatibility](https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html).
+Additional charges may apply in that case!*
 
 
 Happy Testing!
