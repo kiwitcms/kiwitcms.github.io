@@ -74,6 +74,14 @@ for `aarch64` and `x86_64` CPU architectures. This gives you more hosting option
 it easier to upgrade to new versions when you decide to do so.
 
 
+**Private add-on packages:** provides access to private package repositories for
+extra add-ons maintained by the Kiwi TCMS team. This is indended for the purposes of building
+your own downstream containers, custom development and/or creating your own non-standard
+deployment configuration!
+
+Normally you wouldn't need to be doing this kind of work but in case you do, we've got you covered.
+For example: build a PowerPC container image!
+
 
 **Limited support:** *Self Support* customers do not receive technical support. Help from the
 Kiwi TCMS team is limited to account and billing issues and response times are not guaranteed!
