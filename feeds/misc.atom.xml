@@ -1628,6 +1628,12 @@ only a &lt;code&gt;latest&lt;/code&gt; version for the &lt;code&gt;x86_64&lt;/co
 called &lt;a href="/containers/"&gt;kiwitcms/version&lt;/a&gt; with version tagged builds
 for &lt;code&gt;aarch64&lt;/code&gt; and &lt;code&gt;x86_64&lt;/code&gt; CPU architectures. This gives you more hosting options and makes
 it easier to upgrade to new versions when you decide to do so.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Private add-on packages:&lt;/strong&gt; provides access to private package repositories for
+extra add-ons maintained by the Kiwi TCMS team. This is indended for the purposes of building
+your own downstream containers, custom development and/or creating your own non-standard
+deployment configuration!&lt;/p&gt;
+&lt;p&gt;Normally you wouldn't need to be doing this kind of work but in case you do, we've got you covered.
+For example: build a PowerPC container image!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Limited support:&lt;/strong&gt; &lt;em&gt;Self Support&lt;/em&gt; customers do not receive technical support. Help from the
 Kiwi TCMS team is limited to account and billing issues and response times are not guaranteed!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Price freeze:&lt;/strong&gt; subscription price is usually updated once a year to account for inflation
