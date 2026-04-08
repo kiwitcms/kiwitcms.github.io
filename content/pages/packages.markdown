@@ -35,6 +35,7 @@ alternatively:
 Related packages
 ================
 
+- kiwitcms - distributed outside of container image
 - [kiwitcms-django-tenants](https://github.com/kiwitcms/django-tenants)
 - [kiwitcms-github-app](https://github.com/kiwitcms/github-app)
 - [kiwitcms-tenants](github.com/kiwitcms/tenants/)
