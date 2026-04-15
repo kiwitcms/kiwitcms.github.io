@@ -12,10 +12,12 @@ You can read about the details below.
 What is a Kiwi TCMS subscription
 --------------------------------
 
-- An active subscription is a flat rate! It is charged automatically each billing cycle
+- An active recurring subscription is a flat rate! It is charged automatically each billing cycle
+    - one-time subscriptions paid via WIRE transfer/reseller partner do not renew automatically
+    - one-time subscriptions are charged once and must be purchased again after their period expires
+
 - You may cancel at any time if you are not happy with the service provided
 - Subscriptions remain active until the period they have been paid for
-
 - A subscription provides access to software packages, extra services and certain guarantees behind the components which constitute Kiwi TCMS
 - Subscriptions cover everything published under <https://github.com/kiwitcms/>
 - Subscriptions include limited coverage for third-party open source components
@@ -89,9 +91,11 @@ Kiwi TCMS team is limited to account and billing issues and response times are n
 
 **Price freeze:** subscription price is usually updated once a year to account for inflation
 and any additional services which may be provided under a particular subscription tier.
-Customers with an active subscription are protected from these changes - price stays fixed
-as long as your subscription is active! You will get full access to any new services as soon as
-they are implemented.
+Customers with an active recurring subscription are protected from these changes - price stays fixed
+as long as your subscription is active! This applies to subscriptions paid by card where
+payment details are kept on file. You will get full access to any new services as soon as
+they are implemented. **Does not apply** to one-time subscriptions which expire after their
+period of validity ends!
 
 
 **No ads:** regular *community edition* version of Kiwi TCMS comes with built-in advertisement
