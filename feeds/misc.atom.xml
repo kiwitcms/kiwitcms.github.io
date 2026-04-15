@@ -1580,20 +1580,25 @@ and how it brings a bit more value beyond the Kiwi TCMS application itself.
 You can read about the details below.&lt;/p&gt;
 &lt;h2&gt;What is a Kiwi TCMS subscription&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;An active subscription is a flat rate! It is charged automatically each …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Hello testers,
+&lt;li&gt;
+&lt;p&gt;An active recurring subscription is a flat rate! It is charged automatically …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Hello testers,
 this page explains what the &lt;em&gt;Self Support&lt;/em&gt; subscription is
 and how it brings a bit more value beyond the Kiwi TCMS application itself.
 You can read about the details below.&lt;/p&gt;
 &lt;h2&gt;What is a Kiwi TCMS subscription&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;An active subscription is a flat rate! It is charged automatically each billing cycle&lt;/li&gt;
-&lt;li&gt;You may cancel at any time if you are not happy with the service provided&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Subscriptions remain active until the period they have been paid for&lt;/p&gt;
+&lt;p&gt;An active recurring subscription is a flat rate! It is charged automatically each billing cycle&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one-time subscriptions paid via WIRE transfer/reseller partner do not renew automatically&lt;/li&gt;
+&lt;li&gt;one-time subscriptions are charged once and must be purchased again after their period expires&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;A subscription provides access to software packages, extra services and certain guarantees behind the components which constitute Kiwi TCMS&lt;/p&gt;
+&lt;p&gt;You may cancel at any time if you are not happy with the service provided&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;Subscriptions remain active until the period they have been paid for&lt;/li&gt;
+&lt;li&gt;A subscription provides access to software packages, extra services and certain guarantees behind the components which constitute Kiwi TCMS&lt;/li&gt;
 &lt;li&gt;Subscriptions cover everything published under &lt;a href="https://github.com/kiwitcms/"&gt;https://github.com/kiwitcms/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscriptions include limited coverage for third-party open source components&lt;/li&gt;
 &lt;/ul&gt;
@@ -1638,9 +1643,11 @@ For example: build a PowerPC container image!&lt;/p&gt;
 Kiwi TCMS team is limited to account and billing issues and response times are not guaranteed!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Price freeze:&lt;/strong&gt; subscription price is usually updated once a year to account for inflation
 and any additional services which may be provided under a particular subscription tier.
-Customers with an active subscription are protected from these changes - price stays fixed
-as long as your subscription is active! You will get full access to any new services as soon as
-they are implemented.&lt;/p&gt;
+Customers with an active recurring subscription are protected from these changes - price stays fixed
+as long as your subscription is active! This applies to subscriptions paid by card where
+payment details are kept on file. You will get full access to any new services as soon as
+they are implemented. &lt;strong&gt;Does not apply&lt;/strong&gt; to one-time subscriptions which expire after their
+period of validity ends!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;No ads:&lt;/strong&gt; regular &lt;em&gt;community edition&lt;/em&gt; version of Kiwi TCMS comes with built-in advertisement
 from &lt;a href="https://www.ethicalads.io/"&gt;EthicalAds&lt;/a&gt; rewards from which are paid out to
 &lt;a href="https://opencollective.com/kiwitcms/transactions"&gt;opencollective.com/kiwitcms&lt;/a&gt; for transparency.&lt;/p&gt;
