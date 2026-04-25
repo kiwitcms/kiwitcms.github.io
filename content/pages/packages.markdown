@@ -1,11 +1,11 @@
-Title: Private add-on package repositories
+Title: Private package repositories
 url: packages/
 save_as: packages/index.html
 add_section: True
 
 
-Private add-on package repositories for subscribers
-===================================================
+Private package repositories for subscribers
+============================================
 
 The Kiwi TCMS application is officially distributed and deployed as a container image
 with all of its source code available on [GitHub](https://github.com/kiwitcms/Kiwi).
@@ -23,10 +23,6 @@ non-standard deployment configurations!
 
 
 For Python:
-
-    PKG_TOKEN="token-from-page" pip install -r ./requirements.txt
-
-alternatively:
 
     export PKG_TOKEN="token-from-page"
     pip install --index-url https://${PKG_TOKEN}@pkg.kiwitcms.eu/pypi/ --extra-index-url https://pypi.org/simple/ <package-name>
