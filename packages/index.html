@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Private add-on package repositories</title>
+        <title>Kiwi TCMS - Private package repositories</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-Frame-Options" content="deny">
         <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
@@ -100,7 +100,7 @@
 
         <!-- content -->
     <section>
-        <h1>Private add-on package repositories for subscribers</h1>
+        <h1>Private package repositories for subscribers</h1>
 <p>The Kiwi TCMS application is officially distributed and deployed as a container image
 with all of its source code available on <a href="https://github.com/kiwitcms/Kiwi">GitHub</a>.
 The Kiwi TCMS <em>Community Edition</em> container can be built from source and <strong>DOES NOT</strong>
@@ -113,10 +113,6 @@ non-standard deployment configurations!</p>
 <a href="https://public.tenant.kiwitcms.org/github/marketplace/plans/">subscriptions page</a>,
 <code>MORE -&gt; Subscriptions</code>. To make use of them try:</p>
 <p>For Python:</p>
-<div class="highlight"><pre><span></span><code>PKG_TOKEN=&quot;token-from-page&quot; pip install -r ./requirements.txt
-</code></pre></div>
-
-<p>alternatively:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">export</span><span class="w"> </span><span class="nx">PKG_TOKEN</span><span class="p">=</span><span class="s">&quot;token-from-page&quot;</span>
 <span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">--</span><span class="nx">index</span><span class="o">-</span><span class="nx">url</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//${PKG_TOKEN}@pkg.kiwitcms.eu/pypi/ --extra-index-url https://pypi.org/simple/ &lt;package-name&gt;</span>
 </code></pre></div>
