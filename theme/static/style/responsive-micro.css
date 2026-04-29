@@ -262,7 +262,7 @@
 
 @media screen and (max-width: 500px) {
     #quick-links div {
-        grid-template-columns: unset;
+        grid-template-columns: 1fr;
         grid-template-rows: max-content auto 1fr;
         grid-template-areas:
             "icon"
