@@ -47,7 +47,8 @@ to get started!
 suitable for Intel/AMD 64bit processors only.
 
 
-**No version tags:** the *community edition* container is always the `latest` version!
+**Rolling release:** the *community edition* container is always the `latest` version
+and is updated automatically after new changes are merged in the source code repository!
 There are no other versions available!
 
 
