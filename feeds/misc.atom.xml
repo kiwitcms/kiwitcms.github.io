@@ -140,7 +140,8 @@ and source code but not much else!&lt;/p&gt;
 to get started!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Only x86_64 build:&lt;/strong&gt; the &lt;em&gt;community edition&lt;/em&gt; container is built on Linux,
 suitable for Intel/AMD 64bit processors only.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;No version tags:&lt;/strong&gt; the &lt;em&gt;community edition&lt;/em&gt; container is always the &lt;code&gt;latest&lt;/code&gt; version!
+&lt;p&gt;&lt;strong&gt;Rolling release:&lt;/strong&gt; the &lt;em&gt;community edition&lt;/em&gt; container is always the &lt;code&gt;latest&lt;/code&gt; version
+and is updated automatically after new changes are merged in the source code repository!
 There are no other versions available!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;GPL-2.0 license:&lt;/strong&gt; Kiwi TCMS is an open source software, with very long history,
 with its primary core licensed under the GNU GPL-2.0 license!&lt;/p&gt;
