@@ -1,5 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-03-17T22:05:00+02:00</updated><entry><title>Kiwi TCMS 15.4</title><link href="/blog/kiwi-tcms-team/2026/03/17/kiwi-tcms-154/" rel="alternate"/><published>2026-03-17T22:05:00+02:00</published><updated>2026-03-17T22:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-03-17:/blog/kiwi-tcms-team/2026/03/17/kiwi-tcms-154/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 15.4!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-06-05T02:18:00+03:00</updated><entry><title>Kiwi TCMS 16.0</title><link href="/blog/kiwi-tcms-team/2026/06/05/kiwi-tcms-160/" rel="alternate"/><published>2026-06-05T02:18:00+03:00</published><updated>2026-06-05T02:18:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-06-05:/blog/kiwi-tcms-team/2026/06/05/kiwi-tcms-160/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.0!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a major version release which includes security related updates
+several improvements, backwards incompatible changes and new translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.0!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a major version release which includes security related updates
+several improvements, backwards incompatible changes and new translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  3b2c789666ec   867MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-15-4"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 15.4&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 5.2.12 to 5.2.15&lt;/li&gt;
+&lt;li&gt;Upadate pillow from 11.3.0 to 12.1.1&lt;/li&gt;
+&lt;li&gt;Update node_modules/fast-uri from 3.1.0 to 3.1.2&lt;/li&gt;
+&lt;li&gt;Update node_modules/flatted from 3.3.3 to 3.4.2&lt;/li&gt;
+&lt;li&gt;Make /init-db/ page a no-op if already executed once. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-v8rp-6xcv-fwgh"&gt;CVE-2026-49292&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Python runtime from 3.11 to 3.12&lt;/li&gt;
+&lt;li&gt;Update Node.js runtime from 16 to 22&lt;/li&gt;
+&lt;li&gt;Update Nginx runtime from 1.22 to 1.26&lt;/li&gt;
+&lt;li&gt;Update django-grappelli from 4.0.3 to 5.0.0&lt;/li&gt;
+&lt;li&gt;Update django-guardian from 3.3.0 to 3.3.1&lt;/li&gt;
+&lt;li&gt;Update django-tree-queries from 0.23.1 to 0.24.0&lt;/li&gt;
+&lt;li&gt;Update psycopg from 3.3.3 to 3.3.4&lt;/li&gt;
+&lt;li&gt;Update pygithub from 2.8.1 to 2.9.1&lt;/li&gt;
+&lt;li&gt;Update pygments from 2.19.2 to 2.20.0&lt;/li&gt;
+&lt;li&gt;Update python-gitlab from 8.1.0 to 8.4.0&lt;/li&gt;
+&lt;li&gt;Update tzdata from 2025.3 to 2026.2&lt;/li&gt;
+&lt;li&gt;Update node_modules/pdfmake from 0.3.6 to 0.3.7&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack-cli from 7.0.1 to 7.0.2&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.105.4 to 5.106.0&lt;/li&gt;
+&lt;li&gt;Display &lt;tt class="docutils literal"&gt;Last modified&lt;/tt&gt; column in TestCase Search page. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4140"&gt;Issue #4140&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove requirement for &lt;tt class="docutils literal"&gt;setuptools&amp;lt;82&lt;/tt&gt;. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4299"&gt;Issue #4299&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="removals"&gt;
+&lt;h3&gt;Removals&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove Bitbucket Issues integration because Atlassian has announced the
+removal of this feature&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="release"&gt;
+&lt;h3&gt;Release&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/tt&gt; container is now a rolling release&lt;/li&gt;
+&lt;li&gt;PyPI packages are uploaded to
+&lt;a class="reference external" href="https://kiwitcms.org/packages/"&gt;pkg.kiwitcms.eu&lt;/a&gt;. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3376"&gt;Issue #3376&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;API method &lt;tt class="docutils literal"&gt;TestCase.filter()&lt;/tt&gt; now returns the &lt;tt class="docutils literal"&gt;history_date&lt;/tt&gt; field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update black from 25.12.0 to 26.5.1&lt;/li&gt;
+&lt;li&gt;Update locust from 2.43.3 to 2.44.1&lt;/li&gt;
+&lt;li&gt;Update codecov/codecov-action from 5 to 6&lt;/li&gt;
+&lt;li&gt;Merge Dockerfile.buildroot with Dockerfile. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3496"&gt;Issue #3496&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Replace &lt;tt class="docutils literal"&gt;pkg_resources&lt;/tt&gt; discovery with &lt;tt class="docutils literal"&gt;importlib.metadata&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;GitLab Issues are now called Work Items&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ko#"&gt;Korean translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v15-3-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v15.3-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v16.0&lt;/li&gt;
+&lt;li&gt;Update Python runtime from 3.11 to 3.12&lt;/li&gt;
+&lt;li&gt;Update certbot from 5.4.0 to 5.6.0&lt;/li&gt;
+&lt;li&gt;Update django-prometheus from 2.4.1 to 2.5.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-github-app from 2.1.0 to 2.2.2&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 4.4.1 to 4.4.4&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-trackers-integration from 1.2.1 to 1.3.1&lt;/li&gt;
+&lt;li&gt;Update psycopg-pool from 3.3.0 to 3.3.1&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk from 2.54.0 to 2.61.1&lt;/li&gt;
+&lt;li&gt;Update social-auth-kerberos from 0.3.0 to 0.3.2&lt;/li&gt;
+&lt;li&gt;Update social-auth-app-django from 5.7.0 to 5.9.0&lt;/li&gt;
+&lt;li&gt;Remove OpenResty override&lt;/li&gt;
+&lt;li&gt;Remove requirement for setuptools&amp;lt;82&lt;/li&gt;
+&lt;li&gt;Honor container ENV variable &lt;cite&gt;NGX_DENY_INCLUDE&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;Don't use legacy syntax in Dockerfile&lt;/li&gt;
+&lt;li&gt;Provide sample SSL configuration for Postgres and
+configure Kiwi TCMS to connect to it securely. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2413"&gt;Issue #2413&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/version          16.0 (aarch64)          d972a78b065c    04 Jun 2026     720MB
+hub.kiwitcms.eu/kiwitcms/version          16.0 (x86_64)           876f5b848ee7    04 Jun 2026     701MB
+hub.kiwitcms.eu/kiwitcms/enterprise       16.0-mt (aarch64)       25fc9c88a3b5    05 Jun 2026     925MB
+hub.kiwitcms.eu/kiwitcms/enterprise       16.0-mt (x86_64)        3a7747c99b65    05 Jun 2026     904MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Kiwi TCMS 15.4</title><link href="/blog/kiwi-tcms-team/2026/03/17/kiwi-tcms-154/" rel="alternate"/><published>2026-03-17T22:05:00+02:00</published><updated>2026-03-17T22:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-03-17:/blog/kiwi-tcms-team/2026/03/17/kiwi-tcms-154/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 15.4!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a minor version release which includes security related updates,
 dependency updates and new translations.&lt;/p&gt;
@@ -10659,156 +10817,4 @@ Vuk made a mistake and now he can't turn it off :D. How's that for dogfooding?&l
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS supports the various communities
 around us please &lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;nominate us as GitHub Stars&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/><category term="bounty-program"/></entry><entry><title>Kiwi TCMS 8.7</title><link href="/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/" rel="alternate"/><published>2020-09-16T16:30:00+03:00</published><updated>2020-09-16T16:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-09-16:/blog/kiwi-tcms-team/2020/09/16/kiwi-tcms-87/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.7!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a medium sized release which includes
-improvements, API changes, bug fixes, translation updates and
-new tests. It is the fifth release to include contributions via our
-&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
-You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 8.7!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a medium sized release which includes
-improvements, API changes, bug fixes, translation updates and
-new tests. It is the fifth release to include contributions via our
-&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.
-You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-5.3   (or older) -&amp;gt; 5.3.1
-5.3.1 (or newer) -&amp;gt; 6.0.1
-6.0.1            -&amp;gt; 6.1
-6.1              -&amp;gt; 6.1.1
-6.1.1            -&amp;gt; 6.2 (or newer)
-&lt;/pre&gt;
-&lt;p&gt;Docker images:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  1f2461b1facd    643 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-&lt;/pre&gt;
-&lt;div class="section" id="changes-since-kiwi-tcms-8-6"&gt;
-&lt;h2&gt;Changes since Kiwi TCMS 8.6&lt;/h2&gt;
-&lt;div class="section" id="improvements"&gt;
-&lt;h3&gt;Improvements&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update Django from 3.0.9 to 3.1.1&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update django-attachments from 1.6 to 1.8&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update django-extensions from 3.0.5 to 3.0.8&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update psycopg2 from 2.8.5 to 2.8.6&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update pygments from 2.6.1 to 2.7.0&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update python-gitlab from 2.4.0 to 2.5.0&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Make it possible to use reCAPTCHA during registration. If you want to enable
-this then add the following to your settings:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-if 'captcha' not in INSTALLED_APPS:
-    INSTALLED_APPS.append('captcha')
-
-    RECAPTCHA_PUBLIC_KEY = '......'
-    RECAPTCHA_PRIVATE_KEY = '.....'
-    RECAPTCHA_USE_SSL = True
-&lt;/pre&gt;
-&lt;p&gt;For more info see &lt;a class="reference external" href="https://www.google.com/recaptcha/admin/"&gt;https://www.google.com/recaptcha/admin/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Replace &lt;tt class="docutils literal"&gt;GlobalLoginRequiredMiddleware&lt;/tt&gt; with
-&lt;tt class="docutils literal"&gt;tcms.kiwi_auth.backends.AnonymousViewBackend&lt;/tt&gt; for anonymous read-only
-functionality. See section
-&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/configuration.html#anonymous-read-only-access"&gt;Anonymous read-only access&lt;/a&gt;
-in the documentation&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Replace the &lt;tt class="docutils literal"&gt;...&lt;/tt&gt; in navigation bar with a 3 cogs icon to make the
-object-level menu more visible&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="settings"&gt;
-&lt;h3&gt;Settings&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Remove setting &lt;tt class="docutils literal"&gt;PUBLIC_VIEWS&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="api"&gt;
-&lt;h3&gt;API&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;TestCase.get_components()&lt;/tt&gt; in favor of &lt;tt class="docutils literal"&gt;Component.filter()&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;Bug.details()&lt;/tt&gt; method will now return &lt;tt class="docutils literal"&gt;{}&lt;/tt&gt; instead of failing if
-it can't find an issue tracker from an URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bug-fixes"&gt;
-&lt;h3&gt;Bug fixes&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Remove documentation references to non-existing environment&lt;/li&gt;
-&lt;li&gt;Don't fail internal calls if Kiwi TCMS bug tracker can't find a bug&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="refactoring-testing"&gt;
-&lt;h3&gt;Refactoring &amp;amp; testing&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.core.templatetags&lt;/tt&gt;. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1602"&gt;Issue #1602&lt;/a&gt; (Mariyan Garvanski)&lt;/li&gt;
-&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.bugs.views.Edit&lt;/tt&gt;. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1599"&gt;Issue #1599&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
-&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;tcms.bugs.views.AddComment&lt;/tt&gt;. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1600"&gt;Issue #1600&lt;/a&gt; (Mfon Eti-mfon)&lt;/li&gt;
-&lt;li&gt;Make paths used in migrations &amp;amp; settings platform aware in order to
-enable development mode on Windows (Mfon Eti-mfon)&lt;/li&gt;
-&lt;li&gt;Add new linter checker to check for use of &lt;tt class="docutils literal"&gt;db_column&lt;/tt&gt; argument in
-model field definition. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/736"&gt;Issue #736&lt;/a&gt; (Bryan Mutai)&lt;/li&gt;
-&lt;li&gt;Add tests for &lt;tt class="docutils literal"&gt;Bug.details&lt;/tt&gt; API method&lt;/li&gt;
-&lt;li&gt;Replace deprecated &lt;tt class="docutils literal"&gt;ifequal&lt;/tt&gt;/&lt;tt class="docutils literal"&gt;ifnotequal&lt;/tt&gt; template tags&lt;/li&gt;
-&lt;li&gt;Adjust &lt;tt class="docutils literal"&gt;migrations_order&lt;/tt&gt; for Django 3.1 compatibility&lt;/li&gt;
-&lt;li&gt;Add &lt;tt class="docutils literal"&gt;npm audit&lt;/tt&gt; check in CI&lt;/li&gt;
-&lt;li&gt;Resolve several pylint issues&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="translations"&gt;
-&lt;h3&gt;Translations&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#"&gt;Chinese Traditional translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kiwi-tcms-enterprise-v8-7-mt"&gt;
-&lt;h2&gt;Kiwi TCMS Enterprise v8.7-mt&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Based on Kiwi TCMS v8.7&lt;/li&gt;
-&lt;li&gt;Overrides for setting &lt;tt class="docutils literal"&gt;PUBLIC_VIEWS&lt;/tt&gt; have been removed&lt;/li&gt;
-&lt;li&gt;Update django-ses from 1.0.2 to 1.0.3&lt;/li&gt;
-&lt;li&gt;Update kiwitcms-github-app from 1.1 to 1.2&lt;/li&gt;
-&lt;li&gt;Update kiwitcms-tenants from 1.2.1 to 1.3.1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For more info see
-&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise/#v87-mt-16-sep-2020"&gt;https://github.com/kiwitcms/enterprise/#v87-mt-16-sep-2020&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how-to-upgrade"&gt;
-&lt;h2&gt;How to upgrade&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
-If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-&lt;/pre&gt;
-&lt;p&gt;Refer to
-&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
-for more details!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;
-&lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry></feed>
+Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/><category term="bounty-program"/></entry></feed>
