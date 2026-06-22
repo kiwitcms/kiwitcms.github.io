@@ -1760,9 +1760,11 @@ You can read about the details below.&lt;/p&gt;
 &lt;li&gt;A subscription provides access to software packages, extra services and certain guarantees behind the components which constitute Kiwi TCMS&lt;/li&gt;
 &lt;li&gt;Subscriptions cover everything published under &lt;a href="https://github.com/kiwitcms/"&gt;https://github.com/kiwitcms/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscriptions include limited coverage for third-party open source components&lt;/li&gt;
+&lt;li&gt;Taxation and invoicing is handled via our payment providers such as FastSpring;
+  Kiwi TCMS does not handle those directly&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;We recommend that customers have an active subscription for each container running Kiwi TCMS!&lt;/p&gt;
+&lt;p&gt;We recommend that customers have one active subscription for each container running Kiwi TCMS!&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;What is Self Support by Kiwi TCMS&lt;/h2&gt;
 &lt;p&gt;This is our lowest-tier of support services, where the majority of the work
