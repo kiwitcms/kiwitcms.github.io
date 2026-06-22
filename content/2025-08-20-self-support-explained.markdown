@@ -21,8 +21,10 @@ What is a Kiwi TCMS subscription
 - A subscription provides access to software packages, extra services and certain guarantees behind the components which constitute Kiwi TCMS
 - Subscriptions cover everything published under <https://github.com/kiwitcms/>
 - Subscriptions include limited coverage for third-party open source components
+- Taxation and invoicing is handled via our payment providers such as FastSpring;
+  Kiwi TCMS does not handle those directly
 
-> We recommend that customers have an active subscription for each container running Kiwi TCMS!
+> We recommend that customers have one active subscription for each container running Kiwi TCMS!
 
 
 
