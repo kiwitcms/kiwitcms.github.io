@@ -1,0 +1,148 @@
+Kiwi TCMS 16.1
+##############
+
+:headline: security improvements, database migrations, new API and translations
+:date: 2026-06-24 13:18
+:comments: false
+:tags: releases
+
+
+Dear testers, we're happy to announce Kiwi TCMS version 16.1!
+
+**IMPORTANT:**
+
+This is a minor version release which includes security related updates,
+several improvements, database migrations, new API methods and updated translations.
+
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Public container image (x86_64)::
+
+        pub.kiwitcms.eu/kiwitcms/kiwi   latest  12fc270ef5b9    862MB
+
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 16.0
+----------------------------
+
+Security
+~~~~~~~~
+
+- Restrict open redirect. Fixes
+  `CVE-2026-54724 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-hmj5-jm8h-h9fh>`_
+- Validate user input in ``extra_link`` fields. Fixes
+  `CVE-2026-55630 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-473p-56xx-vg67>`_
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update bleach from 6.3.0 to 6.4.0
+- Update django from 5.2.15 to 6.0.6
+- Update django-guardian from 3.3.1 to 3.3.2
+- Update django-simple-history from 3.11.0 to 3.12.0
+- Update node_modules/js-yaml from 4.1.1 to 4.2.0
+- Update node_modules/pdfmake from 0.3.7 to 0.3.11
+- Update node_modules/webpack from 5.106.0 to 5.107.2
+- Update node_modules/webpack-cli from 7.0.2 to 7.0.3
+- Remove the ``handle_attachments_post_save()`` signal. Going forward files
+  uploaded via rich text editor will be linked to the user who uploaded them
+
+
+Database
+~~~~~~~~
+
+- Add migration ``testcases.0024_alter_testcase_extra_link``
+- Add migration ``testplans.0011_alter_testplan_extra_link``
+- Add migration ``testruns.0020_testexecutiontag``
+
+
+API
+~~~
+
+- Add ``TestExecution.remove_tag()`` method. Refs
+  `Issue #4349 <https://github.com/kiwitcms/Kiwi/issues/4349>`_
+- Method ``Tag.filter()`` now returns the ``execution`` field
+
+
+Bug fixes
+~~~~~~~~~
+
+- Fix invalid multiline ``{% trans %}`` on password reset confirm page
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update actions/checkout from 6 to 7
+- Update codecov/codecov-action from 6 to 7
+- Update isort from 6.1.0 to 8.0.1
+- Update locust from 2.44.1 to 2.44.4
+- Update pylint from 3.3.9 to 4.0.6
+- Silence false-positive errors & adjustments for newer pylint
+- Skip English plural forms of seen strings in ``similar-string`` linter
+- Add XML-RPC API test case with non-printable character
+
+
+Translations
+~~~~~~~~~~~~
+
+- Updated `Chinese Simplified translation <https://crowdin.com/project/kiwitcms/zh-CN#>`_
+- Updated `German translation <https://crowdin.com/project/kiwitcms/de#>`_
+
+
+
+Changes since Kiwi TCMS Enterprise v16.0-mt
+-------------------------------------------
+
+- Based on Kiwi TCMS v16.1
+- Compatible with Django 6
+- Update kiwitcms-github-app from 2.2.2 to 2.3.0
+- Update kiwitcms-tenants from 4.4.4 to 4.5.0
+- Update kiwitcms-trackers-integration from 1.3.1 to 1.4.0
+- Update sentry-sdk from 2.61.1 to 2.63.0
+
+
+Private container images
+------------------------
+
+    ::
+
+        hub.kiwitcms.eu/kiwitcms/version          16.1 (aarch64)          ae3442ef043b    24 Jun 2026     715MB
+        hub.kiwitcms.eu/kiwitcms/version          16.1 (x86_64)           8a98927b8581    24 Jun 2026     696MB
+        hub.kiwitcms.eu/kiwitcms/enterprise       16.1-mt (aarch64)       0610f65a5fd5    24 Jun 2026     913MB
+        hub.kiwitcms.eu/kiwitcms/enterprise       16.1-mt (x86_64)        a3f823870351    24 Jun 2026     892MB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+Follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all news;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
