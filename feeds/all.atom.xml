@@ -1,5 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-06-05T02:18:00+03:00</updated><entry><title>Kiwi TCMS 16.0</title><link href="/blog/kiwi-tcms-team/2026/06/05/kiwi-tcms-160/" rel="alternate"/><published>2026-06-05T02:18:00+03:00</published><updated>2026-06-05T02:18:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-06-05:/blog/kiwi-tcms-team/2026/06/05/kiwi-tcms-160/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.0!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-06-24T13:18:00+03:00</updated><entry><title>Kiwi TCMS 16.1</title><link href="/blog/kiwi-tcms-team/2026/06/24/kiwi-tcms-161/" rel="alternate"/><published>2026-06-24T13:18:00+03:00</published><updated>2026-06-24T13:18:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-06-24:/blog/kiwi-tcms-team/2026/06/24/kiwi-tcms-161/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates,
+several improvements, database migrations, new API methods and updated translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates,
+several improvements, database migrations, new API methods and updated translations.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  12fc270ef5b9    862MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-16-0"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 16.0&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Restrict open redirect. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-hmj5-jm8h-h9fh"&gt;CVE-2026-54724&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Validate user input in &lt;tt class="docutils literal"&gt;extra_link&lt;/tt&gt; fields. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-473p-56xx-vg67"&gt;CVE-2026-55630&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update bleach from 6.3.0 to 6.4.0&lt;/li&gt;
+&lt;li&gt;Update django from 5.2.15 to 6.0.6&lt;/li&gt;
+&lt;li&gt;Update django-guardian from 3.3.1 to 3.3.2&lt;/li&gt;
+&lt;li&gt;Update django-simple-history from 3.11.0 to 3.12.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/js-yaml from 4.1.1 to 4.2.0&lt;/li&gt;
+&lt;li&gt;Update node_modules/pdfmake from 0.3.7 to 0.3.11&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.106.0 to 5.107.2&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack-cli from 7.0.2 to 7.0.3&lt;/li&gt;
+&lt;li&gt;Remove the &lt;tt class="docutils literal"&gt;handle_attachments_post_save()&lt;/tt&gt; signal. Going forward files
+uploaded via rich text editor will be linked to the user who uploaded them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add migration &lt;tt class="docutils literal"&gt;testcases.0024_alter_testcase_extra_link&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Add migration &lt;tt class="docutils literal"&gt;testplans.0011_alter_testplan_extra_link&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Add migration &lt;tt class="docutils literal"&gt;testruns.0020_testexecutiontag&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestExecution.remove_tag()&lt;/tt&gt; method. Refs
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4349"&gt;Issue #4349&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;Tag.filter()&lt;/tt&gt; now returns the &lt;tt class="docutils literal"&gt;execution&lt;/tt&gt; field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix invalid multiline &lt;tt class="docutils literal"&gt;{% trans %}&lt;/tt&gt; on password reset confirm page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update actions/checkout from 6 to 7&lt;/li&gt;
+&lt;li&gt;Update codecov/codecov-action from 6 to 7&lt;/li&gt;
+&lt;li&gt;Update isort from 6.1.0 to 8.0.1&lt;/li&gt;
+&lt;li&gt;Update locust from 2.44.1 to 2.44.4&lt;/li&gt;
+&lt;li&gt;Update pylint from 3.3.9 to 4.0.6&lt;/li&gt;
+&lt;li&gt;Silence false-positive errors &amp;amp; adjustments for newer pylint&lt;/li&gt;
+&lt;li&gt;Skip English plural forms of seen strings in &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;similar-string&lt;/span&gt;&lt;/tt&gt; linter&lt;/li&gt;
+&lt;li&gt;Add XML-RPC API test case with non-printable character&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="translations"&gt;
+&lt;h3&gt;Translations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v16-0-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v16.0-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v16.1&lt;/li&gt;
+&lt;li&gt;Compatible with Django 6&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-github-app from 2.2.2 to 2.3.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 4.4.4 to 4.5.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-trackers-integration from 1.3.1 to 1.4.0&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk from 2.61.1 to 2.63.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/version          16.1 (aarch64)          ae3442ef043b    24 Jun 2026     715MB
+hub.kiwitcms.eu/kiwitcms/version          16.1 (x86_64)           8a98927b8581    24 Jun 2026     696MB
+hub.kiwitcms.eu/kiwitcms/enterprise       16.1-mt (aarch64)       0610f65a5fd5    24 Jun 2026     913MB
+hub.kiwitcms.eu/kiwitcms/enterprise       16.1-mt (x86_64)        a3f823870351    24 Jun 2026     892MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Kiwi TCMS 16.0</title><link href="/blog/kiwi-tcms-team/2026/06/05/kiwi-tcms-160/" rel="alternate"/><published>2026-06-05T02:18:00+03:00</published><updated>2026-06-05T02:18:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-06-05:/blog/kiwi-tcms-team/2026/06/05/kiwi-tcms-160/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.0!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a major version release which includes security related updates
 several improvements, backwards incompatible changes and new translations.&lt;/p&gt;
@@ -10765,58 +10901,5 @@ please help us!&lt;/p&gt;
 &lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/><category term="bounty-program"/></entry><entry><title>Progress update on open source hardware for black-box testing</title><link href="/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/" rel="alternate"/><published>2020-10-10T16:35:00+03:00</published><updated>2020-10-10T16:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-10:/blog/kiwi-tcms-team/2020/10/10/progress-update-on-open-source-hardware-for-black-box-testing/</id><summary type="html">&lt;p&gt;Hello testers, as you know our
-&lt;a href="/blog/kiwi-tcms-team/2020/05/26/kiwi-tcms-is-partnering-up-with-pionir/"&gt;friends at Pionir&lt;/a&gt;
-are working on physical hardware which can be used for interactive training and
-explanation of the Black-box testing technique. The inspiration
-comes from &lt;a href="http://blackboxpuzzles.workroomprds.com/"&gt;James Lyndsay’s Black Box Puzzles&lt;/a&gt; and
-&lt;a href="http://blog.brainforit.com/2017/02/06/black-boxes-for-black-box-testing/"&gt;Claudiu Draghia&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;We have the source code of 3 boxes already …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers, as you know our
-&lt;a href="/blog/kiwi-tcms-team/2020/05/26/kiwi-tcms-is-partnering-up-with-pionir/"&gt;friends at Pionir&lt;/a&gt;
-are working on physical hardware which can be used for interactive training and
-explanation of the Black-box testing technique. The inspiration
-comes from &lt;a href="http://blackboxpuzzles.workroomprds.com/"&gt;James Lyndsay’s Black Box Puzzles&lt;/a&gt; and
-&lt;a href="http://blog.brainforit.com/2017/02/06/black-boxes-for-black-box-testing/"&gt;Claudiu Draghia&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;We have the source code of 3 boxes already published at
-&lt;a href="https://github.com/kiwitcms/black-boxes"&gt;https://github.com/kiwitcms/black-boxes&lt;/a&gt; but still missing bill of materials,
-design files for 3D printing and some basic instructions how to put everything
-together. There was a delay in delivery of some components but most of the work
-is close to completion. You may subscribe to
-&lt;a href="https://github.com/kiwitcms/black-boxes/issues"&gt;issues for each box&lt;/a&gt; to follow
-the progress! Here are some images &amp;amp; videos from the development process.&lt;/p&gt;
-&lt;h2&gt;Wason 2-4-6 box&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="Wason 246 box" src="/images/black-boxes/wason_246.png"&gt;&lt;/p&gt;
-&lt;iframe width="1000" height="562"
-        src="https://www.youtube.com/embed/UGfgcTS66KY"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen&gt;
-&lt;/iframe&gt;
-
-&lt;h2&gt;Peltzman effect box&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="Peltzman effect box" src="/images/black-boxes/peltzman_effect.png"&gt;&lt;/p&gt;
-&lt;iframe width="1000" height="562"
-        src="https://www.youtube.com/embed/9wAr--X4YGM"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen&gt;
-&lt;/iframe&gt;
-
-&lt;h2&gt;Salience bias box&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="Salience bias box" src="/images/black-boxes/salience_bias.png"&gt;&lt;/p&gt;
-&lt;iframe width="1000" height="562"
-        src="https://www.youtube.com/embed/pgADatxcZBg"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;According to Pionir's own words:
-&lt;em&gt;We are testing the salience box and trying to cause emotional effect of an element.
-Vuk made a mistake and now he can't turn it off :D. How's that for dogfooding?&lt;/em&gt;&lt;/p&gt;
-&lt;h2&gt;Help us do more&lt;/h2&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports the various communities
-around us please &lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;nominate us as GitHub Stars&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/><category term="bounty-program"/></entry></feed>
