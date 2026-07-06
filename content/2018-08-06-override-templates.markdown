@@ -33,7 +33,7 @@ runs a custom Docker image based on
         GDPR no longer allows us to automatically subscribe you to
         our newsletter. If you wish to keep in touch and receive emails
         with news and updates around Kiwi TCMS please subscribe at:
-        https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581
+        https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581
         
         --
         Happy testing!

@@ -146,7 +146,7 @@ at [Open Source Experience, 10 &amp; 11 Dec 2025 in Paris]({filename}2025-10-29-
 If you like what we're doing please help us grow and sustain development!
 
 - [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
-- [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
+- [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
   and follow all news;
 - [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;
 - [Become a subscriber](/#subscriptions) and help us sustain development

@@ -7,9 +7,9 @@ comments: true
 Hello testers,
 I have to admit that I made a rookie mistake and deleted the entire email database
 for the Kiwi TCMS
-[newsletter](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)!
+[newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)!
 And of course we didn't have a backup of this database :-(. Please
-[re-subscribe here](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
+[re-subscribe here](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
 and read below if you are interested to know what happened.
 
 
@@ -51,7 +51,7 @@ no way of telling which addresses were on the list in the first hand.
 
 
 Please
-[re-subscribe here](https://kiwitcms.us17.list-manage.com/subscribe/post?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
+[re-subscribe here](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
 and I promise we're going to start backing up the newsletter database as well.
 
 Thank you!
