@@ -110,6 +110,157 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/07/21/siteground-uses-kiwi-tcms-as-central-repository-of-testing-knowledge/" rel="bookmark" title="Permalink to SiteGround uses Kiwi TCMS as central repository of testing knowledge">
+                <h1 class="top-header">SiteGround uses Kiwi TCMS as central repository of testing knowledge</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Tue 21 July 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p><img alt="&quot;SiteGround + Kiwi TCMS logos&quot;" src="/images/customers/siteground+kiwitcms.png" title="SiteGround + Kiwi TCMS logos"></p>
+<p>SiteGround is a technology company founded in 2004 that helps individuals,
+entrepreneurs, and businesses build and grow their online presence.
+Our goal is to provide customers with the tools they need to create, manage, and grow their online businesses from a single platform.</p>
+<p>Over the years, SiteGround has built a strong engineering culture focused on
+performance, reliability, innovation, and customer experience.
+This continuous focus on technology and quality has helped us support millions of websites and businesses worldwide.</p>
+<h3>Tell us more about SiteGround's product lines?</h3>
+<p>SiteGround has evolved far beyond traditional web hosting.
+Our platform includes web hosting, managed WordPress hosting, cloud infrastructure,
+Site Tools, website-building solutions, ecommerce platforms, professional email services,
+email marketing products, and AI-powered solutions.
+These products serve a wide range of users, from individual creators and small businesses to agencies and larger organizations.</p>
+<p>From a technical perspective, our products are built using a diverse technology stack
+that includes PHP, Python, Go, TypeScript, React, containerized environments, and cloud technologies.</p>
+<h3>How about SiteGround's relation to open source?</h3>
+<p>Open source has always been an important part of SiteGround's engineering culture.
+Many of the technologies that power our products are built on open source foundations,
+and we actively support the open source community through sponsorships, community involvement,
+and contributions to projects that help power the modern web.</p>
+<p>We strongly believe that open source software promotes innovation, transparency, collaboration
+and accessibility. We are also strong supporters of the WordPress ecosystem.</p>
+<p>One of the advantages of using open source software is the ability to collaborate directly with maintainers,
+contribute improvements, and tailor solutions to real-world needs.</p>
+<blockquote>
+<p>An improvement from SiteGround's Martin Bodurov has already been merged into Kiwi TCMS.</p>
+<p>See <a href="https://github.com/kiwitcms/Kiwi/pull/3905">PR #3905</a> for more details.</p>
+</blockquote>
+<h3>What makes testing at SiteGround challenging?</h3>
+<p>One of the biggest challenges is the breadth and diversity of our product portfolio.
+Our teams test everything from hosting infrastructure and website management tools to
+ecommerce solutions, email marketing platforms, and AI-powered products.</p>
+<p>These products are built using different technologies and often rely on complex integrations
+and shared infrastructure. A change in one area can potentially affect multiple systems,
+which makes regression testing, coverage visibility, and traceability especially important.</p>
+<p>Another challenge is balancing the speed of delivery with the level of quality and reliability
+our customers expect. As our platform continues to grow, maintaining confidence in releases requires
+a combination of structured testing practices, automation, and close collaboration between
+engineering and QA teams.</p>
+<h3>How do teams at SiteGround approach testing?</h3>
+<p>Testing starts with understanding the requirements and acceptance criteria for a feature.
+Before execution begins, we define a lightweight test plan that outlines the areas we want to validate,
+potential risks and the overall testing scope.</p>
+<p>During testing, we maintain testing notes and a testing journal where we document findings, observations
+and scenarios that deserve additional investigation. Both the test plan and the testing journal go
+through a review process, helping us share knowledge, improve coverage, and ensure consistency across the team.
+The approach combines structured validation with exploratory testing techniques,
+allowing us to adapt as we learn more about the feature.</p>
+<p>Detailed test scenarios are created and maintained in Kiwi TCMS. These scenarios serve both as
+validation artifacts and also as long-term documentation and a knowledge base for the organization.
+As features mature, many of these scenarios become candidates for our Playwright automation.</p>
+<p>Automation plays a central role in our testing strategy.
+We maintain extensive automated coverage across different layers of the testing pyramid,
+including unit, integration, API, end-to-end, visual, accessibility, and performance-related testing.
+Automated regression suites are continuously executed through our CI/CD pipelines,
+helping teams identify issues early and maintain confidence in every change.</p>
+<p>The combination of structured manual testing, peer reviews, automation,
+and continuous regression automation execution allows us to maintain quality while supporting a fast development cycle.</p>
+<h3>What other technologies does testing at SiteGround involve?</h3>
+<p>Testing at SiteGround relies on a diverse ecosystem of tools that support automation,
+reporting, traceability, and continuous delivery. Our end-to-end automation is primarily
+built with Playwright, while reporting and execution visibility are provided through
+Allure Report and our CI/CD pipelines. We also maintain dedicated checks for visual regressions,
+accessibility validation, and website quality metrics using tools such as Lighthouse.</p>
+<p>To support fast feedback cycles, our automation infrastructure is optimized for containerized
+execution on Google Cloud Platform, allowing us to execute large regression suites efficiently and at scale.</p>
+<h3>Where does Kiwi TCMS fit into SiteGround's overall testing infrastructure?</h3>
+<p>Kiwi TCMS serves as the central repository for testing knowledge and traceability within our organization.
+While our automation execution, reporting, and CI/CD processes are handled by other tools,
+Kiwi TCMS acts as the place where testing knowledge is documented, maintained, and shared across teams.</p>
+<p>It stores our testing scenarios, helps us understand what has already been automated,
+and provides visibility into overall test coverage. By maintaining a clear relationship between manual test design
+and automated validation, it helps us ensure consistency as our products and automation suites evolve.</p>
+<p>Kiwi TCMS integrates into our broader testing ecosystem and it is the source of truth for testing knowledge.
+It provides traceability between requirements, documented scenarios, and automated validation,
+while also serving as a valuable source of context for engineers and AI-assisted development workflows.</p>
+<h3>Why did you decide to use Kiwi TCMS?</h3>
+<p>Before selecting Kiwi TCMS, we evaluated both commercial and open source test management solutions.
+While many products offered a wide range of features, we were looking for a solution that was flexible,
+practical, and aligned with the way our teams work.</p>
+<p>Kiwi TCMS stood out because it provides the core functionality we need without unnecessary complexity.
+Rather than focusing on heavily marketed features that we would rarely use,
+it offers a clean and efficient approach to test management, traceability, and knowledge sharing.</p>
+<p>Its open source nature was another important factor. We value the flexibility that open source software provides,
+whether it's adapting workflows, building integrations, or contributing improvements back to the project.
+This gives us confidence that the tool can evolve together with our testing needs.</p>
+<h3>Tell us how you've integrated Kiwi TCMS with Playwright and Allure Report</h3>
+<p>One of our goals has been to maintain strong traceability between documented test scenarios and automated validation.
+The scenarios stored in Kiwi TCMS often serve as the foundation for our Playwright automation.
+To preserve this connection, we include Kiwi TCMS test case identifiers in the Allure Report metadata
+of our automated tests. This provides a consistent mapping between documented scenarios and automated coverage,
+making it easier to understand which tests validate which requirements and features.</p>
+<p>Having this relationship available directly in the test metadata helps us identify coverage gaps,
+keep documentation aligned with implementation, and navigate easily between automated tests and their corresponding
+Kiwi TCMS scenarios.</p>
+<p>Over time, we have also built custom integrations around this model.
+One example is a custom Playwright reporter that can read Kiwi TCMS identifiers from the Allure Report metadata
+and correlate automated execution results with the corresponding test cases in Kiwi TCMS.
+The exact implementation continues to evolve, but the primary objective remains the same:
+maintaining a clear connection between test design, automation, and execution results.</p>
+<h3>Tell us more about your internal "Kiwi TCMS API Client" script</h3>
+<p>The internal "Kiwi TCMS API Client" started as a simple wrapper around the well-structured Kiwi TCMS API.
+Initially, it was created to support integrations between our automation ecosystem and Kiwi TCMS,
+helping us automate parts of the test result synchronization process and reduce manual effort.</p>
+<p>Over time, its role evolved beyond automation integrations.
+Because Kiwi TCMS serves as our central repository of testing knowledge,
+this API client became a convenient way to expose that information to other tools and workflows.</p>
+<p>More recently, we have also used it as part of the tooling that supports AI-assisted development and testing.
+By giving AI tools controlled access to test scenarios and testing knowledge stored in Kiwi TCMS,
+we can provide better context when generating test cases, automation code, or other testing-related artifacts.</p>
+<p>This internal client remains intentionally lightweight, focusing on simplifying access to Kiwi TCMS data
+and enabling integrations without requiring every other tool to interact directly with the API.</p>
+<h3>Tell us how does using AI in testing fit in relation to Kiwi TCMS?</h3>
+<p>Yes, AI has become an important part of our daily engineering and testing workflows.
+We use tools such as Codex, Claude Code, and Cline to assist with a variety of tasks,
+including test case generation, Playwright automation development, code reviews, documentation,
+technical research, and day-to-day development tasks. These tools help us accelerate routine work
+and allow engineers and testers to focus more on quality strategy, risk analysis, and problem solving.</p>
+<p>Kiwi TCMS plays an important role in this process because it serves as our central repository of testing knowledge.
+The scenarios and documentation stored there provide valuable context for both engineers and AI-assisted workflows,
+helping ensure that generated test assets remain aligned with documented requirements, expected behavior, and existing coverage.</p>
+<p>For example, when working on automated tests, AI tools can help us generate or refine Playwright implementations
+based on the scenarios stored in Kiwi TCMS. Having access to well-structured testing knowledge
+significantly improves the quality and consistency of the generated output.</p>
+<p>Rather than treating AI as a replacement for testing expertise, we see it as a force multiplier.
+Combining AI-assisted development with well-maintained testing knowledge in Kiwi TCMS allows us to
+work more efficiently while maintaining consistency and quality across both manual and automated testing efforts.</p>
+<hr>
+<p>If you like what we're doing please help us grow and sustain development!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/06/24/kiwi-tcms-161/" rel="bookmark" title="Permalink to Kiwi TCMS 16.1">
                 <h1 class="top-header">Kiwi TCMS 16.1</h1>
             </a>
@@ -2363,144 +2514,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2025/05/27/ami-transitions-to-kiwi-tcms-managed-hosting/" rel="bookmark" title="Permalink to AMI transitions to Kiwi TCMS Managed Hosting">
-                <h1 class="top-header">AMI transitions to Kiwi TCMS Managed Hosting</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 27 May 2025
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="&quot;AMI + Kiwi TCMS logos&quot;" src="/images/customers/ami+kiwitcms.png" title="AMI + Kiwi TCMS logos"></p>
-<p><a href="https://www.ami.com">AMI</a>, is an international company,
-reimagining firmware for modern computing, providing secure, manageable solutions
-across on-premises, cloud, and edge platforms. Its technology and support drive
-innovation and lasting partnerships with top tech brands.</p>
-<h3>Tell us more about AMI's product lines</h3>
-<p>AMI delivers firmware and management solutions for servers, data centers,
-and embedded systems. Key products include:</p>
-<ul>
-<li><strong>Aptio V®</strong>: A next-gen UEFI/BIOS solution enabling dynamic processor and peripheral
-  management for Cloud, Edge, and IoT environments.</li>
-<li><strong>MegaRAC®</strong>: Advanced BMC solutions like SP-X and OneTree for remote, OS-independent
-  server management, including power control, KVM redirection, and virtual
-  media.</li>
-<li><strong>TektagonTM</strong>: A Platform Root of Trust ensuring secure and validated firmware boot
-  processes.</li>
-<li><strong>AMI® Data Center Manager (DCM)</strong>: Software for managing multi-vendor data centers,
-  offering insights on health, power, thermal performance, and sustainability metrics to
-  optimize operations and efficiency.</li>
-</ul>
-<p>AMI develops products at all levels of the technology hierarchy, starting with low level firmware
-to cloud based applications. For boot firmware, it's mostly assembly and C.
-For manageability firmware, it's a combination of C, C++, Linux Shell scripting.
-Our products have web interfaces so the HTML/CSS/JavaScript stack is also very common.
-Python is extensively used as the backend language of choice for cloud applications.</p>
-<h3>How about AMI's relation to open source</h3>
-<p>AMI has forged a robust partnership with the <a href="https://www.opencompute.org/">Open Compute Project</a>,
-driving innovation and collaboration in open source firmware solutions. As one of the key proponents of
-open source technologies in this space, AMI integrates
-<a href="https://github.com/tianocore/edk2">EDK2</a> and embedded Linux into firmware solutions.
-We are a major sponsor of the Open Compute Project and a key contributor.</p>
-<h3>What makes testing at AMI challenging</h3>
-<p>At AMI, the Test team plays a pivotal role in ensuring the reliability and excellence of our
-product lines. Given the dynamic nature of our projects, the team frequently transitions
-between tasks to accommodate multiple ongoing initiatives. This adaptability is crucial in
-maintaining rigorous standards across diverse firmware and management solutions.</p>
-<p>Additionally, the Test team is committed to delivering valuable insights by analyzing
-quality trends and producing detailed reports. These analyses equip leadership with actionable
-data, fostering informed decision-making and continuous improvement across all
-development efforts.</p>
-<p><em>Constantly changing priorities combined with the need to provide accurate
-reporting make testing at AMI challenging!</em></p>
-<p>Since we are a black box/acceptance test group, our System Under Test are actual hardware platforms.
-And since we do boot firmware and manageability firmware solutions, we have to test on
-early revision hardware, which is unstable. This makes test automation challenging.
-And even for automation, we have to rely on hardware tooling like IP controlled AC power strips,
-firmware programming devices and single board computers like Raspberry Pi for controlling various
-aspects of the system under test. We also support multiple hardware architectures, 
-which increases the breadth of what we need to test.</p>
-<h3>How do teams at AMI approach testing? Can you walk us through the process</h3>
-<p>Our black-box user acceptance testing (UAT) team ensures end-user expectations align
-with product functionality, performance, and usability. Collaborating with developers and
-studying standards and specifications, we create detailed test scenarios covering positive,
-negative, performance, and usability aspects.</p>
-<p>Using a hybrid agile-like model, we test features as they're ready and conduct a final
-integration cycle to assess system readiness. Given that we work with firmware and
-embedded solutions, achieving 100% test automation is a significant challenge. As a
-result, our approach includes a considerable amount of manual testing to ensure thorough
-coverage and reliability. This process ensures seamless component interactions, uncovers
-overlooked issues, and delivers actionable insights so we can ship
-high-quality systems that exceed user expectations.</p>
-<p>AMI is committed to upholding rigorous standards in testing, including a strict test exit
-criterion that mandates zero high severity bugs before product release. This ensures that all
-solutions delivered to clients meet the highest levels of reliability and performance. Our
-testing methodologies are designed to identify and resolve any critical issues at an early
-stage, preventing them from affecting the functionality of end products.</p>
-<h3>What other technologies does testing at AMI involve</h3>
-<p>At AMI, testing leverages tools like Python for automation scripting and Robot Framework
-for test case creation and execution.
-Previously, AMI utilized a custom-built test management system to organize test cases and
-generate actionable reports.</p>
-<p>AMI uses GitLab CI for triggering test jobs.
-We have CI workflows that execute daily and weekly runs of our automated tests.
-We would like to get to a point where our systems can
-analyse what features a code change impacts and then it selects the test cases needed to
-execute to test that changeset.</p>
-<h3>Why did you decide to use Kiwi TCMS</h3>
-<p>The legacy homegrown tool faced significant limitations as it struggled to keep up with the
-scaling demands of AMI's growing testing infrastructure.
-It was slow and could no longer support our evolving need for real-time reporting,
-lacked flexibility, and was unable to accommodate new features, primarily due to the absence
-of dedicated personnel to maintain and upgrade it. These constraints led the QA team to seek modern
-solutions capable of addressing their evolving requirements effectively.</p>
-<p>We conducted extensive research into alternative solutions, but
-many tools we evaluated were either overly complex or prohibitively expensive. Kiwi TCMS
-emerged as the perfect choice, seamlessly aligning with our requirements for affordability
-and functionality.</p>
-<h3>Where does Kiwi TCMS fit into AMI's overall testing infrastructure</h3>
-<p>Kiwi TCMS has become a mission-critical tool for us, drastically
-reducing latency while maintaining a lightweight and responsive design. Its versatility
-ensures widespread use across AMI's testing infrastructure, benefiting not just testers but
-also project managers and developers. The integration with JIRA further enhances our
-workflow efficiency.</p>
-<p>Additionally, the Kiwi TCMS API and the <a href="https://github.com/kiwitcms/tcms-api/">tcms-api</a>
-client-side library are a great foundation which
-enables us to create custom integrations, allowing
-the AMI team to develop tailored workflows that fit their unique requirements.</p>
-<p>For example, we have built a custom web application which provides
-data visualizations and reporting capabilities that are tailored to meet the needs of our
-stakeholders and customers. These custom solutions empower the QA team to provide actionable insights
-into testing quality, enhancing transparency and fostering trust across all levels of
-collaboration within our organization.</p>
-<hr>
-<p>In the words of <em>Utpal Patel, Senior Director, Global Test Engineering</em>:</p>
-<blockquote>
-<p>After a highly successful two-year run with Kiwi TCMS, we have transitioned
-to a <em>Managed Hosting</em> subscription to better accommodate the rapid growth at AMI. This move
-underscores our commitment to leveraging Kiwi TCMS as a cornerstone of our testing
-infrastructure. We're excited about collaborating closely with the Kiwi TCMS development
-team to refine it further, introducing features and capabilities that not only
-strengthen our own workflows but also contribute valuable enhancements for the broader
-testing community.</p>
-</blockquote>
-<hr>
-<p>If you like what we're doing please help us grow and sustain development!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
         </div>
     </article>
 

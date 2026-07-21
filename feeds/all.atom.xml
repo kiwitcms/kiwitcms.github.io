@@ -1,5 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-06-24T13:18:00+03:00</updated><entry><title>Kiwi TCMS 16.1</title><link href="/blog/kiwi-tcms-team/2026/06/24/kiwi-tcms-161/" rel="alternate"/><published>2026-06-24T13:18:00+03:00</published><updated>2026-06-24T13:18:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-06-24:/blog/kiwi-tcms-team/2026/06/24/kiwi-tcms-161/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.1!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-07-21T19:30:00+03:00</updated><entry><title>SiteGround uses Kiwi TCMS as central repository of testing knowledge</title><link href="/blog/kiwi-tcms-team/2026/07/21/siteground-uses-kiwi-tcms-as-central-repository-of-testing-knowledge/" rel="alternate"/><published>2026-07-21T19:30:00+03:00</published><updated>2026-07-21T19:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-21:/blog/kiwi-tcms-team/2026/07/21/siteground-uses-kiwi-tcms-as-central-repository-of-testing-knowledge/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;SiteGround + Kiwi TCMS logos&amp;quot;" src="/images/customers/siteground+kiwitcms.png" title="SiteGround + Kiwi TCMS logos"&gt;&lt;/p&gt;
+&lt;p&gt;SiteGround is a technology company founded in 2004 that helps individuals,
+entrepreneurs, and businesses build and grow their online presence.
+Our goal is to provide customers with the tools they need to create, manage, and grow their online businesses from a single platform.&lt;/p&gt;
+&lt;p&gt;Over the years, SiteGround has built a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;SiteGround + Kiwi TCMS logos&amp;quot;" src="/images/customers/siteground+kiwitcms.png" title="SiteGround + Kiwi TCMS logos"&gt;&lt;/p&gt;
+&lt;p&gt;SiteGround is a technology company founded in 2004 that helps individuals,
+entrepreneurs, and businesses build and grow their online presence.
+Our goal is to provide customers with the tools they need to create, manage, and grow their online businesses from a single platform.&lt;/p&gt;
+&lt;p&gt;Over the years, SiteGround has built a strong engineering culture focused on
+performance, reliability, innovation, and customer experience.
+This continuous focus on technology and quality has helped us support millions of websites and businesses worldwide.&lt;/p&gt;
+&lt;h3&gt;Tell us more about SiteGround's product lines?&lt;/h3&gt;
+&lt;p&gt;SiteGround has evolved far beyond traditional web hosting.
+Our platform includes web hosting, managed WordPress hosting, cloud infrastructure,
+Site Tools, website-building solutions, ecommerce platforms, professional email services,
+email marketing products, and AI-powered solutions.
+These products serve a wide range of users, from individual creators and small businesses to agencies and larger organizations.&lt;/p&gt;
+&lt;p&gt;From a technical perspective, our products are built using a diverse technology stack
+that includes PHP, Python, Go, TypeScript, React, containerized environments, and cloud technologies.&lt;/p&gt;
+&lt;h3&gt;How about SiteGround's relation to open source?&lt;/h3&gt;
+&lt;p&gt;Open source has always been an important part of SiteGround's engineering culture.
+Many of the technologies that power our products are built on open source foundations,
+and we actively support the open source community through sponsorships, community involvement,
+and contributions to projects that help power the modern web.&lt;/p&gt;
+&lt;p&gt;We strongly believe that open source software promotes innovation, transparency, collaboration
+and accessibility. We are also strong supporters of the WordPress ecosystem.&lt;/p&gt;
+&lt;p&gt;One of the advantages of using open source software is the ability to collaborate directly with maintainers,
+contribute improvements, and tailor solutions to real-world needs.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An improvement from SiteGround's Martin Bodurov has already been merged into Kiwi TCMS.&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/kiwitcms/Kiwi/pull/3905"&gt;PR #3905&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;What makes testing at SiteGround challenging?&lt;/h3&gt;
+&lt;p&gt;One of the biggest challenges is the breadth and diversity of our product portfolio.
+Our teams test everything from hosting infrastructure and website management tools to
+ecommerce solutions, email marketing platforms, and AI-powered products.&lt;/p&gt;
+&lt;p&gt;These products are built using different technologies and often rely on complex integrations
+and shared infrastructure. A change in one area can potentially affect multiple systems,
+which makes regression testing, coverage visibility, and traceability especially important.&lt;/p&gt;
+&lt;p&gt;Another challenge is balancing the speed of delivery with the level of quality and reliability
+our customers expect. As our platform continues to grow, maintaining confidence in releases requires
+a combination of structured testing practices, automation, and close collaboration between
+engineering and QA teams.&lt;/p&gt;
+&lt;h3&gt;How do teams at SiteGround approach testing?&lt;/h3&gt;
+&lt;p&gt;Testing starts with understanding the requirements and acceptance criteria for a feature.
+Before execution begins, we define a lightweight test plan that outlines the areas we want to validate,
+potential risks and the overall testing scope.&lt;/p&gt;
+&lt;p&gt;During testing, we maintain testing notes and a testing journal where we document findings, observations
+and scenarios that deserve additional investigation. Both the test plan and the testing journal go
+through a review process, helping us share knowledge, improve coverage, and ensure consistency across the team.
+The approach combines structured validation with exploratory testing techniques,
+allowing us to adapt as we learn more about the feature.&lt;/p&gt;
+&lt;p&gt;Detailed test scenarios are created and maintained in Kiwi TCMS. These scenarios serve both as
+validation artifacts and also as long-term documentation and a knowledge base for the organization.
+As features mature, many of these scenarios become candidates for our Playwright automation.&lt;/p&gt;
+&lt;p&gt;Automation plays a central role in our testing strategy.
+We maintain extensive automated coverage across different layers of the testing pyramid,
+including unit, integration, API, end-to-end, visual, accessibility, and performance-related testing.
+Automated regression suites are continuously executed through our CI/CD pipelines,
+helping teams identify issues early and maintain confidence in every change.&lt;/p&gt;
+&lt;p&gt;The combination of structured manual testing, peer reviews, automation,
+and continuous regression automation execution allows us to maintain quality while supporting a fast development cycle.&lt;/p&gt;
+&lt;h3&gt;What other technologies does testing at SiteGround involve?&lt;/h3&gt;
+&lt;p&gt;Testing at SiteGround relies on a diverse ecosystem of tools that support automation,
+reporting, traceability, and continuous delivery. Our end-to-end automation is primarily
+built with Playwright, while reporting and execution visibility are provided through
+Allure Report and our CI/CD pipelines. We also maintain dedicated checks for visual regressions,
+accessibility validation, and website quality metrics using tools such as Lighthouse.&lt;/p&gt;
+&lt;p&gt;To support fast feedback cycles, our automation infrastructure is optimized for containerized
+execution on Google Cloud Platform, allowing us to execute large regression suites efficiently and at scale.&lt;/p&gt;
+&lt;h3&gt;Where does Kiwi TCMS fit into SiteGround's overall testing infrastructure?&lt;/h3&gt;
+&lt;p&gt;Kiwi TCMS serves as the central repository for testing knowledge and traceability within our organization.
+While our automation execution, reporting, and CI/CD processes are handled by other tools,
+Kiwi TCMS acts as the place where testing knowledge is documented, maintained, and shared across teams.&lt;/p&gt;
+&lt;p&gt;It stores our testing scenarios, helps us understand what has already been automated,
+and provides visibility into overall test coverage. By maintaining a clear relationship between manual test design
+and automated validation, it helps us ensure consistency as our products and automation suites evolve.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS integrates into our broader testing ecosystem and it is the source of truth for testing knowledge.
+It provides traceability between requirements, documented scenarios, and automated validation,
+while also serving as a valuable source of context for engineers and AI-assisted development workflows.&lt;/p&gt;
+&lt;h3&gt;Why did you decide to use Kiwi TCMS?&lt;/h3&gt;
+&lt;p&gt;Before selecting Kiwi TCMS, we evaluated both commercial and open source test management solutions.
+While many products offered a wide range of features, we were looking for a solution that was flexible,
+practical, and aligned with the way our teams work.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS stood out because it provides the core functionality we need without unnecessary complexity.
+Rather than focusing on heavily marketed features that we would rarely use,
+it offers a clean and efficient approach to test management, traceability, and knowledge sharing.&lt;/p&gt;
+&lt;p&gt;Its open source nature was another important factor. We value the flexibility that open source software provides,
+whether it's adapting workflows, building integrations, or contributing improvements back to the project.
+This gives us confidence that the tool can evolve together with our testing needs.&lt;/p&gt;
+&lt;h3&gt;Tell us how you've integrated Kiwi TCMS with Playwright and Allure Report&lt;/h3&gt;
+&lt;p&gt;One of our goals has been to maintain strong traceability between documented test scenarios and automated validation.
+The scenarios stored in Kiwi TCMS often serve as the foundation for our Playwright automation.
+To preserve this connection, we include Kiwi TCMS test case identifiers in the Allure Report metadata
+of our automated tests. This provides a consistent mapping between documented scenarios and automated coverage,
+making it easier to understand which tests validate which requirements and features.&lt;/p&gt;
+&lt;p&gt;Having this relationship available directly in the test metadata helps us identify coverage gaps,
+keep documentation aligned with implementation, and navigate easily between automated tests and their corresponding
+Kiwi TCMS scenarios.&lt;/p&gt;
+&lt;p&gt;Over time, we have also built custom integrations around this model.
+One example is a custom Playwright reporter that can read Kiwi TCMS identifiers from the Allure Report metadata
+and correlate automated execution results with the corresponding test cases in Kiwi TCMS.
+The exact implementation continues to evolve, but the primary objective remains the same:
+maintaining a clear connection between test design, automation, and execution results.&lt;/p&gt;
+&lt;h3&gt;Tell us more about your internal "Kiwi TCMS API Client" script&lt;/h3&gt;
+&lt;p&gt;The internal "Kiwi TCMS API Client" started as a simple wrapper around the well-structured Kiwi TCMS API.
+Initially, it was created to support integrations between our automation ecosystem and Kiwi TCMS,
+helping us automate parts of the test result synchronization process and reduce manual effort.&lt;/p&gt;
+&lt;p&gt;Over time, its role evolved beyond automation integrations.
+Because Kiwi TCMS serves as our central repository of testing knowledge,
+this API client became a convenient way to expose that information to other tools and workflows.&lt;/p&gt;
+&lt;p&gt;More recently, we have also used it as part of the tooling that supports AI-assisted development and testing.
+By giving AI tools controlled access to test scenarios and testing knowledge stored in Kiwi TCMS,
+we can provide better context when generating test cases, automation code, or other testing-related artifacts.&lt;/p&gt;
+&lt;p&gt;This internal client remains intentionally lightweight, focusing on simplifying access to Kiwi TCMS data
+and enabling integrations without requiring every other tool to interact directly with the API.&lt;/p&gt;
+&lt;h3&gt;Tell us how does using AI in testing fit in relation to Kiwi TCMS?&lt;/h3&gt;
+&lt;p&gt;Yes, AI has become an important part of our daily engineering and testing workflows.
+We use tools such as Codex, Claude Code, and Cline to assist with a variety of tasks,
+including test case generation, Playwright automation development, code reviews, documentation,
+technical research, and day-to-day development tasks. These tools help us accelerate routine work
+and allow engineers and testers to focus more on quality strategy, risk analysis, and problem solving.&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS plays an important role in this process because it serves as our central repository of testing knowledge.
+The scenarios and documentation stored there provide valuable context for both engineers and AI-assisted workflows,
+helping ensure that generated test assets remain aligned with documented requirements, expected behavior, and existing coverage.&lt;/p&gt;
+&lt;p&gt;For example, when working on automated tests, AI tools can help us generate or refine Playwright implementations
+based on the scenarios stored in Kiwi TCMS. Having access to well-structured testing knowledge
+significantly improves the quality and consistency of the generated output.&lt;/p&gt;
+&lt;p&gt;Rather than treating AI as a replacement for testing expertise, we see it as a force multiplier.
+Combining AI-assisted development with well-maintained testing knowledge in Kiwi TCMS allows us to
+work more efficiently while maintaining consistency and quality across both manual and automated testing efforts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing please help us grow and sustain development!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS 16.1</title><link href="/blog/kiwi-tcms-team/2026/06/24/kiwi-tcms-161/" rel="alternate"/><published>2026-06-24T13:18:00+03:00</published><updated>2026-06-24T13:18:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-06-24:/blog/kiwi-tcms-team/2026/06/24/kiwi-tcms-161/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.1!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a minor version release which includes security related updates,
 several improvements, database migrations, new API methods and updated translations.&lt;/p&gt;
@@ -10833,66 +10972,6 @@ Both Sasho and Vladi will also be eligible for our
 &lt;a href="/blog/tags/bounty-program/"&gt;open source bounty-program&lt;/a&gt; as an extra stimulation!&lt;/p&gt;
 &lt;p&gt;All expenses will be fully transparent and visible via
 &lt;a href="https://opencollective.com/kiwitcms/expenses/"&gt;our Open Collective page&lt;/a&gt;!&lt;/p&gt;
-&lt;h2&gt;Help us do more&lt;/h2&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/><category term="bounty-program"/></entry><entry><title>Kiwi TCMS is partnering with MLH Fellowship program</title><link href="/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/" rel="alternate"/><published>2020-10-13T12:50:00+03:00</published><updated>2020-10-13T12:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-13:/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/</id><summary type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with the
-&lt;a href="https://fellowship.mlh.io/programs/open-source"&gt;MLH Fellowship&lt;/a&gt;
-open source program which is a 12 week internship alternative for
-students interested in becoming software engineers.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://mlh.io"&gt;Major League Hacking (MLH)&lt;/a&gt; is a mission-driven B-Corp focused
-on empowering our next generation of technologists. Every …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with the
-&lt;a href="https://fellowship.mlh.io/programs/open-source"&gt;MLH Fellowship&lt;/a&gt;
-open source program which is a 12 week internship alternative for
-students interested in becoming software engineers.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://mlh.io"&gt;Major League Hacking (MLH)&lt;/a&gt; is a mission-driven B-Corp focused
-on empowering our next generation of technologists. Every year, more than
-100,000 developers, designers, and makers join the MLH community to gain
-hands-on experience and build their professional networks.
-They are headquartered in the Greater New York Area, USA but operate world-wide.&lt;/p&gt;
-&lt;h2&gt;Fellowship program&lt;/h2&gt;
-&lt;p&gt;The Fall 2020 cohort runs between October 5 - December 21 and we're already
-into the Contributing phase of the program.
-Fellow students will be working on
-&lt;a href="https://github.com/kiwitcms/Kiwi/issues"&gt;open issues&lt;/a&gt; from our backlog with
-a focus on tasks from our
-&lt;a href="https://github.com/kiwitcms/Kiwi/milestone/4"&gt;open source bounty program&lt;/a&gt;
-but they can really work on any open task!&lt;/p&gt;
-&lt;p&gt;Once a pull request has been made it will undergo first round code review
-by &lt;a href="https://github.com/flosincapite"&gt;&lt;em&gt;Cory Massaro&lt;/em&gt;&lt;/a&gt;
-who is the dedicated MLH Python mentor. Once Cory gives the +1
-each pull request will be reviewed by a member of the Kiwi TCMS core team like usual.&lt;/p&gt;
-&lt;p&gt;To minimize the risk of conflicts between contributors we are going to apply
-the following rules:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Each MLH fellow would add a comment on the issue they are
-  interested in (applies to other contributors too);&lt;/li&gt;
-&lt;li&gt;The issue will be assigned to them (new);&lt;/li&gt;
-&lt;li&gt;The issue will be labeled with the
-  &lt;a href="https://github.com/kiwitcms/Kiwi/issues?q=is%3Aopen+is%3Aissue+label%3A%22MLH+Fellowship%22"&gt;&lt;strong&gt;MLH Fellowship&lt;/strong&gt;&lt;/a&gt;
-  label (new);&lt;/li&gt;
-&lt;li&gt;The following comment will be added:
-    &lt;em&gt;This issue/bounty has been assigned to an MLH fellow who is currently
-    working on it. Pull requests towards the same issue from other contributors
-    will not be considered at this time. Please pick something else to work on!&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Upon successful completion of tasks all MLH fellows will be eligible to claim their
-bounties via &lt;a href="https://opencollective.com/kiwitcms"&gt;our Open Collective page&lt;/a&gt;. This is
-the same process other contributors go through, there is no difference.&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS commits 2 core-team members who will serve office hours
-on the &lt;a href="https://discord.gg/w7F55kn"&gt;MLH Fellowship Discord&lt;/a&gt; server for
-couple of hours per week in order to answer questions and keep the ball rolling.
-We also commit to having bi-weekly meetings with MLH mentor(s) during the
-duration of the program.&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS would also like to thank our friend
-&lt;a href="https://twitter.com/eddiejaoude"&gt;Eddie Jaoude&lt;/a&gt; for putting us in touch with MLH
-and helping bring this partnership to reality. Thank you Eddie!&lt;/p&gt;
 &lt;h2&gt;Help us do more&lt;/h2&gt;
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!&lt;/p&gt;
