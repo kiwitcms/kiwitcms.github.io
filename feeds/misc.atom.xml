@@ -1,5 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-07-21T19:30:00+03:00</updated><entry><title>SiteGround uses Kiwi TCMS as central repository of testing knowledge</title><link href="/blog/kiwi-tcms-team/2026/07/21/siteground-uses-kiwi-tcms-as-central-repository-of-testing-knowledge/" rel="alternate"/><published>2026-07-21T19:30:00+03:00</published><updated>2026-07-21T19:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-21:/blog/kiwi-tcms-team/2026/07/21/siteground-uses-kiwi-tcms-as-central-repository-of-testing-knowledge/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;SiteGround + Kiwi TCMS logos&amp;quot;" src="/images/customers/siteground+kiwitcms.png" title="SiteGround + Kiwi TCMS logos"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-07-23T00:26:00+03:00</updated><entry><title>Kiwi TCMS 16.2</title><link href="/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-162/" rel="alternate"/><published>2026-07-23T00:26:00+03:00</published><updated>2026-07-23T00:26:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-23:/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-162/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.2!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes multiple security related updates,
+several improvements, database migrations, API changes and bug fixes.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.2!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes multiple security related updates,
+several improvements, database migrations, API changes and bug fixes.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  1296a8044fcb    863MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-16-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 16.1&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update Django from 6.0.6 to 6.0.7&lt;/li&gt;
+&lt;li&gt;Update node_modules/fast-uri from 3.1.3 to 3.1.4&lt;/li&gt;
+&lt;li&gt;Make admin pages, views and API methods tenant aware so that
+they only show users which are authorized for the current tenant. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4410"&gt;Issue #4410&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Restrict field arguments for API method calls. See
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-554x-3chh-x3h9"&gt;GHSA-554x-3chh-x3h9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove handling for &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;?next=&lt;/span&gt;&lt;/tt&gt; parameter in Confirm view. See
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-gcwf-c25f-p9rv"&gt;GHSA-gcwf-c25f-p9rv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve how upload validator interprets chunks for large files. See
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-cjrx-h8r2-jgc7"&gt;GHSA-cjrx-h8r2-jgc7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve parsing for &lt;tt class="docutils literal"&gt;tracker_from_url()&lt;/tt&gt; helper. See
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-3qxv-9j3q-c68v"&gt;GHSA-3qxv-9j3q-c68v&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django-modern-rpc from 1.1.0 to 2.1.0&lt;/li&gt;
+&lt;li&gt;Update tzdata from 2026.2 to 2026.3&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack from 5.107.2 to 5.108.4&lt;/li&gt;
+&lt;li&gt;Update node_modules/webpack-cli from 7.0.3 to 7.2.1&lt;/li&gt;
+&lt;li&gt;On TestRun Admin page when clicking the &amp;quot;+ Add test run&amp;quot; button redirect to
+the New Test Run page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;Component.create()&lt;/tt&gt; no longer accepts the &lt;tt class="docutils literal"&gt;initial_qa_contact&lt;/tt&gt;
+field&lt;/li&gt;
+&lt;li&gt;Method &lt;tt class="docutils literal"&gt;Component.filter()&lt;/tt&gt; no longer returns the &lt;tt class="docutils literal"&gt;initial_qa_contact&lt;/tt&gt;
+field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;initial_qa_contact&lt;/tt&gt; field from Component model - not used anywhere&lt;/li&gt;
+&lt;li&gt;Introduce new migration &lt;tt class="docutils literal"&gt;management.0013_remove_initial_qa_contact&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fix broken URL in documentation. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4401"&gt;Issue #4401&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update actions/setup-node from 6 to 7&lt;/li&gt;
+&lt;li&gt;Update locust from 2.44.4 to 2.46.1&lt;/li&gt;
+&lt;li&gt;Update pylint-django from 2.7.0 to 2.8.0&lt;/li&gt;
+&lt;li&gt;Add JSON-RPC tests for &lt;tt class="docutils literal"&gt;User.filter&lt;/tt&gt; API method&lt;/li&gt;
+&lt;li&gt;Add test case for Environment Admin page&lt;/li&gt;
+&lt;li&gt;Adjust calls to &lt;tt class="docutils literal"&gt;format_html()&lt;/tt&gt; to always pass arguments&lt;/li&gt;
+&lt;li&gt;Replace &lt;tt class="docutils literal"&gt;mark_safe()&lt;/tt&gt; with &lt;tt class="docutils literal"&gt;format_html()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Refactor API methods for compatibility with django-modern-rpc v2&lt;/li&gt;
+&lt;li&gt;Refactor HTML escape logic with class-based &lt;tt class="docutils literal"&gt;KiwiTCMSHandlerMixin&lt;/tt&gt; base for
+the existing custom API handlers&lt;/li&gt;
+&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;User = get_user_model()&lt;/tt&gt; assignments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v16-1-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v16.1-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v16.2&lt;/li&gt;
+&lt;li&gt;Update certbot from 5.6.0 to 5.7.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 4.5.0 to 4.7.0&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk from 2.63.0 to 2.66.0&lt;/li&gt;
+&lt;li&gt;Update social-auth-app-django from 5.9.0 to 6.0.0 - login views now only accept
+POST requests!&lt;/li&gt;
+&lt;li&gt;Refactor social-auth login buttons to forms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/version          16.2 (aarch64)          67362bc2085e    22 Jul 2026     716MB
+hub.kiwitcms.eu/kiwitcms/version          16.2 (x86_64)           133f2a8a46e5    22 Jul 2026     697MB
+hub.kiwitcms.eu/kiwitcms/enterprise       16.2-mt (aarch64)       31dce251b9a8    22 Jul 2026     915MB
+hub.kiwitcms.eu/kiwitcms/enterprise       16.2-mt (x86_64)        6f1d64253383    22 Jul 2026     893MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"/><category term="releases"/></entry><entry><title>SiteGround uses Kiwi TCMS as central repository of testing knowledge</title><link href="/blog/kiwi-tcms-team/2026/07/21/siteground-uses-kiwi-tcms-as-central-repository-of-testing-knowledge/" rel="alternate"/><published>2026-07-21T19:30:00+03:00</published><updated>2026-07-21T19:30:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-21:/blog/kiwi-tcms-team/2026/07/21/siteground-uses-kiwi-tcms-as-central-repository-of-testing-knowledge/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;SiteGround + Kiwi TCMS logos&amp;quot;" src="/images/customers/siteground+kiwitcms.png" title="SiteGround + Kiwi TCMS logos"&gt;&lt;/p&gt;
 &lt;p&gt;SiteGround is a technology company founded in 2004 that helps individuals,
 entrepreneurs, and businesses build and grow their online presence.
 Our goal is to provide customers with the tools they need to create, manage, and grow their online businesses from a single platform.&lt;/p&gt;
@@ -10924,61 +11063,4 @@ please help us!&lt;/p&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS is partnering with Vola Software</title><link href="/blog/kiwi-tcms-team/2020/10/15/kiwi-tcms-is-partnering-with-vola-software/" rel="alternate"/><published>2020-10-15T15:51:00+03:00</published><updated>2020-10-15T15:51:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-15:/blog/kiwi-tcms-team/2020/10/15/kiwi-tcms-is-partnering-with-vola-software/</id><summary type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with
-&lt;a href="https://volasoftware.com/"&gt;Vola Software&lt;/a&gt; to provide 2 interns with
-opportunities for hacking open source and bootstrapping their careers!&lt;/p&gt;
-&lt;p&gt;Vola Software is a custom software development company
-in one of the poorest regions of the European Union and a long-time …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are happy to announce that Kiwi TCMS is going to partner with
-&lt;a href="https://volasoftware.com/"&gt;Vola Software&lt;/a&gt; to provide 2 interns with
-opportunities for hacking open source and bootstrapping their careers!&lt;/p&gt;
-&lt;p&gt;Vola Software is a custom software development company
-in one of the poorest regions of the European Union and a long-time contributor
-to their local ecosystem via
-&lt;a href="https://school.vratsasoftware.com/"&gt;Vratsa Software Community&lt;/a&gt;.
-They are located in Vratsa, Bulgaria.&lt;/p&gt;
-&lt;h2&gt;Internship program&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/Allexander203"&gt;Alexander Tsvetanov&lt;/a&gt; and
-&lt;a href="https://github.com/vladi1337"&gt;Vladislav Ankov&lt;/a&gt; are joining the Kiwi TCMS team
-for a 10 month adventure until the end of July 2021 with the opportunity
-to continue for another year afterwards!&lt;/p&gt;
-&lt;p&gt;Both Sasho and Vladi are students in the Professional Technical Gymnasium
-in Vratsa and are required to work part-time as junior software developers during the
-last 2 years of their education. Given that they have very limited practical
-experience and the additional red tape around hiring youngsters many software
-companies directly avoid such kind of relationship. This creates a catch-22
-circle for both employers who are looking to hire somewhat experienced young people
-and youngsters who are looking to advance their practical skills.&lt;/p&gt;
-&lt;p&gt;Here's where Kiwi TCMS steps-in! What better way to improve practical knowledge
-than contributing to an actively used and actively maintained open source software!
-We are nearing the 200K downloads mark on Docker Hub so changes made by
-Sasho and Vladi will be visible to a very big pool of our users and customers!&lt;/p&gt;
-&lt;p&gt;Both have already started their open source adventure last week and are currently
-going through some training. However they were faced with real problems which
-resulted in
-&lt;a href="https://github.com/python-bugzilla/python-bugzilla/issues/134"&gt;bug discovery&lt;/a&gt;
-and a
-&lt;a href="https://github.com/python-bugzilla/python-bugzilla/pull/135"&gt;pull request&lt;/a&gt; for
-&lt;strong&gt;python-bugzilla&lt;/strong&gt; underlined by a
-&lt;a href="https://bugs.python.org/issue41965"&gt;20 years old issue in Python&lt;/a&gt;.
-How's that for a start ?&lt;/p&gt;
-&lt;h2&gt;Administrative&lt;/h2&gt;
-&lt;p&gt;Vola Software is the direct employer for Sasho and Vladi because they have the
-necessary permits and experience required for hiring youngsters. Kiwi TCMS is
-the direct technical mentor and will be acting as a customer to Vola Software!&lt;/p&gt;
-&lt;p&gt;Vola Software will be paying a minimal salary to our interns as required by law.
-Kiwi TCMS will reimburse the full amount while Vola Software
-will be covering their accounting and administrative expenses.
-Both Sasho and Vladi will also be eligible for our
-&lt;a href="/blog/tags/bounty-program/"&gt;open source bounty-program&lt;/a&gt; as an extra stimulation!&lt;/p&gt;
-&lt;p&gt;All expenses will be fully transparent and visible via
-&lt;a href="https://opencollective.com/kiwitcms/expenses/"&gt;our Open Collective page&lt;/a&gt;!&lt;/p&gt;
-&lt;h2&gt;Help us do more&lt;/h2&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/><category term="bounty-program"/></entry></feed>
+Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/></entry></feed>
