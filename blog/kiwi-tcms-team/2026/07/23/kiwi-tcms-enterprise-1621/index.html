@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Authors</title>
+        <title>Kiwi TCMS - Kiwi TCMS Enterprise 16.2.1</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-Frame-Options" content="deny">
         <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
@@ -11,6 +11,29 @@
                 top.location = window.location;
             }
         </script>
+    
+
+
+        <meta name="description" content="fixes OAuth login redirects" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="tags" content="releases" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS Enterprise 16.2.1">
+            <meta name="twitter:description" content="fixes OAuth login redirects">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/" />
+        <meta property="og:title" content="Kiwi TCMS Enterprise 16.2.1" />
+        <meta property="article:published_time" content="2026-07-23 15:35:00+03:00">
+            <meta property="og:description" content="fixes OAuth login redirects">
+
+            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
         <link href="/theme/style/responsive-1440.css" rel="stylesheet">
@@ -99,18 +122,84 @@
         </nav>
 
         <!-- content -->
+    <section id="blog-article">
+        <h1 class="top-header">Kiwi TCMS Enterprise 16.2.1</h1>
+        <h2 class="top-subheader">fixes OAuth login redirects</h2>
 
-    <section id="blog-list">
-        <h1 class="top-header">Blog authors</h1>
-        <a href="/blog/atodorov/" rel="bookmark">
-            <h2 class="top-subheader">Alexander Todorov (21)</h2>
-        </a>
-        <a href="/blog/kiwi-tcms-team/" rel="bookmark">
-            <h2 class="top-subheader">Kiwi TCMS Team (173)</h2>
-        </a>
-        <a href="/blog/malcolm-shore/" rel="bookmark">
-            <h2 class="top-subheader">Malcolm Shore (1)</h2>
-        </a>
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Thu 23 July 2026
+                under
+                    <a href="https://kiwitcms.org/blog/tags/releases/">releases</a>
+        </p>
+
+        <article class="content">
+            <p>Dear testers, we're happy to announce Kiwi TCMS Enterprise version 16.2.1-mt!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which fixes an OAuth login redirect issue.</p>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-v16-2-mt">
+<h2>Changes since Kiwi TCMS Enterprise v16.2-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v16.2</li>
+<li>Revert social-auth-app-django back to 5.9.0. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4466">Issue #4466</a></li>
+<li>Update kiwitcms-tenants from 4.7.0 to 4.7.1</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/enterprise       16.2.1-mt (aarch64)     fcc6005e3df7    23 Jul 2026     915MB
+hub.kiwitcms.eu/kiwitcms/enterprise       16.2.1-mt (x86_64)      878c666eabec    23 Jul 2026     893MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all news;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+</ul>
+</div>
+
+        </article>
+    </section>
+
+    <section class="after-content">
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
+
+    <section class="after-content">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
     </section>
 
         <footer>

@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-07-23T00:26:00+03:00</updated><entry><title>Kiwi TCMS 16.2</title><link href="/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-162/" rel="alternate"/><published>2026-07-23T00:26:00+03:00</published><updated>2026-07-23T00:26:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-23:/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-162/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.2!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-07-23T15:35:00+03:00</updated><entry><title>Kiwi TCMS Enterprise 16.2.1</title><link href="/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/" rel="alternate"/><published>2026-07-23T15:35:00+03:00</published><updated>2026-07-23T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-23:/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS Enterprise version 16.2.1-mt!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which fixes an OAuth login redirect issue.&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v16-2-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v16.2-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v16.2&lt;/li&gt;
+&lt;li&gt;Revert social-auth-app-django back to 5.9.0. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4466"&gt;Issue #4466 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS Enterprise version 16.2.1-mt!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which fixes an OAuth login redirect issue.&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v16-2-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v16.2-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v16.2&lt;/li&gt;
+&lt;li&gt;Revert social-auth-app-django back to 5.9.0. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4466"&gt;Issue #4466&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 4.7.0 to 4.7.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/enterprise       16.2.1-mt (aarch64)     fcc6005e3df7    23 Jul 2026     915MB
+hub.kiwitcms.eu/kiwitcms/enterprise       16.2.1-mt (x86_64)      878c666eabec    23 Jul 2026     893MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us grow!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Kiwi TCMS 16.2</title><link href="/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-162/" rel="alternate"/><published>2026-07-23T00:26:00+03:00</published><updated>2026-07-23T00:26:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-23:/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-162/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.2!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a minor version release which includes multiple security related updates,
 several improvements, database migrations, API changes and bug fixes.&lt;/p&gt;
@@ -10976,91 +11024,4 @@ please help us!&lt;/p&gt;
   and follow all project news;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>SEDC Academy For Software Testing is running Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/10/18/sedc-academy-for-software-testing-is-running-kiwi-tcms/" rel="alternate"/><published>2020-10-18T17:25:00+03:00</published><updated>2020-10-18T17:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-18:/blog/kiwi-tcms-team/2020/10/18/sedc-academy-for-software-testing-is-running-kiwi-tcms/</id><summary type="html">&lt;p&gt;Hello testers,
-recently we had a chat with
-&lt;a href="https://www.linkedin.com/in/gjorezaharchev/"&gt;Gjore Zaharchev&lt;/a&gt;,
-a QA manager at Seavus and Testing Coach at
-SEDC Software Testing Academy in Skopje. Here is their story
-and how they use Kiwi TCMS!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.sedc.mk/"&gt;Seavus Educational and Development Center&lt;/a&gt;
-is a private company as part of the Seavus Group …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers,
-recently we had a chat with
-&lt;a href="https://www.linkedin.com/in/gjorezaharchev/"&gt;Gjore Zaharchev&lt;/a&gt;,
-a QA manager at Seavus and Testing Coach at
-SEDC Software Testing Academy in Skopje. Here is their story
-and how they use Kiwi TCMS!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.sedc.mk/"&gt;Seavus Educational and Development Center&lt;/a&gt;
-is a private company as part of the Seavus Group and a specialized
-training center for education of staff in the fields of programming,
-design, computer networks and software testing.
-Around 90 students pass through their software testing academy every year
-with 60 students enrolled thus far. The training program is 6 months
-and covers many basic IT skills, manual testing, ISTQB fundamentals and
-automation testing. SEDC is located in Skopje, North Macedonia.&lt;/p&gt;
-&lt;h2&gt;Hands-On Lab Activities&lt;/h2&gt;
-&lt;p&gt;The study program includes multiple individual and team projects, intermediate
-exams and a final project. These are intended to exercise the most commonly used
-test design techniques and practice writing up the test scenarios. All
-scenarios are written directly in Kiwi TCMS. We've even seen test plans and
-test cases created during Christmas and the New Year holidays last year!&lt;/p&gt;
-&lt;p&gt;The software under test is usually the programs developed by students
-from our &lt;em&gt;Academy for Programming&lt;/em&gt;, says Gjore.
-Later in the program we use real websites in order to show some bugs in the
-wild, he continues. On occasion students have found interesting problems with the websites of
-&lt;em&gt;Booking.com&lt;/em&gt; and &lt;em&gt;WizzAir&lt;/em&gt;. They've also managed to find a critical issue on
-one of our local systems. These are the trials and tribulations of
-teaching &amp;amp; testing in the wild.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Kiwi TCMS team still remembers one of Alex's training sessions where we used
-the website of an actual cinema. Unfortunately they went out of business
-and shutdown the victimized website right in the middle of the session. ;-)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;Why did you decide to use Kiwi TCMS&lt;/h2&gt;
-&lt;p&gt;When searching for a TCMS platform for the academy one of the decisive
-factors was cost. By being open source Kiwi TCMS has the side benefit of
-having zero initial usage cost which was very important for us.
-Regardless of that Kiwi TCMS is very easy to install &amp;amp; setup using Docker,
-very easy to on-board new users and generally well received by everyone.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a huge benefit for students because they can experiment with Kiwi TCMS
-and immediately see how some items work when executing testing workflows.
-For example they can visualize how a regression test run looks like compared
-to a test run for a critical security fix; or they can simulate working in
-groups to cover execution of a larger test plan.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;What do your students say&lt;/h2&gt;
-&lt;p&gt;Overall they like the workflow and can easily navigate within the user interface.
-They feel very positive because there is no complexity in the system and
-it is very intuitive. One of the areas which often receives questions is
-the ability to record test automation results!&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Answer: Kiwi TCMS has the ability to fetch names and test results directly, via
-plugins for several
-&lt;a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html"&gt;test automation frameworks&lt;/a&gt;
-while others are on our backlog -
-&lt;a href="https://github.com/kiwitcms/Kiwi/issues/692"&gt;TestNG&lt;/a&gt;,
-&lt;a href="https://github.com/kiwitcms/Kiwi/issues/1072"&gt;Jenkins&lt;/a&gt;,
-&lt;a href="https://github.com/kiwitcms/Kiwi/issues/2020"&gt;C#/NUnit&lt;/a&gt;!
-Anyone interested is welcome to &lt;/em&gt;&lt;strong&gt;Subscribe&lt;/strong&gt;&lt;em&gt; to each GitHub issue and follow the progress.
-Some issues are also part of our
-&lt;a href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt; so we urge students to
-take a look and contribute!&lt;/em&gt;&lt;/p&gt;
-&lt;h2&gt;Anything you want to ask our team&lt;/h2&gt;
-&lt;p&gt;At SEDC we'd like to know what are your plans for Kiwi TCMS in the future?&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Answer: Our plans, like our software, are transparent, check-out posts
-&lt;a href="/blog/tags/roadmap/"&gt;tagged roadmap&lt;/a&gt;! For 2020 this is refactoring of the
-last remaining legacy bits, continue work on our Telemetry feature and
-more work towards integration with various bug trackers and test automation
-frameworks. An extension to that is tighter integration with the GitHub
-platform!&lt;/em&gt;&lt;/p&gt;
-&lt;h2&gt;Help us do more&lt;/h2&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt; -
-  project news only, GDPR compliant&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;
-Thanks for reading and happy testing!&lt;/p&gt;</content><category term="misc"/><category term="community"/></entry></feed>
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry></feed>
