@@ -15,6 +15,8 @@ What is a Kiwi TCMS subscription
 - An active recurring subscription is a flat rate! It is charged automatically each billing cycle
     - one-time subscriptions paid via WIRE transfer/reseller partner do not renew automatically
     - one-time subscriptions are charged once and must be purchased again after their period expires
+    - [get in touch with us]({filename}pages/support.markdown) if you would like to pay by WIRE transfer
+      so we can send you the appropriate checkout URL
 
 - You may cancel at any time if you are not happy with the service provided
 - Subscriptions remain active until the period they have been paid for

@@ -19,7 +19,7 @@ where the whole community can help you and benefit from the solutions provided.*
 
 Customers with an active subscription:
 
-- **Email:** `kiwitcms-@-mrsenko.com`
+- **Email:** `kiwitcms-@-mrsenko.com` (remove the `-` characters)
 - *Support language*: English
 - *Working hours*: Depending on [subscription type](/#subscriptions)
 - *Response time*: Depending on [subscription type](/#subscriptions)
