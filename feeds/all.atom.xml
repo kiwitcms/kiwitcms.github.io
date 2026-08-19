@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-07-23T15:35:00+03:00</updated><entry><title>Kiwi TCMS Enterprise 16.2.1</title><link href="/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/" rel="alternate"/><published>2026-07-23T15:35:00+03:00</published><updated>2026-07-23T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-23:/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS Enterprise version 16.2.1-mt!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-08-19T19:50:00+03:00</updated><entry><title>Kiwi TCMS launches Partner Store</title><link href="/blog/kiwi-tcms-team/2026/08/19/kiwi-tcms-launches-partner-store/" rel="alternate"/><published>2026-08-19T19:50:00+03:00</published><updated>2026-08-19T19:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-08-19:/blog/kiwi-tcms-team/2026/08/19/kiwi-tcms-launches-partner-store/</id><summary type="html">&lt;p&gt;&lt;img alt="header image" src="/images/partner_store/header.png"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce the launch of
+&lt;a href="/partners/"&gt;Kiwi TCMS Partner Store&lt;/a&gt; in order to drive more
+business and better serve customers in countries which require local invoicing
+or need to purchase from a local business entity!&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;Partner Store&lt;/em&gt; is hosted via the FastSpring platform, which we're already using …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="header image" src="/images/partner_store/header.png"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce the launch of
+&lt;a href="/partners/"&gt;Kiwi TCMS Partner Store&lt;/a&gt; in order to drive more
+business and better serve customers in countries which require local invoicing
+or need to purchase from a local business entity!&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;Partner Store&lt;/em&gt; is hosted via the FastSpring platform, which we're already using for direct orders,
+and has been integrated with the existing backend processing to allow digital product delivery.&lt;/p&gt;
+&lt;p&gt;The Kiwi TCMS team will be providing technical support and hosting services directly
+to end-customers where such services are included in the existing subscription plans.
+Partners will handle customer payment, invoicing and any additional services/products
+which they offer independently of Kiwi TCMS.&lt;/p&gt;
+&lt;h3&gt;Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;For distributors, resellers and system integrators&lt;/li&gt;
+&lt;li&gt;Registration is self-serve&lt;/li&gt;
+&lt;li&gt;Subscriptions sold via Kiwi TCMS Partner Store are available in 1 or 3 years intervals&lt;/li&gt;
+&lt;li&gt;Higher discount tiers will be announced in future based on Reseller volume&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information checkout the &lt;a href="/partners/"&gt;Kiwi TCMS Partner Store&lt;/a&gt; page!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing please help us grow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS Enterprise 16.2.1</title><link href="/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/" rel="alternate"/><published>2026-07-23T15:35:00+03:00</published><updated>2026-07-23T15:35:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-07-23:/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS Enterprise version 16.2.1-mt!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a minor version release which fixes an OAuth login redirect issue.&lt;/p&gt;
 &lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v16-2-mt"&gt;
@@ -10996,34 +11028,4 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry><entry><title>Kiwi TCMS celebrates 200K+ downloads</title><link href="/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/" rel="alternate"/><published>2020-10-26T14:00:00+02:00</published><updated>2020-10-26T14:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-10-26:/blog/kiwi-tcms-team/2020/10/26/kiwi-tcms-celebrates-200k-downloads/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;200K banner&amp;quot;" src="/images/200K/banner.png" title="200K banner"&gt;&lt;/p&gt;
-&lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
-200000 times! You can check the real-time stats
-&lt;a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/"&gt;here&lt;/a&gt;.
-To celebrate with us subscribe for a
-&lt;a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant"&gt;SaaS&lt;/a&gt; and/or
-&lt;a href="https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription"&gt;Enterprise&lt;/a&gt;
-subscriptions using coupon code &lt;strong&gt;200KOFF&lt;/strong&gt; at checkout!&lt;/p&gt;
-&lt;p&gt;Thank you very much and Happy Testing!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;200K banner&amp;quot;" src="/images/200K/banner.png" title="200K banner"&gt;&lt;/p&gt;
-&lt;p&gt;We are happy to announce that Kiwi TCMS has been downloaded more than
-200000 times! You can check the real-time stats
-&lt;a href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/"&gt;here&lt;/a&gt;.
-To celebrate with us subscribe for a
-&lt;a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant"&gt;SaaS&lt;/a&gt; and/or
-&lt;a href="https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription"&gt;Enterprise&lt;/a&gt;
-subscriptions using coupon code &lt;strong&gt;200KOFF&lt;/strong&gt; at checkout!&lt;/p&gt;
-&lt;p&gt;Thank you very much and Happy Testing!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-  and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry></feed>
+</content><category term="misc"/><category term="releases"/></entry></feed>
