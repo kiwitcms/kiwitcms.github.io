@@ -17,7 +17,7 @@ where the whole community can help you and benefit from the solutions provided.*
 *If community support is insufficient for you, please check the
 [available subscriptions](/#subscriptions)!*
 
-Customers with an active subscription:
+Customers or partners with an active subscription:
 
 - **Email:** `kiwitcms-@-mrsenko.com` (remove the `-` characters)
 - *Support language*: English
