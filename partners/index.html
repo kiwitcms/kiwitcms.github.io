@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Partner Store</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-Frame-Options" content="deny">
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
+        <script>
+            if (top != window) {
+                top.location = window.location;
+            }
+        </script>
+        <!-- Custom Styles -->
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
+
+        <script defer data-domain="kiwitcms.org" src="https://plausible.io/js/script.js"></script>
+
+        <script
+            id="fsc-api"
+            src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.5/fastspring-builder.min.js"
+            type="text/javascript"
+            data-storefront="mrsenko.onfastspring.com/popup-kiwitcms">
+        </script>
+    </head>
+    <body class="features">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            </a>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" >Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" >Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#subscriptions">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- content -->
+        
+        <section>
+            <h1>Registration and reseller login</h1>
+            <div>
+                <p>
+                    In order to register as a reseller go to the
+                    <a href="https://sites.fastspring.com/kiwitcms-partner/signup">Kiwi TCMS Partner Store</a>
+                    and complete the signup process yourself. Usually a Reseller becomes active immediately after
+                    registration.
+                </p>
+
+                <br />
+
+                <p>
+                    In order to login into <em>Kiwi TCMS Partner Store</em> go to
+                    <a href="https://login.fastspring.com/identity/auth/login">https://login.fastspring.com/identity/auth/login</a>
+                    and type the email/password used during registration.
+                </p>
+            </div>
+
+            <h1>Placing an order</h1>
+            <div>
+                <p>
+                    <strong>Step 01:</strong> Login into <a href="https://login.fastspring.com/identity/auth/login">Kiwi TCMS Partner Store</a>!
+                    You should see the <em>Welcome</em> page:
+                </p>
+                <img src="/images/partner_store/01_welcome.png" style="width:60%;">
+                <br><br><br>
+
+                <p>
+                    <strong>Step 02:</strong> Click <em>Create New Order</em>; fill-in the <em>Reference</em> field; select <em>Product</em>; click <em>Save</em>.
+                    <br>
+                    <strong>Important:</strong> provide end-customer email address in the <em>Reference</em> field;
+                    DO NOT combine multiple products in the same order!
+                </p>
+                <img src="/images/partner_store/02_create_new_order.png" style="width:60%;">
+                <br><br><br>
+
+                <p>
+                    <strong>Step 03:</strong> Open Order by clicking on it inside the <em>Recent and Pending Orders</em> box
+                </p>
+                <img src="/images/partner_store/03_recent_and_pending_orders.png" style="width:60%;">
+                <br><br><br>
+
+                <p>
+                    <strong>Step 04:</strong> Review Order; inspect <em>Reference</em> field; click <em>Confirm</em>
+                </p>
+                <img src="/images/partner_store/04_review_order_and_confirm.png" style="width:60%;">
+                <br><br><br>
+
+                <p>
+                    <strong>Step 05:</strong> Review Pending Order; inspect <em>Reference</em> field; <em>View Receipt/Invoice</em>
+                </p>
+                <img src="/images/partner_store/05_review_order_before_payment.png" style="width:60%;">
+                <br><br><br>
+
+                <p>
+                    <strong>Step 06:</strong> Review Invoice; inspect <em>PO Number:</em> field; save it for your own records
+                </p>
+                <img src="/images/partner_store/06_review_invoice.png" style="width:60%;">
+                <br><br><br>
+
+                <p>
+                    <strong>Step 07:</strong> Click <em>Pay Now</em>; Kiwi TCMS
+                    <a href="https://github.com/kiwitcms/github-marketplace/">payment processing backend</a>
+                    will enable product access for end-customer email address
+                </p>
+                <img src="/images/partner_store/07_payment_methods.png" style="width:60%;">
+                <br><br><br>
+
+                <p>
+                    <strong>Step 08:</strong> Follow up with end-customer. Here's an example message, note the [placeholder fields]:
+                    <br><br>
+
+                    <pre>
+Dear [Customer Name],
+thank you for purchasing a Kiwi TCMS subscription with us.
+
+Here's some important information:
+
+1) In case you have never logged in before an account was created for you automatically and
+   assigned the same email address used during purchase, [address-from@reference-field.com]!
+
+   You can login with a social account which has the same email address or go to
+   https://public.tenant.kiwitcms.org/accounts/passwordreset/ to reset your password.
+   The password reset email message also contains your username!
+
+2) Explore your private repository credentials by visiting
+   https://public.tenant.kiwitcms.org/github/marketplace/plans/ while logged in.
+
+   For more information about private Docker repositories see https://kiwitcms.org/containers/
+   For more information about private package repositories see https://kiwitcms.org/packages/
+
+3) Create your Private Tenant by visiting
+   https://public.tenant.kiwitcms.org/github/marketplace/create/tenant/ while logged in.
+
+4) If you are having troubles please contact the Kiwi TCMS support team, see https://kiwitcms.org/support/
+
+
+Happy Testing,
+[Reseller Inc]
+                    </pre>
+                </p>
+            </div>
+
+            <h1>Important items</h1>
+            <ul style="font-size: 20px">
+                <li>
+                    Kiwi TCMS product delivery is unattended and REQUIRES an email address!
+                </li>
+
+                <li>
+                    The <em>Reference</em> field identifies end-customer to Kiwi TCMS.
+                    If incorrect or missing digital product delivery WILL NOT work!
+                </li>
+
+                <li>
+                    Default price on <em>Kiwi TCMS Partner Store</em> is in USD
+                </li>
+
+                <li>
+                    <em>Kiwi TCMS Partner Store</em> may be recalculating price in local currency depending on country
+                </li>
+
+                <li>
+                    Subscriptions sold via <em>Kiwi TCMS Partner Store</em> are available in 1 or 3 years intervals only
+                </li>
+
+                <li>
+                    Subscriptions sold via <em>Kiwi TCMS Partner Store</em> are not recurring billing items
+                    and must be renewed by placing a new order before they expire
+                </li>
+
+                <li>
+                    Reseller may convert to local currency and/or charge VAT/tax where required.
+                    Price for end-customer should be similar to regular price listed on this website
+                </li>
+
+                <li>
+                    Reseller is free to charge additional fee for extra services and value-add offerings
+                    they provide to end-customer independently of Kiwi TCMS
+                </li>
+
+                <li>
+                    Higher discount tiers will be announced in future based on Reseller volume
+                </li>
+            </ul>
+
+
+            <h1>Reseller price list</h1>
+            <table class="table table-striped table-hover table-condensed">
+                <tbody>
+                    <tr>
+                        <th>Subscription
+                            <a href="/#subscriptions">
+                                <i class="las la-link"></i>
+                            </a>
+                        </th>
+                        <th>Regular price USD</th>
+                        <th>Reseller price USD</th>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <em>
+                                Self Support for 3 years
+                            </em>
+                        </th>
+                        <td>855</td>
+                        <td>770</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <em>
+                                Private Tenant for 1 year
+                            </em>
+                        </th>
+                        <td>837</td>
+                        <td>753</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <em>
+                                Private Tenant for 3 years
+                            </em>
+                        </th>
+                        <td>2511</td>
+                        <td>2260</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <em>
+                                Enterprise for 1 year
+                            </em>
+                        </th>
+                        <td>6480</td>
+                        <td>5508</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <em>
+                                Enterprise for 3 years
+                            </em>
+                        </th>
+                        <td>19440</td>
+                        <td>16524</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=7386a67a-a689-40df-a268-b03ada69e169" alt="">
+            <div class="legal">
+                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p>
+                    <a href="/legal/">Legal</a> |
+                    <a href="/privacy/">Privacy</a> |
+                    <a href="/terms/">Terms</a></p>
+            </div>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://twitter.com/KiwiTCMS">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Join</h3>
+                <a href="https://www.reddit.com/r/KiwiTCMS/">r/KiwiTCMS</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581" class="btn ghost-btn">Sign me up</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
+
+            <link rel="stylesheet" href="/theme/style/tables.css">
+    </body>
+</html>
