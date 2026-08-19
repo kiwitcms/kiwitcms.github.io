@@ -29,3 +29,8 @@ Latest development is done by
 [contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors).
 
 The Kiwi TCMS logo has been designed by Milos Babic.
+
+# Partners
+
+If you'd like to become a Reseller partner please see information about
+[Kiwi TCMS Partner Store]({filename}partners.html)!

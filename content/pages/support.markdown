@@ -24,3 +24,10 @@ Customers with an active subscription:
 - *Working hours*: Depending on [subscription type](/#subscriptions)
 - *Response time*: Depending on [subscription type](/#subscriptions)
 - *Requests must include your email/GitHub username used as part of the subscription*
+
+
+# Partners
+
+Kiwi TCMS provides technical support to end-customers directly!
+If you'd like to become a Reseller partner and/or provide additional services
+please see information about [Kiwi TCMS Partner Store]({filename}partners.html)!
