@@ -247,14 +247,14 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  1296a8044fcb    863MB
 <li>Make admin pages, views and API methods tenant aware so that
 they only show users which are authorized for the current tenant. Fixes
 <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4410">Issue #4410</a></li>
-<li>Restrict field arguments for API method calls. See
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-554x-3chh-x3h9">GHSA-554x-3chh-x3h9</a></li>
-<li>Remove handling for <tt class="docutils literal"><span class="pre">?next=</span></tt> parameter in Confirm view. See
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-gcwf-c25f-p9rv">GHSA-gcwf-c25f-p9rv</a></li>
-<li>Improve how upload validator interprets chunks for large files. See
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-cjrx-h8r2-jgc7">GHSA-cjrx-h8r2-jgc7</a></li>
-<li>Improve parsing for <tt class="docutils literal">tracker_from_url()</tt> helper. See
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-3qxv-9j3q-c68v">GHSA-3qxv-9j3q-c68v</a></li>
+<li>Restrict field arguments for API method calls. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-554x-3chh-x3h9">CVE-2026-77437</a></li>
+<li>Remove handling for <tt class="docutils literal"><span class="pre">?next=</span></tt> parameter in Confirm view. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-gcwf-c25f-p9rv">CVE-2026-77433</a></li>
+<li>Improve how file upload validator interprets chunks for large files. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-cjrx-h8r2-jgc7">CVE-2026-77434</a></li>
+<li>Improve parsing for <tt class="docutils literal">tracker_from_url()</tt> helper. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-3qxv-9j3q-c68v">CVE-2026-77435</a></li>
 </ul>
 </div>
 <div class="section" id="improvements">

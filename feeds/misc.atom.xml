@@ -115,14 +115,14 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  1296a8044fcb    863MB
 &lt;li&gt;Make admin pages, views and API methods tenant aware so that
 they only show users which are authorized for the current tenant. Fixes
 &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4410"&gt;Issue #4410&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Restrict field arguments for API method calls. See
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-554x-3chh-x3h9"&gt;GHSA-554x-3chh-x3h9&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Remove handling for &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;?next=&lt;/span&gt;&lt;/tt&gt; parameter in Confirm view. See
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-gcwf-c25f-p9rv"&gt;GHSA-gcwf-c25f-p9rv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Improve how upload validator interprets chunks for large files. See
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-cjrx-h8r2-jgc7"&gt;GHSA-cjrx-h8r2-jgc7&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Improve parsing for &lt;tt class="docutils literal"&gt;tracker_from_url()&lt;/tt&gt; helper. See
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-3qxv-9j3q-c68v"&gt;GHSA-3qxv-9j3q-c68v&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Restrict field arguments for API method calls. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-554x-3chh-x3h9"&gt;CVE-2026-77437&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove handling for &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;?next=&lt;/span&gt;&lt;/tt&gt; parameter in Confirm view. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-gcwf-c25f-p9rv"&gt;CVE-2026-77433&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve how file upload validator interprets chunks for large files. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-cjrx-h8r2-jgc7"&gt;CVE-2026-77434&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve parsing for &lt;tt class="docutils literal"&gt;tracker_from_url()&lt;/tt&gt; helper. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-3qxv-9j3q-c68v"&gt;CVE-2026-77435&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="improvements"&gt;
