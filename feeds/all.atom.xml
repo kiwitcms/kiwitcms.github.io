@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-08-24T12:36:00+03:00</updated><entry><title>Kiwi TCMS 16.3</title><link href="/blog/kiwi-tcms-team/2026/08/24/kiwi-tcms-163/" rel="alternate"/><published>2026-08-24T12:36:00+03:00</published><updated>2026-08-24T12:36:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-08-24:/blog/kiwi-tcms-team/2026/08/24/kiwi-tcms-163/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.3!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-08-27T14:22:00+03:00</updated><entry><title>3-year plans and pay by Wire Transfer</title><link href="/blog/kiwi-tcms-team/2026/08/27/3-year-plans-and-pay-by-wire-transfer/" rel="alternate"/><published>2026-08-27T14:22:00+03:00</published><updated>2026-08-27T14:22:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-08-27:/blog/kiwi-tcms-team/2026/08/27/3-year-plans-and-pay-by-wire-transfer/</id><summary type="html">&lt;p&gt;&lt;img alt="header image" src="/images/partner_store/3yr_plans.png"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce the launch of 3-year plans for Kiwi TCMS!
+These are available for all subscription tiers; come with built-in savings
+and support payment by WIRE transfer.&lt;/p&gt;
+&lt;h3&gt;Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cost equal to 3 x 1-year&lt;/li&gt;
+&lt;li&gt;Yearly savings already built-in&lt;/li&gt;
+&lt;li&gt;Higher discount tiers will be announced in future&lt;/li&gt;
+&lt;li&gt;3-year …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="header image" src="/images/partner_store/3yr_plans.png"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce the launch of 3-year plans for Kiwi TCMS!
+These are available for all subscription tiers; come with built-in savings
+and support payment by WIRE transfer.&lt;/p&gt;
+&lt;h3&gt;Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cost equal to 3 x 1-year&lt;/li&gt;
+&lt;li&gt;Yearly savings already built-in&lt;/li&gt;
+&lt;li&gt;Higher discount tiers will be announced in future&lt;/li&gt;
+&lt;li&gt;3-year plans are one-time purchase and will NOT renew automatically&lt;/li&gt;
+&lt;li&gt;3-year plans can be renewed by placing a new order before they expire&lt;/li&gt;
+&lt;li&gt;Suported payment methods: Credit / Debit card, PayPal, WIRE transfer plus
+  Google Pay, Amazon Pay and/or selected local providers based on country&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can find the new 3-year plans in the
+&lt;a href="/#subscriptions"&gt;&lt;em&gt;Subscriptions&lt;/em&gt;&lt;/a&gt; section, near the bottom of each tier:
+&lt;img alt="header image" src="/images/partner_store/pay-for-3yrs.png"&gt;&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing please help us grow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS 16.3</title><link href="/blog/kiwi-tcms-team/2026/08/24/kiwi-tcms-163/" rel="alternate"/><published>2026-08-24T12:36:00+03:00</published><updated>2026-08-24T12:36:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-08-24:/blog/kiwi-tcms-team/2026/08/24/kiwi-tcms-163/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.3!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a minor version release which includes critical security related updates
 and several improvements.&lt;/p&gt;
@@ -2365,8 +2400,6 @@ You can read about the details below.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;one-time subscriptions paid via WIRE transfer/reseller partner do not renew automatically&lt;/li&gt;
 &lt;li&gt;one-time subscriptions are charged once and must be purchased again after their period expires&lt;/li&gt;
-&lt;li&gt;&lt;a href="/support/"&gt;get in touch with us&lt;/a&gt; if you would like to pay by WIRE transfer
-  so we can send you the appropriate checkout URL&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -10905,32 +10938,4 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry><entry><title>Call for participation: Testing and Automation devroom, FOSDEM'21</title><link href="/blog/kiwi-tcms-team/2020/12/02/call-for-participation-testing-and-automation-devroom-fosdem21/" rel="alternate"/><published>2020-12-02T14:55:00+02:00</published><updated>2020-12-02T14:55:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-12-02:/blog/kiwi-tcms-team/2020/12/02/call-for-participation-testing-and-automation-devroom-fosdem21/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2021/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
-&lt;p&gt;Attention open source testers: Testing and Automation devroom at FOSDEM'21
-is happening next year! Call for participation is now open.
-Checkout
-&lt;a href="https://fosdem-testingautomation.github.io/"&gt;https://fosdem-testingautomation.github.io/&lt;/a&gt; for more information!&lt;/p&gt;
-&lt;p&gt;Happy Testing!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;Cfp banner&amp;quot;" src="/images/fosdem/2021/banner.png" title="Cfp banner"&gt;&lt;/p&gt;
-&lt;p&gt;Attention open source testers: Testing and Automation devroom at FOSDEM'21
-is happening next year! Call for participation is now open.
-Checkout
-&lt;a href="https://fosdem-testingautomation.github.io/"&gt;https://fosdem-testingautomation.github.io/&lt;/a&gt; for more information!&lt;/p&gt;
-&lt;p&gt;Happy Testing!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-  and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/><category term="events"/></entry></feed>
+</content><category term="misc"/><category term="releases"/></entry></feed>
