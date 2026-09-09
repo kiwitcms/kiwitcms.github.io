@@ -50,7 +50,8 @@
 	--fa-arrow-left: "\f060";
 	--la-arrow-right: "\f105";
 	--la-quote: "\f10d";
-	--la-twitter: "\f081";
+	/* changed to LinkedIn icon */
+	--la-twitter: "\f0e1";
 	--la-github: "\f092";
 	--la-facebook: "\f082";
 	--la-youtube: "\f431";
