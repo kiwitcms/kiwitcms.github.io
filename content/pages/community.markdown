@@ -3,11 +3,16 @@ url: community/
 save_as: community/index.html
 add_section: True
 
+# Container image
+
+For the  official Kiwi TCMS *Community Edition* container image
+[see this page]({filename}containers.markdown)!
+
 # Community
 
 - **Stack Overflow** tag ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms)
 - **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
-- **Twitter** [@KiwiTCMS](https://twitter.com/KiwiTCMS)
+- **LinkedIn** [#KiwiTCMS](https://www.linkedin.com/company/kiwi-tcms)
 - **Blog** tag ["community"](/blog/tags/community/)
 - **Email** `info-at-kiwitcms.org` ([support]({filename}support.markdown) requests will be ignored)
 

@@ -7,12 +7,13 @@ add_section: True
 Public container image
 ======================
 
-The official upstream Kiwi TCMS container image, aka *Community Edition* is a rolling release
+The official upstream Kiwi TCMS *Community Edition* container image is a rolling release
 and can be freely downloaded via the
 <br>
 `docker pull pub.kiwitcms.eu/kiwitcms/kiwi` command! See
 [Running Kiwi TCMS as a container](https://kiwitcms.readthedocs.io/en/latest/installing_docker.html)
-to get started!
+to get started or
+[read more about it]({filename}../2026-02-18-community-edition-explained.markdown)!
 
 
 Private container images for subscribers

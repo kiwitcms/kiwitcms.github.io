@@ -35,7 +35,8 @@ What is Self Support by Kiwi TCMS
 This is our lowest-tier of support services, where the majority of the work
 falls onto the customer to host and run the Kiwi TCMS application.
 It is an entry-level subscription which begins addressing some of the
-risks associated with running Kiwi TCMS completely unsupported.
+[risks associated]({filename}2026-02-18-community-edition-explained.markdown) with running
+Kiwi TCMS Community Edition.
 
 
 Who is this subscription for
@@ -55,7 +56,8 @@ What do you get
 ---------------
 
 This subscription entitles you to a few more items on top of the regular
-*community edition* version of Kiwi TCMS. Please read for the details below.
+[community edition]({filename}2026-02-18-community-edition-explained.markdown)
+version of Kiwi TCMS. Please read for the details below.
 
 
 What do all of the individual items mean
