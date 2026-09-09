@@ -81,8 +81,7 @@ one-off tasks. In many cases these roles are performed by the same engineer but 
 
 
 **Based on Red Hat Enterprise Linux:** with a *Kiwi TCMS Enterprise* subscription you receive
-an explicit guarantee that the underlying container image is built on top of Red Hat Enterprise Linux.
-There is no such guarantee for other container images produced by the Kiwi TCMS team!
+an explicit guarantee that the underlying container image is built on top of Red Hat Enterprise Linux!
 
 
 **Multiple add-ons:** a *Kiwi TCMS Enterprise* container image ships more functionality than the

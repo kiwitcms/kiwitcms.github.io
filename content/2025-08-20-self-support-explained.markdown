@@ -77,13 +77,18 @@ only a `latest` version for the `x86_64` processor architecture.
 As part of the *Self Support* subscription you get access to a private container repository
 called [kiwitcms/version]({filename}pages/containers.markdown) with version tagged builds
 for `aarch64` and `x86_64` CPU architectures. This gives you more hosting options and makes
-it easier to upgrade to new versions when you decide to do so.
+it easier to upgrade to new versions at your own pace.
 
 
 **Private package repository:** provides access to private package repositories for
 extra add-ons maintained by the Kiwi TCMS team. This is indended for the purposes of building
 your own downstream containers, custom development and/or creating your own non-standard
 deployment configuration! For more information [click here]({filename}pages/packages.markdown)!
+
+
+**Based on Red Hat Enterprise Linux:** with a *Kiwi TCMS Self Support* subscription you receive
+an explicit guarantee that the underlying container image is built on top of Red Hat Enterprise Linux!
+There is no such guarantee for the Kiwi TCMS *Community Edition* container image!
 
 
 **Limited support:** *Self Support* customers do not receive technical support. Help from the
