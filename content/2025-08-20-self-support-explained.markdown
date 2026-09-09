@@ -98,11 +98,9 @@ period of validity ends!
 
 
 **No ads:** regular *community edition* version of Kiwi TCMS comes with built-in advertisement
-from [EthicalAds](https://www.ethicalads.io/) rewards from which are paid out to
-[opencollective.com/kiwitcms](https://opencollective.com/kiwitcms/transactions) for transparency.
-
+from [EthicalAds](https://www.ethicalads.io/).
 Container images from the *Self Support* subscription remove those ads and make the web
-interface cleaner.
+interface cleaner!
 
 
 Happy Testing!

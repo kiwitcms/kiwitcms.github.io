@@ -65,9 +65,7 @@ for more details.
 
 
 **EthicalAds:** the *community edition* version of Kiwi TCMS comes with built-in
-advertisement from [EthicalAds](https://www.ethicalads.io/) rewards from which are
-paid out to [opencollective.com/kiwitcms](https://opencollective.com/kiwitcms/transactions)
-for transparency.
+advertisement from [EthicalAds](https://www.ethicalads.io/).
 
 
 **You assume all risk:** you must understand and accept that open source comes with associated risks.
