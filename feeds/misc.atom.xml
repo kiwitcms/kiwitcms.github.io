@@ -1072,9 +1072,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 &lt;a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html"&gt;GNU General Public License&lt;/a&gt;
 for more details.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;EthicalAds:&lt;/strong&gt; the &lt;em&gt;community edition&lt;/em&gt; version of Kiwi TCMS comes with built-in
-advertisement from &lt;a href="https://www.ethicalads.io/"&gt;EthicalAds&lt;/a&gt; rewards from which are
-paid out to &lt;a href="https://opencollective.com/kiwitcms/transactions"&gt;opencollective.com/kiwitcms&lt;/a&gt;
-for transparency.&lt;/p&gt;
+advertisement from &lt;a href="https://www.ethicalads.io/"&gt;EthicalAds&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;You assume all risk:&lt;/strong&gt; you must understand and accept that open source comes with associated risks.
 To name just a few: our team disappears and stops development;
 security issues stay unresolved; code slowly becomes outdated &amp;amp; may incur technical debt in the case
@@ -2532,7 +2530,8 @@ You can read about the details below.&lt;/p&gt;
 &lt;p&gt;This is our lowest-tier of support services, where the majority of the work
 falls onto the customer to host and run the Kiwi TCMS application.
 It is an entry-level subscription which begins addressing some of the
-risks associated with running Kiwi TCMS completely unsupported.&lt;/p&gt;
+&lt;a href="/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/"&gt;risks associated&lt;/a&gt; with running
+Kiwi TCMS Community Edition.&lt;/p&gt;
 &lt;h2&gt;Who is this subscription for&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Self Support&lt;/em&gt; is suitable for very small teams and individual engineers
 where their Kiwi TCMS instance is not a mission critical piece of infrastructure -
@@ -2543,7 +2542,8 @@ which have no particular requirements other than being able to record and inspec
 test execution results.&lt;/p&gt;
 &lt;h2&gt;What do you get&lt;/h2&gt;
 &lt;p&gt;This subscription entitles you to a few more items on top of the regular
-&lt;em&gt;community edition&lt;/em&gt; version of Kiwi TCMS. Please read for the details below.&lt;/p&gt;
+&lt;a href="/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/"&gt;community edition&lt;/a&gt;
+version of Kiwi TCMS. Please read for the details below.&lt;/p&gt;
 &lt;h2&gt;What do all of the individual items mean&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Self-hosted on your server:&lt;/strong&gt; you will be responsible for installing, configuring
 and managing your Kiwi TCMS instance. Backups, upgrades, etc. are entirely a
@@ -2570,10 +2570,9 @@ payment details are kept on file. You will get full access to any new services a
 they are implemented. &lt;strong&gt;Does not apply&lt;/strong&gt; to one-time subscriptions which expire after their
 period of validity ends!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;No ads:&lt;/strong&gt; regular &lt;em&gt;community edition&lt;/em&gt; version of Kiwi TCMS comes with built-in advertisement
-from &lt;a href="https://www.ethicalads.io/"&gt;EthicalAds&lt;/a&gt; rewards from which are paid out to
-&lt;a href="https://opencollective.com/kiwitcms/transactions"&gt;opencollective.com/kiwitcms&lt;/a&gt; for transparency.&lt;/p&gt;
-&lt;p&gt;Container images from the &lt;em&gt;Self Support&lt;/em&gt; subscription remove those ads and make the web
-interface cleaner.&lt;/p&gt;
+from &lt;a href="https://www.ethicalads.io/"&gt;EthicalAds&lt;/a&gt;.
+Container images from the &lt;em&gt;Self Support&lt;/em&gt; subscription remove those ads and make the web
+interface cleaner!&lt;/p&gt;
 &lt;p&gt;Happy Testing!&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
