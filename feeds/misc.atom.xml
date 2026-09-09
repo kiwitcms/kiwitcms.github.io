@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-09-07T12:44:00+03:00</updated><entry><title>Kiwi TCMS 16.4</title><link href="/blog/kiwi-tcms-team/2026/09/07/kiwi-tcms-164/" rel="alternate"/><published>2026-09-07T12:44:00+03:00</published><updated>2026-09-07T12:44:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-07:/blog/kiwi-tcms-team/2026/09/07/kiwi-tcms-164/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.4!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-09-09T18:50:00+03:00</updated><entry><title>Kiwi TCMS images built on Red Hat Enterprise Linux</title><link href="/blog/kiwi-tcms-team/2026/09/09/kiwi-tcms-images-built-on-red-hat-enterprise-linux/" rel="alternate"/><published>2026-09-09T18:50:00+03:00</published><updated>2026-09-09T18:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-09:/blog/kiwi-tcms-team/2026/09/09/kiwi-tcms-images-built-on-red-hat-enterprise-linux/</id><summary type="html">&lt;p&gt;&lt;img alt="header image" src="/images/banners/self_support_ubi.png"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that &lt;a href="/containers/"&gt;private container images&lt;/a&gt;
+built on top of Red Hat Enterprise Linux are now explicitly guaranteed for
+&lt;a href="/blog/kiwi-tcms-team/2025/08/20/self-support-subscription-explained/"&gt;Self Support subscription&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Previously only the &lt;code&gt;kiwitcms/enterprise&lt;/code&gt; image variant was guaranteed to be built on top of
+Red Hat's Universal Base Image! This guarantee is now explicitly …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="header image" src="/images/banners/self_support_ubi.png"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that &lt;a href="/containers/"&gt;private container images&lt;/a&gt;
+built on top of Red Hat Enterprise Linux are now explicitly guaranteed for
+&lt;a href="/blog/kiwi-tcms-team/2025/08/20/self-support-subscription-explained/"&gt;Self Support subscription&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Previously only the &lt;code&gt;kiwitcms/enterprise&lt;/code&gt; image variant was guaranteed to be built on top of
+Red Hat's Universal Base Image! This guarantee is now explicitly extended to
+&lt;code&gt;kiwitcms/version&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;There is NO such guarantee for the Kiwi TCMS &lt;em&gt;Community Edition&lt;/em&gt; container image!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Thank you for using Kiwi TCMS. If you like what we're doing please help us grow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS 16.4</title><link href="/blog/kiwi-tcms-team/2026/09/07/kiwi-tcms-164/" rel="alternate"/><published>2026-09-07T12:44:00+03:00</published><updated>2026-09-07T12:44:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-07:/blog/kiwi-tcms-team/2026/09/07/kiwi-tcms-164/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.4!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a minor version release which includes critical security related updates
 and several improvements.&lt;/p&gt;
@@ -2387,8 +2408,7 @@ status by default.&lt;/p&gt;
 a DevOps team will have terminal access to the Kiwi TCMS application for routine maintenance or
 one-off tasks. In many cases these roles are performed by the same engineer but don't need to be.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Based on Red Hat Enterprise Linux:&lt;/strong&gt; with a &lt;em&gt;Kiwi TCMS Enterprise&lt;/em&gt; subscription you receive
-an explicit guarantee that the underlying container image is built on top of Red Hat Enterprise Linux.
-There is no such guarantee for other container images produced by the Kiwi TCMS team!&lt;/p&gt;
+an explicit guarantee that the underlying container image is built on top of Red Hat Enterprise Linux!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Multiple add-ons:&lt;/strong&gt; a &lt;em&gt;Kiwi TCMS Enterprise&lt;/em&gt; container image ships more functionality than the
 community edition of Kiwi TCMS. Our focus is to provide better operational experience for seasoned
 IT teams and make it easier to integrate Kiwi TCMS with existing infrastructure and 3rd party systems.
@@ -2555,11 +2575,14 @@ only a &lt;code&gt;latest&lt;/code&gt; version for the &lt;code&gt;x86_64&lt;/co
 &lt;p&gt;As part of the &lt;em&gt;Self Support&lt;/em&gt; subscription you get access to a private container repository
 called &lt;a href="/containers/"&gt;kiwitcms/version&lt;/a&gt; with version tagged builds
 for &lt;code&gt;aarch64&lt;/code&gt; and &lt;code&gt;x86_64&lt;/code&gt; CPU architectures. This gives you more hosting options and makes
-it easier to upgrade to new versions when you decide to do so.&lt;/p&gt;
+it easier to upgrade to new versions at your own pace.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Private package repository:&lt;/strong&gt; provides access to private package repositories for
 extra add-ons maintained by the Kiwi TCMS team. This is indended for the purposes of building
 your own downstream containers, custom development and/or creating your own non-standard
 deployment configuration! For more information &lt;a href="/packages/"&gt;click here&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Based on Red Hat Enterprise Linux:&lt;/strong&gt; with a &lt;em&gt;Kiwi TCMS Self Support&lt;/em&gt; subscription you receive
+an explicit guarantee that the underlying container image is built on top of Red Hat Enterprise Linux!
+There is no such guarantee for the Kiwi TCMS &lt;em&gt;Community Edition&lt;/em&gt; container image!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Limited support:&lt;/strong&gt; &lt;em&gt;Self Support&lt;/em&gt; customers do not receive technical support. Help from the
 Kiwi TCMS team is limited to account and billing issues and response times are not guaranteed!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Price freeze:&lt;/strong&gt; subscription price is usually updated once a year to account for inflation
@@ -10824,37 +10847,4 @@ please help us!&lt;/p&gt;
   and follow all project news;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/><category term="roadmap"/></entry><entry><title>Excellence in Innovation 2020 award for Kiwi TCMS</title><link href="/blog/kiwi-tcms-team/2020/12/26/excellence-in-innovation-2020-award-for-kiwi-tcms/" rel="alternate"/><published>2020-12-26T17:17:00+02:00</published><updated>2020-12-26T17:17:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2020-12-26:/blog/kiwi-tcms-team/2020/12/26/excellence-in-innovation-2020-award-for-kiwi-tcms/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Virtual show screen&amp;quot;" src="/images/finalists_innovationbg.png" title="Virtual show screen"&gt;&lt;/p&gt;
-&lt;p&gt;Dear testers, we are happy to share that Kiwi TCMS has been distinguished
-with the &lt;em&gt;Excellence in Innovation 2020&lt;/em&gt; award by
-&lt;a href="http://www.arcfund.net/"&gt;Applied Research and Communications Fund&lt;/a&gt; in Bulgaria.
-This is also the first award that we receive locally and we're very happy
-about that!&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS was a finalist in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;Virtual show screen&amp;quot;" src="/images/finalists_innovationbg.png" title="Virtual show screen"&gt;&lt;/p&gt;
-&lt;p&gt;Dear testers, we are happy to share that Kiwi TCMS has been distinguished
-with the &lt;em&gt;Excellence in Innovation 2020&lt;/em&gt; award by
-&lt;a href="http://www.arcfund.net/"&gt;Applied Research and Communications Fund&lt;/a&gt; in Bulgaria.
-This is also the first award that we receive locally and we're very happy
-about that!&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS was a finalist in the &lt;em&gt;Digital transformation&lt;/em&gt; category for the fact
-that leveraging the power of open source we've transformed an abandoned project
-(the predecessor of Kiwi TCMS) into a usable product with over 270000 downloads
-to date!&lt;/p&gt;
-&lt;p&gt;If you would like to checkout the awards ceremony and all of the particiants
-go to &lt;a href="https://www.innovation.bg/"&gt;www.innovation.bg&lt;/a&gt;, we're listed under
-&lt;em&gt;Отворени Технологии България ЕООД&lt;/em&gt;
-(the name of our &lt;a href="/legal/"&gt;parent company&lt;/a&gt;)!
-Text and video is not in English however!&lt;/p&gt;
-&lt;p&gt;Happy Testing!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-  and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry></feed>
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/><category term="roadmap"/></entry></feed>
