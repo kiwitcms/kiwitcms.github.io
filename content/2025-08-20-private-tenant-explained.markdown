@@ -12,7 +12,8 @@ Please read about the details below.
 What is Private Tenant by Kiwi TCMS
 -----------------------------------
 
-This is our most popular subscription tier which combines SaaS hosting and
+This is our most popular subscription tier which combines SaaS hosting,
+raw data export and
 additional support services. It is more about *ease of use* allowing your
 QA team to focus on more testing rather than specific software features.
 
@@ -43,11 +44,38 @@ What do all of the individual items mean
 ----------------------------------------
 
 **1x SaaS hosting:** you will receive the opportunity to create your own namespace
-under the `tenant.kiwitcms.org` domain name, for example `https://acme-inc.tenant.kiwitcms.org`.
+under the `tenant.kiwitcms.org` domain name, for example `https://<company>.tenant.kiwitcms.org`.
 
 IMPORTANT: A *Private Tenant* subscription entitles you to a single namespace and the email associated
 with the purchase is referred to as *tenant owner*.
 If you need more tenants you should purchase additional subscriptions under different email addresses!
+
+
+**Raw data access:** means that you will have access to data export in machine readable format at any time!
+In particular:
+
+- *Database export to SQL:* a database export in SQL format,
+  suitable for the Postgres database engine. It includes all tables which constitute your
+  own namespace under `<company>.tenant.kiwitcms.org` domain name. This also includes
+  information about user accounts authorized to access your tenant!
+- *File attachments backup:* all attachments uploaded to your private tenant will be
+  included too
+- *Multi storage region/vendor:* means that we can publish to a geographic region
+  and data center of your choice. Exact storage providers are subject to
+  [technical compatibility](https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html).
+- *Always encrypted:* all data is stored encrypted and can be downloaded
+  using the popular open source tool [restic](https://restic.net/).
+  We will provide you with read-only level access and an unique public/private keypair,
+  which will be shared with you in a secure manner!
+
+IMPORTANT:
+
+- Export frequency: 1/day
+- Exports in storage: last 3 days (rolling)
+- Retention period: 7 days (rolling)
+- Please contant [support]({filename}pages/support.markdown) for setup
+- Due to technical and security limitations we cannot give you direct access
+  to the underlying database cluster at the moment but we are working on it!
 
 
 **Unlimited users:** means exactly that - you may assign an arbitrary number of users to have access
@@ -90,15 +118,6 @@ sometimes.
 
 IMPORTANT: With a *Private Tenant* subscription the responsibility of testing all of your integrations against
 the latest version of Kiwi TCMS falls onto the customer.
-
-
-**Backup & disaster recovery:** the Kiwi TCMS team takes care to backup our SaaS cluster regularly
-in case a catastrophic failure occurs - this is designed for disaster recovery purposes.
-
-While the Kiwi TCMS application itself keeps track of changes and removals of certain objects it may
-not always be possible to restore a deleted entry. You may be able to create new records with
-the same information however if a record cannot be restored via the Kiwi TCMS web interface we cannot help you.
-Due to technical limitations we cannot restore individual records from a *Private Tenant*.
 
 
 **Dedicated technical support:** as a *Private Tenant* customer you receive full technical support
