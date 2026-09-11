@@ -612,7 +612,8 @@ please help us!</p>
 how it brings more value beyond the Kiwi TCMS application itself.
 Please read about the details below.</p>
 <h2>What is Private Tenant by Kiwi TCMS</h2>
-<p>This is our most popular subscription tier which combines SaaS hosting and
+<p>This is our most popular subscription tier which combines SaaS hosting,
+raw data export and
 additional support services. It is more about <em>ease of use</em> allowing your
 QA team to focus on more testing rather than specific software features.</p>
 <h2>Who is this subscription for</h2>
@@ -630,10 +631,36 @@ dedicated SaaS namespace as your main Kiwi TCMS instance plus extra
 product features and technical support.</p>
 <h2>What do all of the individual items mean</h2>
 <p><strong>1x SaaS hosting:</strong> you will receive the opportunity to create your own namespace
-under the <code>tenant.kiwitcms.org</code> domain name, for example <code>https://acme-inc.tenant.kiwitcms.org</code>.</p>
+under the <code>tenant.kiwitcms.org</code> domain name, for example <code>https://&lt;company&gt;.tenant.kiwitcms.org</code>.</p>
 <p>IMPORTANT: A <em>Private Tenant</em> subscription entitles you to a single namespace and the email associated
 with the purchase is referred to as <em>tenant owner</em>.
 If you need more tenants you should purchase additional subscriptions under different email addresses!</p>
+<p><strong>Raw data access:</strong> means that you will have access to data export in machine readable format at any time!
+In particular:</p>
+<ul>
+<li><em>Database export to SQL:</em> a database export in SQL format,
+  suitable for the Postgres database engine. It includes all tables which constitute your
+  own namespace under <code>&lt;company&gt;.tenant.kiwitcms.org</code> domain name. This also includes
+  information about user accounts authorized to access your tenant!</li>
+<li><em>File attachments backup:</em> all attachments uploaded to your private tenant will be
+  included too</li>
+<li><em>Multi storage region/vendor:</em> means that we can publish to a geographic region
+  and data center of your choice. Exact storage providers are subject to
+  <a href="https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html">technical compatibility</a>.</li>
+<li><em>Always encrypted:</em> all data is stored encrypted and can be downloaded
+  using the popular open source tool <a href="https://restic.net/">restic</a>.
+  We will provide you with read-only level access and an unique public/private keypair,
+  which will be shared with you in a secure manner!</li>
+</ul>
+<p>IMPORTANT:</p>
+<ul>
+<li>Export frequency: 1/day</li>
+<li>Exports in storage: last 3 days (rolling)</li>
+<li>Retention period: 7 days (rolling)</li>
+<li>Please contant <a href="/support/">support</a> for setup</li>
+<li>Due to technical and security limitations we cannot give you direct access
+  to the underlying database cluster at the moment but we are working on it!</li>
+</ul>
 <p><strong>Unlimited users:</strong> means exactly that - you may assign an arbitrary number of users to have access
 to the information kept under your tenant. With <em>Private Tenant</em> subscription there are no per-seat
 fees - it is a flat rate price!</p>
@@ -661,12 +688,6 @@ changes it is possible that test automation scripts and/or 3rd party integration
 sometimes.</p>
 <p>IMPORTANT: With a <em>Private Tenant</em> subscription the responsibility of testing all of your integrations against
 the latest version of Kiwi TCMS falls onto the customer.</p>
-<p><strong>Backup &amp; disaster recovery:</strong> the Kiwi TCMS team takes care to backup our SaaS cluster regularly
-in case a catastrophic failure occurs - this is designed for disaster recovery purposes.</p>
-<p>While the Kiwi TCMS application itself keeps track of changes and removals of certain objects it may
-not always be possible to restore a deleted entry. You may be able to create new records with
-the same information however if a record cannot be restored via the Kiwi TCMS web interface we cannot help you.
-Due to technical limitations we cannot restore individual records from a <em>Private Tenant</em>.</p>
 <p><strong>Dedicated technical support:</strong> as a <em>Private Tenant</em> customer you receive full technical support
 from the Kiwi TCMS team spanning all components related to the Kiwi TCMS application. Working hours
 and response times are listed on our main page!</p>

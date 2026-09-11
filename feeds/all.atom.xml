@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-09-09T18:50:00+03:00</updated><entry><title>Kiwi TCMS images built on Red Hat Enterprise Linux</title><link href="/blog/kiwi-tcms-team/2026/09/09/kiwi-tcms-images-built-on-red-hat-enterprise-linux/" rel="alternate"/><published>2026-09-09T18:50:00+03:00</published><updated>2026-09-09T18:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-09:/blog/kiwi-tcms-team/2026/09/09/kiwi-tcms-images-built-on-red-hat-enterprise-linux/</id><summary type="html">&lt;p&gt;&lt;img alt="header image" src="/images/banners/self_support_ubi.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-09-11T10:25:00+03:00</updated><entry><title>Raw data access for Kiwi TCMS Private Tenant</title><link href="/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/" rel="alternate"/><published>2026-09-11T10:25:00+03:00</published><updated>2026-09-11T10:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-11:/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/</id><summary type="html">&lt;p&gt;&lt;img alt="header image" src="/images/banners/encrypted_export.png"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that newly purchased
+&lt;a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/"&gt;Private Tenant&lt;/a&gt;
+subscriptions will include raw data access as we work towards removing
+vendor lock-in for our SaaS customers!&lt;/p&gt;
+&lt;h3&gt;What's new&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Database export in SQL format suitable for the Postgres database engine&lt;/li&gt;
+&lt;li&gt;All attachments uploaded to a private tenant namespace will be …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="header image" src="/images/banners/encrypted_export.png"&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that newly purchased
+&lt;a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/"&gt;Private Tenant&lt;/a&gt;
+subscriptions will include raw data access as we work towards removing
+vendor lock-in for our SaaS customers!&lt;/p&gt;
+&lt;h3&gt;What's new&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Database export in SQL format suitable for the Postgres database engine&lt;/li&gt;
+&lt;li&gt;All attachments uploaded to a private tenant namespace will be included&lt;/li&gt;
+&lt;li&gt;Multiple storage region/vendor options available subject to technical compatibility&lt;/li&gt;
+&lt;li&gt;All data is stored encrypted and may be downloaded using a popular open source tool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Limitations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Export frequency: 1/day&lt;/li&gt;
+&lt;li&gt;Exports in storage: last 3 days (rolling)&lt;/li&gt;
+&lt;li&gt;Retention period: 7 days (rolling)&lt;/li&gt;
+&lt;li&gt;Existing subscriptions may upgrade if they wish to unlock this service&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IMPORTANT: Due to technical and security considerations we cannot provide
+real-time access to the underlying database cluster however we are working in that direction!
+We are also researching the technicalities behind enabling &lt;em&gt;Bring Your Own Storage&lt;/em&gt; for
+file uploads!&lt;/p&gt;
+&lt;p&gt;You can find the &lt;em&gt;Private Tenant&lt;/em&gt; subscription in the
+&lt;a href="/#subscriptions"&gt;&lt;em&gt;Subscriptions&lt;/em&gt;&lt;/a&gt; section on our main page!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Thank you for using Kiwi TCMS. If you like what we're doing please help us grow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS images built on Red Hat Enterprise Linux</title><link href="/blog/kiwi-tcms-team/2026/09/09/kiwi-tcms-images-built-on-red-hat-enterprise-linux/" rel="alternate"/><published>2026-09-09T18:50:00+03:00</published><updated>2026-09-09T18:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-09:/blog/kiwi-tcms-team/2026/09/09/kiwi-tcms-images-built-on-red-hat-enterprise-linux/</id><summary type="html">&lt;p&gt;&lt;img alt="header image" src="/images/banners/self_support_ubi.png"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that &lt;a href="/containers/"&gt;private container images&lt;/a&gt;
 built on top of Red Hat Enterprise Linux are now explicitly guaranteed for
 &lt;a href="/blog/kiwi-tcms-team/2025/08/20/self-support-subscription-explained/"&gt;Self Support subscription&lt;/a&gt;!&lt;/p&gt;
@@ -1107,64 +1148,6 @@ regardless of whether it is open source or not!&lt;/p&gt;
 when it comes to mitigating risks and cost compared to proprietary software.
 However the easiest way to secure the future of Kiwi TCMS is to
 &lt;a href="/#subscriptions"&gt;become a customer&lt;/a&gt; and help us sustain development!&lt;/p&gt;
-&lt;p&gt;Happy Testing!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-  and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/></entry><entry><title>Private Tenant Extras Subscription Explained</title><link href="/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/" rel="alternate"/><published>2026-02-17T10:35:00+02:00</published><updated>2026-02-17T10:35:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-02-17:/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/</id><summary type="html">&lt;p&gt;This page explains what &lt;em&gt;Private Tenant Extras&lt;/em&gt; is and how it brings
-more value to your existing Kiwi TCMS subscription.
-Please read about the details below.&lt;/p&gt;
-&lt;h2&gt;What is Private Tenant Extras by Kiwi TCMS&lt;/h2&gt;
-&lt;p&gt;This is an optional subscription tier which combines our existing
-&lt;a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/"&gt;Private Tenant SaaS hosting&lt;/a&gt;
-with access …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This page explains what &lt;em&gt;Private Tenant Extras&lt;/em&gt; is and how it brings
-more value to your existing Kiwi TCMS subscription.
-Please read about the details below.&lt;/p&gt;
-&lt;h2&gt;What is Private Tenant Extras by Kiwi TCMS&lt;/h2&gt;
-&lt;p&gt;This is an optional subscription tier which combines our existing
-&lt;a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/"&gt;Private Tenant SaaS hosting&lt;/a&gt;
-with access to the underlying data in its raw format!&lt;/p&gt;
-&lt;p&gt;IMPORTANT: any &lt;em&gt;Private Tenant&lt;/em&gt; subscription with unit count &amp;gt; 1
-entitles you to this &lt;em&gt;Extras&lt;/em&gt; add-on! Please contant
-&lt;a href="/support/"&gt;support&lt;/a&gt; for setup!&lt;/p&gt;
-&lt;h2&gt;Who is this subscription for&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Private Tenant Extras&lt;/em&gt; is suitable for teams using the SaaS version of
-Kiwi TCMS which require access to their underlying data in machine readable
-format!&lt;/p&gt;
-&lt;h2&gt;What do you get&lt;/h2&gt;
-&lt;p&gt;Everything from lower tier subscription plans plus access to a database
-and file exports in case you would like to keep your own backup copy or
-provide in-house integration with other tools.&lt;/p&gt;
-&lt;h2&gt;What do all of the individual items mean&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Raw SQL database export:&lt;/strong&gt; you will receive a database export in SQL format,
-suitable for the Postgres database engine. It includes all tables which constitute your
-own namespace under the &lt;code&gt;*.tenant.kiwitcms.org&lt;/code&gt; domain name. This also includes
-information about user accounts authorized to access your tenant!&lt;/p&gt;
-&lt;p&gt;IMPORTANT: due to technical and security limitations we cannot give you direct access
-to the underlying database cluster in real-time!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;File uploads included:&lt;/strong&gt; means exactly that - all attachments uploaded to your
-private tenant will be included as part of this subscription!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Encrypted access:&lt;/strong&gt; all data we export is stored encrypted and may be accessed
-using the popular open source tool &lt;a href="https://restic.net/"&gt;restic&lt;/a&gt;.
-We will provide you with read-only level access and an unique public/private keypair!&lt;/p&gt;
-&lt;p&gt;IMPORTANT:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Export frequency: 1/day (max 3/day)&lt;/li&gt;
-&lt;li&gt;Exports on disk: last 3 days&lt;/li&gt;
-&lt;li&gt;Retention period: 7 days&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Storage region of your choice:&lt;/strong&gt; means that we can publish to a geographic region
-and data center of your choice. Exact locations are subject to availability.&lt;/p&gt;
-&lt;p&gt;NOTE: At the time of writing our preferred storage backend is
-&lt;a href="https://docs.aws.amazon.com/general/latest/gr/s3.html"&gt;Amazon S3&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;It may be possible to use a different storage provider depending on
-&lt;a href="https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html"&gt;technical compatibility&lt;/a&gt;.
-Additional charges may apply in that case!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Happy Testing!&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;If you like what we're doing and how Kiwi TCMS please help us!&lt;/p&gt;
@@ -2440,12 +2423,13 @@ please help us!&lt;/p&gt;
 how it brings more value beyond the Kiwi TCMS application itself.
 Please read about the details below.&lt;/p&gt;
 &lt;h2&gt;What is Private Tenant by Kiwi TCMS&lt;/h2&gt;
-&lt;p&gt;This is our most popular subscription tier which combines SaaS hosting and
-additional support …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers, this page explains what the &lt;em&gt;Private Tenant&lt;/em&gt; subscription is and
+&lt;p&gt;This is our most popular subscription tier which combines SaaS hosting,
+raw data export …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello testers, this page explains what the &lt;em&gt;Private Tenant&lt;/em&gt; subscription is and
 how it brings more value beyond the Kiwi TCMS application itself.
 Please read about the details below.&lt;/p&gt;
 &lt;h2&gt;What is Private Tenant by Kiwi TCMS&lt;/h2&gt;
-&lt;p&gt;This is our most popular subscription tier which combines SaaS hosting and
+&lt;p&gt;This is our most popular subscription tier which combines SaaS hosting,
+raw data export and
 additional support services. It is more about &lt;em&gt;ease of use&lt;/em&gt; allowing your
 QA team to focus on more testing rather than specific software features.&lt;/p&gt;
 &lt;h2&gt;Who is this subscription for&lt;/h2&gt;
@@ -2463,10 +2447,36 @@ dedicated SaaS namespace as your main Kiwi TCMS instance plus extra
 product features and technical support.&lt;/p&gt;
 &lt;h2&gt;What do all of the individual items mean&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;1x SaaS hosting:&lt;/strong&gt; you will receive the opportunity to create your own namespace
-under the &lt;code&gt;tenant.kiwitcms.org&lt;/code&gt; domain name, for example &lt;code&gt;https://acme-inc.tenant.kiwitcms.org&lt;/code&gt;.&lt;/p&gt;
+under the &lt;code&gt;tenant.kiwitcms.org&lt;/code&gt; domain name, for example &lt;code&gt;https://&amp;lt;company&amp;gt;.tenant.kiwitcms.org&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;IMPORTANT: A &lt;em&gt;Private Tenant&lt;/em&gt; subscription entitles you to a single namespace and the email associated
 with the purchase is referred to as &lt;em&gt;tenant owner&lt;/em&gt;.
 If you need more tenants you should purchase additional subscriptions under different email addresses!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Raw data access:&lt;/strong&gt; means that you will have access to data export in machine readable format at any time!
+In particular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Database export to SQL:&lt;/em&gt; a database export in SQL format,
+  suitable for the Postgres database engine. It includes all tables which constitute your
+  own namespace under &lt;code&gt;&amp;lt;company&amp;gt;.tenant.kiwitcms.org&lt;/code&gt; domain name. This also includes
+  information about user accounts authorized to access your tenant!&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;File attachments backup:&lt;/em&gt; all attachments uploaded to your private tenant will be
+  included too&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Multi storage region/vendor:&lt;/em&gt; means that we can publish to a geographic region
+  and data center of your choice. Exact storage providers are subject to
+  &lt;a href="https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html"&gt;technical compatibility&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Always encrypted:&lt;/em&gt; all data is stored encrypted and can be downloaded
+  using the popular open source tool &lt;a href="https://restic.net/"&gt;restic&lt;/a&gt;.
+  We will provide you with read-only level access and an unique public/private keypair,
+  which will be shared with you in a secure manner!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IMPORTANT:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Export frequency: 1/day&lt;/li&gt;
+&lt;li&gt;Exports in storage: last 3 days (rolling)&lt;/li&gt;
+&lt;li&gt;Retention period: 7 days (rolling)&lt;/li&gt;
+&lt;li&gt;Please contant &lt;a href="/support/"&gt;support&lt;/a&gt; for setup&lt;/li&gt;
+&lt;li&gt;Due to technical and security limitations we cannot give you direct access
+  to the underlying database cluster at the moment but we are working on it!&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Unlimited users:&lt;/strong&gt; means exactly that - you may assign an arbitrary number of users to have access
 to the information kept under your tenant. With &lt;em&gt;Private Tenant&lt;/em&gt; subscription there are no per-seat
 fees - it is a flat rate price!&lt;/p&gt;
@@ -2494,12 +2504,6 @@ changes it is possible that test automation scripts and/or 3rd party integration
 sometimes.&lt;/p&gt;
 &lt;p&gt;IMPORTANT: With a &lt;em&gt;Private Tenant&lt;/em&gt; subscription the responsibility of testing all of your integrations against
 the latest version of Kiwi TCMS falls onto the customer.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Backup &amp;amp; disaster recovery:&lt;/strong&gt; the Kiwi TCMS team takes care to backup our SaaS cluster regularly
-in case a catastrophic failure occurs - this is designed for disaster recovery purposes.&lt;/p&gt;
-&lt;p&gt;While the Kiwi TCMS application itself keeps track of changes and removals of certain objects it may
-not always be possible to restore a deleted entry. You may be able to create new records with
-the same information however if a record cannot be restored via the Kiwi TCMS web interface we cannot help you.
-Due to technical limitations we cannot restore individual records from a &lt;em&gt;Private Tenant&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Dedicated technical support:&lt;/strong&gt; as a &lt;em&gt;Private Tenant&lt;/em&gt; customer you receive full technical support
 from the Kiwi TCMS team spanning all components related to the Kiwi TCMS application. Working hours
 and response times are listed on our main page!&lt;/p&gt;

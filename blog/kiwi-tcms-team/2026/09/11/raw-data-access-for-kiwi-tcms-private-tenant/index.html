@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Kiwi TCMS - Private Tenant Extras Subscription Explained</title>
+        <title>Kiwi TCMS - Raw data access for Kiwi TCMS Private Tenant</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-Frame-Options" content="deny">
         <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
@@ -14,25 +14,26 @@
     
 
 
-        <meta name="description" content="all the details you need to know" >
+        <meta name="description" content="removes vendor lock-in with encrypted SQL export and files backup" >
 
         <meta name="author" content="Kiwi TCMS Team">
 
+        <meta name="tags" content="community" >
         <meta name="twitter:site" content="@KiwiTCMS">
-        <meta name="twitter:title" content="Private Tenant Extras Subscription Explained">
-            <meta name="twitter:description" content="all the details you need to know">
+        <meta name="twitter:title" content="Raw data access for Kiwi TCMS Private Tenant">
+            <meta name="twitter:description" content="removes vendor lock-in with encrypted SQL export and files backup">
         <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+                <meta property="twitter:image" content="https://kiwitcms.org/images/banners/encrypted_export.png">
 
         <meta property="og:site_name" content="Kiwi TCMS">
         <meta property="og:type" content="article" />
             <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
-        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/" />
-        <meta property="og:title" content="Private Tenant Extras Subscription Explained" />
-        <meta property="article:published_time" content="2026-02-17 10:35:00+02:00">
-            <meta property="og:description" content="all the details you need to know">
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/" />
+        <meta property="og:title" content="Raw data access for Kiwi TCMS Private Tenant" />
+        <meta property="article:published_time" content="2026-09-11 10:25:00+03:00">
+            <meta property="og:description" content="removes vendor lock-in with encrypted SQL export and files backup">
 
-            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
+                <meta property="og:image" content="https://kiwitcms.org/images/banners/encrypted_export.png">
         <!-- Custom Styles -->
         <link href="/theme/style/style.css" rel="stylesheet">
         <link href="/theme/style/responsive-1440.css" rel="stylesheet">
@@ -123,68 +124,51 @@
 
         <!-- content -->
     <section id="blog-article">
-        <h1 class="top-header">Private Tenant Extras Subscription Explained</h1>
-        <h2 class="top-subheader">all the details you need to know</h2>
+        <h1 class="top-header">Raw data access for Kiwi TCMS Private Tenant</h1>
+        <h2 class="top-subheader">removes vendor lock-in with encrypted SQL export and files backup</h2>
 
         <p class="post-meta">
             Posted by
                 <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-            on Tue 17 February 2026
+            on Fri 11 September 2026
+                under
+                    <a href="https://kiwitcms.org/blog/tags/community/">community</a>
         </p>
 
         <article class="content">
-            <p>This page explains what <em>Private Tenant Extras</em> is and how it brings
-more value to your existing Kiwi TCMS subscription.
-Please read about the details below.</p>
-<h2>What is Private Tenant Extras by Kiwi TCMS</h2>
-<p>This is an optional subscription tier which combines our existing
-<a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/">Private Tenant SaaS hosting</a>
-with access to the underlying data in its raw format!</p>
-<p>IMPORTANT: any <em>Private Tenant</em> subscription with unit count &gt; 1
-entitles you to this <em>Extras</em> add-on! Please contant
-<a href="/support/">support</a> for setup!</p>
-<h2>Who is this subscription for</h2>
-<p><em>Private Tenant Extras</em> is suitable for teams using the SaaS version of
-Kiwi TCMS which require access to their underlying data in machine readable
-format!</p>
-<h2>What do you get</h2>
-<p>Everything from lower tier subscription plans plus access to a database
-and file exports in case you would like to keep your own backup copy or
-provide in-house integration with other tools.</p>
-<h2>What do all of the individual items mean</h2>
-<p><strong>Raw SQL database export:</strong> you will receive a database export in SQL format,
-suitable for the Postgres database engine. It includes all tables which constitute your
-own namespace under the <code>*.tenant.kiwitcms.org</code> domain name. This also includes
-information about user accounts authorized to access your tenant!</p>
-<p>IMPORTANT: due to technical and security limitations we cannot give you direct access
-to the underlying database cluster in real-time!</p>
-<p><strong>File uploads included:</strong> means exactly that - all attachments uploaded to your
-private tenant will be included as part of this subscription!</p>
-<p><strong>Encrypted access:</strong> all data we export is stored encrypted and may be accessed
-using the popular open source tool <a href="https://restic.net/">restic</a>.
-We will provide you with read-only level access and an unique public/private keypair!</p>
-<p>IMPORTANT:</p>
+            <p><img alt="header image" src="/images/banners/encrypted_export.png"></p>
+<p>We are happy to announce that newly purchased
+<a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/">Private Tenant</a>
+subscriptions will include raw data access as we work towards removing
+vendor lock-in for our SaaS customers!</p>
+<h3>What's new</h3>
 <ul>
-<li>Export frequency: 1/day (max 3/day)</li>
-<li>Exports on disk: last 3 days</li>
-<li>Retention period: 7 days</li>
+<li>Database export in SQL format suitable for the Postgres database engine</li>
+<li>All attachments uploaded to a private tenant namespace will be included</li>
+<li>Multiple storage region/vendor options available subject to technical compatibility</li>
+<li>All data is stored encrypted and may be downloaded using a popular open source tool</li>
 </ul>
-<p><strong>Storage region of your choice:</strong> means that we can publish to a geographic region
-and data center of your choice. Exact locations are subject to availability.</p>
-<p>NOTE: At the time of writing our preferred storage backend is
-<a href="https://docs.aws.amazon.com/general/latest/gr/s3.html">Amazon S3</a>.</p>
-<p><em>It may be possible to use a different storage provider depending on
-<a href="https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html">technical compatibility</a>.
-Additional charges may apply in that case!</em></p>
-<p>Happy Testing!</p>
+<h3>Limitations</h3>
+<ul>
+<li>Export frequency: 1/day</li>
+<li>Exports in storage: last 3 days (rolling)</li>
+<li>Retention period: 7 days (rolling)</li>
+<li>Existing subscriptions may upgrade if they wish to unlock this service</li>
+</ul>
+<p>IMPORTANT: Due to technical and security considerations we cannot provide
+real-time access to the underlying database cluster however we are working in that direction!
+We are also researching the technicalities behind enabling <em>Bring Your Own Storage</em> for
+file uploads!</p>
+<p>You can find the <em>Private Tenant</em> subscription in the
+<a href="/#subscriptions"><em>Subscriptions</em></a> section on our main page!</p>
 <hr>
-<p>If you like what we're doing and how Kiwi TCMS please help us!</p>
+<p>Thank you for using Kiwi TCMS. If you like what we're doing please help us grow:</p>
 <ul>
 <li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
+  and follow all news;</li>
+<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development;</li>
+<li><a href="/partners/">Become a reseller</a> and help us serve your community</li>
 </ul>
         </article>
     </section>
@@ -199,8 +183,8 @@ Additional charges may apply in that case!</em></p>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/';
-                this.page.identifier = 'blog/kiwi-tcms-team/2026/02/17/private-tenant-extras-subscription-explained/';
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/';
             };
             (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
