@@ -1,5 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-09-11T10:25:00+03:00</updated><entry><title>Raw data access for Kiwi TCMS Private Tenant</title><link href="/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/" rel="alternate"/><published>2026-09-11T10:25:00+03:00</published><updated>2026-09-11T10:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-11:/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/</id><summary type="html">&lt;p&gt;&lt;img alt="header image" src="/images/banners/encrypted_export.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-09-17T19:50:00+03:00</updated><entry><title>Kiwi TCMS 16.5</title><link href="/blog/kiwi-tcms-team/2026/09/17/kiwi-tcms-165/" rel="alternate"/><published>2026-09-17T19:50:00+03:00</published><updated>2026-09-17T19:50:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-17:/blog/kiwi-tcms-team/2026/09/17/kiwi-tcms-165/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.5!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates
+and several improvements.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  6122a229fade    747MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.5!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates
+and several improvements.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  6122a229fade    747MB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-16-4"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 16.4&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update node_modules/js-yaml from 4.3.1 to 4.3.2&lt;/li&gt;
+&lt;li&gt;Update node_modules/jszip from 3.10.1 to 3.10.2&lt;/li&gt;
+&lt;li&gt;Route requests to &lt;tt class="docutils literal"&gt;/uploads/&lt;/tt&gt; internally to check for permissions before
+handing off to Nginx to serve the actual file. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-4fp9-ph54-5fjw"&gt;GHSA-4fp9-ph54-5fjw&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update django-guardian from 3.4.1 to 3.5.0&lt;/li&gt;
+&lt;li&gt;Update django-tree-queries from 0.25.1 to 0.26.1&lt;/li&gt;
+&lt;li&gt;Update tzdata from 2026.3 to 2026.4&lt;/li&gt;
+&lt;li&gt;Display TestExecution attachments on Test Run page to support the use-case
+where attachments have been uploaded via &lt;tt class="docutils literal"&gt;TestExecution.add_attachmment()&lt;/tt&gt;
+API method (Arnoldas Bagdonas)&lt;/li&gt;
+&lt;li&gt;Small visual rearrangements on login page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update locust from 2.46.4 to 2.46.5&lt;/li&gt;
+&lt;li&gt;Remove deprecated field &lt;tt class="docutils literal"&gt;version:&lt;/tt&gt; from YAML files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v16-4-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v16.4-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v16.5&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;PASSWORD_RESET_ENABLED&lt;/tt&gt; setting&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;restic&lt;/tt&gt; command inside container&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;mount-s3&lt;/span&gt;&lt;/tt&gt; command inside container&lt;/li&gt;
+&lt;li&gt;Remove the social-auth-kerberos add-on&lt;/li&gt;
+&lt;li&gt;Redirect all login requests through &lt;tt class="docutils literal"&gt;public.schema/accounts/login/&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Update social-auth-app-django from 5.9.0 to 6.0.1&lt;/li&gt;
+&lt;li&gt;Explicitly &lt;tt class="docutils literal"&gt;dnf update&lt;/tt&gt; when building the container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/version            16.5 (aarch64)          a3c67b4ac2a0    17 Sep 2026     718MB
+hub.kiwitcms.eu/kiwitcms/version            16.5 (x86_64)           b49dec98c8ca    17 Sep 2026     698MB
+hub.kiwitcms.eu/kiwitcms/enterprise         16.5-mt (aarch64)       d057ed4da2b5    17 Sep 2026     1.06GB
+hub.kiwitcms.eu/kiwitcms/enterprise         16.5-mt (x86_64)        5ad1fee769aa    17 Sep 2026     1.04GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing please help us grow:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Raw data access for Kiwi TCMS Private Tenant</title><link href="/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/" rel="alternate"/><published>2026-09-11T10:25:00+03:00</published><updated>2026-09-11T10:25:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-09-11:/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/</id><summary type="html">&lt;p&gt;&lt;img alt="header image" src="/images/banners/encrypted_export.png"&gt;&lt;/p&gt;
 &lt;p&gt;We are happy to announce that newly purchased
 &lt;a href="/blog/kiwi-tcms-team/2025/08/20/private-tenant-subscription-explained/"&gt;Private Tenant&lt;/a&gt;
 subscriptions will include raw data access as we work towards removing
@@ -10765,90 +10869,4 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry><entry><title>Roadmap status report for 2020</title><link href="/blog/atodorov/2020/12/31/roadmap-status-report-for-2020/" rel="alternate"/><published>2020-12-31T14:07:00+02:00</published><updated>2020-12-31T14:07:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2020-12-31:/blog/atodorov/2020/12/31/roadmap-status-report-for-2020/</id><summary type="html">&lt;p&gt;Another year rolls out and despite all difficulties it is by far the
-strongest one for Kiwi TCMS!&lt;/p&gt;
-&lt;h2&gt;Stats&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;2 physical events and a few virtual ones&lt;/li&gt;
-&lt;li&gt;12 releases&lt;/li&gt;
-&lt;li&gt;24 language translations&lt;/li&gt;
-&lt;li&gt;683 PRs, most of them closed &amp;amp; merged&lt;/li&gt;
-&lt;li&gt;Reached Issue/PR number 2000&lt;/li&gt;
-&lt;li&gt;Reached 5000 commits&lt;/li&gt;
-&lt;li&gt;Reached 8000 registrations …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Another year rolls out and despite all difficulties it is by far the
-strongest one for Kiwi TCMS!&lt;/p&gt;
-&lt;h2&gt;Stats&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;2 physical events and a few virtual ones&lt;/li&gt;
-&lt;li&gt;12 releases&lt;/li&gt;
-&lt;li&gt;24 language translations&lt;/li&gt;
-&lt;li&gt;683 PRs, most of them closed &amp;amp; merged&lt;/li&gt;
-&lt;li&gt;Reached Issue/PR number 2000&lt;/li&gt;
-&lt;li&gt;Reached 5000 commits&lt;/li&gt;
-&lt;li&gt;Reached 8000 registrations via &lt;a href="https://public.tenant.kiwitcms.org"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Reached 270K downloads via Docker Hub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Status update&lt;/h2&gt;
-&lt;p&gt;From the &lt;a href="/blog/atodorov/2020/01/17/project-roadmap-2020/"&gt;2020 roadmap&lt;/a&gt; we've
-established 3 main areas to work on. Their completeness scores are:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Team&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;30&lt;/span&gt;&lt;span class="err"&gt;%&lt;/span&gt;
-&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Technical&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;70&lt;/span&gt;&lt;span class="err"&gt;%&lt;/span&gt;
-&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Community&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;100&lt;/span&gt;&lt;span class="err"&gt;%&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Average score is 65% completion!&lt;/p&gt;
-&lt;h2&gt;Team&lt;/h2&gt;
-&lt;p&gt;Overall the team has stalled its growth and improvement. Contributors which
-started onboarding a year ago are still under-productive and do not meet
-our criteria to become core-team members.
-The average team productivity is far beyond the goal of 1PR/week/person.
-This is largely due to contributors not being active on their items,
-very long periods between pull requests and longer than average time
-for closing pull requests.&lt;/p&gt;
-&lt;p&gt;The only positive side in this area is that core-team has improved its internal
-processes, is meeting regularly, discusses issues with
-members when they arise and relatively quickly spots problems and acts
-on them.&lt;/p&gt;
-&lt;h2&gt;Technical&lt;/h2&gt;
-&lt;p&gt;The dominating effort this year was refactoring the remaining legacy UI
-and converting everything to PatternFly. The effect of this is
-reduced code complexity and improved CodeClimate score/technical debt,
-removed vendored-in JavaScript dependencies and lots of unused code
-in favor of using the existing API.&lt;/p&gt;
-&lt;p&gt;Additional work has been done on closing bugs, implementing some features,
-integration with new bug tracking systems and improvements around the
-telemetry feature.&lt;/p&gt;
-&lt;p&gt;However there is still a lot of work to be done until all telemetry
-pages are complete. There are also around 30 pylint issues remaining
-which require internal refactoring and more legacy code cleanup. It's
-getting there but it's also getting harder.&lt;/p&gt;
-&lt;h2&gt;Community&lt;/h2&gt;
-&lt;p&gt;This area turned out to be our strongest one this year. We started
-very strong at FOSDEM 2020 and collaborated with multiple communities on
-plugins, code &amp;amp; translation contributions, adoption of Kiwi TCMS and
-general partnerships around open source.&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS got a substantial grant from the Mozilla foundation which
-helped bootstrap our open source bounty program and internship
-program.&lt;/p&gt;
-&lt;p&gt;In May we reached 100K downloads on Docker Hub then in October we've
-surpassed 200K. Next month we'll reach 300K!&lt;/p&gt;
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt;2020 was definitely a year full with uncertainties and hardship.
-It was not what we were used to and there were many ideas and
-lead projects that looked very promising in the beginning of the
-year but didn't materialize for a multitude of reasons.&lt;/p&gt;
-&lt;p&gt;Overall Kiwi TCMS, its team and its community did very well and I am
-confident that next year we can achieve more together!&lt;/p&gt;
-&lt;p&gt;Happy Testing and Happy New Year!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-  and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/><category term="roadmap"/></entry></feed>
+</content><category term="misc"/><category term="releases"/></entry></feed>

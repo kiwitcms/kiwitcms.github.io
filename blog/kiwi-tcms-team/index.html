@@ -111,6 +111,113 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/09/17/kiwi-tcms-165/" rel="bookmark" title="Permalink to Kiwi TCMS 16.5">
+                <h1 class="top-header">Kiwi TCMS 16.5</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Thu 17 September 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Dear testers, we're happy to announce Kiwi TCMS version 16.5!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which includes security related updates
+and several improvements.</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  6122a229fade    747MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-16-4">
+<h2>Changes since Kiwi TCMS 16.4</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Update node_modules/js-yaml from 4.3.1 to 4.3.2</li>
+<li>Update node_modules/jszip from 3.10.1 to 3.10.2</li>
+<li>Route requests to <tt class="docutils literal">/uploads/</tt> internally to check for permissions before
+handing off to Nginx to serve the actual file. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-4fp9-ph54-5fjw">GHSA-4fp9-ph54-5fjw</a></li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update django-guardian from 3.4.1 to 3.5.0</li>
+<li>Update django-tree-queries from 0.25.1 to 0.26.1</li>
+<li>Update tzdata from 2026.3 to 2026.4</li>
+<li>Display TestExecution attachments on Test Run page to support the use-case
+where attachments have been uploaded via <tt class="docutils literal">TestExecution.add_attachmment()</tt>
+API method (Arnoldas Bagdonas)</li>
+<li>Small visual rearrangements on login page</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update locust from 2.46.4 to 2.46.5</li>
+<li>Remove deprecated field <tt class="docutils literal">version:</tt> from YAML files</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-v16-4-mt">
+<h2>Changes since Kiwi TCMS Enterprise v16.4-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v16.5</li>
+<li>Add <tt class="docutils literal">PASSWORD_RESET_ENABLED</tt> setting</li>
+<li>Add <tt class="docutils literal">restic</tt> command inside container</li>
+<li>Add <tt class="docutils literal"><span class="pre">mount-s3</span></tt> command inside container</li>
+<li>Remove the social-auth-kerberos add-on</li>
+<li>Redirect all login requests through <tt class="docutils literal">public.schema/accounts/login/</tt></li>
+<li>Update social-auth-app-django from 5.9.0 to 6.0.1</li>
+<li>Explicitly <tt class="docutils literal">dnf update</tt> when building the container</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            16.5 (aarch64)          a3c67b4ac2a0    17 Sep 2026     718MB
+hub.kiwitcms.eu/kiwitcms/version            16.5 (x86_64)           b49dec98c8ca    17 Sep 2026     698MB
+hub.kiwitcms.eu/kiwitcms/enterprise         16.5-mt (aarch64)       d057ed4da2b5    17 Sep 2026     1.06GB
+hub.kiwitcms.eu/kiwitcms/enterprise         16.5-mt (x86_64)        5ad1fee769aa    17 Sep 2026     1.04GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing please help us grow:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all news;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+<li><a class="reference external" href="/partners/">Become a reseller</a> and help us serve your community</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/09/11/raw-data-access-for-kiwi-tcms-private-tenant/" rel="bookmark" title="Permalink to Raw data access for Kiwi TCMS Private Tenant">
                 <h1 class="top-header">Raw data access for Kiwi TCMS Private Tenant</h1>
             </a>
@@ -2079,151 +2186,6 @@ please help us!</p>
 <li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2025/10/28/brief-history-of-kiwi-tcms-in-france/" rel="bookmark" title="Permalink to Brief history of Kiwi TCMS in France">
-                <h1 class="top-header">Brief history of Kiwi TCMS in France</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Tue 28 October 2025
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="&quot;French flag + Kiwi TCMS logo&quot;" src="/images/customers/kiwitcms+france.png" title="French flag + Kiwi TCMS logo"></p>
-<p>Brief history of Kiwi TCMS in France 🇫🇷:</p>
-<h3>Notable events</h3>
-<ul>
-<li><em>November 2018</em> - initial French translation contributed by <strong>Christophe CHAUVET</strong>.
-  It was the second foreign language which was actively translated at the time</li>
-<li><em>February 2019</em> - Kiwi TCMS starts executing its Postgres test suite using the French translation.
-  This is still the case today</li>
-<li><em>April 2020</em> - <a href="http://armadeus.com"><strong>Armadeus Systems</strong></a> - ARM and FPGA based embedded Linux systems -
-  becomes our first customer from France</li>
-<li><em>March 2022</em> - <strong>/e/ Foundation</strong> (Murena) publishes a “Test session with Kiwi” section on their documentation
-  website which is available at <a href="https://doc.e.foundation/testers#test-session-with-kiwi">https://doc.e.foundation/testers#test-session-with-kiwi</a></li>
-<li><em>May 2024</em> - Kiwi TCMS takes part of the first <em>Open Source Founders Summit</em> in Paris and
-  later becomes a member of the <em>Open Source Founders Association</em></li>
-</ul>
-<h3>Individual code contributors</h3>
-<div class="member-bio">
-    <img class="rounded" src="/images/contributors/Christophe-CHAUVET.png" height="150" width="150">
-    <strong>Christophe CHAUVET</strong> - Python Developer and PostgreSQL architect
-    <em></em>
-
-    <p>
-        Christophe is a Python Developer and PostgreSQL architect who is responsible
-        for the initial translation of Kiwi TCMS into French.
-
-        He has also worked on improving overall translatability of Kiwi TCMS, fixing
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/kryskool">multiple parts of the application</a>
-        by marking source strings as translatable.
-
-        His earliest code contribution is from <em>22nd Jan 2019</em>!
-    </p>
-
-    <a href="https://github.com/kryskool" class="bio-link">
-        <i class="lab la-github"></i>
-    </a>
-</div>
-
-<div class="member-bio">
-    <img class="rounded" src="/images/contributors/Nicolas_Auvray.jpg" height="150" width="150">
-    <strong>Nicolas AUVRAY</strong> - PhD in quantum physics, 0 A.D. team member
-    <em></em>
-
-    <p>
-        Nicolas is a high-school teacher of Physics and Chemistry, with a PhD in quantum physics
-        and also a tem member of 0 A.D - a popular open-source game of ancient warfare.
-
-        He has contributed documentation about
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/na-Itms">
-        running Kiwi TCMS behind a reverse proxy with HAProxy</a> and was the original inspiration
-        behind the now defunct
-        <a href="https://github.com/kiwitcms/open-source-test-management/">Open-Source-Test-Management</a>
-        repository.
-
-        His earliest code contribution is from <em>08th Mar 2019</em>!
-    </p>
-
-    <a href="https://github.com/na-Itms" class="bio-link">
-        <i class="lab la-github"></i>
-    </a>
-</div>
-
-<div class="member-bio">
-    <img class="rounded" src="/images/contributors/Nicolas_Gelot.png " height="150" width="150">
-    <strong>Nicolas GELOT</strong> - Python lover, automation addict and trail runner
-    <em></em>
-
-    <p>
-        Nicolas is a Python developer and (in his own words) an automation addict from Paris;
-        a member of the /e/ Foundation team.
-
-        He has contributed a
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/nfk">
-        bug-fix for the order of test cases when closing a TestPlan</a> in Kiwi TCMS.
-
-        His earliest code contribution is from <em>16th Dec 2021</em>!
-    </p>
-
-    <a href="https://github.com/nfk" class="bio-link">
-        <i class="lab la-github"></i>
-    </a>
-</div>
-
-<div class="member-bio">
-    <img class="rounded" src="/images/contributors/Antoine_Lorence.jpg " height="150" width="150">
-    <strong>Antoine LORENCE</strong> - Freelance Python/Django developer, FOSS enthusiast
-    <em></em>
-
-    <p>
-        Antoine is a Python/Django developer from Angers and the author of
-        <em>django-modern-rpc</em> - the library underlying the Kiwi TCMS API layer!
-
-        He has worked on changes related to
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/alorence">
-        Kiwi TCMS compatibility with the latest version of django-modern-rpc
-        </a>.
-
-        His earliest code contribution is from <em>23rd May 2022</em>!
-    </p>
-
-    <a href="https://github.com/alorence" class="bio-link">
-        <i class="lab la-github"></i>
-    </a>
-</div>
-
-<h3>Corporate references</h3>
-<p>Our anonymous analytics report over 25k events/1 yr recorded by Plausible
-and 12k events/3 mo recorded by Scarf. Here are some of the more interesting ones:</p>
-<ul>
-<li><strong>Parsec</strong> - <a href="https://kiwi.parsec.cloud">https://kiwi.parsec.cloud</a> - proof-of-concept with Kiwi TCMS</li>
-<li><strong>CAP’TRONIC</strong> - <a href="https://www.captronic.fr/spip.php?page=recherche&amp;lang=fr&amp;recherche=Kiwi+TCMS">captronic.fr</a> -
-  several training courses about Test Driven Development include Kiwi TCMS</li>
-<li><strong>e*Message</strong> - <a href="https://www.emessage.fr/">kiwi-tcms.emessage.fr</a> - most active French installation</li>
-<li><strong>Allianz</strong> - <a href="https://www.allianz.fr/">kiwitcms.oav-allianz.fr</a> - another Kiwi TCMS instance</li>
-<li><strong>Hiiro</strong> - <a href="https://hiiro.app/">kiwi.paris-int.hiiro.app</a> - uses Kiwi TCMS for testing
-  <em>2026 Marathon de Paris</em> support in their mobile application</li>
-<li><strong>Airbus CyberSecurity</strong> -
-  <a href="https://www.airbus.com/en/products-services/security/cybersecurity">kiwi.dev.cyberrange.fr</a> -
-  latest Kiwi TCMS installation in France</li>
-</ul>
-<p>If you would like to know more and meet Kiwi TCMS in person you can do so
-at <a href="/blog/kiwi-tcms-team/2025/10/29/meet-kiwi-tcms-at-open-source-experience25-in-paris/">Open Source Experience, 10 &amp; 11 Dec 2025 in Paris</a>!</p>
-<hr>
-<p>If you like what we're doing please help us grow and sustain development!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
 <li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
 </ul>
