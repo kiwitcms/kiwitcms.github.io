@@ -1,0 +1,112 @@
+Kiwi TCMS 16.5
+##############
+
+:headline: security related updates and several improvements
+:date: 2026-09-17 19:50
+:comments: false
+:tags: releases
+
+
+Dear testers, we're happy to announce Kiwi TCMS version 16.5!
+
+**IMPORTANT:**
+
+This is a minor version release which includes security related updates
+and several improvements.
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Public container image (x86_64)::
+
+        pub.kiwitcms.eu/kiwitcms/kiwi   latest  6122a229fade    747MB
+
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 16.4
+----------------------------
+
+Security
+~~~~~~~~
+
+- Update node_modules/js-yaml from 4.3.1 to 4.3.2
+- Update node_modules/jszip from 3.10.1 to 3.10.2
+- Route requests to ``/uploads/`` internally to check for permissions before
+  handing off to Nginx to serve the actual file. Fixes
+  `GHSA-4fp9-ph54-5fjw <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-4fp9-ph54-5fjw>`_
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update django-guardian from 3.4.1 to 3.5.0
+- Update django-tree-queries from 0.25.1 to 0.26.1
+- Update tzdata from 2026.3 to 2026.4
+- Display TestExecution attachments on Test Run page to support the use-case
+  where attachments have been uploaded via ``TestExecution.add_attachmment()``
+  API method (Arnoldas Bagdonas)
+- Small visual rearrangements on login page
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update locust from 2.46.4 to 2.46.5
+- Remove deprecated field ``version:`` from YAML files
+
+
+
+Changes since Kiwi TCMS Enterprise v16.4-mt
+-------------------------------------------
+
+- Based on Kiwi TCMS v16.5
+- Add ``PASSWORD_RESET_ENABLED`` setting
+- Add ``restic`` command inside container
+- Add ``mount-s3`` command inside container
+- Remove the social-auth-kerberos add-on
+- Redirect all login requests through ``public.schema/accounts/login/``
+- Update social-auth-app-django from 5.9.0 to 6.0.1
+- Explicitly ``dnf update`` when building the container
+
+
+Private container images
+------------------------
+
+    ::
+
+        hub.kiwitcms.eu/kiwitcms/version            16.5 (aarch64)          a3c67b4ac2a0    17 Sep 2026     718MB
+        hub.kiwitcms.eu/kiwitcms/version            16.5 (x86_64)           b49dec98c8ca    17 Sep 2026     698MB
+        hub.kiwitcms.eu/kiwitcms/enterprise         16.5-mt (aarch64)       d057ed4da2b5    17 Sep 2026     1.06GB
+        hub.kiwitcms.eu/kiwitcms/enterprise         16.5-mt (x86_64)        5ad1fee769aa    17 Sep 2026     1.04GB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+Follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing please help us grow:
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all news;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
+- `Become a reseller </partners/>`_ and help us serve your community
