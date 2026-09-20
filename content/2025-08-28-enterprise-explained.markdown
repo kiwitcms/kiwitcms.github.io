@@ -89,7 +89,7 @@ community edition of Kiwi TCMS. Our focus is to provide better operational exper
 IT teams and make it easier to integrate Kiwi TCMS with existing infrastructure and 3rd party systems.
 Some examples include:
 
-- OAuth (e.g. GitHub, GitLab) login, LDAP or kerberos
+- OAuth (e.g. GitHub, GitLab) login or LDAP
 - Metrics and error logging
 - Let's Encrypt SSL certificates
 - Flexible NGINX configuration
