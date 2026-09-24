@@ -66,7 +66,7 @@ organizations. Note that we don't keep track of individuals or IP addresses!*
 ### Bulgaria
 
 - [Platform Services](https://platformservices.net/) - *Integrated Project Management Platform*
-- [SiteGround](https://siteground.com/) - *Web Hosting Perfected*
+- [SiteGround]({filename}2026-07-21-siteground+kiwitcms.markdown) - *Web Hosting Perfected*
 
 
 ### Canada
