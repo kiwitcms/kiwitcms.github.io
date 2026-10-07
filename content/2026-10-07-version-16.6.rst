@@ -1,0 +1,154 @@
+Kiwi TCMS 16.6
+##############
+
+:headline: multiple security related updates, improvements, bug fixes, new API
+:date: 2026-10-07 13:15
+:comments: false
+:tags: releases
+
+
+Dear testers, we're happy to announce Kiwi TCMS version 16.6!
+
+**IMPORTANT:**
+
+This is a minor version release which includes multiple security related updates,
+improvements and bug fixes, new API methods and internal refactoring.
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Public container image (x86_64)::
+
+        pub.kiwitcms.eu/kiwitcms/kiwi   latest  05fa3580d0f0    739MB
+
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 16.5
+----------------------------
+
+- Update Django from 6.1.1 to 6.1.2
+- Update node_modules/brace-expansion from 1.1.18 to 1.1.21
+- Update node_modules/fast-uri from 3.1.6 to 3.1.8
+- Update node_modules/minimatch from 3.1.3 to 3.1.4
+- Update node_modules/moment from 2.29.4 to 2.31.0
+- Restrict email lookups via RPC calls. Fixes
+  `GHSA-7fw6-cfjr-g2hj <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7fw6-cfjr-g2hj>`_
+- Prevent email address confirmation bypass via API method. Fixes
+  `GHSA-wv2r-fx3r-qfj5 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-wv2r-fx3r-qfj5>`_
+- Fixes for code scanning alerts: DOM text reinterpreted as HTML
+- Fixes for code scanning alerts: URL redirection from remote source
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update markdown from 3.10.3 to 3.11
+- Update mysqlclient from 2.2.8 to 2.3.0
+- Update psycopg from 3.3.5 to 3.3.6
+- Update python-gitlab from 8.5.0 to 8.6.0
+- Update tzdata from 2026.4 to 2026.5
+- Update node_modules/webpack from 5.110.3 to 5.111.1
+- Show paperclip icon with attachment count on TestExecution rows
+  (**Achmad Fienan Rahardianto**)
+- Implement TestPlan multi-clone functionality via Search Test Plans page
+  (**Oskar Hurst, USACE**). Closes
+  `Issue #3976 <https://github.com/kiwitcms/Kiwi/issues/3976>`_
+- Implement TestPlan tree-clone functionality. Closes
+  `Issue #4306 <https://github.com/kiwitcms/Kiwi/issues/4306>`_
+- Add ``Default tester`` search field to Search Test Cases page. Closes
+  `Issue #4522 <https://github.com/kiwitcms/Kiwi/issues/4522>`_
+- Add ``Tested by`` bulk menu on Test Run page. Closes
+  `Issue #4562 <https://github.com/kiwitcms/Kiwi/issues/4562>`_
+- Include ID in default name when cloning a TestPlan
+- Skip UI only columns when exporting search results
+- Prevent TestPlan trees deeper than django-tree-queries can handle. Closes
+  `Issue #4334 <https://github.com/kiwitcms/Kiwi/issues/4334>`_
+- Show test cases with similar summaries on New Test Case page. Closes
+  `Issue #4111 <https://github.com/kiwitcms/Kiwi/issues/4111>`_
+
+
+Bug fixes
+~~~~~~~~~
+
+- Show all rows in the tags card, not limited to the first 20. Fixes
+  `Issue #2914 <https://github.com/kiwitcms/Kiwi/issues/2914>`_
+- Don't collapse Test plan multiselect on Search Test Cases page. Refs
+  `Issue #3325 <https://github.com/kiwitcms/Kiwi/issues/3325>`_
+
+
+API
+~~~
+
+- ``Bug.create()`` method will store the ``text`` field as initial comment. Closes
+  `Issue #4617 <https://github.com/kiwitcms/Kiwi/issues/4617>`_
+- ``User.update()`` method no longer accepts the ``email`` field
+- Add ``TestExecution.count_attachments()`` method
+- Add ``TestPlan.clone()`` method
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update isort from 9.0.1 to 9.0.2
+- Update locust from 2.46.5 to 2.46.6
+- Update pylint from 4.0.8 to 4.1.2
+- Redesign UI of Clone TestPlan page - all widgets now fit on one line
+- Clone TestPlan page now uses the ``TestPlan.clone()`` API method
+- Refactor calls to ``TestPlan.remove_case``
+- Refactor ``updateVersionSelectFromProduct()`` to accept arguments
+- Refactor ``populateVersion()`` to accept arguments
+
+
+
+
+Changes since Kiwi TCMS Enterprise v16.5-mt
+-------------------------------------------
+
+- Based on Kiwi TCMS v16.6
+- Update kiwitcms-tenants from 4.7.1 to 4.10.0
+- Update psycopg-pool from 3.3.1 to 3.3.3
+- Update sentry-sdk from 2.69.2 to 2.71.0
+- Update social-auth-app-django from 6.0.1 to 6.1.0
+
+
+Private container images
+------------------------
+
+    ::
+
+        hub.kiwitcms.eu/kiwitcms/version            16.6 (aarch64)          2b5b67801875    07 Oct 2026     719MB
+        hub.kiwitcms.eu/kiwitcms/version            16.6 (x86_64)           5d7b241ba703    07 Oct 2026     699MB
+        hub.kiwitcms.eu/kiwitcms/enterprise         16.6-mt (aarch64)       19495ac6745a    07 Oct 2026     1.06GB
+        hub.kiwitcms.eu/kiwitcms/enterprise         16.6-mt (x86_64)        18ff7c3904d6    07 Oct 2026     1.04GB
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+Follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing please help us grow:
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all news;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
+- `Become a reseller </partners/>`_ and help us serve your community
