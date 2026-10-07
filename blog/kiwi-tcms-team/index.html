@@ -111,6 +111,154 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/" rel="bookmark" title="Permalink to Kiwi TCMS 16.6">
+                <h1 class="top-header">Kiwi TCMS 16.6</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 07 October 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Dear testers, we're happy to announce Kiwi TCMS version 16.6!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which includes multiple security related updates,
+improvements and bug fixes, new API methods and internal refactoring.</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  05fa3580d0f0    739MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-16-5">
+<h2>Changes since Kiwi TCMS 16.5</h2>
+<ul class="simple">
+<li>Update Django from 6.1.1 to 6.1.2</li>
+<li>Update node_modules/brace-expansion from 1.1.18 to 1.1.21</li>
+<li>Update node_modules/fast-uri from 3.1.6 to 3.1.8</li>
+<li>Update node_modules/minimatch from 3.1.3 to 3.1.4</li>
+<li>Update node_modules/moment from 2.29.4 to 2.31.0</li>
+<li>Restrict email lookups via RPC calls. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7fw6-cfjr-g2hj">GHSA-7fw6-cfjr-g2hj</a></li>
+<li>Prevent email address confirmation bypass via API method. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-wv2r-fx3r-qfj5">GHSA-wv2r-fx3r-qfj5</a></li>
+<li>Fixes for code scanning alerts: DOM text reinterpreted as HTML</li>
+<li>Fixes for code scanning alerts: URL redirection from remote source</li>
+</ul>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update markdown from 3.10.3 to 3.11</li>
+<li>Update mysqlclient from 2.2.8 to 2.3.0</li>
+<li>Update psycopg from 3.3.5 to 3.3.6</li>
+<li>Update python-gitlab from 8.5.0 to 8.6.0</li>
+<li>Update tzdata from 2026.4 to 2026.5</li>
+<li>Update node_modules/webpack from 5.110.3 to 5.111.1</li>
+<li>Show paperclip icon with attachment count on TestExecution rows
+(<strong>Achmad Fienan Rahardianto</strong>)</li>
+<li>Implement TestPlan multi-clone functionality via Search Test Plans page
+(<strong>Oskar Hurst, USACE</strong>). Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3976">Issue #3976</a></li>
+<li>Implement TestPlan tree-clone functionality. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4306">Issue #4306</a></li>
+<li>Add <tt class="docutils literal">Default tester</tt> search field to Search Test Cases page. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4522">Issue #4522</a></li>
+<li>Add <tt class="docutils literal">Tested by</tt> bulk menu on Test Run page. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4562">Issue #4562</a></li>
+<li>Include ID in default name when cloning a TestPlan</li>
+<li>Skip UI only columns when exporting search results</li>
+<li>Prevent TestPlan trees deeper than django-tree-queries can handle. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4334">Issue #4334</a></li>
+<li>Show test cases with similar summaries on New Test Case page. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4111">Issue #4111</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Show all rows in the tags card, not limited to the first 20. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2914">Issue #2914</a></li>
+<li>Don't collapse Test plan multiselect on Search Test Cases page. Refs
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3325">Issue #3325</a></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li><tt class="docutils literal">Bug.create()</tt> method will store the <tt class="docutils literal">text</tt> field as initial comment. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4617">Issue #4617</a></li>
+<li><tt class="docutils literal">User.update()</tt> method no longer accepts the <tt class="docutils literal">email</tt> field</li>
+<li>Add <tt class="docutils literal">TestExecution.count_attachments()</tt> method</li>
+<li>Add <tt class="docutils literal">TestPlan.clone()</tt> method</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update isort from 9.0.1 to 9.0.2</li>
+<li>Update locust from 2.46.5 to 2.46.6</li>
+<li>Update pylint from 4.0.8 to 4.1.2</li>
+<li>Redesign UI of Clone TestPlan page - all widgets now fit on one line</li>
+<li>Clone TestPlan page now uses the <tt class="docutils literal">TestPlan.clone()</tt> API method</li>
+<li>Refactor calls to <tt class="docutils literal">TestPlan.remove_case</tt></li>
+<li>Refactor <tt class="docutils literal">updateVersionSelectFromProduct()</tt> to accept arguments</li>
+<li>Refactor <tt class="docutils literal">populateVersion()</tt> to accept arguments</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-v16-5-mt">
+<h2>Changes since Kiwi TCMS Enterprise v16.5-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v16.6</li>
+<li>Update kiwitcms-tenants from 4.7.1 to 4.10.0</li>
+<li>Update psycopg-pool from 3.3.1 to 3.3.3</li>
+<li>Update sentry-sdk from 2.69.2 to 2.71.0</li>
+<li>Update social-auth-app-django from 6.0.1 to 6.1.0</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            16.6 (aarch64)          2b5b67801875    07 Oct 2026     719MB
+hub.kiwitcms.eu/kiwitcms/version            16.6 (x86_64)           5d7b241ba703    07 Oct 2026     699MB
+hub.kiwitcms.eu/kiwitcms/enterprise         16.6-mt (aarch64)       19495ac6745a    07 Oct 2026     1.06GB
+hub.kiwitcms.eu/kiwitcms/enterprise         16.6-mt (x86_64)        18ff7c3904d6    07 Oct 2026     1.04GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing please help us grow:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all news;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+<li><a class="reference external" href="/partners/">Become a reseller</a> and help us serve your community</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/10/03/who-is-using-kiwi-tcms-in-sept-2026/" rel="bookmark" title="Permalink to Who is using Kiwi TCMS in Sept 2026">
                 <h1 class="top-header">Who is using Kiwi TCMS in Sept 2026</h1>
             </a>
@@ -1993,276 +2141,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2025/12/04/who-is-using-kiwi-tcms-in-2025/" rel="bookmark" title="Permalink to Who is using Kiwi TCMS in 2025">
-                <h1 class="top-header">Who is using Kiwi TCMS in 2025</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 04 December 2025
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="2025 banner" src="/images/analytics/2025/banner.png" title="2025 banner"></p>
-<p>With 2025 drawing to an end Kiwi TCMS is happy to share some highlights from our
-usage statistics. It is really insightful to see the myriad of organizations
-using Kiwi TCMS.</p>
-<p><em>Disclaimer: the information below was obtained via anonymous analytics and
-represents only instances of Kiwi TCMS which had recorded over 1000 events
-between 01 Jan 2025 and 31 Dec 2025 (data updated after publication).
-We've used publicly available data in order to identify these
-organizations. Note that we don't keep track of individuals or IP addresses!</em></p>
-<h3>Numbers at a glance</h3>
-<ul>
-<li>14+ different versions deployed; most popular is v14.2</li>
-<li>38 different countries with active usage</li>
-<li>100+ different organizations with ongoing usage</li>
-<li>400-500 users/day; upwards monthly trend</li>
-<li>~200k total visits</li>
-<li>~3.5M pages served</li>
-</ul>
-<h3>Argentina</h3>
-<ul>
-<li><a href="/blog/kiwi-tcms-team/2025/02/18/the-university-information-system-of-argentina-adopts-kiwi-tcms/">Sistema de Información Universitaria</a></li>
-</ul>
-<h3>Australia</h3>
-<ul>
-<li><a href="https://hargravetechnologies.com">Hargrave Technologies</a> - <em>Control Systems and Power Electronics Engineering for Aerospace applications</em></li>
-</ul>
-<h3>Austria</h3>
-<ul>
-<li><a href="https://ams-osram.com/">ams OSRAM AG</a></li>
-<li><a href="https://www.benteler.com">Benteler</a> - <em>The family of driver professionals. Since 1876</em></li>
-</ul>
-<h3>Belarus</h3>
-<ul>
-<li><a href="https://unic-lab.by">Unic Lab</a></li>
-</ul>
-<h3>Brazil</h3>
-<ul>
-<li><a href="https://www.cittamobi.com.br/">Cittamobi</a> - <em>Ônibus e Trilhos</em></li>
-<li><a href="https://egestora.com.br/">E-Gestora</a> - <em>Sistemas e Solucões</em></li>
-<li><a href="https://finnet.com.br/">Finnet</a> - <em>Conectando grandes empresas ao futuro financeiro</em></li>
-<li><a href="https://fpf.br/">FPFtech</a> - <em>Transformando conhecimento em Inovação</em></li>
-<li><a href="https://institucional.lunapay.com.br/">Luna</a> - <em>A plataforma mais completa de meios de pagamento</em></li>
-<li><a href="https://midassolutions.com.br/">Midas Solutions</a></li>
-<li><a href="https://neopath.com.br/">NeoPath</a></li>
-<li><a href="https://tms.openxsolutions.com.br/">openxsolutions.com.br</a></li>
-<li><a href="https://www.pontotel.com.br/">Pontotel</a> - <em>Plataforma de controle de ponto online</em></li>
-<li><a href="https://vrsoft.com.br/">VR Software</a> - <em>We live supermarkets</em></li>
-</ul>
-<h3>Bulgaria</h3>
-<ul>
-<li><a href="https://platformservices.net/">Platform Services</a> - <em>Integrated Project Management Platform</em></li>
-<li><a href="/blog/kiwi-tcms-team/2026/07/21/siteground-uses-kiwi-tcms-as-central-repository-of-testing-knowledge/">SiteGround</a> - <em>Web Hosting Perfected</em></li>
-</ul>
-<h3>Canada</h3>
-<ul>
-<li><a href="https://belocum.com/">BeLOCUM</a> - <em>Pharmacy &amp; Dental Staffing Solutions</em></li>
-<li><a href="https://datafix.com/">DataFix</a> - <em>Election Modernization Experts</em></li>
-<li><a href="https://www.minto.com">Minto Group</a> - <em>Building better places to live since 1955</em></li>
-<li><a href="https://nursegpt.ca/">NurseGPT</a> - <em>Revolutionize Nursing Home Charting with AI</em></li>
-<li><a href="https://www.twistedmountainanimation.com/">Twisted Mountain Animation</a> - <em>Your Partners In Production</em></li>
-</ul>
-<h3>China</h3>
-<ul>
-<li><a href="https://www.infimotion.com">InfiMotion</a> - <em>leader in electric drive unit solutions for electric and hybrid vehicles</em></li>
-<li><a href="http://www.kuandeng.com/">KUANDENG</a> - <em>Motor Vehicle Manufacturing</em></li>
-</ul>
-<h3>Estonia</h3>
-<ul>
-<li><a href="https://brokeree.com/">Brokeree</a> - <em>Turnkey Tech Solutions for Retail Brokers</em></li>
-</ul>
-<h3>France</h3>
-<ul>
-<li><a href="https://www.airbus.com/en/products-services/security/cybersecurity">Airbus Cybersecurity</a></li>
-<li><a href="https://www.emessage.fr/">e*Message</a> - <em>L&#039;expert de l&#039;alerte et des communications critiques</em></li>
-</ul>
-<h3>Germany</h3>
-<ul>
-<li><a href="https://www.cib.de/">CIB Group</a> - <em>Digitalisierung. Automatisierung. Künstliche Intelligenz</em></li>
-<li><a href="https://www.deltacontrols.de/">Delta Controls Germany</a> - <em>Hersteller Gebäudeautomation</em></li>
-<li><a href="https://www.eas-solutions.de">EAS Engineering Automation Systems GmbH</a> - <em>CPQ solution</em></li>
-<li><a href="https://www.elatec-rfid.com/int/">Elatec RFID</a> - <em>Universal Access Control Solutions</em></li>
-<li><a href="https://www.eventim.de/">Eventim</a> - <em>Buy Original Tickets for Concerts, Sports and More</em></li>
-<li><a href="https://www.ndr.de/">NDR.de</a> - <em>Das Beste am Norden - Radio - Fernsehen - Nachrichten</em></li>
-<li><a href="https://www.optitool.de/">OPTITOOL GmbH</a> - <em>optimize your business</em></li>
-<li><a href="http://osram-light.com/">OSRAM Licht AG</a></li>
-<li><a href="http://tq-net.de">TQ-Group</a></li>
-<li><a href="https://unitedprint.com">UNITEDPRINT SE</a></li>
-</ul>
-<h3>Hungary</h3>
-<ul>
-<li><a href="https://masterfield.hu">Masterfield Training Centre</a></li>
-<li><a href="https://www.multilogic.hu/">Multilogic</a> - <em>Innovat&iacute;v megold&aacute;sok az okosszervezetek&eacute;rt</em></li>
-</ul>
-<h3>India</h3>
-<ul>
-<li><a href="https://bosshire.co.id">Bosshire</a> - <em>Matching Top Talent with Quality Jobs</em></li>
-<li><a href="https://www.codehall.in/">CodeHall</a> - <em>Assembling code, Delivering Open Source success</em></li>
-<li><a href="https://fintrens.com/">Fintrens</a> - <em>Automated Algo Trading</em></li>
-<li><a href="https://homevillegroup.com/">Homeville Group</a> - <em>Financial technology and infrastructure company for housing finance ecosystem</em></li>
-<li><a href="https://www.innogenio.com/">Innogenio</a> - <em>Imagine Inspire Impact</em></li>
-<li><a href="https://www.thepsi.com/">Pratham Software (PSI)</a> - <em>Digital Product Engineering</em></li>
-<li><a href="http://sprylogic.com/">Sprylogic Technologies Ltd.</a></li>
-</ul>
-<h3>Indonesia</h3>
-<ul>
-<li><a href="https://bluepay.id/">BluePay</a> - <em>a mobile payment platform</em></li>
-<li><a href="https://eternoglobaltechnologies.com">Eterno Global Technologies</a> - <em>Bring Intelligent Technology To Your Mine</em></li>
-<li><a href="https://forstok.com/">FORSTOK</a> - <em>Omnichannel selling made easy</em></li>
-<li><a href="https://www.goersapp.com/">GOERS</a> - <em>Tickets, Events, Travel</em></li>
-<li><a href="https://asi-asiapacific.com/">PT Aneka Search Indonesia</a></li>
-<li><a href="https://tlab.co.id/">TLab</a> - <em>Research &amp; Development Company</em></li>
-</ul>
-<h3>Ireland</h3>
-<ul>
-<li><a href="https://vryno.com/">Vryno</a> - <em>All-in-one CRM Solution Powered by Microsoft 365</em></li>
-</ul>
-<h3>Israel</h3>
-<ul>
-<li><a href="https://www.cellact.com/">Cellact</a> - <em>Always connected</em></li>
-<li><a href="https://www.uco.co.il/">Uco software development</a></li>
-</ul>
-<h3>Italy</h3>
-<ul>
-<li><a href="http://messagenet.it">Messagenet</a> - <em>Operatore telefonico per il business</em></li>
-<li><a href="https://www.olivetti.com/en">Olivetti S.p.A.</a> - <em>Design meets Technology</em></li>
-</ul>
-<h3>Japan</h3>
-<ul>
-<li><a href="https://cba-japan.com/">Communications Business Avenue, Inc.</a> - <em>leader in communication and contact center solutions</em></li>
-<li><a href="https://www.fujisan.co.jp/">Fujisan Magazine Service Co.,Ltd.</a> - <em>largest online magazine bookstore</em></li>
-<li><a href="https://www.nck.co.jp/">Nippon Computer Corporation</a></li>
-</ul>
-<h3>Kazakhstan</h3>
-<ul>
-<li><a href="https://gamma.kz/">Gamma Technologies</a></li>
-<li><a href="https://smartplayer.org/">SmartPlayer</a> - <em>Digital Signage Platform</em></li>
-</ul>
-<h3>Mexico</h3>
-<ul>
-<li><a href="https://www.therobox.io/">The Robox</a> - <em>Fully Autonomous Drone System</em></li>
-</ul>
-<h3>Norway</h3>
-<ul>
-<li><a href="http://adresseavisen.no">Adresseavisen AS</a> - <em>regional newspaper</em></li>
-<li><a href="https://www.pixii.com/">Pixii</a> - <em>technology partner for smart, modular and scalable battery based energy storage solutions</em></li>
-</ul>
-<h3>Paraguay</h3>
-<ul>
-<li><a href="https://cast.com.py">Cast S.A.</a> - <em>Soluciones Móviles</em></li>
-</ul>
-<h3>Poland</h3>
-<ul>
-<li><a href="https://www.exa22.com/">exa_22</a> - <em>Mechatronika i systemy IoT</em></li>
-<li><a href="https://www.fingoweb.com/">Fingoweb</a> - <em>Software Development Company</em></li>
-<li><a href="https://inseqr.pl">Inseqr</a> - <em>Krajowy lider rozwiązań klasy OSINT i bezpieczeństwa IT</em></li>
-<li><a href="https://www.netcorner.pl/">NetCorner</a> - <em>Innowacyjna platforma e-commerce dla Twojego biznesu</em></li>
-</ul>
-<h3>Portugal</h3>
-<ul>
-<li><a href="https://www.bravantic.com/">Bravantic</a> - <em>Evolving Technology</em></li>
-</ul>
-<h3>Serbia</h3>
-<ul>
-<li><a href="http://nites.rs">NITES</a> - <em>Smart Industry Solutions - Knowledge &amp; Commitment</em></li>
-</ul>
-<h3>Singapore</h3>
-<ul>
-<li><a href="https://brtchip.com/">Bridgetek</a> - <em>high performance microcontroller units &amp; display IC products</em></li>
-<li><a href="https://chimeratool.com">ChimeraTool</a> - <em>professional software for the mobile phone servicing industry</em></li>
-<li><a href="https://kegmil.com">Kegmil</a> - <em>Simpler Smarter Field Service</em></li>
-<li><a href="http://www.weeswares.com/">WeesWares</a> - <em>Mobile app design and development studio</em></li>
-</ul>
-<h3>Saudi Arabia</h3>
-<ul>
-<li><a href="https://calx.sa/">CALX Consulting</a> - <em>Saudi Management Consultancy</em></li>
-</ul>
-<h3>South Africa</h3>
-<ul>
-<li><a href="https://www.michanic.co.za/">Michanic</a> - <em>South Africa's Top Mobile Mechanics</em></li>
-</ul>
-<h3>Switzerland</h3>
-<ul>
-<li><a href="https://medelexis.ch/">Medelexis AG</a></li>
-<li><a href="https://www.mkspamp.com">MKS PAMP SA</a> - <em>state-of-the-art precious metals refinery</em></li>
-</ul>
-<h3>The Netherlands</h3>
-<ul>
-<li><a href="https://cleverenable.com/">CleverEnable</a> - <em>technical foundation for mobile virtual network operators</em></li>
-</ul>
-<h3>Turkey</h3>
-<ul>
-<li><a href="https://brandefense.io">Brandefense</a> - <em>All-in-One Digital Risk Protection Solution</em></li>
-</ul>
-<h3>UK</h3>
-<ul>
-<li><a href="https://www.astrazeneca.com/">AstraZeneca</a> - <em>Research-Based BioPharmaceutical Company</em></li>
-<li><a href="https://hiiro.app">Hiiro</a> - <em>your personal running coach</em></li>
-<li><a href="https://hyris.net">Hyris</a> - <em>a tech-bio company</em></li>
-<li><a href="https://www.tribepayments.com/">Tribe Payments</a> - <em>Payments technology for Fintechs, Banks and Acquirers</em></li>
-</ul>
-<h3>USA</h3>
-<ul>
-<li><a href="https://accure.ai/">Accure AI</a> - <em>Enterprise Operational AI Hub</em></li>
-<li><a href="https://adaptiva.com/">Adaptiva</a> - <em>The fastest way to patch and manage endpoints at scale</em></li>
-<li><a href="http://atsclock.com">American Time</a> - <em>global manufacturer and distributor of synchronized time clocks and systems</em></li>
-<li><a href="https://www.analog.com">Analog Devices</a> - <em>Mixed-signal and digital signal processing ICs</em></li>
-<li><a href="http://citycheers.com/">City Cheers</a> - <em>The Super App for the Hospitality Industry</em></li>
-<li><a href="https://curiositystream.com">Curiosity Stream</a> - <em>on demand video streaming service</em></li>
-<li><a href="https://dh2i.com/">DH2i</a> - <em>SQL Server HA Clustering &amp; Software-Defined Perimeter</em></li>
-<li><a href="https://www.dynamicratings.com/">Dynamic Ratings</a> - <em>Responsive Asset Health Solutions</em></li>
-<li><a href="http://embedur.com">embedUR</a> - <em>Embedded Systems &amp; Edge AI Experts</em></li>
-<li><a href="https://lithero.com/">Lithero</a> - <em>AI Agents for Health &amp; Life Sciences Marketers</em></li>
-<li><a href="https://metafora.net/">Metafora</a> - <em>Transportation and Logistics Consultants</em></li>
-<li><a href="https://www.mobeats.io">Mobeats</a></li>
-<li><a href="https://www.redhawk-tech.com/">Red Hawk Technologies</a> - <em>Custom Software Development and Services</em></li>
-<li><a href="https://terragrit.com">Terragrit</a> - <em>virtualization engine for physical environments</em></li>
-<li><a href="https://www.windriver.com/">Wind River</a> - <em>Safe, Secure, Reliable</em></li>
-</ul>
-<h3>Academia &amp; Education</h3>
-<ul>
-<li><a href="https://www.cmu.edu/">Carnegie Mellon University</a> - <em>USA</em></li>
-<li><a href="https://www.htwg-konstanz.de/">Hochschule Konstanz</a> - <em>Germany</em></li>
-<li><a href="https://www.uni-hannover.de/en/">Leibniz University Hannover</a> - <em>Germany</em></li>
-<li><a href="https://www.mmu.edu.my/">Multimedia University</a> - <em>Malaysia's Leading Private University</em></li>
-<li><a href="https://www.ru.nl/">Radboud University</a> - <em>the Netherlands</em></li>
-<li><a href="/blog/kiwi-tcms-team/2025/02/18/the-university-information-system-of-argentina-adopts-kiwi-tcms/">Sistema de Información Universitaria</a> - <em>Argentina</em></li>
-<li><a href="http://www.campus-it.th-koeln.de">TH Köln</a> - <em>Germany</em></li>
-<li><a href="https://pwr.edu.pl/en/">Wrocław University of Science and Technology</a> - <em>Poland</em></li>
-</ul>
-<h3>Government</h3>
-<ul>
-<li><a href="https://buerokratt.ee/">Bürokratt</a> - <em>virtual AI assistant by Information System Authority, Republic of Estonia</em></li>
-<li><a href="https://www.gov.uk/government/organisations/hm-revenue-customs">HM Revenue &amp; Customs</a> - <em>UK's tax, payments and customs authority</em></li>
-<li><a href="https://sycuat.com">Integrated Financial Management Information System</a> - <em>Government of Seychelles</em></li>
-<li><a href="https://www.mef.gov.it/">Ministero dell&#039;Economia e delle Finanze</a> - <em>Ministry of Economy and Finance - Italy</em></li>
-<li><a href="http://pauddasmen.id">The Directorate General of Early Childhood Education, Primary Education and Secondary Education</a> - <em>Indonesia</em></li>
-<li><a href="https://www.ukrposhta.ua/en">Ukrposhta</a> - <em>Ukraine's national post</em></li>
-</ul>
-<h3>Military &amp; defense</h3>
-<ul>
-<li><a href="https://www.airbus.com/en/products-services/security/cybersecurity">Airbus Cybersecurity</a></li>
-<li><a href="https://www.af.mil/">U.S. Air Force</a> - <em>common computing environment</em></li>
-<li><a href="https://www.hec.usace.army.mil/">US Army Corps of Engineers</a> - <em>Hydrologic Engineering Center</em></li>
-<li><a href="https://www.defense.gov/">U.S. Department of Defense</a> - <em>joint operations &amp; support cloud environment</em></li>
-</ul>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
         </div>
     </article>
 

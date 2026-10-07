@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Kiwi TCMS 16.6</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-Frame-Options" content="deny">
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
+        <script>
+            if (top != window) {
+                top.location = window.location;
+            }
+        </script>
+    
+
+
+        <meta name="description" content="multiple security related updates, improvements, bug fixes, new API" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="tags" content="releases" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Kiwi TCMS 16.6">
+            <meta name="twitter:description" content="multiple security related updates, improvements, bug fixes, new API">
+        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://kiwitcms.org/theme/images/twitter_card.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/" />
+        <meta property="og:title" content="Kiwi TCMS 16.6" />
+        <meta property="article:published_time" content="2026-10-07 13:15:00+03:00">
+            <meta property="og:description" content="multiple security related updates, improvements, bug fixes, new API">
+
+            <meta property="og:image" content="https://kiwitcms.org/theme/images/og_image.png">
+        <!-- Custom Styles -->
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
+
+        <script defer data-domain="kiwitcms.org" src="https://plausible.io/js/script.js"></script>
+
+        <script
+            id="fsc-api"
+            src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.5/fastspring-builder.min.js"
+            type="text/javascript"
+            data-storefront="mrsenko.onfastspring.com/popup-kiwitcms">
+        </script>
+    </head>
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            </a>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/community/" >Community</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop"
+                        onmouseenter="toggle('nav-drop','drop-down');"
+                        onmouseleave="toggle('nav-drop','drop-down');"
+                    >
+                        <div class="btn" icon>Get Started <i></i></div>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="/#subscriptions">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                            <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
+                            <a href="/partners/">Kiwi TCMS Partner Store</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- content -->
+    <section id="blog-article">
+        <h1 class="top-header">Kiwi TCMS 16.6</h1>
+        <h2 class="top-subheader">multiple security related updates, improvements, bug fixes, new API</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Wed 07 October 2026
+                under
+                    <a href="https://kiwitcms.org/blog/tags/releases/">releases</a>
+        </p>
+
+        <article class="content">
+            <p>Dear testers, we're happy to announce Kiwi TCMS version 16.6!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which includes multiple security related updates,
+improvements and bug fixes, new API methods and internal refactoring.</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwi   latest  05fa3580d0f0    739MB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-16-5">
+<h2>Changes since Kiwi TCMS 16.5</h2>
+<ul class="simple">
+<li>Update Django from 6.1.1 to 6.1.2</li>
+<li>Update node_modules/brace-expansion from 1.1.18 to 1.1.21</li>
+<li>Update node_modules/fast-uri from 3.1.6 to 3.1.8</li>
+<li>Update node_modules/minimatch from 3.1.3 to 3.1.4</li>
+<li>Update node_modules/moment from 2.29.4 to 2.31.0</li>
+<li>Restrict email lookups via RPC calls. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7fw6-cfjr-g2hj">GHSA-7fw6-cfjr-g2hj</a></li>
+<li>Prevent email address confirmation bypass via API method. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-wv2r-fx3r-qfj5">GHSA-wv2r-fx3r-qfj5</a></li>
+<li>Fixes for code scanning alerts: DOM text reinterpreted as HTML</li>
+<li>Fixes for code scanning alerts: URL redirection from remote source</li>
+</ul>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update markdown from 3.10.3 to 3.11</li>
+<li>Update mysqlclient from 2.2.8 to 2.3.0</li>
+<li>Update psycopg from 3.3.5 to 3.3.6</li>
+<li>Update python-gitlab from 8.5.0 to 8.6.0</li>
+<li>Update tzdata from 2026.4 to 2026.5</li>
+<li>Update node_modules/webpack from 5.110.3 to 5.111.1</li>
+<li>Show paperclip icon with attachment count on TestExecution rows
+(<strong>Achmad Fienan Rahardianto</strong>)</li>
+<li>Implement TestPlan multi-clone functionality via Search Test Plans page
+(<strong>Oskar Hurst, USACE</strong>). Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3976">Issue #3976</a></li>
+<li>Implement TestPlan tree-clone functionality. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4306">Issue #4306</a></li>
+<li>Add <tt class="docutils literal">Default tester</tt> search field to Search Test Cases page. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4522">Issue #4522</a></li>
+<li>Add <tt class="docutils literal">Tested by</tt> bulk menu on Test Run page. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4562">Issue #4562</a></li>
+<li>Include ID in default name when cloning a TestPlan</li>
+<li>Skip UI only columns when exporting search results</li>
+<li>Prevent TestPlan trees deeper than django-tree-queries can handle. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4334">Issue #4334</a></li>
+<li>Show test cases with similar summaries on New Test Case page. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4111">Issue #4111</a></li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes</h3>
+<ul class="simple">
+<li>Show all rows in the tags card, not limited to the first 20. Fixes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2914">Issue #2914</a></li>
+<li>Don't collapse Test plan multiselect on Search Test Cases page. Refs
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3325">Issue #3325</a></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li><tt class="docutils literal">Bug.create()</tt> method will store the <tt class="docutils literal">text</tt> field as initial comment. Closes
+<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4617">Issue #4617</a></li>
+<li><tt class="docutils literal">User.update()</tt> method no longer accepts the <tt class="docutils literal">email</tt> field</li>
+<li>Add <tt class="docutils literal">TestExecution.count_attachments()</tt> method</li>
+<li>Add <tt class="docutils literal">TestPlan.clone()</tt> method</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update isort from 9.0.1 to 9.0.2</li>
+<li>Update locust from 2.46.5 to 2.46.6</li>
+<li>Update pylint from 4.0.8 to 4.1.2</li>
+<li>Redesign UI of Clone TestPlan page - all widgets now fit on one line</li>
+<li>Clone TestPlan page now uses the <tt class="docutils literal">TestPlan.clone()</tt> API method</li>
+<li>Refactor calls to <tt class="docutils literal">TestPlan.remove_case</tt></li>
+<li>Refactor <tt class="docutils literal">updateVersionSelectFromProduct()</tt> to accept arguments</li>
+<li>Refactor <tt class="docutils literal">populateVersion()</tt> to accept arguments</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-v16-5-mt">
+<h2>Changes since Kiwi TCMS Enterprise v16.5-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v16.6</li>
+<li>Update kiwitcms-tenants from 4.7.1 to 4.10.0</li>
+<li>Update psycopg-pool from 3.3.1 to 3.3.3</li>
+<li>Update sentry-sdk from 2.69.2 to 2.71.0</li>
+<li>Update social-auth-app-django from 6.0.1 to 6.1.0</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            16.6 (aarch64)          2b5b67801875    07 Oct 2026     719MB
+hub.kiwitcms.eu/kiwitcms/version            16.6 (x86_64)           5d7b241ba703    07 Oct 2026     699MB
+hub.kiwitcms.eu/kiwitcms/enterprise         16.6-mt (aarch64)       19495ac6745a    07 Oct 2026     1.06GB
+hub.kiwitcms.eu/kiwitcms/enterprise         16.6-mt (x86_64)        18ff7c3904d6    07 Oct 2026     1.04GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing please help us grow:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all news;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+<li><a class="reference external" href="/partners/">Become a reseller</a> and help us serve your community</li>
+</ul>
+</div>
+
+        </article>
+    </section>
+
+    <section class="after-content">
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
+
+    <section class="after-content">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=7386a67a-a689-40df-a268-b03ada69e169" alt="">
+            <div class="legal">
+                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p>
+                    <a href="/legal/">Legal</a> |
+                    <a href="/privacy/">Privacy</a> |
+                    <a href="/terms/">Terms</a> |
+                    <a href="/partners/">Partners</a>
+                </p>
+            </div>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h3>Contribute</h3>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h3>Follow</h3>
+                <a href="https://www.linkedin.com/company/kiwi-tcms">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h3>Watch</h3>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h3>Join</h3>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h3>Join our newsletter.</h3>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581" class="btn ghost-btn">Sign me up</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
+
+    </body>
+</html>
