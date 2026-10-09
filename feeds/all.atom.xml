@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-10-07T13:15:00+03:00</updated><entry><title>Kiwi TCMS 16.6</title><link href="/blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/" rel="alternate"/><published>2026-10-07T13:15:00+03:00</published><updated>2026-10-07T13:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-10-07:/blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.6!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-10-09T11:20:00+03:00</updated><entry><title>12 Kiwi TCMS interview questions by AssertHired</title><link href="/blog/kiwi-tcms-team/2026/10/09/12-kiwi-tcms-interview-questions-by-asserthired/" rel="alternate"/><published>2026-10-09T11:20:00+03:00</published><updated>2026-10-09T11:20:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-10-09:/blog/kiwi-tcms-team/2026/10/09/12-kiwi-tcms-interview-questions-by-asserthired/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;AssertHired + Kiwi TCMS logos&amp;quot;" src="/images/customers/asserthired+kiwitcms.png" title="AssertHired + Kiwi TCMS logos"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://asserthired.com"&gt;AssertHired&lt;/a&gt; is a mock interview and upskilling platform built only for
+QA engineers and SDETs. You answer real QA interview questions, typed or out loud,
+and an AI interviewer asks follow-ups the way a hiring panel would. Every answer is scored on
+technical accuracy, communication, use of examples, and depth …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="&amp;quot;AssertHired + Kiwi TCMS logos&amp;quot;" src="/images/customers/asserthired+kiwitcms.png" title="AssertHired + Kiwi TCMS logos"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://asserthired.com"&gt;AssertHired&lt;/a&gt; is a mock interview and upskilling platform built only for
+QA engineers and SDETs. You answer real QA interview questions, typed or out loud,
+and an AI interviewer asks follow-ups the way a hiring panel would. Every answer is scored on
+technical accuracy, communication, use of examples, and depth.
+Then you see what a stronger answer would have covered.&lt;/p&gt;
+&lt;p&gt;It was built by Aston Cook - a Senior QA Automation Engineer with more than ten years in
+test automation who’s run more than 50 QA interviews as the person making the hiring decision.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AssertHired grew out of my own interview prep for loops at Amazon, Microsoft and Google.
+Every time, the material was either too generic or too shallow. Nothing gave me realistic 
+practice with the questions QA interviewers actually ask, graded by someone who has sat on 
+both sides of the table. So I built it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;What is AssertHired's relation to open source?&lt;/h3&gt;
+&lt;p&gt;The product itself is commercial, but it stands on open source so I publish what I can. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/aston-cook/asserthired-evals"&gt;asserthired-evals&lt;/a&gt;: a reference evaluation suite
+for AI interview grading. A synthetic golden dataset, seven CI-gated metrics, LLM-as-judge graders,
+a red-team suite, drift detection and judge calibration.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/aston-cook/changelog-mcp"&gt;changelog-mcp&lt;/a&gt;: an MCP server that logs user-visible
+product changes and grades them later. It's for solo operators who can't run A/B tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What makes developing AssertHired challenging?&lt;/h3&gt;
+&lt;p&gt;Testing the AI. The grader has to give the same answer the same score, and that score has to line up
+with what a real panel would say. Classic assertions don't work on non-deterministic output,
+so I built an eval harness. Any change to a prompt ships with eval coverage in the same pull request.&lt;/p&gt;
+&lt;h3&gt;How do you approach testing at AssertHired?&lt;/h3&gt;
+&lt;p&gt;The same way I'd approach it anywhere: in layers, aimed at the risks that cost users something.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vitest for unit, integration and component tests&lt;/li&gt;
+&lt;li&gt;Playwright end-to-end tests for the flows that matter most, like signing up,
+  taking an interview and checking out. They run in CI&lt;/li&gt;
+&lt;li&gt;An eval harness for the AI, with golden cases and CI-gated metrics&lt;/li&gt;
+&lt;li&gt;Incidents turn into checks. A database permissions bug once reached production,
+  so now CI fails the build if code writes to a column the user's role isn't allowed to write&lt;/li&gt;
+&lt;li&gt;A guard in the test suite that makes it impossible for a test to send a real email.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Test cases live in code, next to the features they cover.&lt;/p&gt;
+&lt;h3&gt;Tell us about your &lt;em&gt;Kiwi TCMS Interview Questions&lt;/em&gt; page?&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;Screenshot of Kiwi TCMS Interview Questions page&amp;quot;" src="/images/customers/AssertHired_KiwiTCMS_Quesitons.png" title="Screenshot of Kiwi TCMS Interview Questions page"&gt;&lt;/p&gt;
+&lt;p&gt;It's one of over 70 interview question pages, which cover what interviewers ask at
+junior, mid and senior level - the common questions, and a way to practise them out loud.
+At present it covers 12 questions and is located at
+&lt;a href="https://www.asserthired.com/interview-questions/kiwi-tcms"&gt;https://www.asserthired.com/interview-questions/kiwi-tcms&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Why did you decide to write about Kiwi TCMS?&lt;/h3&gt;
+&lt;p&gt;The topic of test management comes up in QA interviews all the time,
+and Kiwi TCMS is a strong open-source option. Candidates can run it on their own and learn
+how plans, cases, runs and executions fit together, and how automated results get in.
+This is exactly what the interview questions probe.&lt;/p&gt;
+&lt;p&gt;For Kiwi TCMS, my favourite question is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You try to add a test case to a test run and it won't go in. Why?&lt;/p&gt;
+&lt;p&gt;hint: only confirmed cases can be added to a test run&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;What do you think about QA and AI? What do you use AI for, and what doesn't work for you?&lt;/h3&gt;
+&lt;p&gt;I use it every day. It's good at first drafts: test cases, test data, boilerplate.
+It's good at reading a long log or stack trace and pointing at the line that matters,
+and at explaining unfamiliar code. I also use it heavily to write code.
+It's a big part of how one developer can run a web app and its iOS and Android apps.&lt;/p&gt;
+&lt;p&gt;However it doesn't know what matters to your business, and it rarely says it's unsure.
+It will happily write a test that passes for the wrong reason. So everything it produces gets
+reviewed like a pull request from someone new to the codebase, and anywhere being confidently
+wrong is expensive, a person decides.&lt;/p&gt;
+&lt;p&gt;The bigger shift for QA is testing AI features themselves. You can't assert on an exact string
+when the output changes every run. You need golden datasets, graders, and metrics that gate the build.
+I learned that building AssertHired's own grader, and I think it's the most valuable new skill
+a tester can pick up right now.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing please help us grow and sustain development!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;li&gt;&lt;a href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS 16.6</title><link href="/blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/" rel="alternate"/><published>2026-10-07T13:15:00+03:00</published><updated>2026-10-07T13:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-10-07:/blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 16.6!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a minor version release which includes multiple security related updates,
 improvements and bug fixes, new API methods and internal refactoring.&lt;/p&gt;
@@ -10426,286 +10507,6 @@ and follow all project news;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
 and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry><entry><title>Kiwi TCMS 10.0</title><link href="/blog/kiwi-tcms-team/2021/03/02/kiwi-tcms-100/" rel="alternate"/><published>2021-03-02T15:10:00+02:00</published><updated>2021-03-02T15:10:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-03-02:/blog/kiwi-tcms-team/2021/03/02/kiwi-tcms-100/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.0!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a major release which includes backwards
-incompatible API changes, new database fields, improvements, bug fixes,
-translation updates, new tests and internal refactoring.
-It is the ninth release to include contributions via our
-&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.0!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a major release which includes backwards
-incompatible API changes, new database fields, improvements, bug fixes,
-translation updates, new tests and internal refactoring.
-It is the ninth release to include contributions via our
-&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This is also the first release after Kiwi TCMS reached 400K pulls
-on Docker Hub! You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-5.3   (or older) -&amp;gt; 5.3.1
-5.3.1 (or newer) -&amp;gt; 6.0.1
-6.0.1            -&amp;gt; 6.1
-6.1              -&amp;gt; 6.1.1
-6.1.1            -&amp;gt; 6.2 (or newer)
-&lt;/pre&gt;
-&lt;p&gt;Docker images:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  9f23186803d5    736 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-&lt;/pre&gt;
-&lt;div class="section" id="changes-since-kiwi-tcms-9-0"&gt;
-&lt;h2&gt;Changes since Kiwi TCMS 9.0&lt;/h2&gt;
-&lt;div class="section" id="security"&gt;
-&lt;h3&gt;Security&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Update node_modules/marked from 1.2.7 to 2.0.1. Also fixes
-&lt;a class="reference external" href="https://snyk.io/vuln/SNYK-JS-MARKED-1070800"&gt;SNYK-JS-MARKED-1070800&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Update django from 3.1.5 to 3.1.7 for CVE-2021-3281 and CVE-2021-23336&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="improvements"&gt;
-&lt;h3&gt;Improvements&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Update bleach from 3.2.1 to 3.3.0&lt;/li&gt;
-&lt;li&gt;Update django-colorfield from 0.3.2 to 0.4.1&lt;/li&gt;
-&lt;li&gt;Update django-extensions from 3.1.0 to 3.1.1&lt;/li&gt;
-&lt;li&gt;Update markdown from 3.3.3 to 3.3.4&lt;/li&gt;
-&lt;li&gt;Update pygments from 2.7.4 to 2.8.0&lt;/li&gt;
-&lt;li&gt;Update python-gitlab from 2.5.0 to 2.6.0&lt;/li&gt;
-&lt;li&gt;Change ON/OFF button messages (Krum Petkov)&lt;/li&gt;
-&lt;li&gt;Automatically set test run to finished/not-finished depending on
-the state of all executions. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/441"&gt;Issue #441&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Allow assigning users from group admin page. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1844"&gt;Issue #1844&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Improve documentation around setting up devel environment&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="database"&gt;
-&lt;h3&gt;Database&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestRun.planned_start&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestRun.planned_stop&lt;/tt&gt; fields. Refs
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1928"&gt;Issue #1928&lt;/a&gt; (Andreea Moraru)&lt;/li&gt;
-&lt;li&gt;Add &lt;tt class="docutils literal"&gt;TestExecution.start_date&lt;/tt&gt; field. Refs
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1924"&gt;Issue #1924&lt;/a&gt; (Anastasiya Uraleva)&lt;/li&gt;
-&lt;li&gt;Rename field &lt;tt class="docutils literal"&gt;TestExecution.close_date&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;TestExecution.stop_date&lt;/tt&gt; (Anastasiya Uraleva)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="api"&gt;
-&lt;h3&gt;API&lt;/h3&gt;
-&lt;div class="admonition warning"&gt;
-&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
-&lt;p class="last"&gt;This release changes how Kiwi TCMS serializes API results and thus
-introduces multiple backwards incompatible changes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition important"&gt;
-&lt;p class="first admonition-title"&gt;Important&lt;/p&gt;
-&lt;p class="last"&gt;All &lt;tt class="docutils literal"&gt;.filter()&lt;/tt&gt; methods now return distinct records!&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;New method &lt;tt class="docutils literal"&gt;PlanType.create()&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestCase.add_component()&lt;/tt&gt; now returns a serialized &lt;tt class="docutils literal"&gt;Component&lt;/tt&gt;
-instead of a serialized &lt;tt class="docutils literal"&gt;TestCase&lt;/tt&gt;. Refs
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2145"&gt;Issue #2145&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Methods &lt;tt class="docutils literal"&gt;Product.filter()&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Product.create()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;Product.update()&lt;/tt&gt;:&lt;ul&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;classification_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;classification&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;classification_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;classification&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;Category.filter()&lt;/tt&gt; changes result field
-&lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;Methods &lt;tt class="docutils literal"&gt;Component.filter()&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Component.create()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;Component.update()&lt;/tt&gt;:&lt;ul&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;initial_owner_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;initial_owner&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;initial_qa_contact_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;initial_qa_contact&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;initial_owner_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;initial_owner&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;initial_qa_contact_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;initial_qa_contact&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;adds result field &lt;tt class="docutils literal"&gt;cases&lt;/tt&gt; - type int - a TestCase ID if this component is
-attached to a test case&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Methods &lt;tt class="docutils literal"&gt;Version.filter()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;Version.create()&lt;/tt&gt;:&lt;ul&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;Tag.filter()&lt;/tt&gt; now returns additional fields:
-&lt;tt class="docutils literal"&gt;bugs&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;case&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;plan&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;run&lt;/tt&gt; which causes existing queries to
-return similar records attached to different parent objects. Consumers of these
-results should be updated&lt;/li&gt;
-&lt;li&gt;Methods &lt;tt class="docutils literal"&gt;TestPlan.filter()&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;TestPlan.create()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestPlan.update()&lt;/tt&gt;:&lt;ul&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;author_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;author&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;parent_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;parent&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;product_version_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product_version&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;type_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;type&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;author_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;author&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;parent_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;parent&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;product_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;product_version_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product_version&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;type_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;type&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;remove result fields &lt;tt class="docutils literal"&gt;cases&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;tag&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;default_product_version&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestPlan.filter()&lt;/tt&gt;
-adds result fields &lt;tt class="docutils literal"&gt;product_version__value&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;product__name&lt;/tt&gt;,
-&lt;tt class="docutils literal"&gt;author__username&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;type__name&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;Methods &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;TestRun.create()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestRun.update()&lt;/tt&gt;:&lt;ul&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;build_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;build&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;default_tester_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;default_tester&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;manager_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;manager&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;plan_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;plan&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;product_version_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;product_version&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;remove result fields &lt;tt class="docutils literal"&gt;cc&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;tag&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt; adds result fields &lt;tt class="docutils literal"&gt;product_version__value&lt;/tt&gt;,
-&lt;tt class="docutils literal"&gt;plan__product&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;plan__name&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;build__name&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;manager__username&lt;/tt&gt; and
-&lt;tt class="docutils literal"&gt;default_tester__username&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;Methods &lt;tt class="docutils literal"&gt;TestExecution.filter()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestExecution.update()&lt;/tt&gt;:&lt;ul&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;assigee_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;assignee&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;build_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;build&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;case_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;case&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;run_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;run&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;status_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;status&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;tested_by_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;tested_by&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;assigee_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;assignee&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;build_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;build&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;case_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;case&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;run_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;run&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;status_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;status&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;tested_by_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;tested_by&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestExecution.filter()&lt;/tt&gt; adds result fields &lt;tt class="docutils literal"&gt;assignee__username&lt;/tt&gt;,
-&lt;tt class="docutils literal"&gt;tested_by__username&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;case__summary&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;build__name&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;status__name&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestExecution.get_links()&lt;/tt&gt; change result field
-&lt;tt class="docutils literal"&gt;execution_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;execution&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestRun.add_case()&lt;/tt&gt; changes result field names similarly to
-&lt;tt class="docutils literal"&gt;TestExecution.filter()&lt;/tt&gt; method&lt;/li&gt;
-&lt;li&gt;Methods &lt;tt class="docutils literal"&gt;TestCase.filter()&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;TestCase.create()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestCase.update()&lt;/tt&gt;:&lt;ul&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;author_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;author&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;case_status_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;case_status&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;category_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;category&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;default_tester_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;default_tester&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;priority_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;priority&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change input parameter &lt;tt class="docutils literal"&gt;reviewer_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;reviewer&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;author_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;author&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;case_status_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;case_status&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;category_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;category&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;default_tester_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;default_tester&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;priority_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;priority&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;change result field &lt;tt class="docutils literal"&gt;reviewer_id&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;reviewer&lt;/tt&gt; - type int&lt;/li&gt;
-&lt;li&gt;remove result fields &lt;tt class="docutils literal"&gt;component&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;plan&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;tag&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Method &lt;tt class="docutils literal"&gt;TestCase.filter()&lt;/tt&gt; adds result fields &lt;tt class="docutils literal"&gt;case_status__name&lt;/tt&gt;,
-&lt;tt class="docutils literal"&gt;category__name&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;priority__value&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;author__username&lt;/tt&gt;,
-&lt;tt class="docutils literal"&gt;default_tester__username&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;reviewer__username&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;Methods &lt;tt class="docutils literal"&gt;TestRun.get_cases()&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;TestPlan.add_case()&lt;/tt&gt; change
-result field names similarly to &lt;tt class="docutils literal"&gt;TestCase.filter()&lt;/tt&gt; method&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bug-fixes"&gt;
-&lt;h3&gt;Bug fixes&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Fix removing a component from a test case immediately after it has been added. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2145"&gt;Issue #2145&lt;/a&gt; (Gagan Deep)&lt;/li&gt;
-&lt;li&gt;Fix broken object navigation in navbar. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/991"&gt;Issue #991&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Refactor search pages rendering to speed it up. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1014"&gt;Issue #1014&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="refactoring-testing"&gt;
-&lt;h3&gt;Refactoring &amp;amp; testing&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Update tests for &lt;tt class="docutils literal"&gt;TestRun.create()&lt;/tt&gt; API method. Refs
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1928"&gt;Issue #1928&lt;/a&gt; (Andreea Moraru)&lt;/li&gt;
-&lt;li&gt;Add automation tests. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1618"&gt;Issue #1618&lt;/a&gt; (Mariyan Garvanski)&lt;/li&gt;
-&lt;li&gt;Add additional automation tests for &lt;tt class="docutils literal"&gt;tcms.management.admin&lt;/tt&gt;. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1610"&gt;Issue #1610&lt;/a&gt; (Gagan Deep)&lt;/li&gt;
-&lt;li&gt;Add additional automation tests for &lt;tt class="docutils literal"&gt;tcms.testcases.views.EditTestCaseView&lt;/tt&gt;. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1615"&gt;Issue #1615&lt;/a&gt; (Gagan Deep)&lt;/li&gt;
-&lt;li&gt;Add additional automation tests for &lt;tt class="docutils literal"&gt;tcms.kiwi_auth.forms&lt;/tt&gt;. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1609"&gt;Issue #1609&lt;/a&gt; (Kapil Bansal)&lt;/li&gt;
-&lt;li&gt;Change location of included HTML templates (Alexander Tsvetanov, Krum Petkov)&lt;/li&gt;
-&lt;li&gt;Erase unused view &amp;amp; templates (Alexander Tsvetanov)&lt;/li&gt;
-&lt;li&gt;Enable eslint. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1281"&gt;Issue #1281&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Change how beakerlib test framework is installed to avoid problems
-during integration tests&lt;/li&gt;
-&lt;li&gt;Better inspection of beakerlib test results to avoid false positive results&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="translations"&gt;
-&lt;h3&gt;Translations&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#"&gt;Bulgarian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pl#"&gt;Polish translation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kiwi-tcms-enterprise-v10-0-mt"&gt;
-&lt;h2&gt;Kiwi TCMS Enterprise v10.0-mt&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Based on Kiwi TCMS v10.0&lt;/li&gt;
-&lt;li&gt;Update kiwitcms-github-app from 1.2.2 to 1.2.4&lt;/li&gt;
-&lt;li&gt;Update kiwitcms-tenants from 1.4.2 to 1.4.3&lt;/li&gt;
-&lt;li&gt;Update django-python3-ldap from 0.11.3 to 0.11.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="automation-framework-plugins"&gt;
-&lt;h2&gt;Automation framework plugins&lt;/h2&gt;
-&lt;p&gt;The following
-&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html"&gt;test automation framework plugins&lt;/a&gt;
-have been upgraded to work with Kiwi TCMS v10.0:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/junit-plugin"&gt;junit-plugin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/tap-plugin"&gt;tap-plugin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/junit.xml-plugin"&gt;junit.xml-plugin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/robotframework-plugin"&gt;Robot Framework plugin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/django-plugin"&gt;Django plugin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how-to-upgrade"&gt;
-&lt;h2&gt;How to upgrade&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
-If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-&lt;/pre&gt;
-&lt;p&gt;Refer to
-&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
-for more details!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;
-&lt;p&gt;---&lt;/p&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/"&gt;Nominate Kiwi TCMS as GitHub Stars&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
-and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="misc"/><category term="releases"/></entry></feed>

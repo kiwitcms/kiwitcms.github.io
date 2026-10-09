@@ -111,6 +111,99 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/10/09/12-kiwi-tcms-interview-questions-by-asserthired/" rel="bookmark" title="Permalink to 12 Kiwi TCMS interview questions by AssertHired">
+                <h1 class="top-header">12 Kiwi TCMS interview questions by AssertHired</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Fri 09 October 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p><img alt="&quot;AssertHired + Kiwi TCMS logos&quot;" src="/images/customers/asserthired+kiwitcms.png" title="AssertHired + Kiwi TCMS logos"></p>
+<p><a href="http://asserthired.com">AssertHired</a> is a mock interview and upskilling platform built only for
+QA engineers and SDETs. You answer real QA interview questions, typed or out loud,
+and an AI interviewer asks follow-ups the way a hiring panel would. Every answer is scored on
+technical accuracy, communication, use of examples, and depth.
+Then you see what a stronger answer would have covered.</p>
+<p>It was built by Aston Cook - a Senior QA Automation Engineer with more than ten years in
+test automation who’s run more than 50 QA interviews as the person making the hiring decision.</p>
+<blockquote>
+<p>AssertHired grew out of my own interview prep for loops at Amazon, Microsoft and Google.
+Every time, the material was either too generic or too shallow. Nothing gave me realistic 
+practice with the questions QA interviewers actually ask, graded by someone who has sat on 
+both sides of the table. So I built it.</p>
+</blockquote>
+<h3>What is AssertHired's relation to open source?</h3>
+<p>The product itself is commercial, but it stands on open source so I publish what I can. For example:</p>
+<ul>
+<li><a href="https://github.com/aston-cook/asserthired-evals">asserthired-evals</a>: a reference evaluation suite
+for AI interview grading. A synthetic golden dataset, seven CI-gated metrics, LLM-as-judge graders,
+a red-team suite, drift detection and judge calibration.</li>
+<li><a href="https://github.com/aston-cook/changelog-mcp">changelog-mcp</a>: an MCP server that logs user-visible
+product changes and grades them later. It's for solo operators who can't run A/B tests.</li>
+</ul>
+<h3>What makes developing AssertHired challenging?</h3>
+<p>Testing the AI. The grader has to give the same answer the same score, and that score has to line up
+with what a real panel would say. Classic assertions don't work on non-deterministic output,
+so I built an eval harness. Any change to a prompt ships with eval coverage in the same pull request.</p>
+<h3>How do you approach testing at AssertHired?</h3>
+<p>The same way I'd approach it anywhere: in layers, aimed at the risks that cost users something.</p>
+<ul>
+<li>Vitest for unit, integration and component tests</li>
+<li>Playwright end-to-end tests for the flows that matter most, like signing up,
+  taking an interview and checking out. They run in CI</li>
+<li>An eval harness for the AI, with golden cases and CI-gated metrics</li>
+<li>Incidents turn into checks. A database permissions bug once reached production,
+  so now CI fails the build if code writes to a column the user's role isn't allowed to write</li>
+<li>A guard in the test suite that makes it impossible for a test to send a real email.</li>
+</ul>
+<p>Test cases live in code, next to the features they cover.</p>
+<h3>Tell us about your <em>Kiwi TCMS Interview Questions</em> page?</h3>
+<p><img alt="&quot;Screenshot of Kiwi TCMS Interview Questions page&quot;" src="/images/customers/AssertHired_KiwiTCMS_Quesitons.png" title="Screenshot of Kiwi TCMS Interview Questions page"></p>
+<p>It's one of over 70 interview question pages, which cover what interviewers ask at
+junior, mid and senior level - the common questions, and a way to practise them out loud.
+At present it covers 12 questions and is located at
+<a href="https://www.asserthired.com/interview-questions/kiwi-tcms">https://www.asserthired.com/interview-questions/kiwi-tcms</a>.</p>
+<h3>Why did you decide to write about Kiwi TCMS?</h3>
+<p>The topic of test management comes up in QA interviews all the time,
+and Kiwi TCMS is a strong open-source option. Candidates can run it on their own and learn
+how plans, cases, runs and executions fit together, and how automated results get in.
+This is exactly what the interview questions probe.</p>
+<p>For Kiwi TCMS, my favourite question is:</p>
+<blockquote>
+<p>You try to add a test case to a test run and it won't go in. Why?</p>
+<p>hint: only confirmed cases can be added to a test run</p>
+</blockquote>
+<h3>What do you think about QA and AI? What do you use AI for, and what doesn't work for you?</h3>
+<p>I use it every day. It's good at first drafts: test cases, test data, boilerplate.
+It's good at reading a long log or stack trace and pointing at the line that matters,
+and at explaining unfamiliar code. I also use it heavily to write code.
+It's a big part of how one developer can run a web app and its iOS and Android apps.</p>
+<p>However it doesn't know what matters to your business, and it rarely says it's unsure.
+It will happily write a test that passes for the wrong reason. So everything it produces gets
+reviewed like a pull request from someone new to the codebase, and anywhere being confidently
+wrong is expensive, a person decides.</p>
+<p>The bigger shift for QA is testing AI features themselves. You can't assert on an exact string
+when the output changes every run. You need golden datasets, graders, and metrics that gate the build.
+I learned that building AssertHired's own grader, and I think it's the most valuable new skill
+a tester can pick up right now.</p>
+<hr>
+<p>If you like what we're doing please help us grow and sustain development!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+<li><a href="/partners/">Become a reseller</a> and help us serve your community</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/10/07/kiwi-tcms-166/" rel="bookmark" title="Permalink to Kiwi TCMS 16.6">
                 <h1 class="top-header">Kiwi TCMS 16.6</h1>
             </a>
@@ -1998,149 +2091,6 @@ please help us!</p>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
 <li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
 </ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2025/12/06/kiwi-tcms-152/" rel="bookmark" title="Permalink to Kiwi TCMS 15.2">
-                <h1 class="top-header">Kiwi TCMS 15.2</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Sat 06 December 2025
-            </p>
-        </div>
-
-        <div class="content">
-            <p>We're happy to announce Kiwi TCMS version 15.2!</p>
-<p><strong>IMPORTANT:</strong></p>
-<p>This is a minor version release which includes security related updates,
-several improvements, new API methods and updated translations.</p>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>---</p>
-<blockquote>
-<p>Public container image (x86_64):</p>
-<pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  f8a2e8b0ce01    716MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged and multi-arch
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-<div class="section" id="changes-since-kiwi-tcms-15-1">
-<h2>Changes since Kiwi TCMS 15.1</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Update Django from 5.2.7 to 5.2.9 which contains patches for
-<em>CVE-2025-64459</em>, <em>CVE-2025-64458</em>, <em>CVE-2025-13372</em> and <em>CVE-2025-64460</em></li>
-<li>Update node_modules/js-yaml from 4.1.0 to 4.1.1</li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update bleach from 6.2.0 to 6.3.0</li>
-<li>Update django-grappelli from 4.0.2 to 4.0.3. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4119">Issue #4119</a></li>
-<li>Update django-tree-queries from 0.21.2 to 0.23.0</li>
-<li>Update markdown from 3.9 to 3.10</li>
-<li>Update psycopg[binary] from 3.2.11 to 3.3.1</li>
-<li>Update python-gitlab from 6.5.0 to 7.0.0</li>
-<li>Add new toolbar menu item on TestRun page, which opens the
-Execution Dashboard page with executions from the current TestRun. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4084">Issue #4084</a></li>
-<li>Display TestCase ID on Execution Dashboard page</li>
-<li>Display Priority &amp; Automated columns in Execution Dashboard page</li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li>Add <tt class="docutils literal">BugTracker.create()</tt> API method</li>
-<li>Add <tt class="docutils literal">BugTracker.filter()</tt> API method</li>
-<li>Add <tt class="docutils literal">Priority.create()</tt> API method</li>
-<li>Add <tt class="docutils literal">Severity.create()</tt> API method</li>
-<li>Add <tt class="docutils literal">Severity.filter()</tt> API method</li>
-<li>Add <tt class="docutils literal">Tag.create()</tt> API method</li>
-<li>Add <tt class="docutils literal">Template.create()</tt> API method</li>
-<li>Add <tt class="docutils literal">Template.filter()</tt> API method</li>
-<li>Add <tt class="docutils literal">TestCaseStatus.create()</tt> API method</li>
-<li>Add <tt class="docutils literal">TestExecutionStatus.create()</tt> API method</li>
-</ul>
-</div>
-<div class="section" id="refactoring-and-testing">
-<h3>Refactoring and testing</h3>
-<ul class="simple">
-<li>Update actions/checkout from 5 to 6</li>
-<li>Update actions/upload-artifact from 4 to 5</li>
-<li>Update black from 25.9.0 to 25.11.0</li>
-<li>Update locust from 2.42.0 to 2.42.6</li>
-<li>Update sphinx from 8.2.3 to 9.0.4</li>
-<li>Update node_modules/webpack from 5.102.1 to 5.103.0</li>
-<li>Update password reset URL format to match latest in Django 5.2</li>
-<li>Add end-to-end test for password reset functionality</li>
-<li>Remove redundant <tt class="docutils literal">_fixture_setup()</tt> definition</li>
-</ul>
-</div>
-<div class="section" id="translations">
-<h3>Translations</h3>
-<ul class="simple">
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#">Chinese Simplified translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/id#">Indonesian translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#">Japanese translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/pl#">Polish translation</a></li>
-<li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/ru#">Russian translation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="changes-since-kiwi-tcms-enterprise-v15-1-1-mt">
-<h2>Changes since Kiwi TCMS Enterprise v15.1.1-mt</h2>
-<ul class="simple">
-<li>Based on Kiwi TCMS v15.2</li>
-<li>Update certbot from 5.1.0 to 5.2.1</li>
-<li>Update kiwitcms-trackers-integration from 1.1.0 to 1.2.1</li>
-<li>Update psycopg-pool from 3.2.6 to 3.3.0</li>
-<li>Update sentry-sdk[django] from 2.42.1 to 2.47.0</li>
-<li>Use a different way to override the password reset page</li>
-<li>Close connection requests to bogus URLs</li>
-</ul>
-</div>
-<div class="section" id="private-container-images">
-<h2>Private container images</h2>
-<blockquote>
-<pre class="literal-block">
-hub.kiwitcms.eu/kiwitcms/version          15.2 (aarch64)          8df913ae4061    06 Dec 2025     734MB
-hub.kiwitcms.eu/kiwitcms/version          15.2 (x86_64)           96d6cd67103a    06 Dec 2025     716MB
-hub.kiwitcms.eu/kiwitcms/enterprise       15.2-mt (aarch64)       976dfcbd1e50    06 Dec 2025     1GB
-hub.kiwitcms.eu/kiwitcms/enterprise       15.2-mt (x86_64)        4e528923ba04    06 Dec 2025     976MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>Follow the
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
-from our documentation.</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all project news;</li>
-<li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
-and an awesome open source hacker;</li>
-<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-</div>
-
         </div>
     </article>
 
