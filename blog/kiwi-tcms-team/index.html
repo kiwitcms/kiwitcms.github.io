@@ -111,6 +111,64 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/10/12/feature-spotlight-testplan-multi-clone-deep-clone/" rel="bookmark" title="Permalink to Feature spotlight: TestPlan multi-clone & deep-clone">
+                <h1 class="top-header">Feature spotlight: TestPlan multi-clone & deep-clone</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Mon 12 October 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Cloning Test Plans just got an upgrade in <strong>Kiwi TCMS v16.6</strong>! Whether you want
+to duplicate a single plan, a whole handful of them, or an entire nested tree, the new
+cloning workflow keeps your clicks to a minimum.</p>
+<p>Here are the 3 changes we shipped:</p>
+<h2>1. Clone names now carry the original ID</h2>
+<p>When you clone a Test Plan the suggested name now includes the <strong>original ID</strong>,
+so the lineage of every copy is obvious at a glance:</p>
+<p><img alt="&quot;Clone of TP-117 keeps the original ID in the name&quot;" src="/images/features/testplan-cloning/single-clone-name-prefix.png" title="Clone of TP-117 keeps the original ID in the name"></p>
+<p>The <em>Clone of TP-117:</em> prefix is highlighted above. Rename it if you like - but the default
+now tells you exactly where the copy came from! This feature is intended for the human behind
+the computer! Feel free to change the new name to whatever fits best in your case.</p>
+<h2>2. Multi-clone from Search Test Plans page</h2>
+<p>Need to duplicate a batch? The <em>Search Test Plans</em> page now displays a <strong>checkbox column</strong>
+on the lefthand side and the <strong>cloning button</strong> has joined the buttons row in table header:</p>
+<p><img alt="&quot;Checkbox column and clone button on Search Test Plans&quot;" src="/images/features/testplan-cloning/multi-clone-search-page+menu.png" title="Checkbox column and clone button on Search Test Plans"></p>
+<p>Selection is <strong>explicit</strong> - you tick exactly the records you want - and the clone page
+displays all of them at the same time. Name, Product, Version, etc are individually
+adjustable per row:</p>
+<p><img alt="&quot;Cloning several Test Plans at once&quot;" src="/images/features/testplan-cloning/multi-clone-clone-page.png" title="Cloning several Test Plans at once"></p>
+<p>This functionality was built on top of contributions from
+<strong>Oskar Hurst, U.S. Army Corps of Engineers</strong>. Thank you Oskar!</p>
+<h2>3. Deep clone an entire Test Plan tree</h2>
+<p>Parent/child relationships can now be preserved when cloning!
+The cogs menu now offers the <strong>Deep clone</strong> item which
+will clone the entire relationship structure <strong>starting at the current Test Plan</strong>:</p>
+<p><img alt="&quot;Deep clone in the Test Plan cogs menu&quot;" src="/images/features/testplan-cloning/deep-clone-start-page+menu.png" title="Deep clone in the Test Plan cogs menu"></p>
+<p>The clone page then lays out the whole tree. Each clone keeps its ID-derived name and you
+get <strong>visual level indicators</strong> so the hierarchy stays readable while you review it:</p>
+<p><img alt="&quot;Deep cloning a nested Test Plan tree&quot;" src="/images/features/testplan-cloning/deep-clone-clone-page.png" title="Deep cloning a nested Test Plan tree"></p>
+<p>When deep cloning, the on/off button used to adjust the parent of individual Test Plans is
+<strong>disabled</strong>. The structure is cloned as-is on purpose, so there is nothing to re-parent
+while the tree is being copied!</p>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+<li><a href="/partners/">Become a reseller</a> and help us serve your community</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/10/09/12-kiwi-tcms-interview-questions-by-asserthired/" rel="bookmark" title="Permalink to 12 Kiwi TCMS interview questions by AssertHired">
                 <h1 class="top-header">12 Kiwi TCMS interview questions by AssertHired</h1>
             </a>
@@ -2053,44 +2111,6 @@ and follow all news;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2025/12/17/kiwi-tcms-is-going-to-fosdem-2026/" rel="bookmark" title="Permalink to Kiwi TCMS is going to FOSDEM 2026">
-                <h1 class="top-header">Kiwi TCMS is going to FOSDEM 2026</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 17 December 2025
-            </p>
-        </div>
-
-        <div class="content">
-            <p><img alt="fosdem 26 banner" src="/images/fosdem/2026/stand.png" title="fosdem 26 banner"></p>
-<p>Hello testers, we are happy to announce that
-Kiwi TCMS is going to <a href="http://fosdem.org/">FOSDEM 2026</a> in Brussels.
-This is where you can find us:</p>
-<ul>
-<li>Saturday Jan 31st:
-  <a href="https://fosdem.org/2026/news/2025-11-16-accepted-stands/">Kiwi TCMS stand</a> -
-  K building, stand <strong>K1-A-11</strong>! Please follow <a href="https://fosdem.org/2026/">https://fosdem.org/2026/</a> for more news!</li>
-<li>Sunday Feb 1st:
-  <a href="https://fosdem.org/2026/schedule/track/testing-and-continuous-delivery/">Testing and Continuous Delivery devroom</a> -
-  we are proud to be co-hosting this devroom again!</li>
-</ul>
-<p>We would like to meet with all of you and talk about open source, software testing and test management!</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
         </div>
     </article>
 

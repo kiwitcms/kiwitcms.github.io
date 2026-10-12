@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-10-09T11:20:00+03:00</updated><entry><title>12 Kiwi TCMS interview questions by AssertHired</title><link href="/blog/kiwi-tcms-team/2026/10/09/12-kiwi-tcms-interview-questions-by-asserthired/" rel="alternate"/><published>2026-10-09T11:20:00+03:00</published><updated>2026-10-09T11:20:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-10-09:/blog/kiwi-tcms-team/2026/10/09/12-kiwi-tcms-interview-questions-by-asserthired/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;AssertHired + Kiwi TCMS logos&amp;quot;" src="/images/customers/asserthired+kiwitcms.png" title="AssertHired + Kiwi TCMS logos"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-10-12T14:07:00+03:00</updated><entry><title>Feature spotlight: TestPlan multi-clone &amp; deep-clone</title><link href="/blog/kiwi-tcms-team/2026/10/12/feature-spotlight-testplan-multi-clone-deep-clone/" rel="alternate"/><published>2026-10-12T14:07:00+03:00</published><updated>2026-10-12T14:07:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-10-12:/blog/kiwi-tcms-team/2026/10/12/feature-spotlight-testplan-multi-clone-deep-clone/</id><summary type="html">&lt;p&gt;Cloning Test Plans just got an upgrade in &lt;strong&gt;Kiwi TCMS v16.6&lt;/strong&gt;! Whether you want
+to duplicate a single plan, a whole handful of them, or an entire nested tree, the new
+cloning workflow keeps your clicks to a minimum.&lt;/p&gt;
+&lt;p&gt;Here are the 3 changes we shipped:&lt;/p&gt;
+&lt;h2&gt;1. Clone names …&lt;/h2&gt;</summary><content type="html">&lt;p&gt;Cloning Test Plans just got an upgrade in &lt;strong&gt;Kiwi TCMS v16.6&lt;/strong&gt;! Whether you want
+to duplicate a single plan, a whole handful of them, or an entire nested tree, the new
+cloning workflow keeps your clicks to a minimum.&lt;/p&gt;
+&lt;p&gt;Here are the 3 changes we shipped:&lt;/p&gt;
+&lt;h2&gt;1. Clone names now carry the original ID&lt;/h2&gt;
+&lt;p&gt;When you clone a Test Plan the suggested name now includes the &lt;strong&gt;original ID&lt;/strong&gt;,
+so the lineage of every copy is obvious at a glance:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;Clone of TP-117 keeps the original ID in the name&amp;quot;" src="/images/features/testplan-cloning/single-clone-name-prefix.png" title="Clone of TP-117 keeps the original ID in the name"&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;Clone of TP-117:&lt;/em&gt; prefix is highlighted above. Rename it if you like - but the default
+now tells you exactly where the copy came from! This feature is intended for the human behind
+the computer! Feel free to change the new name to whatever fits best in your case.&lt;/p&gt;
+&lt;h2&gt;2. Multi-clone from Search Test Plans page&lt;/h2&gt;
+&lt;p&gt;Need to duplicate a batch? The &lt;em&gt;Search Test Plans&lt;/em&gt; page now displays a &lt;strong&gt;checkbox column&lt;/strong&gt;
+on the lefthand side and the &lt;strong&gt;cloning button&lt;/strong&gt; has joined the buttons row in table header:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;Checkbox column and clone button on Search Test Plans&amp;quot;" src="/images/features/testplan-cloning/multi-clone-search-page+menu.png" title="Checkbox column and clone button on Search Test Plans"&gt;&lt;/p&gt;
+&lt;p&gt;Selection is &lt;strong&gt;explicit&lt;/strong&gt; - you tick exactly the records you want - and the clone page
+displays all of them at the same time. Name, Product, Version, etc are individually
+adjustable per row:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;Cloning several Test Plans at once&amp;quot;" src="/images/features/testplan-cloning/multi-clone-clone-page.png" title="Cloning several Test Plans at once"&gt;&lt;/p&gt;
+&lt;p&gt;This functionality was built on top of contributions from
+&lt;strong&gt;Oskar Hurst, U.S. Army Corps of Engineers&lt;/strong&gt;. Thank you Oskar!&lt;/p&gt;
+&lt;h2&gt;3. Deep clone an entire Test Plan tree&lt;/h2&gt;
+&lt;p&gt;Parent/child relationships can now be preserved when cloning!
+The cogs menu now offers the &lt;strong&gt;Deep clone&lt;/strong&gt; item which
+will clone the entire relationship structure &lt;strong&gt;starting at the current Test Plan&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;Deep clone in the Test Plan cogs menu&amp;quot;" src="/images/features/testplan-cloning/deep-clone-start-page+menu.png" title="Deep clone in the Test Plan cogs menu"&gt;&lt;/p&gt;
+&lt;p&gt;The clone page then lays out the whole tree. Each clone keeps its ID-derived name and you
+get &lt;strong&gt;visual level indicators&lt;/strong&gt; so the hierarchy stays readable while you review it:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="&amp;quot;Deep cloning a nested Test Plan tree&amp;quot;" src="/images/features/testplan-cloning/deep-clone-clone-page.png" title="Deep cloning a nested Test Plan tree"&gt;&lt;/p&gt;
+&lt;p&gt;When deep cloning, the on/off button used to adjust the parent of individual Test Plans is
+&lt;strong&gt;disabled&lt;/strong&gt;. The structure is cloned as-is on purpose, so there is nothing to re-parent
+while the tree is being copied!&lt;/p&gt;
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;li&gt;&lt;a href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/><category term="features"/></entry><entry><title>12 Kiwi TCMS interview questions by AssertHired</title><link href="/blog/kiwi-tcms-team/2026/10/09/12-kiwi-tcms-interview-questions-by-asserthired/" rel="alternate"/><published>2026-10-09T11:20:00+03:00</published><updated>2026-10-09T11:20:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-10-09:/blog/kiwi-tcms-team/2026/10/09/12-kiwi-tcms-interview-questions-by-asserthired/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;AssertHired + Kiwi TCMS logos&amp;quot;" src="/images/customers/asserthired+kiwitcms.png" title="AssertHired + Kiwi TCMS logos"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://asserthired.com"&gt;AssertHired&lt;/a&gt; is a mock interview and upskilling platform built only for
 QA engineers and SDETs. You answer real QA interview questions, typed or out loud,
 and an AI interviewer asks follow-ups the way a hiring panel would. Every answer is scored on
@@ -5599,7 +5645,7 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry><entry><title>Feature showcase: Personal API tokens</title><link href="/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/" rel="alternate"/><published>2023-12-06T13:05:00+02:00</published><updated>2023-12-06T13:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-12-06:/blog/kiwi-tcms-team/2023/12/06/feature-showcase-personal-api-tokens/</id><summary type="html">&lt;p&gt;For a long time now Kiwi TCMS has supported integration with external issue tracking systems,
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Feature spotlight: Personal API tokens</title><link href="/blog/kiwi-tcms-team/2023/12/06/feature-spotlight-personal-api-tokens/" rel="alternate"/><published>2023-12-06T13:05:00+02:00</published><updated>2023-12-06T13:05:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2023-12-06:/blog/kiwi-tcms-team/2023/12/06/feature-spotlight-personal-api-tokens/</id><summary type="html">&lt;p&gt;For a long time now Kiwi TCMS has supported integration with external issue tracking systems,
 such as JIRA. This integration is usually configured via bot accounts and their respective
 credentials and our flagship functionality is 1-click bug report! This is how it looks like:&lt;/p&gt;
 &lt;ul&gt;
@@ -8777,7 +8823,7 @@ to test run&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Detailed information about properties, environments and test matrix generation
 can be found
-&lt;a class="reference external" href="/blog/atodorov/2022/01/24/feature-showcase-test-matrix-generation/"&gt;in a separate article&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="/blog/atodorov/2022/01/24/feature-spotlight-test-matrix-generation/"&gt;in a separate article&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="database"&gt;
 &lt;h3&gt;Database&lt;/h3&gt;
@@ -8907,7 +8953,7 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry><entry><title>Feature showcase: Test matrix generation</title><link href="/blog/atodorov/2022/01/24/feature-showcase-test-matrix-generation/" rel="alternate"/><published>2022-01-24T19:40:00+02:00</published><updated>2022-01-24T19:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2022-01-24:/blog/atodorov/2022/01/24/feature-showcase-test-matrix-generation/</id><summary type="html">&lt;p&gt;The upcoming Kiwi TCMS v11 contains new functionality around TestCase parameters and
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Feature spotlight: Test matrix generation</title><link href="/blog/atodorov/2022/01/24/feature-spotlight-test-matrix-generation/" rel="alternate"/><published>2022-01-24T19:40:00+02:00</published><updated>2022-01-24T19:40:00+02:00</updated><author><name>Alexander Todorov</name></author><id>tag:None,2022-01-24:/blog/atodorov/2022/01/24/feature-spotlight-test-matrix-generation/</id><summary type="html">&lt;p&gt;The upcoming Kiwi TCMS v11 contains new functionality around TestCase parameters and
 TestRun environments which has an impact on how your final test execution matrix will
 look like. This article provides detailed information about these features but have
 in mind that they are still considered to be a technology-preview.&lt;/p&gt;
@@ -10306,207 +10352,4 @@ please help us!&lt;/p&gt;
   and follow all project news;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry><entry><title>Kiwi TCMS 10.1</title><link href="/blog/kiwi-tcms-team/2021/05/18/kiwi-tcms-101/" rel="alternate"/><published>2021-05-18T15:00:00+03:00</published><updated>2021-05-18T15:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-05-18:/blog/kiwi-tcms-team/2021/05/18/kiwi-tcms-101/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.1!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release includes many improvements &amp;amp; security updates,
-database changes, new and updated API methods, bug fixes, translation updates,
-new tests and internal refactoring.
-It is the tenth release to include contributions via our
-&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt; and collaboration
-with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.1!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this release includes many improvements &amp;amp; security updates,
-database changes, new and updated API methods, bug fixes, translation updates,
-new tests and internal refactoring.
-It is the tenth release to include contributions via our
-&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt; and collaboration
-with
-&lt;a class="reference external" href="/blog/kiwi-tcms-team/2020/10/13/kiwi-tcms-is-partnering-with-mlh-fellowship-program/"&gt;Major League Hacking&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;This is the second release after Kiwi TCMS reached 400K pulls
-on Docker Hub! You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-5.3   (or older) -&amp;gt; 5.3.1
-5.3.1 (or newer) -&amp;gt; 6.0.1
-6.0.1            -&amp;gt; 6.1
-6.1              -&amp;gt; 6.1.1
-6.1.1            -&amp;gt; 6.2 (or newer)
-&lt;/pre&gt;
-&lt;p&gt;Docker images:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  788af5c3f067    800 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-&lt;/pre&gt;
-&lt;div class="section" id="changes-since-kiwi-tcms-10-0"&gt;
-&lt;h2&gt;Changes since Kiwi TCMS 10.0&lt;/h2&gt;
-&lt;div class="section" id="improvements-security-updates"&gt;
-&lt;h3&gt;Improvements &amp;amp; security updates&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Upgrade from Python 3.6 to Python 3.8 inside the container&lt;/li&gt;
-&lt;li&gt;Upgrade Django from 3.1.7 to 3.2.3&lt;/li&gt;
-&lt;li&gt;Upgrade django-attachments from 1.8 to 1.9.1&lt;/li&gt;
-&lt;li&gt;Upgrade django-contrib-comments from 2.0.0 to 2.1.0&lt;/li&gt;
-&lt;li&gt;Upgrade django-extensions from 3.1.1 to 3.1.3&lt;/li&gt;
-&lt;li&gt;Upgrade django-grappelli from 2.14.3 to 2.15.1&lt;/li&gt;
-&lt;li&gt;Upgrade django-simple-history from 2.12.0 to 3.0.0&lt;/li&gt;
-&lt;li&gt;Upgrade django-tree-queries from 0.4.3 to 0.5.1&lt;/li&gt;
-&lt;li&gt;Upgrade jira from 2.0.0 to 3.0.1&lt;/li&gt;
-&lt;li&gt;Upgrade pygments from 2.8.0 to 2.9.0&lt;/li&gt;
-&lt;li&gt;Upgrade python-gitlab from 2.6.0 to 2.7.1&lt;/li&gt;
-&lt;li&gt;Upgrade node_modules/html5sortable from 0.10.0 to 0.11.1&lt;/li&gt;
-&lt;li&gt;Upgrade node_modules/marked from 2.0.1 to 2.0.3&lt;/li&gt;
-&lt;li&gt;Time-stamp fields added to all TestRun pages. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1928"&gt;Issue #1928&lt;/a&gt; (Andreea Moraru)&lt;/li&gt;
-&lt;li&gt;Don't set &lt;tt class="docutils literal"&gt;TestRun.start_date&lt;/tt&gt; automatically. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2323"&gt;Issue #2323&lt;/a&gt; (Andreea Moraru)&lt;/li&gt;
-&lt;li&gt;Web based database initialization for new installations. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1698"&gt;Issue #1698&lt;/a&gt; (Ivajlo Karabojkov)&lt;/li&gt;
-&lt;li&gt;Automatically active the first registered user via web UI&lt;/li&gt;
-&lt;li&gt;Rearrange layout of before and after fields on search pages&lt;/li&gt;
-&lt;li&gt;Allow TestRun creation from navigation menu. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2281"&gt;Issue #2281&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Document hardware specs &amp;amp; performance baseline results. Refs
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/721"&gt;Issue #721&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Document performance for &lt;tt class="docutils literal"&gt;TestCase.filter&lt;/tt&gt;/&lt;tt class="docutils literal"&gt;TestRun.filter&lt;/tt&gt; methods. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1173"&gt;Issue #1173&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Update documentation around &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose.yml&lt;/span&gt;&lt;/tt&gt; and the extra script files that it needs&lt;/li&gt;
-&lt;li&gt;Document some useful management commands&lt;/li&gt;
-&lt;li&gt;Clarify &lt;tt class="docutils literal"&gt;set_domain&lt;/tt&gt; command. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2375"&gt;Issue #2375&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="settings"&gt;
-&lt;h3&gt;Settings&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Change &lt;tt class="docutils literal"&gt;TEMP_DIR&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;/var/tmp&lt;/tt&gt; which affects the location in which
-intermediate files coming from migrations are saved. If &lt;tt class="docutils literal"&gt;/var/tmp&lt;/tt&gt; doesn't
-exist the fallback is &lt;tt class="docutils literal"&gt;/tmp&lt;/tt&gt; which on modern Linux distributions is ephemeral&lt;/li&gt;
-&lt;li&gt;Add &lt;tt class="docutils literal"&gt;DEFAULT_AUTO_FIELD&lt;/tt&gt; to hard-code expected behavior and prevent unwanted
-changes introduced by future versions of Django&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="database"&gt;
-&lt;h3&gt;Database&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Add new fields to &lt;tt class="docutils literal"&gt;TestCase&lt;/tt&gt; - &lt;tt class="docutils literal"&gt;setup_duration&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;testing_duration&lt;/tt&gt; and
-a calculatable &lt;tt class="docutils literal"&gt;expected_duration&lt;/tt&gt; attribute (Angelina)&lt;/li&gt;
-&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;TestRun.product_version&lt;/tt&gt; field&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="api"&gt;
-&lt;h3&gt;API&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Method &lt;tt class="docutils literal"&gt;TestRun.filter()&lt;/tt&gt; return value changes field names:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;product_version&lt;/tt&gt; -&amp;gt; &lt;tt class="docutils literal"&gt;plan__product_version&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;product_version__value&lt;/tt&gt; -&amp;gt; &lt;tt class="docutils literal"&gt;plan__product_version__value&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="admonition warning"&gt;
-&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
-&lt;p class="last"&gt;You will need to adjust your API scripts if using these fields!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Method &lt;tt class="docutils literal"&gt;Component.filter()&lt;/tt&gt; will return only distinct results&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;New method &lt;tt class="docutils literal"&gt;KiwiTCMS.version()&lt;/tt&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bug-fixes"&gt;
-&lt;h3&gt;Bug fixes&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Remove links and icons from TestRun print styling. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2263"&gt;Issue #2263&lt;/a&gt; and
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2264"&gt;Issue #2264&lt;/a&gt; (Gagan Deep)&lt;/li&gt;
-&lt;li&gt;Emails notifications are now sent into server language. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1589"&gt;Issue #1589&lt;/a&gt; (Kapil Bansal)&lt;/li&gt;
-&lt;li&gt;Fix compatibility bug for &amp;quot;advanced search &amp;amp; add&amp;quot; popup windows and latest Chrome
-browsers. Fixes &lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2100"&gt;Issue #2100&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Redirect TestPlan Admin &amp;quot;Add&amp;quot; to the correct URL&lt;/li&gt;
-&lt;li&gt;Fix wrong TestExecution field names in queryset &amp;amp; HTML template. Refs
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1924"&gt;Issue #1924&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Add default display for &lt;tt class="docutils literal"&gt;None&lt;/tt&gt; fields in Test Case page&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="refactoring-testing"&gt;
-&lt;h3&gt;Refactoring &amp;amp; testing&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Add test automation for &lt;tt class="docutils literal"&gt;TestExecution.actual_duration&lt;/tt&gt;. Refs
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1924"&gt;Issue #1924&lt;/a&gt; (&amp;#64;APiligrim)&lt;/li&gt;
-&lt;li&gt;Add test automation for &lt;tt class="docutils literal"&gt;TestCase.expected_duration&lt;/tt&gt;. Refs
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1923"&gt;Issue #1923&lt;/a&gt; (&amp;#64;APiligrim)&lt;/li&gt;
-&lt;li&gt;Add test automation for &lt;tt class="docutils literal"&gt;ReadOnlyHistoryAdmin&lt;/tt&gt;. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1604"&gt;Issue #1604&lt;/a&gt; (Kapil Bansal)&lt;/li&gt;
-&lt;li&gt;Add &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;similar-string&lt;/span&gt;&lt;/tt&gt; checker to &lt;tt class="docutils literal"&gt;kiwi_lint&lt;/tt&gt;. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1126"&gt;Issue #1126&lt;/a&gt; (&amp;#64;17sushmita)&lt;/li&gt;
-&lt;li&gt;Resolve or silence the remaining outstanding pylint issues. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/171"&gt;Issue #171&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Update isort from 5.7.0 to 5.8.0&lt;/li&gt;
-&lt;li&gt;Convert forms to &lt;tt class="docutils literal"&gt;ModelForm&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;Remove unused method parameters&lt;/li&gt;
-&lt;li&gt;Remove unused &lt;tt class="docutils literal"&gt;string_to_list()&lt;/tt&gt;. Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/340"&gt;Issue #340&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Simplify method used for progress-bar in dashboard which also
-reduces the total number of SQL queries&lt;/li&gt;
-&lt;li&gt;Use existing functions, remove duplication&lt;/li&gt;
-&lt;li&gt;Remove unnecessary calls &amp;amp; definition of &lt;tt class="docutils literal"&gt;loadInitialTestPlans()&lt;/tt&gt; in Telemetry pages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="translations"&gt;
-&lt;h3&gt;Translations&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/fr#"&gt;French translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/it#"&gt;Italian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ja#"&gt;Japanese translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pl#"&gt;Polish translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#"&gt;Portuguese, Brazilian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/ro#"&gt;Romanian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/es-ES#"&gt;Spanish translation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kiwi-tcms-enterprise-v10-1-mt"&gt;
-&lt;h2&gt;Kiwi TCMS Enterprise v10.1-mt&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Based on Kiwi TCMS v10.1&lt;/li&gt;
-&lt;li&gt;Container image built with Python 3.8&lt;/li&gt;
-&lt;li&gt;Update kiwitcms-tenants from 1.4.3 to 1.4.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; monthly subscription price for Kiwi TCMS SaaS offering has been updated to
-50 $/mo for new subscriptions. Existing customers will not be affected!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how-to-upgrade"&gt;
-&lt;h2&gt;How to upgrade&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
-If you are using Kiwi TCMS as a Docker container then:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-&lt;/pre&gt;
-&lt;p&gt;Refer to
-&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
-for more details!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;
-&lt;p&gt;---&lt;/p&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
-and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry></feed>
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/></entry></feed>
