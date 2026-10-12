@@ -1,4 +1,4 @@
-Title: Feature showcase: Personal API tokens
+Title: Feature spotlight: Personal API tokens
 Headline: available in Kiwi TCMS v12.7 Private Tenant & Enterprise subscriptions
 date: 2023-12-06 13:05
 comments: true
