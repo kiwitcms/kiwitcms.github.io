@@ -1,4 +1,4 @@
-Title: Feature showcase: Test matrix generation
+Title: Feature spotlight: Test matrix generation
 Headline: available in Kiwi TCMS v11.0
 author: Alexander Todorov
 date: 2022-01-24 19:40
