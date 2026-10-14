@@ -13,9 +13,6 @@ Kiwi TCMS source code is developed by a
 under a combination of multiple open source licenses, mostly
 GPLv2+ and AGPLv3+.
 
-Community donations are collected via
-[Open Collective](https://opencollective.com/kiwitcms).
-
 Project infrastructure, development, data processing and support services provided by:
 
 * Company name: Open Technologies Bulgaria, Ltd;
