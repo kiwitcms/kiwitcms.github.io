@@ -52,8 +52,8 @@ and is updated automatically after new changes are merged in the source code rep
 There are no other versions available!
 
 
-**GPL-2.0 license:** Kiwi TCMS is an open source software, with very long history,
-with its primary core licensed under the GNU GPL-2.0 license!
+**GPL-2.0+ license:** Kiwi TCMS is an open source software, with very long history,
+with its primary core licensed under the GNU GPL-2.0+ license!
 
 
 **No warranty:** the *community edition* version of Kiwi TCMS
