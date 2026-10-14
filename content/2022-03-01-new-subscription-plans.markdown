@@ -74,7 +74,7 @@ that's new while billing changes are not applied.
 
 If you prefer the "free beer" version of
 Kiwi TCMS it is available via `docker pull pub.kiwitcms.eu/kiwitcms/kiwi` - free to use
-and without any guarantees according to GPLv2.
+and without any guarantees according to GPLv2+.
 
 Please consider [subscribing](/#subscriptions) and help us make Kiwi TCMS better!
 
