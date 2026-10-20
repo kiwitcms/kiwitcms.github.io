@@ -31,7 +31,8 @@ Your user profile information is not shared with 3rd parties!
 Anonymous analytics
 ===================
 
-Kiwi TCMS uses Plausible Analytics and Scarf on this website, inside our
+Kiwi TCMS uses Plausible Analytics and Scarf.sh on this website, the
+[official documentation](https://kiwitcms.readthedocs.io/en/latest/), inside our
 [official container images]({filename}containers.markdown) and on
 `https://public.tenant.kiwitcms.org` to collect some
 anonymous usage data for statistical purposes.
@@ -46,5 +47,6 @@ Read more in the [Plausible Analytics Data Policy](https://plausible.io/data-pol
 and [our blog]({filename}../2024-02-23-anonymous-analytics.markdown).
 Check-out the Plausible Analytics dashboard for
 [kiwitcms.org](https://plausible.io/kiwitcms.org),
+[kiwitcms-readthedocs](https://plausible.io/kiwitcms-readthedocs),
 [kiwitcms-container](https://plausible.io/kiwitcms-container) and
 [kiwitcms-tenant](https://plausible.io/kiwitcms-tenant/)!
