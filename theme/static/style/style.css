@@ -67,7 +67,13 @@
 }
 
 /* COMMON */
+html{
+	background-color: var(--white);
+	color-scheme: light;
+}
+
 body{
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     place-content: start space-between;
