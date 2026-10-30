@@ -1228,3 +1228,9 @@ article blockquote{
     border-left: var(--x1-padding) solid var(--light-green);
     background-color: var(--light-gray);
 }
+
+/* Subscription cards: savings links under the primary button */
+#pricing .plan > a.plan-cta { margin-bottom: 0; }
+.billing-save { text-align: right; margin-top: 12px; font-size: 15px; line-height: 1.8; }
+.billing-save a { display: block; color: var(--dark-green); text-decoration: none; }
+.billing-save a:hover { color: var(--light-green); }
