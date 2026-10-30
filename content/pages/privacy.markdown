@@ -29,7 +29,7 @@ Your user profile information is not shared with 3rd parties!
 
 
 Anonymous analytics
-===================
+-------------------
 
 Kiwi TCMS uses Plausible Analytics and Scarf.sh on this website, the
 [official documentation](https://kiwitcms.readthedocs.io/en/latest/), inside our

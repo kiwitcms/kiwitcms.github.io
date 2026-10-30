@@ -8,7 +8,7 @@ add_section: True
 For the  official Kiwi TCMS *Community Edition* container image
 [see this page]({filename}containers.markdown)!
 
-# Community
+## Community
 
 - **Stack Overflow** tag ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms)
 - **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
@@ -16,15 +16,15 @@ For the  official Kiwi TCMS *Community Edition* container image
 - **Blog** tag ["community"](/blog/tags/community/)
 - **Email** `info-at-kiwitcms.org` ([support]({filename}support.markdown) requests will be ignored)
 
-# Contributing
+## Contributing
 
 We welcome community contributions! Please see the [contribution page](http://kiwitcms.readthedocs.io/en/latest/contribution.html) for instructions on how to submit changes. If you are planning on making more elaborate or controversial changes, please discuss them on the issue tracker before sending a pull request.
 
-# Code of Conduct
+## Code of Conduct
 
 To make Kiwi TCMS a welcoming and harassment-free experience for everyone, we follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
 
-# Credits
+## Credits
 
 Kiwi TCMS was initially started by [Red Hat, Inc.](https://www.redhat.com/en) under the name Nitrate.
 It was intended as a replacement for Mozilla's Testopia and has grown on its own
@@ -35,7 +35,7 @@ Latest development is done by
 
 The Kiwi TCMS logo has been designed by Milos Babic.
 
-# Partners
+## Partners
 
 If you'd like to become a Reseller partner please see information about
 [Kiwi TCMS Partner Store]({filename}partners.html)!

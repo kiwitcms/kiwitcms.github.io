@@ -29,7 +29,7 @@ For Python:
 
 
 Related packages
-================
+----------------
 
 - kiwitcms - distributed outside of container image
 - [kiwitcms-django-tenants](https://github.com/kiwitcms/django-tenants)

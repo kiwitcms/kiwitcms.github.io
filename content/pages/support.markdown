@@ -26,7 +26,7 @@ Customers or partners with an active subscription:
 - *Requests must include your email/GitHub username used as part of the subscription*
 
 
-# Partners
+## Partners
 
 Kiwi TCMS provides technical support to end-customers directly!
 If you'd like to become a Reseller partner and/or provide additional services
