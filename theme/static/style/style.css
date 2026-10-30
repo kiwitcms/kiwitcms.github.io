@@ -155,6 +155,10 @@ ul.caret li.first:before {
     content: var(--fa-arrow-left);
 }
 
+ul.caret li.first {
+	margin-bottom: var(--x3-padding);
+}
+
 ul.caret details > ul > li:before{
 	content: var(--fa-angle-right);
 }
