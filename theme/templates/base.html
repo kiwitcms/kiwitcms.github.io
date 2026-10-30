@@ -52,11 +52,8 @@
             <ul>
                 {% include "main_menu_items.html" %}
                 <li>
-                    <div class="drop-btn" id="nav-drop"
-                        onmouseenter="toggle('nav-drop','drop-down');"
-                        onmouseleave="toggle('nav-drop','drop-down');"
-                    >
-                        <div class="btn" icon>Get Started <i></i></div>
+                    <div class="drop-btn" id="nav-drop">
+                        <button type="button" class="btn" icon aria-expanded="false" onclick="toggleMenu('nav-drop', this)">Get Started <i></i></button>
                         <!-- WARNING: this menu needs to be copied everywhere where we have this
                             button b/c Pelican doesn't support includes from HTML content files:
                             https://github.com/getpelican/pelican/issues/2783
