@@ -1231,6 +1231,6 @@ article blockquote{
 
 /* Subscription cards: savings links under the primary button */
 #pricing .plan > a.plan-cta { margin-bottom: 0; }
-.billing-save { text-align: right; margin-top: 12px; font-size: 15px; line-height: 1.8; }
-.billing-save a { display: block; color: var(--dark-green); text-decoration: none; }
-.billing-save a:hover { color: var(--light-green); }
+.billing-save { margin: 0 calc(var(--x3-padding) * -1) calc(var(--x3-padding) * -1); padding: 4px var(--x3-padding) 16px; background: var(--dark-green); color: var(--white); text-align: right; font-size: 15px; line-height: 1.9; }
+.billing-save a { display: block; color: var(--white); text-decoration: none; }
+.billing-save a:hover { text-decoration: underline; }
