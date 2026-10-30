@@ -17,7 +17,7 @@ to get started or
 
 
 Private container images for subscribers
-========================================
+----------------------------------------
 
 Subscribers enjoy the benefit of having read-only access to tagged versions of
 Kiwi TCMS container images as well as access to tagged versions of
@@ -36,7 +36,7 @@ Kiwi TCMS Enterprise container images! These images are available as:
 
 
 Image versions
-==============
+--------------
 
 Changelog information can be found under the [releases]({tag}releases) tag in our blog!
 
