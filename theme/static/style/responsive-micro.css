@@ -16,7 +16,8 @@
     body.page section p, body.page section li, body.page section pre, p {
         font-size: 17px;
     }
-    section > h1 {
+    section > h1,
+    section > h2 {
         font-size: 40px;
     }
     .member-bio > strong{
@@ -148,7 +149,7 @@
     #pricing {
         grid-template-columns: 1fr;
     }
-    #pricing h1 {
+    #pricing h2 {
         grid-column: 1/2;
     }
     #pricing .plan h3,
@@ -202,9 +203,9 @@
     #awards {
         grid-template-columns: repeat(3, 1fr);
     }
-    #trusted-by h1,
-    #seen-at h1,
-    #awards h1 {
+    #trusted-by h2,
+    #seen-at h2,
+    #awards h2 {
         grid-column: 1/4;
     }
 

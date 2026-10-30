@@ -82,6 +82,15 @@ body{
 	scroll-behavior: smooth;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+}
+
 section,
 footer {
 	padding: var(--unusable-padding);
@@ -102,7 +111,8 @@ h3 {
 p {
 	font-size: 20px;
 }
-section > h1 {
+section > h1,
+section > h2 {
 	font-family: "Source Sans Pro Bold", "Source Sans Pro", sans-serif;
 	font-style: oblique;
 	font-size: 60px;
@@ -518,7 +528,7 @@ blockquote p.quote {
 	background-repeat: no-repeat;
 	background-position: bottom left, bottom right;
 }
-#pricing h1 {
+#pricing h2 {
 	grid-column: 1/5;
 }
 
@@ -641,17 +651,17 @@ summary:focus {
 	background: var(--mid-green);
 	padding: var(--x3-padding) var(--unusable-padding);
 }
-#screens h1 {
+#screens h2 {
 	color: white;
 	margin-bottom: var(--x3-padding);
 	display: flex;
 }
-#screens h1 span {
+#screens h2 span {
 	margin-left: auto;
 	bottom: -10px;
 	position: relative;
 }
-#screens h1 span i {
+#screens h2 span i {
 	cursor: pointer;
 }
 #screens h3 {
@@ -753,9 +763,9 @@ blockquote .author span {
 	align-items: center;
 	padding: calc(var(--x3-padding) * 2) var(--unusable-padding);
 }
-#trusted-by h1,
-#seen-at h1,
-#awards h1{
+#trusted-by h2,
+#seen-at h2,
+#awards h2{
 	grid-column: 1/7;
 	text-align: left;
 	margin-bottom: var(--x3-padding);
@@ -818,7 +828,7 @@ a[icvideo]:after {
 		"cta-title cta-btn"
 		"cta-desc cta-btn";
 }
-#cta h1 {
+#cta h2 {
 	color: white;
 	margin-bottom: var(--x1-padding);
 	grid-area: cta-title;
