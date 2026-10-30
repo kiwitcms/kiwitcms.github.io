@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Kiwi TCMS - the leading open source test management system</title>
@@ -48,9 +48,6 @@
     <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
 </li>
 <li>
-    <a href="/community/" >Community</a>
-</li>
-<li>
     <a href="/support/" >Support</a>
 </li>
 <li>
@@ -68,9 +65,6 @@
     <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
 </li>
 <li>
-    <a href="/community/" >Community</a>
-</li>
-<li>
     <a href="/support/" >Support</a>
 </li>
 <li>
@@ -79,21 +73,16 @@
 <li>
     <a href="/team/" >Team</a>
 </li>                <li>
-                    <div class="drop-btn" id="nav-drop"
-                        onmouseenter="toggle('nav-drop','drop-down');"
-                        onmouseleave="toggle('nav-drop','drop-down');"
-                    >
-                        <div class="btn" icon>Get Started <i></i></div>
+                    <div class="drop-btn" id="nav-drop">
+                        <button type="button" class="btn" icon aria-expanded="false" onclick="toggleMenu('nav-drop', this)">Get Started <i></i></button>
                         <!-- WARNING: this menu needs to be copied everywhere where we have this
                             button b/c Pelican doesn't support includes from HTML content files:
                             https://github.com/getpelican/pelican/issues/2783
                         -->
                         <div class="drop-cnt">
-                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="https://public.tenant.kiwitcms.org">Try demo without install</a>
                             <a href="/#subscriptions">Explore subscriptions</a>
                             <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
-                            <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
-                            <a href="/partners/">Kiwi TCMS Partner Store</a>
                         </div>
                     </div>
                 </li>
@@ -101,6 +90,7 @@
         </nav>
 
         <!-- content -->
+        <main id="content">
         
         <header>
             <div class="lead">
@@ -112,18 +102,16 @@
                     <li>&nbsp;&nbsp;&nbsp; academia & business</li>
                     <li>&nbsp;&nbsp;&nbsp; government & military</li>
                 </ul>
-                <div class="drop-btn" id="lead-drop" onmouseenter="toggle('lead-drop','drop-down');" onmouseleave="toggle('lead-drop','drop-down');">
-                    <div class="btn big-btn" icon>Get Started <i></i></div>
+                <div class="drop-btn" id="lead-drop">
+                    <button type="button" class="btn big-btn" icon aria-expanded="false" onclick="toggleMenu('lead-drop', this)">Get Started <i></i></button>
                     <!-- WARNING: this menu needs to be copied everywhere where we have this
                         button b/c Pelican doesn't support includes from HTML content files:
                         https://github.com/getpelican/pelican/issues/2783
                     -->
                     <div class="drop-cnt">
-                        <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                        <a href="https://public.tenant.kiwitcms.org">Try demo without install</a>
                         <a href="/#subscriptions">Explore subscriptions</a>
                         <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
-                        <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
-                        <a href="/partners/">Kiwi TCMS Partner Store</a>
                     </div>
                 </div>
             </div>
@@ -138,6 +126,7 @@
         </header>
 
         <section id="features">
+            <h2 class="visually-hidden">Features</h2>
             <div class="feature-list">
                 <div>
                     <h3>Manual testing</h3>
@@ -180,7 +169,7 @@
                 <div>
                     <h3>External API</h3>
                     <p>
-                        Provides full access so you can get creative. Available via JSON-RPC and XML-RPC.
+                        Available via JSON-RPC, XML-RPC, OpenAPI schema for LLMs and Model Context Protocol.
                     </p>
                 </div>
                 <div>
@@ -212,6 +201,14 @@
         </section>
 
         <section id="quick-links">
+            <a href="/containers/">
+                <div>
+                    <i class="las la-cube"></i>
+                    <h3>Container</h3>
+                    <p><code>docker pull pub.kiwitcms.eu/kiwitcms/kiwi</code></p>
+                </div>
+            </a>
+
             <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html">
                 <div>
                     <i class="las la-cloud-download-alt"></i>
@@ -233,14 +230,6 @@
                 </div>
             </a>
 
-            <a href="/community/">
-                <div>
-                    <i class="las la-users"></i>
-                    <h3>Community</h3>
-                    <p>Ask for help, translate into local languages, hack code and help us improve Kiwi TCMS!</p>
-                </div>
-            </a>
-
             <a href="/support/">
                 <div>
                     <i class="las la-headset"></i>
@@ -253,7 +242,7 @@
         </section>
 
         <section id="pricing">
-            <h1 id="subscriptions">Subscription plans</h1>
+            <h2 id="subscriptions">Subscription plans</h2>
 
             <div class="plan">
                 <h3>Self Support</h3>
@@ -310,16 +299,13 @@
                     </li>
                 </ul>
 
-                <em style="float: right">
-                    save 5% &amp; pay for
-                    <a href="https://mrsenko.onfastspring.com/kiwi-tcms-self-support-yearly" data-fsc-item-path-value="kiwi-tcms-self-support-yearly" data-fsc-action="Add, Checkout">1 year</a>
-                    |
-                    <a href="https://mrsenko.onfastspring.com/kiwi-tcms-self-support-for-3-years" data-fsc-item-path-value="kiwi-tcms-self-support-for-3-years" data-fsc-action="Add, Checkout">3 years</a>
-                </em>
-
-                <a href="https://mrsenko.onfastspring.com/kiwitcms-self-support" data-fsc-item-path-value="kiwitcms-self-support" data-fsc-action="Add, Checkout">
+                <a class="plan-cta" href="https://mrsenko.onfastspring.com/kiwitcms-self-support" data-fsc-item-path-value="kiwitcms-self-support" data-fsc-action="Add, Checkout">
                     Subscribe for 35 $/mo
                 </a>
+                <p class="billing-save">
+                    <a href="https://mrsenko.onfastspring.com/kiwi-tcms-self-support-yearly" data-fsc-item-path-value="kiwi-tcms-self-support-yearly" data-fsc-action="Add, Checkout">Prepay 1 year &middot; save $21 (5%)</a>
+                    <a href="https://mrsenko.onfastspring.com/kiwi-tcms-self-support-for-3-years" data-fsc-item-path-value="kiwi-tcms-self-support-for-3-years" data-fsc-action="Add, Checkout">Prepay 3 years &middot; save $63 (5%)</a>
+                </p>
             </div>
 
             <div class="plan prefered">
@@ -328,8 +314,6 @@
                     <li class="first">
                         All of <i>Self Support</i> plus:
                     </li>
-
-                    <br>
 
                     <li>
                         1x SaaS hosting under
@@ -404,16 +388,13 @@
                     </li>
                 </ul>
 
-                <em style="float: right">
-                    save 7% &amp; pay for
-                    <a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant-yearly" data-fsc-item-path-value="kiwitcms-private-tenant-yearly" data-fsc-action="Add, Checkout">1 year</a>
-                    |
-                    <a href="https://mrsenko.onfastspring.com/kiwi-tcms-private-tenant-for-3-years" data-fsc-item-path-value="kiwi-tcms-private-tenant-for-3-years" data-fsc-action="Add, Checkout">3 years</a>
-                </em>
-
-                <a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant" data-fsc-item-path-value="kiwitcms-private-tenant" data-fsc-action="Add, Checkout">
+                <a class="plan-cta" href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant" data-fsc-item-path-value="kiwitcms-private-tenant" data-fsc-action="Add, Checkout">
                     Subscribe for 150 $/mo
                 </a>
+                <p class="billing-save">
+                    <a href="https://mrsenko.onfastspring.com/kiwitcms-private-tenant-yearly" data-fsc-item-path-value="kiwitcms-private-tenant-yearly" data-fsc-action="Add, Checkout">Prepay 1 year &middot; save $126 (7%)</a>
+                    <a href="https://mrsenko.onfastspring.com/kiwi-tcms-private-tenant-for-3-years" data-fsc-item-path-value="kiwi-tcms-private-tenant-for-3-years" data-fsc-action="Add, Checkout">Prepay 3 years &middot; save $378 (7%)</a>
+                </p>
             </div>
 
             <div class="plan prefered">
@@ -422,8 +403,6 @@
                     <li class="first">
                         All of <i>Private Tenant</i>:
                     </li>
-
-                    <br>
 
                     <li>
                         On-premises inside your VPN
@@ -470,6 +449,10 @@
                     </li>
 
                     <li>
+                        Model Context Protocol
+                    </li>
+
+                    <li>
                         08-20 UTC/Mon-Fri <a href="/support/">support</a>
                     </li>
                     <li>
@@ -481,16 +464,15 @@
                         </em>
                     </li>
 
-                    <em style="float: right">
-                        save 10% &amp; pay for
-                        <a href="https://mrsenko.onfastspring.com/kiwi-tcms-enterprise-subscription-with-yearly-billing" data-fsc-item-path-value="kiwi-tcms-enterprise-subscription-with-yearly-billing" data-fsc-action="Add, Checkout">1 year</a>
-                        |
-                        <a href="https://mrsenko.onfastspring.com/kiwi-tcms-enterprise-for-3-years" data-fsc-item-path-value="kiwi-tcms-enterprise-for-3-years" data-fsc-action="Add, Checkout">3 years</a>
-                    </em>
                 </ul>
-                <a href="https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription" data-fsc-item-path-value="kiwitcms-enterprise-subscription" data-fsc-action="Add, Checkout">
+
+                <a class="plan-cta" href="https://mrsenko.onfastspring.com/kiwitcms-enterprise-subscription" data-fsc-item-path-value="kiwitcms-enterprise-subscription" data-fsc-action="Add, Checkout">
                     Subscribe for 600 $/mo
                 </a>
+                <p class="billing-save">
+                    <a href="https://mrsenko.onfastspring.com/kiwi-tcms-enterprise-subscription-with-yearly-billing" data-fsc-item-path-value="kiwi-tcms-enterprise-subscription-with-yearly-billing" data-fsc-action="Add, Checkout">Prepay 1 year &middot; save $720 (10%)</a>
+                    <a href="https://mrsenko.onfastspring.com/kiwi-tcms-enterprise-for-3-years" data-fsc-item-path-value="kiwi-tcms-enterprise-for-3-years" data-fsc-action="Add, Checkout">Prepay 3 years &middot; save $2160 (10%)</a>
+                </p>
             </div>
 
             <div class="plan">
@@ -499,8 +481,6 @@
                     <li class="first">
                         All of <i>Enterprise</i> plus:
                     </li>
-
-                    <br>
 
                     <li>
                         1x Kiwi TCMS hosted in AWS
@@ -645,16 +625,16 @@
         </section>
 
         <section id="screens">
-            <h1>
+            <h2>
                 See it in action
                 <span>
                     <i id="prev" class="las la-angle-left"></i><i id="next" class="las la-angle-right"></i>
                 </span>
-            </h1>
+            </h2>
 
             <div class="slider screens-slider">
                 <div>
-                    <img class="shown" src="images/screenshots/001_central_dashboard.png">
+                    <img class="shown" src="images/screenshots/001_central_dashboard.png" alt="Kiwi TCMS central dashboard showing test executions and test plans">
                     <h3 id="heading">Central dashboard to start your day</h3>
                     <p id="subtitle">
                         See all of your test executions and test plans in one place
@@ -827,7 +807,7 @@
         </section>
 
         <section id="trusted-by">
-            <h1>Trusted by</h1>
+            <h2>Trusted by</h2>
 
             <a href="/blog/kiwi-tcms-team/2025/12/04/who-is-using-kiwi-tcms-in-2025/" iclink>
                 <img src="/images/analytics/2025/usa/accure.png" alt="Accure AI - USA" title="Accure AI - USA">
@@ -1340,7 +1320,7 @@
         </section>
 
         <section id="seen-at">
-            <h1>Seen at</h1>
+            <h2>Seen at</h2>
             <img src="/images/conf/bws.png" alt="Bulgaria Web Summit" title="Bulgaria web summit">
             <img src="/images/conf/oscal.png" alt="Open Source Conference Albania" title="Open Source Conference Albania">
             <a onclick="showVideo('JMEeviPUl04')" icvideo>
@@ -1389,7 +1369,7 @@
         </section>
 
         <section id="awards">
-            <h1>Awards</h1>
+            <h2>Awards</h2>
 
             <a onclick="showVideo('7AuZp3nVIkc')" icvideo>
                 <img src="/images/conf/openawards19.png" alt="OpenAwards" title="OpenAwards">
@@ -1413,20 +1393,19 @@
         </section>
 
         <section id="cta">
-            <h1>If it's not in Kiwi TCMS then you don't test it!</h1>
+            <h2>If it's not in Kiwi TCMS then you don't test it!</h2>
             <h3>Start using Kiwi TCMS today.</h3>
 
-            <div class="drop-btn" id="footer-drop" onmouseenter="toggle('footer-drop','drop-down');" onmouseleave="toggle('footer-drop','drop-down');">
-                <div class="btn border-btn" icon>Get Started <i></i></div>
+            <div class="drop-btn" id="footer-drop">
+                <button type="button" class="btn border-btn" icon aria-expanded="false" onclick="toggleMenu('footer-drop', this)">Get Started <i></i></button>
                 <!-- WARNING: this menu needs to be copied everywhere where we have this
                     button b/c Pelican doesn't support includes from HTML content files:
                     https://github.com/getpelican/pelican/issues/2783
                 -->
                 <div class="drop-cnt">
-                    <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                    <a href="https://public.tenant.kiwitcms.org">Try demo without install</a>
                     <a href="/#subscriptions">Explore subscriptions</a>
                     <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
-                    <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
                 </div>
             </div>
         </section>
@@ -1437,12 +1416,12 @@
             </iframe>
         </aside>
     
+        </main>
 
         <footer>
             <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
             <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=7386a67a-a689-40df-a268-b03ada69e169" alt="">
             <div class="legal">
-                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
@@ -1455,29 +1434,29 @@
             </div>
             <div class="footer-block fl-gh">
                 <i></i>
-                <h3>Contribute</h3>
+                <h2>Contribute</h2>
                 <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">
                 <i></i>
-                <h3>Follow</h3>
+                <h2>Follow</h2>
                 <a href="https://www.linkedin.com/company/kiwi-tcms">@KiwiTCMS</a>
             </div>
             <div class="footer-block fl-yt">
                 <i></i>
-                <h3>Watch</h3>
+                <h2>Watch</h2>
                 <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
             </div>
             <div class="footer-block fl-fb">
                 <i></i>
-                <h3>Join</h3>
+                <h2>Join</h2>
                 <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block mail">
                 <i></i>
-                <h3>Join our newsletter.</h3>
+                <h2>Join our newsletter.</h2>
                 <p>Project news only, GDPR compliant.</p>
                 <a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>

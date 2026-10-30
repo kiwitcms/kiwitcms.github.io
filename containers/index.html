@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Kiwi TCMS - Container images</title>
@@ -48,9 +48,6 @@
     <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
 </li>
 <li>
-    <a href="/community/" >Community</a>
-</li>
-<li>
     <a href="/support/" >Support</a>
 </li>
 <li>
@@ -68,9 +65,6 @@
     <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
 </li>
 <li>
-    <a href="/community/" >Community</a>
-</li>
-<li>
     <a href="/support/" >Support</a>
 </li>
 <li>
@@ -79,21 +73,16 @@
 <li>
     <a href="/team/" >Team</a>
 </li>                <li>
-                    <div class="drop-btn" id="nav-drop"
-                        onmouseenter="toggle('nav-drop','drop-down');"
-                        onmouseleave="toggle('nav-drop','drop-down');"
-                    >
-                        <div class="btn" icon>Get Started <i></i></div>
+                    <div class="drop-btn" id="nav-drop">
+                        <button type="button" class="btn" icon aria-expanded="false" onclick="toggleMenu('nav-drop', this)">Get Started <i></i></button>
                         <!-- WARNING: this menu needs to be copied everywhere where we have this
                             button b/c Pelican doesn't support includes from HTML content files:
                             https://github.com/getpelican/pelican/issues/2783
                         -->
                         <div class="drop-cnt">
-                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="https://public.tenant.kiwitcms.org">Try demo without install</a>
                             <a href="/#subscriptions">Explore subscriptions</a>
                             <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
-                            <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
-                            <a href="/partners/">Kiwi TCMS Partner Store</a>
                         </div>
                     </div>
                 </li>
@@ -101,6 +90,7 @@
         </nav>
 
         <!-- content -->
+        <main id="content">
     <section>
         <h1>Public container image</h1>
 <p>The official upstream Kiwi TCMS <em>Community Edition</em> container image is a rolling release
@@ -110,7 +100,7 @@ and can be freely downloaded via the
 <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Running Kiwi TCMS as a container</a>
 to get started or
 <a href="/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/">read more about it</a>!</p>
-<h1>Private container images for subscribers</h1>
+<h2>Private container images for subscribers</h2>
 <p>Subscribers enjoy the benefit of having read-only access to tagged versions of
 Kiwi TCMS container images as well as access to tagged versions of
 Kiwi TCMS Enterprise container images! These images are available as:</p>
@@ -126,7 +116,7 @@ Kiwi TCMS Enterprise container images! These images are available as:</p>
 $<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PASSWORD-TOKEN&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>docker<span class="w"> </span>login<span class="w"> </span>-u<span class="o">=</span><span class="s2">&quot;USERNAME&quot;</span><span class="w"> </span>--password-stdin<span class="w"> </span>hub.kiwitcms.eu
 </code></pre></div>
 
-<h1>Image versions</h1>
+<h2>Image versions</h2>
 <p>Changelog information can be found under the <a href="/blog/tags/releases/">releases</a> tag in our blog!</p>
 <div class="highlight"><pre><span></span><code>hub.kiwitcms.eu/kiwitcms/version            16.6 (aarch64)          2b5b67801875    07 Oct 2026     719MB
 hub.kiwitcms.eu/kiwitcms/version            16.6 (x86_64)           5d7b241ba703    07 Oct 2026     699MB
@@ -368,12 +358,12 @@ hub.kiwitcms.eu/kiwitcms/enterprise         8.1-mt                  44cbe05e5d90
 hub.kiwitcms.eu/kiwitcms/enterprise         8.0-mt                  9e4b8d0c3fef    12 Feb 2020     751MB
 </code></pre></div>
     </section>
+        </main>
 
         <footer>
             <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
             <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=7386a67a-a689-40df-a268-b03ada69e169" alt="">
             <div class="legal">
-                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
@@ -386,29 +376,29 @@ hub.kiwitcms.eu/kiwitcms/enterprise         8.0-mt                  9e4b8d0c3fef
             </div>
             <div class="footer-block fl-gh">
                 <i></i>
-                <h3>Contribute</h3>
+                <h2>Contribute</h2>
                 <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">
                 <i></i>
-                <h3>Follow</h3>
+                <h2>Follow</h2>
                 <a href="https://www.linkedin.com/company/kiwi-tcms">@KiwiTCMS</a>
             </div>
             <div class="footer-block fl-yt">
                 <i></i>
-                <h3>Watch</h3>
+                <h2>Watch</h2>
                 <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
             </div>
             <div class="footer-block fl-fb">
                 <i></i>
-                <h3>Join</h3>
+                <h2>Join</h2>
                 <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block mail">
                 <i></i>
-                <h3>Join our newsletter.</h3>
+                <h2>Join our newsletter.</h2>
                 <p>Project news only, GDPR compliant.</p>
                 <a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>

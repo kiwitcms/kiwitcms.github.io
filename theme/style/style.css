@@ -18,10 +18,10 @@
 
 :root {
 	/* Colors */
-	--dark-green: #3c8d2c;
-	--mid-green: #59a016;
-	--light-green: #78b500;
-	--trans-green: #3c8d2c80;
+	--dark-green: #357e27;
+	--mid-green: #47800f;
+	--light-green: #568200;
+	--trans-green: #357e2780;
 	--white: #ffffff;
 	--light-gray: #f8f8f8;
 	--brown: #36302c;
@@ -82,6 +82,15 @@ body{
 	scroll-behavior: smooth;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+}
+
 section,
 footer {
 	padding: var(--unusable-padding);
@@ -102,7 +111,8 @@ h3 {
 p {
 	font-size: 20px;
 }
-section > h1 {
+section > h1,
+section > h2 {
 	font-family: "Source Sans Pro Bold", "Source Sans Pro", sans-serif;
 	font-style: oblique;
 	font-size: 60px;
@@ -155,6 +165,10 @@ ul.caret li.first:before {
     content: var(--fa-arrow-left);
 }
 
+ul.caret li.first {
+	margin-bottom: var(--x3-padding);
+}
+
 ul.caret details > ul > li:before{
 	content: var(--fa-angle-right);
 }
@@ -173,6 +187,14 @@ ul.caret details {
 	font-size: 20px;
 	line-height: 32px;
 	text-decoration: none;
+	border: none;
+	font-family: inherit;
+	cursor: pointer;
+}
+button.btn {
+	text-align: left;
+	appearance: none;
+	-webkit-appearance: none;
 }
 .btn[icon] {
 	padding: 9px 20px 9px var(--x3-padding);
@@ -210,7 +232,8 @@ ul.caret details {
 	margin-right: 55px;
 	margin-left: 0px;
 }
-.drop-btn.drop-down .btn i:after {
+.drop-btn.drop-down .btn i:after,
+.drop-btn:hover .btn i:after {
 transform: rotate(90deg);
 }
 
@@ -514,7 +537,7 @@ blockquote p.quote {
 	background-repeat: no-repeat;
 	background-position: bottom left, bottom right;
 }
-#pricing h1 {
+#pricing h2 {
 	grid-column: 1/5;
 }
 
@@ -637,17 +660,17 @@ summary:focus {
 	background: var(--mid-green);
 	padding: var(--x3-padding) var(--unusable-padding);
 }
-#screens h1 {
+#screens h2 {
 	color: white;
 	margin-bottom: var(--x3-padding);
 	display: flex;
 }
-#screens h1 span {
+#screens h2 span {
 	margin-left: auto;
 	bottom: -10px;
 	position: relative;
 }
-#screens h1 span i {
+#screens h2 span i {
 	cursor: pointer;
 }
 #screens h3 {
@@ -749,9 +772,9 @@ blockquote .author span {
 	align-items: center;
 	padding: calc(var(--x3-padding) * 2) var(--unusable-padding);
 }
-#trusted-by h1,
-#seen-at h1,
-#awards h1{
+#trusted-by h2,
+#seen-at h2,
+#awards h2{
 	grid-column: 1/7;
 	text-align: left;
 	margin-bottom: var(--x3-padding);
@@ -814,7 +837,7 @@ a[icvideo]:after {
 		"cta-title cta-btn"
 		"cta-desc cta-btn";
 }
-#cta h1 {
+#cta h2 {
 	color: white;
 	margin-bottom: var(--x1-padding);
 	grid-area: cta-title;
@@ -848,7 +871,7 @@ footer {
 		"legal fl-gh fl-fb mail";
 }
 
-footer h3 {
+footer h2 {
 	font-family: "Rubik Bold", "Rubik", sans-serif;
 	font-weight: bold;
 	font-size: 25px;
@@ -1069,7 +1092,8 @@ div.drop-cnt{
 	/* margin-top: 6px; */
 	right: 0;
 }
-#nav-drop.drop-btn.drop-down .drop-cnt{
+#nav-drop.drop-btn.drop-down .drop-cnt,
+#nav-drop.drop-btn:hover .drop-cnt{
 	right: var(--unusable-padding);
 }
 
@@ -1204,3 +1228,9 @@ article blockquote{
     border-left: var(--x1-padding) solid var(--light-green);
     background-color: var(--light-gray);
 }
+
+/* Subscription cards: savings links under the primary button */
+#pricing .plan > a.plan-cta { margin-bottom: 0; }
+.billing-save { margin: 0 calc(var(--x3-padding) * -1) calc(var(--x3-padding) * -1); padding: 4px var(--x3-padding) 16px; background: var(--dark-green); color: var(--white); text-align: right; font-size: 15px; line-height: 1.9; }
+.billing-save a { display: block; color: var(--white); text-decoration: none; }
+.billing-save a:hover { text-decoration: underline; }

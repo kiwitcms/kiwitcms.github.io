@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Kiwi TCMS - Community</title>
@@ -48,9 +48,6 @@
     <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
 </li>
 <li>
-    <a href="/community/" class="active">Community</a>
-</li>
-<li>
     <a href="/support/" >Support</a>
 </li>
 <li>
@@ -68,9 +65,6 @@
     <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
 </li>
 <li>
-    <a href="/community/" class="active">Community</a>
-</li>
-<li>
     <a href="/support/" >Support</a>
 </li>
 <li>
@@ -79,21 +73,16 @@
 <li>
     <a href="/team/" >Team</a>
 </li>                <li>
-                    <div class="drop-btn" id="nav-drop"
-                        onmouseenter="toggle('nav-drop','drop-down');"
-                        onmouseleave="toggle('nav-drop','drop-down');"
-                    >
-                        <div class="btn" icon>Get Started <i></i></div>
+                    <div class="drop-btn" id="nav-drop">
+                        <button type="button" class="btn" icon aria-expanded="false" onclick="toggleMenu('nav-drop', this)">Get Started <i></i></button>
                         <!-- WARNING: this menu needs to be copied everywhere where we have this
                             button b/c Pelican doesn't support includes from HTML content files:
                             https://github.com/getpelican/pelican/issues/2783
                         -->
                         <div class="drop-cnt">
-                            <a href="https://public.tenant.kiwitcms.org">Explore latest version</a>
+                            <a href="https://public.tenant.kiwitcms.org">Try demo without install</a>
                             <a href="/#subscriptions">Explore subscriptions</a>
                             <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
-                            <a href="https://github.com/marketplace/kiwi-tcms/">Integration with GitHub</a>
-                            <a href="/partners/">Kiwi TCMS Partner Store</a>
                         </div>
                     </div>
                 </li>
@@ -101,11 +90,12 @@
         </nav>
 
         <!-- content -->
+        <main id="content">
     <section>
         <h1>Container image</h1>
 <p>For the  official Kiwi TCMS <em>Community Edition</em> container image
 <a href="/containers/">see this page</a>!</p>
-<h1>Community</h1>
+<h2>Community</h2>
 <ul>
 <li><strong>Stack Overflow</strong> tag <a href="https://stackoverflow.com/questions/tagged/kiwi-tcms">"kiwi-tcms"</a></li>
 <li><strong>GitHub</strong> <a href="https://github.com/kiwitcms/Kiwi/issues">issue tracker</a></li>
@@ -113,11 +103,11 @@
 <li><strong>Blog</strong> tag <a href="/blog/tags/community/">"community"</a></li>
 <li><strong>Email</strong> <code>info-at-kiwitcms.org</code> (<a href="/support/">support</a> requests will be ignored)</li>
 </ul>
-<h1>Contributing</h1>
+<h2>Contributing</h2>
 <p>We welcome community contributions! Please see the <a href="http://kiwitcms.readthedocs.io/en/latest/contribution.html">contribution page</a> for instructions on how to submit changes. If you are planning on making more elaborate or controversial changes, please discuss them on the issue tracker before sending a pull request.</p>
-<h1>Code of Conduct</h1>
+<h2>Code of Conduct</h2>
 <p>To make Kiwi TCMS a welcoming and harassment-free experience for everyone, we follow the <a href="https://github.com/cncf/foundation/blob/master/code-of-conduct.md">CNCF Code of Conduct</a>.</p>
-<h1>Credits</h1>
+<h2>Credits</h2>
 <p>Kiwi TCMS was initially started by <a href="https://www.redhat.com/en">Red Hat, Inc.</a> under the name Nitrate.
 It was intended as a replacement for Mozilla's Testopia and has grown on its own
 <a href="https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#381804-jan-24-2017-released-on-mrsenkocom">since then</a>.
@@ -125,16 +115,16 @@ Latest development is done by
 <a href="/team/">the Kiwi TCMS team</a> and its
 <a href="https://github.com/kiwitcms/Kiwi/graphs/contributors">contributors</a>.</p>
 <p>The Kiwi TCMS logo has been designed by Milos Babic.</p>
-<h1>Partners</h1>
+<h2>Partners</h2>
 <p>If you'd like to become a Reseller partner please see information about
 <a href="/partners/">Kiwi TCMS Partner Store</a>!</p>
     </section>
+        </main>
 
         <footer>
             <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
             <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=7386a67a-a689-40df-a268-b03ada69e169" alt="">
             <div class="legal">
-                <p>Kiwi TCMS is collecting donations via <a href="https://opencollective.com/kiwitcms">Open Collective</a>.</p>
                 <p>Except where otherwise noted, content on this site is licensed under a
                     <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
                 </p>
@@ -147,29 +137,29 @@ Latest development is done by
             </div>
             <div class="footer-block fl-gh">
                 <i></i>
-                <h3>Contribute</h3>
+                <h2>Contribute</h2>
                 <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">
                 <i></i>
-                <h3>Follow</h3>
+                <h2>Follow</h2>
                 <a href="https://www.linkedin.com/company/kiwi-tcms">@KiwiTCMS</a>
             </div>
             <div class="footer-block fl-yt">
                 <i></i>
-                <h3>Watch</h3>
+                <h2>Watch</h2>
                 <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
             </div>
             <div class="footer-block fl-fb">
                 <i></i>
-                <h3>Join</h3>
+                <h2>Join</h2>
                 <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block mail">
                 <i></i>
-                <h3>Join our newsletter.</h3>
+                <h2>Join our newsletter.</h2>
                 <p>Project news only, GDPR compliant.</p>
                 <a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581" class="btn ghost-btn">Sign me up</a>
             </div>

@@ -20,7 +20,7 @@
     #pricing {
         grid-template-columns: repeat(3, 1fr);
     }
-    #pricing h1 {
+    #pricing h2 {
         grid-column: 1/4;
     }
     #pricing .plans-modal {
