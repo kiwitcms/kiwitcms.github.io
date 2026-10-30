@@ -96,6 +96,7 @@ Some examples include:
 - Amazon SES integration
 - Various storage backends
 - Additional integration with less popular bug-tracking systems
+- Model Context Protocol server
 
 This list changes over time however we are fully committed to everything being open source!
 
