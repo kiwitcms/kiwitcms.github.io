@@ -375,12 +375,6 @@ header .lead ul li {
 	list-style: none;
 }
 
-header .lead .ce-note {
-	font-size: 16px;
-	margin-top: 12px;
-	color: var(--dark-green);
-}
-
 /* HEADER > VIDEO */
 
 header .video {
