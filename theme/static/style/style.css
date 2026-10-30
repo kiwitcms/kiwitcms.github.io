@@ -187,6 +187,14 @@ ul.caret details {
 	font-size: 20px;
 	line-height: 32px;
 	text-decoration: none;
+	border: none;
+	font-family: inherit;
+	cursor: pointer;
+}
+button.btn {
+	text-align: left;
+	appearance: none;
+	-webkit-appearance: none;
 }
 .btn[icon] {
 	padding: 9px 20px 9px var(--x3-padding);
@@ -224,7 +232,8 @@ ul.caret details {
 	margin-right: 55px;
 	margin-left: 0px;
 }
-.drop-btn.drop-down .btn i:after {
+.drop-btn.drop-down .btn i:after,
+.drop-btn:hover .btn i:after {
 transform: rotate(90deg);
 }
 
@@ -1083,7 +1092,8 @@ div.drop-cnt{
 	/* margin-top: 6px; */
 	right: 0;
 }
-#nav-drop.drop-btn.drop-down .drop-cnt{
+#nav-drop.drop-btn.drop-down .drop-cnt,
+#nav-drop.drop-btn:hover .drop-cnt{
 	right: var(--unusable-padding);
 }
 
