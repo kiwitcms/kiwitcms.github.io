@@ -2,11 +2,11 @@ Title: Who is using Kiwi TCMS in Sept 2026
 Headline: discover 26 new organizations out of 225 total
 date: 2026-10-03 15:15
 comments: false
-og_image: images/analytics/2026/banner.png
-twitter_image: images/analytics/2026/banner.png
+og_image: images/analytics/2026/banner+sep2026.png
+twitter_image: images/analytics/2026/banner+sep2026.png
 tags: community
 
-![2026 banner](/images/analytics/2026/banner.png "Sept 2026 - new instances")
+![2026 banner](/images/analytics/2026/banner+sep2026.png "Sept 2026 - new instances")
 
 September 2026 brought another wave of organizations whose Kiwi TCMS instances
 crossed the 1000-events mark for the first time. Below is a short, by no means
