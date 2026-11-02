@@ -1,6 +1,6 @@
 Title: Who is using Kiwi TCMS in Oct 2026
 Headline: discover 23 organizations out of 250 total
-date: 2026-11-02 10:35
+date: 2026-11-02 14:15
 comments: false
 og_image: images/analytics/2026/banner+oct2026.png
 twitter_image: images/analytics/2026/banner+oct2026.png
