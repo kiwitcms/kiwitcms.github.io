@@ -96,6 +96,80 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/02/18/community-edition-explained/" rel="bookmark" title="Permalink to Community Edition Explained">
+                <h1 class="top-header">Community Edition Explained</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Wed 18 February 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p>This page explains what Kiwi TCMS <em>Community Edition</em> is,
+how it ships and what risks are associated with it.
+Please read about the details below.</p>
+<h2>What is Kiwi TCMS Community Edition</h2>
+<p>This is the official version of the Kiwi TCMS application as produced by
+our own team with the help of many contributors. It may also be
+referred to <em>upstream</em> or <em>the community edition</em> version and comes
+packaged as a container image which is publicly available and can be downloaded via the
+<code>docker pull pub.kiwitcms.eu/kiwitcms/kiwi</code> command!</p>
+<h2>Who is this for</h2>
+<p><em>Community Edition</em> is suitable for developers, teams and organizations which
+are happy to run Kiwi TCMS without any warranty and safeguards for development,
+testing and even production purposes!</p>
+<h2>What do you get</h2>
+<p>You get access the publicly available container image; public documentation
+and source code but not much else!</p>
+<h2>What do all of the individual items mean</h2>
+<p><strong>Upstream container image:</strong> Kiwi TCMS is packaged as a single
+<a href="/containers/">container image</a>. See
+<a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Running Kiwi TCMS as a container</a>
+to get started!</p>
+<p><strong>Only x86_64 build:</strong> the <em>community edition</em> container is built on Linux,
+suitable for Intel/AMD 64bit processors only.</p>
+<p><strong>Rolling release:</strong> the <em>community edition</em> container is always the <code>latest</code> version
+and is updated automatically after new changes are merged in the source code repository!
+There are no other versions available!</p>
+<p><strong>GPL-2.0+ license:</strong> Kiwi TCMS is an open source software, with very long history,
+with its primary core licensed under the GNU GPL-2.0+ license!</p>
+<p><strong>No warranty:</strong> the <em>community edition</em> version of Kiwi TCMS
+is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+<a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">GNU General Public License</a>
+for more details.</p>
+<p><strong>EthicalAds:</strong> the <em>community edition</em> version of Kiwi TCMS comes with built-in
+advertisement from <a href="https://www.ethicalads.io/">EthicalAds</a>.</p>
+<p><strong>You assume all risk:</strong> you must understand and accept that open source comes with associated risks.
+To name just a few: our team disappears and stops development;
+security issues stay unresolved; code slowly becomes outdated &amp; may incur technical debt in the case
+of one-off patches! All of these have
+<a href="/blog/tags/roadmap/">happened in the past</a> with the predecessor of what is now Kiwi TCMS.</p>
+<p>There is <strong>no charge</strong> but please understand that software isn't <em>zero cost</em>!
+You pay for it indirectly with time and effort invested in engineering, operations,
+maintenance and resolving any issues which may arise from the use of said software,
+regardless of whether it is open source or not!</p>
+<p>IMPORTANT: open source and Kiwi TCMS by extension, provide you with more options
+when it comes to mitigating risks and cost compared to proprietary software.
+However the easiest way to secure the future of Kiwi TCMS is to
+<a href="/#subscriptions">become a customer</a> and help us sustain development!</p>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/01/28/kiwi-tcms-153/" rel="bookmark" title="Permalink to Kiwi TCMS 15.3">
                 <h1 class="top-header">Kiwi TCMS 15.3</h1>
             </a>
@@ -2468,38 +2542,6 @@ and an awesome open source hacker;</li>
 </ul>
 </div>
 
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2024/12/11/major-outage-for-kiwi-tcms/" rel="bookmark" title="Permalink to Major outage for Kiwi TCMS">
-                <h1 class="top-header">Major outage for Kiwi TCMS</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Wed 11 December 2024
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Hello testers,
-in the spirit of transparency we'd like to inform everyone that
-on Dec 11th 2024 between 07:20-09:30 UTC Kiwi TCMS suffered a major outage!</p>
-<p>The Kiwi TCMS web application was up and running, however the database behind
-it had stopped accepting requests resulting in 500 Internal Server Error page visible
-to everyone. A little over 1000 requests (both manual and via API) were affected!</p>
-<p>As of this time service has been restored and our team is taking corrective actions.
-So far it doesn't look like that there was loss of historical data.</p>
-<hr>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!</p>
-<ul>
-<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-  and follow all project news;</li>
-<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
-<li><a href="/#subscriptions">Become a customer</a> and help us sustain development</li>
-</ul>
         </div>
     </article>
 
