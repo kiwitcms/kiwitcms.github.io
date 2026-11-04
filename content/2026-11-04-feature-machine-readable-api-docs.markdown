@@ -69,6 +69,10 @@ Because generation happens as part of the build, the files always
 describe the exact version that is running and they are always in sync with the current
 implementation. On a Kiwi TCMS v17.0 instance the command reports 133 methods.
 
+**IMPORTANT:** you should ask your agentic tool to refresh its definitions when new Kiwi
+TCMS versions are released. Otherwise it may create invalid calls and/or miss on new
+API methods!
+
 
 ## Method files and their examples
 
