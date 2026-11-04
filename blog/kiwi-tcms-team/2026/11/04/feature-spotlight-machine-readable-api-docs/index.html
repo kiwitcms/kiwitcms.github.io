@@ -178,6 +178,9 @@ iterates the registered API methods and combines three sources of information:</
 Because generation happens as part of the build, the files always
 describe the exact version that is running and they are always in sync with the current
 implementation. On a Kiwi TCMS v17.0 instance the command reports 133 methods.</p>
+<p><strong>IMPORTANT:</strong> you should ask your agentic tool to refresh its definitions when new Kiwi
+TCMS versions are released. Otherwise it may create invalid calls and/or miss on new
+API methods!</p>
 <h2>Method files and their examples</h2>
 <p>The per-method Markdown description is the most useful part when an AI model needs to call one
 specific operation. Parameters are listed with their required/optional status and,
@@ -296,7 +299,11 @@ last response looks like:</p>
 <span class="k">def</span> <span class="nf">rpc</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">_id</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">body</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="n">method</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="n">params</span> <span class="ow">or</span> <span class="p">[],</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">_id</span><span class="p">})</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
     <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">BASE</span> <span class="o">+</span> <span class="s2">&quot;/json-rpc/&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-                                 <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">})</span>
+                                 <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+                                     <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;Referer&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">@tcms.tenant.kiwitcms.org&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;OpenClaw/2026.11&quot;</span><span class="p">,</span>
+                                 <span class="p">})</span>
     <span class="k">with</span> <span class="n">OPENER</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">if</span> <span class="s2">&quot;error&quot;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
