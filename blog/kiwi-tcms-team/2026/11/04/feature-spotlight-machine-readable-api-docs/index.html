@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiwi TCMS - Feature spotlight: Machine-readable API docs</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="color-scheme" content="light">
+        <meta http-equiv="X-Frame-Options" content="deny">
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
+        <script>
+            if (top != window) {
+                top.location = window.location;
+            }
+        </script>
+    
+
+
+        <meta name="description" content="built for agents, readable by humans too" >
+
+        <meta name="author" content="Kiwi TCMS Team">
+
+        <meta name="tags" content="features" >
+        <meta name="twitter:site" content="@KiwiTCMS">
+        <meta name="twitter:title" content="Feature spotlight: Machine-readable API docs">
+            <meta name="twitter:description" content="built for agents, readable by humans too">
+        <meta name="twitter:card" content="summary_large_image">
+                <meta property="twitter:image" content="https://kiwitcms.org/images/features/api-help/banner.png">
+
+        <meta property="og:site_name" content="Kiwi TCMS">
+        <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://kiwitcms.org/blog/kiwi-tcms-team/" />
+        <meta property="og:url" content="https://kiwitcms.org/blog/kiwi-tcms-team/2026/11/04/feature-spotlight-machine-readable-api-docs/" />
+        <meta property="og:title" content="Feature spotlight: Machine-readable API docs" />
+        <meta property="article:published_time" content="2026-11-04 13:30:00+02:00">
+            <meta property="og:description" content="built for agents, readable by humans too">
+
+                <meta property="og:image" content="https://kiwitcms.org/images/features/api-help/banner.png">
+        <!-- Custom Styles -->
+        <link href="/theme/style/style.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1440.css" rel="stylesheet">
+        <link href="/theme/style/responsive-1024.css" rel="stylesheet">
+        <link href="/theme/style/responsive-768.css" rel="stylesheet">
+        <link href="/theme/style/responsive-micro.css" rel="stylesheet">
+        <link href="/theme/style/github.css" rel="stylesheet">
+
+        <script defer data-domain="kiwitcms.org" src="https://plausible.io/js/script.js"></script>
+
+        <script
+            id="fsc-api"
+            src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.5/fastspring-builder.min.js"
+            type="text/javascript"
+            data-storefront="mrsenko.onfastspring.com/popup-kiwitcms">
+        </script>
+    </head>
+    <body class="">
+
+        <nav id="main-nav">
+            <a href="/" style="display:inherit;">
+                <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+            </a>
+            <i class="las la-bars" title="Open menu" onclick="toggle('hidden-menu', 'visible')" style="align-self: center;"></i>
+            <ul class="hidden-menu" id="hidden-menu">
+                <a href="/">
+                    <img src="/theme/images/Kiwi-TCMS-logo-header.svg" alt="Kiwi TCMS Logo">
+                </a>
+                <i class="las la-times" title="Close" onclick="toggle('hidden-menu', 'visible')"></i>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>            </ul>
+
+            <ul>
+<li>
+    <a href="/features/" >Features</a>
+</li>
+<li>
+    <a href="http://kiwitcms.readthedocs.io"">Documentation</a>
+</li>
+<li>
+    <a href="/support/" >Support</a>
+</li>
+<li>
+    <a href="/blog/" class="active">Blog</a>
+</li>
+<li>
+    <a href="/team/" >Team</a>
+</li>                <li>
+                    <div class="drop-btn" id="nav-drop">
+                        <button type="button" class="btn" icon aria-expanded="false" onclick="toggleMenu('nav-drop', this)">Get Started <i></i></button>
+                        <!-- WARNING: this menu needs to be copied everywhere where we have this
+                            button b/c Pelican doesn't support includes from HTML content files:
+                            https://github.com/getpelican/pelican/issues/2783
+                        -->
+                        <div class="drop-cnt">
+                            <a href="https://public.tenant.kiwitcms.org">Try demo without install</a>
+                            <a href="/#subscriptions">Explore subscriptions</a>
+                            <a href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html">Run as Docker container</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- content -->
+        <main id="content">
+    <section id="blog-article">
+        <h1 class="top-header">Feature spotlight: Machine-readable API docs</h1>
+        <h2 class="top-subheader">built for agents, readable by humans too</h2>
+
+        <p class="post-meta">
+            Posted by
+                <a href="https://kiwitcms.org/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+            on Wed 04 November 2026
+                under
+                    <a href="https://kiwitcms.org/blog/tags/features/">features</a>
+        </p>
+
+        <article class="content">
+            <p><img alt="API help banner" src="/images/features/api-help/banner.png" title="API help banner"></p>
+<p>Kiwi TCMS has a rich API covering its entire data model. This API is exported via
+XML-RPC and JSON-RPC protocols. Until now API method reference lived in the
+<a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.rpc.api.html">official documentation</a> -
+a long list of method signatures meant to be read by a person, top to bottom.</p>
+<p>That works reasonably for a human developer however it is not optimal for a
+coding assistant: large language models and agentic
+tools need the API description as <em>context</em> - more structured, complete, example rich
+and small enough to fit into a prompt. Starting with <strong>Kiwi TCMS v17.0</strong> every instance ships a
+machine-readable description of the available API under <code>https://&lt;kiwitcms-host&gt;/static/api/</code>.</p>
+<h2>What's new</h2>
+<p>Four different descriptions of the same data, generated from the existing API registry:</p>
+<ul>
+<li><code>https://&lt;kiwitcms-host&gt;/static/api/llms.txt</code> - an index of every API method with a one-line summary and
+  a link to its detail page. This is the entry point for an agent: small, cheap to
+  load and enough to decide which method to look at;</li>
+<li><code>https://&lt;kiwitcms-host&gt;/static/api/llms-full.txt</code> - the full reference in a single plain-text file, for
+  when you want to paste the entire API into a context window;</li>
+<li><code>https://&lt;kiwitcms-host&gt;/static/api/methods/&lt;Method&gt;.md</code> - one Markdown file per method with parameters,
+  examples, allowed query keys and return value;</li>
+<li><code>https://&lt;kiwitcms-host&gt;/static/api/openapi.json</code> - an OpenAPI document describing every method as
+  an operation.</li>
+</ul>
+<p>The files are static assets, so they can be fetched with plain <code>curl</code> or handed to
+an HTTP client inside your tooling!</p>
+<p>One important detail: the paths in <code>openapi.json</code> identify <strong>individual JSON-RPC
+methods</strong>, they are not REST routes. Every operation is still a <code>POST</code> to
+<code>/json-rpc/</code> with a JSON-RPC envelope, and authentication is still done via
+<code>Auth.login</code>, which sets a session cookie. The OpenAPI document exists so that
+agents and API tooling can discover the available operations; it does not turn the
+API into REST.</p>
+<h2>How the documentation is built</h2>
+<p>All of these files are built automatically by the command</p>
+<div class="highlight"><pre><span></span><code>manage.py generate_rpc_schema
+</code></pre></div>
+
+<p>which runs at build time and writes to <code>STATIC_ROOT/api</code> by default. The command
+iterates the registered API methods and combines three sources of information:</p>
+<ul>
+<li>the Python type annotations on each method, including the <code>ModelQuery</code> and
+  <code>FormValues</code> annotations which tell the generator that an argument is a set of
+  database field lookups or a form-validated payload;</li>
+<li>Database model and form metadata, which is where field types, choices, relations
+  and lookup names come from;</li>
+<li>the method doc-strings, parsed into a summary, parameter descriptions and return
+  values.</li>
+</ul>
+<p>The result is converted into JSON Schema fragments, then rendered into the formats above.
+Because generation happens as part of the build, the files always
+describe the exact version that is running and they are always in sync with the current
+implementation. On a Kiwi TCMS v17.0 instance the command reports 133 methods.</p>
+<h2>Method files and their examples</h2>
+<p>The per-method Markdown description is the most useful part when an AI model needs to call one
+specific operation. Parameters are listed with their required/optional status and,
+where applicable, with <strong>examples</strong>. For example, <code>TestPlan.filter</code> is documented
+with these example queries:</p>
+<div class="highlight"><pre><span></span><code>Examples:
+    <span class="sb">`{}`</span>,
+    <span class="sb">`{&quot;name__icontains&quot;: &quot;...&quot;}`</span>,
+    <span class="sb">`{&quot;name__in&quot;: [&quot;...&quot;, &quot;...&quot;]}`</span>,
+    <span class="sb">`{&quot;id__in&quot;: [1, 2, 3]}`</span>,
+    <span class="sb">`{&quot;id__range&quot;: [1, 10]}`</span>,
+    <span class="sb">`{&quot;is_active&quot;: true}`</span>,
+    <span class="sb">`{&quot;is_active__isnull&quot;: false}`</span>,
+    <span class="sb">`{&quot;create_date__gte&quot;: &quot;2026-01-01T00:00:00&quot;}`</span>,
+    <span class="sb">`{&quot;create_date__year&quot;: 2026}`</span>,
+    <span class="sb">`{&quot;parent__name&quot;: &quot;...&quot;}`</span>,
+    <span class="sb">`{&quot;parent__name__icontains&quot;: &quot;...&quot;}`</span>
+</code></pre></div>
+
+<p>These examples are not decorative. They are generated from the field types present
+on the model and then validated against the internal <code>inspect_rpc_args()</code> function,
+i.e. a model can copy one of them into a request without getting an argument-validation error.
+The same file also lists the allowed query keys for the method and the relations that can be
+traversed:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Allowed</span><span class="w"> </span><span class="k">query</span><span class="w"> </span><span class="k">keys</span><span class="o">:</span>
+<span class="w">    </span><span class="n n-Quoted">`create_date__gte`</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`id__in`</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`is_active__isnull`</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`name__icontains`</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`parent`</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`product`</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`product_version`</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`text__contains`</span><span class="p">,</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="n">Relations</span><span class="o">:</span>
+<span class="w">    </span><span class="n n-Quoted">`author`</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">auth</span><span class="p">.</span><span class="k">User</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`parent`</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">testplans</span><span class="p">.</span><span class="n">TestPlan</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`product`</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">management</span><span class="p">.</span><span class="n">Product</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`product_version`</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">management</span><span class="p">.</span><span class="n">Version</span><span class="p">,</span>
+<span class="w">    </span><span class="n n-Quoted">`type`</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">testplans</span><span class="p">.</span><span class="n">PlanType</span>
+</code></pre></div>
+
+<p>Query arguments use the internal ORM lookup syntax - <code>&lt;field&gt;__&lt;lookup&gt;</code> or
+<code>&lt;relation&gt;__&lt;field&gt;__&lt;lookup&gt;</code> - so <code>__in</code> takes an array, <code>__isnull</code> a boolean and
+<code>__range</code> a two-element array. This is the part that tends to be guessed wrong by
+code generators, which is exactly why it is spelled out per method.</p>
+<h2>What is it useful for</h2>
+<p>The obvious use case is giving an agent enough context to write a working
+integration without a human translating the docs first. Here are some straightforward examples:</p>
+<ul>
+<li><strong>Importing existing test cases</strong> from another test management system or data dump file(s) -
+  <code>TestCase.create</code> plus <code>TestPlan.add_case</code>;</li>
+<li><strong>Ingesting automated test results</strong> from a CI job - parse the logs and create a test run with
+  <code>TestRun.create</code>, add cases, then report each result with
+  <code>TestExecution.create</code> / <code>TestExecution.update</code>;</li>
+<li><strong>Writing your own test runner plugin</strong> - the plugin needs to create runs and
+  report statuses, and can be developed against <code>llms.txt</code> and the method files;</li>
+<li><strong>Producing reports</strong> - <code>TestPlan.filter</code>, <code>TestRun.filter</code> and
+  <code>TestExecution.filter</code> methods accept powerful lookups without the rigidity
+  of a fixed UI. Extracting data for a custom dashboard, or even inside an AI chat prompt
+  is going to be much more easier.</li>
+</ul>
+<p>Because the files are plain text, they are equally useful to people, should you choose to read them:
+<code>llms.txt</code> reads as a table of contents for the API, and a per-method Markdown files answers
+the question "what arguments does this take, and what does a valid call look like"!</p>
+<h2>Example session</h2>
+<p>The following is an example session from MyClaw.ai with the <em>DeepSeek V4.1 Flash</em> model:</p>
+<p>Prompt:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;</span><span class="w"> </span><span class="k">open</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">entering</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">secrets</span><span class="w"> </span><span class="n">called</span><span class="w"> </span><span class="n n-Quoted">`KIWITCMS_API_USERNAME`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`KIWITCMS_API_PASSWORD`</span>
+</code></pre></div>
+
+<p><img alt="response: secrets stored" src="/images/features/api-help/step_03_response_secrets_stored.png" title="response: secrets stored"></p>
+<p>Note that you may also specify <code>Allowed hosts</code> for these secrets. In fact the agent was able to figure this
+out and adjust by itself as seen after the first response when it needed to actually call the API.</p>
+<p>Prompt:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt; Ingest Kiwi TCMS API description: https://tcms.tenant.kiwitcms.org/static/api/llms.txt and https://tcms.tenant.kiwitcms.org/static/api/openapi.json
+</code></pre></div>
+
+<p><img alt="response: api docs ingested" src="/images/features/api-help/step_04_response_ingested_api_docs.png" title="response: api docs ingested"></p>
+<p>Prompt:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt; tell me which products don&#39;t have any tests associated with them
+</code></pre></div>
+
+<p><img alt="response: products without tests" src="/images/features/api-help/step_05_response_products.png" title="response: products without tests"></p>
+<p>which can be cross referenced by looking at the <code>Search Test Plans</code> page
+<img alt="Kiwi TCMS: Search Test Plans page" src="/images/features/api-help/step_05_search_testplans.png" title="Kiwi TCMS: Search Test Plans page"></p>
+<p>Indeed there are only 3 products for which we have Test Plans and therefore test. Notice how the AI agent
+actually attempted a slightly broader definition of that it means to "not have tests"!</p>
+<p>Prompt:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;</span><span class="w"> </span><span class="k">Show</span><span class="w"> </span><span class="nv">me</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">top</span><span class="o">-</span><span class="mi">10</span><span class="w"> </span><span class="nv">most</span><span class="w"> </span><span class="nv">frequently</span><span class="w"> </span><span class="nv">failing</span><span class="w"> </span><span class="nv">test</span><span class="w"> </span><span class="nv">cases</span>
+</code></pre></div>
+
+<p><img alt="response: failing test cases" src="/images/features/api-help/step_06_response_testcases.png" title="response: failing test cases"></p>
+<p>which is the meaning behind the existing <code>TestCase health</code> Telemetry page:
+<img alt="Kiwi TCMS: TestCase health Telemetry page" src="/images/features/api-help/step_06_testcase_health_telemetry.png" title="Kiwi TCMS: TestCase health Telemetry page"></p>
+<p>Notice again that the agent is trying to give you a broader response compared to what the actual
+Telemetry page shows! You may need to refine your prompt if that's what you want!</p>
+<p>Underneath all of these examples the agent created several independent programs.
+In this case it selected Python, most likely because its own environment was
+already setup for Kiwi TCMS development! Here's how the program which produced the
+last response looks like:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ssl</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">http.cookiejar</span>
+
+<span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;https://tcms.tenant.kiwitcms.org&quot;</span>
+<span class="n">CTX</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span>
+<span class="n">JAR</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">cookiejar</span><span class="o">.</span><span class="n">CookieJar</span><span class="p">()</span>
+<span class="n">OPENER</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">(</span><span class="n">JAR</span><span class="p">),</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">HTTPSHandler</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">CTX</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">rpc</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">_id</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="n">method</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="n">params</span> <span class="ow">or</span> <span class="p">[],</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">_id</span><span class="p">})</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">BASE</span> <span class="o">+</span> <span class="s2">&quot;/json-rpc/&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+                                 <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">})</span>
+    <span class="k">with</span> <span class="n">OPENER</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;error&quot;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">]</span>
+
+<span class="n">rpc</span><span class="p">(</span><span class="s2">&quot;Auth.login&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;KIWITCMS_API_USERNAME&quot;</span><span class="p">],</span>
+                   <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;KIWITCMS_API_PASSWORD&quot;</span><span class="p">]])</span>
+
+<span class="n">statuses</span> <span class="o">=</span> <span class="n">rpc</span><span class="p">(</span><span class="s2">&quot;TestExecutionStatus.filter&quot;</span><span class="p">,</span> <span class="p">[{}])</span>
+<span class="n">execs</span> <span class="o">=</span> <span class="n">rpc</span><span class="p">(</span><span class="s2">&quot;TestExecution.filter&quot;</span><span class="p">,</span> <span class="p">[{}])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;statuses:&quot;</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">({</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statuses</span><span class="p">}))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;executions:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">execs</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">execs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;execution fields:&quot;</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">execs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+
+<span class="n">failing</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;failed&quot;</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">}</span>
+<span class="n">agg</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">execs</span><span class="p">:</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s2">&quot;case&quot;</span><span class="p">],</span> <span class="n">e</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;case__summary&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="sa">f</span><span class="s1">&#39;case </span><span class="si">{</span><span class="n">e</span><span class="p">[</span><span class="s2">&quot;case&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">agg</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;fail&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;statuses&quot;</span><span class="p">:</span> <span class="p">{}})</span>
+    <span class="n">a</span><span class="p">[</span><span class="s2">&quot;total&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status__name&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">a</span><span class="p">[</span><span class="s2">&quot;statuses&quot;</span><span class="p">][</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;statuses&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status__name&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">failing</span><span class="p">:</span>
+        <span class="n">a</span><span class="p">[</span><span class="s2">&quot;fail&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">rows</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">agg</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">kv</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="n">kv</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;fail&quot;</span><span class="p">],</span> <span class="n">kv</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- top failing test cases ---&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">cid</span><span class="p">,</span> <span class="n">summary</span><span class="p">),</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">[:</span><span class="mi">10</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;fail&quot;</span><span class="p">]</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;total&quot;</span><span class="p">]</span><span class="si">}</span><span class="se">\t</span><span class="s1">TC-</span><span class="si">{</span><span class="n">cid</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">summary</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;statuses&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+<li><a href="/partners/">Become a reseller</a> and help us serve your community</li>
+</ul>
+        </article>
+    </section>
+
+    <section class="after-content">
+        <!-- Social Sharing Buttons -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8aeaec2954eb1b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+    </section>
+
+    <section class="after-content">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://kiwitcms.org/blog/kiwi-tcms-team/2026/11/04/feature-spotlight-machine-readable-api-docs/';
+                this.page.identifier = 'blog/kiwi-tcms-team/2026/11/04/feature-spotlight-machine-readable-api-docs/';
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://kiwitcms.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+    </section>
+        </main>
+
+        <footer>
+            <img src="/theme/images/Kiwi-TCMS-logo-footer.svg" alt="">
+            <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=7386a67a-a689-40df-a268-b03ada69e169" alt="">
+            <div class="legal">
+                <p>Except where otherwise noted, content on this site is licensed under a
+                    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a>
+                </p>
+                <p>
+                    <a href="/legal/">Legal</a> |
+                    <a href="/privacy/">Privacy</a> |
+                    <a href="/terms/">Terms</a> |
+                    <a href="/partners/">Partners</a>
+                </p>
+            </div>
+            <div class="footer-block fl-gh">
+                <i></i>
+                <h2>Contribute</h2>
+                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block fl-tw">
+                <i></i>
+                <h2>Follow</h2>
+                <a href="https://www.linkedin.com/company/kiwi-tcms">@KiwiTCMS</a>
+            </div>
+            <div class="footer-block fl-yt">
+                <i></i>
+                <h2>Watch</h2>
+                <a href="https://www.youtube.com/channel/UCC0KsZRFkF8nhPnES8G-KYw/videos">Kiwi TCMS</a>
+            </div>
+            <div class="footer-block fl-fb">
+                <i></i>
+                <h2>Join</h2>
+                <a href="https://facebook.com/kiwitcms">/kiwitcms</a>
+            </div>
+
+            <div class="footer-block mail">
+                <i></i>
+                <h2>Join our newsletter.</h2>
+                <p>Project news only, GDPR compliant.</p>
+                <a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581" class="btn ghost-btn">Sign me up</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="/theme/scripts/toggle.js"></script>
+
+
+    </body>
+</html>

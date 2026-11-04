@@ -1,5 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-11-03T21:30:00+02:00</updated><entry><title>Kiwi TCMS 17.0</title><link href="/blog/kiwi-tcms-team/2026/11/03/kiwi-tcms-170/" rel="alternate"/><published>2026-11-03T21:30:00+02:00</published><updated>2026-11-03T21:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-03:/blog/kiwi-tcms-team/2026/11/03/kiwi-tcms-170/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 17.0!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS - misc</title><link href="/" rel="alternate"/><link href="/feeds/misc.atom.xml" rel="self"/><id>/</id><updated>2026-11-04T13:30:00+02:00</updated><entry><title>Feature spotlight: Machine-readable API docs</title><link href="/blog/kiwi-tcms-team/2026/11/04/feature-spotlight-machine-readable-api-docs/" rel="alternate"/><published>2026-11-04T13:30:00+02:00</published><updated>2026-11-04T13:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-04:/blog/kiwi-tcms-team/2026/11/04/feature-spotlight-machine-readable-api-docs/</id><summary type="html">&lt;p&gt;&lt;img alt="API help banner" src="/images/features/api-help/banner.png" title="API help banner"&gt;&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS has a rich API covering its entire data model. This API is exported via
+XML-RPC and JSON-RPC protocols. Until now API method reference lived in the
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.rpc.api.html"&gt;official documentation&lt;/a&gt; -
+a long list of method signatures meant to be read by a person, top to bottom.&lt;/p&gt;
+&lt;p&gt;That works reasonably for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="API help banner" src="/images/features/api-help/banner.png" title="API help banner"&gt;&lt;/p&gt;
+&lt;p&gt;Kiwi TCMS has a rich API covering its entire data model. This API is exported via
+XML-RPC and JSON-RPC protocols. Until now API method reference lived in the
+&lt;a href="https://kiwitcms.readthedocs.io/en/latest/modules/tcms.rpc.api.html"&gt;official documentation&lt;/a&gt; -
+a long list of method signatures meant to be read by a person, top to bottom.&lt;/p&gt;
+&lt;p&gt;That works reasonably for a human developer however it is not optimal for a
+coding assistant: large language models and agentic
+tools need the API description as &lt;em&gt;context&lt;/em&gt; - more structured, complete, example rich
+and small enough to fit into a prompt. Starting with &lt;strong&gt;Kiwi TCMS v17.0&lt;/strong&gt; every instance ships a
+machine-readable description of the available API under &lt;code&gt;https://&amp;lt;kiwitcms-host&amp;gt;/static/api/&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;What's new&lt;/h2&gt;
+&lt;p&gt;Four different descriptions of the same data, generated from the existing API registry:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://&amp;lt;kiwitcms-host&amp;gt;/static/api/llms.txt&lt;/code&gt; - an index of every API method with a one-line summary and
+  a link to its detail page. This is the entry point for an agent: small, cheap to
+  load and enough to decide which method to look at;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://&amp;lt;kiwitcms-host&amp;gt;/static/api/llms-full.txt&lt;/code&gt; - the full reference in a single plain-text file, for
+  when you want to paste the entire API into a context window;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://&amp;lt;kiwitcms-host&amp;gt;/static/api/methods/&amp;lt;Method&amp;gt;.md&lt;/code&gt; - one Markdown file per method with parameters,
+  examples, allowed query keys and return value;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://&amp;lt;kiwitcms-host&amp;gt;/static/api/openapi.json&lt;/code&gt; - an OpenAPI document describing every method as
+  an operation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The files are static assets, so they can be fetched with plain &lt;code&gt;curl&lt;/code&gt; or handed to
+an HTTP client inside your tooling!&lt;/p&gt;
+&lt;p&gt;One important detail: the paths in &lt;code&gt;openapi.json&lt;/code&gt; identify &lt;strong&gt;individual JSON-RPC
+methods&lt;/strong&gt;, they are not REST routes. Every operation is still a &lt;code&gt;POST&lt;/code&gt; to
+&lt;code&gt;/json-rpc/&lt;/code&gt; with a JSON-RPC envelope, and authentication is still done via
+&lt;code&gt;Auth.login&lt;/code&gt;, which sets a session cookie. The OpenAPI document exists so that
+agents and API tooling can discover the available operations; it does not turn the
+API into REST.&lt;/p&gt;
+&lt;h2&gt;How the documentation is built&lt;/h2&gt;
+&lt;p&gt;All of these files are built automatically by the command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;manage.py generate_rpc_schema
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;which runs at build time and writes to &lt;code&gt;STATIC_ROOT/api&lt;/code&gt; by default. The command
+iterates the registered API methods and combines three sources of information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the Python type annotations on each method, including the &lt;code&gt;ModelQuery&lt;/code&gt; and
+  &lt;code&gt;FormValues&lt;/code&gt; annotations which tell the generator that an argument is a set of
+  database field lookups or a form-validated payload;&lt;/li&gt;
+&lt;li&gt;Database model and form metadata, which is where field types, choices, relations
+  and lookup names come from;&lt;/li&gt;
+&lt;li&gt;the method doc-strings, parsed into a summary, parameter descriptions and return
+  values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The result is converted into JSON Schema fragments, then rendered into the formats above.
+Because generation happens as part of the build, the files always
+describe the exact version that is running and they are always in sync with the current
+implementation. On a Kiwi TCMS v17.0 instance the command reports 133 methods.&lt;/p&gt;
+&lt;h2&gt;Method files and their examples&lt;/h2&gt;
+&lt;p&gt;The per-method Markdown description is the most useful part when an AI model needs to call one
+specific operation. Parameters are listed with their required/optional status and,
+where applicable, with &lt;strong&gt;examples&lt;/strong&gt;. For example, &lt;code&gt;TestPlan.filter&lt;/code&gt; is documented
+with these example queries:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Examples:
+    &lt;span class="sb"&gt;`{}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;name__icontains&amp;quot;: &amp;quot;...&amp;quot;}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;name__in&amp;quot;: [&amp;quot;...&amp;quot;, &amp;quot;...&amp;quot;]}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;id__in&amp;quot;: [1, 2, 3]}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;id__range&amp;quot;: [1, 10]}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;is_active&amp;quot;: true}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;is_active__isnull&amp;quot;: false}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;create_date__gte&amp;quot;: &amp;quot;2026-01-01T00:00:00&amp;quot;}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;create_date__year&amp;quot;: 2026}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;parent__name&amp;quot;: &amp;quot;...&amp;quot;}`&lt;/span&gt;,
+    &lt;span class="sb"&gt;`{&amp;quot;parent__name__icontains&amp;quot;: &amp;quot;...&amp;quot;}`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;These examples are not decorative. They are generated from the field types present
+on the model and then validated against the internal &lt;code&gt;inspect_rpc_args()&lt;/code&gt; function,
+i.e. a model can copy one of them into a request without getting an argument-validation error.
+The same file also lists the allowed query keys for the method and the relations that can be
+traversed:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Allowed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;query&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;keys&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`create_date__gte`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`id__in`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`is_active__isnull`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`name__icontains`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`parent`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`product`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`product_version`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`text__contains`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Relations&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`author`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;auth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;User&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`parent`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;testplans&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TestPlan&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`product`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;management&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Product&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`product_version`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;management&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Version&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`type`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;testplans&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PlanType&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Query arguments use the internal ORM lookup syntax - &lt;code&gt;&amp;lt;field&amp;gt;__&amp;lt;lookup&amp;gt;&lt;/code&gt; or
+&lt;code&gt;&amp;lt;relation&amp;gt;__&amp;lt;field&amp;gt;__&amp;lt;lookup&amp;gt;&lt;/code&gt; - so &lt;code&gt;__in&lt;/code&gt; takes an array, &lt;code&gt;__isnull&lt;/code&gt; a boolean and
+&lt;code&gt;__range&lt;/code&gt; a two-element array. This is the part that tends to be guessed wrong by
+code generators, which is exactly why it is spelled out per method.&lt;/p&gt;
+&lt;h2&gt;What is it useful for&lt;/h2&gt;
+&lt;p&gt;The obvious use case is giving an agent enough context to write a working
+integration without a human translating the docs first. Here are some straightforward examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Importing existing test cases&lt;/strong&gt; from another test management system or data dump file(s) -
+  &lt;code&gt;TestCase.create&lt;/code&gt; plus &lt;code&gt;TestPlan.add_case&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ingesting automated test results&lt;/strong&gt; from a CI job - parse the logs and create a test run with
+  &lt;code&gt;TestRun.create&lt;/code&gt;, add cases, then report each result with
+  &lt;code&gt;TestExecution.create&lt;/code&gt; / &lt;code&gt;TestExecution.update&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Writing your own test runner plugin&lt;/strong&gt; - the plugin needs to create runs and
+  report statuses, and can be developed against &lt;code&gt;llms.txt&lt;/code&gt; and the method files;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Producing reports&lt;/strong&gt; - &lt;code&gt;TestPlan.filter&lt;/code&gt;, &lt;code&gt;TestRun.filter&lt;/code&gt; and
+  &lt;code&gt;TestExecution.filter&lt;/code&gt; methods accept powerful lookups without the rigidity
+  of a fixed UI. Extracting data for a custom dashboard, or even inside an AI chat prompt
+  is going to be much more easier.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Because the files are plain text, they are equally useful to people, should you choose to read them:
+&lt;code&gt;llms.txt&lt;/code&gt; reads as a table of contents for the API, and a per-method Markdown files answers
+the question "what arguments does this take, and what does a valid call look like"!&lt;/p&gt;
+&lt;h2&gt;Example session&lt;/h2&gt;
+&lt;p&gt;The following is an example session from MyClaw.ai with the &lt;em&gt;DeepSeek V4.1 Flash&lt;/em&gt; model:&lt;/p&gt;
+&lt;p&gt;Prompt:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;open&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;entering&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;secrets&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;called&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`KIWITCMS_API_USERNAME`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`KIWITCMS_API_PASSWORD`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="response: secrets stored" src="/images/features/api-help/step_03_response_secrets_stored.png" title="response: secrets stored"&gt;&lt;/p&gt;
+&lt;p&gt;Note that you may also specify &lt;code&gt;Allowed hosts&lt;/code&gt; for these secrets. In fact the agent was able to figure this
+out and adjust by itself as seen after the first response when it needed to actually call the API.&lt;/p&gt;
+&lt;p&gt;Prompt:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt; Ingest Kiwi TCMS API description: https://tcms.tenant.kiwitcms.org/static/api/llms.txt and https://tcms.tenant.kiwitcms.org/static/api/openapi.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="response: api docs ingested" src="/images/features/api-help/step_04_response_ingested_api_docs.png" title="response: api docs ingested"&gt;&lt;/p&gt;
+&lt;p&gt;Prompt:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt; tell me which products don&amp;#39;t have any tests associated with them
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="response: products without tests" src="/images/features/api-help/step_05_response_products.png" title="response: products without tests"&gt;&lt;/p&gt;
+&lt;p&gt;which can be cross referenced by looking at the &lt;code&gt;Search Test Plans&lt;/code&gt; page
+&lt;img alt="Kiwi TCMS: Search Test Plans page" src="/images/features/api-help/step_05_search_testplans.png" title="Kiwi TCMS: Search Test Plans page"&gt;&lt;/p&gt;
+&lt;p&gt;Indeed there are only 3 products for which we have Test Plans and therefore test. Notice how the AI agent
+actually attempted a slightly broader definition of that it means to "not have tests"!&lt;/p&gt;
+&lt;p&gt;Prompt:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Show&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;me&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;top&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;most&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;frequently&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;failing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;cases&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="response: failing test cases" src="/images/features/api-help/step_06_response_testcases.png" title="response: failing test cases"&gt;&lt;/p&gt;
+&lt;p&gt;which is the meaning behind the existing &lt;code&gt;TestCase health&lt;/code&gt; Telemetry page:
+&lt;img alt="Kiwi TCMS: TestCase health Telemetry page" src="/images/features/api-help/step_06_testcase_health_telemetry.png" title="Kiwi TCMS: TestCase health Telemetry page"&gt;&lt;/p&gt;
+&lt;p&gt;Notice again that the agent is trying to give you a broader response compared to what the actual
+Telemetry page shows! You may need to refine your prompt if that's what you want!&lt;/p&gt;
+&lt;p&gt;Underneath all of these examples the agent created several independent programs.
+In this case it selected Python, most likely because its own environment was
+already setup for Kiwi TCMS development! Here's how the program which produced the
+last response looks like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;ssl&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;http.cookiejar&lt;/span&gt;
+
+&lt;span class="n"&gt;BASE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;https://tcms.tenant.kiwitcms.org&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;CTX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_default_context&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;JAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cookiejar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CookieJar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;OPENER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;build_opener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HTTPCookieProcessor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;JAR&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HTTPSHandler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CTX&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;rpc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dumps&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;jsonrpc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;2.0&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;method&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;params&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;params&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;_id&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;req&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BASE&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/json-rpc/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                                 &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;application/json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;OPENER&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;120&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;error&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;RuntimeError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;result&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;rpc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Auth.login&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;KIWITCMS_API_USERNAME&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                   &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;KIWITCMS_API_PASSWORD&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
+
+&lt;span class="n"&gt;statuses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rpc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TestExecutionStatus.filter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[{}])&lt;/span&gt;
+&lt;span class="n"&gt;execs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rpc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TestExecution.filter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[{}])&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;statuses:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;statuses&lt;/span&gt;&lt;span class="p"&gt;}))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;executions:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;execs&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;execs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;execution fields:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;execs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+
+&lt;span class="n"&gt;failing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;failed&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;error&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;agg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;execs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;case&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;case__summary&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;case &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;case&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;agg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setdefault&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fail&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;total&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;statuses&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{}})&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;total&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;status__name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;statuses&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;statuses&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;status__name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;failing&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fail&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;rows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;agg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;kv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;kv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fail&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;kv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--- top failing test cases ---&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cid&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fail&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;total&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s1"&gt;TC-&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;cid&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;summary&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;statuses&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Happy Testing!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+  and follow all project news;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;li&gt;&lt;a href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"/><category term="features"/></entry><entry><title>Kiwi TCMS 17.0</title><link href="/blog/kiwi-tcms-team/2026/11/03/kiwi-tcms-170/" rel="alternate"/><published>2026-11-03T21:30:00+02:00</published><updated>2026-11-03T21:30:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-03:/blog/kiwi-tcms-team/2026/11/03/kiwi-tcms-170/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 17.0!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is a major version release which includes security related updates,
 new Python runtime, several improvements and API changes.&lt;/p&gt;
@@ -10272,146 +10491,4 @@ please help us!&lt;/p&gt;
   and follow all project news;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/><category term="events"/></entry><entry><title>Kiwi TCMS 10.3</title><link href="/blog/kiwi-tcms-team/2021/08/11/kiwi-tcms-103/" rel="alternate"/><published>2021-08-11T16:05:00+03:00</published><updated>2021-08-11T16:05:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-08-11:/blog/kiwi-tcms-team/2021/08/11/kiwi-tcms-103/</id><summary type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.3!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which includes several improvements,
-bug fixes, internal refactoring and updated translations.
-It is the twelveth release to include contributions via our
-&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;We're happy to announce Kiwi TCMS version 10.3!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; this is a small release which includes several improvements,
-bug fixes, internal refactoring and updated translations.
-It is the twelveth release to include contributions via our
-&lt;a class="reference external" href="/blog/tags/bounty-program/"&gt;open source bounty program&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;You can explore everything at
-&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Supported upgrade paths:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-5.3   (or older) -&amp;gt; 5.3.1
-5.3.1 (or newer) -&amp;gt; 6.0.1
-6.0.1            -&amp;gt; 6.1
-6.1              -&amp;gt; 6.1.1
-6.1.1            -&amp;gt; 6.2 (or newer)
-&lt;/pre&gt;
-&lt;p&gt;Container images:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  bd28c4b064f5    579 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
-&lt;/pre&gt;
-&lt;div class="section" id="changes-since-kiwi-tcms-10-2"&gt;
-&lt;h2&gt;Changes since Kiwi TCMS 10.2&lt;/h2&gt;
-&lt;div class="section" id="improvements"&gt;
-&lt;h3&gt;Improvements&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update bleach from 3.3.0 to 4.0.0&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update django from 3.2.5 to 3.2.6&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update django-colorfield from 0.4.1 to 0.4.2&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update django-tree-queries from 0.5.2 to 0.6.0&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update python-bugzilla from 3.0.2 to 3.1.0&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update python-gitlab from 2.9.0 to 2.10.0&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Update node_modules/html5sortable from 0.13.2 to 0.13.3&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Docker image is now based on Red Hat's Universal Base Image instead of
-CentOS 8. See &lt;a class="reference external" href="https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image"&gt;https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image&lt;/a&gt; and
-&lt;a class="reference external" href="https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8"&gt;https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The &lt;tt class="docutils literal"&gt;mysql&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;psql&lt;/tt&gt; binaries in the container image are not available anymore!
-Backup and restore instructions have been updated accordingly, see
-&lt;a class="reference external" href="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Use &lt;tt class="docutils literal"&gt;initial_setup&lt;/tt&gt; command to create public tenant in case we're running a multi-tenant
-instance. References
-&lt;a class="reference external" href="https://github.com/kiwitcms/enterprise/issues/88"&gt;Enterprise #88&lt;/a&gt; (Ivajlo Karabojkov)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Document that for Jira integration we use API tokens&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bug-fixes"&gt;
-&lt;h3&gt;Bug fixes&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Fix a bug where drop-down selectors for test plans would not show any values when
-product is changed. Fixes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2467"&gt;Issue #2467&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="refactoring-and-testing"&gt;
-&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Add tests for missing coverage in &lt;tt class="docutils literal"&gt;kiwi_auth.admin&lt;/tt&gt;. References
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1607"&gt;Issue #1607&lt;/a&gt;
-(Mariyan Garvanski)&lt;/li&gt;
-&lt;li&gt;Fix some eslint issues and formatting in &lt;tt class="docutils literal"&gt;testcases/js/get.js&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;Use shorter URL when cloning test cases from TP page. References
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1054"&gt;Issue #1054&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Limit URI size to 10KiB. This alone should allow for more than 1000 PKs
-specified for cloning. In addition Django itself limits the maximum number of
-GET/POST fields to 1000 via the &lt;tt class="docutils literal"&gt;DATA_UPLOAD_MAX_NUMBER_FIELDS&lt;/tt&gt; setting,
-see &lt;a class="reference external" href="https://docs.djangoproject.com/en/3.2/ref/settings/#data-upload-max-number-fields"&gt;https://docs.djangoproject.com/en/3.2/ref/settings/#data-upload-max-number-fields&lt;/a&gt;.
-Closes
-&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1054"&gt;Issue #1054&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="translations"&gt;
-&lt;h3&gt;Translations&lt;/h3&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-CN#"&gt;Chinese Simplified translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/de#"&gt;German translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/hu#"&gt;Hungarian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/pt-BR#"&gt;Portuguese, Brazilian translation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updated &lt;a class="reference external" href="https://crowdin.com/project/kiwitcms/sl#"&gt;Slovenian translation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kiwi-tcms-enterprise-v10-3-mt"&gt;
-&lt;h2&gt;Kiwi TCMS Enterprise v10.3-mt&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Based on Kiwi TCMS v10.3&lt;/li&gt;
-&lt;li&gt;Container image based on Red Hat Universal Base Image&lt;/li&gt;
-&lt;li&gt;Update django-ses from 2.1.1 to 2.2.1&lt;/li&gt;
-&lt;li&gt;Update python3-saml from 1.10.1 to 1.11.0&lt;/li&gt;
-&lt;li&gt;Add GitLab login icon&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; Kiwi TCMS Enterprise container images are available only to subscribers!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how-to-upgrade"&gt;
-&lt;h2&gt;How to upgrade&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/"&gt;Backup&lt;/a&gt; first!
-If you are using Kiwi TCMS as a container then:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-cd path/containing/docker-compose/
-docker-compose down
-docker-compose pull
-docker-compose up -d
-docker exec -it kiwi_web /Kiwi/manage.py migrate
-&lt;/pre&gt;
-&lt;p&gt;Refer to
-&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading"&gt;our documentation&lt;/a&gt;
-for more details!&lt;/p&gt;
-&lt;p&gt;Happy testing!&lt;/p&gt;
-&lt;p&gt;---&lt;/p&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt;
-and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry></feed>
+&lt;/ul&gt;</content><category term="misc"/><category term="community"/><category term="events"/></entry></feed>
