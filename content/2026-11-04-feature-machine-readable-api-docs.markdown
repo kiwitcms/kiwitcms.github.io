@@ -219,7 +219,11 @@ OPENER = urllib.request.build_opener(
 def rpc(method, params=None, _id=1):
     body = json.dumps({"jsonrpc": "2.0", "method": method, "params": params or [], "id": _id}).encode()
     req = urllib.request.Request(BASE + "/json-rpc/", data=body,
-                                 headers={"Content-Type": "application/json"})
+                                 headers={
+                                     "Content-Type": "application/json",
+                                     "Referer": f"{method}@tcms.tenant.kiwitcms.org",
+                                     "User-Agent": "OpenClaw/2026.11",
+                                 })
     with OPENER.open(req, timeout=120) as resp:
         data = json.load(resp)
     if "error" in data:
