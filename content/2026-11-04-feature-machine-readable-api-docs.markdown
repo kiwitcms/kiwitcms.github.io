@@ -225,7 +225,7 @@ def rpc(method, params=None, _id=1):
     req = urllib.request.Request(BASE + "/json-rpc/", data=body,
                                  headers={
                                      "Content-Type": "application/json",
-                                     "Referer": f"{method}@tcms.tenant.kiwitcms.org",
+                                     "Referer": f"{method}@{BASE}",
                                      "User-Agent": "OpenClaw/2026.11",
                                  })
     with OPENER.open(req, timeout=120) as resp:
