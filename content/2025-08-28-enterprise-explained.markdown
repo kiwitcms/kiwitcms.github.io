@@ -96,7 +96,7 @@ Some examples include:
 - Amazon SES integration
 - Various storage backends
 - Additional integration with less popular bug-tracking systems
-- Model Context Protocol server
+- [Model Context Protocol server]({filename}2026-11-05-feature-model-context-protocol.markdown)
 
 This list changes over time however we are fully committed to everything being open source!
 
