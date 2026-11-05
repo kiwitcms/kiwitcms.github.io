@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="title desc">
+<title id="title">Model Context Protocol</title>
+<desc id="desc">AI agents talking natively to a Kiwi TCMS instance over the Model Context Protocol</desc>
+
+<rect x="0" y="0" width="1200" height="630" fill="#F8F8F8"/>
+
+<!-- background accents, same set as features/api-help -->
+<polygon points="1200,630 1200,455 1030,630" fill="#357E27"/>
+<line x1="1141.2" y1="41.2" x2="1162.8" y2="62.8" stroke="#CE0000" stroke-width="7.8" stroke-linecap="round" opacity="0.85"/>
+<line x1="1141.2" y1="62.8" x2="1162.8" y2="41.2" stroke="#CE0000" stroke-width="7.8" stroke-linecap="round" opacity="0.85"/>
+<rect x="1151.8" y="166.8" width="16.3" height="16.3" fill="none" stroke="#6E7B70" stroke-width="4.8" opacity="0.75"/>
+<rect x="632.5" y="52.5" width="15.0" height="15.0" fill="none" stroke="#9AA79B" stroke-width="4.4" opacity="0.5"/>
+<line x1="24.6" y1="240.6" x2="43.4" y2="259.4" stroke="#CE0000" stroke-width="6.8" stroke-linecap="round" opacity="0.6"/>
+<line x1="24.6" y1="259.4" x2="43.4" y2="240.6" stroke="#CE0000" stroke-width="6.8" stroke-linecap="round" opacity="0.6"/>
+<polyline points="13.1,561.6 21.4,569.9 36.0,551.2" fill="none" stroke="#9AA79B" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<rect x="1152.5" y="492.5" width="15.0" height="15.0" fill="none" stroke="#6E7B70" stroke-width="4.4" opacity="0.55"/>
+
+<!-- LEFT: headline -->
+<text x="90" y="270" font-family="Rubik" font-weight="800" font-size="64" fill="#1B3D32">Model Context</text>
+<text x="90" y="370" font-family="Rubik" font-weight="800" font-size="64" fill="#1B3D32">Protocol</text>
+<text x="92" y="442" font-family="Rubik" font-weight="600" font-size="28" fill="#357E27" opacity="0.8">with</text>
+<text x="90" y="500" font-family="Rubik" font-weight="800" font-size="42" fill="#357E27">OAuth 2.1 authorization</text>
+
+<!-- RIGHT: agents card -->
+<rect x="634" y="82" width="470" height="120" rx="16" fill="#E4EDE6" opacity="0.55"/>
+<rect x="628" y="76" width="470" height="120" rx="16" fill="#FFFFFF" stroke="#C6DCCB" stroke-width="2"/>
+
+<circle cx="700" cy="136" r="26" fill="#1B3D32" stroke="#FFFFFF" stroke-width="4"/>
+<path d="M700 121 C 703 132, 703 132, 715 136 C 703 140, 703 140, 700 151 C 697 140, 697 140, 685 136 C 697 132, 697 132, 700 121 Z" fill="#B9C6BA"/>
+<circle cx="672" cy="136" r="26" fill="#357E27" stroke="#FFFFFF" stroke-width="4"/>
+<path d="M672 120 C 675 132, 675 132, 688 136 C 675 140, 675 140, 672 152 C 669 140, 669 140, 656 136 C 669 132, 669 132, 672 120 Z" fill="#FFFFFF"/>
+
+<text x="740" y="128" font-family="Rubik" font-weight="800" font-size="25" fill="#1B3D32">AI agents</text>
+<text x="740" y="154" font-family="Rubik" font-size="15" fill="#6E7B70">native, two-way tool calls</text>
+
+<rect x="966" y="112" width="112" height="30" rx="15" fill="#EAF3EC" stroke="#C6DCCB" stroke-width="1.5"/>
+<circle cx="982" cy="127" r="4" fill="#357E27"/>
+<text x="994" y="131" font-family="DejaVu Sans Mono" font-size="12" fill="#357E27">OAuth 2.1</text>
+
+<!-- RIGHT: native MCP link -->
+<line x1="796" y1="204" x2="796" y2="280" stroke="#357E27" stroke-width="4" stroke-linecap="round"/>
+<polygon points="786,274 806,274 796,290" fill="#357E27"/>
+<line x1="932" y1="280" x2="932" y2="204" stroke="#1B3D32" stroke-width="4" stroke-linecap="round"/>
+<polygon points="922,210 942,210 932,194" fill="#1B3D32"/>
+
+<circle cx="864" cy="242" r="38" fill="#1B3D32"/>
+<circle cx="864" cy="242" r="38" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.25"/>
+<text x="864" y="249" font-family="Rubik" font-weight="800" font-size="18" letter-spacing="1" fill="#FFFFFF" text-anchor="middle">MCP</text>
+
+<!-- RIGHT: Kiwi TCMS instance card -->
+<rect x="634" y="308" width="470" height="232" rx="16" fill="#E4EDE6" opacity="0.55"/>
+<rect x="628" y="302" width="470" height="232" rx="16" fill="#FFFFFF" stroke="#C6DCCB" stroke-width="2"/>
+<path d="M628 318 a16 16 0 0 1 16 -16 h438 a16 16 0 0 1 16 16 v30 h-470 z" fill="#1B3D32"/>
+<circle cx="654" cy="325" r="5" fill="#357E27"/>
+<text x="668" y="332" font-family="Rubik" font-weight="700" font-size="18" fill="#FFFFFF">Kiwi TCMS Enterprise</text>
+<text x="1082" y="331" font-family="DejaVu Sans Mono" font-size="13" fill="#B9C6BA" text-anchor="end">/mcp/</text>
+
+<!-- row 1 -->
+<rect x="648" y="366" width="20" height="20" rx="5" fill="#EAF3EC" stroke="#357E27" stroke-width="1.6"/>
+<text x="658" y="381" font-family="DejaVu Sans Mono" font-size="11" fill="#357E27" text-anchor="middle">{ }</text>
+<text x="684" y="382" font-family="DejaVu Sans Mono" font-weight="700" font-size="17" fill="#1B3D32">tools/list</text>
+<text x="1082" y="381" font-family="Rubik" font-size="15" fill="#6E7B70" text-anchor="end">what can you do?</text>
+<line x1="648" y1="404" x2="1082" y2="404" stroke="#E6EEE7" stroke-width="1.5"/>
+
+<!-- row 2 -->
+<rect x="648" y="426" width="20" height="20" rx="5" fill="#EAF3EC" stroke="#357E27" stroke-width="1.6"/>
+<text x="658" y="441" font-family="DejaVu Sans Mono" font-size="11" fill="#357E27" text-anchor="middle">{ }</text>
+<text x="684" y="442" font-family="DejaVu Sans Mono" font-weight="700" font-size="17" fill="#1B3D32">TestCase.create</text>
+<text x="1082" y="441" font-family="Rubik" font-size="15" fill="#6E7B70" text-anchor="end">TC-4521 created</text>
+<line x1="648" y1="464" x2="1082" y2="464" stroke="#E6EEE7" stroke-width="1.5"/>
+
+<!-- row 3 -->
+<rect x="648" y="486" width="20" height="20" rx="5" fill="#EAF3EC" stroke="#357E27" stroke-width="1.6"/>
+<text x="658" y="501" font-family="DejaVu Sans Mono" font-size="11" fill="#357E27" text-anchor="middle">{ }</text>
+<text x="684" y="502" font-family="DejaVu Sans Mono" font-weight="700" font-size="17" fill="#1B3D32">TestRun.add_case</text>
+<text x="1082" y="501" font-family="Rubik" font-size="15" fill="#6E7B70" text-anchor="end">result: passed</text>
+</svg>
