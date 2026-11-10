@@ -1,6 +1,6 @@
 Title: Bor & Kiwi TCMS are going to FOSDEM 2027
 Headline: devroom on 30 Jan; stand on 31 Jan
-date: 2026-11-10 09:10
+date: 2026-11-10 12:00
 og_image: images/fosdem/2027/stand.png
 twitter_image: images/fosdem/2027/stand.png
 comments: true
