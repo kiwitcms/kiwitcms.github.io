@@ -15,15 +15,18 @@ This is where you can find us:
 
 - Saturday Jan 30th:
   [Testing and Continuous Delivery devroom](https://fosdem-testingautomation.github.io/) -
-  we are proud to be co-hosting this devroom again!
+  we are proud to be co-hosting this devroom again! See the
+  [call for participation]({filename}2026-10-25-fosdem2027.markdown) for details.
 - Sunday Jan 31st:
   [Bor & Kiwi TCMS stand](https://fosdem.org/2027/news/accepted-stands/) -
   follow <https://fosdem.org/2027/> for the exact building and stand number!
 
 Bor is open source policy management for Linux desktops: define, distribute and
 enforce desktop configuration policies across your fleet in real time.
-Together with Kiwi TCMS we would like to meet all of you and talk about open source,
+Together we would like to meet all of you and talk about open source,
 software testing, test management and managing Linux desktops at scale!
+
+*Fun fact: both Bor & Kiwi TCMS are headquartered in Bulgaria and their color theme is green!*
 
 ---
 
@@ -35,3 +38,4 @@ please help us!
   and follow all project news;
 - [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;
 - [Become a subscriber](/#subscriptions) and help us sustain development
+- [Become a reseller]({filename}pages/partners.html) and help us serve your community
