@@ -29,12 +29,12 @@ You can explore everything at
 
     Container images::
     
-        pub.kiwitcms.eu/kiwitcms/kiwi       latest  6600bc56a544    622 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  6600bc56a544    622 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 **IMPORTANT:** version tagged
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -58,13 +58,13 @@ Improvements
 - Admin panel now allows to view, add, edit and delete Environment records
 - Allow selection of environment when creating new TestRun and display the chosen
   values inside the TestRun page. Closes
-  `Issue #1344 <https://github.com/kiwitcms/Kiwi/issues/1344>`_
+  `Issue #1344 <https://github.com/kiwitcms/kiwitcms/issues/1344>`_
 - Creating a TestRun will now generate test execution matrix based on the available
   environment and test case properties. Closes
-  `Issue #1843 <https://github.com/kiwitcms/Kiwi/issues/1843>`_
+  `Issue #1843 <https://github.com/kiwitcms/kiwitcms/issues/1843>`_
 - When generating a test execution matrix the supported algorithms are
   "full" and "pairwise". Closes
-  `Issue #1931 <https://github.com/kiwitcms/Kiwi/issues/1931>`_
+  `Issue #1931 <https://github.com/kiwitcms/kiwitcms/issues/1931>`_
 
   - Feature is enabled for test runs which contain test cases. This
     feature is not shown when creating an empty test run
@@ -123,15 +123,15 @@ Bug fixes
 ~~~~~~~~~
 
 - Send e-mail notification when adding comments to bugs. Fixes
-  `Issue #2232 <https://github.com/kiwitcms/Kiwi/issues/2232>`_ (@cmbahadir)
+  `Issue #2232 <https://github.com/kiwitcms/kiwitcms/issues/2232>`_ (@cmbahadir)
 - Disable the "+" button when there is no related element selected. Fixes
-  `Issue #2561 <https://github.com/kiwitcms/Kiwi/issues/2561>`_ (@cmbahadir)
+  `Issue #2561 <https://github.com/kiwitcms/kiwitcms/issues/2561>`_ (@cmbahadir)
 - When cloning test plans keep the existing test case sort order inside
   the resulting test plan. Fixes
-  `Issue #2218 <https://github.com/kiwitcms/Kiwi/issues/2218>`_ (Nicolas Gelot)
+  `Issue #2218 <https://github.com/kiwitcms/kiwitcms/issues/2218>`_ (Nicolas Gelot)
 - Configure en_US.UTF-8 locale inside container. Allows upload of files with
   unicode names. Fixes
-  `Issue #2600 <https://github.com/kiwitcms/Kiwi/issues/2600>`_
+  `Issue #2600 <https://github.com/kiwitcms/kiwitcms/issues/2600>`_
 
 
 Refactoring and testing
@@ -196,7 +196,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

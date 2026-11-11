@@ -13,7 +13,7 @@ the Docker image to a non-root user with uid 1001. You may have to adjust
 ownership/permissions on the ``kiwi_uploads`` Docker volume!
 
 
-The new ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` docker image has Image ID ``6bc4e3124fd4``.
+The new ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` docker image has Image ID ``6bc4e3124fd4``.
 `https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_
 has also been updated!
 
@@ -62,9 +62,9 @@ Refactoring
 - Remove custom ``DBModelBackend`` authentication backend
 - Remove unused ``tcms.core.context_processors.auth_backend_processor``
 - Remove unused ``get_using_backend()``. Fixes
-  `Issue #261 <https://github.com/kiwitcms/Kiwi/issues/261>`_
+  `Issue #261 <https://github.com/kiwitcms/kiwitcms/issues/261>`_
 - Remove ``dj_pagination``. Fixes
-  `Issue #110 <https://github.com/kiwitcms/Kiwi/issues/110>`_
+  `Issue #110 <https://github.com/kiwitcms/kiwitcms/issues/110>`_
 
 
 Settings
@@ -89,7 +89,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

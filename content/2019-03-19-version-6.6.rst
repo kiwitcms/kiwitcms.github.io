@@ -21,12 +21,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  c4734f98ca37    971.3 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  c4734f98ca37    971.3 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 
 
 Changes since Kiwi TCMS 6.5.3
@@ -49,16 +49,16 @@ Improvements
 - When creating new TestCase you can now change notification settings.
   Previously this was only possible during editing
 - Document import-export approaches. Closes
-  `Issue #795 <https://github.com/kiwitcms/Kiwi/issues/795>`_
+  `Issue #795 <https://github.com/kiwitcms/kiwitcms/issues/795>`_
 - Document available test automation plugins
 - Improve documentation around Docker customization and SSL termination
 - Add documentation example of reverse rroxy configuration for HAProxy (Nicolas Auvray)
 - ``TestPlan.add_case()`` will now set the sortkey to highest in plan + 10 (Rik)
 - Add ``LinkOnly`` issue tracker. Fixes
-  `Issue #289 <https://github.com/kiwitcms/Kiwi/issues/289>`_
+  `Issue #289 <https://github.com/kiwitcms/kiwitcms/issues/289>`_
 - Use the same HTML template for both TestCase new & edit
 - New API methods for adding, removing and listing attachments. Fixes
-  `Issue #446 <https://github.com/kiwitcms/Kiwi/issues/446>`_:
+  `Issue #446 <https://github.com/kiwitcms/kiwitcms/issues/446>`_:
 
   - TestPlan.add_attachment()
   - TestCase.add_attachment()
@@ -90,7 +90,7 @@ Removed functionality
 ~~~~~~~~~~~~~~~~~~~~~
 
 - Remove legacy reports. Closes
-  `Issue #657 <https://github.com/kiwitcms/Kiwi/issues/657>`_
+  `Issue #657 <https://github.com/kiwitcms/kiwitcms/issues/657>`_
 - Remove "Save & Continue" functionality from TestCase edit page
 - Renamed API methods:
 
@@ -106,23 +106,23 @@ Bug fixes
 ~~~~~~~~~
 
 - Remove hard-coded timestamp in TestCase page template, References
-  `Issue #765 <https://github.com/kiwitcms/Kiwi/issues/765>`_
+  `Issue #765 <https://github.com/kiwitcms/kiwitcms/issues/765>`_
 - Fix handling of ``?from_plan`` URL parameter in TestCase page
 - Make ``TestCase.text`` occupy 100% width when rendered. Fixes
-  `Issue #798 <https://github.com/kiwitcms/Kiwi/issues/798>`_
+  `Issue #798 <https://github.com/kiwitcms/kiwitcms/issues/798>`_
 - Enable ``markdown.extensions.tables``. Fixes
-  `Issue #816 <https://github.com/kiwitcms/Kiwi/issues/816>`_
+  `Issue #816 <https://github.com/kiwitcms/kiwitcms/issues/816>`_
 - Handle form erros and default values for TestPlan new/edit. Fixes
-  `Issue #864 <https://github.com/kiwitcms/Kiwi/issues/864>`_
+  `Issue #864 <https://github.com/kiwitcms/kiwitcms/issues/864>`_
 - Tests + fix for failing TestCase rendering in French
 - Show color-coded statuses on dashboard page when seen with non-English
   language
 - Refactor check for confirmed test cases when editting to work with
   translations
 - Fix form values when filtering test cases inside TestPlan. Fixes
-  `Issue #674 <https://github.com/kiwitcms/Kiwi/issues/674>`_ (@marion2016)
+  `Issue #674 <https://github.com/kiwitcms/kiwitcms/issues/674>`_ (@marion2016)
 - Show delete icon for attachments. Fixes
-  `Issue #847 <https://github.com/kiwitcms/Kiwi/issues/847>`_
+  `Issue #847 <https://github.com/kiwitcms/kiwitcms/issues/847>`_
 
 
 Refactoring
@@ -130,10 +130,10 @@ Refactoring
 
 - Remove unused ``.current_user`` instance attribute
 - Remove ``EditCaseForm`` and use ``NewCaseForm`` instead, References
-  `Issue #708 <https://github.com/kiwitcms/Kiwi/issues/708>`_,
-  `Issue #812 <https://github.com/kiwitcms/Kiwi/issues/812>`_
+  `Issue #708 <https://github.com/kiwitcms/kiwitcms/issues/708>`_,
+  `Issue #812 <https://github.com/kiwitcms/kiwitcms/issues/812>`_
 - Fix "Select All" checkbox. Fixes
-  `Issue #828 <https://github.com/kiwitcms/Kiwi/issues/828>`_ (Rady)
+  `Issue #828 <https://github.com/kiwitcms/kiwitcms/issues/828>`_ (Rady)
 
 
 Translations
@@ -155,7 +155,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -163,14 +163,14 @@ If you are using Kiwi TCMS as a Docker container then::
 Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
 before upgrade!
 
-**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` and ``docker-compose.yml`` will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow::
 
     # starting from an older Kiwi TCMS version
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
+    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
     # repeat until you have reached latest

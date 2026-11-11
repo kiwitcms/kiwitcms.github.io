@@ -22,7 +22,7 @@ Make code easier to maintain
 
 The current code is a bunch of very large modules and functions and classes
 bundled together. It is also old and sometimes looks like spaghetti code.
-[CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi) gives us a "D" rating
+[CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms) gives us a "D" rating
 for maintainability with a 1 year estimated effort to fix that. There are 600+
 code smells and 600+ duplications detected by CodeClimate. Our goal is to get this
 number down to zero!

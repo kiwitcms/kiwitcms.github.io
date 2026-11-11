@@ -27,7 +27,7 @@ You can explore everything at
 
     Public container image (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  203d476fbcdc    674MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  203d476fbcdc    674MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -54,24 +54,24 @@ Improvements
 - Update psycopg from 3.2.4 to 3.2.5
 - Update pygithub from 2.5.0 to 2.6.1
 - Enable search functionality on Tag Admin page (Jurijs Ješkins). Fixes
-  `Issue #3739 <https://github.com/kiwitcms/Kiwi/issues/3739>`_
+  `Issue #3739 <https://github.com/kiwitcms/kiwitcms/issues/3739>`_
 - After cloning a TestCase load its Edit page. (Martin Bodurov)
 - Add ``Search Test Executions`` item under ``SEARCH`` menu in navigation bar
 - Display ``Default tester`` field on Search Test Cases page
 - Display ``Default tester`` fields on Execution Dashboard page. Closes
-  `Issue #3766 <https://github.com/kiwitcms/Kiwi/issues/3766>`_
+  `Issue #3766 <https://github.com/kiwitcms/kiwitcms/issues/3766>`_
 - On TestRun view page display TestExecution history diff only when user
   accessing the page has the ``testruns.view_historicaltestexecution``
   permission. Otherwise it will not be shown
 - Display ``Last Bug ID - Status`` widget for each TestExecution row on
   TestRun view page. Closes
-  `Issue #3748 <https://github.com/kiwitcms/Kiwi/issues/3748>`_
+  `Issue #3748 <https://github.com/kiwitcms/kiwitcms/issues/3748>`_
 - Allow user to exclude ``Product`` condition on Search Test Cases page
 - Update references to Kiwi TCMS container images across our code base,
   documentation and website as we may change hosting providers soon
 - Update performance results documentation
 - Document results for parallel user session performance. Closes
-  `Issue #721 <https://github.com/kiwitcms/Kiwi/issues/721>`_
+  `Issue #721 <https://github.com/kiwitcms/kiwitcms/issues/721>`_
 
 
 API
@@ -142,7 +142,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;

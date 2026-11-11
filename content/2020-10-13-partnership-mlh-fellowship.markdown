@@ -25,9 +25,9 @@ Fellowship program
 The Fall 2020 cohort runs between October 5 - December 21 and we're already
 into the Contributing phase of the program.
 Fellow students will be working on
-[open issues](https://github.com/kiwitcms/Kiwi/issues) from our backlog with
+[open issues](https://github.com/kiwitcms/kiwitcms/issues) from our backlog with
 a focus on tasks from our
-[open source bounty program](https://github.com/kiwitcms/Kiwi/milestone/4)
+[open source bounty program](https://github.com/kiwitcms/kiwitcms/milestone/4)
 but they can really work on any open task!
 
 Once a pull request has been made it will undergo first round code review
@@ -42,7 +42,7 @@ the following rules:
   interested in (applies to other contributors too);
 - The issue will be assigned to them (new);
 - The issue will be labeled with the
-  [**MLH Fellowship**](https://github.com/kiwitcms/Kiwi/issues?q=is%3Aopen+is%3Aissue+label%3A%22MLH+Fellowship%22)
+  [**MLH Fellowship**](https://github.com/kiwitcms/kiwitcms/issues?q=is%3Aopen+is%3Aissue+label%3A%22MLH+Fellowship%22)
   label (new);
 - The following comment will be added:
     *This issue/bounty has been assigned to an MLH fellow who is currently

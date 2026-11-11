@@ -32,12 +32,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  788af5c3f067    800 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  788af5c3f067    800 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 10.0
@@ -60,23 +60,23 @@ Improvements & security updates
 - Upgrade node_modules/html5sortable from 0.10.0 to 0.11.1
 - Upgrade node_modules/marked from 2.0.1 to 2.0.3
 - Time-stamp fields added to all TestRun pages. Closes 
-  `Issue #1928 <https://github.com/kiwitcms/Kiwi/issues/1928>`_ (Andreea Moraru)
+  `Issue #1928 <https://github.com/kiwitcms/kiwitcms/issues/1928>`_ (Andreea Moraru)
 - Don't set ``TestRun.start_date`` automatically. Fixes
-  `Issue #2323 <https://github.com/kiwitcms/Kiwi/issues/2323>`_ (Andreea Moraru)
+  `Issue #2323 <https://github.com/kiwitcms/kiwitcms/issues/2323>`_ (Andreea Moraru)
 - Web based database initialization for new installations. Closes 
-  `Issue #1698 <https://github.com/kiwitcms/Kiwi/issues/1698>`_ (Ivajlo Karabojkov)
+  `Issue #1698 <https://github.com/kiwitcms/kiwitcms/issues/1698>`_ (Ivajlo Karabojkov)
 - Automatically active the first registered user via web UI
 - Rearrange layout of before and after fields on search pages
 - Allow TestRun creation from navigation menu. Fixes
-  `Issue #2281 <https://github.com/kiwitcms/Kiwi/issues/2281>`_
+  `Issue #2281 <https://github.com/kiwitcms/kiwitcms/issues/2281>`_
 - Document hardware specs & performance baseline results. Refs
-  `Issue #721 <https://github.com/kiwitcms/Kiwi/issues/721>`_
+  `Issue #721 <https://github.com/kiwitcms/kiwitcms/issues/721>`_
 - Document performance for ``TestCase.filter``/``TestRun.filter`` methods. Closes
-  `Issue #1173 <https://github.com/kiwitcms/Kiwi/issues/1173>`_
+  `Issue #1173 <https://github.com/kiwitcms/kiwitcms/issues/1173>`_
 - Update documentation around ``docker-compose.yml`` and the extra script files that it needs
 - Document some useful management commands
 - Clarify ``set_domain`` command. Closes
-  `Issue #2375 <https://github.com/kiwitcms/Kiwi/issues/2375>`_
+  `Issue #2375 <https://github.com/kiwitcms/kiwitcms/issues/2375>`_
 
 
 Settings
@@ -117,15 +117,15 @@ Bug fixes
 ~~~~~~~~~
 
 - Remove links and icons from TestRun print styling. Fixes
-  `Issue #2263 <https://github.com/kiwitcms/Kiwi/issues/2263>`_ and
-  `Issue #2264 <https://github.com/kiwitcms/Kiwi/issues/2264>`_ (Gagan Deep)
+  `Issue #2263 <https://github.com/kiwitcms/kiwitcms/issues/2263>`_ and
+  `Issue #2264 <https://github.com/kiwitcms/kiwitcms/issues/2264>`_ (Gagan Deep)
 - Emails notifications are now sent into server language. Fixes
-  `Issue #1589 <https://github.com/kiwitcms/Kiwi/issues/1589>`_ (Kapil Bansal)
+  `Issue #1589 <https://github.com/kiwitcms/kiwitcms/issues/1589>`_ (Kapil Bansal)
 - Fix compatibility bug for "advanced search & add" popup windows and latest Chrome
-  browsers. Fixes `Issue #2100 <https://github.com/kiwitcms/Kiwi/issues/2100>`_
+  browsers. Fixes `Issue #2100 <https://github.com/kiwitcms/kiwitcms/issues/2100>`_
 - Redirect TestPlan Admin "Add" to the correct URL
 - Fix wrong TestExecution field names in queryset & HTML template. Refs
-  `Issue #1924 <https://github.com/kiwitcms/Kiwi/issues/1924>`_
+  `Issue #1924 <https://github.com/kiwitcms/kiwitcms/issues/1924>`_
 - Add default display for ``None`` fields in Test Case page
 
 
@@ -133,20 +133,20 @@ Refactoring & testing
 ~~~~~~~~~~~~~~~~~~~~~
 
 - Add test automation for ``TestExecution.actual_duration``. Refs
-  `Issue #1924 <https://github.com/kiwitcms/Kiwi/issues/1924>`_ (@APiligrim)
+  `Issue #1924 <https://github.com/kiwitcms/kiwitcms/issues/1924>`_ (@APiligrim)
 - Add test automation for ``TestCase.expected_duration``. Refs
-  `Issue #1923 <https://github.com/kiwitcms/Kiwi/issues/1923>`_ (@APiligrim)
+  `Issue #1923 <https://github.com/kiwitcms/kiwitcms/issues/1923>`_ (@APiligrim)
 - Add test automation for ``ReadOnlyHistoryAdmin``. Fixes
-  `Issue #1604 <https://github.com/kiwitcms/Kiwi/issues/1604>`_ (Kapil Bansal)
+  `Issue #1604 <https://github.com/kiwitcms/kiwitcms/issues/1604>`_ (Kapil Bansal)
 - Add ``similar-string`` checker to ``kiwi_lint``. Fixes
-  `Issue #1126 <https://github.com/kiwitcms/Kiwi/issues/1126>`_ (@17sushmita)
+  `Issue #1126 <https://github.com/kiwitcms/kiwitcms/issues/1126>`_ (@17sushmita)
 - Resolve or silence the remaining outstanding pylint issues. Closes
-  `Issue #171 <https://github.com/kiwitcms/Kiwi/issues/171>`_
+  `Issue #171 <https://github.com/kiwitcms/kiwitcms/issues/171>`_
 - Update isort from 5.7.0 to 5.8.0
 - Convert forms to ``ModelForm``
 - Remove unused method parameters
 - Remove unused ``string_to_list()``. Closes
-  `Issue #340 <https://github.com/kiwitcms/Kiwi/issues/340>`_
+  `Issue #340 <https://github.com/kiwitcms/kiwitcms/issues/340>`_
 - Simplify method used for progress-bar in dashboard which also
   reduces the total number of SQL queries
 - Use existing functions, remove duplication
@@ -202,7 +202,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;

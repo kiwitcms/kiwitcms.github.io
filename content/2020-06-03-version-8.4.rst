@@ -28,12 +28,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  602dddcf41a7    646 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  602dddcf41a7    646 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 8.3
@@ -53,7 +53,7 @@ Improvements
 - Update python-redmine from 2.2.1 to 2.3.0
 - Update patternfly from 3.59.4 to 3.59.5
 - Add ``manage.py set_domain`` command to change Kiwi TCMS domain. Fixes
-  `Issue #971 <https://github.com/kiwitcms/Kiwi/issues/971>`_ (Ivajlo Karabojkov)
+  `Issue #971 <https://github.com/kiwitcms/kiwitcms/issues/971>`_ (Ivajlo Karabojkov)
 - GitHub bug details now works for private issues
 - Gitlab bug details now works for private issues
 - JIRA bug details now works for private issues
@@ -64,7 +64,7 @@ Improvements
 - New feature: 1-click bug report for Redmine
 - Reverting to older historical version via Admin panel now redirects
   to object which was reverted. Fixes
-  `Issue #1074 <https://github.com/kiwitcms/Kiwi/issues/1074>`_
+  `Issue #1074 <https://github.com/kiwitcms/kiwitcms/issues/1074>`_
 - Documentation updates
 
 .. important::
@@ -117,7 +117,7 @@ Settings
 
 - Define the ``KIWI_DISABLE_BUGTRACKER=yes`` environment variable if you wish
   to disable the internal bug tracker. Closes
-  `Issue #1370 <https://github.com/kiwitcms/Kiwi/issues/1370>`_
+  `Issue #1370 <https://github.com/kiwitcms/kiwitcms/issues/1370>`_
 
 
 Bug fixes
@@ -125,19 +125,19 @@ Bug fixes
 
 - Workaround missing MariaDB CHARSET/COLLATION support, see our
   ``docker-compose.yml``. Fixes
-  `Issue #1700 <https://github.com/kiwitcms/Kiwi/issues/1700>`_
+  `Issue #1700 <https://github.com/kiwitcms/kiwitcms/issues/1700>`_
 - Install missing ``/usr/bin/mysql`` in container
 - Warning message for unconfigured Kiwi TCMS domain does not show HTML tags in
   Admin anymore. Fixes
-  `Issue #964 <https://github.com/kiwitcms/Kiwi/issues/964>`_
+  `Issue #964 <https://github.com/kiwitcms/kiwitcms/issues/964>`_
 - Unescape the ``&amp;`` string when trying to open new windows after
   clicking the 'Report bug' button in TestExecution. Fixes
-  `Issue #1533 <https://github.com/kiwitcms/Kiwi/issues/1533>`_
+  `Issue #1533 <https://github.com/kiwitcms/kiwitcms/issues/1533>`_
 - Try harder to restore the original navigation menu instead of
   leaving bogus menu items. Fixes
-  `Issue #991 <https://github.com/kiwitcms/Kiwi/issues/991>`_
+  `Issue #991 <https://github.com/kiwitcms/kiwitcms/issues/991>`_
 - Robot Framework plugin is now GA. Close
-  `Issue #984 <https://github.com/kiwitcms/Kiwi/issues/984>`_
+  `Issue #984 <https://github.com/kiwitcms/kiwitcms/issues/984>`_
 - Add LinkReference to TestExecution after creating bug via 1-click.
   The UI still needs to be refreshed which will be implemented together
   with the redesign of the TestRun page
@@ -149,29 +149,29 @@ Refactoring & testing
 ~~~~~~~~~~~~~~~~~~~~~
 
 - Migrate ``check-docs-source-in-git`` to GitHub workflows. Fixes
-  `Issue #1552 <https://github.com/kiwitcms/Kiwi/issues/1552>`_ (@Prome88)
+  `Issue #1552 <https://github.com/kiwitcms/kiwitcms/issues/1552>`_ (@Prome88)
 - Migrate ``build-for-pypi`` to GitHub workflows. Fixes
-  `Issue #1554 <https://github.com/kiwitcms/Kiwi/issues/1554>`_ (@lcmtwn)
+  `Issue #1554 <https://github.com/kiwitcms/kiwitcms/issues/1554>`_ (@lcmtwn)
 - Add tests for ``TestCaseAdmin`` (Mariyan Garvanski)
 - Add tests for ``BugAdmin``. Fixes
-  `Issue #1596 <https://github.com/kiwitcms/Kiwi/issues/1596>`_ (Mariyan Garvanski)
+  `Issue #1596 <https://github.com/kiwitcms/kiwitcms/issues/1596>`_ (Mariyan Garvanski)
 - Omit ``utils/test`` from coverage reports. Fixes
-  `Issue #1631 <https://github.com/kiwitcms/Kiwi/issues/1631>`_ (@cmbahadir)
+  `Issue #1631 <https://github.com/kiwitcms/kiwitcms/issues/1631>`_ (@cmbahadir)
 - Omit ``tcms/tests`` from coverage reports. Fixes
-  `Issue #1630 <https://github.com/kiwitcms/Kiwi/issues/1630>`_ (@cmbahadir)
+  `Issue #1630 <https://github.com/kiwitcms/kiwitcms/issues/1630>`_ (@cmbahadir)
 - Add tests for ``tcms.core.forms.fields`` - Fixes
-  `Issue #1629 <https://github.com/kiwitcms/Kiwi/issues/1629>`_ (@cmbahadir)
+  `Issue #1629 <https://github.com/kiwitcms/kiwitcms/issues/1629>`_ (@cmbahadir)
 - Add tests for ``TestExecution.update()`` for ``case_text_version`` field
   (Rosen Sasov)
 - Refactor bulk-update methods in TestRun page to use JSON-RPC. Fixes
-  `Issue #1063 <https://github.com/kiwitcms/Kiwi/issues/1063>`_ (Rosen Sasov)
+  `Issue #1063 <https://github.com/kiwitcms/kiwitcms/issues/1063>`_ (Rosen Sasov)
 - Start using ``_change_reason`` instead of ``changeReason`` field in
   django-simple-history
 - Remove unused ``StripURLField`` & ``Version.string_to_id()``
 - Refactoring around TestCase and TestPlan cloning methods
 - Start testing with the internal bug tracker disabled
 - Start testing with all supported external bug trackers. Fixes
-  `Issue #1079 <https://github.com/kiwitcms/Kiwi/issues/1079>`_
+  `Issue #1079 <https://github.com/kiwitcms/kiwitcms/issues/1079>`_
 - Start Codecov for coverage reports
 - Add tests for presence of mysql/psql binaries in container
 - Add ``APIPermissionsTestCase`` with example in ``TestVersionCreatePermissions``
@@ -244,7 +244,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd path/containing/docker-compose/
     docker-compose down
     # !!! docker tag to keep older image version on the machine
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb-103-centos7
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

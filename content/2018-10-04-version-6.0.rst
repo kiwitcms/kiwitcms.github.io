@@ -19,7 +19,7 @@ This release removes squashed migrations. Direct upgrades from versions
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  cd087297f349    991.3 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  cd087297f349    991.3 MB
 
 
 Changes since Kiwi TCMS 5.3.1
@@ -47,16 +47,16 @@ Removed functionality
   to test runs!
 - Convert squashed database migrations to regular ones and remove older migrations.
   **WARNING:** upgrade from versions <= 5.3.1 to 6.0 will break without an intermediate
-  upgrade to ``pub.kiwitcms.eu/kiwitcms/kiwi:5.3.1 a420465852be``.
+  upgrade to ``pub.kiwitcms.eu/kiwitcms/kiwitcms:5.3.1 a420465852be``.
 - Remove deprecated ``TestCase.estimated_time`` and ``TestRun.estimated_time``. Fixes
-  `Issue #514 <https://github.com/kiwitcms/Kiwi/issues/514>`_
+  `Issue #514 <https://github.com/kiwitcms/kiwitcms/issues/514>`_
 
 
 Backend API
 -----------
 
 - No longer use ``product_version`` for ``TestRun.create``. Fixes
-  `Issue #522 <https://github.com/kiwitcms/Kiwi/issues/522>`_
+  `Issue #522 <https://github.com/kiwitcms/kiwitcms/issues/522>`_
 
   - 'product' is no longer required
   - 'product_version' is no longer required
@@ -100,7 +100,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -123,7 +123,7 @@ supporting the
 `development team <https://github.com/orgs/kiwitcms/people>`_. Watch this
 blog for further announcements about this. Meanwhile you may share your
 thoughts via
-`Issue #515 <https://github.com/kiwitcms/Kiwi/issues/515>`_.
+`Issue #515 <https://github.com/kiwitcms/kiwitcms/issues/515>`_.
 
 
 Plans to remove deprecated functionality
@@ -133,4 +133,4 @@ Plans to remove deprecated functionality
 ``TestRun.plan.product_version``! With the latest web interface it is not possible
 to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
-`Issue #246 <https://github.com/kiwitcms/Kiwi/issues/246>`_ is fixed).
+`Issue #246 <https://github.com/kiwitcms/kiwitcms/issues/246>`_ is fixed).

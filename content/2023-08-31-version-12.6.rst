@@ -29,7 +29,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  c2a9b82871d9    598MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  c2a9b82871d9    598MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -54,7 +54,7 @@ Improvements
 - Update documentation for JIRA integration
 - Clarify the django-ses add-on mentioned in documentation
 - Add a button to delete URLs from test executions. Fixes
-  `Issue #2936 <https://github.com/kiwitcms/Kiwi/issues/2936>`_
+  `Issue #2936 <https://github.com/kiwitcms/kiwitcms/issues/2936>`_
 - Show traceback info during IssueTracker health-check to
   make it easier to debug problems
 
@@ -76,14 +76,14 @@ Bug fixes
 ~~~~~~~~~
 
 - Hide all expanded child rows in TestPlan Search page. Fixes
-  `Issue #3245 <https://github.com/kiwitcms/Kiwi/issues/3245>`_ (@somenewacc)
+  `Issue #3245 <https://github.com/kiwitcms/kiwitcms/issues/3245>`_ (@somenewacc)
 - Fix wrong query parameter on DASHBOARD page (@somenewacc)
 - Fix template variable for form fields in search pages (@somenewacc)
 - Prevent multiplication of callbacks for data tables (@somenewacc)
 - Don't fail IssueTracker health-check if we didn't use OpenGraph
 - Reorder items under ``SEARCH`` menu for consistency with items
   under the ``TESTING`` menu. Fixes
-  `Issue #3315 <https://github.com/kiwitcms/Kiwi/issues/3315>`_
+  `Issue #3315 <https://github.com/kiwitcms/kiwitcms/issues/3315>`_
 
 
 Refactoring and testing
@@ -148,7 +148,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

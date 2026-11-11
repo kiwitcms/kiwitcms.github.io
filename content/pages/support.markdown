@@ -8,7 +8,7 @@ add_section: True
 
 Public Tenant users or anyone without an active subscription:
 
-- Use [GitHub Issue Tracker](https://github.com/kiwitcms/Kiwi/issues) to file bugs and feature requests
+- Use [GitHub Issue Tracker](https://github.com/kiwitcms/kiwitcms/issues) to file bugs and feature requests
 
 **Do not ask individual project members for support, your request will be ignored!
 Use the channels above instead,

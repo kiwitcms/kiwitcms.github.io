@@ -15,7 +15,7 @@ several new languages. You can explore everything at
 `https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/login/github-app/>`_!
 
 The 7.0 version number happily coincides with the fact that we've surpassed
-70000 downloads from `Docker Hub <https://hub.docker.com/v2/repositories/kiwitcms/kiwi/>`_.
+70000 downloads from `Docker Hub <https://hub.docker.com/v2/repositories/kiwitcms/kiwitcms/>`_.
 
 Supported upgrade paths::
 
@@ -27,12 +27,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  d34dc6d896bf    584 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  d34dc6d896bf    584 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 6.11
@@ -62,14 +62,14 @@ Improvements
 - Reduce docker image size from 1.01 GB to under 600 MB
 - Add TestCase Health telemetry
 - Add support for Redmine issue tracker. Fixes
-  `Issue #41 <https://github.com/kiwitcms/Kiwi/issues/41>`_ (Jesse C. Lin)
+  `Issue #41 <https://github.com/kiwitcms/kiwitcms/issues/41>`_ (Jesse C. Lin)
 - Add breathing room around HTML form's submit buttons (Rady Madjev)
 - New TestRun page action: bulk-add hyperlinks to TestExecution(s)
 - Make it possible to disable HTTPS by specifying the
   ``KIWI_DONT_ENFORCE_HTTPS`` environment variable! Fixes
-  `Issue #1036 <https://github.com/kiwitcms/Kiwi/issues/1036>`_ (Marco Descher)
+  `Issue #1036 <https://github.com/kiwitcms/kiwitcms/issues/1036>`_ (Marco Descher)
 - Documentation updates, including internal style checker. Fixes
-  `Issue #1000 <https://github.com/kiwitcms/Kiwi/issues/1000>`_ (Prome88)
+  `Issue #1000 <https://github.com/kiwitcms/kiwitcms/issues/1000>`_ (Prome88)
 - When linking a TestExecution to a defect and choosing to update the
   Issue Tracker Kiwi TCMS will not add a comment pointing back to
   TR ID/summary/URL and TE ID/summary. This provides more detailed information
@@ -78,9 +78,9 @@ Improvements
 - Display additional defect information via Issue Tracker integration.
   On Patternfly pages which show defect URLs this is accessible via a
   small info icon. Fixes
-  `Issue #117 <https://github.com/kiwitcms/Kiwi/issues/117>`_
+  `Issue #117 <https://github.com/kiwitcms/kiwitcms/issues/117>`_
 - Add minimalistic defect tracker functionality. Fixes
-  `Issue #699 <https://github.com/kiwitcms/Kiwi/issues/699>`_
+  `Issue #699 <https://github.com/kiwitcms/kiwitcms/issues/699>`_
 
   - integrated with Issue Tracker integration layer as if it was
     an external system
@@ -116,7 +116,7 @@ Database migrations
   - add ``is_defect`` field
 
 - Apply ``LinkReference`` permissions to default group ``Tester``. Fixes
-  `Issue #881 <https://github.com/kiwitcms/Kiwi/issues/881>`_
+  `Issue #881 <https://github.com/kiwitcms/kiwitcms/issues/881>`_
 
     .. warning::
 
@@ -124,8 +124,8 @@ Database migrations
         apply these permissions by hand via the Admin section.
 
 - Remove ``testcases.Bug`` model, replaced with ``LinkReference``.
-  Closes `Issue #1029 <https://github.com/kiwitcms/Kiwi/issues/1029>`_ and
-  obsoletes `Issue #320 <https://github.com/kiwitcms/Kiwi/issues/320>`_.
+  Closes `Issue #1029 <https://github.com/kiwitcms/kiwitcms/issues/1029>`_ and
+  obsoletes `Issue #320 <https://github.com/kiwitcms/kiwitcms/issues/320>`_.
 
     .. note::
 
@@ -174,7 +174,7 @@ API
   override ``.details()`` for each issue tracker (or add your own IT) to
   extend this functionality. Information is cached for 1 hour by default.
   References
-  `Issue #117 <https://github.com/kiwitcms/Kiwi/issues/117>`_
+  `Issue #117 <https://github.com/kiwitcms/kiwitcms/issues/117>`_
 - Add methods ``Bug.add_tag()`` and ``Bug.remove_tag()``
 - Existing method with name ``Bug.filter()`` has changed behavior. It is
   now used to query objects from Kiwi TCMS minimalistic defect tracker
@@ -200,7 +200,7 @@ Settings
   `Django docs <https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-CACHES>`_
   for more info. Initially this setting is used to cache defect details received
   via Issue Tracker integration. See
-  `Issue #117 <https://github.com/kiwitcms/Kiwi/issues/117>`_
+  `Issue #117 <https://github.com/kiwitcms/kiwitcms/issues/117>`_
 
 
 Bug fixes
@@ -208,15 +208,15 @@ Bug fixes
 
 - Don't auto-download FontAwesome for SimpleMDE. Resolves icons disappearing
   on pages which have the markdown editor. Fixes
-  `Issue #905 <https://github.com/kiwitcms/Kiwi/issues/905>`_
+  `Issue #905 <https://github.com/kiwitcms/kiwitcms/issues/905>`_
 - Reorder HTML elements so Delete button is still visible in TestCase review
   comment section. Fixes
-  `Issue #1013 <https://github.com/kiwitcms/Kiwi/issues/1013>`_ (Rady Madjev)
+  `Issue #1013 <https://github.com/kiwitcms/kiwitcms/issues/1013>`_ (Rady Madjev)
 - Remove section that displays bugs in TestExecution container. Bugs are now
   denoted by a small icon next to their hyperlink. Closes
-  `Issue #475 <https://github.com/kiwitcms/Kiwi/issues/475>`_
+  `Issue #475 <https://github.com/kiwitcms/kiwitcms/issues/475>`_
 - Cache Issue Tracker connections per ``base_url``. Fixes
-  `Issue #290 <https://github.com/kiwitcms/Kiwi/issues/290>`_
+  `Issue #290 <https://github.com/kiwitcms/kiwitcms/issues/290>`_
 
 
 Refactoring
@@ -239,7 +239,7 @@ Translations
 - Introduce a translation mode where you can translate the interface via
   in-context editor. For more information see
   `Translation guide <https://kiwitcms.readthedocs.io/en/latest/contribution.html#translation>`_.
-  Fixes `Issue #1098 <https://github.com/kiwitcms/Kiwi/issues/1098>`_
+  Fixes `Issue #1098 <https://github.com/kiwitcms/kiwitcms/issues/1098>`_
 - Updated `Albanian translation <https://crowdin.com/project/kiwitcms/sq#>`_
 - Updated `Bulgarian translation <https://crowdin.com/project/kiwitcms/bg#>`_
 - Updated `Chinese Traditional translation <https://crowdin.com/project/kiwitcms/zh-TW#>`_
@@ -252,7 +252,7 @@ Translations
 For more information check-out
 `all supported languages <https://crowdin.com/project/kiwitcms>`_.
 To request new language
-`click here <https://github.com/kiwitcms/Kiwi/issues/new?title=Request+new+language:+...&body=Please+enable+...+language+in+Crowdin>`_!
+`click here <https://github.com/kiwitcms/kiwitcms/issues/new?title=Request+new+language:+...&body=Please+enable+...+language+in+Crowdin>`_!
 
 
 junit.xml-plugin v0.4
@@ -287,7 +287,7 @@ If you are using Kiwi TCMS as a Docker container then::
 
     cd path/containing/docker-compose/
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -295,14 +295,14 @@ If you are using Kiwi TCMS as a Docker container then::
 **WHERE:** ``docker-compose.yml`` has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!
 
-**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` and ``docker-compose.yml`` will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow::
 
     # starting from an older Kiwi TCMS version
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
+    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
     # repeat until you have reached latest

@@ -26,7 +26,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  16bf67e2fc1f    674MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  16bf67e2fc1f    674MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -74,7 +74,7 @@ Kiwi TCMS Enterprise v13.4-mt
 - Relicense this source code under GNU Affero General Public License v3 or later
 - Prior versions are still licensed under GNU General Public License v3
 - Support Mermaid.js syntax in Markdown fenced code blocks. Closes
-  `Issue #3116 <https://github.com/kiwitcms/Kiwi/issues/3116>`_
+  `Issue #3116 <https://github.com/kiwitcms/kiwitcms/issues/3116>`_
 - Update certbot from 2.10.0 to 2.11.0
 - Update certbot-dns-* plugins from 2.10.0 to 2.11.0
 - Update django-ses from 4.0.0 to 4.1.0
@@ -117,7 +117,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;

@@ -21,7 +21,7 @@ You can explore everything at
 
     Public container image (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  33e301a080d4    862MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  33e301a080d4    862MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -42,7 +42,7 @@ Security
 - Update node_modules/js-yaml from 4.2.0 to 4.3.1
 - Do not render ``BugSystem.api_password`` field value in Admin page to prevent
   exposing 3rd party credentials. Fixes
-  `GHSA-cq4x-2h36-285q <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-cq4x-2h36-285q>`_
+  `GHSA-cq4x-2h36-285q <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-cq4x-2h36-285q>`_
 
 
 Improvements
@@ -59,15 +59,15 @@ Improvements
 - Improve internal caching for ``Markdown.render()`` API method
   to remove cache key warnings and avoid crashes with 3rd party cache backends
 - Update helm charts. Closes
-  `Issue #4232 <https://github.com/kiwitcms/Kiwi/issues/4232>`_ and
-  `Issue #3323 <https://github.com/kiwitcms/Kiwi/issues/3323>`_
+  `Issue #4232 <https://github.com/kiwitcms/kiwitcms/issues/4232>`_ and
+  `Issue #3323 <https://github.com/kiwitcms/kiwitcms/issues/3323>`_
 
 
 Bug fixes
 ~~~~~~~~~
 
 - Fix broken URL. Refs
-  `Issue #4401 <https://github.com/kiwitcms/Kiwi/issues/4401>`_
+  `Issue #4401 <https://github.com/kiwitcms/kiwitcms/issues/4401>`_
 
 
 Refactoring and testing
@@ -120,7 +120,7 @@ Happy testing!
 
 If you like what we're doing please help us grow:
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all news;
 - `Become a subscriber </#subscriptions>`_ and help us sustain development

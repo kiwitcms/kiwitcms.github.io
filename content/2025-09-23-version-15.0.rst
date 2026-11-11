@@ -28,7 +28,7 @@ You can explore everything at
 
     Public container image (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  1b5584d7b2c1    695MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  1b5584d7b2c1    695MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -53,11 +53,11 @@ Improvements
   (Makson Lee)
 - Rename navbar item PLUGINS -> MORE
 - Send email notifications when a TestCase is created. Fixes
-  `Issue #4058 <https://github.com/kiwitcms/Kiwi/issues/4058>`_
+  `Issue #4058 <https://github.com/kiwitcms/kiwitcms/issues/4058>`_
 - Add Cancel button for "New TestCase" & "Edit TestCase" pages. Fixes
-  `Issue #4073 <https://github.com/kiwitcms/Kiwi/issues/4073>`_
+  `Issue #4073 <https://github.com/kiwitcms/kiwitcms/issues/4073>`_
 - Display number of records found on Search pages. Fixes
-  `Issue #3324 <https://github.com/kiwitcms/Kiwi/issues/3324>`_
+  `Issue #3324 <https://github.com/kiwitcms/kiwitcms/issues/3324>`_
 - Start keeping track of history for ``Product``, ``Version`` and ``Build``
   records
 
@@ -73,12 +73,12 @@ Bug fixes
 ~~~~~~~~~
 
 - Correct a typo. Fixes
-  `Issue #4072 <https://github.com/kiwitcms/Kiwi/issues/4072>`_
+  `Issue #4072 <https://github.com/kiwitcms/kiwitcms/issues/4072>`_
 - Avoid broader matches when searching for harmful HTML attributes in
   uploaded files. Fixes
-  `Issue #4074 <https://github.com/kiwitcms/Kiwi/issues/4074>`_
+  `Issue #4074 <https://github.com/kiwitcms/kiwitcms/issues/4074>`_
 - Send a POST request when clicking Logout menu while on Admin page. Fixes
-  `Issue #4005 <https://github.com/kiwitcms/Kiwi/issues/4005>`_
+  `Issue #4005 <https://github.com/kiwitcms/kiwitcms/issues/4005>`_
 
 
 Refactoring and testing
@@ -93,9 +93,9 @@ Refactoring and testing
 - Update node_modules/webpack from 5.99.9 to 5.101.3
 - Adjust API tests for Django 5.2
 - Add test for
-  `Issue #4074 <https://github.com/kiwitcms/Kiwi/issues/4074>`_
+  `Issue #4074 <https://github.com/kiwitcms/kiwitcms/issues/4074>`_
 - Add logout tests via browser for
-  `Issue #4005 <https://github.com/kiwitcms/Kiwi/issues/4005>`_
+  `Issue #4005 <https://github.com/kiwitcms/kiwitcms/issues/4005>`_
 
 
 Translations
@@ -170,7 +170,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;
 - `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_

@@ -16,14 +16,14 @@ Make code easier to maintain
 
 *Status: moderate progress*
 
-Initially [CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi) reported
+Initially [CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms) reported
 a "D" rating with a 1 year estimated effort. Now it is still on "D" rating with
 a 7 months estimated effort to bring the project back in shape.
 Code smells have dropped from 600+ to 418, duplications have been reduced from 600+ to 359!
 At the same time technical debt ratio has been decreased from 32,5% to 21,6% and
 little over 10000 lines of code have been removed from the source code.
 Checkout
-[the stats](https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt)
+[the stats](https://codeclimate.com/github/kiwitcms/kiwitcms/trends/technical_debt)
 for more info!
 
 

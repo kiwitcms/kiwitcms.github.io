@@ -46,7 +46,7 @@ contribute improvements, and tailor solutions to real-world needs.
 
 > An improvement from SiteGround's Martin Bodurov has already been merged into Kiwi TCMS.
 >
-> See [PR #3905](https://github.com/kiwitcms/Kiwi/pull/3905) for more details.
+> See [PR #3905](https://github.com/kiwitcms/kiwitcms/pull/3905) for more details.
 
 ### What makes testing at SiteGround challenging?
 
@@ -193,7 +193,7 @@ work more efficiently while maintaining consistency and quality across both manu
 
 If you like what we're doing please help us grow and sustain development!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
   and follow all news;
 - [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;

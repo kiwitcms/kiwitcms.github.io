@@ -46,12 +46,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  7ca4fda602fc    1.002 GB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  7ca4fda602fc    1.002 GB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 
 
 Changes since Kiwi TCMS 6.4
@@ -88,12 +88,12 @@ Improvements
   scenarios. We believe this puts the tester into a frame of mind more
   suitable for expressing what needs to be tested
 - Add a favicon. Fixes
-  `Issue #532 <https://github.com/kiwitcms/Kiwi/issues/532>`_
+  `Issue #532 <https://github.com/kiwitcms/kiwitcms/issues/532>`_
 - Sort Component, Product and Version objects alphabetically. Fixes
-  `Issue #633 <https://github.com/kiwitcms/Kiwi/issues/633>`_
+  `Issue #633 <https://github.com/kiwitcms/kiwitcms/issues/633>`_
 - Search test case page now shows Components and Tags
 - Search test case page now allows filtering by date. Fixes
-  `Issue #715 <https://github.com/kiwitcms/Kiwi/issues/715>`_
+  `Issue #715 <https://github.com/kiwitcms/kiwitcms/issues/715>`_
 - Search test case page now uses radio buttons to filter by automation status
 - Small performance improvement when searching test plans and test cases
 - Search test run page now allows to filter by Product but still continue to
@@ -121,7 +121,7 @@ from the default *Tester* group and re-add them again!
 - Remove ``TestCaseRun.notes``
 - Remove ``TestCase.is_automated_proposed``
 - Remove ``TestCaseText`` model, merge into ``TestCase.text`` field. Closes
-  `Issue #198 <https://github.com/kiwitcms/Kiwi/issues/198>`_
+  `Issue #198 <https://github.com/kiwitcms/kiwitcms/issues/198>`_
 - Remove ``Priority.sortkey``
 - Remove ``Build.description``
 - Remove ``Classification.sortkey`` and ``Classification.description``
@@ -157,7 +157,7 @@ Bug fixes
   `StackOverflow #54177838 <https://stackoverflow.com/questions/54177838/>`_
 - Fix cloning of test cases by surrounding bootstrap-selectpicker call with
   ``try-catch``. Fixes
-  `Issue #695 <https://github.com/kiwitcms/Kiwi/issues/695>`_
+  `Issue #695 <https://github.com/kiwitcms/kiwitcms/issues/695>`_
 - Fix a traceback with TestRun report page when the RPC connection to Bugzilla
   can't be established
 
@@ -190,7 +190,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -198,14 +198,14 @@ If you are using Kiwi TCMS as a Docker container then::
 Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
 before upgrade!
 
-**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` and ``docker-compose.yml`` will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow::
 
     # starting from an older Kiwi TCMS version
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
+    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
     # repeat until you have reached latest

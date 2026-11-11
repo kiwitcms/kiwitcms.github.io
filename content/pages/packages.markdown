@@ -8,7 +8,7 @@ Private package repositories for subscribers
 ============================================
 
 The Kiwi TCMS application is officially distributed and deployed as a container image
-with all of its source code available on [GitHub](https://github.com/kiwitcms/Kiwi).
+with all of its source code available on [GitHub](https://github.com/kiwitcms/kiwitcms).
 The Kiwi TCMS *Community Edition* container can be built from source and **DOES NOT**
 require additional package artifacts!
 

@@ -33,12 +33,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  f98908772a2a    695 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  f98908772a2a    695 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 8.9
@@ -55,7 +55,7 @@ Improvements
 - Update node_modules/prismjs from 1.22.0 to 1.23.0
 - Update node_modules/marked from 1.2.5 to 1.2.7
 - Implement 'Select all' for TestCase Search page. Resolves
-  `Issue #2103 <https://github.com/kiwitcms/Kiwi/issues/2103>`_ (Bryan Mutai)
+  `Issue #2103 <https://github.com/kiwitcms/kiwitcms/issues/2103>`_ (Bryan Mutai)
 - Change ON/OFF button messages for several buttons (Krum Petkov)
 - Remove ``delete_selected`` action from admin pages
 - Show active test runs in TestPlan page
@@ -75,7 +75,7 @@ Database
 **Warning:** Contains backwards incompatible changes.
 
 - Replace ``Build.product`` with ``Build.version``. Closes
-  `Issue #246 <https://github.com/kiwitcms/Kiwi/issues/246>`_. Build objects
+  `Issue #246 <https://github.com/kiwitcms/kiwitcms/issues/246>`_. Build objects
   are now associated with Version objects, not with Product objects!
 
   **Warning:**
@@ -108,22 +108,22 @@ Refactoring & testing
 ~~~~~~~~~~~~~~~~~~~~~
 
 - Add tests for ``tcms.core.middleware``. Fixes
-  `Issue #1605 <https://github.com/kiwitcms/Kiwi/issues/1605>`_ (Gagan Deep)
+  `Issue #1605 <https://github.com/kiwitcms/kiwitcms/issues/1605>`_ (Gagan Deep)
 - Add tests for ``tcms.handlers``. Fixes
-  `Issue #1611 <https://github.com/kiwitcms/Kiwi/issues/1611>`_ (Gagan Deep)
+  `Issue #1611 <https://github.com/kiwitcms/kiwitcms/issues/1611>`_ (Gagan Deep)
 - Add tests for ``tcms.kiwi_auth.views``. Fixes
-  `Issue #1608 <https://github.com/kiwitcms/Kiwi/issues/1608>`_
+  `Issue #1608 <https://github.com/kiwitcms/kiwitcms/issues/1608>`_
   (Abhishek Chaurasia)
 - Update pip during bugtracker integration tests to fix dependency issues
 - Reformat all files with black and isort. Closes
-  `Issue #1193 <https://github.com/kiwitcms/Kiwi/issues/1193>`_
+  `Issue #1193 <https://github.com/kiwitcms/kiwitcms/issues/1193>`_
 - Refactor ``TestExecution.get_bugs()`` to use ``TestExecution.links()``
 - Add return statement for invalid form to make pylint happy
 - Make ``Bug.assignee`` field a ``UserField``
 - Replace deprecated ``ugettext_lazy`` with ``gettext_lazy``
 - Fixes for Azure Boards integration tests
 - Remove ``CsrfDisableMiddleware``. Closes
-  `Issue #297 <https://github.com/kiwitcms/Kiwi/issues/297>`_
+  `Issue #297 <https://github.com/kiwitcms/kiwitcms/issues/297>`_
 - Remove unused methods & left-over views
 
 
@@ -186,7 +186,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Nominate Kiwi TCMS as GitHub Stars <{filename}2020-09-04-nominate-github-star.markdown>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

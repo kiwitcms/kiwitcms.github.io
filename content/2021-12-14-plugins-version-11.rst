@@ -27,7 +27,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

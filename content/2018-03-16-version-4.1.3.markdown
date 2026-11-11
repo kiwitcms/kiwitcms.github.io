@@ -9,10 +9,10 @@ This is a bug-fix and enhancement update which upgrades to the latest Django
 version, provides easier way for Docker administrators to override SSL certificates
 and access httpd log files and resolves several issues. This release also includes
 lots of internal code refactoring which removes code duplication and brings down
-[CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi) metrics
+[CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms) metrics
 to 26.9% of technical debt or 10 months to fix.
 
-We've pushed the new `pub.kiwitcms.eu/kiwitcms/kiwi` container image and updated the
+We've pushed the new `pub.kiwitcms.eu/kiwitcms/kiwitcms` container image and updated the
 demo instance at
 [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/).
 Starting forward the demo will use
@@ -28,20 +28,20 @@ Changes since Kiwi TCMS 4.1.0
 - Upgrade to [Django 2.0.3](https://docs.djangoproject.com/en/2.0/releases/2.0.3/)
 - Show `date_joined` column for user admin
 - Expose httpd logs to the host running docker. Fixes
-  [Issue #191](https://github.com/kiwitcms/Kiwi/issues/191)
+  [Issue #191](https://github.com/kiwitcms/kiwitcms/issues/191)
 
 
 ### Bug fixes
 
 - Move SSL keys under common directory in the container. Fixes
-  [Issue #231](https://github.com/kiwitcms/Kiwi/issues/231)
+  [Issue #231](https://github.com/kiwitcms/kiwitcms/issues/231)
 - Always select active builds for TestRun. Fixes
-  [Issue #245](https://github.com/kiwitcms/Kiwi/issues/245)
+  [Issue #245](https://github.com/kiwitcms/kiwitcms/issues/245)
 - Swap `escape` and `escapejs` filters. Fixes
-  [Issue #234](https://github.com/kiwitcms/Kiwi/issues/234)
+  [Issue #234](https://github.com/kiwitcms/kiwitcms/issues/234)
 - Globally disable `delete_selected` action in Admin, this removes the
   drop down selection widget! Fixes
-  [Issue #221](https://github.com/kiwitcms/Kiwi/issues/221)
+  [Issue #221](https://github.com/kiwitcms/kiwitcms/issues/221)
 - Fix error in TestCase view when `from_plan` is empty string. Fixes
   [Sentry KIWI-TCMS-Z](https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/474369640/)
 - Fix sorting issue when None is compared to int. Fixes
@@ -55,9 +55,9 @@ Changes since Kiwi TCMS 4.1.0
 ### Refactoring
 
 - Refactor inner class `CaseActions`. Fixes
-  [Issue #21](https://github.com/kiwitcms/Kiwi/issues/21) (Chenxiong Qi)
+  [Issue #21](https://github.com/kiwitcms/kiwitcms/issues/21) (Chenxiong Qi)
 - Only use `get_cases.html` template. Fixes
-  [Issue #176](https://github.com/kiwitcms/Kiwi/issues/176)
+  [Issue #176](https://github.com/kiwitcms/kiwitcms/issues/176)
 - Unify `get_details_review.html` and `get_details.html` templates
 - Remove internal `Prompt.render` class and replace with Django messages
 - Remove `mail/delete_plan.txt` template
@@ -79,7 +79,7 @@ Changes since Kiwi TCMS 4.1.0
 ### Models and database migrations
 
 - Use Django's own `DurationField`, instead of custom one. Fixes
-  [Issue #183](https://github.com/kiwitcms/Kiwi/issues/183)
+  [Issue #183](https://github.com/kiwitcms/kiwitcms/issues/183)
 
 API clients must now send values for `estimated_time` which must be in a
 format that `parse_duration()` understands, for example 'DD HH:MM:SS'! See
@@ -104,7 +104,7 @@ If you are using Kiwi TCMS as a Docker container then
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

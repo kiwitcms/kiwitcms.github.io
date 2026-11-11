@@ -63,7 +63,7 @@ CodeClimate Minor severity issues
 Difficulty: easy to moderate
 
 Check-out the
-[list of Minor severity issues](https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=minor&status%5B%5D=&status%5B%5D=open&status%5B%5D=confirmed&engine_name%5B%5D=structure&engine_name%5B%5D=duplication&engine_name%5B%5D=bandit&engine_name%5B%5D=csslint&engine_name%5B%5D=fixme&engine_name%5B%5D=radon&engine_name%5B%5D=sonar-python).
+[list of Minor severity issues](https://codeclimate.com/github/kiwitcms/kiwitcms/issues?severity%5B%5D=minor&status%5B%5D=&status%5B%5D=open&status%5B%5D=confirmed&engine_name%5B%5D=structure&engine_name%5B%5D=duplication&engine_name%5B%5D=bandit&engine_name%5B%5D=csslint&engine_name%5B%5D=fixme&engine_name%5B%5D=radon&engine_name%5B%5D=sonar-python).
 There are many of them:
 
 - CSS lint issues (we suggest you start with this one)
@@ -81,7 +81,7 @@ CodeClimate Major severity issues
 Difficulty: moderate to hard
 
 Check-out the
-[list of Major severity issues](https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=major&status%5B%5D=&status%5B%5D=open&status%5B%5D=confirmed&engine_name%5B%5D=structure&engine_name%5B%5D=duplication&engine_name%5B%5D=bandit&engine_name%5B%5D=csslint&engine_name%5B%5D=fixme&engine_name%5B%5D=radon&engine_name%5B%5D=sonar-python).
+[list of Major severity issues](https://codeclimate.com/github/kiwitcms/kiwitcms/issues?severity%5B%5D=major&status%5B%5D=&status%5B%5D=open&status%5B%5D=confirmed&engine_name%5B%5D=structure&engine_name%5B%5D=duplication&engine_name%5B%5D=bandit&engine_name%5B%5D=csslint&engine_name%5B%5D=fixme&engine_name%5B%5D=radon&engine_name%5B%5D=sonar-python).
 There are around 150 of them:
 
 - identical and similar code blocks
@@ -101,7 +101,7 @@ CodeClimate Critical severity issues
 Difficulty: hard
 
 Check-out the
-[list of Critical severity issues](https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=critical&status%5B%5D=&status%5B%5D=open&status%5B%5D=confirmed&engine_name%5B%5D=structure&engine_name%5B%5D=duplication&engine_name%5B%5D=bandit&engine_name%5B%5D=csslint&engine_name%5B%5D=fixme&engine_name%5B%5D=radon&engine_name%5B%5D=sonar-python).
+[list of Critical severity issues](https://codeclimate.com/github/kiwitcms/kiwitcms/issues?severity%5B%5D=critical&status%5B%5D=&status%5B%5D=open&status%5B%5D=confirmed&engine_name%5B%5D=structure&engine_name%5B%5D=duplication&engine_name%5B%5D=bandit&engine_name%5B%5D=csslint&engine_name%5B%5D=fixme&engine_name%5B%5D=radon&engine_name%5B%5D=sonar-python).
 All of these are functions with high cognitive complexity and
 the recommended way to deal with them is refactoring into
 [class based views](https://docs.djangoproject.com/en/2.2/topics/class-based-views/).
@@ -113,7 +113,7 @@ Improve pylint health
 Difficulty: easy
 
 Execute pylint against the latest sources and start fixing the issues.
-Looking at [pylint logs](https://travis-ci.org/kiwitcms/Kiwi/jobs/579167487) the
+Looking at [pylint logs](https://travis-ci.org/kiwitcms/kiwitcms/jobs/579167487) the
 following items are relatively easy to work on:
 
 - Everything in module tcms.urls
@@ -148,7 +148,7 @@ issues in our own source code but we also execute Bandit against the entire
 Python dependency stack. There it finds thousands of issues, so much so that
 the reporter crashes.
 
-[In CI](https://travis-ci.org/kiwitcms/Kiwi/jobs/579167486) there are around
+[In CI](https://travis-ci.org/kiwitcms/kiwitcms/jobs/579167486) there are around
 130 issues reported. The best course of action here is to execute Bandit locally
 against the offending library and then figure out what to do:
 
@@ -166,33 +166,33 @@ Work on reported issues
 
 The following issues look suitable for a sprint and don't require lots of
 background knowledge. You can also find them using the
-[`PyConBalkan`](https://github.com/kiwitcms/Kiwi/labels/PyConBalkan) label on
+[`PyConBalkan`](https://github.com/kiwitcms/kiwitcms/labels/PyConBalkan) label on
 GitHub:
 
-- [#212](https://github.com/kiwitcms/Kiwi/issues/212) - moderate - Convert jQ to $ -
+- [#212](https://github.com/kiwitcms/kiwitcms/issues/212) - moderate - Convert jQ to $ -
   this is an easy search & rename but will require more extensive manual testing
-- [#431](https://github.com/kiwitcms/Kiwi/issues/431) - moderate to hard - Remove JavaScript fireEvent() -
+- [#431](https://github.com/kiwitcms/kiwitcms/issues/431) - moderate to hard - Remove JavaScript fireEvent() -
   17 matches in `static/js/`. Must be replaced with direct function calls
-- [#652](https://github.com/kiwitcms/Kiwi/issues/652) - easy - Removal of labels from form fields -
+- [#652](https://github.com/kiwitcms/kiwitcms/issues/652) - easy - Removal of labels from form fields -
   all labels must be included in the HTML template and marked for translation
-- [#681](https://github.com/kiwitcms/Kiwi/issues/681), [#682](https://github.com/kiwitcms/Kiwi/issues/682) - moderate -
+- [#681](https://github.com/kiwitcms/kiwitcms/issues/681), [#682](https://github.com/kiwitcms/kiwitcms/issues/682) - moderate -
   Move API modules & their tests from `xmlrpc/api/<app>.py` to `<app>/api.py`. These have good test
   coverage so you have to make sure you don't break anything
-- [#971](https://github.com/kiwitcms/Kiwi/issues/971) - moderate - manage.py command for changing Site URL -
+- [#971](https://github.com/kiwitcms/kiwitcms/issues/971) - moderate - manage.py command for changing Site URL -
   will help with automatic provisioning, e.g. Ansible. For howto see
   [Django docs](https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/)
-- [#1021](https://github.com/kiwitcms/Kiwi/issues/1021) - moderate - Update TestCase page UI to allow adding TestPlans to cases -
+- [#1021](https://github.com/kiwitcms/kiwitcms/issues/1021) - moderate - Update TestCase page UI to allow adding TestPlans to cases -
   use `TestPlan.add_case()` API method and refresh the widget. See how Tags and Components cards work
   in the same page
-- [#1070](https://github.com/kiwitcms/Kiwi/issues/1070) - moderate - manage.py command for checking email settings -
+- [#1070](https://github.com/kiwitcms/kiwitcms/issues/1070) - moderate - manage.py command for checking email settings -
   will help with troubleshooting misconfigured email. Must raise exceptions if something fails.
   For howto see
   [Django docs](https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/)
-- [#733](https://github.com/kiwitcms/Kiwi/issues/733),
-  [#736](https://github.com/kiwitcms/Kiwi/issues/736),
-  [#738](https://github.com/kiwitcms/Kiwi/issues/738),
-  [#883](https://github.com/kiwitcms/Kiwi/issues/883),
-  [#1089](https://github.com/kiwitcms/Kiwi/issues/1089) - hard to very hard - New checkers for pylint -
+- [#733](https://github.com/kiwitcms/kiwitcms/issues/733),
+  [#736](https://github.com/kiwitcms/kiwitcms/issues/736),
+  [#738](https://github.com/kiwitcms/kiwitcms/issues/738),
+  [#883](https://github.com/kiwitcms/kiwitcms/issues/883),
+  [#1089](https://github.com/kiwitcms/kiwitcms/issues/1089) - hard to very hard - New checkers for pylint -
   Kiwi TCMS uses customized pylint checkers to discover various conditions. We need a few more
   of them and/or update of the existing ones
 

@@ -70,7 +70,7 @@ new interns (Ivo, Kaloyan and Tseko) who built this website!
 
 
 Tony is the #4 contributor to Kiwi TCMS in
-terms of [number of commits](https://github.com/kiwitcms/Kiwi/graphs/contributors)
+terms of [number of commits](https://github.com/kiwitcms/kiwitcms/graphs/contributors)
 and is on track to surpass one of the original authors (before Kiwi TCMS was forked)!
 He's been working mostly on internal refactoring and resolving the thousands
 of pylint errors that we had (down to around 500 I think). This summer Tony and I

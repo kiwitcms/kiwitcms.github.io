@@ -21,7 +21,7 @@ You can explore everything at
 
     Public container image (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  1cefd747576b    806MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  1cefd747576b    806MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -36,11 +36,11 @@ Security
 ~~~~~~~~
 
 - Overwrite all fields when saving BugSystem via Admin. Fixes
-  `GHSA-38fx-5xmx-c3r8 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-38fx-5xmx-c3r8>`_
+  `GHSA-38fx-5xmx-c3r8 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-38fx-5xmx-c3r8>`_
 - Improve field arguments restriction for JSON-RPC API method calls. Fixes
-  `GHSA-9g83-4wjw-77gx <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-9g83-4wjw-77gx>`_
+  `GHSA-9g83-4wjw-77gx <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-9g83-4wjw-77gx>`_
 - Validate ``BugSystem.tracker_type`` field against ``settings.EXTERNAL_BUG_TRACKERS``. Fixes
-  `GHSA-vm6v-85rx-3mr2 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-vm6v-85rx-3mr2>`_
+  `GHSA-vm6v-85rx-3mr2 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-vm6v-85rx-3mr2>`_
 
 
 Improvements
@@ -115,7 +115,7 @@ Happy testing!
 
 If you like what we're doing please help us grow:
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all news;
 - `Become a subscriber </#subscriptions>`_ and help us sustain development

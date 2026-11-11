@@ -22,12 +22,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  39fcb88182bb    963.4 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  39fcb88182bb    963.4 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 
 
 Changes since Kiwi TCMS 6.3
@@ -43,7 +43,7 @@ Security
   See CVE-2018-14041
 - By default session cookies will expire after 24 hours. This can be controlled
   via the ``SESSION_COOKIE_AGE`` setting. Fixes
-  `Issue #556 <https://github.com/kiwitcms/Kiwi/issues/556>`_
+  `Issue #556 <https://github.com/kiwitcms/kiwitcms/issues/556>`_
 
 
 Improvements
@@ -75,7 +75,7 @@ Removed functionality
   This is the same as ``TestRun page -> Cases menu -> Add`` action
 - Legacy reports will be removed after 1st March 2019. Provide your
   feedback in
-  `Issue #657 <https://github.com/kiwitcms/Kiwi/issues/657>`_
+  `Issue #657 <https://github.com/kiwitcms/kiwitcms/issues/657>`_
 - The ``/run/`` URL path has been merged with ``/runs/`` due to configuration
   refactoring. This may break your bookmarks or permalinks!
 
@@ -86,7 +86,7 @@ Bug fixes
 - Don't traceback if markdown text is ``None``. Originally reported as
   `SO #53662887 <https://stackoverflow.com/questions/53662887/>`_
 - Show loading spinner when searching. Fixes
-  `Issue #653 <https://github.com/kiwitcms/Kiwi/issues/653>`_
+  `Issue #653 <https://github.com/kiwitcms/kiwitcms/issues/653>`_
 - Quick fix: when viewing TestPlan cases make TC summary link to the test case.
   Previously the summary column was a link to nowhere.
 
@@ -106,13 +106,13 @@ Refactoring
 - New and updated internal linters
 - Refactor ``testplans.views.new`` to class based view (Anton Sankov)
 - Refactor ``TestCase -> Bugs tab -> Remove`` to JSON-RPC. References
-  `Issue #18 <https://github.com/kiwitcms/Kiwi/issues/18>`_
+  `Issue #18 <https://github.com/kiwitcms/kiwitcms/issues/18>`_
 - Refactor ``removeCaseRunBug()`` to JSON-RPC, References
-  `Issue #18 <https://github.com/kiwitcms/Kiwi/issues/18>`_
+  `Issue #18 <https://github.com/kiwitcms/kiwitcms/issues/18>`_
 - Remove unused ``render_form()`` methods
 - Remove unnecessary string-to-int conversion (Ivaylo Ivanov)
 - Remove obsolete label fields. References
-  `Issue #652 <https://github.com/kiwitcms/Kiwi/issues/652>`_ (Anton Sankov)
+  `Issue #652 <https://github.com/kiwitcms/kiwitcms/issues/652>`_ (Anton Sankov)
 - Remove JavaScript that duplicates ``requestOperationUponFilteredCases()``
 - Remove ``QuerySetIterationProxy`` class - not used anymore
 
@@ -125,7 +125,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -133,14 +133,14 @@ If you are using Kiwi TCMS as a Docker container then::
 Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
 before upgrade!
 
-**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` and ``docker-compose.yml`` will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow::
 
     # starting from an older Kiwi TCMS version
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
+    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
     # repeat until you have reached latest

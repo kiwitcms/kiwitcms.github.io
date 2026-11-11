@@ -22,7 +22,7 @@ You can explore everything at
 
     Public container image (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  12fc270ef5b9    862MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  12fc270ef5b9    862MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -37,9 +37,9 @@ Security
 ~~~~~~~~
 
 - Restrict open redirect. Fixes
-  `CVE-2026-54724 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-hmj5-jm8h-h9fh>`_
+  `CVE-2026-54724 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-hmj5-jm8h-h9fh>`_
 - Validate user input in ``extra_link`` fields. Fixes
-  `CVE-2026-55630 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-473p-56xx-vg67>`_
+  `CVE-2026-55630 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-473p-56xx-vg67>`_
 
 
 Improvements
@@ -69,7 +69,7 @@ API
 ~~~
 
 - Add ``TestExecution.remove_tag()`` method. Refs
-  `Issue #4349 <https://github.com/kiwitcms/Kiwi/issues/4349>`_
+  `Issue #4349 <https://github.com/kiwitcms/kiwitcms/issues/4349>`_
 - Method ``Tag.filter()`` now returns the ``execution`` field
 
 
@@ -142,7 +142,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all news;
 - `Become a subscriber </#subscriptions>`_ and help us sustain development

@@ -32,12 +32,12 @@ You can explore everything at
 
     Container images::
     
-        pub.kiwitcms.eu/kiwitcms/kiwi       latest  0574b19b5d66    583 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-        pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  0574b19b5d66    583 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 **IMPORTANT:** version tagged
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -61,17 +61,17 @@ Improvements
 - Update psycopg2 from 2.9.1 to 2.9.2
 - Display a warning if connection doesn't use HTTPS (Ivajlo Karabojkov)
 - Account registration page can be turned on/off via settings. Fixes
-  `Issue #2500 <https://github.com/kiwitcms/Kiwi/issues/2500>`_
+  `Issue #2500 <https://github.com/kiwitcms/kiwitcms/issues/2500>`_
 - TestCase Search page can now filter by TestPlan. Fixes
-  `Issue #2283 <https://github.com/kiwitcms/Kiwi/issues/2283>`_
+  `Issue #2283 <https://github.com/kiwitcms/kiwitcms/issues/2283>`_
 - Allow template selection when creating new test case. Fixes
-  `Issue #957 <https://github.com/kiwitcms/Kiwi/issues/957>`_
+  `Issue #957 <https://github.com/kiwitcms/kiwitcms/issues/957>`_
 - TestCase page now allows specification of properties, e.g. mobile devices
   on which the test should be executed. This feature serves as a building
   block for
-  `Issue #1843 <https://github.com/kiwitcms/Kiwi/issues/1843>`_,
-  `Issue #1931 <https://github.com/kiwitcms/Kiwi/issues/1931>`_ and
-  `Issue #1344 <https://github.com/kiwitcms/Kiwi/issues/1344>`_ but isn't active anywhere else inside
+  `Issue #1843 <https://github.com/kiwitcms/kiwitcms/issues/1843>`_,
+  `Issue #1931 <https://github.com/kiwitcms/kiwitcms/issues/1931>`_ and
+  `Issue #1344 <https://github.com/kiwitcms/kiwitcms/issues/1344>`_ but isn't active anywhere else inside
   Kiwi TCMS at the moment
 - TestExecution properties will be displayed inside TestRun page if they
   have been specified
@@ -130,7 +130,7 @@ API
 - Method ``TestCase.filter()`` now returns additional fields
   ``setup_duration``, ``testing_duration``, ``expected_duration`` - all
   serialized in seconds. Refs
-  `Issue #1923 <https://github.com/kiwitcms/Kiwi/issues/1923>`_ (Mfon Eti-mfon)
+  `Issue #1923 <https://github.com/kiwitcms/kiwitcms/issues/1923>`_ (Mfon Eti-mfon)
 - Method ``User.filter()`` will no longer return fields
   ``groups``, ``user_permissions``, ``date_joined`` and ``last_login``
 - New method ``TestExecution.properties()``
@@ -143,9 +143,9 @@ Bug fixes
 ~~~~~~~~~
 
 - Unify tab size & tab indentation b/w Python & SimpleMDE. Fixes
-  `Issue #1802 <https://github.com/kiwitcms/Kiwi/issues/1802>`_
+  `Issue #1802 <https://github.com/kiwitcms/kiwitcms/issues/1802>`_
 - Use ``sane_list extension`` for rendering consecutive lists in markdown. Closes
-  `Issue #2511 <https://github.com/kiwitcms/Kiwi/issues/2511>`_
+  `Issue #2511 <https://github.com/kiwitcms/kiwitcms/issues/2511>`_
 
 **Warning:**
 
@@ -164,21 +164,21 @@ Bug fixes
 
 - Fix broken URL and minor updates to documentation
 - Update GitLab tracker integration documentation to avoid confusion. Closes
-  `Issue #2559 <https://github.com/kiwitcms/Kiwi/issues/2559>`_
+  `Issue #2559 <https://github.com/kiwitcms/kiwitcms/issues/2559>`_
 - Limit tag input length to 255 characters. Closes
-  `Issue #2176 <https://github.com/kiwitcms/Kiwi/issues/2176>`_
+  `Issue #2176 <https://github.com/kiwitcms/kiwitcms/issues/2176>`_
 - Make error notifications in Admin to display with red color
 - Select only visible rows for bulk-update in TestRun page. Fixes
-  `Issue #2222 <https://github.com/kiwitcms/Kiwi/issues/2222>`_
+  `Issue #2222 <https://github.com/kiwitcms/kiwitcms/issues/2222>`_
 - Remove ``Cache-Control`` header from httpd. Closes
-  `Issue #443 <https://github.com/kiwitcms/Kiwi/issues/443>`_
+  `Issue #443 <https://github.com/kiwitcms/kiwitcms/issues/443>`_
 
 
 Refactoring and testing
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 - Add permissions test for add-hyperlink-bulk menu. Closes
-  `Issue #716 <https://github.com/kiwitcms/Kiwi/issues/716>`_
+  `Issue #716 <https://github.com/kiwitcms/kiwitcms/issues/716>`_
 - Add explicit tests for issue tracker integration with GitLab.com
 - Tests teardown - remove comments & close issues on GitLab.com
 - Add missing ``rlPhaseEnd`` for docker tests
@@ -237,7 +237,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

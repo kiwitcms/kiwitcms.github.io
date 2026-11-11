@@ -20,7 +20,7 @@ Complete the internal refactoring
 
 *Status: minimal progress, needs help*
 
-[CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi) progress is:
+[CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms) progress is:
 
 * -30 code smells
 * -40 duplications
@@ -125,7 +125,7 @@ Improve engineering productivity
 
 Our mission is to transform testing in your organization by providing
 the tools for that via Kiwi TCMS. It is astonishing that so far nobody has provided
-any kind of feedback in [Issue #703](https://github.com/kiwitcms/Kiwi/issues/703)
+any kind of feedback in [Issue #703](https://github.com/kiwitcms/kiwitcms/issues/703)
 wrt improving productivity in their teams!
 
 We have some ideas which have been blocked by lack of resources on the team and

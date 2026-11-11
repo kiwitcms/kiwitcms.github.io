@@ -30,7 +30,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
     
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  bcc4c658440a    622MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  bcc4c658440a    622MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -59,9 +59,9 @@ API
 ~~~
 
 - New API method ``Category.create()``. Fixes
-  `Issue #2705 <https://github.com/kiwitcms/Kiwi/issues/2705>`_ (Erik Heeren)
+  `Issue #2705 <https://github.com/kiwitcms/kiwitcms/issues/2705>`_ (Erik Heeren)
 - New API method ``Classification.create()``. Fixes
-  `Issue #2705 <https://github.com/kiwitcms/Kiwi/issues/2705>`_ (Erik Heeren)
+  `Issue #2705 <https://github.com/kiwitcms/kiwitcms/issues/2705>`_ (Erik Heeren)
 
 
 Refactoring and testing
@@ -141,7 +141,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

@@ -64,7 +64,7 @@ Kiwi TCMS itself uses services and tools like Snyk, npm audit, Coverity and Band
 against our own and against 3rd party source code. On the other hand
 some of our components (e.g. PatternFly) do not perform any kind of
 security testing. The starting point to unravel this is
-[Issue #871](https://github.com/kiwitcms/Kiwi/issues/871).
+[Issue #871](https://github.com/kiwitcms/kiwitcms/issues/871).
 
 As a minimum all issues reported by bandit & coverity against 3rd party
 dependencies must be sorted out:
@@ -72,7 +72,7 @@ dependencies must be sorted out:
 - Figure out if we execute our tools in the appropriate way as to not
   report unnecessary issues
 - Dissect all of the issues, especially
-  [ones from Bandit](https://github.com/kiwitcms/Kiwi/runs/1608837125?check_suite_focus=true),
+  [ones from Bandit](https://github.com/kiwitcms/kiwitcms/runs/1608837125?check_suite_focus=true),
   report them to their upstream community, discuss and decide how to fix or
   ignore the issue and send a pull request to upstream
 - Figure out how to keep track/dashboard whether or not all of our runtime
@@ -94,13 +94,13 @@ do!
 
 You should start with GitHub because this is what Kiwi TCMS uses and we can
 immediately eat our own dog food. Originally proposed in
-[Issue #817](https://github.com/kiwitcms/Kiwi/issues/817) then moved to
+[Issue #817](https://github.com/kiwitcms/kiwitcms/issues/817) then moved to
 [github-app #10](https://github.com/kiwitcms/github-app/issues/10) with a
 slightly different focus.
 
 Next (or in parallel) would be similar
 functionality for GitLab pipelines, proposed in
-[Issue #1421](https://github.com/kiwitcms/Kiwi/issues/1421)
+[Issue #1421](https://github.com/kiwitcms/kiwitcms/issues/1421)
 
 
 Java hacking
@@ -112,10 +112,10 @@ experts in Java. In the testing world however Java is a very popular
 language and we need help building on top of the existing library and
 developing several other tools:
 
-- [Issue #692](https://github.com/kiwitcms/Kiwi/issues/692) - TestNG plugin
-- [Issue #1072](https://github.com/kiwitcms/Kiwi/issues/1072) - Jenkins plugin,
+- [Issue #692](https://github.com/kiwitcms/kiwitcms/issues/692) - TestNG plugin
+- [Issue #1072](https://github.com/kiwitcms/kiwitcms/issues/1072) - Jenkins plugin,
   probably similar in scope to the proposed GitHub/GitLab integration above
-- [Issue #1512](https://github.com/kiwitcms/Kiwi/issues/1512) - extension for the
+- [Issue #1512](https://github.com/kiwitcms/kiwitcms/issues/1512) - extension for the
   existing junit-plugin. Similar extension will likely be necessary for the
   TestNG plugin as well
 - Integration with Katalon Studio proposed at
@@ -132,13 +132,13 @@ developing several other tools:
 C# and Objective-C hacking
 --------------------------
 
-- [Issue #2020](https://github.com/kiwitcms/Kiwi/issues/2020) - reporting plugin for
+- [Issue #2020](https://github.com/kiwitcms/kiwitcms/issues/2020) - reporting plugin for
   NUnit, similar to other existing
   [automation framework plugins](https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html).
   We're not sure how popular NUnit vs other test runners in the C# world is but
   it could be a good basis for developing future plugins. The challenge here
   is mostly for us since we're a Linux based team
-- [Issue #1316](https://github.com/kiwitcms/Kiwi/issues/1316) - reporting plugin
+- [Issue #1316](https://github.com/kiwitcms/kiwitcms/issues/1316) - reporting plugin
   for *Kiwi-bdd* a simple BDD for iOS. Again the challenge here would be
   on us since we don't have experience building and testing applications on iOS
 
@@ -167,7 +167,7 @@ for a more modern solution using React. There is PatternFly implementation
 as React components too.
 
 The starting point is
-[Issue #1323](https://github.com/kiwitcms/Kiwi/issues/1323).
+[Issue #1323](https://github.com/kiwitcms/kiwitcms/issues/1323).
 
 The volume of work is a challenge because all pages need to be migrated
 and we're not sure if this can be done and released in steps or all pages
@@ -185,15 +185,15 @@ for example translations and permission checks.
 JavaScript hacking
 ------------------
 
-- [Issue #1281](https://github.com/kiwitcms/Kiwi/issues/1281) - start using ESLint
+- [Issue #1281](https://github.com/kiwitcms/kiwitcms/issues/1281) - start using ESLint
   against our code base and clean-up all related issues
-- [Issue #1910](https://github.com/kiwitcms/Kiwi/issues/1910) - replace SimpleMDE
+- [Issue #1910](https://github.com/kiwitcms/kiwitcms/issues/1910) - replace SimpleMDE
   with EasyMDE. Ideally we would like to depend on other active open source
   libraries and the rich text editor what we use looks like it needs replacement.
   We've got a few extra features hooked into the editor like syntax highlighting
   with dynamic loading of language definitions, support for inline attachments and
   a security override. All of these need to be kept in place.
-- [Issue #1919](https://github.com/kiwitcms/Kiwi/issues/1919) - reconsider using
+- [Issue #1919](https://github.com/kiwitcms/kiwitcms/issues/1919) - reconsider using
   MomentJS. Well it looks like its original authors encourage everyone to
   actually stop using it and we should consider doing so as well. As it stands
   MomentJS is not widely used inside Kiwi TCMS except for timezone conversions
@@ -208,15 +208,15 @@ Remaining telemetry
 [Testing Telemetry]({filename}2019-03-03-telemetry.markdown) is one of our cool
 features and since we've started to redesign the legacy report feature testers
 are very happy with it. There are still some bits and pieces that are missing:
-[Issue #616](https://github.com/kiwitcms/Kiwi/issues/616),
-[Issue #1923](https://github.com/kiwitcms/Kiwi/issues/1923),
-[Issue #1924](https://github.com/kiwitcms/Kiwi/issues/1924),
-[Issue #1925](https://github.com/kiwitcms/Kiwi/issues/1925),
-[Issue #1926](https://github.com/kiwitcms/Kiwi/issues/1926),
-[Issue #1927](https://github.com/kiwitcms/Kiwi/issues/1927),
-[Issue #1928](https://github.com/kiwitcms/Kiwi/issues/1928),
-[Issue #1929](https://github.com/kiwitcms/Kiwi/issues/1929),
-[Issue #1940](https://github.com/kiwitcms/Kiwi/issues/1940).
+[Issue #616](https://github.com/kiwitcms/kiwitcms/issues/616),
+[Issue #1923](https://github.com/kiwitcms/kiwitcms/issues/1923),
+[Issue #1924](https://github.com/kiwitcms/kiwitcms/issues/1924),
+[Issue #1925](https://github.com/kiwitcms/kiwitcms/issues/1925),
+[Issue #1926](https://github.com/kiwitcms/kiwitcms/issues/1926),
+[Issue #1927](https://github.com/kiwitcms/kiwitcms/issues/1927),
+[Issue #1928](https://github.com/kiwitcms/kiwitcms/issues/1928),
+[Issue #1929](https://github.com/kiwitcms/kiwitcms/issues/1929),
+[Issue #1940](https://github.com/kiwitcms/kiwitcms/issues/1940).
 
 These generally depend on having the ability to record execution times in our
 database and afterwards the features are similar but relatively independent
@@ -234,8 +234,8 @@ pair it up with [RestrictedPython](https://restrictedpython.readthedocs.io/)
 for further flexibility.
 
 This feature is being tracked in
-[Issue #1080](https://github.com/kiwitcms/Kiwi/issues/1080) and
-[Issue #913](https://github.com/kiwitcms/Kiwi/issues/914) but needs a more
+[Issue #1080](https://github.com/kiwitcms/kiwitcms/issues/1080) and
+[Issue #913](https://github.com/kiwitcms/kiwitcms/issues/914) but needs a more
 detailed definition.
 
 
@@ -256,7 +256,7 @@ Happy Testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Nominate Kiwi TCMS as GitHub Stars]({filename}2020-09-04-nominate-github-star.markdown);
 - [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)

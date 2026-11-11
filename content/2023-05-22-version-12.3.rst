@@ -28,7 +28,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  1cbaba8640d9    594MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  1cbaba8640d9    594MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -47,7 +47,7 @@ Security
   We believe this does not affect Kiwi TCMS
 - Implement better scanning for embedded ``<script>`` tags in uploaded files
 - Force ``Content-Type: text/plain`` when serving uploaded files. See
-  `GHSA-x7c2-7wvg-jpx7 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-x7c2-7wvg-jpx7>`_
+  `GHSA-x7c2-7wvg-jpx7 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-x7c2-7wvg-jpx7>`_
 - Explicitly configure top-level permissions for CI jobs as ``read-all``
 - Pass untrusted input via intermediate ENV variables in CI jobs
 
@@ -124,7 +124,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

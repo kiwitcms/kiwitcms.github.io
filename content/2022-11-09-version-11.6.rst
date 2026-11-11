@@ -30,7 +30,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
     
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  9773335a58d1    612MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  9773335a58d1    612MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -75,7 +75,7 @@ Bug fixes
 ~~~~~~~~~
 
 - ``JIRA.get_issue_type_from_jira()`` now accepts a second argument. Fixes
-  `Issue #2929 <https://github.com/kiwitcms/Kiwi/issues/2929>`_ (@cmbahadir)
+  `Issue #2929 <https://github.com/kiwitcms/kiwitcms/issues/2929>`_ (@cmbahadir)
 - Fix typo in documentation (Christian Clauss)
 - Trim white-space after splitting parameter values. For example the inputs
   'OS=Linux' and 'OS = Windows ' will result in
@@ -121,8 +121,8 @@ Kiwi TCMS Enterprise v11.6-mt
 - Update kiwitcms-tenants from 2.3.1 to 2.3.2
 - Update kiwitcms-trackers-integration from 0.2.0 to 0.3.0.
   Supports integration with OpenProject and Mantis BT.
-  Closes `Issue #2203 <https://github.com/kiwitcms/Kiwi/issues/2203>`_ and
-  `Issue #879 <https://github.com/kiwitcms/Kiwi/issues/879>`_
+  Closes `Issue #2203 <https://github.com/kiwitcms/kiwitcms/issues/2203>`_ and
+  `Issue #879 <https://github.com/kiwitcms/kiwitcms/issues/879>`_
 
 
     Private images::
@@ -161,7 +161,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

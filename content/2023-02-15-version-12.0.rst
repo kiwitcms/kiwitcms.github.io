@@ -28,7 +28,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  cbe275c11098    518MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  cbe275c11098    518MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -45,9 +45,9 @@ Security
   `CVE-2023-23969 <https://docs.djangoproject.com/en/4.1/releases/4.1.6/>`_ and
   `CVE-2023-24580 <https://docs.djangoproject.com/en/4.1/releases/4.1.7/>`_
 - Rate limit everything under /accounts/. Fixes
-  `CVE-2023-25156 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7968-h4m4-ghm9>`_
+  `CVE-2023-25156 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-7968-h4m4-ghm9>`_
 - Require a captcha challenge on password reset form. Fixes
-  `CVE-2023-25171 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7j9h-3jxf-3vrf>`_
+  `CVE-2023-25171 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-7j9h-3jxf-3vrf>`_
 
 
 Improvements
@@ -72,7 +72,7 @@ Bug fixes
 ~~~~~~~~~
 
 - Load SimpleMDE for Admin pages. Fixes
-  `Issue #3057 <https://github.com/kiwitcms/Kiwi/issues/3057>`_
+  `Issue #3057 <https://github.com/kiwitcms/kiwitcms/issues/3057>`_
 - Don't show all builds on Search Test Runs page before Product and Version
   fields are initialized when loading the page directly
 
@@ -141,7 +141,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

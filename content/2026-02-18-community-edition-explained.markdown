@@ -16,7 +16,7 @@ This is the official version of the Kiwi TCMS application as produced by
 our own team with the help of many contributors. It may also be
 referred to *upstream* or *the community edition* version and comes
 packaged as a container image which is publicly available and can be downloaded via the
-`docker pull pub.kiwitcms.eu/kiwitcms/kiwi` command!
+`docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms` command!
 
 
 Who is this for
@@ -93,7 +93,7 @@ Happy Testing!
 
 If you like what we're doing and how Kiwi TCMS please help us!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
   and follow all project news;
 - [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;

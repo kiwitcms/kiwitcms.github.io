@@ -30,12 +30,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  71a55e353da2    557 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  71a55e353da2    557 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 7.3
@@ -53,7 +53,7 @@ Improvements
 - Allow customization of test execution statuses via admin.
   For more information see
   https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses.
-  Fixes `Issue #236 <https://github.com/kiwitcms/Kiwi/issues/236>`_
+  Fixes `Issue #236 <https://github.com/kiwitcms/kiwitcms/issues/236>`_
 - Add passing rate chart to Execution trends telemetry
 - Documentation updates (@Prome88)
 
@@ -157,28 +157,28 @@ Bug fixes
 ~~~~~~~~~
 
 - Allow displaying lists with more then 9 items when reviewing test cases. Fixes
-  `Issue #339 <https://github.com/kiwitcms/Kiwi/issues/339>`_ (Mfon Eti-mfon)
+  `Issue #339 <https://github.com/kiwitcms/kiwitcms/issues/339>`_ (Mfon Eti-mfon)
 - Make ``tcms.tests.storage.RaiseWhenFileNotFound``` capable of finding
   finding static files on Windows which enables development mode for folks
   not using Linux environment. See
   `SO #55297178 <https://stackoverflow.com/questions/55297178>`_ (Mfon Eti-mfon)
 - Allow changing test execution status without adding comment. Fixes
-  `Issue #1261 <https://github.com/kiwitcms/Kiwi/issues/1261>`_
+  `Issue #1261 <https://github.com/kiwitcms/kiwitcms/issues/1261>`_
 - Properly refresh test run progress bar when changing statuses. Fixes
-  `Issue #1326 <https://github.com/kiwitcms/Kiwi/issues/1326>`_
+  `Issue #1326 <https://github.com/kiwitcms/kiwitcms/issues/1326>`_
 - Fix a bug where updating test cases from the UI was causing text and various
   other fields to be reset. Fixes
-  `Issue #1318 <https://github.com/kiwitcms/Kiwi/issues/1318>`_
+  `Issue #1318 <https://github.com/kiwitcms/kiwitcms/issues/1318>`_
 
 
 Refactoring
 ~~~~~~~~~~~
 
 - Extract attachments widget to new template. Fixes
-  `Issue #1124 <https://github.com/kiwitcms/Kiwi/issues/1124>`_
+  `Issue #1124 <https://github.com/kiwitcms/kiwitcms/issues/1124>`_
   (Rosen Sasov)
 - Rename RPC related classes. Fixes
-  `Issue #682 <https://github.com/kiwitcms/Kiwi/issues/682>`_
+  `Issue #682 <https://github.com/kiwitcms/kiwitcms/issues/682>`_
   (Rosen Sasov)
 - Add new test (Mariyan Garvanski)
 - Start using GitHub actions, first for running flake8
@@ -228,7 +228,7 @@ If you are using Kiwi TCMS as a Docker container then::
 
     cd path/containing/docker-compose/
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb-103-centos7
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -236,14 +236,14 @@ If you are using Kiwi TCMS as a Docker container then::
 **WHERE:** ``docker-compose.yml`` has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!
 
-**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` and ``docker-compose.yml`` will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow::
 
     # starting from an older Kiwi TCMS version
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
+    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
     # repeat until you have reached latest

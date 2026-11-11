@@ -19,7 +19,7 @@ Changes since Kiwi TCMS Enterprise v16.2-mt
 
 - Based on Kiwi TCMS v16.2
 - Revert social-auth-app-django back to 5.9.0. Fixes
-  `Issue #4466 <https://github.com/kiwitcms/Kiwi/issues/4466>`_
+  `Issue #4466 <https://github.com/kiwitcms/kiwitcms/issues/4466>`_
 - Update kiwitcms-tenants from 4.7.0 to 4.7.1
 
 
@@ -52,7 +52,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all news;
 - `Become a subscriber </#subscriptions>`_ and help us sustain development

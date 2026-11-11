@@ -22,15 +22,15 @@ Changes since Kiwi TCMS 3.48
 - Upgrade to Django 2.0.1
 - Don't log passwords sent via RPC
 - Log XML-RPC requests from anonymous users. Fixes
-  [Issue #126](https://github.com/kiwitcms/Kiwi/issues/126)
+  [Issue #126](https://github.com/kiwitcms/kiwitcms/issues/126)
 - Order `TCMSEnvValue` records by property name and value. Fixes
-  [Issue #155](https://github.com/kiwitcms/Kiwi/issues/155)
+  [Issue #155](https://github.com/kiwitcms/kiwitcms/issues/155)
 - flake8 fixes (Anton Sankov)
 - Start building source code documentation from Python doc strings
 - Properly urlencode emails in personal menu links
 - Remove test case import via XML files
 - Use django-attachments for user uploaded files. Fixes
-  [Issue #160](https://github.com/kiwitcms/Kiwi/issues/160)
+  [Issue #160](https://github.com/kiwitcms/kiwitcms/issues/160)
   As part of this change we no longer copy Plan and Case attachments when
   cloning these objects.
 
@@ -51,14 +51,14 @@ Changes since Kiwi TCMS 3.48
 - Remove many unused models and classes
 - Execute tests via `manage.py test` and drop py.test dependency
 - Remove useless `TestTag.string_to_list` method. Fixes
-  [Issue #106](https://github.com/kiwitcms/Kiwi/issues/106)
+  [Issue #106](https://github.com/kiwitcms/kiwitcms/issues/106)
 - Use `settings.AUTH_USER_MODEL` in ForeignKey definitions. Fixes
-  [Issue #143](https://github.com/kiwitcms/Kiwi/issues/143)
+  [Issue #143](https://github.com/kiwitcms/kiwitcms/issues/143)
 
 #### Settings
 
 - Rename `EMAIL_FROM` to `DEFAULT_FROM_EMAIL`. Fixes
-  [Issue #128](https://github.com/kiwitcms/Kiwi/issues/128)
+  [Issue #128](https://github.com/kiwitcms/kiwitcms/issues/128)
 - Rename `FILE_UPLOAD_DIR` to `MEDIA_ROOT`
 - Rename `MAX_UPLOAD_SIZE` to `FILE_UPLOAD_MAX_SIZE`
 - New setting `DELETE_ATTACHMENTS_FROM_DISK`

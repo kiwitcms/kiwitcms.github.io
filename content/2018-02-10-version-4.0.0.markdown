@@ -16,10 +16,10 @@ With this release Kiwi TCMS meets one of our
 namespaces now match DB model names and the API client class names. Lots of
 similar and duplicate methods were removed and existing ones were simplified.
 We've also reduced code duplication and technical debth by 1 month
-according to stats by [CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi).
+according to stats by [CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms).
 
 **IMPORTANT:** this is also the first release to officially publish the
-`pub.kiwitcms.eu/kiwitcms/kiwi` container image!
+`pub.kiwitcms.eu/kiwitcms/kiwitcms` container image!
 
 **WARNING:** upgrading to Kiwi TCMS 4.0.0 means you will have to upgrade
 the tcms-api client as well. None of the 4.x releases is compatible with
@@ -33,12 +33,12 @@ Changes since Kiwi TCMS 3.50
 
 - Upgrade to Django 2.0.2 which patches a security issue
 - Pin JIRA client version to 1.0.10. Fixes
-  [Issue #195](https://github.com/kiwitcms/Kiwi/issues/195)
+  [Issue #195](https://github.com/kiwitcms/kiwitcms/issues/195)
 - Generate api-docs for model classes
 - Updated documentation for all RPC methods
 - Use Grappelli jQuery initialization, fixes popup windows
 - Unify RPC namespaces, API client class names and server-side model names.
-  Fixes [Issue #153](https://github.com/kiwitcms/Kiwi/issues/153)
+  Fixes [Issue #153](https://github.com/kiwitcms/kiwitcms/issues/153)
 
 ### Settings
 
@@ -200,7 +200,7 @@ If you are using Kiwi TCMS as a Docker container then
 
     cd Kiwi/
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
 

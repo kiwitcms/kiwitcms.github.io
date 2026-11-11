@@ -22,7 +22,7 @@ Inexperienced Python developer(s)
 It is fine not to have any experience at all! You will compensate with
 commitment and hard work. Initially you are going to work on refactoring,
 cleaning up pylint errors, removing duplicate code and other issues
-reported by [CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi).
+reported by [CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms).
 
 By doing this you will have the opportunity to learn git, Python, Django,
 some CSS, JavaScript and Patternfly HTML of course. We are going to provide
@@ -88,7 +88,7 @@ Security freak
 --------------
 
 We've got [Coverity scan](https://scan.coverity.com/projects/kiwitcms-kiwi) and
-[Snyk](https://snyk.io/test/github/kiwitcms/Kiwi) automatically inspecting our
+[Snyk](https://snyk.io/test/github/kiwitcms/kiwitcms) automatically inspecting our
 code base. We do have some other tools as well and we know they can never be enough.
 
 You will be responsible for triaging the numerous issues being reported by these
