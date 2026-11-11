@@ -42,7 +42,7 @@ Engagement rules
 - News and updates will be posted at <https://opencollective.com/kiwitcms/updates/>
 - You are expected to mostly work alone on issues
 - Technical discussion will be happening via GitHub pull requests and/or GitHub issues
-  under <https://github.com/kiwitcms/Kiwi> unless indicated otherwise
+  under <https://github.com/kiwitcms/kiwitcms> unless indicated otherwise
 - Translation related discussion will be happening via Crowdin under
   <https://crowdin.com/project/kiwitcms/discussions> when needed
 - Do not contact individual team members privately, we are going to ignore such messages
@@ -67,7 +67,7 @@ Our team will try to clearly describe each task and what constitutes a
 successfully completed task, e.g. *definition of done* (DoD). If this isn't the case
 please ask questions and seek clarification about such tasks.
 
-- Only Issues under the [bounty-program milestone](https://github.com/kiwitcms/Kiwi/milestone/4)
+- Only Issues under the [bounty-program milestone](https://github.com/kiwitcms/kiwitcms/milestone/4)
   **AND** labelled with a specific monetary amount are eligible for payout!
 - Unlabelled issues need further refinement before they can be accepted for bounties!
 
@@ -90,7 +90,7 @@ You must perform the following steps:
 
 Once an expense has been submitted add a comment with your GitHub/Crowdin username
 to it + open a
-[new issue in GitHub](https://github.com/kiwitcms/Kiwi/issues/new?assignees=atodorov&labels=&template=claim_bounty.md&title=)
+[new issue in GitHub](https://github.com/kiwitcms/kiwitcms/issues/new?assignees=atodorov&labels=&template=claim_bounty.md&title=)
 /new discussion in Crowdin with link to
 the expense submission. This will help us cross-validate that we are talking
 to the same person between platforms.
@@ -117,86 +117,86 @@ Bounties: translation related tasks
 -----------------------------------
 
 - Chinese Simplified -
-  [#1459](https://github.com/kiwitcms/Kiwi/issues/1459),
-  [#1460](https://github.com/kiwitcms/Kiwi/issues/1460)
-  [#1461](https://github.com/kiwitcms/Kiwi/issues/1461),
-  [#1462](https://github.com/kiwitcms/Kiwi/issues/1462),
-  [#1463](https://github.com/kiwitcms/Kiwi/issues/1463)
+  [#1459](https://github.com/kiwitcms/kiwitcms/issues/1459),
+  [#1460](https://github.com/kiwitcms/kiwitcms/issues/1460)
+  [#1461](https://github.com/kiwitcms/kiwitcms/issues/1461),
+  [#1462](https://github.com/kiwitcms/kiwitcms/issues/1462),
+  [#1463](https://github.com/kiwitcms/kiwitcms/issues/1463)
 - Hindi -
-  [#1464](https://github.com/kiwitcms/Kiwi/issues/1464),
-  [#1465](https://github.com/kiwitcms/Kiwi/issues/1465)
-  [#1466](https://github.com/kiwitcms/Kiwi/issues/1466),
-  [#1467](https://github.com/kiwitcms/Kiwi/issues/1467),
-  [#1468](https://github.com/kiwitcms/Kiwi/issues/1468)
+  [#1464](https://github.com/kiwitcms/kiwitcms/issues/1464),
+  [#1465](https://github.com/kiwitcms/kiwitcms/issues/1465)
+  [#1466](https://github.com/kiwitcms/kiwitcms/issues/1466),
+  [#1467](https://github.com/kiwitcms/kiwitcms/issues/1467),
+  [#1468](https://github.com/kiwitcms/kiwitcms/issues/1468)
 - Indonesian -
-  [#1469](https://github.com/kiwitcms/Kiwi/issues/1469),
-  [#1470](https://github.com/kiwitcms/Kiwi/issues/1470)
-  [#1471](https://github.com/kiwitcms/Kiwi/issues/1471),
-  [#1472](https://github.com/kiwitcms/Kiwi/issues/1472),
-  [#1473](https://github.com/kiwitcms/Kiwi/issues/1473)
+  [#1469](https://github.com/kiwitcms/kiwitcms/issues/1469),
+  [#1470](https://github.com/kiwitcms/kiwitcms/issues/1470)
+  [#1471](https://github.com/kiwitcms/kiwitcms/issues/1471),
+  [#1472](https://github.com/kiwitcms/kiwitcms/issues/1472),
+  [#1473](https://github.com/kiwitcms/kiwitcms/issues/1473)
 - Bengali -
-  [#1474](https://github.com/kiwitcms/Kiwi/issues/1474),
-  [#1475](https://github.com/kiwitcms/Kiwi/issues/1475)
-  [#1476](https://github.com/kiwitcms/Kiwi/issues/1476),
-  [#1477](https://github.com/kiwitcms/Kiwi/issues/1477),
-  [#1478](https://github.com/kiwitcms/Kiwi/issues/1478)
+  [#1474](https://github.com/kiwitcms/kiwitcms/issues/1474),
+  [#1475](https://github.com/kiwitcms/kiwitcms/issues/1475)
+  [#1476](https://github.com/kiwitcms/kiwitcms/issues/1476),
+  [#1477](https://github.com/kiwitcms/kiwitcms/issues/1477),
+  [#1478](https://github.com/kiwitcms/kiwitcms/issues/1478)
 - German -
-  [#1505](https://github.com/kiwitcms/Kiwi/issues/1505),
-  [#1506](https://github.com/kiwitcms/Kiwi/issues/1506),
-  [#1507](https://github.com/kiwitcms/Kiwi/issues/1507),
-  [#1508](https://github.com/kiwitcms/Kiwi/issues/1508),
-  [#1509](https://github.com/kiwitcms/Kiwi/issues/1509)
+  [#1505](https://github.com/kiwitcms/kiwitcms/issues/1505),
+  [#1506](https://github.com/kiwitcms/kiwitcms/issues/1506),
+  [#1507](https://github.com/kiwitcms/kiwitcms/issues/1507),
+  [#1508](https://github.com/kiwitcms/kiwitcms/issues/1508),
+  [#1509](https://github.com/kiwitcms/kiwitcms/issues/1509)
 - Japanese -
-  [#1489](https://github.com/kiwitcms/Kiwi/issues/1489),
-  [#1490](https://github.com/kiwitcms/Kiwi/issues/1490)
-  [#1491](https://github.com/kiwitcms/Kiwi/issues/1491),
-  [#1492](https://github.com/kiwitcms/Kiwi/issues/1492),
-  [#1493](https://github.com/kiwitcms/Kiwi/issues/1493)
+  [#1489](https://github.com/kiwitcms/kiwitcms/issues/1489),
+  [#1490](https://github.com/kiwitcms/kiwitcms/issues/1490)
+  [#1491](https://github.com/kiwitcms/kiwitcms/issues/1491),
+  [#1492](https://github.com/kiwitcms/kiwitcms/issues/1492),
+  [#1493](https://github.com/kiwitcms/kiwitcms/issues/1493)
 - Swahili -
-  [#1494](https://github.com/kiwitcms/Kiwi/issues/1494),
-  [#1495](https://github.com/kiwitcms/Kiwi/issues/1495)
-  [#1497](https://github.com/kiwitcms/Kiwi/issues/1497),
-  [#1498](https://github.com/kiwitcms/Kiwi/issues/1498),
-  [#1499](https://github.com/kiwitcms/Kiwi/issues/1499)
+  [#1494](https://github.com/kiwitcms/kiwitcms/issues/1494),
+  [#1495](https://github.com/kiwitcms/kiwitcms/issues/1495)
+  [#1497](https://github.com/kiwitcms/kiwitcms/issues/1497),
+  [#1498](https://github.com/kiwitcms/kiwitcms/issues/1498),
+  [#1499](https://github.com/kiwitcms/kiwitcms/issues/1499)
 - Vietnamese -
-  [#1484](https://github.com/kiwitcms/Kiwi/issues/1484),
-  [#1485](https://github.com/kiwitcms/Kiwi/issues/1485)
-  [#1486](https://github.com/kiwitcms/Kiwi/issues/1486),
-  [#1487](https://github.com/kiwitcms/Kiwi/issues/1487),
-  [#1488](https://github.com/kiwitcms/Kiwi/issues/1488)
+  [#1484](https://github.com/kiwitcms/kiwitcms/issues/1484),
+  [#1485](https://github.com/kiwitcms/kiwitcms/issues/1485)
+  [#1486](https://github.com/kiwitcms/kiwitcms/issues/1486),
+  [#1487](https://github.com/kiwitcms/kiwitcms/issues/1487),
+  [#1488](https://github.com/kiwitcms/kiwitcms/issues/1488)
 - Korean -
-  [#1479](https://github.com/kiwitcms/Kiwi/issues/1479),
-  [#1480](https://github.com/kiwitcms/Kiwi/issues/1480)
-  [#1481](https://github.com/kiwitcms/Kiwi/issues/1481),
-  [#1482](https://github.com/kiwitcms/Kiwi/issues/1482),
-  [#1483](https://github.com/kiwitcms/Kiwi/issues/1483)
+  [#1479](https://github.com/kiwitcms/kiwitcms/issues/1479),
+  [#1480](https://github.com/kiwitcms/kiwitcms/issues/1480)
+  [#1481](https://github.com/kiwitcms/kiwitcms/issues/1481),
+  [#1482](https://github.com/kiwitcms/kiwitcms/issues/1482),
+  [#1483](https://github.com/kiwitcms/kiwitcms/issues/1483)
 
 
 Bounties: test automation plugins
 ---------------------------------
 
 - Django test runner reporting plugin -
-  [#693](https://github.com/kiwitcms/Kiwi/issues/693)
-- py.test reporting plugin - [#1511](https://github.com/kiwitcms/Kiwi/issues/1511)
+  [#693](https://github.com/kiwitcms/kiwitcms/issues/693)
+- py.test reporting plugin - [#1511](https://github.com/kiwitcms/kiwitcms/issues/1511)
 - JUnit plugin: annotation & improvement for test case mapping -
-  [#1512](https://github.com/kiwitcms/Kiwi/issues/1512)
+  [#1512](https://github.com/kiwitcms/kiwitcms/issues/1512)
 - TestNG plugin -
-  [#692](https://github.com/kiwitcms/Kiwi/issues/692)
+  [#692](https://github.com/kiwitcms/kiwitcms/issues/692)
 
 
 Bounties: assorted technical issues
 -----------------------------------
 
 - pylint -
-  [#1192](https://github.com/kiwitcms/Kiwi/issues/1192)
+  [#1192](https://github.com/kiwitcms/kiwitcms/issues/1192)
 - JavaScript: Add buttons for creating tables in text editor -
-  [#1531](https://github.com/kiwitcms/Kiwi/issues/1531)
+  [#1531](https://github.com/kiwitcms/kiwitcms/issues/1531)
 - Migration from Travis CI to GitHub workflows -
-  [#1550](https://github.com/kiwitcms/Kiwi/issues/1550),
-  [#1551](https://github.com/kiwitcms/Kiwi/issues/1551),
-  [#1552](https://github.com/kiwitcms/Kiwi/issues/1552),
-  [#1553](https://github.com/kiwitcms/Kiwi/issues/1553),
-  [#1554](https://github.com/kiwitcms/Kiwi/issues/1554)
+  [#1550](https://github.com/kiwitcms/kiwitcms/issues/1550),
+  [#1551](https://github.com/kiwitcms/kiwitcms/issues/1551),
+  [#1552](https://github.com/kiwitcms/kiwitcms/issues/1552),
+  [#1553](https://github.com/kiwitcms/kiwitcms/issues/1553),
+  [#1554](https://github.com/kiwitcms/kiwitcms/issues/1554)
 
 
 Call for sponsors

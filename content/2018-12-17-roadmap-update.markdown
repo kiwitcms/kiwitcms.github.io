@@ -20,7 +20,7 @@ Make code easier to maintain
 
 *Status: good progress*
 
-Initially [CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi) reported
+Initially [CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms) reported
 a "D" rating with 600+ code smells and 600+ duplications and a 1 year estimation
 to resolve these. We're now down to "C" rating with 171 smells and 203 duplications.
 
@@ -29,7 +29,7 @@ around 14000 lines of Python code and 8000 lines of JavaScript code without
 losing significant functionality.
 
 Checkout
-[the stats](https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt)
+[the stats](https://codeclimate.com/github/kiwitcms/kiwitcms/trends/technical_debt)
 for more info!
 
 

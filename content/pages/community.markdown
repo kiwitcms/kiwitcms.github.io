@@ -11,7 +11,7 @@ For the  official Kiwi TCMS *Community Edition* container image
 ## Community
 
 - **Stack Overflow** tag ["kiwi-tcms"](https://stackoverflow.com/questions/tagged/kiwi-tcms)
-- **GitHub** [issue tracker](https://github.com/kiwitcms/Kiwi/issues)
+- **GitHub** [issue tracker](https://github.com/kiwitcms/kiwitcms/issues)
 - **LinkedIn** [#KiwiTCMS](https://www.linkedin.com/company/kiwi-tcms)
 - **Blog** tag ["community"](/blog/tags/community/)
 - **Email** `info-at-kiwitcms.org` ([support]({filename}support.markdown) requests will be ignored)
@@ -28,10 +28,10 @@ To make Kiwi TCMS a welcoming and harassment-free experience for everyone, we fo
 
 Kiwi TCMS was initially started by [Red Hat, Inc.](https://www.redhat.com/en) under the name Nitrate.
 It was intended as a replacement for Mozilla's Testopia and has grown on its own
-[since then](https://github.com/kiwitcms/Kiwi/blob/master/CHANGELOG.rst#381804-jan-24-2017-released-on-mrsenkocom).
+[since then](https://github.com/kiwitcms/kiwitcms/blob/master/CHANGELOG.rst#381804-jan-24-2017-released-on-mrsenkocom).
 Latest development is done by
 [the Kiwi TCMS team]({filename}team.html) and its
-[contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors).
+[contributors](https://github.com/kiwitcms/kiwitcms/graphs/contributors).
 
 The Kiwi TCMS logo has been designed by Milos Babic.
 

@@ -55,7 +55,7 @@ into our database. This is documented both on the app installation screen itself
 [https://github.com/kiwitcms/github-app](https://github.com/kiwitcms/github-app)!
 
 Further ideas about integration between GitHub and Kiwi TCMS, including the original
-idea about status checks from [Issue #700](https://github.com/kiwitcms/Kiwi/issues/700),
+idea about status checks from [Issue #700](https://github.com/kiwitcms/kiwitcms/issues/700),
 can be found at
 [https://github.com/kiwitcms/github-app/issues](https://github.com/kiwitcms/github-app/issues).
 

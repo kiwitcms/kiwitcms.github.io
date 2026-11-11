@@ -28,7 +28,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  5f88a1a37a39    599MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  5f88a1a37a39    599MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -43,7 +43,7 @@ Security
 ~~~~~~~~
 
 - Improved checks when uploading potentially dangerous files. Fixes
-  `CVE-2023-33977 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-2fqm-m4r2-fh98>`_
+  `CVE-2023-33977 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-2fqm-m4r2-fh98>`_
 
 
 Improvements
@@ -53,12 +53,12 @@ Improvements
 - Update jira from 3.5.0 to 3.5.1
 - Add ``HEALTHCHECK`` command for Docker container
 - Add searching by TestRun summary in Telemetry pages. Fixes
-  `Issue #3190 <https://github.com/kiwitcms/Kiwi/issues/3190>`_
+  `Issue #3190 <https://github.com/kiwitcms/kiwitcms/issues/3190>`_
 - Make it more clear when email notifications trigger. Closes
-  `Issue #3212 <https://github.com/kiwitcms/Kiwi/issues/3212>`_
+  `Issue #3212 <https://github.com/kiwitcms/kiwitcms/issues/3212>`_
 - Improve messaging for Issue Tracker Configuration health check.
-  References `Issue #3141 <https://github.com/kiwitcms/Kiwi/issues/3141>`_,
-  closes `Issue #3191 <https://github.com/kiwitcms/Kiwi/issues/3191>`_,
+  References `Issue #3141 <https://github.com/kiwitcms/kiwitcms/issues/3141>`_,
+  closes `Issue #3191 <https://github.com/kiwitcms/kiwitcms/issues/3191>`_,
   closes `Issue #34 <https://github.com/kiwitcms/trackers-integration/issues/34>`_
 
 
@@ -124,7 +124,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

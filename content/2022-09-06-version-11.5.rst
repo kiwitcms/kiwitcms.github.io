@@ -29,7 +29,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
     
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  66c51b64e0a6    608MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  66c51b64e0a6    608MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -47,17 +47,17 @@ Improvements
 - Update python-gitlab from 3.7.0 to 3.9.0
 - Update tzdata from 2022.1 to 2022.2
 - Add Product drop down field in Build admin page. Closes
-  `Issue #2818 <https://github.com/kiwitcms/Kiwi/issues/2818>`_
+  `Issue #2818 <https://github.com/kiwitcms/kiwitcms/issues/2818>`_
 - Add 'prune' argument required for Django 4.1 compatibility
 - Improve documentation around ``DEFAULT_GROUPS``
 - Update docs about language preferences and add a Change language menu item. Closes
-  `Issue #2901 <https://github.com/kiwitcms/Kiwi/issues/2901>`_,
-  `Issue #2902 <https://github.com/kiwitcms/Kiwi/issues/2902>`_,
-  `Issue #2903 <https://github.com/kiwitcms/Kiwi/issues/2903>`_
+  `Issue #2901 <https://github.com/kiwitcms/kiwitcms/issues/2901>`_,
+  `Issue #2902 <https://github.com/kiwitcms/kiwitcms/issues/2902>`_,
+  `Issue #2903 <https://github.com/kiwitcms/kiwitcms/issues/2903>`_
 - Performance improvement for Status matrix telemetry
 - Performance improvement for Execution trends telemetry
 - Display a spinner widget while telemetry data is still loading. Closes
-  `Issue #1801 <https://github.com/kiwitcms/Kiwi/issues/1801>`_
+  `Issue #1801 <https://github.com/kiwitcms/kiwitcms/issues/1801>`_
 
 
 Bug fixes
@@ -129,7 +129,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

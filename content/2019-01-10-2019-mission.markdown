@@ -26,11 +26,11 @@ with it this year.
 <img src="/images/codeclimate_jan_2019.png" style="float:none"
      alt="CodeClimate report" title="CodeClimate report">
 
-* [CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi):
+* [CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms):
   0 issues, 0% technical debt, health score A
-* [Scrutinizer](https://scrutinizer-ci.com/g/kiwitcms/Kiwi/):
+* [Scrutinizer](https://scrutinizer-ci.com/g/kiwitcms/kiwitcms/):
   only A and B type issues
-* [Pylint](https://travis-ci.org/kiwitcms/Kiwi/jobs/475946313): 0 issues
+* [Pylint](https://travis-ci.org/kiwitcms/kiwitcms/jobs/475946313): 0 issues
 * Remove vendored-in Handlebars, jQuery, jQuery-UI and TableDnD JavaScript
   libraries in favor of existing npm dependencies
 * Front-end uses the existing JSON-RPC instead of backend views that
@@ -38,7 +38,7 @@ with it this year.
   `postToURL()` and `jQ.ajax()` on the front-end
 * Inspect and classify all 3rd party issues reported from
   [Coverity](https://scan.coverity.com/projects/kiwitcms-kiwi) and
-  [Bandit](https://travis-ci.org/kiwitcms/Kiwi/jobs/475946312). Report and fix
+  [Bandit](https://travis-ci.org/kiwitcms/kiwitcms/jobs/475946312). Report and fix
   what we can, ignore the rest that do not affect Kiwi TCMS.
 
 Redesign the UI templates with the help of Patternfly
@@ -60,7 +60,7 @@ reporting sub-system to be more easily extendable.
 
 Phase out is planned to begin after 1st March 2019! Until then we are looking for your
 feedback. Please comment in
-[Issue #657](https://github.com/kiwitcms/Kiwi/issues/657)!
+[Issue #657](https://github.com/kiwitcms/kiwitcms/issues/657)!
 
 
 Plugins for 3rd party test automation frameworks
@@ -73,9 +73,9 @@ in your test environment and configure the test runner to use it! Automation
 test results will then appear inside Kiwi TCMS.
 
 - [JUnit 5 plugin](https://github.com/kiwitcms/junit-plugin) - already in progress
-- [TestNG plugin](https://github.com/kiwitcms/Kiwi/issues/692) - RFC
-- [Django plugin](https://github.com/kiwitcms/Kiwi/issues/693) - RFC
-- [py.test plugin](https://github.com/kiwitcms/Kiwi/issues/694) - RFC
+- [TestNG plugin](https://github.com/kiwitcms/kiwitcms/issues/692) - RFC
+- [Django plugin](https://github.com/kiwitcms/kiwitcms/issues/693) - RFC
+- [py.test plugin](https://github.com/kiwitcms/kiwitcms/issues/694) - RFC
 
 
 If you would like to use such functionality leave your vote inside GitHub
@@ -111,21 +111,21 @@ we find internally!
 
 
 * Goal: Redefine what bug-tracker integration means, vote in
-  [Issue #698](https://github.com/kiwitcms/Kiwi/issues/698)
+  [Issue #698](https://github.com/kiwitcms/kiwitcms/issues/698)
 * Goal: Bug-tracker functionality inside Kiwi TCMS, similar to
   GitHub Issues. Vote in
-  [Issue #699](https://github.com/kiwitcms/Kiwi/issues/699)
+  [Issue #699](https://github.com/kiwitcms/kiwitcms/issues/699)
 * Goal: Integration with Redmine (per current specification), vote in
-  [Issue #41](https://github.com/kiwitcms/Kiwi/issues/41)
+  [Issue #41](https://github.com/kiwitcms/kiwitcms/issues/41)
 * Goal: fix existing bugs around bug-tracker integration
   (per current specification). Vote in
-  [Issue #97](https://github.com/kiwitcms/Kiwi/issues/97),
-  [Issue #117](https://github.com/kiwitcms/Kiwi/issues/117),
-  [Issue #289](https://github.com/kiwitcms/Kiwi/issues/289),
-  [Issue #290](https://github.com/kiwitcms/Kiwi/issues/290),
-  [Issue #320](https://github.com/kiwitcms/Kiwi/issues/320),
-  [Issue #479](https://github.com/kiwitcms/Kiwi/issues/479) and
-  [Issue #530](https://github.com/kiwitcms/Kiwi/issues/530)
+  [Issue #97](https://github.com/kiwitcms/kiwitcms/issues/97),
+  [Issue #117](https://github.com/kiwitcms/kiwitcms/issues/117),
+  [Issue #289](https://github.com/kiwitcms/kiwitcms/issues/289),
+  [Issue #290](https://github.com/kiwitcms/kiwitcms/issues/290),
+  [Issue #320](https://github.com/kiwitcms/kiwitcms/issues/320),
+  [Issue #479](https://github.com/kiwitcms/kiwitcms/issues/479) and
+  [Issue #530](https://github.com/kiwitcms/kiwitcms/issues/530)
 
 
 GitHub flow integration
@@ -144,7 +144,7 @@ because very few teams actually have managed to do this effectively.
 
 * Goal: Figure out how Kiwi TCMS can integrate with GitHub flow and bridge the gap.
   Please share and `+1` your wildest ideas in
-  [Issue #700](https://github.com/kiwitcms/Kiwi/issues/700).
+  [Issue #700](https://github.com/kiwitcms/kiwitcms/issues/700).
 * Follow up: depending on the results in #700 we will follow with other goals and
   sub-tasks
 
@@ -164,7 +164,7 @@ behind and Kiwi TCMS may be able to help.
 * Goal: Figure out how Kiwi TCMS fits into the overall `devel-test-planning`
   process for agile teams and what we can do to make this easier for testers.
   Please share and `+1` your wildest ideas in
-  [Issue #701](https://github.com/kiwitcms/Kiwi/issues/701)
+  [Issue #701](https://github.com/kiwitcms/kiwitcms/issues/701)
 * Follow up: depending on the results in #701 we will follow with other goals and
   sub-tasks
 
@@ -232,7 +232,7 @@ discover missing scenarios, edge cases and raise even more questions!
 
 
 Crazy ideas, brain dumps and `+1` as always are welcome in
-[Issue #703](https://github.com/kiwitcms/Kiwi/issues/703).
+[Issue #703](https://github.com/kiwitcms/kiwitcms/issues/703).
 
 
 Community
@@ -240,7 +240,7 @@ Community
 
 Coding alone is not fun! Here's what you can do to help us:
 
-* [Become a stargazer](https://github.com/kiwitcms/Kiwi/stargazers) by clicking the
+* [Become a stargazer](https://github.com/kiwitcms/kiwitcms/stargazers) by clicking the
   `Star` button on our GitHub repository
 * [Follow @KiwiTCMS on Twitter](https://twitter.com/KiwiTCMS)
 * [Subscribe to our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581) -
@@ -262,7 +262,7 @@ contributors. The following are mostly organizational goals:
 * Goal: clearly mark GitHub issues which are suitable for external contributors
   which don’t want to spend lots of time learning how Kiwi TCMS works under the hood.
   We're going to tag all such issues with the
-  <a href="https://github.com/kiwitcms/Kiwi/labels/help%20wanted">
+  <a href="https://github.com/kiwitcms/kiwitcms/labels/help%20wanted">
     <img src="/images/github_helpwanted.png" style="float: none; margin:0"
          alt="GitHub help wanted" title="GitHub help wanted">
   </a> label

@@ -28,7 +28,7 @@ You can explore everything at
 
     Public container image (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  9b33a6e47c0f    696MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  9b33a6e47c0f    696MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -56,7 +56,7 @@ Improvements
 - Update python-gitlab from 6.3.0 to 6.5.0
 - Update uwsgi from 2.0.30 to 2.0.31
 - Display records count in TestPlan page. Fixes
-  `Issue #4110 <https://github.com/kiwitcms/Kiwi/issues/4110>`_
+  `Issue #4110 <https://github.com/kiwitcms/kiwitcms/issues/4110>`_
 - Add 'Deactivate selected accounts' dropdown on ``/admin/auth/user/`` page
 - Add 'Deactivate' button in 'Change user' admin page
 
@@ -139,7 +139,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;
 - `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_

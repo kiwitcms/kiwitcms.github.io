@@ -16,7 +16,7 @@ Last year Kiwi TCMS started
 with the MLH Fellowship open source program. During the span of 3 semesters
 fellows received mentorship and career advice from us. They were also able
 to work on
-[20+ issues](https://github.com/kiwitcms/Kiwi/issues?q=is%3Aopen+is%3Aissue+label%3A%22MLH+Fellowship%22)
+[20+ issues](https://github.com/kiwitcms/kiwitcms/issues?q=is%3Aopen+is%3Aissue+label%3A%22MLH+Fellowship%22)
 the majority of which have been complete.
 
 For that we kindly ask the open source community to nominate Kiwi TCMS at the
@@ -51,7 +51,7 @@ Thank you for supporting Kiwi TCMS and happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Give 👍 on GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/334558);
 - [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)

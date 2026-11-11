@@ -27,12 +27,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  c5dbd9a7ded6    562 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  c5dbd9a7ded6    562 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 8.2
@@ -48,7 +48,7 @@ Improvements
 - Update pygithub from 1.47 to 1.50
 - Update python-gitlab from 2.1.2 to 2.2.0
 - It is now possible to reopen closed bugs - Fixes
-  `Issue #1152 <https://github.com/kiwitcms/Kiwi/issues/1152>`_ (@cmbahadir)
+  `Issue #1152 <https://github.com/kiwitcms/kiwitcms/issues/1152>`_ (@cmbahadir)
 - Visual improvements for Status matrix telemetry:
 
   - columns now link to test runs
@@ -59,7 +59,7 @@ Improvements
   for 10 years
 - Improved documentation around self-signed certificates
 - Improved documentation around e-mail backend configuration. Closes
-  `Issue #1070 <https://github.com/kiwitcms/Kiwi/issues/1070>`_
+  `Issue #1070 <https://github.com/kiwitcms/kiwitcms/issues/1070>`_
   (@Schwarzkrieger)
 
 
@@ -76,9 +76,9 @@ Refactoring
 ~~~~~~~~~~~
 
 - Migrate bandit test job to GitHub workflows, Closes
-  `Issue #1550 <https://github.com/kiwitcms/Kiwi/issues/1550>`_ (@lcmtwn)
+  `Issue #1550 <https://github.com/kiwitcms/kiwitcms/issues/1550>`_ (@lcmtwn)
 - Migrate doc8 test job to GitHub workflows. Closes
-  `Issue #1551 <https://github.com/kiwitcms/Kiwi/issues/1551>`_ (@Prome88)
+  `Issue #1551 <https://github.com/kiwitcms/kiwitcms/issues/1551>`_ (@Prome88)
 - Add 2 more tests (Mariyan Garvanski)
 - Convert TP edit page to class based view
 - Convert forms to ModelForm
@@ -128,7 +128,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd path/containing/docker-compose/
     docker-compose down
     # !!! docker tag to keep older image version on the machine
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb-103-centos7
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

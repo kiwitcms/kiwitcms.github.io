@@ -9,7 +9,7 @@ Legal information
 
 Kiwi TCMS source code is developed by a
 [core team]({filename}team.html) and
-[individual contributors](https://github.com/kiwitcms/Kiwi/graphs/contributors)
+[individual contributors](https://github.com/kiwitcms/kiwitcms/graphs/contributors)
 under a combination of multiple open source licenses, mostly
 GPLv2+ and AGPLv3+.
 

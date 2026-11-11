@@ -25,12 +25,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  f9a8a044c34e    537 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  f9a8a044c34e    537 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 7.1
@@ -59,7 +59,7 @@ Database migrations
   ``TestExecutionStatus`` and adjust existing code to work with them.
   This is a necessary step before allowing customization of test execution
   statuses, see
-  `Issue #236 <https://github.com/kiwitcms/Kiwi/issues/236>`_
+  `Issue #236 <https://github.com/kiwitcms/kiwitcms/issues/236>`_
 
 
 API
@@ -87,15 +87,15 @@ Bug fixes
   are too long
 - Automatically expand TestExecution comment history if there are comments
   present. Fixes
-  `Issue #349 <https://github.com/kiwitcms/Kiwi/issues/349>`_ (Matt Porter)
+  `Issue #349 <https://github.com/kiwitcms/kiwitcms/issues/349>`_ (Matt Porter)
 - Document timezone settings and show current server time in navbar. Fixes
-  `Issue #1206 <https://github.com/kiwitcms/Kiwi/issues/1206>`_
+  `Issue #1206 <https://github.com/kiwitcms/kiwitcms/issues/1206>`_
 - Check for permissions in HTML template. Closes
-  `Issue #961 <https://github.com/kiwitcms/Kiwi/issues/961>`_
+  `Issue #961 <https://github.com/kiwitcms/kiwitcms/issues/961>`_
 - Document bug tracker integration support. Fixes
-  `Issue #698 <https://github.com/kiwitcms/Kiwi/issues/698>`_
+  `Issue #698 <https://github.com/kiwitcms/kiwitcms/issues/698>`_
 - Delete comments when TestCase and TestExecution are removed. Closes
-  `Issue #1028 <https://github.com/kiwitcms/Kiwi/issues/1028>`_
+  `Issue #1028 <https://github.com/kiwitcms/kiwitcms/issues/1028>`_
 
 
 Refactoring
@@ -103,15 +103,15 @@ Refactoring
 
 - Pylint fixes (Mariyan Garvanski)
 - Use ``django.utils.timezone.now()`` instead of ``datetime.now()``. Closes
-  `Issue #545 <https://github.com/kiwitcms/Kiwi/issues/545>`_
+  `Issue #545 <https://github.com/kiwitcms/kiwitcms/issues/545>`_
 - Use JSON-RPC instead of backend views when working with comments. Resolves
-  `Issue #960 <https://github.com/kiwitcms/Kiwi/issues/960>`_
+  `Issue #960 <https://github.com/kiwitcms/kiwitcms/issues/960>`_
 - Remove ``tcms.core.contrib.comments`` module. Closes
-  `Issue #959 <https://github.com/kiwitcms/Kiwi/issues/959>`_
+  `Issue #959 <https://github.com/kiwitcms/kiwitcms/issues/959>`_
 - Remove ``label=`` attribute from form field. Fixes
-  `Issue #652 <https://github.com/kiwitcms/Kiwi/issues/652>`_
+  `Issue #652 <https://github.com/kiwitcms/kiwitcms/issues/652>`_
 - Move and rename XML-RPC forms. Resolves
-  `Issue #681 <https://github.com/kiwitcms/Kiwi/issues/681>`_
+  `Issue #681 <https://github.com/kiwitcms/kiwitcms/issues/681>`_
 - Convert ``testplans.views.DeleteCasesView`` to JSON-RPC
 - Refactor more views from function based to class based
 - Remove duplicate JavaScript
@@ -160,7 +160,7 @@ If you are using Kiwi TCMS as a Docker container then::
 
     cd path/containing/docker-compose/
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -168,14 +168,14 @@ If you are using Kiwi TCMS as a Docker container then::
 **WHERE:** ``docker-compose.yml`` has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!
 
-**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` and ``docker-compose.yml`` will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow::
 
     # starting from an older Kiwi TCMS version
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
+    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
     # repeat until you have reached latest

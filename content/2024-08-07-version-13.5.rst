@@ -26,7 +26,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  3df7b154ef68    688MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  3df7b154ef68    688MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container images <{filename}pages/containers.markdown>`_ are available only to
@@ -50,33 +50,33 @@ Improvements
 - Update psycopg from 3.1.19 to 3.2.1
 - Update python-gitlab from 4.6.0 to 4.9.0
 - Add a ``Test Plan +`` button on *New Test Run* page. Related to
-  `Issue #3680 <https://github.com/kiwitcms/Kiwi/issues/3680>`_
+  `Issue #3680 <https://github.com/kiwitcms/kiwitcms/issues/3680>`_
 - Always show the ``Build +`` button on *New Test Run* page. Related to
-  `Issue #3680 <https://github.com/kiwitcms/Kiwi/issues/3680>`_
+  `Issue #3680 <https://github.com/kiwitcms/kiwitcms/issues/3680>`_
 - Add a ``Product +`` button on *New Test Run* page. Closes
-  `Issue #3680 <https://github.com/kiwitcms/Kiwi/issues/3680>`_
+  `Issue #3680 <https://github.com/kiwitcms/kiwitcms/issues/3680>`_
 - Add auto-complete for ``Parent ID`` field on *Edit TestPlan* page. Closes
-  `Issue #3189 <https://github.com/kiwitcms/Kiwi/issues/3189>`_
+  `Issue #3189 <https://github.com/kiwitcms/kiwitcms/issues/3189>`_
 
 
 API
 ~~~
 
 - Add ``TestRun.remove()`` API method. Fixes
-  `Issue #3691 <https://github.com/kiwitcms/Kiwi/issues/3691>`_
+  `Issue #3691 <https://github.com/kiwitcms/kiwitcms/issues/3691>`_
 
 
 Bug fixes
 ~~~~~~~~~
 
 - Do not call ``TestExecution.remove_link()`` on *TestRun* page with undefined
-  argument (@Melzmann). Fixes `Issue #3728 <https://github.com/kiwitcms/Kiwi/issues/3728>`_
+  argument (@Melzmann). Fixes `Issue #3728 <https://github.com/kiwitcms/kiwitcms/issues/3728>`_
   where URLs attached to a test execution suddenly go missing after some time
 - On *New Test Run* page when Product is updated trigger TestPlan on-change
   to fix a bug where the Build drop-down is not cleared and may be showing
   values which are invalid for the current selection
 - Adjust angle bracket icon direction when viewing nested testplans. Fixes
-  `Issue #3163 <https://github.com/kiwitcms/Kiwi/issues/3163>`_
+  `Issue #3163 <https://github.com/kiwitcms/kiwitcms/issues/3163>`_
 - Strip newline characters from email subjects to avoid crashes.
   Fixes `Sentry KIWI-TCMS-P7 <https://kiwitcms.sentry.io/issues/5547586648/>`_
 
@@ -154,7 +154,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;

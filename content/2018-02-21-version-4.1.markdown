@@ -20,16 +20,16 @@ Changes since Kiwi TCMS 4.0.0
 - Add tests for `tcms.core.ajax.tag` (Anton Sankov)
 - Remove unused code from `tcms.core.ajax.tag` (Anton Sankov)
 - Refactor `tcms.core.ajax.tag` to work with only one object. Fixes
-  [Issue #135](https://github.com/kiwitcms/Kiwi/issues/135) (Anton Sankov)
+  [Issue #135](https://github.com/kiwitcms/kiwitcms/issues/135) (Anton Sankov)
 - Add test for tcms_api.TestRun. Closes
-  [Issue #194](https://github.com/kiwitcms/Kiwi/issues/194)
+  [Issue #194](https://github.com/kiwitcms/kiwitcms/issues/194)
 - Send the `user_registered` signal when new users are registered
 - Add signal handler to notify admins on new users. Fixes
-  [Issue #205](https://github.com/kiwitcms/Kiwi/issues/205)
+  [Issue #205](https://github.com/kiwitcms/kiwitcms/issues/205)
 - Add `is_superuser` column to User admin. Fixes
-  [Issue #206](https://github.com/kiwitcms/Kiwi/issues/206)
+  [Issue #206](https://github.com/kiwitcms/kiwitcms/issues/206)
 - Properly pass variables to blocktrans tag. Fixes
-  [Issue #225](https://github.com/kiwitcms/Kiwi/issues/225)
+  [Issue #225](https://github.com/kiwitcms/kiwitcms/issues/225)
 - Minor documentation updates
 
 ### Refactoring
@@ -44,7 +44,7 @@ Changes since Kiwi TCMS 4.0.0
 
 - Remove `LISTENING_MODEL_SIGNAL` (internal setting)
 - New setting `AUTO_APPROVE_NEW_USERS`. Fixes
-  [Issue #203](https://github.com/kiwitcms/Kiwi/issues/203)
+  [Issue #203](https://github.com/kiwitcms/kiwitcms/issues/203)
 
 
 ### Models and database migrations
@@ -73,7 +73,7 @@ If you are using Kiwi TCMS as a Docker container then
 
     cd Kiwi/
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
 

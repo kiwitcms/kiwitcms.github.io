@@ -75,9 +75,9 @@ the ability to record test automation results!
 plugins for several
 [test automation frameworks](https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html)
 while others are on our backlog -
-[TestNG](https://github.com/kiwitcms/Kiwi/issues/692),
-[Jenkins](https://github.com/kiwitcms/Kiwi/issues/1072),
-[C#/NUnit](https://github.com/kiwitcms/Kiwi/issues/2020)!
+[TestNG](https://github.com/kiwitcms/kiwitcms/issues/692),
+[Jenkins](https://github.com/kiwitcms/kiwitcms/issues/1072),
+[C#/NUnit](https://github.com/kiwitcms/kiwitcms/issues/2020)!
 Anyone interested is welcome to ***Subscribe*** to each GitHub issue and follow the progress.
 Some issues are also part of our
 [open source bounty program]({tag}bounty-program) so we urge students to

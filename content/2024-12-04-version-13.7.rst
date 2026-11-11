@@ -27,7 +27,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  89261439831b    677MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  89261439831b    677MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container images <{filename}pages/containers.markdown>`_ are available only to
@@ -64,16 +64,16 @@ API
 
 - Method ``Bug.details()`` will now return the additional fields
   ``id``, ``status`` and ``url``! References
-  `Issue #3748 <https://github.com/kiwitcms/Kiwi/issues/3748>`_
+  `Issue #3748 <https://github.com/kiwitcms/kiwitcms/issues/3748>`_
 
 
 Bug fixes
 ~~~~~~~~~
 
 - Remove internal ``IssueTrackerType.rpc_cache`` attribute. Fixes
-  `Issue #3757 <https://github.com/kiwitcms/Kiwi/issues/3757>`_
+  `Issue #3757 <https://github.com/kiwitcms/kiwitcms/issues/3757>`_
 - Update filtering logic for ``Automated=False`` on TestPlan view page. Fixes
-  `Issue #3841 <https://github.com/kiwitcms/Kiwi/issues/3841>`_
+  `Issue #3841 <https://github.com/kiwitcms/kiwitcms/issues/3841>`_
 - Refresh test execution counter when filtering on TestRun view page
 
 
@@ -141,7 +141,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;

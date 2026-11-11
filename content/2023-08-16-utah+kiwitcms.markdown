@@ -54,7 +54,7 @@ In the words of David M. Johnson, research staff:
 > We use [a fork](https://gitlab.flux.utah.edu/powderrenewpublic/kiwi) of Kiwi TCMS right now
 > so that we could upload attachments to test runs via the API.
 > That was a trivial change which
-> [made its way upstream](https://github.com/kiwitcms/Kiwi/commit/9344e2873a48da477ac565362689e4851c34214e)
+> [made its way upstream](https://github.com/kiwitcms/kiwitcms/commit/9344e2873a48da477ac565362689e4851c34214e)
 > as part of Kiwi TCMS version 12.1.
 
 
@@ -63,7 +63,7 @@ In the words of David M. Johnson, research staff:
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Give 👍 on GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/334558);
 - [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)

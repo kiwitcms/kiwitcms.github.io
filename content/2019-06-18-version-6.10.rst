@@ -22,12 +22,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  bbb581d60ed1    1.005 GB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  bbb581d60ed1    1.005 GB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 
 
 Changes since Kiwi TCMS 6.9
@@ -42,7 +42,7 @@ Security
   `More info <https://docs.djangoproject.com/en/2.2/releases/2.2.2/>`_
 - Add missing permission checks for menus in Test run page UI template.
   Permission check added for TestExecution status and comment menu.
-  References `Issue #716 <https://github.com/kiwitcms/Kiwi/issues/716>`_
+  References `Issue #716 <https://github.com/kiwitcms/kiwitcms/issues/716>`_
 - Re-enable static analysis with ``bandit`` and ``Coverity Scan`` in
   Travis CI (Svetlomir Balevski)
 
@@ -63,15 +63,15 @@ Refactoring
 
 - Add test for ``email_case_deletion()`` (Rik)
 - New linter to warn about usage of ``AutoField``. Fixes
-  `Issue #737 <https://github.com/kiwitcms/Kiwi/issues/737>`_ (Ivo Donchev, HackSoft)
+  `Issue #737 <https://github.com/kiwitcms/kiwitcms/issues/737>`_ (Ivo Donchev, HackSoft)
 - New linter to discover empty classed. Fixes
-  `Issue #739 <https://github.com/kiwitcms/Kiwi/issues/739>`_ (Daniel Goshev)
+  `Issue #739 <https://github.com/kiwitcms/kiwitcms/issues/739>`_ (Daniel Goshev)
 - New linter to warn about usage of ``OneToOneField``. Fixes
-  `Issue #735 <https://github.com/kiwitcms/Kiwi/issues/735>`_ (George Goranov)
+  `Issue #735 <https://github.com/kiwitcms/kiwitcms/issues/735>`_ (George Goranov)
 - New linter to warn about usage of function based views. Fixes
-  `Issue #734 <https://github.com/kiwitcms/Kiwi/issues/734>`_ (Yavor Lulchev, Uber)
+  `Issue #734 <https://github.com/kiwitcms/kiwitcms/issues/734>`_ (Yavor Lulchev, Uber)
 - New linter to discover Python files in directories without ``__init__.py``. Fixes
-  `Issue #790 <https://github.com/kiwitcms/Kiwi/issues/790>`_
+  `Issue #790 <https://github.com/kiwitcms/kiwitcms/issues/790>`_
 
 
 Join us at OpenExpo in Madrid
@@ -99,7 +99,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -107,14 +107,14 @@ If you are using Kiwi TCMS as a Docker container then::
 Don't forget to `backup <{filename}2018-07-30-docker-backup.markdown>`_
 before upgrade!
 
-**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` and ``docker-compose.yml`` will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow::
 
     # starting from an older Kiwi TCMS version
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
+    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
     # repeat until you have reached latest

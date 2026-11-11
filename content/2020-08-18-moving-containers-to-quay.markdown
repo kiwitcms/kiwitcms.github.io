@@ -20,8 +20,8 @@ publicly available as before.
 In addition new images will be available via Red Hat's Quay.io service.
 These images are available as
 
-- `pub.kiwitcms.eu/kiwitcms/kiwi` - Docker Hub
-- `hub.kiwitcms.eu/kiwitcms/kiwi` - Quay.io
+- `pub.kiwitcms.eu/kiwitcms/kiwitcms` - Docker Hub
+- `hub.kiwitcms.eu/kiwitcms/kiwitcms` - Quay.io
 
 Content is exactly the same between the two registries and you may use
 the one which you like best!

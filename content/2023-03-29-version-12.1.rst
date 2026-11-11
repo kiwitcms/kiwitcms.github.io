@@ -28,7 +28,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  590c0cd6f25f    521MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  590c0cd6f25f    521MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -43,7 +43,7 @@ Security
 ~~~~~~~~
 
 - Add the ``Content-Security-Policy`` header to block inline JavaScript. Fixes
-  `CVE-2023-27489 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-2wcr-87wf-cf9j>`_
+  `CVE-2023-27489 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-2wcr-87wf-cf9j>`_
 - Add the ``X-Frame-Options`` header to deny loading Kiwi TCMS into an iframe
 - Add the ``X-Content-Type-Options`` header
 
@@ -62,7 +62,7 @@ Improvements
   executions with components, parameters and/or tags (@somenewacc)
 - Expose all RPC methods in the documentation
 - Update documentation to describe transitions for TestRun statuses. Closes
-  `Issue #3124 <https://github.com/kiwitcms/Kiwi/issues/3124>`_
+  `Issue #3124 <https://github.com/kiwitcms/kiwitcms/issues/3124>`_
 
 
 Settings
@@ -77,9 +77,9 @@ API
 
 - New API method ``TestRun.add_attachment`` (David M. Johnson)
 - New API method ``Environment.filter()`` method. Refs
-  `Issue #3034 <https://github.com/kiwitcms/Kiwi/issues/3034>`_ (@somenewacc)
+  `Issue #3034 <https://github.com/kiwitcms/kiwitcms/issues/3034>`_ (@somenewacc)
 - New API method ``Environment.create()``. Closes
-  `Issue #3034 <https://github.com/kiwitcms/Kiwi/issues/3034>`_ (@somenewacc)
+  `Issue #3034 <https://github.com/kiwitcms/kiwitcms/issues/3034>`_ (@somenewacc)
 
 
 Bug fixes
@@ -149,7 +149,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

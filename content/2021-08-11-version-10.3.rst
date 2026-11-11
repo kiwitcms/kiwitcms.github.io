@@ -28,12 +28,12 @@ Supported upgrade paths::
 
 Container images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  bd28c4b064f5    579 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  bd28c4b064f5    579 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 10.2
@@ -70,24 +70,24 @@ Bug fixes
 
 - Fix a bug where drop-down selectors for test plans would not show any values when
   product is changed. Fixes
-  `Issue #2467 <https://github.com/kiwitcms/Kiwi/issues/2467>`_
+  `Issue #2467 <https://github.com/kiwitcms/kiwitcms/issues/2467>`_
 
 
 Refactoring and testing
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 - Add tests for missing coverage in ``kiwi_auth.admin``. References
-  `Issue #1607 <https://github.com/kiwitcms/Kiwi/issues/1607>`_
+  `Issue #1607 <https://github.com/kiwitcms/kiwitcms/issues/1607>`_
   (Mariyan Garvanski)
 - Fix some eslint issues and formatting in ``testcases/js/get.js``
 - Use shorter URL when cloning test cases from TP page. References
-  `Issue #1054 <https://github.com/kiwitcms/Kiwi/issues/1054>`_
+  `Issue #1054 <https://github.com/kiwitcms/kiwitcms/issues/1054>`_
 - Limit URI size to 10KiB. This alone should allow for more than 1000 PKs
   specified for cloning. In addition Django itself limits the maximum number of
   GET/POST fields to 1000 via the ``DATA_UPLOAD_MAX_NUMBER_FIELDS`` setting,
   see https://docs.djangoproject.com/en/3.2/ref/settings/#data-upload-max-number-fields.
   Closes
-  `Issue #1054 <https://github.com/kiwitcms/Kiwi/issues/1054>`_
+  `Issue #1054 <https://github.com/kiwitcms/kiwitcms/issues/1054>`_
 
 
 Translations
@@ -135,7 +135,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;

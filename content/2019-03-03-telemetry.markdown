@@ -8,7 +8,7 @@ twitter_image: images/telemetry/social_image.png
 As we've [promised]({filename}2019-01-10-2019-mission.markdown) Kiwi TCMS is
 starting work on improving the legacy reports functionality.
 After analyzing your feedback in
-[Issue #657](https://github.com/kiwitcms/Kiwi/issues/657) here's what we came up
+[Issue #657](https://github.com/kiwitcms/kiwitcms/issues/657) here's what we came up
 with. *Note: screenshots below are mockups.*
 
 

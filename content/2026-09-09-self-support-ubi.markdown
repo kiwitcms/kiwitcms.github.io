@@ -26,7 +26,7 @@ There is NO such guarantee for the Kiwi TCMS *Community Edition* container image
 
 Thank you for using Kiwi TCMS. If you like what we're doing please help us grow:
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
   and follow all news;
 - [Become a subscriber](/#subscriptions) and help us sustain development;

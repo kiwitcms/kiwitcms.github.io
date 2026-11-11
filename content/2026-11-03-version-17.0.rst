@@ -21,7 +21,7 @@ You can explore everything at
 
     Public container image (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  aecae70a8f8a    911MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  aecae70a8f8a    911MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -55,19 +55,19 @@ Improvements
 - Update node_modules/webpack from 5.111.1 to 5.112.2
 - Update node_modules/webpack-cli from 7.2.3 to 7.3.1
 - Add Search button to Telemetry pages and redraw when pressed. Fixes
-  `Issue #3325 <https://github.com/kiwitcms/Kiwi/issues/3325>`_
+  `Issue #3325 <https://github.com/kiwitcms/kiwitcms/issues/3325>`_
 - PDF export Search results in A3 landscape & auto-fit to page width. Fixes
-  `Issue #4496 <https://github.com/kiwitcms/Kiwi/issues/4496>`_
+  `Issue #4496 <https://github.com/kiwitcms/kiwitcms/issues/4496>`_
 - Replace hard-coded ``/admin/`` URLs. Closes
-  `Issue #4595 <https://github.com/kiwitcms/Kiwi/issues/4595>`_
+  `Issue #4595 <https://github.com/kiwitcms/kiwitcms/issues/4595>`_
 - Set ``TestExecution.start_date`` when changing status on TestRun page. Closes
-  `Issue #4371 <https://github.com/kiwitcms/Kiwi/issues/4371>`_
+  `Issue #4371 <https://github.com/kiwitcms/kiwitcms/issues/4371>`_
 - Keep stored API password when editing BugSystem via Admin. Closes
-  `Issue #4643 <https://github.com/kiwitcms/Kiwi/issues/4643>`_
+  `Issue #4643 <https://github.com/kiwitcms/kiwitcms/issues/4643>`_
 - Remove redundant CSS file from HTML template. Fixes
-  `Issue #4634 <https://github.com/kiwitcms/Kiwi/issues/4634>`_
+  `Issue #4634 <https://github.com/kiwitcms/kiwitcms/issues/4634>`_
 - Return to Test Plan page when Cancel button is clicked on New Test Case page.
-  Closes `Issue #4499 <https://github.com/kiwitcms/Kiwi/issues/4499>`_
+  Closes `Issue #4499 <https://github.com/kiwitcms/kiwitcms/issues/4499>`_
 
 
 API
@@ -151,7 +151,7 @@ Happy testing!
 
 If you like what we're doing please help us grow:
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all news;
 - `Become a subscriber </#subscriptions>`_ and help us sustain development

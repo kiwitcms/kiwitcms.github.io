@@ -28,10 +28,10 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  b559123d25b0    970.2 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 
 
 
@@ -72,7 +72,7 @@ Refactoring
 - Fix pylint errors (Ivaylo Ivanov)
 - Remove unused ``TestRun.list`` and ``TestCase.list_confirmed`` methods
 - Remove unused ``plan_by_id_or_name()`` and ``is_int()``. Fixes
-  `Issue #269 <https://github.com/kiwitcms/Kiwi/issues/269>`_
+  `Issue #269 <https://github.com/kiwitcms/kiwitcms/issues/269>`_
 
 
 Database
@@ -96,7 +96,7 @@ If you are using Kiwi TCMS as a Docker container then::
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -119,7 +119,7 @@ supporting the
 `development team <{filename}pages/team.html>`_. Watch this
 blog for further announcements about this. Meanwhile you may share your
 thoughts via
-`Issue #515 <https://github.com/kiwitcms/Kiwi/issues/515>`_.
+`Issue #515 <https://github.com/kiwitcms/kiwitcms/issues/515>`_.
 
 
 Plans to remove deprecated functionality
@@ -129,4 +129,4 @@ Plans to remove deprecated functionality
 ``TestRun.plan.product_version``! With the latest web interface it is not possible
 to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
-`Issue #246 <https://github.com/kiwitcms/Kiwi/issues/246>`_ is fixed).
+`Issue #246 <https://github.com/kiwitcms/kiwitcms/issues/246>`_ is fixed).

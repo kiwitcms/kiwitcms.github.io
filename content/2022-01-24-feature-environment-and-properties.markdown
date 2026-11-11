@@ -107,7 +107,7 @@ There are 3 important facts that hold true:
 
 !["Example from #1344"](/images/features/props-and-envs/env_from_1344.png "Example from #1344")
 
-If we look at this example from [Issue #1344](https://github.com/kiwitcms/Kiwi/issues/1344) we
+If we look at this example from [Issue #1344](https://github.com/kiwitcms/kiwitcms/issues/1344) we
 can make out the following keys:
 
 - *Driver* - 2 values
@@ -214,7 +214,7 @@ Happy Testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Give 👍 on GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/334558);
 - [Donate via Open Collective](https://opencollective.com/kiwitcms/donate) as low as 1 EUR;
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)

@@ -21,7 +21,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  088187a81d3c    686MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  088187a81d3c    686MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container images <{filename}pages/containers.markdown>`_ are available only to
@@ -57,7 +57,7 @@ Improvements
 - Show an icon when some child TPs not shown on Search Test Plans page to let
   the user know that parent-child hierarchies shown on the page may be
   incomplete because the data has been filtered out by their search criteria.
-  Closes `Issue #3313 <https://github.com/kiwitcms/Kiwi/issues/3313>`_
+  Closes `Issue #3313 <https://github.com/kiwitcms/kiwitcms/issues/3313>`_
 - Hide the Expand/Collapse button Search Test Plans page for TP with 0 children
   in the result set
 
@@ -81,7 +81,7 @@ volumes like so:
 - Explicitly define the ``DATA_UPLOAD_MAX_MEMORY_SIZE`` setting. It controls
   file uploads via RPC, not webUI, because the payload is base64 encoded and is
   part of the request body. Closes
-  `Issue #3262 <https://github.com/kiwitcms/Kiwi/issues/3262>`_
+  `Issue #3262 <https://github.com/kiwitcms/kiwitcms/issues/3262>`_
 
 
 API
@@ -114,7 +114,7 @@ Bug fixes
   cause was that the correct relationship here should have been
   TR -> Build -> Version which is independent of the relationship
   TP -> Product -> Version. Fixes
-  `Issue #3258 <https://github.com/kiwitcms/Kiwi/issues/3258>`_
+  `Issue #3258 <https://github.com/kiwitcms/kiwitcms/issues/3258>`_
 - Fix bug in search/display of Product on Search TestRun page. The root
   cause was that the correct relationship here should have been
   TR -> Build -> Version -> Product which is independent of the relationship
@@ -218,7 +218,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

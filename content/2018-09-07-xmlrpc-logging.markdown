@@ -10,7 +10,7 @@ tags: customization
 In this blog post I will show more ways to customize Kiwi TCMS by adding
 logging capabilities to the API backend. Indeed this is a feature that
 our team deemed not required for upstream and was removed in
-[PR #436](https://github.com/kiwitcms/Kiwi/pull/436).
+[PR #436](https://github.com/kiwitcms/kiwitcms/pull/436).
 
 Start by creating the following directory structure:
 
@@ -112,7 +112,7 @@ Kiwi TCMS defaults:
 Then place everything in `Dockerfile` like so:
 
     :::
-        FROM pub.kiwitcms.eu/kiwitcms/kiwi
+        FROM pub.kiwitcms.eu/kiwitcms/kiwitcms
         
         COPY ./api_logging/ /venv/lib64/python3.6/site-packages/api_logging/
         COPY local_settings.py /venv/lib64/python3.6/site-packages/tcms/settings/

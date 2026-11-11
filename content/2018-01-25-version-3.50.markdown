@@ -18,29 +18,29 @@ Changes since Kiwi TCMS 3.49
 - Update documentation for XML-RPC and positional arguments, translations,
   environment groups
 - Enable translations. Fixes
-  [Issue #129](https://github.com/kiwitcms/Kiwi/issues/129)
+  [Issue #129](https://github.com/kiwitcms/kiwitcms/issues/129)
 - Register models for DB translations. Fixes
-  [Issue #182](https://github.com/kiwitcms/Kiwi/issues/182)
+  [Issue #182](https://github.com/kiwitcms/kiwitcms/issues/182)
 - New German translations (@xbln)
 - Require django-attachments>=1.3 and restore attachments count in tabs
 - Fix missing tag names in TestPlan page
 - Hide admin forms for some models not supposed to be edited by users. Fixes
-  [Issue #174](https://github.com/kiwitcms/Kiwi/issues/174)
+  [Issue #174](https://github.com/kiwitcms/kiwitcms/issues/174)
 - Use django-grappelli for the admin templates: modern look and feel and
   less template files overridden by Kiwi TCMS
 - Load values for default property in TestRun 'Add Property' dialog. Fixes
-  [Issue #142](https://github.com/kiwitcms/Kiwi/issues/142)
+  [Issue #142](https://github.com/kiwitcms/kiwitcms/issues/142)
 - Correctly find property ID when renaming environment properties. Fixes
-  [Issue #167](https://github.com/kiwitcms/Kiwi/issues/167)
+  [Issue #167](https://github.com/kiwitcms/kiwitcms/issues/167)
 - Convert request body to string. Fixes
-  [Issue #177](https://github.com/kiwitcms/Kiwi/issues/177)
+  [Issue #177](https://github.com/kiwitcms/kiwitcms/issues/177)
 
 ### Refactoring
 
 - Remove batch tag Add/Remove sub-menu in TestPlan view (Anton Sankov)
 - Remove Edit tag button in Tag tab (Anton Sankov)
 - Remove template functions. Fixes
-  [Issue #107](https://github.com/kiwitcms/Kiwi/issues/107)
+  [Issue #107](https://github.com/kiwitcms/kiwitcms/issues/107)
 - Remove custom HttpJSONResponse classes
 - Remove unused and duplicate code
 
@@ -50,7 +50,7 @@ tcms-api changes since 1.5.0
 
 
 - Fix order of TestCaseRun statuses. Fixes
-  [Issue #184](https://github.com/kiwitcms/Kiwi/issues/184)
+  [Issue #184](https://github.com/kiwitcms/kiwitcms/issues/184)
 
 
 

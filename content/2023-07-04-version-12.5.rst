@@ -28,7 +28,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  9a689f9866d9    597MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  9a689f9866d9    597MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -45,7 +45,7 @@ Security
   `CVE-2023-36053 <https://github.com/advisories/GHSA-jh3w-4vvf-mjgr>`_ -
   ReDoS vulnerability
 - Patch misconfigured HTTP headers allowing stored XSS execution. Fixes
-  `CVE-2023-36809 <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-jpgw-2r9m-8qfw>`_
+  `CVE-2023-36809 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-jpgw-2r9m-8qfw>`_
 - Sanitize test plan name in ``tree_view_html()`` function to reduce the
   opportunity for exploiting stored XSS vulnerabilities
 - Extend the list of file upload validators to reduce the opportunity for
@@ -130,7 +130,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

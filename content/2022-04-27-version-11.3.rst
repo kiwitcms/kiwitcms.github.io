@@ -32,7 +32,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
     
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  58dcfa91e816    629MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  58dcfa91e816    629MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -61,7 +61,7 @@ Improvements
 - Update node_modules/marked from 4.0.12 to 4.0.14
 - Update node_modules/prismjs from 1.27.0 to 1.28.0
 - Allow overriding of Azure Boards API version. Closes
-  `Issue #2717 <https://github.com/kiwitcms/Kiwi/issues/2717>`_
+  `Issue #2717 <https://github.com/kiwitcms/kiwitcms/issues/2717>`_
 - If ``tenant_groups`` is enabled then ``refresh_permissions`` command will
   update default tenant groups too
 - Document tenant-group permissions
@@ -78,7 +78,7 @@ Bug fixes
 ~~~~~~~~~
 
 - Patch for repositories under GitLab subgroups. Fixes
-  `Issue #2643 <https://github.com/kiwitcms/Kiwi/issues/2643>`_ (@cmeissl)
+  `Issue #2643 <https://github.com/kiwitcms/kiwitcms/issues/2643>`_ (@cmeissl)
 - Don't crash if a comment user has been removed. Fixes
   `KIWI-TCMS-HZ <https://sentry.io/organizations/kiwitcms/issues/3086416250/>`_
 
@@ -141,7 +141,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

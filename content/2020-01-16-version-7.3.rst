@@ -29,12 +29,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  4026ee62e488    556 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  4026ee62e488    556 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 7.2
@@ -78,18 +78,18 @@ API
 ~~~
 
 - ``TestCase.update()`` method now allows to update the ``author`` field. Fixes
-  `Issue #630 <https://github.com/kiwitcms/Kiwi/issues/630>`_
+  `Issue #630 <https://github.com/kiwitcms/kiwitcms/issues/630>`_
 
 
 Bug fixes
 ~~~~~~~~~
 
 - Modify template pass ``object`` as ``test_plan``. Fixes
-  `Issue #1307 <https://github.com/kiwitcms/Kiwi/issues/1307>`_ (Ed Oswald S. Go)
+  `Issue #1307 <https://github.com/kiwitcms/kiwitcms/issues/1307>`_ (Ed Oswald S. Go)
 - Enable version selection in test plan search page. Fixes
-  `Issue #1276 <https://github.com/kiwitcms/Kiwi/issues/1276>`_
+  `Issue #1276 <https://github.com/kiwitcms/kiwitcms/issues/1276>`_
 - Apply percentage rounding for completed test executions. Fixes
-  `Issue #1230 <https://github.com/kiwitcms/Kiwi/issues/1230>`_
+  `Issue #1230 <https://github.com/kiwitcms/kiwitcms/issues/1230>`_
 - Fix a logical bug in conditional expression when deciding whether or not
   reporting bugs to selected issue tracker is disabled
 
@@ -98,9 +98,9 @@ Refactoring
 ~~~~~~~~~~~
 
 - Add code of conduct. Fixes
-  `Issue #1185 <https://github.com/kiwitcms/Kiwi/issues/1185>`_ (Rosen Sasov)
+  `Issue #1185 <https://github.com/kiwitcms/kiwitcms/issues/1185>`_ (Rosen Sasov)
 - Add test for ``KIWI_DONT_ENFORSE_HTTPS``. Closes
-  `Issue #1274 <https://github.com/kiwitcms/Kiwi/issues/1274>`_
+  `Issue #1274 <https://github.com/kiwitcms/kiwitcms/issues/1274>`_
 - Replace ``ugettext_lazy`` with ``gettext_lazy`` for Django 3
 - Remove ``BaseCaseSearchForm.bug_id`` field
 - Refactor testcase edit view to class-based
@@ -146,7 +146,7 @@ If you are using Kiwi TCMS as a Docker container then::
 
     cd path/containing/docker-compose/
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -154,14 +154,14 @@ If you are using Kiwi TCMS as a Docker container then::
 **WHERE:** ``docker-compose.yml`` has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!
 
-**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwi:latest`` and ``docker-compose.yml`` will
+**WARNING:** ``pub.kiwitcms.eu/kiwitcms/kiwitcms:latest`` and ``docker-compose.yml`` will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow::
 
     # starting from an older Kiwi TCMS version
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
-    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:<next_upgrade_version>
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
+    edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:<next_upgrade_version>
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate
     # repeat until you have reached latest

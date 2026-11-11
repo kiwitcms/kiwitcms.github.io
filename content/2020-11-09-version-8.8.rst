@@ -31,12 +31,12 @@ Supported upgrade paths::
 
 Docker images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  4b31ecf8ab5b    654 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  4b31ecf8ab5b    654 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 8.7
@@ -55,11 +55,11 @@ Improvements
 - Update node_modules/marked from 1.1.1 to 1.2.3
 - Update node_modules/prismjs from 1.21.0 to 1.22.0
 - Add management command ``refresh_permission``. Closes
-  `Issue #1137 <https://github.com/kiwitcms/Kiwi/issues/1137>`_ (Ivajlo Karabojkov)
+  `Issue #1137 <https://github.com/kiwitcms/kiwitcms/issues/1137>`_ (Ivajlo Karabojkov)
 - Add bug tracker integration for Azure Boards. Closes
-  `Issue #1979 <https://github.com/kiwitcms/Kiwi/issues/1979>`_ (@cmbahadir)
+  `Issue #1979 <https://github.com/kiwitcms/kiwitcms/issues/1979>`_ (@cmbahadir)
 - Add autosave configuration to web editor. Closes
-  `Issue #1958 <https://github.com/kiwitcms/Kiwi/issues/1958>`_ (Mfon Eti-mfon)
+  `Issue #1958 <https://github.com/kiwitcms/kiwitcms/issues/1958>`_ (Mfon Eti-mfon)
 - Change ON/OFF buttons messages to Yes/No for several buttons (Alexander Tsvetanov)
 - Add support for object-level permissions for TestCase,
   TestPlan, TestRun and Bug objects via ``django-guardian``
@@ -68,8 +68,8 @@ Improvements
   - modern look and feel using the PatternFly UI library
   - remove unused legacy code & HTML templates
   - closes
-    `Issue #663 <https://github.com/kiwitcms/Kiwi/issues/663>`_,
-    `Issue #1977 <https://github.com/kiwitcms/Kiwi/issues/1977>`_
+    `Issue #663 <https://github.com/kiwitcms/kiwitcms/issues/663>`_,
+    `Issue #1977 <https://github.com/kiwitcms/kiwitcms/issues/1977>`_
 
 - Enable Markdown support for strike-through text
 - Always pull latest RPMs when building container images
@@ -110,12 +110,12 @@ API
 
 - Method ``TestExecution.update()`` will now modify field ``close_date``
   depending on test execution status. Fixes
-  `Issue #1820 <https://github.com/kiwitcms/Kiwi/issues/1820>`_
+  `Issue #1820 <https://github.com/kiwitcms/kiwitcms/issues/1820>`_
 - Method ``TestCase.add_comment()`` now returns the created comment
 - Method ``TestExecution.add_comment()`` now returns the created comment
 - Method ``TestPlan.add_case()`` now returns the newly added test case
 - Add method ``TestCase.sortkeys()``. Fixes
-  `Issue #444 <https://github.com/kiwitcms/Kiwi/issues/444>`_
+  `Issue #444 <https://github.com/kiwitcms/kiwitcms/issues/444>`_
 - Add method ``Markdown.render()``
 - Add method ``TestCase.comments()``
 - Add method ``TestPlan.tree()``
@@ -125,44 +125,44 @@ Bug fixes
 ~~~~~~~~~
 
 - Fix url formatting. Fixes
-  `Issue #1806 <https://github.com/kiwitcms/Kiwi/issues/1806>`_ (Rosen Sasov)
+  `Issue #1806 <https://github.com/kiwitcms/kiwitcms/issues/1806>`_ (Rosen Sasov)
 - When deleting TestExecutionStatus check that there will be at least 1 left
   before deleting! Closes
-  `Issue #1978 <https://github.com/kiwitcms/Kiwi/issues/1978>`_
+  `Issue #1978 <https://github.com/kiwitcms/kiwitcms/issues/1978>`_
 - Update typeahead definitions for test case components, tags and
   for adding test plans to test cases. Fixes
-  `Issue #882 <https://github.com/kiwitcms/Kiwi/issues/882>`_
+  `Issue #882 <https://github.com/kiwitcms/kiwitcms/issues/882>`_
 - Add option to filter by reviewer in Test Plan page. Fixes
-  `Issue #564 <https://github.com/kiwitcms/Kiwi/issues/564>`_
+  `Issue #564 <https://github.com/kiwitcms/kiwitcms/issues/564>`_
 - Pass the number of disabled test cases to HTML template when
   creating a new test run. Fixes
-  `Issue #718 <https://github.com/kiwitcms/Kiwi/issues/718>`_
+  `Issue #718 <https://github.com/kiwitcms/kiwitcms/issues/718>`_
 
 
 Refactoring & testing
 ~~~~~~~~~~~~~~~~~~~~~
 
 - New linter to warn against ``GenericForeignKey`` fields in models. Closes
-  `Issue #1303 <https://github.com/kiwitcms/Kiwi/issues/1303>`_ (Bryan Mutai)
+  `Issue #1303 <https://github.com/kiwitcms/kiwitcms/issues/1303>`_ (Bryan Mutai)
 - Add tests for ``assign_default_group_permissions()`` (Ivajlo Karabojkov)
 - Add tests for ``TestExecutionStatusAdmin``. Refs
-  `Issue #1618 <https://github.com/kiwitcms/Kiwi/issues/1618>`_ (Mariyan Garvanski)
+  `Issue #1618 <https://github.com/kiwitcms/kiwitcms/issues/1618>`_ (Mariyan Garvanski)
 - Add tests for ``tcms.bugs.views.Search``. Closes
-  `Issue #1601 <https://github.com/kiwitcms/Kiwi/issues/1601>`_ (Mfon Eti-mfon)
+  `Issue #1601 <https://github.com/kiwitcms/kiwitcms/issues/1601>`_ (Mfon Eti-mfon)
 - Add tests for ``tcms.rpc.api.testrun``. Closes
-  `Issue #1628 <https://github.com/kiwitcms/Kiwi/issues/1628>`_ (@lcmtwn)
+  `Issue #1628 <https://github.com/kiwitcms/kiwitcms/issues/1628>`_ (@lcmtwn)
 - Add tests for ``tcms.rpc.api.classification``. Closes
-  `Issue #1621 <https://github.com/kiwitcms/Kiwi/issues/1621>`_ (Abhishek Chaurasia)
+  `Issue #1621 <https://github.com/kiwitcms/kiwitcms/issues/1621>`_ (Abhishek Chaurasia)
 - Add tests for ``tcms.rpc.api.priority``. Closes
-  `Issue #1622 <https://github.com/kiwitcms/Kiwi/issues/1622>`_ (Abhishek Chaurasia)
+  `Issue #1622 <https://github.com/kiwitcms/kiwitcms/issues/1622>`_ (Abhishek Chaurasia)
 - Add tests for ``tcms.rpc.api.testcasestatus``. Closes
-  `Issue #1624 <https://github.com/kiwitcms/Kiwi/issues/1624>`_ (Abhishek Chaurasia)
+  `Issue #1624 <https://github.com/kiwitcms/kiwitcms/issues/1624>`_ (Abhishek Chaurasia)
 - Add tests for ``tcms.rpc.api.attachment``. Closes
-  `Issue #1619 <https://github.com/kiwitcms/Kiwi/issues/1619>`_ (@awalvie)
+  `Issue #1619 <https://github.com/kiwitcms/kiwitcms/issues/1619>`_ (@awalvie)
 - Add tests for ``tcms.rpc.api.testexecution.remove_comment``. Closes
-  `Issue #1625 <https://github.com/kiwitcms/Kiwi/issues/1625>`_ (@awalvie)
+  `Issue #1625 <https://github.com/kiwitcms/kiwitcms/issues/1625>`_ (@awalvie)
 - Add tests for ``tcms.rpc.api.testexecutionstatus``. Closes
-  `Issue #1626 <https://github.com/kiwitcms/Kiwi/issues/1626>`_ (@awalvie)
+  `Issue #1626 <https://github.com/kiwitcms/kiwitcms/issues/1626>`_ (@awalvie)
 - Add tests for ``TestRun.add_case_run()`` method and rename it to
   ``TestRun.create_execution()``
 - ``libkrb5-dev`` is not needed anymore in CI with newer ``tcms-api``
@@ -218,7 +218,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Nominate Kiwi TCMS as GitHub Stars <{filename}2020-09-04-nominate-github-star.markdown>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

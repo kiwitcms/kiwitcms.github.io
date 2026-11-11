@@ -11,7 +11,7 @@ from Kiwi TCMS with the analytics dashboard for this website being immediately
 accessible via <https://plausible.io/kiwitcms.org>.
 
 Today we're happy to share that the anonymous analytics dashboard for the
-`pub.kiwitcms.eu/kiwitcms/kiwi` container image is fully accessible via <https://plausible.io/kiwitcms-container>.
+`pub.kiwitcms.eu/kiwitcms/kiwitcms` container image is fully accessible via <https://plausible.io/kiwitcms-container>.
 
 !["screenshot of analytics dashboard"](/images/analytics/dashboard-kiwitcms-container.png "screenshot of analytics dashboard")
 
@@ -24,7 +24,7 @@ Happy Testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Give 👍 on GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/334558);
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
   and follow all project news;

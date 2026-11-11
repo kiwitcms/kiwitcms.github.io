@@ -28,7 +28,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  316d5d4865a1    572MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  316d5d4865a1    572MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container <{filename}pages/containers.markdown>`_ images are available only to
@@ -55,7 +55,7 @@ Security
 
     Existing users are advised to reset their passwords!
     For more information see
-    `GHSA-496x-2jqf-hp7g <https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-496x-2jqf-hp7g>`_
+    `GHSA-496x-2jqf-hp7g <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-496x-2jqf-hp7g>`_
 
 
 Improvements
@@ -85,7 +85,7 @@ Bug fixes
 ~~~~~~~~~
 
 - Trigger on-change handler for Test Case Search pop-up. Fixes
-  `Issue #2679 <https://github.com/kiwitcms/Kiwi/issues/2679>`_
+  `Issue #2679 <https://github.com/kiwitcms/kiwitcms/issues/2679>`_
 - Fix the ``+ Build`` button on Bug and TestRun pages which didn't properly
   select Product & Version
 - Editing TestRun page now properly saves all datetime fields instead of
@@ -98,9 +98,9 @@ Refactoring and testing
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 - Start using webpack for JavaScript assets. Closes
-  `Issue #1262 <https://github.com/kiwitcms/Kiwi/issues/1262>`_
+  `Issue #1262 <https://github.com/kiwitcms/kiwitcms/issues/1262>`_
 - Refactor duplicated setup in Telemetry pages. Closes
-  `Issue #1118 <https://github.com/kiwitcms/Kiwi/issues/1118>`_
+  `Issue #1118 <https://github.com/kiwitcms/kiwitcms/issues/1118>`_
 - Add CodeQL workflow for GitHub code scanning
 - Make it possible to override attachments card title
 - Remove useless tooltip from Telemetry pages
@@ -170,7 +170,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

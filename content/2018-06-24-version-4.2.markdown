@@ -7,7 +7,7 @@ tags: releases
 We're happy to announce Kiwi TCMS and tcms-api version 4.2!
 This is a security, bug-fix and enhancement update which upgrades to the latest
 Django version under Python 3.6.
-We've pushed new `pub.kiwitcms.eu/kiwitcms/kiwi` container image and updated the
+We've pushed new `pub.kiwitcms.eu/kiwitcms/kiwitcms` container image and updated the
 demo instance at [https://public.tenant.kiwitcms.org](https://public.tenant.kiwitcms.org/login/github-app/)!
 
 This version also includes GDPR related changes which affect our project. Read below
@@ -22,13 +22,13 @@ Changes since Kiwi TCMS 4.1.4
 ### Security
 
 - Enable testing with Badit. Fixes
-  [Issue #237](https://github.com/kiwitcms/Kiwi/issues/237)
+  [Issue #237](https://github.com/kiwitcms/kiwitcms/issues/237)
 - Enable testing with
   [Coverity Scan](https://scan.coverity.com/projects/kiwitcms-kiwi)
 - Enable testing with
-  [pyup.io](https://pyup.io/repos/github/kiwitcms/Kiwi/)
+  [pyup.io](https://pyup.io/repos/github/kiwitcms/kiwitcms/)
 - Enable testing with
-  [Snyk](https://snyk.io/test/github/kiwitcms/Kiwi)
+  [Snyk](https://snyk.io/test/github/kiwitcms/kiwitcms)
 - Use SHA256 instead of MD5 and SHA1
 - Use the `secrets` module for activation keys
 - Remove unnecessary AJAX view that had remote code execution vulnerability
@@ -48,7 +48,7 @@ Changes since Kiwi TCMS 4.1.4
 ### Enhancements
 
 - Upgrade to Python 3.6. Fixes
-  [Issue #91](https://github.com/kiwitcms/Kiwi/issues/91)
+  [Issue #91](https://github.com/kiwitcms/kiwitcms/issues/91)
 - Upgrade to [Django 2.0.6](https://docs.djangoproject.com/en/2.0/releases/2.0.6/)
 - Fix around 100 pylint issues (Anton Sankov)
 - Update email confirmation template for newly registered users and make the
@@ -65,7 +65,7 @@ Changes since Kiwi TCMS 4.1.4
 - Rename left-over `get_url()` to `get_full_url()`. Fixes
   [Sentry KIWI-TCMS-1B](https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/523855781/)
 - Fix empty TestPlan url and Product fields in TestRun email notification. Fixes
-  [Issue #353](https://github.com/kiwitcms/Kiwi/issues/353) (Matt Porter, Konsulko Group)
+  [Issue #353](https://github.com/kiwitcms/kiwitcms/issues/353) (Matt Porter, Konsulko Group)
 
 
 ### Translations
@@ -77,7 +77,7 @@ Changes since Kiwi TCMS 4.1.4
 ### Documentation
 
 - Added `git clone` command to documentation. Fixes
-  [Issue #344](https://github.com/kiwitcms/Kiwi/issues/344) (Anton Sankov)
+  [Issue #344](https://github.com/kiwitcms/kiwitcms/issues/344) (Anton Sankov)
 
 ### Models and database migrations
 
@@ -111,7 +111,7 @@ In addition the following changes were deployed to our infrastructure:
 We're trying to be respectful to your private data and not expose that to any
 3rd parties or use it for means other than making Kiwi TCMS better open source
 software. If you spot areas for improvement please
-[report an issue](https://github.com/kiwitcms/Kiwi/issues/new) so we can take
+[report an issue](https://github.com/kiwitcms/kiwitcms/issues/new) so we can take
 a look at it!
 
 
@@ -120,7 +120,7 @@ tcms-api changes since 4.0.0
 ----------------------------
 
 - Remove coloring. Fixes
-  [Issue #185](https://github.com/kiwitcms/Kiwi/issues/185)
+  [Issue #185](https://github.com/kiwitcms/kiwitcms/issues/185)
 - Fix using the API client against `https://` URLs (Adam Łoszyn, Samsung)
 
 
@@ -133,7 +133,7 @@ If you are using Kiwi TCMS as a Docker container then
     cd Kiwi/
     git pull
     docker-compose down
-    docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+    docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
     docker pull centos/mariadb
     docker-compose up -d
     docker exec -it kiwi_web /Kiwi/manage.py migrate

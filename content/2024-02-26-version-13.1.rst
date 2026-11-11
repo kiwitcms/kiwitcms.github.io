@@ -27,7 +27,7 @@ You can explore everything at
 
     Upstream container images (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  b64472d820a2    698MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  b64472d820a2    698MB
 
 **IMPORTANT:** version tagged and multi-arch
 `container images <{filename}pages/containers.markdown>`_ are available only to
@@ -52,7 +52,7 @@ Improvements
 - Send ``Referer:`` header for container ``HEALTHCHECK`` command in order to
   make NGINX logs more readable
 - Allow users to reset their email by asking them to confirm their new address. Fixes
-  `Issue #3211 <https://github.com/kiwitcms/Kiwi/issues/3211>`_
+  `Issue #3211 <https://github.com/kiwitcms/kiwitcms/issues/3211>`_
 - Add support for custom email validators on the registration page
 - Move ``X-Frame-Options`` header definition into settings
 - Move ``X-Content-Type-Options`` header definition into settings
@@ -88,7 +88,7 @@ Bug fixes
 
 - Fix a bug where non-distinct values made it into generated property matrix
 - On TestRun page allow removal of individual parameterized TestExecution(s).
-  Closes `Pull #3282 <https://github.com/kiwitcms/Kiwi/pull/3282>`_
+  Closes `Pull #3282 <https://github.com/kiwitcms/kiwitcms/pull/3282>`_
 
 
 Refactoring and testing
@@ -168,7 +168,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;

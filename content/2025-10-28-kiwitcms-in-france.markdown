@@ -39,7 +39,7 @@ Brief history of Kiwi TCMS in France 🇫🇷:
         for the initial translation of Kiwi TCMS into French.
 
         He has also worked on improving overall translatability of Kiwi TCMS, fixing
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/kryskool">multiple parts of the application</a>
+        <a href="https://github.com/kiwitcms/kiwitcms/pulls/kryskool">multiple parts of the application</a>
         by marking source strings as translatable.
 
         His earliest code contribution is from <em>22nd Jan 2019</em>!
@@ -61,7 +61,7 @@ Brief history of Kiwi TCMS in France 🇫🇷:
         and also a tem member of 0 A.D - a popular open-source game of ancient warfare.
 
         He has contributed documentation about
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/na-Itms">
+        <a href="https://github.com/kiwitcms/kiwitcms/pulls/na-Itms">
         running Kiwi TCMS behind a reverse proxy with HAProxy</a> and was the original inspiration
         behind the now defunct
         <a href="https://github.com/kiwitcms/open-source-test-management/">Open-Source-Test-Management</a>
@@ -85,7 +85,7 @@ Brief history of Kiwi TCMS in France 🇫🇷:
         a member of the /e/ Foundation team.
 
         He has contributed a
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/nfk">
+        <a href="https://github.com/kiwitcms/kiwitcms/pulls/nfk">
         bug-fix for the order of test cases when closing a TestPlan</a> in Kiwi TCMS.
 
         His earliest code contribution is from <em>16th Dec 2021</em>!
@@ -107,7 +107,7 @@ Brief history of Kiwi TCMS in France 🇫🇷:
         <em>django-modern-rpc</em> - the library underlying the Kiwi TCMS API layer!
 
         He has worked on changes related to
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/alorence">
+        <a href="https://github.com/kiwitcms/kiwitcms/pulls/alorence">
         Kiwi TCMS compatibility with the latest version of django-modern-rpc
         </a>.
 
@@ -145,7 +145,7 @@ at [Open Source Experience, 10 &amp; 11 Dec 2025 in Paris]({filename}2025-10-29-
 
 If you like what we're doing please help us grow and sustain development!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
   and follow all news;
 - [Become a contributor](https://kiwitcms.readthedocs.io/en/latest/contribution.html) and an awesome open source hacker;

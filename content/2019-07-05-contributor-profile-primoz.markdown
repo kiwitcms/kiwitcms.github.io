@@ -60,7 +60,7 @@ more than welcome to join and add another one.
 [Translating via Crowdin](https://kiwitcms.readthedocs.io/en/latest/contribution.html#translation)
 is very simple and requires no additional technical skills. I've also dabbled into project
 documentation and proposed a few updates to it. I'm also the culprit for some
-[32 issues](https://github.com/kiwitcms/Kiwi/issues/Prome88) and counting,
+[32 issues](https://github.com/kiwitcms/kiwitcms/issues/Prome88) and counting,
 the majority of them being proposals for future application enhancements and few UX/UI bugs
 (déformation professionnelle :-)).
 

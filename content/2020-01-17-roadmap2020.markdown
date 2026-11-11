@@ -55,12 +55,12 @@ The areas shown on the picture above will receive more priority.
 **Goal:** complete remaining [Telemetry features]({filename}2019-03-03-telemetry.markdown).
 
 **Goal:** complete
-[bug-tracker integration milestone](https://github.com/kiwitcms/Kiwi/milestone/1).
+[bug-tracker integration milestone](https://github.com/kiwitcms/kiwitcms/milestone/1).
 
 **Goal:** all pylint issues resolved.
 
 **Goal:** migrate all remaining legacy templates to Patternfly UI. See
-[patternfly-migration](https://github.com/kiwitcms/Kiwi/milestone/3) milestone.
+[patternfly-migration](https://github.com/kiwitcms/kiwitcms/milestone/3) milestone.
 
 **Goal:** where FE sends AJAX requests to BE views replace with JSON RPC API instead.
 
@@ -99,7 +99,7 @@ for Kiwi TCMS:
 - Django plugin
 
 For more information see
-[test-automation-plugins](https://github.com/kiwitcms/Kiwi/milestone/2) milestone.
+[test-automation-plugins](https://github.com/kiwitcms/kiwitcms/milestone/2) milestone.
 
 **Ongoing:** work with our partners from the proprietary and open source worlds.
 This is hard to quantify and lots of it doesn't actually depend on the team.

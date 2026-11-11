@@ -20,7 +20,7 @@ Complete the internal refactoring
 
 *Status: small progress, needs help*
 
-[CodeClimate](https://codeclimate.com/github/kiwitcms/Kiwi) progress is:
+[CodeClimate](https://codeclimate.com/github/kiwitcms/kiwitcms) progress is:
 
 * -60 code smells
 * -55 duplications
@@ -85,7 +85,7 @@ Redefine bug-tracker integration
 
 We've been making slow progress on this milestone lately. For more info
 see
-[https://github.com/kiwitcms/Kiwi/milestone/1](https://github.com/kiwitcms/Kiwi/milestone/1)
+[https://github.com/kiwitcms/kiwitcms/milestone/1](https://github.com/kiwitcms/kiwitcms/milestone/1)
 
 
 GitHub flow integration

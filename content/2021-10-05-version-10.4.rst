@@ -28,12 +28,12 @@ Supported upgrade paths::
 
 Container images::
 
-    pub.kiwitcms.eu/kiwitcms/kiwi       latest  10eb8f04cccd    590 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-    pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  10eb8f04cccd    590 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+    pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 
 
 Changes since Kiwi TCMS 10.3
@@ -92,9 +92,9 @@ API
 ~~~
 
 - ``TestCase.create`` method accepts ``setup_duration`` and ``testing_duration`` fields.
-  Refs `Issue #1923 <https://github.com/kiwitcms/Kiwi/issues/1923>`_ (Mfon Eti-mfon)
+  Refs `Issue #1923 <https://github.com/kiwitcms/kiwitcms/issues/1923>`_ (Mfon Eti-mfon)
 - ``TestCase.update`` method acepts  ``setup_duration`` and ``testing_duration`` fields.
-  Refs `Issue #1923 <https://github.com/kiwitcms/Kiwi/issues/1923>`_ (Mfon Eti-mfon)
+  Refs `Issue #1923 <https://github.com/kiwitcms/kiwitcms/issues/1923>`_ (Mfon Eti-mfon)
 - New method ``Testing.individual_test_case_health``
 - Timedelta values are serialized to float, representing seconds
 
@@ -104,9 +104,9 @@ Bug fixes
 
 - Fix wrong URL parameter passed to test cases clone page
 - Show translated execution statuses for TestRun page. Closes
-  `Issue #1966 <https://github.com/kiwitcms/Kiwi/issues/1966>`_
+  `Issue #1966 <https://github.com/kiwitcms/kiwitcms/issues/1966>`_
 - Properly initialize Product value on TestRun Edit page. Closes
-  `Issue #2514 <https://github.com/kiwitcms/Kiwi/issues/2514>`_
+  `Issue #2514 <https://github.com/kiwitcms/kiwitcms/issues/2514>`_
 - Clone duration fields when cloning a test case
 
 
@@ -175,7 +175,7 @@ If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
 - Nominate Kiwi TCMS at `MLH Open Source Awards <https://fellowship.mlh.io/opensourceawards>`_;
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Give 👍 on GitLab <https://gitlab.com/gitlab-org/gitlab/-/issues/334558>`_;
 - `Donate via Open Collective <https://opencollective.com/kiwitcms/donate>`_ as low as 1 EUR;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_

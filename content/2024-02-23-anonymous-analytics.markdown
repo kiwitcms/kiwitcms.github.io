@@ -33,7 +33,7 @@ nothing else! Here's a preview of what it looks like:
 !["preview of versions report"](/images/analytics/preview_active_versions.png "preview of versions report")
 
 You can examine our source code
-[here](https://github.com/kiwitcms/Kiwi/pull/3546) and [here](https://github.com/kiwitcms/Kiwi/pull/3547).
+[here](https://github.com/kiwitcms/kiwitcms/pull/3546) and [here](https://github.com/kiwitcms/kiwitcms/pull/3547).
 
 Staying true to our open source nature we've made the
 [kiwitcms.org stats dashboard](https://plausible.io/kiwitcms.org) publicly available immediately!
@@ -86,7 +86,7 @@ Happy Testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!
 
-- [Give ⭐ on GitHub](https://github.com/kiwitcms/Kiwi/stargazers);
+- [Give ⭐ on GitHub](https://github.com/kiwitcms/kiwitcms/stargazers);
 - [Give 👍 on GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/334558);
 - [Join our newsletter](https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581)
   and follow all project news;

@@ -27,7 +27,7 @@ You can explore everything at
 
     Public container image (x86_64)::
 
-        pub.kiwitcms.eu/kiwitcms/kiwi   latest  0de20b89c781    691MB
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  0de20b89c781    691MB
 
 
 **IMPORTANT:** version tagged and multi-arch
@@ -70,7 +70,7 @@ Improvements
   to prevent usernames being exposed in logs or anonymous analytics
 - Refactor URL ``/plan/<pk>/<slug>`` into ``/plan/<pk>/`` to prevent test plan
   summary being exposed in logs or anonymous analytics. Fixes
-  `Issue #3994 <https://github.com/kiwitcms/Kiwi/issues/3994>`_
+  `Issue #3994 <https://github.com/kiwitcms/kiwitcms/issues/3994>`_
 
 
 Bug fixes
@@ -146,7 +146,7 @@ Happy testing!
 If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!
 
-- `Give ⭐ on GitHub <https://github.com/kiwitcms/Kiwi/stargazers>`_;
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
 - `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
   and follow all project news;
 - `Become a contributor <https://kiwitcms.readthedocs.io/en/latest/contribution.html>`_

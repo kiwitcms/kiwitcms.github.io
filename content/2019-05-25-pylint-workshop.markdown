@@ -14,11 +14,11 @@ This edition was the first which was practice based.
 Attendance numbers were low but participation was very good. We managed to
 create 4 new checkers for Kiwi TCMS:
 
-- [PR #949 - AutoField checker](https://github.com/kiwitcms/Kiwi/pull/949)
-- [PR #950 - OneToOneField checker](https://github.com/kiwitcms/Kiwi/pull/950)
-- [PR #951 - discover directories without \_\_init\_\_.py](https://github.com/kiwitcms/Kiwi/pull/951)
-- [PR #952 - empty class checker](https://github.com/kiwitcms/Kiwi/pull/952)
-- [PR #955 - function based view checker](https://github.com/kiwitcms/Kiwi/pull/955)
+- [PR #949 - AutoField checker](https://github.com/kiwitcms/kiwitcms/pull/949)
+- [PR #950 - OneToOneField checker](https://github.com/kiwitcms/kiwitcms/pull/950)
+- [PR #951 - discover directories without \_\_init\_\_.py](https://github.com/kiwitcms/kiwitcms/pull/951)
+- [PR #952 - empty class checker](https://github.com/kiwitcms/kiwitcms/pull/952)
+- [PR #955 - function based view checker](https://github.com/kiwitcms/kiwitcms/pull/955)
 
 
 Many thanks to all contributors. These new checkers have discovered quite a
