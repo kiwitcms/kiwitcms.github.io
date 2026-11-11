@@ -141,12 +141,12 @@ Patternfly and other dependencies. You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  39fcb88182bb    963.4 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  39fcb88182bb    963.4 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-3">
 <h2>Changes since Kiwi TCMS 6.3</h2>
@@ -159,7 +159,7 @@ Content spoofing possibility in the default 404 page</li>
 See CVE-2018-14041</li>
 <li>By default session cookies will expire after 24 hours. This can be controlled
 via the <tt class="docutils literal">SESSION_COOKIE_AGE</tt> setting. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/556">Issue #556</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/556">Issue #556</a></li>
 </ul>
 </div>
 <div class="section" id="improvements">
@@ -191,7 +191,7 @@ were off (Anton Sankov)</li>
 This is the same as <tt class="docutils literal">TestRun page <span class="pre">-&gt;</span> Cases menu <span class="pre">-&gt;</span> Add</tt> action</li>
 <li>Legacy reports will be removed after 1st March 2019. Provide your
 feedback in
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/657">Issue #657</a></li>
 <li>The <tt class="docutils literal">/run/</tt> URL path has been merged with <tt class="docutils literal">/runs/</tt> due to configuration
 refactoring. This may break your bookmarks or permalinks!</li>
 </ul>
@@ -202,7 +202,7 @@ refactoring. This may break your bookmarks or permalinks!</li>
 <li>Don't traceback if markdown text is <tt class="docutils literal">None</tt>. Originally reported as
 <a class="reference external" href="https://stackoverflow.com/questions/53662887/">SO #53662887</a></li>
 <li>Show loading spinner when searching. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/653">Issue #653</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/653">Issue #653</a></li>
 <li>Quick fix: when viewing TestPlan cases make TC summary link to the test case.
 Previously the summary column was a link to nowhere.</li>
 </ul>
@@ -222,13 +222,13 @@ Previously the summary column was a link to nowhere.</li>
 <li>New and updated internal linters</li>
 <li>Refactor <tt class="docutils literal">testplans.views.new</tt> to class based view (Anton Sankov)</li>
 <li>Refactor <tt class="docutils literal">TestCase <span class="pre">-&gt;</span> Bugs tab <span class="pre">-&gt;</span> Remove</tt> to JSON-RPC. References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/18">Issue #18</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/18">Issue #18</a></li>
 <li>Refactor <tt class="docutils literal">removeCaseRunBug()</tt> to JSON-RPC, References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/18">Issue #18</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/18">Issue #18</a></li>
 <li>Remove unused <tt class="docutils literal">render_form()</tt> methods</li>
 <li>Remove unnecessary string-to-int conversion (Ivaylo Ivanov)</li>
 <li>Remove obsolete label fields. References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652">Issue #652</a> (Anton Sankov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/652">Issue #652</a> (Anton Sankov)</li>
 <li>Remove JavaScript that duplicates <tt class="docutils literal">requestOperationUponFilteredCases()</tt></li>
 <li>Remove <tt class="docutils literal">QuerySetIterationProxy</tt> class - not used anymore</li>
 </ul>
@@ -241,21 +241,21 @@ Previously the summary column was a link to nowhere.</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -307,7 +307,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

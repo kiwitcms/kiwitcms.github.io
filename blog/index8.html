@@ -123,12 +123,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  7c1b947b9a43    561 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  7c1b947b9a43    561 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-8-1">
 <h2>Changes since Kiwi TCMS 8.1</h2>
@@ -143,7 +143,7 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 <li>Update marked(js) to version 0.8.2</li>
 <li>Change default MariaDB charset and collation to utf8mb4. Will only affect
 new installations. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/327">Issue #327</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/327">Issue #327</a></li>
 <li>Document <tt class="docutils literal">TCMS_PLAN_ID</tt> ENV variable supported by automation framework
 plugins</li>
 <li>Test case Search page now allows searching for records containing the
@@ -170,7 +170,7 @@ neutral status found in the database</li>
 <h3>Refactoring</h3>
 <ul class="simple">
 <li>Fix pylint errors. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1510">Issue #1510</a> (&#64;cmbahadir)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1510">Issue #1510</a> (&#64;cmbahadir)</li>
 <li>Add tests for <tt class="docutils literal">TestRunAdmin.delete_view()</tt> (Mariyan Garvanski)</li>
 <li>Revert &quot;[l10n] Add Serializer class which returns untranslated models&quot;</li>
 </ul>
@@ -212,21 +212,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -326,12 +326,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  fbb363af2d90    557 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  fbb363af2d90    557 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-8-0">
 <h2>Changes since Kiwi TCMS 8.0</h2>
@@ -366,7 +366,7 @@ on Oracle which we believe does not affect Kiwi TCMS</p>
 <li><p class="first">Update markdown from 3.2 to 3.2.1</p>
 </li>
 <li><p class="first">On bug creation send email to assignee. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1154">Issue #1154</a> (Mfon Eti-mfon)</p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1154">Issue #1154</a> (Mfon Eti-mfon)</p>
 </li>
 <li><p class="first">Make it possible to provide override settings in a directory. Kiwi TCMS will
 respect:</p>
@@ -378,7 +378,7 @@ respect:</p>
 <a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization">https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#customization</a></p>
 </li>
 <li><p class="first">Allow adding TestPlan to TestCase via UI. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1021">Issue #1021</a></p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1021">Issue #1021</a></p>
 </li>
 <li><p class="first">Add visual representation of failures in TestCase health telemetry</p>
 </li>
@@ -404,11 +404,11 @@ native boolean on the backend</li>
 <ul class="simple">
 <li>The number of search results shown per page can now be controlled via
 <tt class="docutils literal">DEFAULT_PAGE_SIZE</tt> setting, which is 100 by default. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1210">Issue #1210</a> (Ivailo Karabojkov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1210">Issue #1210</a> (Ivailo Karabojkov)</li>
 <li>Use comma separated display of components in bug reports. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1157">Issue #1157</a> (Ivailo Karabojkov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1157">Issue #1157</a> (Ivailo Karabojkov)</li>
 <li>Update selector for 'Select All' test executions in TestRun page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1404">Issue #1404</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1404">Issue #1404</a></li>
 <li>Fix crash when sorting test cases in TestPlan page. Fixes
 <a class="reference external" href="https://sentry.io/organizations/open-technologies-bulgaria-ltd/issues/1519809326/">Sentry #KIWI-TCMS-A6</a></li>
 <li>Fix a <tt class="docutils literal"><span class="pre">TC-undefined</span></tt> displayed in TestCase health telemetry</li>
@@ -455,21 +455,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -613,12 +613,12 @@ breaking direct upgrades from existing installations!</p>
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  71a55e353da2    557 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  71a55e353da2    557 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-7-3">
 <h2>Changes since Kiwi TCMS 7.3</h2>
@@ -633,7 +633,7 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 <li>Allow customization of test execution statuses via admin.
 For more information see
 <a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses">https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses</a>.
-Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/236">Issue #236</a></li>
+Fixes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/236">Issue #236</a></li>
 <li>Add passing rate chart to Execution trends telemetry</li>
 <li>Documentation updates (&#64;Prome88)</li>
 </ul>
@@ -739,28 +739,28 @@ newest API. At the time of Kiwi TCMS v8.0 release their versions are:</p>
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Allow displaying lists with more then 9 items when reviewing test cases. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/339">Issue #339</a> (Mfon Eti-mfon)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/339">Issue #339</a> (Mfon Eti-mfon)</li>
 <li>Make <tt class="docutils literal">tcms.tests.storage.RaiseWhenFileNotFound`</tt> capable of finding
 finding static files on Windows which enables development mode for folks
 not using Linux environment. See
 <a class="reference external" href="https://stackoverflow.com/questions/55297178">SO #55297178</a> (Mfon Eti-mfon)</li>
 <li>Allow changing test execution status without adding comment. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1261">Issue #1261</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1261">Issue #1261</a></li>
 <li>Properly refresh test run progress bar when changing statuses. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1326">Issue #1326</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1326">Issue #1326</a></li>
 <li>Fix a bug where updating test cases from the UI was causing text and various
 other fields to be reset. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1318">Issue #1318</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1318">Issue #1318</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring">
 <h3>Refactoring</h3>
 <ul class="simple">
 <li>Extract attachments widget to new template. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1124">Issue #1124</a>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1124">Issue #1124</a>
 (Rosen Sasov)</li>
 <li>Rename RPC related classes. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/682">Issue #682</a>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/682">Issue #682</a>
 (Rosen Sasov)</li>
 <li>Add new test (Mariyan Garvanski)</li>
 <li>Start using GitHub actions, first for running flake8</li>
@@ -808,21 +808,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -957,10 +957,10 @@ a predictable capacity.</p>
 <p>The areas shown on the picture above will receive more priority.</p>
 <p><strong>Goal:</strong> complete remaining <a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Telemetry features</a>.</p>
 <p><strong>Goal:</strong> complete
-<a href="https://github.com/kiwitcms/Kiwi/milestone/1">bug-tracker integration milestone</a>.</p>
+<a href="https://github.com/kiwitcms/kiwitcms/milestone/1">bug-tracker integration milestone</a>.</p>
 <p><strong>Goal:</strong> all pylint issues resolved.</p>
 <p><strong>Goal:</strong> migrate all remaining legacy templates to Patternfly UI. See
-<a href="https://github.com/kiwitcms/Kiwi/milestone/3">patternfly-migration</a> milestone.</p>
+<a href="https://github.com/kiwitcms/kiwitcms/milestone/3">patternfly-migration</a> milestone.</p>
 <p><strong>Goal:</strong> where FE sends AJAX requests to BE views replace with JSON RPC API instead.</p>
 <p><strong>Extra:</strong> start tackling the JavaScript mess that we have. This depends and is related
 to Patternfly migration and overall refactoring.</p>
@@ -990,7 +990,7 @@ for Kiwi TCMS:</p>
 <li>Django plugin</li>
 </ul>
 <p>For more information see
-<a href="https://github.com/kiwitcms/Kiwi/milestone/2">test-automation-plugins</a> milestone.</p>
+<a href="https://github.com/kiwitcms/kiwitcms/milestone/2">test-automation-plugins</a> milestone.</p>
 <p><strong>Ongoing:</strong> work with our partners from the proprietary and open source worlds.
 This is hard to quantify and lots of it doesn't actually depend on the team.
 However we are continuing to talk to them regularly. Expect new feedback to
@@ -1039,12 +1039,12 @@ and bug-fixes!</p>
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  4026ee62e488    556 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  4026ee62e488    556 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-7-2">
 <h2>Changes since Kiwi TCMS 7.2</h2>
@@ -1086,18 +1086,18 @@ See <a class="reference external" href="https://stackoverflow.com/questions/5932
 <h3>API</h3>
 <ul class="simple">
 <li><tt class="docutils literal">TestCase.update()</tt> method now allows to update the <tt class="docutils literal">author</tt> field. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/630">Issue #630</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/630">Issue #630</a></li>
 </ul>
 </div>
 <div class="section" id="bug-fixes">
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Modify template pass <tt class="docutils literal">object</tt> as <tt class="docutils literal">test_plan</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1307">Issue #1307</a> (Ed Oswald S. Go)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1307">Issue #1307</a> (Ed Oswald S. Go)</li>
 <li>Enable version selection in test plan search page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1276">Issue #1276</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1276">Issue #1276</a></li>
 <li>Apply percentage rounding for completed test executions. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1230">Issue #1230</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1230">Issue #1230</a></li>
 <li>Fix a logical bug in conditional expression when deciding whether or not
 reporting bugs to selected issue tracker is disabled</li>
 </ul>
@@ -1106,9 +1106,9 @@ reporting bugs to selected issue tracker is disabled</li>
 <h3>Refactoring</h3>
 <ul class="simple">
 <li>Add code of conduct. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1185">Issue #1185</a> (Rosen Sasov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1185">Issue #1185</a> (Rosen Sasov)</li>
 <li>Add test for <tt class="docutils literal">KIWI_DONT_ENFORSE_HTTPS</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1274">Issue #1274</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1274">Issue #1274</a></li>
 <li>Replace <tt class="docutils literal">ugettext_lazy</tt> with <tt class="docutils literal">gettext_lazy</tt> for Django 3</li>
 <li>Remove <tt class="docutils literal">BaseCaseSearchForm.bug_id</tt> field</li>
 <li>Refactor testcase edit view to class-based</li>
@@ -1149,21 +1149,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -1226,7 +1226,7 @@ into our database. This is documented both on the app installation screen itself
 (required by GitHub) and on
 <a href="https://github.com/kiwitcms/github-app">https://github.com/kiwitcms/github-app</a>!</p>
 <p>Further ideas about integration between GitHub and Kiwi TCMS, including the original
-idea about status checks from <a href="https://github.com/kiwitcms/Kiwi/issues/700">Issue #700</a>,
+idea about status checks from <a href="https://github.com/kiwitcms/kiwitcms/issues/700">Issue #700</a>,
 can be found at
 <a href="https://github.com/kiwitcms/github-app/issues">https://github.com/kiwitcms/github-app/issues</a>.</p>
 <h2>Help us grow</h2>
@@ -1268,7 +1268,7 @@ This year less so. Progress has been slower than before and not so much
 visible. Community and team is growing. More contributors are welcome.</p>
 <h2>Complete the internal refactoring</h2>
 <p><em>Status: small progress, needs help</em></p>
-<p><a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> progress is:</p>
+<p><a href="https://codeclimate.com/github/kiwitcms/kiwitcms">CodeClimate</a> progress is:</p>
 <ul>
 <li>-60 code smells</li>
 <li>-55 duplications</li>
@@ -1309,7 +1309,7 @@ for links and more info.</p>
 <p><em>Status: 66% complete, in progress, behind schedule</em></p>
 <p>We've been making slow progress on this milestone lately. For more info
 see
-<a href="https://github.com/kiwitcms/Kiwi/milestone/1">https://github.com/kiwitcms/Kiwi/milestone/1</a></p>
+<a href="https://github.com/kiwitcms/kiwitcms/milestone/1">https://github.com/kiwitcms/kiwitcms/milestone/1</a></p>
 <h2>GitHub flow integration</h2>
 <p><em>Status: done, awaiting deployment</em></p>
 <p>Our team spent some time making Kiwi TCMS the first open source TCMS available
@@ -1371,12 +1371,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  f9a8a044c34e    537 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  f9a8a044c34e    537 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-7-1">
 <h2>Changes since Kiwi TCMS 7.1</h2>
@@ -1402,7 +1402,7 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 <tt class="docutils literal">TestExecutionStatus</tt> and adjust existing code to work with them.
 This is a necessary step before allowing customization of test execution
 statuses, see
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/236">Issue #236</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/236">Issue #236</a></li>
 </ul>
 </div>
 <div class="section" id="api">
@@ -1430,15 +1430,15 @@ are still available</li>
 are too long</li>
 <li>Automatically expand TestExecution comment history if there are comments
 present. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/349">Issue #349</a> (Matt Porter)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/349">Issue #349</a> (Matt Porter)</li>
 <li>Document timezone settings and show current server time in navbar. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1206">Issue #1206</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1206">Issue #1206</a></li>
 <li>Check for permissions in HTML template. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/961">Issue #961</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/961">Issue #961</a></li>
 <li>Document bug tracker integration support. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/698">Issue #698</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/698">Issue #698</a></li>
 <li>Delete comments when TestCase and TestExecution are removed. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1028">Issue #1028</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1028">Issue #1028</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring">
@@ -1446,15 +1446,15 @@ present. Fixes
 <ul class="simple">
 <li>Pylint fixes (Mariyan Garvanski)</li>
 <li>Use <tt class="docutils literal">django.utils.timezone.now()</tt> instead of <tt class="docutils literal">datetime.now()</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/545">Issue #545</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/545">Issue #545</a></li>
 <li>Use JSON-RPC instead of backend views when working with comments. Resolves
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/960">Issue #960</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/960">Issue #960</a></li>
 <li>Remove <tt class="docutils literal">tcms.core.contrib.comments</tt> module. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/959">Issue #959</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/959">Issue #959</a></li>
 <li>Remove <tt class="docutils literal">label=</tt> attribute from form field. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652">Issue #652</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/652">Issue #652</a></li>
 <li>Move and rename XML-RPC forms. Resolves
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/681">Issue #681</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/681">Issue #681</a></li>
 <li>Convert <tt class="docutils literal">testplans.views.DeleteCasesView</tt> to JSON-RPC</li>
 <li>Refactor more views from function based to class based</li>
 <li>Remove duplicate JavaScript</li>
@@ -1496,21 +1496,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -1724,12 +1724,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  c8cf36ac5ca5    602 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  c8cf36ac5ca5    602 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-7-0">
 <h2>Changes since Kiwi TCMS 7.0</h2>
@@ -1744,7 +1744,7 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 <li>Better styling for checkboxes in 'Add hyperlink' dialog,
 part of TestRun page</li>
 <li>Add hyperlink validation. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1147">Issue #1147</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1147">Issue #1147</a></li>
 </ul>
 </div>
 <div class="section" id="database-migrations">
@@ -1765,12 +1765,12 @@ only if upgrading from existing installation</li>
 <ul class="simple">
 <li>Always build with the latest versions of translations</li>
 <li>Add 'Delete' menu item in Bugs page. Fixes #1153
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1154">Issue #1153</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1154">Issue #1153</a></li>
 <li>When deleting hyperlink from TestExecution hide the actual UI
 elements from the page</li>
 <li>Fix failure to delete TCs when the number of TCs inside TP is greater
 than 100. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1149">Issue #1149</a> and
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1149">Issue #1149</a> and
 <a class="reference external" href="https://sentry.io/organizations/open-technologies-bulgaria-ltd/issues/1245504316/">Sentry KIWI-TCMS-8F</a></li>
 </ul>
 </div>
@@ -1778,10 +1778,10 @@ than 100. Fixes
 <h3>Refactoring</h3>
 <ul class="simple">
 <li>Rename directory <tt class="docutils literal">xmlrpc</tt> to <tt class="docutils literal">rpc</tt> and pylint updates. Refs
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/682">Issue #682</a>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/682">Issue #682</a>
 (Matej Aleksandrov, Sinergise)</li>
 <li>Remove labels from form fields, Refs
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/652">Issue #652</a> (Azmi YÜKSEL)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/652">Issue #652</a> (Azmi YÜKSEL)</li>
 <li>New base class for tests around permissions (Svetlomir Balevski)</li>
 <li>New &quot;blueprint&quot; test case around permissions to make testing in this area more
 robust</li>
@@ -1862,21 +1862,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -1906,7 +1906,7 @@ removed functionality, bug fixes, substantial internal refactoring and
 several new languages. You can explore everything at
 <a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>!</p>
 <p>The 7.0 version number happily coincides with the fact that we've surpassed
-70000 downloads from <a class="reference external" href="https://hub.docker.com/v2/repositories/kiwitcms/kiwi/">Docker Hub</a>.</p>
+70000 downloads from <a class="reference external" href="https://hub.docker.com/v2/repositories/kiwitcms/kiwitcms/">Docker Hub</a>.</p>
 <p>Supported upgrade paths:</p>
 <pre class="literal-block">
 5.3   (or older) -&gt; 5.3.1
@@ -1917,12 +1917,12 @@ several new languages. You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  d34dc6d896bf    584 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  d34dc6d896bf    584 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-11">
 <h2>Changes since Kiwi TCMS 6.11</h2>
@@ -1949,14 +1949,14 @@ immediately!</li>
 <li>Reduce docker image size from 1.01 GB to under 600 MB</li>
 <li>Add TestCase Health telemetry</li>
 <li>Add support for Redmine issue tracker. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/41">Issue #41</a> (Jesse C. Lin)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/41">Issue #41</a> (Jesse C. Lin)</li>
 <li>Add breathing room around HTML form's submit buttons (Rady Madjev)</li>
 <li>New TestRun page action: bulk-add hyperlinks to TestExecution(s)</li>
 <li>Make it possible to disable HTTPS by specifying the
 <tt class="docutils literal">KIWI_DONT_ENFORCE_HTTPS</tt> environment variable! Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1036">Issue #1036</a> (Marco Descher)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1036">Issue #1036</a> (Marco Descher)</li>
 <li>Documentation updates, including internal style checker. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1000">Issue #1000</a> (Prome88)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1000">Issue #1000</a> (Prome88)</li>
 <li>When linking a TestExecution to a defect and choosing to update the
 Issue Tracker Kiwi TCMS will not add a comment pointing back to
 TR ID/summary/URL and TE ID/summary. This provides more detailed information
@@ -1965,9 +1965,9 @@ specific execution details like we did in the past</li>
 <li>Display additional defect information via Issue Tracker integration.
 On Patternfly pages which show defect URLs this is accessible via a
 small info icon. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/117">Issue #117</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/117">Issue #117</a></li>
 <li>Add minimalistic defect tracker functionality. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/699">Issue #699</a><ul>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/699">Issue #699</a><ul>
 <li>integrated with Issue Tracker integration layer as if it was
 an external system</li>
 <li>when adding hyperlink to TestExecition (also via API method
@@ -2008,7 +2008,7 @@ nothing breaks!</p>
 </ul>
 </li>
 <li><p class="first">Apply <tt class="docutils literal">LinkReference</tt> permissions to default group <tt class="docutils literal">Tester</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/881">Issue #881</a></p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/881">Issue #881</a></p>
 <blockquote>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -2018,8 +2018,8 @@ apply these permissions by hand via the Admin section.</p>
 </blockquote>
 </li>
 <li><p class="first">Remove <tt class="docutils literal">testcases.Bug</tt> model, replaced with <tt class="docutils literal">LinkReference</tt>.
-Closes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1029">Issue #1029</a> and
-obsoletes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/320">Issue #320</a>.</p>
+Closes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1029">Issue #1029</a> and
+obsoletes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/320">Issue #320</a>.</p>
 <blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -2073,7 +2073,7 @@ uses OpenGraph protocol to collect the data that will be shown. You may
 override <tt class="docutils literal">.details()</tt> for each issue tracker (or add your own IT) to
 extend this functionality. Information is cached for 1 hour by default.
 References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/117">Issue #117</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/117">Issue #117</a></li>
 <li>Add methods <tt class="docutils literal">Bug.add_tag()</tt> and <tt class="docutils literal">Bug.remove_tag()</tt></li>
 <li>Existing method with name <tt class="docutils literal">Bug.filter()</tt> has changed behavior. It is
 now used to query objects from Kiwi TCMS minimalistic defect tracker</li>
@@ -2099,7 +2099,7 @@ for hyperlinks</li>
 <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-CACHES">Django docs</a>
 for more info. Initially this setting is used to cache defect details received
 via Issue Tracker integration. See
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/117">Issue #117</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/117">Issue #117</a></li>
 </ul>
 </div>
 <div class="section" id="bug-fixes">
@@ -2107,15 +2107,15 @@ via Issue Tracker integration. See
 <ul class="simple">
 <li>Don't auto-download FontAwesome for SimpleMDE. Resolves icons disappearing
 on pages which have the markdown editor. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/905">Issue #905</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/905">Issue #905</a></li>
 <li>Reorder HTML elements so Delete button is still visible in TestCase review
 comment section. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1013">Issue #1013</a> (Rady Madjev)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1013">Issue #1013</a> (Rady Madjev)</li>
 <li>Remove section that displays bugs in TestExecution container. Bugs are now
 denoted by a small icon next to their hyperlink. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/475">Issue #475</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/475">Issue #475</a></li>
 <li>Cache Issue Tracker connections per <tt class="docutils literal">base_url</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/290">Issue #290</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/290">Issue #290</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring">
@@ -2138,7 +2138,7 @@ instead of dedicated backend function.</li>
 <li>Introduce a translation mode where you can translate the interface via
 in-context editor. For more information see
 <a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html#translation">Translation guide</a>.
-Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1098">Issue #1098</a></li>
+Fixes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1098">Issue #1098</a></li>
 <li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/sq#">Albanian translation</a></li>
 <li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/bg#">Bulgarian translation</a></li>
 <li>Updated <a class="reference external" href="https://crowdin.com/project/kiwitcms/zh-TW#">Chinese Traditional translation</a></li>
@@ -2151,7 +2151,7 @@ Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issue
 <p>For more information check-out
 <a class="reference external" href="https://crowdin.com/project/kiwitcms">all supported languages</a>.
 To request new language
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/new?title=Request+new+language:+...&amp;body=Please+enable+...+language+in+Crowdin">click here</a>!</p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/new?title=Request+new+language:+...&amp;body=Please+enable+...+language+in+Crowdin">click here</a>!</p>
 </div>
 </div>
 <div class="section" id="junit-xml-plugin-v0-4">
@@ -2183,21 +2183,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -2253,7 +2253,7 @@ you have confirmed that all functions are in use!</p>
 <h2>CodeClimate Minor severity issues</h2>
 <p>Difficulty: easy to moderate</p>
 <p>Check-out the
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=minor&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Minor severity issues</a>.
+<a href="https://codeclimate.com/github/kiwitcms/kiwitcms/issues?severity%5B%5D=minor&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Minor severity issues</a>.
 There are many of them:</p>
 <ul>
 <li>CSS lint issues (we suggest you start with this one)</li>
@@ -2266,7 +2266,7 @@ Not everything may be an issue so if you have any questions ask someone from our
 <h2>CodeClimate Major severity issues</h2>
 <p>Difficulty: moderate to hard</p>
 <p>Check-out the
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=major&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Major severity issues</a>.
+<a href="https://codeclimate.com/github/kiwitcms/kiwitcms/issues?severity%5B%5D=major&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Major severity issues</a>.
 There are around 150 of them:</p>
 <ul>
 <li>identical and similar code blocks</li>
@@ -2281,14 +2281,14 @@ to minimize the effort spent here.</p>
 <h2>CodeClimate Critical severity issues</h2>
 <p>Difficulty: hard</p>
 <p>Check-out the
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/issues?severity%5B%5D=critical&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Critical severity issues</a>.
+<a href="https://codeclimate.com/github/kiwitcms/kiwitcms/issues?severity%5B%5D=critical&amp;status%5B%5D=&amp;status%5B%5D=open&amp;status%5B%5D=confirmed&amp;engine_name%5B%5D=structure&amp;engine_name%5B%5D=duplication&amp;engine_name%5B%5D=bandit&amp;engine_name%5B%5D=csslint&amp;engine_name%5B%5D=fixme&amp;engine_name%5B%5D=radon&amp;engine_name%5B%5D=sonar-python">list of Critical severity issues</a>.
 All of these are functions with high cognitive complexity and
 the recommended way to deal with them is refactoring into
 <a href="https://docs.djangoproject.com/en/2.2/topics/class-based-views/">class based views</a>.</p>
 <h2>Improve pylint health</h2>
 <p>Difficulty: easy</p>
 <p>Execute pylint against the latest sources and start fixing the issues.
-Looking at <a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/579167487">pylint logs</a> the
+Looking at <a href="https://travis-ci.org/kiwitcms/kiwitcms/jobs/579167487">pylint logs</a> the
 following items are relatively easy to work on:</p>
 <ul>
 <li>Everything in module tcms.urls</li>
@@ -2315,7 +2315,7 @@ issues which may lead to security vulnerabilities. We have resolved all such
 issues in our own source code but we also execute Bandit against the entire
 Python dependency stack. There it finds thousands of issues, so much so that
 the reporter crashes.</p>
-<p><a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/579167486">In CI</a> there are around
+<p><a href="https://travis-ci.org/kiwitcms/kiwitcms/jobs/579167486">In CI</a> there are around
 130 issues reported. The best course of action here is to execute Bandit locally
 against the offending library and then figure out what to do:</p>
 <ul>
@@ -2328,33 +2328,33 @@ than what we have inside the official Docker image for Kiwi TCMS.</p>
 <h2>Work on reported issues</h2>
 <p>The following issues look suitable for a sprint and don't require lots of
 background knowledge. You can also find them using the
-<a href="https://github.com/kiwitcms/Kiwi/labels/PyConBalkan"><code>PyConBalkan</code></a> label on
+<a href="https://github.com/kiwitcms/kiwitcms/labels/PyConBalkan"><code>PyConBalkan</code></a> label on
 GitHub:</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/212">#212</a> - moderate - Convert jQ to $ -
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/212">#212</a> - moderate - Convert jQ to $ -
   this is an easy search &amp; rename but will require more extensive manual testing</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/431">#431</a> - moderate to hard - Remove JavaScript fireEvent() -
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/431">#431</a> - moderate to hard - Remove JavaScript fireEvent() -
   17 matches in <code>static/js/</code>. Must be replaced with direct function calls</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/652">#652</a> - easy - Removal of labels from form fields -
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/652">#652</a> - easy - Removal of labels from form fields -
   all labels must be included in the HTML template and marked for translation</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/681">#681</a>, <a href="https://github.com/kiwitcms/Kiwi/issues/682">#682</a> - moderate -
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/681">#681</a>, <a href="https://github.com/kiwitcms/kiwitcms/issues/682">#682</a> - moderate -
   Move API modules &amp; their tests from <code>xmlrpc/api/&lt;app&gt;.py</code> to <code>&lt;app&gt;/api.py</code>. These have good test
   coverage so you have to make sure you don't break anything</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/971">#971</a> - moderate - manage.py command for changing Site URL -
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/971">#971</a> - moderate - manage.py command for changing Site URL -
   will help with automatic provisioning, e.g. Ansible. For howto see
   <a href="https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/">Django docs</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1021">#1021</a> - moderate - Update TestCase page UI to allow adding TestPlans to cases -
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/1021">#1021</a> - moderate - Update TestCase page UI to allow adding TestPlans to cases -
   use <code>TestPlan.add_case()</code> API method and refresh the widget. See how Tags and Components cards work
   in the same page</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1070">#1070</a> - moderate - manage.py command for checking email settings -
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/1070">#1070</a> - moderate - manage.py command for checking email settings -
   will help with troubleshooting misconfigured email. Must raise exceptions if something fails.
   For howto see
   <a href="https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/">Django docs</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/733">#733</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/736">#736</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/738">#738</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/883">#883</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/1089">#1089</a> - hard to very hard - New checkers for pylint -
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/733">#733</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/736">#736</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/738">#738</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/883">#883</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/1089">#1089</a> - hard to very hard - New checkers for pylint -
   Kiwi TCMS uses customized pylint checkers to discover various conditions. We need a few more
   of them and/or update of the existing ones</li>
 </ul>
@@ -2445,12 +2445,12 @@ improvements and bug fixes. You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  6a8249d23a67    1.011 GB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  6a8249d23a67    1.011 GB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-10">
 <h2>Changes since Kiwi TCMS 6.10</h2>
@@ -2491,11 +2491,11 @@ we've been trying to filter based on non-existing field
 </li>
 <li>Convert Clone TestCase page to Patternfly, greatly simplify the UI
 and update behavior. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/838/">Issue #838</a>:<ul>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/838/">Issue #838</a>:<ul>
 <li>Allow cloning into multiple test plans</li>
 <li>Remove 'Filter another plan' option. Will be replaced by
 'Add TP to TC', see
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1021">Issue #1021</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1021">Issue #1021</a></li>
 <li>Always update sortkey. Cloned TC will show at the bottom of the
 TestPlan</li>
 <li>Cloned TC author will always be set to the current user</li>
@@ -2518,14 +2518,14 @@ instead of by position!</li>
 <ul class="simple">
 <li>Allow ENV variables <tt class="docutils literal">KIWI_USE_TZ</tt> and <tt class="docutils literal">KIWI_TIME_ZONE</tt> to control
 settings <tt class="docutils literal">USE_TZ</tt> and <tt class="docutils literal">TIME_ZONE</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/982/">Issue #982</a> (Jason Yi)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/982/">Issue #982</a> (Jason Yi)</li>
 </ul>
 </div>
 <div class="section" id="bug-fixes">
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Fix wrong permission label when deleting comments. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1010/">Issue #1010</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1010/">Issue #1010</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring">
@@ -2554,21 +2554,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -2606,7 +2606,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

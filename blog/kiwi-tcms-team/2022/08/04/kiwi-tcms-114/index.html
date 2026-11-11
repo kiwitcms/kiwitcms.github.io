@@ -148,7 +148,7 @@ and new translations!</p>
 <blockquote>
 <p>Upstream container images (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  8c8356c0268d    610MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  8c8356c0268d    610MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -184,34 +184,34 @@ fixed in Django.</li>
 <li>Relax docutils requirement. Use latest version</li>
 <li>Add template block which will allow logo customizations (Ivajlo Karabojkov)</li>
 <li>Don't show <tt class="docutils literal">PLUGINS</tt> menu when no plugins are installed. References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2729">Issue #2729</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2729">Issue #2729</a></li>
 <li>Add information about Kiwi TCMS user to 1-click bug reports. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2591">Issue #2591</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2591">Issue #2591</a></li>
 <li>Use a better icon to signify a manual test inside the user interface</li>
 <li>Change <tt class="docutils literal">UserAdmin</tt> to be permission based instead of being role-based.
-Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2496">Issue #2496</a></li>
+Fixes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2496">Issue #2496</a></li>
 <li>Allow post-processing of automatically created issues. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2383">Issue #2383</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2383">Issue #2383</a></li>
 <li>Allow more customization over issue type discovery for Jira. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2833">Issue #2833</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2833">Issue #2833</a></li>
 <li>Allow more customization over project discovery for Jira</li>
 <li>Allow more customization over Redmine tracker. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2382">Issue #2382</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2382">Issue #2382</a></li>
 <li>Allow DB settings to be read from Docker Secret files. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2606">Issue #2606</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2606">Issue #2606</a></li>
 <li>Add filter on TestRun page to show test executions assigned to the
 current user. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/333">Issue #333</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/333">Issue #333</a></li>
 <li>Add URL for creating new TestRun from a TestPlan. The format is
 <tt class="docutils literal"><span class="pre">/runs/from-plan/&lt;plan-id&gt;/</span></tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/274">Issue #274</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/274">Issue #274</a></li>
 <li>Add <tt class="docutils literal">bug.Severity</tt> attribute which is fully customizeable. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2703">Issue #2703</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2703">Issue #2703</a></li>
 <li>Update documentation around <tt class="docutils literal">TCMS_</tt> environment variables
 used by automation plugins</li>
 <li>Update documentation to denote that pytest plugin is now generally available</li>
 <li>Document necessary permissions for adding new users. References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2496">Issue #2496</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2496">Issue #2496</a></li>
 </ul>
 </div>
 <div class="section" id="database">
@@ -238,7 +238,7 @@ used by automation plugins</li>
 then use the currently logged-in user.</li>
 <li>Return value for method <tt class="docutils literal">TestExecution.filter()</tt> now contains fields
 <tt class="docutils literal">expected_duration</tt> and <tt class="docutils literal">actual_duration</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1924">Issue #1924</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1924">Issue #1924</a></li>
 <li>Return value for method <tt class="docutils literal">Bug.filter()</tt> now contains fields
 <tt class="docutils literal">severity__name</tt>, <tt class="docutils literal">severity__icon</tt> and <tt class="docutils literal">severity__color</tt></li>
 </ul>
@@ -247,28 +247,28 @@ then use the currently logged-in user.</li>
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Adjust field name when rendering test execution on TestRun page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2794">Issue #2794</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2794">Issue #2794</a></li>
 <li>Render rich text editor preview via backend API:<ul>
 <li>Makes display on HTML pages and editor preview the same. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2659">Issue #2659</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2659">Issue #2659</a></li>
 <li>Fixes a bug with markdown rendered in JavaScript. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2711">Issue #2711</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2711">Issue #2711</a></li>
 </ul>
 </li>
 <li>Stop propagation of HTML unescape which causes display issues with
 code snippets that contain XML values. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2800">Issue #2800</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2800">Issue #2800</a></li>
 <li>Show bug text only when creating new records, not when editing</li>
 <li>Properly display &amp; validate related form fields when editing bugs</li>
 <li>Don't send duplicate emails when editing bugs. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2782">Issue #2782</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2782">Issue #2782</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring-and-testing">
 <h3>Refactoring and testing</h3>
 <ul>
 <li><p class="first">Convert two assignment statements to augmented source code. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2610">Issue #2610</a> (Markus Elfring)</p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2610">Issue #2610</a> (Markus Elfring)</p>
 </li>
 <li><p class="first">Rename method <tt class="docutils literal">IssueTrackerType.report_issue_from_testexecution()</tt>:</p>
 <ul class="simple">
@@ -289,7 +289,7 @@ like post-processing of automatically created issues to work.</li>
 </div>
 </li>
 <li><p class="first">Add tests for backup &amp; restore commands. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2695">Issue #2695</a></p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2695">Issue #2695</a></p>
 </li>
 <li><p class="first">Update versions of several CI tools</p>
 </li>
@@ -306,7 +306,7 @@ like post-processing of automatically created issues to work.</li>
 <li><p class="first">Workaround the fact that <tt class="docutils literal"><span class="pre">django-ranged-response</span></tt> doesn't provide wheels</p>
 </li>
 <li><p class="first">Report test results via kiwitcms-django-plugin. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1757">Issue #1757</a></p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1757">Issue #1757</a></p>
 </li>
 </ul>
 </div>
@@ -366,7 +366,7 @@ for more details!</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
 <li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
@@ -421,7 +421,7 @@ and an awesome open source hacker;</li>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

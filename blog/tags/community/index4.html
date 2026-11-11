@@ -113,11 +113,11 @@ This edition was the first which was practice based.</p>
 <p>Attendance numbers were low but participation was very good. We managed to
 create 4 new checkers for Kiwi TCMS:</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/949">PR #949 - AutoField checker</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/950">PR #950 - OneToOneField checker</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/951">PR #951 - discover directories without __init__.py</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/952">PR #952 - empty class checker</a></li>
-<li><a href="https://github.com/kiwitcms/Kiwi/pull/955">PR #955 - function based view checker</a></li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/pull/949">PR #949 - AutoField checker</a></li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/pull/950">PR #950 - OneToOneField checker</a></li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/pull/951">PR #951 - discover directories without __init__.py</a></li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/pull/952">PR #952 - empty class checker</a></li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/pull/955">PR #955 - function based view checker</a></li>
 </ul>
 <p>Many thanks to all contributors. These new checkers have discovered quite a
 few new issues with Kiwi TCMS so this is an area which our team is going to improve.</p>
@@ -191,7 +191,7 @@ Kiwi TCMS and how our team can help you.</p>
 <p>It is fine not to have any experience at all! You will compensate with
 commitment and hard work. Initially you are going to work on refactoring,
 cleaning up pylint errors, removing duplicate code and other issues
-reported by <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>.</p>
+reported by <a href="https://codeclimate.com/github/kiwitcms/kiwitcms">CodeClimate</a>.</p>
 <p>By doing this you will have the opportunity to learn git, Python, Django,
 some CSS, JavaScript and Patternfly HTML of course. We are going to provide
 you with all the learning materials plus help and guidance from existing team members.</p>
@@ -233,7 +233,7 @@ performance and scalability. Here you will have to get down to the nitty-gritty
 stuff and do some profiling to pin-point where the root cause of the problem is.</p>
 <h2>Security freak</h2>
 <p>We've got <a href="https://scan.coverity.com/projects/kiwitcms-kiwi">Coverity scan</a> and
-<a href="https://snyk.io/test/github/kiwitcms/Kiwi">Snyk</a> automatically inspecting our
+<a href="https://snyk.io/test/github/kiwitcms/kiwitcms">Snyk</a> automatically inspecting our
 code base. We do have some other tools as well and we know they can never be enough.</p>
 <p>You will be responsible for triaging the numerous issues being reported by these
 tools and help us decide if they are a real threat or a false positive. For example
@@ -538,7 +538,7 @@ a small challenge and you can get your hands(errr, feet) on a pair of these:</p>
      alt="Kiwi TCMS socks" title="Kiwi TCMS socks"></p>
 <p>Here's what else you can do to help us:</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Become a stargazer</a> by clicking the
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Become a stargazer</a> by clicking the
   <code>Star</code> button on our GitHub repository</li>
 <li><a href="https://twitter.com/KiwiTCMS">Follow @KiwiTCMS on Twitter</a></li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a> -
@@ -577,11 +577,11 @@ with it this year.</p>
 <p><img src="/images/codeclimate_jan_2019.png" style="float:none"
      alt="CodeClimate report" title="CodeClimate report"></p>
 <ul>
-<li><a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>:
+<li><a href="https://codeclimate.com/github/kiwitcms/kiwitcms">CodeClimate</a>:
   0 issues, 0% technical debt, health score A</li>
-<li><a href="https://scrutinizer-ci.com/g/kiwitcms/Kiwi/">Scrutinizer</a>:
+<li><a href="https://scrutinizer-ci.com/g/kiwitcms/kiwitcms/">Scrutinizer</a>:
   only A and B type issues</li>
-<li><a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/475946313">Pylint</a>: 0 issues</li>
+<li><a href="https://travis-ci.org/kiwitcms/kiwitcms/jobs/475946313">Pylint</a>: 0 issues</li>
 <li>Remove vendored-in Handlebars, jQuery, jQuery-UI and TableDnD JavaScript
   libraries in favor of existing npm dependencies</li>
 <li>Front-end uses the existing JSON-RPC instead of backend views that
@@ -589,7 +589,7 @@ with it this year.</p>
   <code>postToURL()</code> and <code>jQ.ajax()</code> on the front-end</li>
 <li>Inspect and classify all 3rd party issues reported from
   <a href="https://scan.coverity.com/projects/kiwitcms-kiwi">Coverity</a> and
-  <a href="https://travis-ci.org/kiwitcms/Kiwi/jobs/475946312">Bandit</a>. Report and fix
+  <a href="https://travis-ci.org/kiwitcms/kiwitcms/jobs/475946312">Bandit</a>. Report and fix
   what we can, ignore the rest that do not affect Kiwi TCMS.</li>
 </ul>
 <h2>Redesign the UI templates with the help of Patternfly</h2>
@@ -604,7 +604,7 @@ add new types of reports (incl. nicer graphics and UI) and make it possible for 
 reporting sub-system to be more easily extendable.</p>
 <p>Phase out is planned to begin after 1st March 2019! Until then we are looking for your
 feedback. Please comment in
-<a href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a>!</p>
+<a href="https://github.com/kiwitcms/kiwitcms/issues/657">Issue #657</a>!</p>
 <h2>Plugins for 3rd party test automation frameworks</h2>
 <p>These will make it easier to collect results from automated test suites into
 Kiwi TCMS for later analysis. Instead of creating scripts that parse the
@@ -613,9 +613,9 @@ in your test environment and configure the test runner to use it! Automation
 test results will then appear inside Kiwi TCMS.</p>
 <ul>
 <li><a href="https://github.com/kiwitcms/junit-plugin">JUnit 5 plugin</a> - already in progress</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/692">TestNG plugin</a> - RFC</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/693">Django plugin</a> - RFC</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/694">py.test plugin</a> - RFC</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/692">TestNG plugin</a> - RFC</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/693">Django plugin</a> - RFC</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/694">py.test plugin</a> - RFC</li>
 </ul>
 <p>If you would like to use such functionality leave your vote inside GitHub
 issues! In case you would like to write a test-runner plugin you can find the
@@ -643,21 +643,21 @@ GitHub issues and our team regularly makes public reports about issues that
 we find internally!</p>
 <ul>
 <li>Goal: Redefine what bug-tracker integration means, vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/698">Issue #698</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/698">Issue #698</a></li>
 <li>Goal: Bug-tracker functionality inside Kiwi TCMS, similar to
   GitHub Issues. Vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/699">Issue #699</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/699">Issue #699</a></li>
 <li>Goal: Integration with Redmine (per current specification), vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/41">Issue #41</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/41">Issue #41</a></li>
 <li>Goal: fix existing bugs around bug-tracker integration
   (per current specification). Vote in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/97">Issue #97</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/117">Issue #117</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/289">Issue #289</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/290">Issue #290</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/320">Issue #320</a>,
-  <a href="https://github.com/kiwitcms/Kiwi/issues/479">Issue #479</a> and
-  <a href="https://github.com/kiwitcms/Kiwi/issues/530">Issue #530</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/97">Issue #97</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/117">Issue #117</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/289">Issue #289</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/290">Issue #290</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/320">Issue #320</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/479">Issue #479</a> and
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/530">Issue #530</a></li>
 </ul>
 <h2>GitHub flow integration</h2>
 <p>Developers have their
@@ -672,7 +672,7 @@ because very few teams actually have managed to do this effectively.</p>
 <ul>
 <li>Goal: Figure out how Kiwi TCMS can integrate with GitHub flow and bridge the gap.
   Please share and <code>+1</code> your wildest ideas in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/700">Issue #700</a>.</li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/700">Issue #700</a>.</li>
 <li>Follow up: depending on the results in #700 we will follow with other goals and
   sub-tasks</li>
 </ul>
@@ -687,7 +687,7 @@ behind and Kiwi TCMS may be able to help.</p>
 <li>Goal: Figure out how Kiwi TCMS fits into the overall <code>devel-test-planning</code>
   process for agile teams and what we can do to make this easier for testers.
   Please share and <code>+1</code> your wildest ideas in
-  <a href="https://github.com/kiwitcms/Kiwi/issues/701">Issue #701</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/701">Issue #701</a></li>
 <li>Follow up: depending on the results in #701 we will follow with other goals and
   sub-tasks</li>
 </ul>
@@ -742,11 +742,11 @@ the various roles in the system, what kind of actions are accepted and
 what sort of result is expected! Many times this will help you remember or
 discover missing scenarios, edge cases and raise even more questions!</p>
 <p>Crazy ideas, brain dumps and <code>+1</code> as always are welcome in
-<a href="https://github.com/kiwitcms/Kiwi/issues/703">Issue #703</a>.</p>
+<a href="https://github.com/kiwitcms/kiwitcms/issues/703">Issue #703</a>.</p>
 <h2>Community</h2>
 <p>Coding alone is not fun! Here's what you can do to help us:</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Become a stargazer</a> by clicking the
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Become a stargazer</a> by clicking the
   <code>Star</code> button on our GitHub repository</li>
 <li><a href="https://twitter.com/KiwiTCMS">Follow @KiwiTCMS on Twitter</a></li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Subscribe to our newsletter</a> -
@@ -767,7 +767,7 @@ contributors. The following are mostly organizational goals:</p>
 <li>Goal: clearly mark GitHub issues which are suitable for external contributors
   which don’t want to spend lots of time learning how Kiwi TCMS works under the hood.
   We're going to tag all such issues with the
-  <a href="https://github.com/kiwitcms/Kiwi/labels/help%20wanted">
+  <a href="https://github.com/kiwitcms/kiwitcms/labels/help%20wanted">
     <img src="/images/github_helpwanted.png" style="float: none; margin:0"
          alt="GitHub help wanted" title="GitHub help wanted">
   </a> label</li>
@@ -818,14 +818,14 @@ TLDR; goals are completed at 62%. Refactoring legacy code is showing good result
 less so on the front-end side and there are items still in progress!</p>
 <h2>Make code easier to maintain</h2>
 <p><em>Status: good progress</em></p>
-<p>Initially <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> reported
+<p>Initially <a href="https://codeclimate.com/github/kiwitcms/kiwitcms">CodeClimate</a> reported
 a "D" rating with 600+ code smells and 600+ duplications and a 1 year estimation
 to resolve these. We're now down to "C" rating with 171 smells and 203 duplications.</p>
 <p>The level of technical debt has dropped from 32.5% down to 17.7% and we have removed
 around 14000 lines of Python code and 8000 lines of JavaScript code without
 losing significant functionality.</p>
 <p>Checkout
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt">the stats</a>
+<a href="https://codeclimate.com/github/kiwitcms/kiwitcms/trends/technical_debt">the stats</a>
 for more info!</p>
 <h2>Use pylint and pylint-django</h2>
 <p><em>Status: almost finished</em></p>
@@ -949,7 +949,7 @@ team to self-improve, be inspired, become more focused and more productive!
 <p>Last year we started with 2 existing team members (Tony and myself) and 3
 new interns (Ivo, Kaloyan and Tseko) who built this website!</p>
 <p>Tony is the #4 contributor to Kiwi TCMS in
-terms of <a href="https://github.com/kiwitcms/Kiwi/graphs/contributors">number of commits</a>
+terms of <a href="https://github.com/kiwitcms/kiwitcms/graphs/contributors">number of commits</a>
 and is on track to surpass one of the original authors (before Kiwi TCMS was forked)!
 He's been working mostly on internal refactoring and resolving the thousands
 of pylint errors that we had (down to around 500 I think). This summer Tony and I
@@ -1069,14 +1069,14 @@ team has made towards achieving the goals on our
 <a href="/blog/kiwi-tcms-team/2018/01/22/kiwi-tcms-roadmap-for-2018/">roadmap</a>.</p>
 <h2>Make code easier to maintain</h2>
 <p><em>Status: moderate progress</em></p>
-<p>Initially <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> reported
+<p>Initially <a href="https://codeclimate.com/github/kiwitcms/kiwitcms">CodeClimate</a> reported
 a "D" rating with a 1 year estimated effort. Now it is still on "D" rating with
 a 7 months estimated effort to bring the project back in shape.
 Code smells have dropped from 600+ to 418, duplications have been reduced from 600+ to 359!
 At the same time technical debt ratio has been decreased from 32,5% to 21,6% and
 little over 10000 lines of code have been removed from the source code.
 Checkout
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi/trends/technical_debt">the stats</a>
+<a href="https://codeclimate.com/github/kiwitcms/kiwitcms/trends/technical_debt">the stats</a>
 for more info!</p>
 <h2>Use pylint and pylint-django</h2>
 <p><em>Status: good progress</em></p>
@@ -1184,7 +1184,7 @@ improved UI/UX and more tests!</p>
 <h2>Make code easier to maintain</h2>
 <p>The current code is a bunch of very large modules and functions and classes
 bundled together. It is also old and sometimes looks like spaghetti code.
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> gives us a "D" rating
+<a href="https://codeclimate.com/github/kiwitcms/kiwitcms">CodeClimate</a> gives us a "D" rating
 for maintainability with a 1 year estimated effort to fix that. There are 600+
 code smells and 600+ duplications detected by CodeClimate. Our goal is to get this
 number down to zero!</p>
@@ -1301,7 +1301,7 @@ and new features more quickly!</p>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

@@ -145,12 +145,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  602dddcf41a7    646 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  602dddcf41a7    646 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-8-3">
 <h2>Changes since Kiwi TCMS 8.3</h2>
@@ -168,7 +168,7 @@ for functionality not used by Kiwi TCMS</li>
 <li>Update python-redmine from 2.2.1 to 2.3.0</li>
 <li>Update patternfly from 3.59.4 to 3.59.5</li>
 <li>Add <tt class="docutils literal">manage.py set_domain</tt> command to change Kiwi TCMS domain. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/971">Issue #971</a> (Ivajlo Karabojkov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/971">Issue #971</a> (Ivajlo Karabojkov)</li>
 <li>GitHub bug details now works for private issues</li>
 <li>Gitlab bug details now works for private issues</li>
 <li>JIRA bug details now works for private issues</li>
@@ -179,7 +179,7 @@ for functionality not used by Kiwi TCMS</li>
 <li>New feature: 1-click bug report for Redmine</li>
 <li>Reverting to older historical version via Admin panel now redirects
 to object which was reverted. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1074">Issue #1074</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1074">Issue #1074</a></li>
 <li>Documentation updates</li>
 </ul>
 <div class="admonition important">
@@ -229,7 +229,7 @@ to users/groups who will be allowed to change tags on bugs!</p>
 <ul class="simple">
 <li>Define the <tt class="docutils literal">KIWI_DISABLE_BUGTRACKER=yes</tt> environment variable if you wish
 to disable the internal bug tracker. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1370">Issue #1370</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1370">Issue #1370</a></li>
 </ul>
 </div>
 <div class="section" id="bug-fixes">
@@ -237,19 +237,19 @@ to disable the internal bug tracker. Closes
 <ul class="simple">
 <li>Workaround missing MariaDB CHARSET/COLLATION support, see our
 <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1700">Issue #1700</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1700">Issue #1700</a></li>
 <li>Install missing <tt class="docutils literal">/usr/bin/mysql</tt> in container</li>
 <li>Warning message for unconfigured Kiwi TCMS domain does not show HTML tags in
 Admin anymore. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/964">Issue #964</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/964">Issue #964</a></li>
 <li>Unescape the <tt class="docutils literal">&amp;amp;</tt> string when trying to open new windows after
 clicking the 'Report bug' button in TestExecution. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1533">Issue #1533</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1533">Issue #1533</a></li>
 <li>Try harder to restore the original navigation menu instead of
 leaving bogus menu items. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/991">Issue #991</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/991">Issue #991</a></li>
 <li>Robot Framework plugin is now GA. Close
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/984">Issue #984</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/984">Issue #984</a></li>
 <li>Add LinkReference to TestExecution after creating bug via 1-click.
 The UI still needs to be refreshed which will be implemented together
 with the redesign of the TestRun page</li>
@@ -261,29 +261,29 @@ match current behavior, see <a class="reference external" href="https://stackove
 <h3>Refactoring &amp; testing</h3>
 <ul class="simple">
 <li>Migrate <tt class="docutils literal"><span class="pre">check-docs-source-in-git</span></tt> to GitHub workflows. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1552">Issue #1552</a> (&#64;Prome88)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1552">Issue #1552</a> (&#64;Prome88)</li>
 <li>Migrate <tt class="docutils literal"><span class="pre">build-for-pypi</span></tt> to GitHub workflows. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1554">Issue #1554</a> (&#64;lcmtwn)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1554">Issue #1554</a> (&#64;lcmtwn)</li>
 <li>Add tests for <tt class="docutils literal">TestCaseAdmin</tt> (Mariyan Garvanski)</li>
 <li>Add tests for <tt class="docutils literal">BugAdmin</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1596">Issue #1596</a> (Mariyan Garvanski)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1596">Issue #1596</a> (Mariyan Garvanski)</li>
 <li>Omit <tt class="docutils literal">utils/test</tt> from coverage reports. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1631">Issue #1631</a> (&#64;cmbahadir)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1631">Issue #1631</a> (&#64;cmbahadir)</li>
 <li>Omit <tt class="docutils literal">tcms/tests</tt> from coverage reports. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1630">Issue #1630</a> (&#64;cmbahadir)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1630">Issue #1630</a> (&#64;cmbahadir)</li>
 <li>Add tests for <tt class="docutils literal">tcms.core.forms.fields</tt> - Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1629">Issue #1629</a> (&#64;cmbahadir)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1629">Issue #1629</a> (&#64;cmbahadir)</li>
 <li>Add tests for <tt class="docutils literal">TestExecution.update()</tt> for <tt class="docutils literal">case_text_version</tt> field
 (Rosen Sasov)</li>
 <li>Refactor bulk-update methods in TestRun page to use JSON-RPC. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1063">Issue #1063</a> (Rosen Sasov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1063">Issue #1063</a> (Rosen Sasov)</li>
 <li>Start using <tt class="docutils literal">_change_reason</tt> instead of <tt class="docutils literal">changeReason</tt> field in
 django-simple-history</li>
 <li>Remove unused <tt class="docutils literal">StripURLField</tt> &amp; <tt class="docutils literal">Version.string_to_id()</tt></li>
 <li>Refactoring around TestCase and TestPlan cloning methods</li>
 <li>Start testing with the internal bug tracker disabled</li>
 <li>Start testing with all supported external bug trackers. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1079">Issue #1079</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1079">Issue #1079</a></li>
 <li>Start Codecov for coverage reports</li>
 <li>Add tests for presence of mysql/psql binaries in container</li>
 <li>Add <tt class="docutils literal">APIPermissionsTestCase</tt> with example in <tt class="docutils literal">TestVersionCreatePermissions</tt></li>
@@ -352,7 +352,7 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 cd path/containing/docker-compose/
 docker-compose down
 # !!! docker tag to keep older image version on the machine
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -407,7 +407,7 @@ for more details!</p>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

@@ -146,7 +146,7 @@ bug fixes, some API changes and new translations!</p>
 <blockquote>
 <p>Upstream container images (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  89b8ca5e0f5f    593MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  89b8ca5e0f5f    593MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -158,9 +158,9 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  89b8ca5e0f5f    593MB
 <h3>Security</h3>
 <ul class="simple">
 <li>For security reasons updating email address is no longer allowed. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7x6q-3v3m-cwjg">CVE-2023-30544</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-7x6q-3v3m-cwjg">CVE-2023-30544</a></li>
 <li>Block uploads of potentially harmful files. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-fwcf-753v-fgcj">CVE-2023-30613</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-fwcf-753v-fgcj">CVE-2023-30613</a></li>
 </ul>
 </div>
 <div class="section" id="improvements">
@@ -175,23 +175,23 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  89b8ca5e0f5f    593MB
 the user is viewing records from the main tenant or from an individual tenant
 to avoid confusion</li>
 <li>Add new Execution Dashboard telemetry report. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2918">Issue #2918</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2918">Issue #2918</a></li>
 <li>Add column visibility button on search pages. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3149">Issue #3149</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3149">Issue #3149</a></li>
 <li>Add CSV, Excel, PDF and Print buttons on search pages. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3150">Issue #3150</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3150">Issue #3150</a></li>
 <li>Allow manually resetting <tt class="docutils literal">TestRun.stop_date</tt> when editing page. Refs
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3124">Issue #3124</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3124">Issue #3124</a></li>
 <li>Display child test plans on Search Test Plans page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2917">Issue #2917</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2917">Issue #2917</a></li>
 <li>Display nested test plans in drop down select widget on Search Test Cases page.
-Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3134">Issue #3134</a></li>
+Fixes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3134">Issue #3134</a></li>
 <li>Display nested test plans in drop down select widget on Telemetry pages</li>
 <li>Display pagination controls for search results both at the top and bottom</li>
 <li>On Search Test Runs page display start/stop timestamp columns. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2306">Issue #2306</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2306">Issue #2306</a></li>
 <li>On Search Test Cases page display results from child test plans. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3135">Issue #3135</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3135">Issue #3135</a></li>
 </ul>
 </div>
 <div class="section" id="api">
@@ -200,10 +200,10 @@ Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issue
 <li><tt class="docutils literal">TestExecution.update()</tt> method will no longer update <tt class="docutils literal">self.stop_date</tt>
 and <tt class="docutils literal">self.run.stop_date</tt> fields when status has been changed! The
 appropriate behavior here should be specified by the client calling this API
-method. Refs <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3112">Issue #3112</a></li>
+method. Refs <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3112">Issue #3112</a></li>
 <li><tt class="docutils literal">TestPlan.filter()</tt> method now returns the <tt class="docutils literal">children_count</tt> field.
-Refs <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3134">Issue #3134</a>,
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2917">Issue #2917</a></li>
+Refs <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3134">Issue #3134</a>,
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2917">Issue #2917</a></li>
 <li><tt class="docutils literal">TestExecution.filter()</tt> method now returns <tt class="docutils literal">status__icon</tt> &amp;
 <tt class="docutils literal">status__color</tt> fields</li>
 </ul>
@@ -212,11 +212,11 @@ Refs <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Fix test case filter widget on Test Plan page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3137">Issue #3137</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3137">Issue #3137</a></li>
 <li>Disable selection of inactive test plans on New Test Run page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3152">Issue #3152</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3152">Issue #3152</a></li>
 <li>Add styled page for attachment upload errors. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1156">Issue #1156</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1156">Issue #1156</a></li>
 <li>Fix include syntax for <tt class="docutils literal">uwsgi.override</tt> in <tt class="docutils literal">uwsgi.conf</tt></li>
 </ul>
 </div>
@@ -282,7 +282,7 @@ for more details!</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
 <li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
@@ -337,7 +337,7 @@ and an awesome open source hacker;</li>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

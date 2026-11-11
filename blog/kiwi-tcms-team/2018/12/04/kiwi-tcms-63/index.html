@@ -143,12 +143,12 @@ tracker! You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  8135624fdca2    960.3 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  8135624fdca2    960.3 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-2-1">
 <h2>Changes since Kiwi TCMS 6.2.1</h2>
@@ -170,7 +170,7 @@ of protection against the previously mentioned XSS vulnerability</li>
 <li>Update to <a class="reference external" href="https://github.com/patternfly/patternfly/releases">Patternfly 3.58.0</a></li>
 <li>Make docker container restartable (Maik Opitz, Adam Hall)</li>
 <li>Add GitLab issue tracker integration. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/176">Issue #176</a>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/176">Issue #176</a>
 (Filipe Arruda, Federal Institute of Pernambuco)</li>
 <li>Convert <tt class="docutils literal">Create new TestPlan</tt> page to Patternfly (Anton Sankov)</li>
 <li>Upon successful registration show the list of super-users in case new
@@ -179,11 +179,11 @@ version of the addresses in the <tt class="docutils literal">ADMIN</tt> setting.
 in email notifications sent via <tt class="docutils literal">tcms.signals.notify_admins()</tt>.</li>
 <li>Don't include <tt class="docutils literal"><span class="pre">admin/js/*.js</span></tt> files in templates when not
 necessary. Results in faster page load. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/209">Issue #209</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/209">Issue #209</a></li>
 <li>Enable <tt class="docutils literal">nl2br</tt> Markdown extension which allows newline characters
 to be rendered as <tt class="docutils literal">&lt;br&gt;</tt> tags in HTML. Visually the rendered
 text will look closer to what you seen in the text editor. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/623">Issue #623</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/623">Issue #623</a></li>
 <li>Use auto-complete for adding components to TestCase</li>
 </ul>
 </div>
@@ -202,7 +202,7 @@ TestPlan</li>
 correct permission labels. You can still update items individually!</p>
 <ul class="simple">
 <li>Selection of Components when creating new TestCase. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/565">Issue #565</a>.
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/565">Issue #565</a>.
 Everywhere else Kiwi TCMS doesn't allow selection of many-to-many
 relationships when creating or editing objects. Tags, Bugs, Components,
 TestPlans can be added via dedicated tabs once the object has been saved.</li>
@@ -212,14 +212,14 @@ TestPlans can be added via dedicated tabs once the object has been saved.</li>
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Hide <tt class="docutils literal">KiwiUserAdmin.password</tt> field from super-user. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/610">Issue #610</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/610">Issue #610</a></li>
 <li>Don't show inactive Priority. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/637">Issue #637</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/637">Issue #637</a></li>
 <li>Don't traceback when adding new users via Admin. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/642">Issue #642</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/642">Issue #642</a></li>
 <li>Teach <tt class="docutils literal">TestRun.update()</tt> API method to process the <tt class="docutils literal">stop_date</tt>
 field. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/554">Issue #554</a> (Anton Sankov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/554">Issue #554</a> (Anton Sankov)</li>
 <li>Previously when reporting issues to Bugzilla, directly from a TestRun,
 Kiwi TCMS displayed the error <tt class="docutils literal">Enable reporting to this Issue Tracker by
 configuring its base_url</tt> although that has already been configured.
@@ -244,11 +244,11 @@ This is now fixed. See
 <h3>Refactoring</h3>
 <ul class="simple">
 <li>Remove <tt class="docutils literal">fmt_queries()</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/330">Issue #330</a> (Anton Sankov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/330">Issue #330</a> (Anton Sankov)</li>
 <li>Remove unused parameter from <tt class="docutils literal">plan_from_request_or_none()</tt>. Refers to
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/303">Issue #303</a> (Anton Sankov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/303">Issue #303</a> (Anton Sankov)</li>
 <li>Remove <tt class="docutils literal">ComponentActions()</tt> class. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/20">Issue #20</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/20">Issue #20</a></li>
 <li>Convert lots of AJAX calls to JSON-RPC</li>
 <li>Remove lots of unused Python, JavaScript and templates. Both after migration
 to JSON RPC and other leftovers</li>
@@ -263,21 +263,21 @@ to JSON RPC and other leftovers</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -329,7 +329,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

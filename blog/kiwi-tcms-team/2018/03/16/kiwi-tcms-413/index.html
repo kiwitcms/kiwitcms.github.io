@@ -132,9 +132,9 @@ This is a bug-fix and enhancement update which upgrades to the latest Django
 version, provides easier way for Docker administrators to override SSL certificates
 and access httpd log files and resolves several issues. This release also includes
 lots of internal code refactoring which removes code duplication and brings down
-<a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a> metrics
+<a href="https://codeclimate.com/github/kiwitcms/kiwitcms">CodeClimate</a> metrics
 to 26.9% of technical debt or 10 months to fix.</p>
-<p>We've pushed the new <code>pub.kiwitcms.eu/kiwitcms/kiwi</code> container image and updated the
+<p>We've pushed the new <code>pub.kiwitcms.eu/kiwitcms/kiwitcms</code> container image and updated the
 demo instance at
 <a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>.
 Starting forward the demo will use
@@ -146,19 +146,19 @@ people behind this address so if you write to us we will reply!</p>
 <li>Upgrade to <a href="https://docs.djangoproject.com/en/2.0/releases/2.0.3/">Django 2.0.3</a></li>
 <li>Show <code>date_joined</code> column for user admin</li>
 <li>Expose httpd logs to the host running docker. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/191">Issue #191</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/191">Issue #191</a></li>
 </ul>
 <h3>Bug fixes</h3>
 <ul>
 <li>Move SSL keys under common directory in the container. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/231">Issue #231</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/231">Issue #231</a></li>
 <li>Always select active builds for TestRun. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/245">Issue #245</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/245">Issue #245</a></li>
 <li>Swap <code>escape</code> and <code>escapejs</code> filters. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/234">Issue #234</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/234">Issue #234</a></li>
 <li>Globally disable <code>delete_selected</code> action in Admin, this removes the
   drop down selection widget! Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/221">Issue #221</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/221">Issue #221</a></li>
 <li>Fix error in TestCase view when <code>from_plan</code> is empty string. Fixes
   <a href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/474369640/">Sentry KIWI-TCMS-Z</a></li>
 <li>Fix sorting issue when None is compared to int. Fixes
@@ -171,9 +171,9 @@ people behind this address so if you write to us we will reply!</p>
 <h3>Refactoring</h3>
 <ul>
 <li>Refactor inner class <code>CaseActions</code>. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/21">Issue #21</a> (Chenxiong Qi)</li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/21">Issue #21</a> (Chenxiong Qi)</li>
 <li>Only use <code>get_cases.html</code> template. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/176">Issue #176</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/176">Issue #176</a></li>
 <li>Unify <code>get_details_review.html</code> and <code>get_details.html</code> templates</li>
 <li>Remove internal <code>Prompt.render</code> class and replace with Django messages</li>
 <li>Remove <code>mail/delete_plan.txt</code> template</li>
@@ -193,7 +193,7 @@ people behind this address so if you write to us we will reply!</p>
 <h3>Models and database migrations</h3>
 <ul>
 <li>Use Django's own <code>DurationField</code>, instead of custom one. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/183">Issue #183</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/183">Issue #183</a></li>
 </ul>
 <p>API clients must now send values for <code>estimated_time</code> which must be in a
 format that <code>parse_duration()</code> understands, for example 'DD HH:MM:SS'! See
@@ -209,7 +209,7 @@ community effort. If you'd like to help consult our
 <div class="highlight"><pre><span></span><code>cd Kiwi/
 git pull
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -268,7 +268,7 @@ free to comment below, file GitHub issues or send us an email.</p>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

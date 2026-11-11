@@ -160,12 +160,12 @@ in PHP</li>
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  7ca4fda602fc    1.002 GB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  7ca4fda602fc    1.002 GB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-4">
 <h2>Changes since Kiwi TCMS 6.4</h2>
@@ -201,12 +201,12 @@ template. This prompts the author to use a BDD style definition for their
 scenarios. We believe this puts the tester into a frame of mind more
 suitable for expressing what needs to be tested</li>
 <li>Add a favicon. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/532">Issue #532</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/532">Issue #532</a></li>
 <li>Sort Component, Product and Version objects alphabetically. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/633">Issue #633</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/633">Issue #633</a></li>
 <li>Search test case page now shows Components and Tags</li>
 <li>Search test case page now allows filtering by date. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/715">Issue #715</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/715">Issue #715</a></li>
 <li>Search test case page now uses radio buttons to filter by automation status</li>
 <li>Small performance improvement when searching test plans and test cases</li>
 <li>Search test run page now allows to filter by Product but still continue to
@@ -231,7 +231,7 @@ from the default <em>Tester</em> group and re-add them again!</p>
 <li>Remove <tt class="docutils literal">TestCaseRun.notes</tt></li>
 <li>Remove <tt class="docutils literal">TestCase.is_automated_proposed</tt></li>
 <li>Remove <tt class="docutils literal">TestCaseText</tt> model, merge into <tt class="docutils literal">TestCase.text</tt> field. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/198">Issue #198</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/198">Issue #198</a></li>
 <li>Remove <tt class="docutils literal">Priority.sortkey</tt></li>
 <li>Remove <tt class="docutils literal">Build.description</tt></li>
 <li>Remove <tt class="docutils literal">Classification.sortkey</tt> and <tt class="docutils literal">Classification.description</tt></li>
@@ -269,7 +269,7 @@ from the default <em>Tester</em> group and re-add them again!</p>
 <a class="reference external" href="https://stackoverflow.com/questions/54177838/">StackOverflow #54177838</a></li>
 <li>Fix cloning of test cases by surrounding bootstrap-selectpicker call with
 <tt class="docutils literal"><span class="pre">try-catch</span></tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/695">Issue #695</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/695">Issue #695</a></li>
 <li>Fix a traceback with TestRun report page when the RPC connection to Bugzilla
 can't be established</li>
 </ul>
@@ -302,21 +302,21 @@ in Python</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -368,7 +368,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

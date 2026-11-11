@@ -139,7 +139,7 @@ and accessibility. We are also strong supporters of the WordPress ecosystem.</p>
 contribute improvements, and tailor solutions to real-world needs.</p>
 <blockquote>
 <p>An improvement from SiteGround's Martin Bodurov has already been merged into Kiwi TCMS.</p>
-<p>See <a href="https://github.com/kiwitcms/Kiwi/pull/3905">PR #3905</a> for more details.</p>
+<p>See <a href="https://github.com/kiwitcms/kiwitcms/pull/3905">PR #3905</a> for more details.</p>
 </blockquote>
 <h3>What makes testing at SiteGround challenging?</h3>
 <p>One of the biggest challenges is the breadth and diversity of our product portfolio.
@@ -243,7 +243,7 @@ work more efficiently while maintaining consistency and quality across both manu
 <hr>
 <p>If you like what we're doing please help us grow and sustain development!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -274,7 +274,7 @@ several improvements, database migrations, new API methods and updated translati
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  12fc270ef5b9    862MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  12fc270ef5b9    862MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -286,9 +286,9 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  12fc270ef5b9    862MB
 <h3>Security</h3>
 <ul class="simple">
 <li>Restrict open redirect. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-hmj5-jm8h-h9fh">CVE-2026-54724</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-hmj5-jm8h-h9fh">CVE-2026-54724</a></li>
 <li>Validate user input in <tt class="docutils literal">extra_link</tt> fields. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-473p-56xx-vg67">CVE-2026-55630</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-473p-56xx-vg67">CVE-2026-55630</a></li>
 </ul>
 </div>
 <div class="section" id="improvements">
@@ -318,7 +318,7 @@ uploaded via rich text editor will be linked to the user who uploaded them</li>
 <h3>API</h3>
 <ul class="simple">
 <li>Add <tt class="docutils literal">TestExecution.remove_tag()</tt> method. Refs
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4349">Issue #4349</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4349">Issue #4349</a></li>
 <li>Method <tt class="docutils literal">Tag.filter()</tt> now returns the <tt class="docutils literal">execution</tt> field</li>
 </ul>
 </div>
@@ -384,7 +384,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all news;</li>
 <li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
@@ -416,7 +416,7 @@ several improvements, backwards incompatible changes and new translations.</p>
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  3b2c789666ec   867MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  3b2c789666ec   867MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -432,7 +432,7 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  3b2c789666ec   867MB
 <li>Update node_modules/fast-uri from 3.1.0 to 3.1.2</li>
 <li>Update node_modules/flatted from 3.3.3 to 3.4.2</li>
 <li>Make /init-db/ page a no-op if already executed once. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-v8rp-6xcv-fwgh">CVE-2026-49292</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-v8rp-6xcv-fwgh">CVE-2026-49292</a></li>
 </ul>
 </div>
 <div class="section" id="improvements">
@@ -453,9 +453,9 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  3b2c789666ec   867MB
 <li>Update node_modules/webpack-cli from 7.0.1 to 7.0.2</li>
 <li>Update node_modules/webpack from 5.105.4 to 5.106.0</li>
 <li>Display <tt class="docutils literal">Last modified</tt> column in TestCase Search page. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4140">Issue #4140</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4140">Issue #4140</a></li>
 <li>Remove requirement for <tt class="docutils literal">setuptools&lt;82</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4299">Issue #4299</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4299">Issue #4299</a></li>
 </ul>
 </div>
 <div class="section" id="removals">
@@ -468,10 +468,10 @@ removal of this feature</li>
 <div class="section" id="release">
 <h3>Release</h3>
 <ul class="simple">
-<li><tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi</tt> container is now a rolling release</li>
+<li><tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms</tt> container is now a rolling release</li>
 <li>PyPI packages are uploaded to
 <a class="reference external" href="https://kiwitcms.org/packages/">pkg.kiwitcms.eu</a>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3376">Issue #3376</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3376">Issue #3376</a></li>
 </ul>
 </div>
 <div class="section" id="api">
@@ -487,7 +487,7 @@ removal of this feature</li>
 <li>Update locust from 2.43.3 to 2.44.1</li>
 <li>Update codecov/codecov-action from 5 to 6</li>
 <li>Merge Dockerfile.buildroot with Dockerfile. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3496">Issue #3496</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3496">Issue #3496</a></li>
 <li>Replace <tt class="docutils literal">pkg_resources</tt> discovery with <tt class="docutils literal">importlib.metadata</tt></li>
 <li>GitLab Issues are now called Work Items</li>
 </ul>
@@ -521,7 +521,7 @@ removal of this feature</li>
 <li>Don't use legacy syntax in Dockerfile</li>
 <li>Provide sample SSL configuration for Postgres and
 configure Kiwi TCMS to connect to it securely. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2413">Issue #2413</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2413">Issue #2413</a></li>
 </ul>
 </div>
 <div class="section" id="private-container-images">
@@ -548,7 +548,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all news;</li>
 <li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
@@ -580,7 +580,7 @@ dependency updates and new translations.</p>
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  ae3ae4a25d24   729MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  ae3ae4a25d24   729MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -667,7 +667,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all news;</li>
 <li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
@@ -697,7 +697,7 @@ Please read about the details below.</p>
 our own team with the help of many contributors. It may also be
 referred to <em>upstream</em> or <em>the community edition</em> version and comes
 packaged as a container image which is publicly available and can be downloaded via the
-<code>docker pull pub.kiwitcms.eu/kiwitcms/kiwi</code> command!</p>
+<code>docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms</code> command!</p>
 <h2>Who is this for</h2>
 <p><em>Community Edition</em> is suitable for developers, teams and organizations which
 are happy to run Kiwi TCMS without any warranty and safeguards for development,
@@ -742,7 +742,7 @@ However the easiest way to secure the future of Kiwi TCMS is to
 <hr>
 <p>If you like what we're doing and how Kiwi TCMS please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -773,7 +773,7 @@ database migrations and many new API methods.</p>
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  bad66695a117   732MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  bad66695a117   732MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -794,9 +794,9 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  bad66695a117   732MB
 <li>Update node_modules/pdfmake from 0.2.20 to 0.3.3</li>
 <li>Models Classification, Product, Priority, Component and Version can now be
 translated in Admin pages (&#64;nichicom-yasutake). Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4193">Issue #4193</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4193">Issue #4193</a></li>
 <li>Display categories ordered by name. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4166">Issue #4166</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4166">Issue #4166</a></li>
 <li>Stricter checking for attributes in uploaded files</li>
 <li>Strip newline characters from email subjects to avoid crashes</li>
 </ul>
@@ -909,7 +909,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all news;</li>
 <li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
@@ -948,7 +948,7 @@ This is where you can find us:</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -979,7 +979,7 @@ several improvements, new API methods and updated translations.</p>
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  f8a2e8b0ce01    716MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  f8a2e8b0ce01    716MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -1000,14 +1000,14 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  f8a2e8b0ce01    716MB
 <ul class="simple">
 <li>Update bleach from 6.2.0 to 6.3.0</li>
 <li>Update django-grappelli from 4.0.2 to 4.0.3. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4119">Issue #4119</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4119">Issue #4119</a></li>
 <li>Update django-tree-queries from 0.21.2 to 0.23.0</li>
 <li>Update markdown from 3.9 to 3.10</li>
 <li>Update psycopg[binary] from 3.2.11 to 3.3.1</li>
 <li>Update python-gitlab from 6.5.0 to 7.0.0</li>
 <li>Add new toolbar menu item on TestRun page, which opens the
 Execution Dashboard page with executions from the current TestRun. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4084">Issue #4084</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4084">Issue #4084</a></li>
 <li>Display TestCase ID on Execution Dashboard page</li>
 <li>Display Priority &amp; Automated columns in Execution Dashboard page</li>
 </ul>
@@ -1088,7 +1088,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all project news;</li>
 <li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
@@ -1361,7 +1361,7 @@ organizations. Note that we don't keep track of individuals or IP addresses!</em
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -1419,7 +1419,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all project news;</li>
 <li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
@@ -1461,7 +1461,7 @@ your Kiwi TCMS user story with the rest of our community!</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -1508,7 +1508,7 @@ please help us!</p>
         for the initial translation of Kiwi TCMS into French.
 
         He has also worked on improving overall translatability of Kiwi TCMS, fixing
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/kryskool">multiple parts of the application</a>
+        <a href="https://github.com/kiwitcms/kiwitcms/pulls/kryskool">multiple parts of the application</a>
         by marking source strings as translatable.
 
         His earliest code contribution is from <em>22nd Jan 2019</em>!
@@ -1529,7 +1529,7 @@ please help us!</p>
         and also a tem member of 0 A.D - a popular open-source game of ancient warfare.
 
         He has contributed documentation about
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/na-Itms">
+        <a href="https://github.com/kiwitcms/kiwitcms/pulls/na-Itms">
         running Kiwi TCMS behind a reverse proxy with HAProxy</a> and was the original inspiration
         behind the now defunct
         <a href="https://github.com/kiwitcms/open-source-test-management/">Open-Source-Test-Management</a>
@@ -1553,7 +1553,7 @@ please help us!</p>
         a member of the /e/ Foundation team.
 
         He has contributed a
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/nfk">
+        <a href="https://github.com/kiwitcms/kiwitcms/pulls/nfk">
         bug-fix for the order of test cases when closing a TestPlan</a> in Kiwi TCMS.
 
         His earliest code contribution is from <em>16th Dec 2021</em>!
@@ -1574,7 +1574,7 @@ please help us!</p>
         <em>django-modern-rpc</em> - the library underlying the Kiwi TCMS API layer!
 
         He has worked on changes related to
-        <a href="https://github.com/kiwitcms/Kiwi/pulls/alorence">
+        <a href="https://github.com/kiwitcms/kiwitcms/pulls/alorence">
         Kiwi TCMS compatibility with the latest version of django-modern-rpc
         </a>.
 
@@ -1606,7 +1606,7 @@ at <a href="/blog/kiwi-tcms-team/2025/10/29/meet-kiwi-tcms-at-open-source-experi
 <hr>
 <p>If you like what we're doing please help us grow and sustain development!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -1684,7 +1684,7 @@ proposal!</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -1721,7 +1721,7 @@ path:</p>
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  9b33a6e47c0f    696MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  9b33a6e47c0f    696MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -1746,7 +1746,7 @@ severity “high” and one security vulnerability with severity “low”:
 <li>Update python-gitlab from 6.3.0 to 6.5.0</li>
 <li>Update uwsgi from 2.0.30 to 2.0.31</li>
 <li>Display records count in TestPlan page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4110">Issue #4110</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4110">Issue #4110</a></li>
 <li>Add 'Deactivate selected accounts' dropdown on <tt class="docutils literal">/admin/auth/user/</tt> page</li>
 <li>Add 'Deactivate' button in 'Change user' admin page</li>
 </ul>
@@ -1822,7 +1822,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all project news;</li>
 <li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
@@ -1862,7 +1862,7 @@ path:</p>
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  1b5584d7b2c1    695MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  1b5584d7b2c1    695MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -1884,11 +1884,11 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  1b5584d7b2c1    695MB
 (Makson Lee)</li>
 <li>Rename navbar item PLUGINS -&gt; MORE</li>
 <li>Send email notifications when a TestCase is created. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4058">Issue #4058</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4058">Issue #4058</a></li>
 <li>Add Cancel button for &quot;New TestCase&quot; &amp; &quot;Edit TestCase&quot; pages. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4073">Issue #4073</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4073">Issue #4073</a></li>
 <li>Display number of records found on Search pages. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3324">Issue #3324</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3324">Issue #3324</a></li>
 <li>Start keeping track of history for <tt class="docutils literal">Product</tt>, <tt class="docutils literal">Version</tt> and <tt class="docutils literal">Build</tt>
 records</li>
 </ul>
@@ -1906,12 +1906,12 @@ as soon as these objects are changed</li>
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Correct a typo. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4072">Issue #4072</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4072">Issue #4072</a></li>
 <li>Avoid broader matches when searching for harmful HTML attributes in
 uploaded files. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4074">Issue #4074</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4074">Issue #4074</a></li>
 <li>Send a POST request when clicking Logout menu while on Admin page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4005">Issue #4005</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4005">Issue #4005</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring-and-testing">
@@ -1926,9 +1926,9 @@ uploaded files. Fixes
 <li>Update node_modules/webpack from 5.99.9 to 5.101.3</li>
 <li>Adjust API tests for Django 5.2</li>
 <li>Add test for
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4074">Issue #4074</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4074">Issue #4074</a></li>
 <li>Add logout tests via browser for
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4005">Issue #4005</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4005">Issue #4005</a></li>
 </ul>
 </div>
 <div class="section" id="translations">
@@ -1997,7 +1997,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all project news;</li>
 <li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
@@ -2093,7 +2093,7 @@ compared to lower tier subscription plans.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -2202,7 +2202,7 @@ and response times are listed on our main page!</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -2304,7 +2304,7 @@ interface cleaner!</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all project news;</li>
 <li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
@@ -2341,7 +2341,7 @@ path:</p>
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  0de20b89c781    691MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  0de20b89c781    691MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -2381,7 +2381,7 @@ reported bugs via the existing Bugzilla integration interface</li>
 to prevent usernames being exposed in logs or anonymous analytics</li>
 <li>Refactor URL <tt class="docutils literal"><span class="pre">/plan/&lt;pk&gt;/&lt;slug&gt;</span></tt> into <tt class="docutils literal"><span class="pre">/plan/&lt;pk&gt;/</span></tt> to prevent test plan
 summary being exposed in logs or anonymous analytics. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3994">Issue #3994</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3994">Issue #3994</a></li>
 </ul>
 </div>
 <div class="section" id="bug-fixes">
@@ -2452,7 +2452,7 @@ from our documentation.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us grow!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all project news;</li>
 <li><a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a>
@@ -2592,7 +2592,7 @@ testing community.</p>
 <hr>
 <p>If you like what we're doing please help us grow and sustain development!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">Give 👍 on GitLab</a>;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
   and follow all news;</li>
@@ -2629,7 +2629,7 @@ testing community.</p>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

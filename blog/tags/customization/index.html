@@ -311,7 +311,7 @@ override the list of available bug tracker integrations:</p>
             <p>In this blog post I will show more ways to customize Kiwi TCMS by adding
 logging capabilities to the API backend. Indeed this is a feature that
 our team deemed not required for upstream and was removed in
-<a href="https://github.com/kiwitcms/Kiwi/pull/436">PR #436</a>.</p>
+<a href="https://github.com/kiwitcms/kiwitcms/pull/436">PR #436</a>.</p>
 <p>Start by creating the following directory structure:</p>
 <div class="highlight"><pre><span></span><code>    api_logging/
         __init__.py
@@ -404,7 +404,7 @@ Kiwi TCMS defaults:</p>
 </code></pre></div>
 
 <p>Then place everything in <code>Dockerfile</code> like so:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">pub</span><span class="p">.</span><span class="nx">kiwitcms</span><span class="p">.</span><span class="nx">eu</span><span class="o">/</span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwi</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">pub</span><span class="p">.</span><span class="nx">kiwitcms</span><span class="p">.</span><span class="nx">eu</span><span class="o">/</span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwitcms</span>
 
 <span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">api_logging</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">api_logging</span><span class="o">/</span>
 <span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
@@ -441,7 +441,7 @@ email text looks like this:</p>
 
 <p><a href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a>
 runs a custom Docker image based on
-<code>pub.kiwitcms.eu/kiwitcms/kiwi</code>. For this image the confirmation email looks like this</p>
+<code>pub.kiwitcms.eu/kiwitcms/kiwitcms</code>. For this image the confirmation email looks like this</p>
 <div class="highlight"><pre><span></span><code><span class="x">    Welcome </span><span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span><span class="x">,</span>
 <span class="x">    thank you for signing up for our Kiwi TCMS demo!</span>
 
@@ -464,7 +464,7 @@ runs a custom Docker image based on
 and create a file named <code>templates.d/email/confirm_registration.txt</code> with your text!</p>
 <p>Next you want to make this file available inside your docker image so your <code>Dockerfile</code>
 should look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">pub</span><span class="p">.</span><span class="nx">kiwitcms</span><span class="p">.</span><span class="nx">eu</span><span class="o">/</span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwi</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">pub</span><span class="p">.</span><span class="nx">kiwitcms</span><span class="p">.</span><span class="nx">eu</span><span class="o">/</span><span class="nx">kiwitcms</span><span class="o">/</span><span class="nx">kiwitcms</span>
 
 <span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">templates</span><span class="p">.</span><span class="nx">d</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">overridden_templates</span><span class="o">/</span>
 <span class="w">    </span><span class="nx">COPY</span><span class="w"> </span><span class="nx">local_settings</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">lib64</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.6</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">tcms</span><span class="o">/</span><span class="nx">settings</span><span class="o">/</span>
@@ -610,7 +610,7 @@ from the LVM Administrator Guide for Red Hat Enterprise Linux 7.</p>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

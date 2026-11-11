@@ -147,12 +147,12 @@ on Docker Hub!</p>
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  4b31ecf8ab5b    654 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  4b31ecf8ab5b    654 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-8-7">
 <h2>Changes since Kiwi TCMS 8.7</h2>
@@ -169,11 +169,11 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 <li>Update node_modules/marked from 1.1.1 to 1.2.3</li>
 <li>Update node_modules/prismjs from 1.21.0 to 1.22.0</li>
 <li>Add management command <tt class="docutils literal">refresh_permission</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1137">Issue #1137</a> (Ivajlo Karabojkov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1137">Issue #1137</a> (Ivajlo Karabojkov)</li>
 <li>Add bug tracker integration for Azure Boards. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1979">Issue #1979</a> (&#64;cmbahadir)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1979">Issue #1979</a> (&#64;cmbahadir)</li>
 <li>Add autosave configuration to web editor. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1958">Issue #1958</a> (Mfon Eti-mfon)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1958">Issue #1958</a> (Mfon Eti-mfon)</li>
 <li>Change ON/OFF buttons messages to Yes/No for several buttons (Alexander Tsvetanov)</li>
 <li>Add support for object-level permissions for TestCase,
 TestPlan, TestRun and Bug objects via <tt class="docutils literal"><span class="pre">django-guardian</span></tt></li>
@@ -181,8 +181,8 @@ TestPlan, TestRun and Bug objects via <tt class="docutils literal"><span class="
 <li>modern look and feel using the PatternFly UI library</li>
 <li>remove unused legacy code &amp; HTML templates</li>
 <li>closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/663">Issue #663</a>,
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1977">Issue #1977</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/663">Issue #663</a>,
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1977">Issue #1977</a></li>
 </ul>
 </li>
 <li>Enable Markdown support for strike-through text</li>
@@ -222,12 +222,12 @@ This means up to 50 levels of nested child-parent test plans!</blockquote>
 <ul class="simple">
 <li>Method <tt class="docutils literal">TestExecution.update()</tt> will now modify field <tt class="docutils literal">close_date</tt>
 depending on test execution status. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1820">Issue #1820</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1820">Issue #1820</a></li>
 <li>Method <tt class="docutils literal">TestCase.add_comment()</tt> now returns the created comment</li>
 <li>Method <tt class="docutils literal">TestExecution.add_comment()</tt> now returns the created comment</li>
 <li>Method <tt class="docutils literal">TestPlan.add_case()</tt> now returns the newly added test case</li>
 <li>Add method <tt class="docutils literal">TestCase.sortkeys()</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/444">Issue #444</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/444">Issue #444</a></li>
 <li>Add method <tt class="docutils literal">Markdown.render()</tt></li>
 <li>Add method <tt class="docutils literal">TestCase.comments()</tt></li>
 <li>Add method <tt class="docutils literal">TestPlan.tree()</tt></li>
@@ -237,44 +237,44 @@ depending on test execution status. Fixes
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Fix url formatting. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1806">Issue #1806</a> (Rosen Sasov)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1806">Issue #1806</a> (Rosen Sasov)</li>
 <li>When deleting TestExecutionStatus check that there will be at least 1 left
 before deleting! Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1978">Issue #1978</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1978">Issue #1978</a></li>
 <li>Update typeahead definitions for test case components, tags and
 for adding test plans to test cases. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/882">Issue #882</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/882">Issue #882</a></li>
 <li>Add option to filter by reviewer in Test Plan page. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/564">Issue #564</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/564">Issue #564</a></li>
 <li>Pass the number of disabled test cases to HTML template when
 creating a new test run. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/718">Issue #718</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/718">Issue #718</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring-testing">
 <h3>Refactoring &amp; testing</h3>
 <ul class="simple">
 <li>New linter to warn against <tt class="docutils literal">GenericForeignKey</tt> fields in models. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1303">Issue #1303</a> (Bryan Mutai)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1303">Issue #1303</a> (Bryan Mutai)</li>
 <li>Add tests for <tt class="docutils literal">assign_default_group_permissions()</tt> (Ivajlo Karabojkov)</li>
 <li>Add tests for <tt class="docutils literal">TestExecutionStatusAdmin</tt>. Refs
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1618">Issue #1618</a> (Mariyan Garvanski)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1618">Issue #1618</a> (Mariyan Garvanski)</li>
 <li>Add tests for <tt class="docutils literal">tcms.bugs.views.Search</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1601">Issue #1601</a> (Mfon Eti-mfon)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1601">Issue #1601</a> (Mfon Eti-mfon)</li>
 <li>Add tests for <tt class="docutils literal">tcms.rpc.api.testrun</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1628">Issue #1628</a> (&#64;lcmtwn)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1628">Issue #1628</a> (&#64;lcmtwn)</li>
 <li>Add tests for <tt class="docutils literal">tcms.rpc.api.classification</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1621">Issue #1621</a> (Abhishek Chaurasia)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1621">Issue #1621</a> (Abhishek Chaurasia)</li>
 <li>Add tests for <tt class="docutils literal">tcms.rpc.api.priority</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1622">Issue #1622</a> (Abhishek Chaurasia)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1622">Issue #1622</a> (Abhishek Chaurasia)</li>
 <li>Add tests for <tt class="docutils literal">tcms.rpc.api.testcasestatus</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1624">Issue #1624</a> (Abhishek Chaurasia)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1624">Issue #1624</a> (Abhishek Chaurasia)</li>
 <li>Add tests for <tt class="docutils literal">tcms.rpc.api.attachment</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1619">Issue #1619</a> (&#64;awalvie)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1619">Issue #1619</a> (&#64;awalvie)</li>
 <li>Add tests for <tt class="docutils literal">tcms.rpc.api.testexecution.remove_comment</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1625">Issue #1625</a> (&#64;awalvie)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1625">Issue #1625</a> (&#64;awalvie)</li>
 <li>Add tests for <tt class="docutils literal">tcms.rpc.api.testexecutionstatus</tt>. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1626">Issue #1626</a> (&#64;awalvie)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1626">Issue #1626</a> (&#64;awalvie)</li>
 <li>Add tests for <tt class="docutils literal">TestRun.add_case_run()</tt> method and rename it to
 <tt class="docutils literal">TestRun.create_execution()</tt></li>
 <li><tt class="docutils literal"><span class="pre">libkrb5-dev</span></tt> is not needed anymore in CI with newer <tt class="docutils literal"><span class="pre">tcms-api</span></tt></li>
@@ -326,7 +326,7 @@ for more details!</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/">Nominate Kiwi TCMS as GitHub Stars</a>;</li>
 <li><a class="reference external" href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
@@ -381,7 +381,7 @@ and an awesome open source hacker;</li>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

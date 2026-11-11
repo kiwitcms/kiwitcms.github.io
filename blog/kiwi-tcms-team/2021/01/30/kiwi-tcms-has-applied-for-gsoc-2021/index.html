@@ -170,14 +170,14 @@ able to go one way only.</p>
 against our own and against 3rd party source code. On the other hand
 some of our components (e.g. PatternFly) do not perform any kind of
 security testing. The starting point to unravel this is
-<a href="https://github.com/kiwitcms/Kiwi/issues/871">Issue #871</a>.</p>
+<a href="https://github.com/kiwitcms/kiwitcms/issues/871">Issue #871</a>.</p>
 <p>As a minimum all issues reported by bandit &amp; coverity against 3rd party
 dependencies must be sorted out:</p>
 <ul>
 <li>Figure out if we execute our tools in the appropriate way as to not
   report unnecessary issues</li>
 <li>Dissect all of the issues, especially
-  <a href="https://github.com/kiwitcms/Kiwi/runs/1608837125?check_suite_focus=true">ones from Bandit</a>,
+  <a href="https://github.com/kiwitcms/kiwitcms/runs/1608837125?check_suite_focus=true">ones from Bandit</a>,
   report them to their upstream community, discuss and decide how to fix or
   ignore the issue and send a pull request to upstream</li>
 <li>Figure out how to keep track/dashboard whether or not all of our runtime
@@ -194,12 +194,12 @@ which would report the results to Kiwi TCMS similar to how our
 do!</p>
 <p>You should start with GitHub because this is what Kiwi TCMS uses and we can
 immediately eat our own dog food. Originally proposed in
-<a href="https://github.com/kiwitcms/Kiwi/issues/817">Issue #817</a> then moved to
+<a href="https://github.com/kiwitcms/kiwitcms/issues/817">Issue #817</a> then moved to
 <a href="https://github.com/kiwitcms/github-app/issues/10">github-app #10</a> with a
 slightly different focus.</p>
 <p>Next (or in parallel) would be similar
 functionality for GitLab pipelines, proposed in
-<a href="https://github.com/kiwitcms/Kiwi/issues/1421">Issue #1421</a></p>
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1421">Issue #1421</a></p>
 <h2>Java hacking</h2>
 <p>Kiwi TCMS does have a native
 <a href="https://github.com/kiwitcms/junit-plugin">junit-plugin</a> but we are no
@@ -207,10 +207,10 @@ experts in Java. In the testing world however Java is a very popular
 language and we need help building on top of the existing library and
 developing several other tools:</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/692">Issue #692</a> - TestNG plugin</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1072">Issue #1072</a> - Jenkins plugin,
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/692">Issue #692</a> - TestNG plugin</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/1072">Issue #1072</a> - Jenkins plugin,
   probably similar in scope to the proposed GitHub/GitLab integration above</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1512">Issue #1512</a> - extension for the
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/1512">Issue #1512</a> - extension for the
   existing junit-plugin. Similar extension will likely be necessary for the
   TestNG plugin as well</li>
 <li>Integration with Katalon Studio proposed at
@@ -225,13 +225,13 @@ developing several other tools:</p>
 </ul>
 <h2>C# and Objective-C hacking</h2>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/2020">Issue #2020</a> - reporting plugin for
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/2020">Issue #2020</a> - reporting plugin for
   NUnit, similar to other existing
   <a href="https://kiwitcms.readthedocs.io/en/latest/plugins/automation-frameworks.html">automation framework plugins</a>.
   We're not sure how popular NUnit vs other test runners in the C# world is but
   it could be a good basis for developing future plugins. The challenge here
   is mostly for us since we're a Linux based team</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1316">Issue #1316</a> - reporting plugin
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/1316">Issue #1316</a> - reporting plugin
   for <em>Kiwi-bdd</em> a simple BDD for iOS. Again the challenge here would be
   on us since we don't have experience building and testing applications on iOS</li>
 </ul>
@@ -253,7 +253,7 @@ on the front-end. This is rather cumbersome to manage by hand and calls
 for a more modern solution using React. There is PatternFly implementation
 as React components too.</p>
 <p>The starting point is
-<a href="https://github.com/kiwitcms/Kiwi/issues/1323">Issue #1323</a>.</p>
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1323">Issue #1323</a>.</p>
 <p>The volume of work is a challenge because all pages need to be migrated
 and we're not sure if this can be done and released in steps or all pages
 should be migrated and released together. In other words we don't know if
@@ -266,15 +266,15 @@ happens both on the backend as well as in the HTML templates themselves -
 for example translations and permission checks.</p>
 <h2>JavaScript hacking</h2>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1281">Issue #1281</a> - start using ESLint
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/1281">Issue #1281</a> - start using ESLint
   against our code base and clean-up all related issues</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1910">Issue #1910</a> - replace SimpleMDE
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/1910">Issue #1910</a> - replace SimpleMDE
   with EasyMDE. Ideally we would like to depend on other active open source
   libraries and the rich text editor what we use looks like it needs replacement.
   We've got a few extra features hooked into the editor like syntax highlighting
   with dynamic loading of language definitions, support for inline attachments and
   a security override. All of these need to be kept in place.</li>
-<li><a href="https://github.com/kiwitcms/Kiwi/issues/1919">Issue #1919</a> - reconsider using
+<li><a href="https://github.com/kiwitcms/kiwitcms/issues/1919">Issue #1919</a> - reconsider using
   MomentJS. Well it looks like its original authors encourage everyone to
   actually stop using it and we should consider doing so as well. As it stands
   MomentJS is not widely used inside Kiwi TCMS except for timezone conversions
@@ -286,15 +286,15 @@ for example translations and permission checks.</p>
 <p><a href="/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/">Testing Telemetry</a> is one of our cool
 features and since we've started to redesign the legacy report feature testers
 are very happy with it. There are still some bits and pieces that are missing:
-<a href="https://github.com/kiwitcms/Kiwi/issues/616">Issue #616</a>,
-<a href="https://github.com/kiwitcms/Kiwi/issues/1923">Issue #1923</a>,
-<a href="https://github.com/kiwitcms/Kiwi/issues/1924">Issue #1924</a>,
-<a href="https://github.com/kiwitcms/Kiwi/issues/1925">Issue #1925</a>,
-<a href="https://github.com/kiwitcms/Kiwi/issues/1926">Issue #1926</a>,
-<a href="https://github.com/kiwitcms/Kiwi/issues/1927">Issue #1927</a>,
-<a href="https://github.com/kiwitcms/Kiwi/issues/1928">Issue #1928</a>,
-<a href="https://github.com/kiwitcms/Kiwi/issues/1929">Issue #1929</a>,
-<a href="https://github.com/kiwitcms/Kiwi/issues/1940">Issue #1940</a>.</p>
+<a href="https://github.com/kiwitcms/kiwitcms/issues/616">Issue #616</a>,
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1923">Issue #1923</a>,
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1924">Issue #1924</a>,
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1925">Issue #1925</a>,
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1926">Issue #1926</a>,
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1927">Issue #1927</a>,
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1928">Issue #1928</a>,
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1929">Issue #1929</a>,
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1940">Issue #1940</a>.</p>
 <p>These generally depend on having the ability to record execution times in our
 database and afterwards the features are similar but relatively independent
 of one another.</p>
@@ -306,8 +306,8 @@ on top of <a href="https://github.com/zapier/django-rest-hooks">django-rest-hook
 pair it up with <a href="https://restrictedpython.readthedocs.io/">RestrictedPython</a>
 for further flexibility.</p>
 <p>This feature is being tracked in
-<a href="https://github.com/kiwitcms/Kiwi/issues/1080">Issue #1080</a> and
-<a href="https://github.com/kiwitcms/Kiwi/issues/914">Issue #913</a> but needs a more
+<a href="https://github.com/kiwitcms/kiwitcms/issues/1080">Issue #1080</a> and
+<a href="https://github.com/kiwitcms/kiwitcms/issues/914">Issue #913</a> but needs a more
 detailed definition.</p>
 <h2>Anything else</h2>
 <p>All of the proposals above are items which we have in our backlog and
@@ -320,7 +320,7 @@ accept your contributions if we make it into the program.</p>
 <p>If you like what we're doing and how Kiwi TCMS supports various communities
 please help us!</p>
 <ul>
-<li><a href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a href="/blog/kiwi-tcms-team/2020/09/04/please-nominate-kiwitcms-as-a-github-star/">Nominate Kiwi TCMS as GitHub Stars</a>;</li>
 <li><a href="https://opencollective.com/kiwitcms/donate">Donate via Open Collective</a> as low as 1 EUR;</li>
 <li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
@@ -372,7 +372,7 @@ please help us!</p>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

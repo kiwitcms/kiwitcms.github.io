@@ -137,7 +137,7 @@ improvements and bug fixes, new API methods and internal refactoring.</p>
 <blockquote>
 <p>Public container image (x86_64):</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi   latest  05fa3580d0f0    739MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  05fa3580d0f0    739MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged and multi-arch
@@ -152,9 +152,9 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  05fa3580d0f0    739MB
 <li>Update node_modules/minimatch from 3.1.3 to 3.1.4</li>
 <li>Update node_modules/moment from 2.29.4 to 2.31.0</li>
 <li>Restrict email lookups via RPC calls. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-7fw6-cfjr-g2hj">GHSA-7fw6-cfjr-g2hj</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-7fw6-cfjr-g2hj">GHSA-7fw6-cfjr-g2hj</a></li>
 <li>Prevent email address confirmation bypass via API method. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/security/advisories/GHSA-wv2r-fx3r-qfj5">GHSA-wv2r-fx3r-qfj5</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-wv2r-fx3r-qfj5">GHSA-wv2r-fx3r-qfj5</a></li>
 <li>Fixes for code scanning alerts: DOM text reinterpreted as HTML</li>
 <li>Fixes for code scanning alerts: URL redirection from remote source</li>
 </ul>
@@ -171,35 +171,35 @@ pub.kiwitcms.eu/kiwitcms/kiwi   latest  05fa3580d0f0    739MB
 (<strong>Achmad Fienan Rahardianto</strong>)</li>
 <li>Implement TestPlan multi-clone functionality via Search Test Plans page
 (<strong>Oskar Hurst, USACE</strong>). Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3976">Issue #3976</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3976">Issue #3976</a></li>
 <li>Implement TestPlan tree-clone functionality. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4306">Issue #4306</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4306">Issue #4306</a></li>
 <li>Add <tt class="docutils literal">Default tester</tt> search field to Search Test Cases page. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4522">Issue #4522</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4522">Issue #4522</a></li>
 <li>Add <tt class="docutils literal">Tested by</tt> bulk menu on Test Run page. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4562">Issue #4562</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4562">Issue #4562</a></li>
 <li>Include ID in default name when cloning a TestPlan</li>
 <li>Skip UI only columns when exporting search results</li>
 <li>Prevent TestPlan trees deeper than django-tree-queries can handle. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4334">Issue #4334</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4334">Issue #4334</a></li>
 <li>Show test cases with similar summaries on New Test Case page. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4111">Issue #4111</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4111">Issue #4111</a></li>
 </ul>
 </div>
 <div class="section" id="bug-fixes">
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Show all rows in the tags card, not limited to the first 20. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/2914">Issue #2914</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/2914">Issue #2914</a></li>
 <li>Don't collapse Test plan multiselect on Search Test Cases page. Refs
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/3325">Issue #3325</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/3325">Issue #3325</a></li>
 </ul>
 </div>
 <div class="section" id="api">
 <h3>API</h3>
 <ul class="simple">
 <li><tt class="docutils literal">Bug.create()</tt> method will store the <tt class="docutils literal">text</tt> field as initial comment. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/4617">Issue #4617</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4617">Issue #4617</a></li>
 <li><tt class="docutils literal">User.update()</tt> method no longer accepts the <tt class="docutils literal">email</tt> field</li>
 <li>Add <tt class="docutils literal">TestExecution.count_attachments()</tt> method</li>
 <li>Add <tt class="docutils literal">TestPlan.clone()</tt> method</li>
@@ -252,7 +252,7 @@ from our documentation.</p>
 <p>---</p>
 <p>If you like what we're doing please help us grow:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/Kiwi/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
 <li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
 and follow all news;</li>
 <li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
@@ -304,7 +304,7 @@ and follow all news;</li>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

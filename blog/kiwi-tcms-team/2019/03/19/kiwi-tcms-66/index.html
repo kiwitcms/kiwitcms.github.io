@@ -141,12 +141,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  c4734f98ca37    971.3 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957.6 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955.7 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  c4734f98ca37    971.3 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957.6 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955.7 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-5-3">
 <h2>Changes since Kiwi TCMS 6.5.3</h2>
@@ -166,16 +166,16 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
 <li>When creating new TestCase you can now change notification settings.
 Previously this was only possible during editing</li>
 <li>Document import-export approaches. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/795">Issue #795</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/795">Issue #795</a></li>
 <li>Document available test automation plugins</li>
 <li>Improve documentation around Docker customization and SSL termination</li>
 <li>Add documentation example of reverse rroxy configuration for HAProxy (Nicolas Auvray)</li>
 <li><tt class="docutils literal">TestPlan.add_case()</tt> will now set the sortkey to highest in plan + 10 (Rik)</li>
 <li>Add <tt class="docutils literal">LinkOnly</tt> issue tracker. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/289">Issue #289</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/289">Issue #289</a></li>
 <li>Use the same HTML template for both TestCase new &amp; edit</li>
 <li>New API methods for adding, removing and listing attachments. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/446">Issue #446</a>:<ul>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/446">Issue #446</a>:<ul>
 <li>TestPlan.add_attachment()</li>
 <li>TestCase.add_attachment()</li>
 <li>TestPlan.list_attachments()</li>
@@ -207,7 +207,7 @@ the last historical record.</p>
 <h3>Removed functionality</h3>
 <ul>
 <li><p class="first">Remove legacy reports. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/657">Issue #657</a></p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/657">Issue #657</a></p>
 </li>
 <li><p class="first">Remove &quot;Save &amp; Continue&quot; functionality from TestCase edit page</p>
 </li>
@@ -226,23 +226,23 @@ test case runs.</p>
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Remove hard-coded timestamp in TestCase page template, References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/765">Issue #765</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/765">Issue #765</a></li>
 <li>Fix handling of <tt class="docutils literal"><span class="pre">?from_plan</span></tt> URL parameter in TestCase page</li>
 <li>Make <tt class="docutils literal">TestCase.text</tt> occupy 100% width when rendered. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/798">Issue #798</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/798">Issue #798</a></li>
 <li>Enable <tt class="docutils literal">markdown.extensions.tables</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/816">Issue #816</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/816">Issue #816</a></li>
 <li>Handle form erros and default values for TestPlan new/edit. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/864">Issue #864</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/864">Issue #864</a></li>
 <li>Tests + fix for failing TestCase rendering in French</li>
 <li>Show color-coded statuses on dashboard page when seen with non-English
 language</li>
 <li>Refactor check for confirmed test cases when editting to work with
 translations</li>
 <li>Fix form values when filtering test cases inside TestPlan. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/674">Issue #674</a> (&#64;marion2016)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/674">Issue #674</a> (&#64;marion2016)</li>
 <li>Show delete icon for attachments. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/847">Issue #847</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/847">Issue #847</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring">
@@ -250,10 +250,10 @@ translations</li>
 <ul class="simple">
 <li>Remove unused <tt class="docutils literal">.current_user</tt> instance attribute</li>
 <li>Remove <tt class="docutils literal">EditCaseForm</tt> and use <tt class="docutils literal">NewCaseForm</tt> instead, References
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/708">Issue #708</a>,
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/812">Issue #812</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/708">Issue #708</a>,
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/812">Issue #812</a></li>
 <li>Fix &quot;Select All&quot; checkbox. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/828">Issue #828</a> (Rady)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/828">Issue #828</a> (Rady)</li>
 </ul>
 </div>
 <div class="section" id="translations">
@@ -275,21 +275,21 @@ translations</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p>Don't forget to <a class="reference external" href="/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/">backup</a>
 before upgrade!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -341,7 +341,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

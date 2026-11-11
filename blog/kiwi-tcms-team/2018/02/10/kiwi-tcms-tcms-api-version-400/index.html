@@ -136,9 +136,9 @@ as well as several bug-fixes and enhancements!</p>
 namespaces now match DB model names and the API client class names. Lots of
 similar and duplicate methods were removed and existing ones were simplified.
 We've also reduced code duplication and technical debth by 1 month
-according to stats by <a href="https://codeclimate.com/github/kiwitcms/Kiwi">CodeClimate</a>.</p>
+according to stats by <a href="https://codeclimate.com/github/kiwitcms/kiwitcms">CodeClimate</a>.</p>
 <p><strong>IMPORTANT:</strong> this is also the first release to officially publish the
-<code>pub.kiwitcms.eu/kiwitcms/kiwi</code> container image!</p>
+<code>pub.kiwitcms.eu/kiwitcms/kiwitcms</code> container image!</p>
 <p><strong>WARNING:</strong> upgrading to Kiwi TCMS 4.0.0 means you will have to upgrade
 the tcms-api client as well. None of the 4.x releases is compatible with
 older releases due to the massive ammount of changes in the RPC layer.</p>
@@ -147,12 +147,12 @@ older releases due to the massive ammount of changes in the RPC layer.</p>
 <ul>
 <li>Upgrade to Django 2.0.2 which patches a security issue</li>
 <li>Pin JIRA client version to 1.0.10. Fixes
-  <a href="https://github.com/kiwitcms/Kiwi/issues/195">Issue #195</a></li>
+  <a href="https://github.com/kiwitcms/kiwitcms/issues/195">Issue #195</a></li>
 <li>Generate api-docs for model classes</li>
 <li>Updated documentation for all RPC methods</li>
 <li>Use Grappelli jQuery initialization, fixes popup windows</li>
 <li>Unify RPC namespaces, API client class names and server-side model names.
-  Fixes <a href="https://github.com/kiwitcms/Kiwi/issues/153">Issue #153</a></li>
+  Fixes <a href="https://github.com/kiwitcms/kiwitcms/issues/153">Issue #153</a></li>
 </ul>
 <h3>Settings</h3>
 <ul>
@@ -331,7 +331,7 @@ older releases due to the massive ammount of changes in the RPC layer.</p>
 <p>If you are using Kiwi TCMS as a Docker container then</p>
 <div class="highlight"><pre><span></span><code>cd Kiwi/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </code></pre></div>
@@ -381,7 +381,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

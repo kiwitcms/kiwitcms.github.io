@@ -145,12 +145,12 @@ breaking direct upgrades from existing installations!</p>
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  71a55e353da2    557 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  71a55e353da2    557 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-7-3">
 <h2>Changes since Kiwi TCMS 7.3</h2>
@@ -165,7 +165,7 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 <li>Allow customization of test execution statuses via admin.
 For more information see
 <a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses">https://kiwitcms.readthedocs.io/en/latest/admin.html#test-execution-statuses</a>.
-Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/236">Issue #236</a></li>
+Fixes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/236">Issue #236</a></li>
 <li>Add passing rate chart to Execution trends telemetry</li>
 <li>Documentation updates (&#64;Prome88)</li>
 </ul>
@@ -271,28 +271,28 @@ newest API. At the time of Kiwi TCMS v8.0 release their versions are:</p>
 <h3>Bug fixes</h3>
 <ul class="simple">
 <li>Allow displaying lists with more then 9 items when reviewing test cases. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/339">Issue #339</a> (Mfon Eti-mfon)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/339">Issue #339</a> (Mfon Eti-mfon)</li>
 <li>Make <tt class="docutils literal">tcms.tests.storage.RaiseWhenFileNotFound`</tt> capable of finding
 finding static files on Windows which enables development mode for folks
 not using Linux environment. See
 <a class="reference external" href="https://stackoverflow.com/questions/55297178">SO #55297178</a> (Mfon Eti-mfon)</li>
 <li>Allow changing test execution status without adding comment. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1261">Issue #1261</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1261">Issue #1261</a></li>
 <li>Properly refresh test run progress bar when changing statuses. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1326">Issue #1326</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1326">Issue #1326</a></li>
 <li>Fix a bug where updating test cases from the UI was causing text and various
 other fields to be reset. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1318">Issue #1318</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1318">Issue #1318</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring">
 <h3>Refactoring</h3>
 <ul class="simple">
 <li>Extract attachments widget to new template. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1124">Issue #1124</a>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1124">Issue #1124</a>
 (Rosen Sasov)</li>
 <li>Rename RPC related classes. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/682">Issue #682</a>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/682">Issue #682</a>
 (Rosen Sasov)</li>
 <li>Add new test (Mariyan Garvanski)</li>
 <li>Start using GitHub actions, first for running flake8</li>
@@ -340,21 +340,21 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 <pre class="literal-block">
 cd path/containing/docker-compose/
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 </pre>
 <p><strong>WHERE:</strong> <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> has been updated from your private git repository!
 The file provided in our GitHub repository is an example. Not for production use!</p>
-<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
+<p><strong>WARNING:</strong> <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> and <tt class="docutils literal"><span class="pre">docker-compose.yml</span></tt> will
 always point to the latest available version! If you have to upgrade in steps,
 e.g. between several intermediate releases, you have to modify the above workflow:</p>
 <pre class="literal-block">
 # starting from an older Kiwi TCMS version
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
-edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwi:&lt;next_upgrade_version&gt;
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
+edit docker-compose.yml to use pub.kiwitcms.eu/kiwitcms/kiwitcms:&lt;next_upgrade_version&gt;
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
 # repeat until you have reached latest
@@ -406,7 +406,7 @@ docker exec -it kiwi_web /Kiwi/manage.py migrate
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

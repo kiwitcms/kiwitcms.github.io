@@ -145,10 +145,10 @@ releases to ensure a smooth upgrade!</p>
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970.2 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970.1 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976.8 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970.2 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970.1 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976.8 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-6-0">
 <h2>Changes since Kiwi TCMS 6.0</h2>
@@ -186,7 +186,7 @@ This patch makes it possible to use the API without crashing however the
 <li>Fix pylint errors (Ivaylo Ivanov)</li>
 <li>Remove unused <tt class="docutils literal">TestRun.list</tt> and <tt class="docutils literal">TestCase.list_confirmed</tt> methods</li>
 <li>Remove unused <tt class="docutils literal">plan_by_id_or_name()</tt> and <tt class="docutils literal">is_int()</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/269">Issue #269</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/269">Issue #269</a></li>
 </ul>
 </div>
 <div class="section" id="database">
@@ -209,7 +209,7 @@ models</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -229,7 +229,7 @@ supporting the
 <a class="reference external" href="/team/">development team</a>. Watch this
 blog for further announcements about this. Meanwhile you may share your
 thoughts via
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/515">Issue #515</a>.</p>
 </div>
 <div class="section" id="plans-to-remove-deprecated-functionality">
 <h2>Plans to remove deprecated functionality</h2>
@@ -237,7 +237,7 @@ thoughts via
 <tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
 to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/246">Issue #246</a> is fixed).</p>
 </div>
 
         </article>
@@ -284,7 +284,7 @@ Test runs should only be able to select product builds (after
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

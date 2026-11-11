@@ -136,7 +136,7 @@ You can explore everything at
 &lt; 5.3.1 to 6.0 will break without an intermediate upgrade to 5.3.1!</p>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  cd087297f349    991.3 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  cd087297f349    991.3 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-5-3-1">
 <h2>Changes since Kiwi TCMS 5.3.1</h2>
@@ -161,9 +161,9 @@ Existing values and properties are converted into tags and automatically added
 to test runs!</li>
 <li>Convert squashed database migrations to regular ones and remove older migrations.
 <strong>WARNING:</strong> upgrade from versions &lt;= 5.3.1 to 6.0 will break without an intermediate
-upgrade to <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:5.3.1 a420465852be</tt>.</li>
+upgrade to <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:5.3.1 a420465852be</tt>.</li>
 <li>Remove deprecated <tt class="docutils literal">TestCase.estimated_time</tt> and <tt class="docutils literal">TestRun.estimated_time</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/514">Issue #514</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/514">Issue #514</a></li>
 </ul>
 </div>
 </div>
@@ -171,7 +171,7 @@ upgrade to <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:5.3.1 a420
 <h2>Backend API</h2>
 <ul class="simple">
 <li>No longer use <tt class="docutils literal">product_version</tt> for <tt class="docutils literal">TestRun.create</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/522">Issue #522</a><ul>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/522">Issue #522</a><ul>
 <li>'product' is no longer required</li>
 <li>'product_version' is no longer required</li>
 <li>'manager' and 'default_tester' can be usernames or IDs</li>
@@ -214,7 +214,7 @@ permissions</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -234,7 +234,7 @@ supporting the
 <a class="reference external" href="https://github.com/orgs/kiwitcms/people">development team</a>. Watch this
 blog for further announcements about this. Meanwhile you may share your
 thoughts via
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/515">Issue #515</a>.</p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/515">Issue #515</a>.</p>
 </div>
 <div class="section" id="plans-to-remove-deprecated-functionality">
 <h2>Plans to remove deprecated functionality</h2>
@@ -242,7 +242,7 @@ thoughts via
 <tt class="docutils literal">TestRun.plan.product_version</tt>! With the latest web interface it is not possible
 to select a product version different than the one selected in the Test Plan.
 Test runs should only be able to select product builds (after
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/246">Issue #246</a> is fixed).</p>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/246">Issue #246</a> is fixed).</p>
 </div>
 
         </article>
@@ -289,7 +289,7 @@ Test runs should only be able to select product builds (after
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

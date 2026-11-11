@@ -144,12 +144,12 @@ You can explore everything at
 </pre>
 <p>Docker images:</p>
 <pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwi       latest  c5dbd9a7ded6    562 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.2     7870085ad415    957 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1.1   49fa42ddfe4d    955 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.1     b559123d25b0    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       6.0.1   87b24d94197d    970 MB
-pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       latest  c5dbd9a7ded6    562 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.2     7870085ad415    957 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1.1   49fa42ddfe4d    955 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.1     b559123d25b0    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       6.0.1   87b24d94197d    970 MB
+pub.kiwitcms.eu/kiwitcms/kiwitcms       5.3.1   a420465852be    976 MB
 </pre>
 <div class="section" id="changes-since-kiwi-tcms-8-2">
 <h2>Changes since Kiwi TCMS 8.2</h2>
@@ -163,7 +163,7 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 <li>Update pygithub from 1.47 to 1.50</li>
 <li>Update python-gitlab from 2.1.2 to 2.2.0</li>
 <li>It is now possible to reopen closed bugs - Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1152">Issue #1152</a> (&#64;cmbahadir)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1152">Issue #1152</a> (&#64;cmbahadir)</li>
 <li>Visual improvements for Status matrix telemetry:<ul>
 <li>columns now link to test runs</li>
 <li>tool-tips show test run summary</li>
@@ -174,7 +174,7 @@ pub.kiwitcms.eu/kiwitcms/kiwi       5.3.1   a420465852be    976 MB
 for 10 years</li>
 <li>Improved documentation around self-signed certificates</li>
 <li>Improved documentation around e-mail backend configuration. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1070">Issue #1070</a>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1070">Issue #1070</a>
 (&#64;Schwarzkrieger)</li>
 </ul>
 </div>
@@ -191,9 +191,9 @@ fields <tt class="docutils literal">author</tt>, <tt class="docutils literal">de
 <h3>Refactoring</h3>
 <ul class="simple">
 <li>Migrate bandit test job to GitHub workflows, Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1550">Issue #1550</a> (&#64;lcmtwn)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1550">Issue #1550</a> (&#64;lcmtwn)</li>
 <li>Migrate doc8 test job to GitHub workflows. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/1551">Issue #1551</a> (&#64;Prome88)</li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/1551">Issue #1551</a> (&#64;Prome88)</li>
 <li>Add 2 more tests (Mariyan Garvanski)</li>
 <li>Convert TP edit page to class based view</li>
 <li>Convert forms to ModelForm</li>
@@ -239,7 +239,7 @@ If you are using Kiwi TCMS as a Docker container then:</p>
 cd path/containing/docker-compose/
 docker-compose down
 # !!! docker tag to keep older image version on the machine
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb-103-centos7
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -294,7 +294,7 @@ for more details!</p>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">

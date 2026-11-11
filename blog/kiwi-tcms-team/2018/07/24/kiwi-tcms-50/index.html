@@ -130,7 +130,7 @@
             <p>We're happy to announce Kiwi TCMS and tcms-api version 5.0! This release
 introduces object history tracking, removal of old functionality and unused code,
 lots of internal updates and bug fixes.</p>
-<p>The new <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwi:latest</tt> docker image has Image ID <tt class="docutils literal">468de0abe8a8</tt>.
+<p>The new <tt class="docutils literal">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</tt> docker image has Image ID <tt class="docutils literal">468de0abe8a8</tt>.
 <a class="reference external" href="https://public.tenant.kiwitcms.org/login/github-app/">https://public.tenant.kiwitcms.org</a> has also been updated!</p>
 <div class="section" id="changes-since-kiwi-tcms-4-2">
 <h2>Changes since Kiwi TCMS 4.2</h2>
@@ -147,18 +147,18 @@ lots of internal updates and bug fixes.</p>
 <ul class="simple">
 <li>Upgrade to <a class="reference external" href="https://docs.djangoproject.com/en/2.0/releases/2.0.7/">Django 2.0.7</a></li>
 <li>Allow to delete TestPlan. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/273">Issue #273</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/273">Issue #273</a></li>
 <li>Don't include username in dashboard URL</li>
 <li>Copy latest TestPlan text when cloning</li>
 <li>Always require users to be logged in. Anonymous users will not be allowed
 access by default. Read-only access to some views (e.g. get TestPlan or TestRun)
 can be enabled by disabling <tt class="docutils literal">GlobalLoginRequiredMiddleware</tt>! Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/230">Issue #230</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/230">Issue #230</a></li>
 <li>Start tracking change history for TestPlan, TestCase, TestRun and TestCaseRun.
-Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/294">Issue #294</a></li>
+Fixes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/294">Issue #294</a></li>
 <li>History changes are recorded as unified diff which is a universally recognized format</li>
 <li>Show the actual changes in email notifications. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/199">Issue #199</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/199">Issue #199</a></li>
 </ul>
 </div>
 <div class="section" id="bug-fixes">
@@ -167,19 +167,19 @@ Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issue
 <li>Fix <tt class="docutils literal">UnboundLocalError local variable 'message' referenced before assignment</tt>. Fixes
 <a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/589209883/">Sentry KIWI-TCMS-1S</a></li>
 <li>Make email address unique when adding users via admin panel. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/352">Issue #352</a> and
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/68">Issue #68</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/352">Issue #352</a> and
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/68">Issue #68</a></li>
 <li>Fix <tt class="docutils literal">unsupported operand type(s) for +=: 'int' and 'datetime.timedelta'</tt> by
 initializing timedelta variable properly. Fixes
 <a class="reference external" href="https://sentry.io/open-technologies-bulgaria-ltd/kiwi-tcms/issues/593838484/">Sentry KIWI-TCMS-1Y</a></li>
 <li>Remove <tt class="docutils literal">core.models.fields</tt> with MySQL time conversions. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/390">Issue #390</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/390">Issue #390</a></li>
 <li>Fix bad JavaScript comparison. Fixes Coverity #289956</li>
 <li>Remove expression with no effect. Fixes Coverity #289974</li>
 <li>Rewrite <tt class="docutils literal">request_host_link()</tt> to fix Coverity #289987</li>
 <li>Fix Coverity #289923 - Typo in identifier</li>
 <li>Don't send emails for changes performed by myself. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/216">Issue #216</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/216">Issue #216</a></li>
 </ul>
 </div>
 <div class="section" id="refactoring">
@@ -198,19 +198,19 @@ initializing timedelta variable properly. Fixes
 <li>Convert <tt class="docutils literal">TestCaseEmailSettings.cc_list</tt> to string field</li>
 <li>Merge <tt class="docutils literal">report/caseruns_table.html</tt> with <tt class="docutils literal">reports/caseruns.html</tt></li>
 <li>Rename model <tt class="docutils literal">UserActivateKey</tt> to <tt class="docutils literal">UserActivationKey</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/276">Issue #276</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/276">Issue #276</a></li>
 <li>Remove <tt class="docutils literal">cached_entities()</tt>. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/307">Issue #307</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/307">Issue #307</a></li>
 <li>Remove <tt class="docutils literal">TestPlanText.checksum</tt> field</li>
 <li>Remove checksum fields for <tt class="docutils literal">TestCaseText</tt> model</li>
 <li>Remove unused and home-grown template tags</li>
 <li>Remove unused fields <tt class="docutils literal">auto_blinddown</tt>, <tt class="docutils literal">description</tt>, <tt class="docutils literal">sortkey</tt> from
 <tt class="docutils literal">TestCaseRunStatus</tt> model. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/186">Issue #186</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/186">Issue #186</a></li>
 <li>Remove <tt class="docutils literal">Meta.db_name</tt> effectively renaming all tables. New names will use
 Django's default naming scheme</li>
 <li>Remove RawSQL queries. We are now 100% ORM based. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/36">Issue #36</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/36">Issue #36</a></li>
 <li>Remove duplicate <tt class="docutils literal">MultipleEmailField</tt> definition</li>
 <li>Remove <tt class="docutils literal">TCMSLog</tt> view, <tt class="docutils literal">TCMSLogManager</tt>, <tt class="docutils literal">TCMSLogModel</tt></li>
 <li>Remove <tt class="docutils literal">TestPlanText</tt> model, use <tt class="docutils literal">TestPlan.text</tt> instead</li>
@@ -238,11 +238,11 @@ Django's default naming scheme</li>
 <ul class="simple">
 <li>TestRun completion status is no longer updated automatically. You can still
 update the status manually via the 'Set Finished' or 'Set Running' links!
-Fixes <a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/367">Issue #367</a></li>
+Fixes <a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/367">Issue #367</a></li>
 <li>Remove bookmarks functionality. There are many great bookmark manager apps
 and if the user is keen on bookmarks they should use one of them. Closes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/67">Issue #67</a> and
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/210">Issue #210</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/67">Issue #67</a> and
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/210">Issue #210</a></li>
 <li>Don't track &amp; display history of changes for <tt class="docutils literal">EnvGroup</tt> model</li>
 <li>Remove Disable/Enable buttons from TestPlan page. Enabling and disabling
 can still be done via the edit page</li>
@@ -265,7 +265,7 @@ individual basis if you need to do so.</li>
 <li>More source strings marked as translatable</li>
 <li>New translations for Chinese Simplified, Chinese Traditional, German and Slovenian</li>
 <li>Stop keeping compiled translations under git. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/Kiwi/issues/387">Issue #387</a></li>
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/387">Issue #387</a></li>
 </ul>
 </div>
 </div>
@@ -291,7 +291,7 @@ dictionaries instead of objects.</li>
 cd Kiwi/
 git pull
 docker-compose down
-docker pull pub.kiwitcms.eu/kiwitcms/kiwi
+docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
 docker pull centos/mariadb
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py migrate
@@ -354,7 +354,7 @@ free to comment below, file GitHub issues or send us an email.</p>
             <div class="footer-block fl-gh">
                 <i></i>
                 <h2>Contribute</h2>
-                <a href="https://github.com/kiwitcms/Kiwi">/kiwitcms</a>
+                <a href="https://github.com/kiwitcms/kiwitcms">/kiwitcms</a>
             </div>
 
             <div class="footer-block fl-tw">
