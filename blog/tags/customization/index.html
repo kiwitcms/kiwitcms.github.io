@@ -501,7 +501,7 @@ Now build your customized Docker image and use that for deployment!</p>
         <div class="content">
             <p>When you start Kiwi TCMS by running <code>docker-compose up</code>
 (see <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose">here</a>)
-it will automatically create 2 volumes: <code>kiwi_db_data</code> and <code>kiwi_uploads</code>.
+it will automatically create 2 volumes: <code>kiwitcms_db_data</code> and <code>kiwitcms_uploads</code>.
 This blog post will outline how to backup these docker volumes.</p>
 <p><strong>Note:</strong> in the instructions below <code>kiwi_db</code> is the container name and <code>kiwi</code> is the
 database name used inside the <code>docker-compose.yml</code> file!</p>
@@ -518,7 +518,7 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 <p><strong>Notes:</strong></p>
 <ol>
 <li>Depending on your scenario you may want to remove the existing volume
-   (<code>docker-compose down &amp;&amp; docker volume rm kiwi_db_data</code>) before restoring the database!</li>
+   (<code>docker-compose down &amp;&amp; docker volume rm kiwitcms_db_data</code>) before restoring the database!</li>
 </ol>
 <h2>Postgres database</h2>
 <p>To export all contents from the docker container execute the command:</p>

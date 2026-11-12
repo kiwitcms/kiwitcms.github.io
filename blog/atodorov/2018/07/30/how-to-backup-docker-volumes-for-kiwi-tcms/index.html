@@ -15,14 +15,14 @@
     
 
 
-        <meta name="description" content="When you start Kiwi TCMS by running docker-compose up (see here) it will automatically create 2 volumes: kiwi_db_data and kiwi_uploads...." >
+        <meta name="description" content="When you start Kiwi TCMS by running docker-compose up (see here) it will automatically create 2 volumes: kiwitcms_db_data and..." >
 
         <meta name="author" content="Alexander Todorov">
 
         <meta name="tags" content="customization" >
         <meta name="twitter:site" content="@KiwiTCMS">
         <meta name="twitter:title" content="How to backup Docker volumes for Kiwi TCMS">
-            <meta name="twitter:description" content="When you start Kiwi TCMS by running docker-compose up (see here) it will automatically create 2 volumes: kiwi_db_data and kiwi_uploads....">
+            <meta name="twitter:description" content="When you start Kiwi TCMS by running docker-compose up (see here) it will automatically create 2 volumes: kiwitcms_db_data and...">
         <meta name="twitter:card" content="summary_large_image">
                 <meta property="twitter:image" content="https://kiwitcms.org/images/backup.png">
 
@@ -32,7 +32,7 @@
         <meta property="og:url" content="https://kiwitcms.org/blog/atodorov/2018/07/30/how-to-backup-docker-volumes-for-kiwi-tcms/" />
         <meta property="og:title" content="How to backup Docker volumes for Kiwi TCMS" />
         <meta property="article:published_time" content="2018-07-30 00:25:00+03:00">
-            <meta property="og:description" content="When you start Kiwi TCMS by running docker-compose up (see here) it will automatically create 2 volumes: kiwi_db_data and kiwi_uploads....">
+            <meta property="og:description" content="When you start Kiwi TCMS by running docker-compose up (see here) it will automatically create 2 volumes: kiwitcms_db_data and...">
 
                 <meta property="og:image" content="https://kiwitcms.org/images/backup.png">
         <!-- Custom Styles -->
@@ -128,7 +128,7 @@
         <article class="content">
             <p>When you start Kiwi TCMS by running <code>docker-compose up</code>
 (see <a href="http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose">here</a>)
-it will automatically create 2 volumes: <code>kiwi_db_data</code> and <code>kiwi_uploads</code>.
+it will automatically create 2 volumes: <code>kiwitcms_db_data</code> and <code>kiwitcms_uploads</code>.
 This blog post will outline how to backup these docker volumes.</p>
 <p><strong>Note:</strong> in the instructions below <code>kiwi_db</code> is the container name and <code>kiwi</code> is the
 database name used inside the <code>docker-compose.yml</code> file!</p>
@@ -145,7 +145,7 @@ database name used inside the <code>docker-compose.yml</code> file!</p>
 <p><strong>Notes:</strong></p>
 <ol>
 <li>Depending on your scenario you may want to remove the existing volume
-   (<code>docker-compose down &amp;&amp; docker volume rm kiwi_db_data</code>) before restoring the database!</li>
+   (<code>docker-compose down &amp;&amp; docker volume rm kiwitcms_db_data</code>) before restoring the database!</li>
 </ol>
 <h2>Postgres database</h2>
 <p>To export all contents from the docker container execute the command:</p>
