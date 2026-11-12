@@ -9,7 +9,7 @@ tags: customization
 
 When you start Kiwi TCMS by running `docker-compose up`
 (see [here](http://kiwitcms.readthedocs.io/en/latest/installing_docker.html#start-docker-compose))
-it will automatically create 2 volumes: `kiwi_db_data` and `kiwi_uploads`.
+it will automatically create 2 volumes: `kiwitcms_db_data` and `kiwitcms_uploads`.
 This blog post will outline how to backup these docker volumes.
 
 **Note:** in the instructions below `kiwi_db` is the container name and `kiwi` is the
@@ -32,7 +32,7 @@ You can restore the database contents by using the following command:
 **Notes:**
 
 1. Depending on your scenario you may want to remove the existing volume
-   (`docker-compose down && docker volume rm kiwi_db_data`) before restoring the database!
+   (`docker-compose down && docker volume rm kiwitcms_db_data`) before restoring the database!
 
 
 Postgres database
