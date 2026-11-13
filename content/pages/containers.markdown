@@ -40,6 +40,8 @@ Image versions
 
 Changelog information can be found under the [releases]({tag}releases) tag in our blog!
 
+    hub.kiwitcms.eu/kiwitcms/version            17.1 (aarch64)          c4fe84340bf0    13 Nov 2026     1.18GB
+    hub.kiwitcms.eu/kiwitcms/version            17.1 (x86_64)           998b21356b3a    13 Nov 2026     1.16GB
     hub.kiwitcms.eu/kiwitcms/version            17.0 (aarch64)          488c91b75a72    03 Nov 2026     737MB
     hub.kiwitcms.eu/kiwitcms/version            17.0 (x86_64)           f13386e66e3a    03 Nov 2026     805MB
     hub.kiwitcms.eu/kiwitcms/version            16.6 (aarch64)          2b5b67801875    07 Oct 2026     719MB
@@ -163,6 +165,8 @@ Changelog information can be found under the [releases]({tag}releases) tag in ou
     hub.kiwitcms.eu/kiwitcms/version            6.0                     44787161a4d1    04 Oct 2018     1.1GB
     hub.kiwitcms.eu/kiwitcms/version            5.3.1                   a420465852be    04 Sep 2018     977MB
     =========================================================================================================
+    hub.kiwitcms.eu/kiwitcms/enterprise         17.1-mt (aarch64)       4a1825c0327c    13 Nov 2026     1.66GB
+    hub.kiwitcms.eu/kiwitcms/enterprise         17.1-mt (x86_64)        c0f4066a5e49    13 Nov 2026     1.65GB
     hub.kiwitcms.eu/kiwitcms/enterprise         17.0-mt (aarch64)       ebbc08c607fe    03 Nov 2026     1.05GB
     hub.kiwitcms.eu/kiwitcms/enterprise         17.0-mt (x86_64)        8a57c0727c1d    03 Nov 2026     1.12GB
     hub.kiwitcms.eu/kiwitcms/enterprise         16.6-mt (aarch64)       19495ac6745a    07 Oct 2026     1.06GB

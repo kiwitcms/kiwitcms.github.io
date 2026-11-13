@@ -1,0 +1,129 @@
+Kiwi TCMS 17.1
+##############
+
+:headline: critical security, improvements and API changes
+:date: 2026-11-13 18:16
+:comments: false
+:tags: releases
+
+
+Dear testers, we're happy to announce Kiwi TCMS version 17.1!
+
+**IMPORTANT:**
+
+This is a minor version release which includes critical security related updates,
+improvements, container image rename and internal refactoring.
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Public container image (x86_64)::
+
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  0afdd7c379ff   1.28GB
+
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 17.0
+----------------------------
+
+Security
+~~~~~~~~
+
+- Add checks for default, weak and commonly used values of
+  ``settings.SECRET_KEY`` and display a warning on the Dashboard page. Closes
+  `GHSA-m9h5-c637-cpcg <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-m9h5-c637-cpcg>`_
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update markdown from 3.11.2 to 3.11.3
+- Update psycopg from 3.3.7 to 3.3.8
+- Update node_modules/pdfmake from 0.3.13 to 0.3.14
+- Propagate ``manage.py upgrade --verbosity|--no-input`` command line
+  arguments downstream
+- Rename the container image from ``kiwitcms/kiwi`` to ``kiwitcms/kiwitcms``
+- Use the error icon color for alert message text
+
+
+Settings
+~~~~~~~~
+
+- Extend ``AUTH_PASSWORD_VALIDATORS`` with known passwords
+- Pass the value of ``KIWI_SECRET_KEY`` environment variable to
+  ``settings.SECRET_KEY``
+
+
+API
+~~~
+
+- Add version and release date to generated API descriptions
+- Document ``Referer`` and ``User-Agent`` headers in generated API schemas
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Update black from 26.5.1 to 26.10.1
+- Update selenium from 4.27.1 to 4.52.0
+- Update sphinx from 9.1.1 to 9.2.0
+- Pin CI runners to ``ubuntu-26.04``
+
+
+
+Changes since Kiwi TCMS Enterprise v17.0-mt
+-------------------------------------------
+
+- Based on Kiwi TCMS v17.1
+- Update kiwitcms-tenants from 4.10.3 to 4.10.4
+- Update sentry-sdk from 2.73.0 to 2.74.0
+- Add How To menu entry for Model Context Protocol
+- Return 4xx for invalid MCP HTTP requests
+- Redirect to login page instead of ISE 500 for failed OAuth logins
+- Order tenants by primary key in management commands
+- Add explicit note for `KIWI_SECRET_KEY` in README
+
+
+
+Private container images
+------------------------
+
+    ::
+
+        hub.kiwitcms.eu/kiwitcms/version            17.1 (aarch64)          c4fe84340bf0    13 Nov 2026     1.18GB
+        hub.kiwitcms.eu/kiwitcms/version            17.1 (x86_64)           998b21356b3a    13 Nov 2026     1.16GB
+        hub.kiwitcms.eu/kiwitcms/enterprise         17.1-mt (aarch64)       4a1825c0327c    13 Nov 2026     1.66GB
+        hub.kiwitcms.eu/kiwitcms/enterprise         17.1-mt (x86_64)        c0f4066a5e49    13 Nov 2026     1.65GB
+
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+Follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing please help us grow:
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all news;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
+- `Become a reseller </partners/>`_ and help us serve your community
