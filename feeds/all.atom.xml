@@ -1,5 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-11-10T12:00:00+02:00</updated><entry><title>Bor &amp; Kiwi TCMS are going to FOSDEM 2027</title><link href="/blog/kiwi-tcms-team/2026/11/10/bor-kiwi-tcms-are-going-to-fosdem-2027/" rel="alternate"/><published>2026-11-10T12:00:00+02:00</published><updated>2026-11-10T12:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-10:/blog/kiwi-tcms-team/2026/11/10/bor-kiwi-tcms-are-going-to-fosdem-2027/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Bor &amp;amp; Kiwi TCMS at FOSDEM 2027&amp;quot;" src="/images/fosdem/2027/stand.png" title="Bor &amp;amp; Kiwi TCMS at FOSDEM 2027"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-11-13T18:16:00+02:00</updated><entry><title>Kiwi TCMS 17.1</title><link href="/blog/kiwi-tcms-team/2026/11/13/kiwi-tcms-171/" rel="alternate"/><published>2026-11-13T18:16:00+02:00</published><updated>2026-11-13T18:16:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-13:/blog/kiwi-tcms-team/2026/11/13/kiwi-tcms-171/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 17.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes critical security related updates,
+improvements, container image rename and internal refactoring.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwitcms …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 17.1!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes critical security related updates,
+improvements, container image rename and internal refactoring.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  0afdd7c379ff   1.28GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-17-0"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 17.0&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add checks for default, weak and commonly used values of
+&lt;tt class="docutils literal"&gt;settings.SECRET_KEY&lt;/tt&gt; and display a warning on the Dashboard page. Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-m9h5-c637-cpcg"&gt;GHSA-m9h5-c637-cpcg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update markdown from 3.11.2 to 3.11.3&lt;/li&gt;
+&lt;li&gt;Update psycopg from 3.3.7 to 3.3.8&lt;/li&gt;
+&lt;li&gt;Update node_modules/pdfmake from 0.3.13 to 0.3.14&lt;/li&gt;
+&lt;li&gt;Propagate &lt;tt class="docutils literal"&gt;manage.py upgrade &lt;span class="pre"&gt;--verbosity|--no-input&lt;/span&gt;&lt;/tt&gt; command line
+arguments downstream&lt;/li&gt;
+&lt;li&gt;Rename the container image from &lt;tt class="docutils literal"&gt;kiwitcms/kiwi&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;kiwitcms/kiwitcms&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Use the error icon color for alert message text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="settings"&gt;
+&lt;h3&gt;Settings&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Extend &lt;tt class="docutils literal"&gt;AUTH_PASSWORD_VALIDATORS&lt;/tt&gt; with known passwords&lt;/li&gt;
+&lt;li&gt;Pass the value of &lt;tt class="docutils literal"&gt;KIWI_SECRET_KEY&lt;/tt&gt; environment variable to
+&lt;tt class="docutils literal"&gt;settings.SECRET_KEY&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add version and release date to generated API descriptions&lt;/li&gt;
+&lt;li&gt;Document &lt;tt class="docutils literal"&gt;Referer&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;User-Agent&lt;/span&gt;&lt;/tt&gt; headers in generated API schemas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update black from 26.5.1 to 26.10.1&lt;/li&gt;
+&lt;li&gt;Update selenium from 4.27.1 to 4.52.0&lt;/li&gt;
+&lt;li&gt;Update sphinx from 9.1.1 to 9.2.0&lt;/li&gt;
+&lt;li&gt;Pin CI runners to &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;ubuntu-26.04&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v17-0-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v17.0-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v17.1&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 4.10.3 to 4.10.4&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk from 2.73.0 to 2.74.0&lt;/li&gt;
+&lt;li&gt;Add How To menu entry for Model Context Protocol&lt;/li&gt;
+&lt;li&gt;Return 4xx for invalid MCP HTTP requests&lt;/li&gt;
+&lt;li&gt;Redirect to login page instead of ISE 500 for failed OAuth logins&lt;/li&gt;
+&lt;li&gt;Order tenants by primary key in management commands&lt;/li&gt;
+&lt;li&gt;Add explicit note for &lt;cite&gt;KIWI_SECRET_KEY&lt;/cite&gt; in README&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/version            17.1 (aarch64)          c4fe84340bf0    13 Nov 2026     1.18GB
+hub.kiwitcms.eu/kiwitcms/version            17.1 (x86_64)           998b21356b3a    13 Nov 2026     1.16GB
+hub.kiwitcms.eu/kiwitcms/enterprise         17.1-mt (aarch64)       4a1825c0327c    13 Nov 2026     1.66GB
+hub.kiwitcms.eu/kiwitcms/enterprise         17.1-mt (x86_64)        c0f4066a5e49    13 Nov 2026     1.65GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing please help us grow:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Bor &amp; Kiwi TCMS are going to FOSDEM 2027</title><link href="/blog/kiwi-tcms-team/2026/11/10/bor-kiwi-tcms-are-going-to-fosdem-2027/" rel="alternate"/><published>2026-11-10T12:00:00+02:00</published><updated>2026-11-10T12:00:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-10:/blog/kiwi-tcms-team/2026/11/10/bor-kiwi-tcms-are-going-to-fosdem-2027/</id><summary type="html">&lt;p&gt;&lt;img alt="&amp;quot;Bor &amp;amp; Kiwi TCMS at FOSDEM 2027&amp;quot;" src="/images/fosdem/2027/stand.png" title="Bor &amp;amp; Kiwi TCMS at FOSDEM 2027"&gt;&lt;/p&gt;
 &lt;p&gt;Hello testers, we are happy to announce that
 &lt;a href="https://getbor.dev/"&gt;Bor&lt;/a&gt; and Kiwi TCMS are going to
 &lt;a href="https://fosdem.org/2027/"&gt;FOSDEM 2027&lt;/a&gt; in Brussels.
@@ -10673,42 +10789,4 @@ and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and help us sustain development&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="misc"/><category term="releases"/></entry><entry><title>Meet Kiwi TCMS at WebSummit 2021 in Lisbon</title><link href="/blog/kiwi-tcms-team/2021/09/21/meet-kiwi-tcms-at-websummit-2021-in-lisbon/" rel="alternate"/><published>2021-09-21T16:15:00+03:00</published><updated>2021-09-21T16:15:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-09-21:/blog/kiwi-tcms-team/2021/09/21/meet-kiwi-tcms-at-websummit-2021-in-lisbon/</id><summary type="html">&lt;p&gt;Kiwi TCMS is happy to announce that our first post-COVID live presence
-will be at &lt;a href="https://websummit.com/"&gt;WebSummit 2021&lt;/a&gt;, Nov 1-4 in Lisbon, Portugal.
-We're joining as a &lt;a href="https://websummit.com/startups/featured-startups"&gt;featured startup&lt;/a&gt;
-as part of the ALPHA program in category &lt;em&gt;Enterprise Software Solutions&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS will have an on-site presence during the exhibition (1 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kiwi TCMS is happy to announce that our first post-COVID live presence
-will be at &lt;a href="https://websummit.com/"&gt;WebSummit 2021&lt;/a&gt;, Nov 1-4 in Lisbon, Portugal.
-We're joining as a &lt;a href="https://websummit.com/startups/featured-startups"&gt;featured startup&lt;/a&gt;
-as part of the ALPHA program in category &lt;em&gt;Enterprise Software Solutions&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Kiwi TCMS will have an on-site presence during the exhibition (1 day) where you can
-easily find us. We've also applied to the
-&lt;a href="https://websummit.com/startups/startup-showcase"&gt;Startup Showcase&lt;/a&gt; track where you can
-see Alex present on stage. In addition, if all goes
-well our team will be joined by Alexandre Neto of QCooperative who is leading
-the effort to adopt Kiwi TCMS for testing the QGIS open source project. More on that
-&lt;a href="https://www.youtube.com/watch?v=Wob_L_SrEwE"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Exact schedules are still unknown at this stage so you will have to ping us via email/Twitter
-or find us on the conference floor if you want to meet.&lt;/p&gt;
-&lt;p&gt;Below is our video submission to the organizers:&lt;/p&gt;
-&lt;p&gt;&lt;iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/yIyhkcJ8How"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/kiwitcms/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-  and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="events"/></entry></feed>
+</content><category term="misc"/><category term="releases"/></entry></feed>

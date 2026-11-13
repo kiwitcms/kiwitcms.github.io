@@ -102,6 +102,128 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/11/13/kiwi-tcms-171/" rel="bookmark" title="Permalink to Kiwi TCMS 17.1">
+                <h1 class="top-header">Kiwi TCMS 17.1</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Fri 13 November 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Dear testers, we're happy to announce Kiwi TCMS version 17.1!</p>
+<p><strong>IMPORTANT:</strong></p>
+<p>This is a minor version release which includes critical security related updates,
+improvements, container image rename and internal refactoring.</p>
+<p>You can explore everything at
+<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
+<p>---</p>
+<blockquote>
+<p>Public container image (x86_64):</p>
+<pre class="literal-block">
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  0afdd7c379ff   1.28GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged and multi-arch
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+<div class="section" id="changes-since-kiwi-tcms-17-0">
+<h2>Changes since Kiwi TCMS 17.0</h2>
+<div class="section" id="security">
+<h3>Security</h3>
+<ul class="simple">
+<li>Add checks for default, weak and commonly used values of
+<tt class="docutils literal">settings.SECRET_KEY</tt> and display a warning on the Dashboard page. Closes
+<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-m9h5-c637-cpcg">GHSA-m9h5-c637-cpcg</a></li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements</h3>
+<ul class="simple">
+<li>Update markdown from 3.11.2 to 3.11.3</li>
+<li>Update psycopg from 3.3.7 to 3.3.8</li>
+<li>Update node_modules/pdfmake from 0.3.13 to 0.3.14</li>
+<li>Propagate <tt class="docutils literal">manage.py upgrade <span class="pre">--verbosity|--no-input</span></tt> command line
+arguments downstream</li>
+<li>Rename the container image from <tt class="docutils literal">kiwitcms/kiwi</tt> to <tt class="docutils literal">kiwitcms/kiwitcms</tt></li>
+<li>Use the error icon color for alert message text</li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings</h3>
+<ul class="simple">
+<li>Extend <tt class="docutils literal">AUTH_PASSWORD_VALIDATORS</tt> with known passwords</li>
+<li>Pass the value of <tt class="docutils literal">KIWI_SECRET_KEY</tt> environment variable to
+<tt class="docutils literal">settings.SECRET_KEY</tt></li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API</h3>
+<ul class="simple">
+<li>Add version and release date to generated API descriptions</li>
+<li>Document <tt class="docutils literal">Referer</tt> and <tt class="docutils literal"><span class="pre">User-Agent</span></tt> headers in generated API schemas</li>
+</ul>
+</div>
+<div class="section" id="refactoring-and-testing">
+<h3>Refactoring and testing</h3>
+<ul class="simple">
+<li>Update black from 26.5.1 to 26.10.1</li>
+<li>Update selenium from 4.27.1 to 4.52.0</li>
+<li>Update sphinx from 9.1.1 to 9.2.0</li>
+<li>Pin CI runners to <tt class="docutils literal"><span class="pre">ubuntu-26.04</span></tt></li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-since-kiwi-tcms-enterprise-v17-0-mt">
+<h2>Changes since Kiwi TCMS Enterprise v17.0-mt</h2>
+<ul class="simple">
+<li>Based on Kiwi TCMS v17.1</li>
+<li>Update kiwitcms-tenants from 4.10.3 to 4.10.4</li>
+<li>Update sentry-sdk from 2.73.0 to 2.74.0</li>
+<li>Add How To menu entry for Model Context Protocol</li>
+<li>Return 4xx for invalid MCP HTTP requests</li>
+<li>Redirect to login page instead of ISE 500 for failed OAuth logins</li>
+<li>Order tenants by primary key in management commands</li>
+<li>Add explicit note for <cite>KIWI_SECRET_KEY</cite> in README</li>
+</ul>
+</div>
+<div class="section" id="private-container-images">
+<h2>Private container images</h2>
+<blockquote>
+<pre class="literal-block">
+hub.kiwitcms.eu/kiwitcms/version            17.1 (aarch64)          c4fe84340bf0    13 Nov 2026     1.18GB
+hub.kiwitcms.eu/kiwitcms/version            17.1 (x86_64)           998b21356b3a    13 Nov 2026     1.16GB
+hub.kiwitcms.eu/kiwitcms/enterprise         17.1-mt (aarch64)       4a1825c0327c    13 Nov 2026     1.66GB
+hub.kiwitcms.eu/kiwitcms/enterprise         17.1-mt (x86_64)        c0f4066a5e49    13 Nov 2026     1.65GB
+</pre>
+</blockquote>
+<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
+<a class="reference external" href="/containers/">container images</a> are available only to
+<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h2>How to upgrade</h2>
+<p>Follow the
+<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
+from our documentation.</p>
+<p>Happy testing!</p>
+<p>---</p>
+<p>If you like what we're doing please help us grow:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+and follow all news;</li>
+<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+<li><a class="reference external" href="/partners/">Become a reseller</a> and help us serve your community</li>
+</ul>
+</div>
+
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/11/10/bor-kiwi-tcms-are-going-to-fosdem-2027/" rel="bookmark" title="Permalink to Bor & Kiwi TCMS are going to FOSDEM 2027">
                 <h1 class="top-header">Bor & Kiwi TCMS are going to FOSDEM 2027</h1>
             </a>
@@ -2014,151 +2136,6 @@ which they offer independently of Kiwi TCMS.</p>
 <pre class="literal-block">
 hub.kiwitcms.eu/kiwitcms/enterprise       16.2.1-mt (aarch64)     fcc6005e3df7    23 Jul 2026     915MB
 hub.kiwitcms.eu/kiwitcms/enterprise       16.2.1-mt (x86_64)      878c666eabec    23 Jul 2026     893MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>Follow the
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
-from our documentation.</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all news;</li>
-<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-</div>
-
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-162/" rel="bookmark" title="Permalink to Kiwi TCMS 16.2">
-                <h1 class="top-header">Kiwi TCMS 16.2</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 23 July 2026
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Dear testers, we're happy to announce Kiwi TCMS version 16.2!</p>
-<p><strong>IMPORTANT:</strong></p>
-<p>This is a minor version release which includes multiple security related updates,
-several improvements, database migrations, API changes and bug fixes.</p>
-<p>You can explore everything at
-<a class="reference external" href="https://public.tenant.kiwitcms.org/">https://public.tenant.kiwitcms.org</a>!</p>
-<p>---</p>
-<blockquote>
-<p>Public container image (x86_64):</p>
-<pre class="literal-block">
-pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  1296a8044fcb    863MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged and multi-arch
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-<div class="section" id="changes-since-kiwi-tcms-16-1">
-<h2>Changes since Kiwi TCMS 16.1</h2>
-<div class="section" id="security">
-<h3>Security</h3>
-<ul class="simple">
-<li>Update Django from 6.0.6 to 6.0.7</li>
-<li>Update node_modules/fast-uri from 3.1.3 to 3.1.4</li>
-<li>Make admin pages, views and API methods tenant aware so that
-they only show users which are authorized for the current tenant. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4410">Issue #4410</a></li>
-<li>Restrict field arguments for API method calls. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-554x-3chh-x3h9">CVE-2026-77437</a></li>
-<li>Remove handling for <tt class="docutils literal"><span class="pre">?next=</span></tt> parameter in Confirm view. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-gcwf-c25f-p9rv">CVE-2026-77433</a></li>
-<li>Improve how file upload validator interprets chunks for large files. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-cjrx-h8r2-jgc7">CVE-2026-77434</a></li>
-<li>Improve parsing for <tt class="docutils literal">tracker_from_url()</tt> helper. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-3qxv-9j3q-c68v">CVE-2026-77435</a></li>
-</ul>
-</div>
-<div class="section" id="improvements">
-<h3>Improvements</h3>
-<ul class="simple">
-<li>Update django-modern-rpc from 1.1.0 to 2.1.0</li>
-<li>Update tzdata from 2026.2 to 2026.3</li>
-<li>Update node_modules/webpack from 5.107.2 to 5.108.4</li>
-<li>Update node_modules/webpack-cli from 7.0.3 to 7.2.1</li>
-<li>On TestRun Admin page when clicking the &quot;+ Add test run&quot; button redirect to
-the New Test Run page</li>
-</ul>
-</div>
-<div class="section" id="api">
-<h3>API</h3>
-<ul class="simple">
-<li>Method <tt class="docutils literal">Component.create()</tt> no longer accepts the <tt class="docutils literal">initial_qa_contact</tt>
-field</li>
-<li>Method <tt class="docutils literal">Component.filter()</tt> no longer returns the <tt class="docutils literal">initial_qa_contact</tt>
-field</li>
-</ul>
-</div>
-<div class="section" id="database">
-<h3>Database</h3>
-<ul class="simple">
-<li>Remove <tt class="docutils literal">initial_qa_contact</tt> field from Component model - not used anywhere</li>
-<li>Introduce new migration <tt class="docutils literal">management.0013_remove_initial_qa_contact</tt></li>
-</ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug fixes</h3>
-<ul class="simple">
-<li>Fix broken URL in documentation. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4401">Issue #4401</a></li>
-</ul>
-</div>
-<div class="section" id="refactoring-and-testing">
-<h3>Refactoring and testing</h3>
-<ul class="simple">
-<li>Update actions/setup-node from 6 to 7</li>
-<li>Update locust from 2.44.4 to 2.46.1</li>
-<li>Update pylint-django from 2.7.0 to 2.8.0</li>
-<li>Add JSON-RPC tests for <tt class="docutils literal">User.filter</tt> API method</li>
-<li>Add test case for Environment Admin page</li>
-<li>Adjust calls to <tt class="docutils literal">format_html()</tt> to always pass arguments</li>
-<li>Replace <tt class="docutils literal">mark_safe()</tt> with <tt class="docutils literal">format_html()</tt></li>
-<li>Refactor API methods for compatibility with django-modern-rpc v2</li>
-<li>Refactor HTML escape logic with class-based <tt class="docutils literal">KiwiTCMSHandlerMixin</tt> base for
-the existing custom API handlers</li>
-<li>Remove unused <tt class="docutils literal">User = get_user_model()</tt> assignments</li>
-</ul>
-</div>
-</div>
-<div class="section" id="changes-since-kiwi-tcms-enterprise-v16-1-mt">
-<h2>Changes since Kiwi TCMS Enterprise v16.1-mt</h2>
-<ul class="simple">
-<li>Based on Kiwi TCMS v16.2</li>
-<li>Update certbot from 5.6.0 to 5.7.0</li>
-<li>Update kiwitcms-tenants from 4.5.0 to 4.7.0</li>
-<li>Update sentry-sdk from 2.63.0 to 2.66.0</li>
-<li>Update social-auth-app-django from 5.9.0 to 6.0.0 - login views now only accept
-POST requests!</li>
-<li>Refactor social-auth login buttons to forms</li>
-</ul>
-</div>
-<div class="section" id="private-container-images">
-<h2>Private container images</h2>
-<blockquote>
-<pre class="literal-block">
-hub.kiwitcms.eu/kiwitcms/version          16.2 (aarch64)          67362bc2085e    22 Jul 2026     716MB
-hub.kiwitcms.eu/kiwitcms/version          16.2 (x86_64)           133f2a8a46e5    22 Jul 2026     697MB
-hub.kiwitcms.eu/kiwitcms/enterprise       16.2-mt (aarch64)       31dce251b9a8    22 Jul 2026     915MB
-hub.kiwitcms.eu/kiwitcms/enterprise       16.2-mt (x86_64)        6f1d64253383    22 Jul 2026     893MB
 </pre>
 </blockquote>
 <p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
