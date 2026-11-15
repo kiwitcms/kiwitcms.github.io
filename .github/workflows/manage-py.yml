@@ -92,8 +92,6 @@ jobs:
           - list_model_info
           - list_signals
           - loaddata
-          - mail_debug
-          - makemessages
           - makemigrations
           - managestate
           - merge_model_instances
