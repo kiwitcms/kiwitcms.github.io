@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630">
+<rect x="0" y="0" width="1200" height="630" fill="#F8F8F8"/>
+
+<!-- background accents, same set as features/api-help -->
+<polygon points="1200,630 1200,455 1030,630" fill="#357E27"/>
+<line x1="1141.2" y1="41.2" x2="1162.8" y2="62.8" stroke="#CE0000" stroke-width="7.8" stroke-linecap="round" opacity="0.85"/>
+<line x1="1141.2" y1="62.8" x2="1162.8" y2="41.2" stroke="#CE0000" stroke-width="7.8" stroke-linecap="round" opacity="0.85"/>
+<rect x="1151.8" y="166.8" width="16.3" height="16.3" fill="none" stroke="#6E7B70" stroke-width="4.8" opacity="0.75"/>
+<rect x="632.5" y="52.5" width="15.0" height="15.0" fill="none" stroke="#9AA79B" stroke-width="4.4" opacity="0.5"/>
+<polyline points="606.9,501.4 614.6,509.1 628.0,491.8" fill="none" stroke="#B9C6BA" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<line x1="24.6" y1="240.6" x2="43.4" y2="259.4" stroke="#CE0000" stroke-width="6.8" stroke-linecap="round" opacity="0.6"/>
+<line x1="24.6" y1="259.4" x2="43.4" y2="240.6" stroke="#CE0000" stroke-width="6.8" stroke-linecap="round" opacity="0.6"/>
+<polyline points="13.1,561.6 21.4,569.9 36.0,551.2" fill="none" stroke="#9AA79B" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<line x1="111.4" y1="595.4" x2="128.6" y2="612.6" stroke="#CE0000" stroke-width="6.2" stroke-linecap="round" opacity="0.55"/>
+<line x1="111.4" y1="612.6" x2="128.6" y2="595.4" stroke="#CE0000" stroke-width="6.2" stroke-linecap="round" opacity="0.55"/>
+<rect x="1152.5" y="492.5" width="15.0" height="15.0" fill="none" stroke="#6E7B70" stroke-width="4.4" opacity="0.55"/>
+
+<!-- LEFT: headline -->
+<text x="90" y="180" font-family="Rubik" font-weight="800" font-size="54" fill="#1B3D32">Container image</text>
+<text x="90" y="265" font-family="Rubik" font-weight="800" font-size="54" fill="#1B3D32">renamed to</text>
+<text x="90" y="390" font-family="Rubik" font-weight="800" font-size="46" fill="#357E27">kiwitcms/kiwitcms</text>
+<text x="90" y="466" font-family="Rubik" font-size="22" fill="#6E7B70">Starting from v17.1 onwards</text>
+
+<!-- RIGHT: before/after docker pull card -->
+<rect x="626" y="158" width="480" height="242" rx="16" fill="#E4EDE6" opacity="0.55"/>
+<rect x="620" y="152" width="480" height="242" rx="16" fill="#FFFFFF" stroke="#C6DCCB" stroke-width="2"/>
+<path d="M620 168 a16 16 0 0 1 16 -16 h448 a16 16 0 0 1 16 16 v28 h-480 z" fill="#1B3D32"/>
+<circle cx="644" cy="174" r="5" fill="#357E27"/>
+<text x="660" y="180" font-family="DejaVu Sans Mono" font-size="15" fill="#FFFFFF">$ docker pull</text>
+<text x="1076" y="180" font-family="DejaVu Sans Mono" font-size="13" fill="#B9C6BA" text-anchor="end">shell</text>
+
+<text x="644" y="224" font-family="Rubik" font-weight="700" font-size="12" letter-spacing="2" fill="#6E7B70">BEFORE</text>
+<text x="644" y="252" font-family="DejaVu Sans Mono" font-size="14" fill="#9AA79B">pub.kiwitcms.eu/kiwitcms/kiwi</text>
+<line x1="644" y1="245" x2="935" y2="245" stroke="#CE0000" stroke-width="2" opacity="0.75"/>
+
+<text x="644" y="288" font-family="Rubik" font-weight="700" font-size="12" letter-spacing="2" fill="#357E27">AFTER</text>
+<text x="644" y="316" font-family="DejaVu Sans Mono" font-weight="700" font-size="14" fill="#1B3D32">pub.kiwitcms.eu/kiwitcms/kiwitcms</text>
+
+<text x="644" y="360" font-family="Rubik" font-size="16" fill="#6E7B70">Same software published under a new name</text>
+</svg>

@@ -102,6 +102,69 @@
 
     <article class="blog-list">
         <div class="header">
+            <a href="/blog/kiwi-tcms-team/2026/11/15/container-image-renamed-to-kiwitcmskiwitcms/" rel="bookmark" title="Permalink to Container image renamed to kiwitcms/kiwitcms">
+                <h1 class="top-header">Container image renamed to kiwitcms/kiwitcms</h1>
+            </a>
+
+            <p class="post-meta">Posted by
+                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
+                on Sun 15 November 2026
+            </p>
+        </div>
+
+        <div class="content">
+            <p><img alt="Container image rename banner" src="/images/features/container-image-rename/banner.png" title="Container image rename banner"></p>
+<p>Starting with Kiwi TCMS 17.1 the official container image is published as
+<code>pub.kiwitcms.eu/kiwitcms/kiwitcms</code> instead of <code>pub.kiwitcms.eu/kiwitcms/kiwi</code>!</p>
+<p>This follows the rename of our GitHub repository from <code>kiwitcms/Kiwi</code> to
+<code>kiwitcms/kiwitcms</code> and keeps all names aligned with the actual project name.
+The software inside the image and the release cadence remain exactly the same.</p>
+<h2>What changed</h2>
+<p>The image path has changed:</p>
+<ul>
+<li>Old:<code>pub.kiwitcms.eu/kiwitcms/kiwi</code></li>
+<li>New: <code>pub.kiwitcms.eu/kiwitcms/kiwitcms</code></li>
+</ul>
+<h2>How to update</h2>
+<p>Pull the image using its new name:</p>
+<div class="highlight"><pre><span></span><code>docker pull pub.kiwitcms.eu/kiwitcms/kiwitcms
+</code></pre></div>
+
+<p>For a <code>docker-compose.yml</code>, update the <code>image:</code> entry:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pub.kiwitcms.eu/kiwitcms/kiwitcms:latest</span>
+</code></pre></div>
+
+<p>For a Helm chart it's similar:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pub.kiwitcms.eu/kiwitcms/kiwitcms</span>
+<span class="w">  </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
+<span class="w">  </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">latest</span>
+</code></pre></div>
+
+<h2>About the old name</h2>
+<p>The old <code>pub.kiwitcms.eu/kiwitcms/kiwi:latest</code> image still resolves to the 17.1 release,
+but it will no longer receive new versions. This location will cease to resolve after
+<strong>01 Jan 2027</strong>.</p>
+<p>You should update your deployment configuration to
+<code>pub.kiwitcms.eu/kiwitcms/kiwitcms</code> at your earliest convenience.</p>
+<p>Happy Testing!</p>
+<hr>
+<p>If you like what we're doing and how Kiwi TCMS supports various communities
+please help us!</p>
+<ul>
+<li><a href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
+<li><a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
+  and follow all project news;</li>
+<li><a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html">Become a contributor</a> and an awesome open source hacker;</li>
+<li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
+<li><a href="/partners/">Become a reseller</a> and help us serve your community</li>
+</ul>
+        </div>
+    </article>
+    <article class="blog-list">
+        <div class="header">
             <a href="/blog/kiwi-tcms-team/2026/11/13/kiwi-tcms-171/" rel="bookmark" title="Permalink to Kiwi TCMS 17.1">
                 <h1 class="top-header">Kiwi TCMS 17.1</h1>
             </a>
@@ -2103,62 +2166,6 @@ which they offer independently of Kiwi TCMS.</p>
 <li><a href="/#subscriptions">Become a subscriber</a> and help us sustain development;</li>
 <li><a href="/partners/">Become a reseller</a> and help us serve your community</li>
 </ul>
-        </div>
-    </article>
-    <article class="blog-list">
-        <div class="header">
-            <a href="/blog/kiwi-tcms-team/2026/07/23/kiwi-tcms-enterprise-1621/" rel="bookmark" title="Permalink to Kiwi TCMS Enterprise 16.2.1">
-                <h1 class="top-header">Kiwi TCMS Enterprise 16.2.1</h1>
-            </a>
-
-            <p class="post-meta">Posted by
-                    <a href="/blog/kiwi-tcms-team/">Kiwi TCMS Team</a>
-                on Thu 23 July 2026
-            </p>
-        </div>
-
-        <div class="content">
-            <p>Dear testers, we're happy to announce Kiwi TCMS Enterprise version 16.2.1-mt!</p>
-<p><strong>IMPORTANT:</strong></p>
-<p>This is a minor version release which fixes an OAuth login redirect issue.</p>
-<div class="section" id="changes-since-kiwi-tcms-enterprise-v16-2-mt">
-<h2>Changes since Kiwi TCMS Enterprise v16.2-mt</h2>
-<ul class="simple">
-<li>Based on Kiwi TCMS v16.2</li>
-<li>Revert social-auth-app-django back to 5.9.0. Fixes
-<a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4466">Issue #4466</a></li>
-<li>Update kiwitcms-tenants from 4.7.0 to 4.7.1</li>
-</ul>
-</div>
-<div class="section" id="private-container-images">
-<h2>Private container images</h2>
-<blockquote>
-<pre class="literal-block">
-hub.kiwitcms.eu/kiwitcms/enterprise       16.2.1-mt (aarch64)     fcc6005e3df7    23 Jul 2026     915MB
-hub.kiwitcms.eu/kiwitcms/enterprise       16.2.1-mt (x86_64)      878c666eabec    23 Jul 2026     893MB
-</pre>
-</blockquote>
-<p><strong>IMPORTANT:</strong> version tagged, multi-arch and Enterprise
-<a class="reference external" href="/containers/">container images</a> are available only to
-<a class="reference external" href="/#subscriptions">subscribers</a>!</p>
-</div>
-<div class="section" id="how-to-upgrade">
-<h2>How to upgrade</h2>
-<p>Follow the
-<a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions">Upgrading instructions</a>
-from our documentation.</p>
-<p>Happy testing!</p>
-<p>---</p>
-<p>If you like what we're doing and how Kiwi TCMS supports various communities
-please help us grow!</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers">Give ⭐ on GitHub</a>;</li>
-<li><a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;id=c970a37581">Join our newsletter</a>
-and follow all news;</li>
-<li><a class="reference external" href="/#subscriptions">Become a subscriber</a> and help us sustain development</li>
-</ul>
-</div>
-
         </div>
     </article>
 
