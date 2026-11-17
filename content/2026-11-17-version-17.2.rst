@@ -1,0 +1,135 @@
+Kiwi TCMS 17.2
+##############
+
+:headline: security related updates, new test case template, API changes
+:date: 2026-11-17 16:40
+:comments: false
+:tags: releases
+
+
+Dear testers, we're happy to announce Kiwi TCMS version 17.2!
+
+**IMPORTANT:**
+
+This is a minor version release which includes security related updates,
+new test case template, API changes and internal refactoring.
+
+You can explore everything at
+`https://public.tenant.kiwitcms.org <https://public.tenant.kiwitcms.org/>`_!
+
+---
+
+    Public container image (x86_64)::
+
+        pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  6174939e43cb   1.26GB
+
+
+**IMPORTANT:** version tagged and multi-arch
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+Changes since Kiwi TCMS 17.1
+----------------------------
+
+Security
+~~~~~~~~
+
+- Require API requests with``<field>__email`` to have ``auth.view_user``
+  permission. Fixes
+  `GHSA-c2f9-jhxh-pm22 <https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-c2f9-jhxh-pm22>`_
+- Update django-modern-rpc from 2.1.0 to 2.2.0
+- Update mysqlclient from 2.3.0 to 2.3.1
+
+
+
+Improvements
+~~~~~~~~~~~~
+
+- Update psycopg from 3.3.8 to 3.3.9
+- Add ``Context, Intent, Guardrails, Execution`` template for Test Cases
+  (**Vivek Krishna Choppa, AWS**). Closes
+  `Issue #4724 <https://github.com/kiwitcms/kiwitcms/issues/4724>`_
+
+
+Bug fixes
+~~~~~~~~~
+
+- Preserve parent of root-level TestPlan during deep-clone. Fixes
+  `Issue #4687 <https://github.com/kiwitcms/kiwitcms/issues/4687>`_
+
+
+Database
+~~~~~~~~
+
+- Introduce new migration ``testcases.0026_add_cige_template``
+
+
+API
+~~~
+
+- Treat empty query argument to ``*.remove*`` API methods as invalid request
+  to prevent a malformed call from accidentally deleting all records
+  (**Anton Degtyarev**)
+
+
+Refactoring and testing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Convert API errors to ``RPCException`` for compatibility with newer
+  django-modern-rpc
+- Pass ``request.user`` to ``KiwiTCMSHandlerMixin.inspect_rpc_args()``
+
+
+
+Changes since Kiwi TCMS Enterprise v17.0-mt
+-------------------------------------------
+
+- Based on Kiwi TCMS v17.2
+- Update certbot from 5.9.0 to 5.10.0
+- Update kiwitcms-tenants from 4.10.4 to 4.12.0
+- Update sentry-sdk from 2.74.0 to 2.75.0
+- Update social-auth-app-django from 7.2.0 to 8.1.0.
+  **WARNING:** users should clear cookies if OAuth login session fails
+- Add title attribute to social auth login icons
+- Align MCP tool error handling with django-modern-rpc 2.2
+- Pass `request.user` to `KiwiTCMSHandlerMixin.inspect_rpc_args()`
+
+
+
+Private container images
+------------------------
+
+    ::
+
+        hub.kiwitcms.eu/kiwitcms/version            17.2 (aarch64)          51fa39433fca    17 Nov 2026     1.15GB
+        hub.kiwitcms.eu/kiwitcms/version            17.2 (x86_64)           78a292ee9779    17 Nov 2026     1.14GB
+        hub.kiwitcms.eu/kiwitcms/enterprise         17.2-mt (aarch64)       ae347a0f7efd    17 Nov 2026     1.63GB
+        hub.kiwitcms.eu/kiwitcms/enterprise         17.2-mt (x86_64)        04a54875b767    17 Nov 2026     1.63GB
+
+
+
+**IMPORTANT:** version tagged, multi-arch and Enterprise
+`container images <{filename}pages/containers.markdown>`_ are available only to
+`subscribers </#subscriptions>`_!
+
+
+How to upgrade
+---------------
+
+Follow the
+`Upgrading instructions <https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions>`_
+from our documentation.
+
+
+Happy testing!
+
+---
+
+If you like what we're doing please help us grow:
+
+- `Give ⭐ on GitHub <https://github.com/kiwitcms/kiwitcms/stargazers>`_;
+- `Join our newsletter <https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&id=c970a37581>`_
+  and follow all news;
+- `Become a subscriber </#subscriptions>`_ and help us sustain development
+- `Become a reseller </partners/>`_ and help us serve your community
