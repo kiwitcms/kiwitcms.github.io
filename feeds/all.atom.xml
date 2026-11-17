@@ -1,5 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-11-15T13:50:00+02:00</updated><entry><title>Container image renamed to kiwitcms/kiwitcms</title><link href="/blog/kiwi-tcms-team/2026/11/15/container-image-renamed-to-kiwitcmskiwitcms/" rel="alternate"/><published>2026-11-15T13:50:00+02:00</published><updated>2026-11-15T13:50:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-15:/blog/kiwi-tcms-team/2026/11/15/container-image-renamed-to-kiwitcmskiwitcms/</id><summary type="html">&lt;p&gt;&lt;img alt="Container image rename banner" src="/images/features/container-image-rename/banner.png" title="Container image rename banner"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kiwi TCMS</title><link href="/" rel="alternate"/><link href="/feeds/all.atom.xml" rel="self"/><id>/</id><updated>2026-11-17T16:40:00+02:00</updated><entry><title>Kiwi TCMS 17.2</title><link href="/blog/kiwi-tcms-team/2026/11/17/kiwi-tcms-172/" rel="alternate"/><published>2026-11-17T16:40:00+02:00</published><updated>2026-11-17T16:40:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-17:/blog/kiwi-tcms-team/2026/11/17/kiwi-tcms-172/</id><summary type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 17.2!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates,
+new test case template, API changes and internal refactoring.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms …&lt;/pre&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Dear testers, we're happy to announce Kiwi TCMS version 17.2!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a minor version release which includes security related updates,
+new test case template, API changes and internal refactoring.&lt;/p&gt;
+&lt;p&gt;You can explore everything at
+&lt;a class="reference external" href="https://public.tenant.kiwitcms.org/"&gt;https://public.tenant.kiwitcms.org&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Public container image (x86_64):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pub.kiwitcms.eu/kiwitcms/kiwitcms   latest  6174939e43cb   1.26GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged and multi-arch
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-17-1"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS 17.1&lt;/h2&gt;
+&lt;div class="section" id="security"&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Require API requests with``&amp;lt;field&amp;gt;__email`` to have &lt;tt class="docutils literal"&gt;auth.view_user&lt;/tt&gt;
+permission. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/kiwitcms/security/advisories/GHSA-c2f9-jhxh-pm22"&gt;GHSA-c2f9-jhxh-pm22&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update django-modern-rpc from 2.1.0 to 2.2.0&lt;/li&gt;
+&lt;li&gt;Update mysqlclient from 2.3.0 to 2.3.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="improvements"&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Update psycopg from 3.3.8 to 3.3.9&lt;/li&gt;
+&lt;li&gt;Add &lt;tt class="docutils literal"&gt;Context, Intent, Guardrails, Execution&lt;/tt&gt; template for Test Cases
+(&lt;strong&gt;Vivek Krishna Choppa, AWS&lt;/strong&gt;). Closes
+&lt;a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4724"&gt;Issue #4724&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h3&gt;Bug fixes&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Preserve parent of root-level TestPlan during deep-clone. Fixes
+&lt;a class="reference external" href="https://github.com/kiwitcms/kiwitcms/issues/4687"&gt;Issue #4687&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="database"&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduce new migration &lt;tt class="docutils literal"&gt;testcases.0026_add_cige_template&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;API&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Treat empty query argument to &lt;tt class="docutils literal"&gt;*.remove*&lt;/tt&gt; API methods as invalid request
+to prevent a malformed call from accidentally deleting all records
+(&lt;strong&gt;Anton Degtyarev&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="refactoring-and-testing"&gt;
+&lt;h3&gt;Refactoring and testing&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Convert API errors to &lt;tt class="docutils literal"&gt;RPCException&lt;/tt&gt; for compatibility with newer
+django-modern-rpc&lt;/li&gt;
+&lt;li&gt;Pass &lt;tt class="docutils literal"&gt;request.user&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;KiwiTCMSHandlerMixin.inspect_rpc_args()&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="changes-since-kiwi-tcms-enterprise-v17-0-mt"&gt;
+&lt;h2&gt;Changes since Kiwi TCMS Enterprise v17.0-mt&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Based on Kiwi TCMS v17.2&lt;/li&gt;
+&lt;li&gt;Update certbot from 5.9.0 to 5.10.0&lt;/li&gt;
+&lt;li&gt;Update kiwitcms-tenants from 4.10.4 to 4.12.0&lt;/li&gt;
+&lt;li&gt;Update sentry-sdk from 2.74.0 to 2.75.0&lt;/li&gt;
+&lt;li&gt;Update social-auth-app-django from 7.2.0 to 8.1.0.
+&lt;strong&gt;WARNING:&lt;/strong&gt; users should clear cookies if OAuth login session fails&lt;/li&gt;
+&lt;li&gt;Add title attribute to social auth login icons&lt;/li&gt;
+&lt;li&gt;Align MCP tool error handling with django-modern-rpc 2.2&lt;/li&gt;
+&lt;li&gt;Pass &lt;cite&gt;request.user&lt;/cite&gt; to &lt;cite&gt;KiwiTCMSHandlerMixin.inspect_rpc_args()&lt;/cite&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="private-container-images"&gt;
+&lt;h2&gt;Private container images&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
+hub.kiwitcms.eu/kiwitcms/version            17.2 (aarch64)          51fa39433fca    17 Nov 2026     1.15GB
+hub.kiwitcms.eu/kiwitcms/version            17.2 (x86_64)           78a292ee9779    17 Nov 2026     1.14GB
+hub.kiwitcms.eu/kiwitcms/enterprise         17.2-mt (aarch64)       ae347a0f7efd    17 Nov 2026     1.63GB
+hub.kiwitcms.eu/kiwitcms/enterprise         17.2-mt (x86_64)        04a54875b767    17 Nov 2026     1.63GB
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; version tagged, multi-arch and Enterprise
+&lt;a class="reference external" href="/containers/"&gt;container images&lt;/a&gt; are available only to
+&lt;a class="reference external" href="/#subscriptions"&gt;subscribers&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-upgrade"&gt;
+&lt;h2&gt;How to upgrade&lt;/h2&gt;
+&lt;p&gt;Follow the
+&lt;a class="reference external" href="https://kiwitcms.readthedocs.io/en/latest/installing_docker.html#upgrading-instructions"&gt;Upgrading instructions&lt;/a&gt;
+from our documentation.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;If you like what we're doing please help us grow:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kiwitcms/kiwitcms/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
+and follow all news;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/#subscriptions"&gt;Become a subscriber&lt;/a&gt; and help us sustain development&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="/partners/"&gt;Become a reseller&lt;/a&gt; and help us serve your community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="misc"/><category term="releases"/></entry><entry><title>Container image renamed to kiwitcms/kiwitcms</title><link href="/blog/kiwi-tcms-team/2026/11/15/container-image-renamed-to-kiwitcmskiwitcms/" rel="alternate"/><published>2026-11-15T13:50:00+02:00</published><updated>2026-11-15T13:50:00+02:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2026-11-15:/blog/kiwi-tcms-team/2026/11/15/container-image-renamed-to-kiwitcmskiwitcms/</id><summary type="html">&lt;p&gt;&lt;img alt="Container image rename banner" src="/images/features/container-image-rename/banner.png" title="Container image rename banner"&gt;&lt;/p&gt;
 &lt;p&gt;Starting with Kiwi TCMS 17.1 the official container image is published as
 &lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwitcms&lt;/code&gt; instead of &lt;code&gt;pub.kiwitcms.eu/kiwitcms/kiwi&lt;/code&gt;!&lt;/p&gt;
 &lt;p&gt;This follows the rename of our GitHub repository from &lt;code&gt;kiwitcms/Kiwi&lt;/code&gt; to
@@ -10581,94 +10702,4 @@ please help us!&lt;/p&gt;
   and follow all project news;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="events"/></entry><entry><title>Announcing winners of 6 tickets for HackConf 2021</title><link href="/blog/kiwi-tcms-team/2021/10/06/announcing-winners-of-6-tickets-for-hackconf-2021/" rel="alternate"/><published>2021-10-06T14:00:00+03:00</published><updated>2021-10-06T14:00:00+03:00</updated><author><name>Kiwi TCMS Team</name></author><id>tag:None,2021-10-06:/blog/kiwi-tcms-team/2021/10/06/announcing-winners-of-6-tickets-for-hackconf-2021/</id><summary type="html">&lt;p&gt;Here are the winners of our &lt;a href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/"&gt;ticket giveaway&lt;/a&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Martin Ayvazov&lt;/li&gt;
-&lt;li&gt;Ralitsa Georgieva&lt;/li&gt;
-&lt;li&gt;Teodora Pashina - Dimitrova&lt;/li&gt;
-&lt;li&gt;Gabriela Luhova&lt;/li&gt;
-&lt;li&gt;Lyuboslava Arshinkova&lt;/li&gt;
-&lt;li&gt;Yoan Bachev&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Attention winners:&lt;/strong&gt; please get in touch with us at &lt;em&gt;info@kiwitcms.org&lt;/em&gt; to claim your tickets.
-We will ask you to validate your GitLab account by performing a quick …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here are the winners of our &lt;a href="/blog/kiwi-tcms-team/2021/09/01/win-6-superfan-tickets-for-hackconf-2021/"&gt;ticket giveaway&lt;/a&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Martin Ayvazov&lt;/li&gt;
-&lt;li&gt;Ralitsa Georgieva&lt;/li&gt;
-&lt;li&gt;Teodora Pashina - Dimitrova&lt;/li&gt;
-&lt;li&gt;Gabriela Luhova&lt;/li&gt;
-&lt;li&gt;Lyuboslava Arshinkova&lt;/li&gt;
-&lt;li&gt;Yoan Bachev&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Attention winners:&lt;/strong&gt; please get in touch with us at &lt;em&gt;info@kiwitcms.org&lt;/em&gt; to claim your tickets.
-We will ask you to validate your GitLab account by performing a quick action which will be disclosed
-to you via email!&lt;/p&gt;
-&lt;p&gt;Raw data from our
-&lt;a href="https://github.com/kiwitcms/api-scripts/pull/1"&gt;winner selection script&lt;/a&gt; below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;*****&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WINNER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;#1: Martin Ayvazov&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/eea811553e2b8aa3dd7ef670c3cd3552?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9640539&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Martin Ayvazov&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;majvazov&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://gitlab.com/majvazov&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;*****&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WINNER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;#2: Ralitsa Georgieva&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/43aa50437fc245766bc3e6072777c056?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9869926&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Ralitsa Georgieva&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ralitsa.georgieva&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://gitlab.com/ralitsa.georgieva&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;*****&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WINNER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;#3: Teodora Pashina - Dimitrova&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/beca49c67ce9862a8ecb8deff94780a7?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9869893&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Teodora Pashina - Dimitrova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;tedi.pashina&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://gitlab.com/tedi.pashina&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;*****&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WINNER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;#4: Gabriela Luhova&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/92e863a1e3df1122cc0beb2477a375be?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9641952&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Gabriela Luhova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;gabriela.luhova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://gitlab.com/gabriela.luhova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;*****&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WINNER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;#5: Lyuboslava Arshinkova&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://secure.gravatar.com/avatar/1e0a308ddbe3b8ab9660ec7702fa0d6d?s=80&amp;amp;d=identicon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9869399&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Lyuboslava Arshinkova&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;arshinkovalyuboslava&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://gitlab.com/arshinkovalyuboslava&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;*****&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WINNER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;#6: Yoan Bachev&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;avatar_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://gitlab.com/uploads/-/system/user/avatar/7630581/avatar.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;7630581&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Yoan Bachev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;yobachev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;web_url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://gitlab.com/yobachev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Video recording of the selection process:&lt;/p&gt;
-&lt;p&gt;&lt;iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/QINm7pLolOw"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you like what we're doing and how Kiwi TCMS supports various communities
-please help us!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://fellowship.mlh.io/opensourceawards"&gt;Nominate Kiwi TCMS at MLH Open Source Awards&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/kiwitcms/kiwitcms/stargazers"&gt;Give ⭐ on GitHub&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558"&gt;Give 👍 on GitLab&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://opencollective.com/kiwitcms/donate"&gt;Donate via Open Collective&lt;/a&gt; as low as 1 EUR;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.us17.list-manage.com/subscribe?u=9b57a21155a3b7c655ae8f922&amp;amp;id=c970a37581"&gt;Join our newsletter&lt;/a&gt;
-  and follow all project news;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kiwitcms.readthedocs.io/en/latest/contribution.html"&gt;Become a contributor&lt;/a&gt; and an awesome open source hacker;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/#subscriptions"&gt;Become a customer&lt;/a&gt; and we'll share our profits with the community&lt;/li&gt;
-&lt;/ul&gt;</content><category term="misc"/><category term="community"/><category term="events"/></entry></feed>
+&lt;/ul&gt;</content><category term="misc"/><category term="events"/></entry></feed>
